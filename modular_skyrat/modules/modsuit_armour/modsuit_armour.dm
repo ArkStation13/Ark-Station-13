@@ -185,10 +185,17 @@
 	armor_mod = /datum/armor/mod_module_armor_boost_override
 
 /datum/armor/mod_module_armor_boost_override
-	melee = 20
-	bullet = 25
-	laser = 15
-	energy = 20
+	melee = 40
+	bullet = 50
+	laser = 30
+	energy = 40
+
+	// ARK STATION EDIT
+	// melee = 20
+	// bullet = 25
+	// laser = 15
+	// energy = 20
+	///////////////////
 
 /datum/mod_theme/elite // Elite Syndiate
 	armor_type = /datum/armor/mod_theme_elite
@@ -209,10 +216,16 @@
 	armor_mod = /datum/armor/mod_module_armor_boost_elite
 
 /datum/armor/mod_module_armor_boost_elite
-	melee = 30
-	bullet = 30
-	laser = 25
-	energy = 30
+	melee = 60
+	bullet = 60
+	laser = 50
+	energy = 60
+	// ARK STATION EDIT
+	// melee = 30
+	// bullet = 30
+	// laser = 25
+	// energy = 30
+	///////////////////
 
 /datum/mod_theme/prototype // Charlie Station
 	armor_type = /datum/armor/mod_theme_prototype
