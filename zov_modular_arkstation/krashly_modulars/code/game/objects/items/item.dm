@@ -1,3 +1,7 @@
+/obj/item/storage/box/survival/security/PopulateContents()
+	. = ..()
+	new = /obj/item/crowbar/red
+
 /obj/item/icona_madonna
 	name = "Madonna icon"
 	desc = "Икона великой Мадонны."
