@@ -41,8 +41,8 @@
 		if(SSplayer_ranks.is_mentor(M.client, admin_bypass = FALSE))
 			player_ranks += "Mentor"
 
-		if(SSplayer_ranks.is_veteran(M.client, admin_bypass = FALSE))
-			player_ranks += "Veteran"
+		// if(SSplayer_ranks.is_veteran(M.client, admin_bypass = FALSE))
+		// 	player_ranks += "Veteran"
 
 		body += "<br><br><b>Player Ranks: </b>[length(player_ranks) ? player_ranks.Join(", ") : "None"]"
 		// SKYRAT EDIT END

@@ -26,7 +26,7 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	examine_limb_id = SPECIES_HUMAN
 	skinned_type = /obj/item/stack/sheet/animalhide/human
-	veteran_only = TRUE
+	// veteran_only = TRUE
 
 /datum/species/hemophage/get_default_mutant_bodyparts()
 	return list(
