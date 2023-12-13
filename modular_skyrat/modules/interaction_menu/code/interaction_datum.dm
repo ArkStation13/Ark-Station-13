@@ -79,6 +79,18 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 			if(INTERACTION_REQUIRE_TARGET_HAND)
 				if(!target.get_active_hand())
 					return FALSE
+			if(INTERACTION_REQUIRE_SELF_MOUTH)
+				if(user.is_mouth_covered(ITEM_SLOT_MASK))
+					return FALSE
+			if(INTERACTION_REQUIRE_TARGET_MOUTH)
+				if(target.is_mouth_covered(ITEM_SLOT_MASK))
+					return FALSE
+			if(INTERACTION_REQUIRE_SELF_CHEST)
+				if(!get_location_accessible(user, BODY_ZONE_CHEST))
+					return FALSE
+			if(INTERACTION_REQUIRE_TARGET_CHEST)
+				if(!get_location_accessible(target, BODY_ZONE_CHEST))
+					return FALSE
 			else
 				CRASH("Unimplemented interaction requirement '[requirement]'")
 	return TRUE
@@ -95,10 +107,10 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	var/msg = pick(message)
 	// We replace %USER% with nothing because manual_emote already prepends it.
 	msg = trim(replacetext(replacetext(msg, "%TARGET%", "[target]"), "%USER%", ""), INTERACTION_MAX_CHAR)
-	if(lewd)
-		user.emote("subtler", null, msg, TRUE)
-	else
-		user.manual_emote(msg)
+	// if(lewd)
+	// 	user.emote("subtler", null, msg, TRUE)
+	// else
+	user.manual_emote(msg)
 	if(user_messages.len)
 		var/user_msg = pick(user_messages)
 		user_msg = replacetext(replacetext(user_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
@@ -115,8 +127,9 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 			message_admins("Deprecated sound handling for '[name]'. Correct format is a list with one entry. This message will only show once.")
 			sound_possible = list(sound_possible)
 		sound_cache = pick(sound_possible)
-		for(var/mob/mob in view(sound_range, user))
-			SEND_SOUND(sound_cache, mob)
+		//for(var/mob/mob in view(sound_range, user))
+		//	SEND_SOUND(sound_cache, mob)
+		playsound(user, sound_cache, 40, ignore_walls = FALSE)
 
 	if(lewd)
 		user.adjust_pleasure(user_pleasure)

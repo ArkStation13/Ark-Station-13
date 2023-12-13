@@ -1,5 +1,5 @@
 /datum/loadout_item/under/jumpsuit/donator
-	donator_only = TRUE
+	donator_only = FALSE
 
 /datum/loadout_item/under/jumpsuit/donator/enclavesergeant
 	name = "Enclave - Sergeant"

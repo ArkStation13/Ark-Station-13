@@ -198,6 +198,9 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isspider(A) (istype(A, /mob/living/basic/spider))
 
+// ARK STATION EDIT START
+#define isnecromorph(A) (istype(A, /mob/living/simple_animal/hostile/necromorph))
+// ARK STATION EDIT END
 
 //Misc mobs
 #define isobserver(A) (istype(A, /mob/dead/observer))

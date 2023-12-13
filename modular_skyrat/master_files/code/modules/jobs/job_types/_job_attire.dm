@@ -145,8 +145,8 @@
 /datum/job/coroner
 	akula_outfit = /datum/outfit/akula/doctor
 
-/datum/job/corrections_officer
-	akula_outfit = /datum/outfit/akula/security_officer
+///datum/job/corrections_officer
+	//akula_outfit = /datum/outfit/akula/security_officer
 
 /datum/job/orderly
 	akula_outfit = /datum/outfit/akula/security_officer

@@ -45,7 +45,7 @@
 /mob/living/simple_animal/hostile/true_changeling/New()
 	. = ..()
 	transformed_time = world.time
-	emote("scream")
+	emote("agony") // Ark Station 13 Edit
 
 /mob/living/simple_animal/hostile/true_changeling/Initialize(mapload)
 	. = ..()
@@ -62,7 +62,7 @@
 /mob/living/simple_animal/hostile/true_changeling/AttackingTarget()
 	..()
 	if(prob(10))
-		emote("scream")
+		emote("agony") // Ark Station 13 Edit
 
 /mob/living/simple_animal/hostile/true_changeling/emote(act, m_type=1, message = null, intentional = TRUE)
 	if(stat)
@@ -127,7 +127,7 @@
 	stored_changeling.Paralyze(10 SECONDS) //Make them helpless for 10 seconds
 	stored_changeling.adjustBruteLoss(30, TRUE, TRUE)
 	stored_changeling.status_flags &= ~GODMODE
-	stored_changeling.emote("scream")
+	stored_changeling.emote("agony") // Ark Station 13 Edit
 	stored_changeling.gib()
 	stored_changeling = null
 	SEND_SIGNAL(src, COMSIG_HORRORFORM_EXPLODE)
@@ -248,7 +248,7 @@
 		dismembered = TRUE
 	playsound(lunch, 'sound/effects/splat.ogg', 50, 1)
 	playsound(lunch, 'modular_skyrat/modules/horrorform/sound/tear.ogg', 50, 1)
-	lunch.emote("scream")
+	lunch.emote("agony") // Ark Station 13 Edit
 	if(lunch.nutrition >= NUTRITION_LEVEL_FAT)
 		horrorform.adjustBruteLoss(-100) //Tasty leetle peegy
 	else

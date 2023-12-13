@@ -1,5 +1,5 @@
 /// The list of the available special player ranks
-#define SKYRAT_PLAYER_RANKS list("Donator", "Mentor", "Veteran")
+#define SKYRAT_PLAYER_RANKS list("Donator", "Mentor")
 
 /client/proc/manage_player_ranks()
 	set category = "Admin"

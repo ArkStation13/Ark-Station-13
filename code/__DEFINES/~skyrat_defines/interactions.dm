@@ -14,3 +14,13 @@
 // Interaction Types: Do we do it to ourself or someone else
 #define INTERACTION_SELF "self"
 #define INTERACTION_OTHER "other"
+
+// ARK STATION ADD
+
+#define INTERACTION_REQUIRE_SELF_MOUTH "self_mouth"
+#define INTERACTION_REQUIRE_TARGET_MOUTH "target_mouth"
+
+#define INTERACTION_REQUIRE_SELF_CHEST "self_chest"
+#define INTERACTION_REQUIRE_TARGET_CHEST "target_chest"
+
+//

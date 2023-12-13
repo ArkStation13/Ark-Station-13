@@ -316,9 +316,9 @@ GLOBAL_LIST_INIT(biotypes_to_scar_file, list(
 /// how quickly sanitization removes infestation and decays per second
 #define WOUND_BURN_SANITIZATION_RATE 0.075
 /// how much blood you can lose per tick per slash max.
-#define WOUND_SLASH_MAX_BLOODFLOW 4.5
+#define WOUND_SLASH_MAX_BLOODFLOW 1.5 // WOUND_SLASH_MAX_BLOODFLOW 4.5 ->> WOUND_SLASH_MAX_BLOODFLOW 1.5 // ARK STATION EDIT
 /// further slash attacks on a bodypart with a slash wound have their blood_flow further increased by damage * this (10 damage slash adds .25 flow)
-#define WOUND_SLASH_DAMAGE_FLOW_COEFF 0.025
+#define WOUND_SLASH_DAMAGE_FLOW_COEFF 0.075 // WOUND_SLASH_DAMAGE_FLOW_COEFF 0.025 ->> WOUND_SLASH_DAMAGE_FLOW_COEFF 0.075 // ARK STATION EDIT
 /// if we suffer a bone wound to the head that creates brain traumas, the timer for the trauma cycle is +/- by this percent (0-100)
 #define WOUND_BONE_HEAD_TIME_VARIANCE 20
 

@@ -46,78 +46,78 @@
 /obj/item/vending_refill/wardrobe/sec_wardrobe
 	machine_name = "SecDrobe"
 
-/obj/machinery/vending/wardrobe/medi_wardrobe
-	name = "\improper MediDrobe"
-	desc = "A vending machine rumoured to be capable of dispensing clothing for medical personnel."
-	icon_state = "medidrobe"
-	product_ads = "Make those blood stains look fashionable!!"
-	vend_reply = "Thank you for using the MediDrobe!"
-	products = list(
-		/obj/item/clothing/accessory/pocketprotector = 4,
-		/obj/item/clothing/head/costume/nursehat = 4,
-		/obj/item/clothing/head/beret/medical = 4,
-		/obj/item/clothing/head/utility/surgerycap = 4,
-		/obj/item/clothing/head/utility/surgerycap/purple = 4,
-		/obj/item/clothing/head/utility/surgerycap/green = 4,
-		/obj/item/clothing/head/beret/medical/paramedic = 4,
-		/obj/item/clothing/head/soft/paramedic = 4,
-		/obj/item/clothing/head/utility/head_mirror = 4,
-		/obj/item/clothing/mask/bandana/striped/medical = 4,
-		/obj/item/clothing/mask/surgical = 4,
-		/obj/item/clothing/under/rank/medical/doctor = 4,
-		/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/green = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/purple = 4,
-		/obj/item/clothing/under/rank/medical/paramedic = 4,
-		/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
-		/obj/item/clothing/suit/toggle/labcoat = 4,
-		/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
-		/obj/item/clothing/suit/apron/surgical = 4,
-		/obj/item/clothing/suit/hooded/wintercoat/medical = 4,
-		/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic = 4,
-		/obj/item/clothing/shoes/sneakers/white = 4,
-		/obj/item/clothing/shoes/sneakers/blue = 4,
-		/obj/item/clothing/gloves/latex/nitrile = 4,
-		/obj/item/clothing/gloves/latex = 4,
-		/obj/item/storage/backpack/duffelbag/med = 4,
-		/obj/item/storage/backpack/medic = 4,
-		/obj/item/storage/backpack/satchel/med = 4,
-		/obj/item/storage/backpack/messenger/med = 4,
-		/obj/item/radio/headset/headset_med = 4,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
-	payment_department = ACCOUNT_MED
+// /obj/machinery/vending/wardrobe/medi_wardrobe
+// 	name = "\improper MediDrobe"
+// 	desc = "A vending machine rumoured to be capable of dispensing clothing for medical personnel."
+// 	icon_state = "medidrobe"
+// 	product_ads = "Make those blood stains look fashionable!!"
+// 	vend_reply = "Thank you for using the MediDrobe!"
+// 	products = list(
+// 		/obj/item/clothing/accessory/pocketprotector = 4,
+// 		/obj/item/clothing/head/costume/nursehat = 4,
+// 		/obj/item/clothing/head/beret/medical = 4,
+// 		/obj/item/clothing/head/utility/surgerycap = 4,
+// 		/obj/item/clothing/head/utility/surgerycap/purple = 4,
+// 		/obj/item/clothing/head/utility/surgerycap/green = 4,
+// 		/obj/item/clothing/head/beret/medical/paramedic = 4,
+// 		/obj/item/clothing/head/soft/paramedic = 4,
+// 		/obj/item/clothing/head/utility/head_mirror = 4,
+// 		/obj/item/clothing/mask/bandana/striped/medical = 4,
+// 		/obj/item/clothing/mask/surgical = 4,
+// 		/obj/item/clothing/under/rank/medical/doctor = 4,
+// 		/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
+// 		/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
+// 		/obj/item/clothing/under/rank/medical/scrubs/green = 4,
+// 		/obj/item/clothing/under/rank/medical/scrubs/purple = 4,
+// 		/obj/item/clothing/under/rank/medical/paramedic = 4,
+// 		/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
+// 		/obj/item/clothing/suit/toggle/labcoat = 4,
+// 		/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
+// 		/obj/item/clothing/suit/apron/surgical = 4,
+// 		/obj/item/clothing/suit/hooded/wintercoat/medical = 4,
+// 		/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic = 4,
+// 		/obj/item/clothing/shoes/sneakers/white = 4,
+// 		/obj/item/clothing/shoes/sneakers/blue = 4,
+// 		/obj/item/clothing/gloves/latex/nitrile = 4,
+// 		/obj/item/clothing/gloves/latex = 4,
+// 		/obj/item/storage/backpack/duffelbag/med = 4,
+// 		/obj/item/storage/backpack/medic = 4,
+// 		/obj/item/storage/backpack/satchel/med = 4,
+// 		/obj/item/storage/backpack/messenger/med = 4,
+// 		/obj/item/radio/headset/headset_med = 4,
+// 	)
+// 	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
+// 	payment_department = ACCOUNT_MED
 
 /obj/item/vending_refill/wardrobe/medi_wardrobe
 	machine_name = "MediDrobe"
 
-/obj/machinery/vending/wardrobe/engi_wardrobe
-	name = "EngiDrobe"
-	desc = "A vending machine renowned for vending industrial grade clothing."
-	icon_state = "engidrobe"
-	product_ads = "Guaranteed to protect your feet from industrial accidents!;Afraid of radiation? Then wear yellow!"
-	vend_reply = "Thank you for using the EngiDrobe!"
-	products = list(
-		/obj/item/clothing/accessory/pocketprotector = 3,
-		/obj/item/clothing/head/utility/hardhat = 3,
-		/obj/item/clothing/head/utility/hardhat/welding = 3,
-		/obj/item/clothing/head/beret/engi = 3,
-		/obj/item/clothing/mask/bandana/striped/engineering = 3,
-		/obj/item/clothing/under/rank/engineering/engineer = 3,
-		/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
-		/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
-		/obj/item/clothing/suit/hazardvest = 3,
-		/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
-		/obj/item/clothing/shoes/workboots = 3,
-		/obj/item/storage/backpack/industrial = 3,
-		/obj/item/storage/backpack/satchel/eng = 3,
-		/obj/item/storage/backpack/duffelbag/engineering = 3,
-		/obj/item/storage/backpack/messenger/eng = 3,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/engi_wardrobe
-	payment_department = ACCOUNT_ENG
-	light_color = COLOR_VIVID_YELLOW
+// /obj/machinery/vending/wardrobe/engi_wardrobe
+// 	name = "EngiDrobe"
+// 	desc = "A vending machine renowned for vending industrial grade clothing."
+// 	icon_state = "engidrobe"
+// 	product_ads = "Guaranteed to protect your feet from industrial accidents!;Afraid of radiation? Then wear yellow!"
+// 	vend_reply = "Thank you for using the EngiDrobe!"
+// 	products = list(
+// 		/obj/item/clothing/accessory/pocketprotector = 3,
+// 		/obj/item/clothing/head/utility/hardhat = 3,
+// 		/obj/item/clothing/head/utility/hardhat/welding = 3,
+// 		/obj/item/clothing/head/beret/engi = 3,
+// 		/obj/item/clothing/mask/bandana/striped/engineering = 3,
+// 		/obj/item/clothing/under/rank/engineering/engineer = 3,
+// 		/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
+// 		/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
+// 		/obj/item/clothing/suit/hazardvest = 3,
+// 		/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
+// 		/obj/item/clothing/shoes/workboots = 3,
+// 		/obj/item/storage/backpack/industrial = 3,
+// 		/obj/item/storage/backpack/satchel/eng = 3,
+// 		/obj/item/storage/backpack/duffelbag/engineering = 3,
+// 		/obj/item/storage/backpack/messenger/eng = 3,
+// 	)
+// 	refill_canister = /obj/item/vending_refill/wardrobe/engi_wardrobe
+// 	payment_department = ACCOUNT_ENG
+// 	light_color = COLOR_VIVID_YELLOW // Ark Station 13 Edit
 
 /obj/item/vending_refill/wardrobe/engi_wardrobe
 	machine_name = "EngiDrobe"
@@ -498,48 +498,48 @@
 /obj/item/vending_refill/wardrobe/law_wardrobe
 	machine_name = "LawDrobe"
 
-/obj/machinery/vending/wardrobe/chap_wardrobe
-	name = "DeusVend"
-	desc = "God wills your purchase."
-	icon_state = "chapdrobe"
-	product_ads = "Are you being bothered by cultists or pesky revenants? Then come and dress like the holy man!;Clothes for men of the cloth!"
-	vend_reply = "Thank you for using the DeusVend!"
-	products = list(
-		/obj/item/choice_beacon/holy = 1,
-		/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
-		/obj/item/clothing/under/rank/civilian/chaplain = 1,
-		/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
-		/obj/item/clothing/shoes/sneakers/black = 1,
-		/obj/item/clothing/suit/chaplainsuit/nun = 1,
-		/obj/item/clothing/head/chaplain/nun_hood = 1,
-		/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
-		/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
-		/obj/item/clothing/head/chaplain/kippah = 3,
-		/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
-		/obj/item/clothing/head/chaplain/taqiyah/white = 1,
-		/obj/item/clothing/head/chaplain/taqiyah/red = 3,
-		/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
-		/obj/item/clothing/head/rasta = 1,
-		/obj/item/clothing/suit/chaplainsuit/shrinehand = 1,
-		/obj/item/storage/backpack/cultpack = 1,
-		/obj/item/storage/fancy/candle_box = 2,
-		/obj/item/radio/headset/headset_srv = 2,
-		/obj/item/clothing/suit/chaplainsuit/habit = 1,
-		/obj/item/clothing/head/chaplain/habit_veil = 1,
-	)
-	contraband = list(
-		/obj/item/toy/plush/ratplush = 1,
-		/obj/item/toy/plush/narplush = 1,
-		/obj/item/clothing/head/chaplain/medievaljewhat = 3,
-		/obj/item/clothing/head/chaplain/clownmitre = 1,
-		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
-	)
-	premium = list(
-		/obj/item/clothing/head/chaplain/bishopmitre = 1,
-		/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
-	payment_department = ACCOUNT_SRV
+// /obj/machinery/vending/wardrobe/chap_wardrobe
+// 	name = "DeusVend"
+// 	desc = "God wills your purchase."
+// 	icon_state = "chapdrobe"
+// 	product_ads = "Are you being bothered by cultists or pesky revenants? Then come and dress like the holy man!;Clothes for men of the cloth!"
+// 	vend_reply = "Thank you for using the DeusVend!"
+// 	products = list(
+// 		/obj/item/choice_beacon/holy = 1,
+// 		/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
+// 		/obj/item/clothing/under/rank/civilian/chaplain = 1,
+// 		/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
+// 		/obj/item/clothing/shoes/sneakers/black = 1,
+// 		/obj/item/clothing/suit/chaplainsuit/nun = 1,
+// 		/obj/item/clothing/head/chaplain/nun_hood = 1,
+// 		/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
+// 		/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
+// 		/obj/item/clothing/head/chaplain/kippah = 3,
+// 		/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
+// 		/obj/item/clothing/head/chaplain/taqiyah/white = 1,
+// 		/obj/item/clothing/head/chaplain/taqiyah/red = 3,
+// 		/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
+// 		/obj/item/clothing/head/rasta = 1,
+// 		/obj/item/clothing/suit/chaplainsuit/shrinehand = 1,
+// 		/obj/item/storage/backpack/cultpack = 1,
+// 		/obj/item/storage/fancy/candle_box = 2,
+// 		/obj/item/radio/headset/headset_srv = 2,
+// 		/obj/item/clothing/suit/chaplainsuit/habit = 1,
+// 		/obj/item/clothing/head/chaplain/habit_veil = 1,
+// 	)
+// 	contraband = list(
+// 		/obj/item/toy/plush/ratplush = 1,
+// 		/obj/item/toy/plush/narplush = 1,
+// 		/obj/item/clothing/head/chaplain/medievaljewhat = 3,
+// 		/obj/item/clothing/head/chaplain/clownmitre = 1,
+// 		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
+// 	)
+// 	premium = list(
+// 		/obj/item/clothing/head/chaplain/bishopmitre = 1,
+// 		/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
+// 	)
+// 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
+// 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/wardrobe/chap_wardrobe
 	machine_name = "DeusVend"
@@ -627,46 +627,46 @@
 /obj/item/vending_refill/wardrobe/viro_wardrobe
 	machine_name = "ViroDrobe"
 
-/obj/machinery/vending/wardrobe/det_wardrobe
-	name = "\improper DetDrobe"
-	desc = "A machine for all your detective needs, as long as you need clothes."
-	icon_state = "detdrobe"
-	product_ads = "Apply your brilliant deductive methods in style!"
-	vend_reply = "Thank you for using the DetDrobe!"
-	products = list(
-		/obj/item/clothing/head/fedora/det_hat = 2,
-		/obj/item/clothing/under/rank/security/detective = 2,
-		/obj/item/clothing/under/rank/security/detective/skirt = 2,
-		/obj/item/clothing/suit/jacket/det_suit = 2,
-		/obj/item/clothing/shoes/sneakers/brown = 2,
-		/obj/item/clothing/gloves/latex = 2,
-		/obj/item/clothing/gloves/color/black = 2,
-		/obj/item/clothing/accessory/waistcoat = 2,
-		/obj/item/clothing/under/rank/security/detective/noir = 2,
-		/obj/item/clothing/under/rank/security/detective/noir/skirt = 2,
-		/obj/item/clothing/shoes/laceup = 2,
-		/obj/item/clothing/head/fedora = 2,
-		/obj/item/clothing/suit/jacket/det_suit/dark = 1,
-		/obj/item/clothing/suit/jacket/det_suit/noir = 1,
-		/obj/item/clothing/neck/tie/disco = 1,
-		/obj/item/clothing/under/rank/security/detective/disco = 1,
-		/obj/item/clothing/suit/jacket/det_suit/disco = 1,
-		/obj/item/clothing/shoes/discoshoes = 1,
-		/obj/item/clothing/glasses/regular/kim = 1,
-		/obj/item/clothing/under/rank/security/detective/kim = 1,
-		/obj/item/clothing/suit/jacket/det_suit/kim = 1,
-		/obj/item/clothing/gloves/kim = 1,
-		/obj/item/clothing/shoes/kim = 1,
-		/obj/item/reagent_containers/cup/glass/flask/det = 2,
-		/obj/item/storage/fancy/cigarettes = 5,
-		/obj/item/storage/fancy/cigarettes/cigpack_candy = 5,
-	)
-	premium = list(
-		/obj/item/clothing/head/flatcap = 1,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/det_wardrobe
-	extra_price = PAYCHECK_COMMAND * 1.75
-	payment_department = ACCOUNT_SEC
+// /obj/machinery/vending/wardrobe/det_wardrobe
+// 	name = "\improper DetDrobe"
+// 	desc = "A machine for all your detective needs, as long as you need clothes."
+// 	icon_state = "detdrobe"
+// 	product_ads = "Apply your brilliant deductive methods in style!"
+// 	vend_reply = "Thank you for using the DetDrobe!"
+// 	products = list(
+// 		/obj/item/clothing/head/fedora/det_hat = 2,
+// 		/obj/item/clothing/under/rank/security/detective = 2,
+// 		/obj/item/clothing/under/rank/security/detective/skirt = 2,
+// 		/obj/item/clothing/suit/jacket/det_suit = 2,
+// 		/obj/item/clothing/shoes/sneakers/brown = 2,
+// 		/obj/item/clothing/gloves/latex = 2,
+// 		/obj/item/clothing/gloves/color/black = 2,
+// 		/obj/item/clothing/accessory/waistcoat = 2,
+// 		/obj/item/clothing/under/rank/security/detective/noir = 2,
+// 		/obj/item/clothing/under/rank/security/detective/noir/skirt = 2,
+// 		/obj/item/clothing/shoes/laceup = 2,
+// 		/obj/item/clothing/head/fedora = 2,
+// 		/obj/item/clothing/suit/jacket/det_suit/dark = 1,
+// 		/obj/item/clothing/suit/jacket/det_suit/noir = 1,
+// 		/obj/item/clothing/neck/tie/disco = 1,
+// 		/obj/item/clothing/under/rank/security/detective/disco = 1,
+// 		/obj/item/clothing/suit/jacket/det_suit/disco = 1,
+// 		/obj/item/clothing/shoes/discoshoes = 1,
+// 		/obj/item/clothing/glasses/regular/kim = 1,
+// 		/obj/item/clothing/under/rank/security/detective/kim = 1,
+// 		/obj/item/clothing/suit/jacket/det_suit/kim = 1,
+// 		/obj/item/clothing/gloves/kim = 1,
+// 		/obj/item/clothing/shoes/kim = 1,
+// 		/obj/item/reagent_containers/cup/glass/flask/det = 2,
+// 		/obj/item/storage/fancy/cigarettes = 5,
+// 		/obj/item/storage/fancy/cigarettes/cigpack_candy = 5,
+// 	)
+// 	premium = list(
+// 		/obj/item/clothing/head/flatcap = 1,
+// 	)
+// 	refill_canister = /obj/item/vending_refill/wardrobe/det_wardrobe
+// 	extra_price = PAYCHECK_COMMAND * 1.75
+// 	payment_department = ACCOUNT_SEC
 
 /obj/item/vending_refill/wardrobe/det_wardrobe
 	machine_name = "DetDrobe"

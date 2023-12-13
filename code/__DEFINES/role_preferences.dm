@@ -117,6 +117,10 @@
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"
 
+// ARK STATION EDIT START //
+#define ROLE_NECROMORPH "Necromorph"
+// ARK STATION EDIT END //
+
 // Virtual dom related
 #define ROLE_GLITCH "Glitch" // the parent type of all vdom roles
 #define ROLE_CYBER_POLICE "Cyber Police"

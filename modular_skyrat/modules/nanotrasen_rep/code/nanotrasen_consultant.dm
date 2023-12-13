@@ -16,8 +16,7 @@
 	department_for_prefs = /datum/job_department/captain
 
 	departments_list = list(
-		/datum/job_department/command,
-		/datum/job_department/central_command
+		/datum/job_department/central_command,
 	)
 
 	outfit = /datum/outfit/job/nanotrasen_consultant
@@ -37,13 +36,14 @@
 		/obj/item/reagent_containers/cup/glass/bottle/champagne = 10
 	)
 
-	veteran_only = TRUE
+	//veteran_only = TRUE // Ark Station 13 Edit - Fuck Vet's system
 	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
+
+	job_tone = "objection"
 
 /datum/outfit/job/nanotrasen_consultant
 	name = "Nanotrasen Consultant"
 	jobtype = /datum/job/nanotrasen_consultant
-
 	belt = /obj/item/modular_computer/pda/nanotrasen_consultant
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/heads/nanotrasen_consultant
@@ -112,7 +112,7 @@
 	greyscale_colors = "#017941#0060b8"
 
 /obj/item/storage/bag/garment/nanotrasen_consultant
-	name = "nanotrasen consultant's garment bag"
+	name = "Nanotrasen consultant's garment bag"
 	desc = "A bag for storing extra clothes and shoes. This one belongs to the Nanotrasen consultant."
 
 /obj/item/storage/bag/garment/nanotrasen_consultant/PopulateContents()
@@ -133,13 +133,14 @@
 	new /obj/item/clothing/under/rank/centcom/intern(src)
 	new /obj/item/clothing/head/hats/intern(src)
 
-/obj/structure/closet/secure_closet/nanotrasen_consultant
-	name = "nanotrasen consultant's locker"
+/obj/structure/closet/secure_closet/nanotrasen_consultant/station
+	name = "\proper nanotrasen consultant's locker"
 	req_access = list(ACCESS_CAPTAIN, ACCESS_CENT_GENERAL)
 	icon_state = "cc"
 	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	door_anim_time = 0 //CONVERT THESE DOORS YOU LAZY ASSHATS
 
-/obj/structure/closet/secure_closet/nanotrasen_consultant/PopulateContents()
+/obj/structure/closet/secure_closet/nanotrasen_consultant/station/PopulateContents()
 	..()
 	new /obj/item/storage/backpack/satchel/leather(src)
 	new /obj/item/clothing/neck/petcollar(src)

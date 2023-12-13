@@ -81,27 +81,27 @@
 	desired_atom = /obj/effect/landmark/start/bouncer
 	target_areas = list(/area/station/service/bar, /area/station/service/cafeteria, /area/station/service/kitchen/diner)
 
-/datum/area_spawn/engineering_guard_landmark
-	desired_atom = /obj/effect/landmark/start/engineering_guard
-	target_areas = list(/area/station/security/checkpoint/engineering, /area/station/engineering/break_room, /area/station/engineering/lobby)
+// /datum/area_spawn/engineering_guard_landmark
+// 	desired_atom = /obj/effect/landmark/start/engineering_guard
+// 	target_areas = list(/area/station/security/checkpoint/engineering, /area/station/engineering/break_room, /area/station/engineering/lobby)
 
-/datum/area_spawn/science_guard_landmark
-	desired_atom = /obj/effect/landmark/start/science_guard
-	target_areas = list(/area/station/security/checkpoint/science, /area/station/science/lobby, /area/station/science/lab)
+// /datum/area_spawn/science_guard_landmark
+// 	desired_atom = /obj/effect/landmark/start/science_guard
+// 	target_areas = list(/area/station/security/checkpoint/science, /area/station/science/lobby, /area/station/science/lab)
 
-/datum/area_spawn/orderly_landmark
-	desired_atom = /obj/effect/landmark/start/orderly
-	target_areas = list(/area/station/security/checkpoint/medical, /area/station/medical/medbay/lobby)
+// /datum/area_spawn/orderly_landmark
+// 	desired_atom = /obj/effect/landmark/start/orderly
+// 	target_areas = list(/area/station/security/checkpoint/medical, /area/station/medical/medbay/lobby)
 
-/datum/area_spawn/customs_agent_landmark
-	desired_atom = /obj/effect/landmark/start/customs_agent
-	target_areas = list(/area/station/security/checkpoint/supply, /area/station/cargo/storage)
+// /datum/area_spawn/customs_agent_landmark
+// 	desired_atom = /obj/effect/landmark/start/customs_agent
+// 	target_areas = list(/area/station/security/checkpoint/supply, /area/station/cargo/storage)
 
-/datum/area_spawn_over/prison_curtains
-	desired_atom = /obj/structure/curtain/cloth/prison
-	over_atoms = list(/obj/structure/window/reinforced/fulltile, /obj/machinery/door/airlock/security/glass, /obj/machinery/door/airlock/public/glass)
-	target_areas = list(/area/station/security/prison/safe)
+// /datum/area_spawn_over/prison_curtains
+// 	desired_atom = /obj/structure/curtain/cloth/prison
+// 	over_atoms = list(/obj/structure/window/reinforced/fulltile, /obj/machinery/door/airlock/security/glass, /obj/machinery/door/airlock/public/glass)
+// 	target_areas = list(/area/station/security/prison/safe)
 
-/datum/area_spawn/corrections_officer_landmark
-	desired_atom = /obj/effect/landmark/start/corrections_officer
-	target_areas = list(/area/station/security/brig, /area/station/security/prison/)
+// /datum/area_spawn/corrections_officer_landmark
+// 	desired_atom = /obj/effect/landmark/start/corrections_officer
+// 	target_areas = list(/area/station/security/brig, /area/station/security/prison/)

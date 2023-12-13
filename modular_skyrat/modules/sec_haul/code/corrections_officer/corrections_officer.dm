@@ -1,4 +1,4 @@
-/datum/job/corrections_officer
+/*/datum/job/corrections_officer
 	title = JOB_CORRECTIONS_OFFICER
 	description = "Guard the permabrig, stand around looking imposing, get fired for abusing the prisoners"
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
@@ -33,7 +33,7 @@
 		/obj/item/melee/baton/security/boomerang/loaded = 1
 	)
 	rpg_title = "Bailiff"
-	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/security_cap, /obj/item/clothing/mask/whistle)
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/mask/whistle) // /obj/item/clothing/head/security_cap,
 
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
@@ -59,4 +59,4 @@
 	id_trim = /datum/id_trim/job/corrections_officer
 
 
-
+*/

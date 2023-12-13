@@ -1,6 +1,6 @@
 //#define LOWMEMORYMODE //uncomment this to load centcom and runtime station and thats it.
 
-#include "map_files\generic\CentCom.dmm"
+#include "map_files\generic\CentCom_arkstation_rework.dmm" // ARK STATION EDIT
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
@@ -17,7 +17,9 @@
 		#include "map_files\VoidRaptor\VoidRaptor.dmm"
 		#include "map_files\NSVBlueshift\Blueshift.dmm"
 		// SKYRAT EDIT END
-
+		// ARK STATION ADDITION START
+		#include "ark_map_files/sla2her_maps/KiloStation2.dmm"
+		// ARK STATION ADDITION END
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif

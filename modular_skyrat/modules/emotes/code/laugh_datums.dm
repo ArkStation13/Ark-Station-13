@@ -10,12 +10,12 @@ GLOBAL_LIST_EMPTY(laugh_types)
 	male_laughsounds = null
 	female_laughsounds = null
 
-/datum/laugh_type/human
-	name = "Human Laugh"
-	male_laughsounds = list('sound/voice/human/manlaugh1.ogg',
-						'sound/voice/human/manlaugh2.ogg')
-	female_laughsounds = list('modular_skyrat/modules/emotes/sound/emotes/female/female_giggle_1.ogg',
-					'modular_skyrat/modules/emotes/sound/emotes/female/female_giggle_2.ogg')
+// /datum/laugh_type/human
+// 	name = "Human Laugh"
+// 	male_laughsounds = list('sound/voice/human/manlaugh1.ogg',
+// 						'sound/voice/human/manlaugh2.ogg')
+// 	female_laughsounds = list('modular_skyrat/modules/emotes/sound/emotes/female/female_giggle_1.ogg',
+// 					'modular_skyrat/modules/emotes/sound/emotes/female/female_giggle_2.ogg')
 
 /datum/laugh_type/felinid
 	name = "Felinid Laugh"

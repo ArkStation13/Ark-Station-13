@@ -150,3 +150,6 @@ GLOBAL_LIST_INIT(megafauna_spawn_list, list(
 	/mob/living/simple_animal/hostile/megafauna/colossus = 2,
 	/mob/living/simple_animal/hostile/megafauna/dragon = 4,
 ))
+
+// ARK STATION ADD
+GLOBAL_LIST_EMPTY(inteqteamspawn)

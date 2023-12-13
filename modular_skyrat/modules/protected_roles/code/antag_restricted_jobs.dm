@@ -27,8 +27,8 @@
 /datum/job/blueshield
 	antagonist_restricted = TRUE
 
-/datum/job/corrections_officer
-	antagonist_restricted = TRUE
+///datum/job/corrections_officer
+//	antagonist_restricted = TRUE
 
 /datum/job/orderly
 	antagonist_restricted = TRUE

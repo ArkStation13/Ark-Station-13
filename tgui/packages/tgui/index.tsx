@@ -29,6 +29,10 @@ import './styles/themes/admin.scss';
 import './styles/themes/clockwork.scss';
 // SKYRAT ADDITION END
 
+// ARK STATION ADD START
+import './styles/themes/inteq.scss';
+// ARK STATION ADD END
+
 import { configureStore } from './store';
 
 import { captureExternalLinks } from './links';

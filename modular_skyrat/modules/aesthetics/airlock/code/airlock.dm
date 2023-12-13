@@ -180,7 +180,7 @@
 	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/security
-	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security.dmi'
+	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security2.dmi' // ARK STATION EDIT || REDSEC
 
 /obj/machinery/door/airlock/security/old
 	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security2.dmi'
@@ -392,7 +392,7 @@
 	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/command.dmi'
 
 /obj/structure/door_assembly/door_assembly_sec
-	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security.dmi'
+	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security2.dmi' // ARK STATION EDIT || REDSEC
 
 /obj/structure/door_assembly/door_assembly_sec/old
 	icon = 'modular_skyrat/modules/aesthetics/airlock/icons/airlocks/station/security2.dmi'

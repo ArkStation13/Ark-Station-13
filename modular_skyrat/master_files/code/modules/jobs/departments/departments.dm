@@ -5,7 +5,7 @@
 	department_experience_type = EXP_TYPE_CENTRAL_COMMAND
 	display_order = 1
 	label_class = "command"
-	ui_color = "#86ff82"
+	ui_color = "#66c050" //ARK STATION EDIT || Слишком тусклый был.
 
 /datum/job_department/security
-	ui_color = "#528ccf"
+	ui_color = "#cf5252" // ARK STATION EDIT || REDSEC

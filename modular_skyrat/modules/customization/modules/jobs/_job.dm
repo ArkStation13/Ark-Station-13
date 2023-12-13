@@ -17,7 +17,7 @@
 	var/list/required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 	///Is this job veteran only? If so, then this job requires the player to be in the veteran_players.txt
-	var/veteran_only = FALSE
+	//var/veteran_only = FALSE // Ark Station 13 Edit - Fuck Vet's system
 
 
 /datum/job/proc/has_banned_quirk(datum/preferences/pref)
@@ -83,9 +83,9 @@
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
 
-/datum/job/corrections_officer
-	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
-	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+///datum/job/corrections_officer
+//	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
+//	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
 
 // Command
 /datum/job/captain
@@ -143,20 +143,20 @@
 /datum/job/prisoner
 	required_languages = null
 
-/datum/job/orderly
-	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// /datum/job/orderly
+// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-/datum/job/science_guard
-	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// /datum/job/science_guard
+// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-/datum/job/customs_agent
-	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// /datum/job/customs_agent
+// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-/datum/job/bouncer
-	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// /datum/job/bouncer
+// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-/datum/job/engineering_guard
-	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// /datum/job/engineering_guard
+// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/proc/has_required_languages(datum/preferences/pref)
 	if(!required_languages)

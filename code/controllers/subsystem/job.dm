@@ -905,9 +905,9 @@ SUBSYSTEM_DEF(job)
 		return JOB_UNAVAILABLE_AGE
 
 	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
-	if(possible_job.veteran_only && !SSplayer_ranks.is_veteran(player.client))
-		JobDebug("[debug_prefix] Error: [get_job_unavailable_error_message(JOB_NOT_VETERAN)], Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")
-		return JOB_NOT_VETERAN
+	// if(possible_job.veteran_only && !SSplayer_ranks.is_veteran(player.client))
+	// 	JobDebug("[debug_prefix] Error: [get_job_unavailable_error_message(JOB_NOT_VETERAN)], Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")
+	// 	return JOB_NOT_VETERAN
 
 	if(possible_job.has_banned_quirk(player.client.prefs))
 		JobDebug("[debug_prefix] Error: [get_job_unavailable_error_message(JOB_UNAVAILABLE_QUIRK)], Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")

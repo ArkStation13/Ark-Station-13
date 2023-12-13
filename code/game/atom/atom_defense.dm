@@ -2,10 +2,10 @@
 	///any atom that uses integrity and can be damaged must set this to true, otherwise the integrity procs will throw an error
 	var/uses_integrity = FALSE
 
-	VAR_PROTECTED/datum/armor/armor_type = /datum/armor/none
-	VAR_PRIVATE/datum/armor/armor
+	var/datum/armor/armor_type = /datum/armor/none
+	var/datum/armor/armor
 
-	VAR_PRIVATE/atom_integrity //defaults to max_integrity
+	var/atom_integrity //defaults to max_integrity
 	var/max_integrity = 500
 	var/integrity_failure = 0 //0 if we have no special broken behavior, otherwise is a percentage of at what point the atom breaks. 0.5 being 50%
 	///Damage under this value will be completely ignored

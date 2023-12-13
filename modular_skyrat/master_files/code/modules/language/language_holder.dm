@@ -93,6 +93,7 @@ GLOBAL_DATUM_INIT(language_holder_adjustor, /datum/language_holder_adjustor, new
 		/datum/language/siiktajr = list(LANGUAGE_ATOM),
 		/datum/language/canilunzt = list(LANGUAGE_ATOM),
 		/datum/language/akulan = list(LANGUAGE_ATOM),
+		/datum/language/german = list(LANGUAGE_ATOM), // Ark Station 13 Edit
 	)
 	spoken_languages = list(
 		/datum/language/common = list(LANGUAGE_ATOM),
@@ -122,4 +123,5 @@ GLOBAL_DATUM_INIT(language_holder_adjustor, /datum/language_holder_adjustor, new
 		/datum/language/siiktajr = list(LANGUAGE_ATOM),
 		/datum/language/canilunzt = list(LANGUAGE_ATOM),
 		/datum/language/akulan = list(LANGUAGE_ATOM),
+		/datum/language/german = list(LANGUAGE_ATOM), // Ark Station 13 Edit
 	)

@@ -122,6 +122,7 @@
 	greyscale_colors = "#5E8F2D#F2F2F2"
 
 /*
+/*
 	LANDMARKS
 */
 /obj/effect/landmark/start/science_guard
@@ -143,13 +144,8 @@
 	name = "Customs Agent"
 	icon_state = "Customs Agent"
 	icon = 'modular_skyrat/master_files/icons/mob/landmarks.dmi'
-
-/obj/effect/landmark/start/bouncer
-	name = "Service Guard"
-	icon_state = "Bouncer"
-	icon = 'modular_skyrat/master_files/icons/mob/landmarks.dmi'
-
 /*
+
 	SCIENCE GUARD DATUMS
 */
 /datum/job/science_guard
@@ -354,6 +350,7 @@
 /*
 	ENGINEERING GUARD DATUMS
 */
+
 /datum/job/engineering_guard
 	title = JOB_ENGINEERING_GUARD
 	description = "Monitor the supermatter, keep an eye on atmospherics, make sure everyone is wearing Proper Protective Equipment."
@@ -552,17 +549,24 @@
 	)
 	template_access = list(ACCESS_CAPTAIN, ACCESS_QM, ACCESS_CHANGE_IDS)
 	job = /datum/job/customs_agent
+*/
 
 /*
 	SERVICE GUARD DATUMS
 */
+
+/obj/effect/landmark/start/bouncer
+	name = "Service Guard"
+	icon_state = "Bouncer"
+	icon = 'modular_skyrat/master_files/icons/mob/landmarks.dmi'
+
 /datum/job/bouncer
 	title = JOB_BOUNCER
 	description = "Make sure people don't jump the kitchen counter, stop Chapel vandalism, check bargoer's IDs, prevent the dreaded \"food fight\"."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BOUNCER"
@@ -742,7 +746,7 @@
 
 /datum/supply_pack/security/baton_prison
 	name = "Prison Baton Crate"
-	desc = "Contains an extra baton for Corrections Officers. \
+	desc = "Contains an extra baton for security prison guards. \
 		Just in case you hated the idea of a normal baton in their hands."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
@@ -751,7 +755,7 @@
 
 /datum/supply_pack/service/baton_service
 	name = "Service Baton Crate"
-	desc = "Contains an extra baton for Service Guards."
+	desc = "Contains an extra baton for Bouncers."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	access = ACCESS_SECURITY
@@ -759,7 +763,7 @@
 
 /datum/supply_pack/medical/baton_medical
 	name = "Medical Baton Crate"
-	desc = "Contains an extra baton for Orderlies."
+	desc = "Contains an extra baton for using inside of medbay."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	access = ACCESS_SECURITY
@@ -767,7 +771,7 @@
 
 /datum/supply_pack/engineering/baton_engineering
 	name = "Engineering Baton Crate"
-	desc = "Contains an extra baton for Engineering Guards."
+	desc = "Contains an extra baton for using inside of engineering department."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	access = ACCESS_SECURITY
@@ -775,7 +779,7 @@
 
 /datum/supply_pack/science/baton_science
 	name = "Science Baton Crate"
-	desc = "Contains an extra baton for Science Guards."
+	desc = "Contains an extra baton for using inside of scientific lab."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	access = ACCESS_SECURITY
@@ -783,7 +787,7 @@
 
 /datum/supply_pack/misc/baton_cargo
 	name = "Cargo Baton Crate"
-	desc = "Contains an extra baton for Customs Agents."
+	desc = "Contains an extra baton for using inside of cargo bay."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	access = ACCESS_SECURITY
@@ -794,7 +798,7 @@
 
 /obj/item/storage/bag/garment/science_guard
 	name = "science guard's garments"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the science guard."
+	desc = "A bag for storing extra clothes and shoes. This once belonged to to the science guard."
 
 /obj/item/storage/bag/garment/science_guard/PopulateContents()
 	generate_items_inside(list(
@@ -809,7 +813,7 @@
 
 /obj/item/storage/bag/garment/orderly
 	name = "orderly's garments"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the orderly."
+	desc = "A bag for storing extra clothes and shoes. This once belonged to the orderly."
 
 /obj/item/storage/bag/garment/orderly/PopulateContents()
 	generate_items_inside(list(
@@ -824,7 +828,7 @@
 
 /obj/item/storage/bag/garment/engineering_guard
 	name = "engineering guard's garments"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the engineering guard."
+	desc = "A bag for storing extra clothes and shoes. This once belonged to to the engineering guard."
 
 /obj/item/storage/bag/garment/engineering_guard/PopulateContents()
 	generate_items_inside(list(
@@ -839,7 +843,7 @@
 
 /obj/item/storage/bag/garment/customs_agent
 	name = "customs agent's garments"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the customs agent."
+	desc = "A bag for storing extra clothes and shoes. This once belonged to to the customs agent."
 
 /obj/item/storage/bag/garment/customs_agent/PopulateContents()
 	generate_items_inside(list(

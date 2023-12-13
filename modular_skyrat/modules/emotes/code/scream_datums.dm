@@ -10,16 +10,16 @@ GLOBAL_LIST_EMPTY(scream_types)
 	male_screamsounds = null
 	female_screamsounds = null
 
-/datum/scream_type/human
-	name = "Human Scream"
-	male_screamsounds = list(
-		'modular_skyrat/modules/emotes/sound/voice/scream_m1.ogg',
-		'modular_skyrat/modules/emotes/sound/voice/scream_m2.ogg',
-	)
-	female_screamsounds = list(
-		'modular_skyrat/modules/emotes/sound/voice/scream_f1.ogg',
-		'modular_skyrat/modules/emotes/sound/voice/scream_f2.ogg',
-	)
+// /datum/scream_type/human
+// 	name = "Human Scream"
+// 	male_screamsounds = list(
+// 		'modular_skyrat/modules/emotes/sound/voice/scream_m1.ogg',
+// 		'modular_skyrat/modules/emotes/sound/voice/scream_m2.ogg',
+// 	)
+// 	female_screamsounds = list(
+// 		'modular_skyrat/modules/emotes/sound/voice/scream_f1.ogg',
+// 		'modular_skyrat/modules/emotes/sound/voice/scream_f2.ogg',
+// 	)
 
 /datum/scream_type/human_two
 	name = "Human Scream 2"

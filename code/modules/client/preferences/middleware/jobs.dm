@@ -73,7 +73,7 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"veteran" = job.veteran_only, // SKYRAT EDIT
+			// "veteran" = job.veteran_only, // SKYRAT EDIT
 			"alt_titles" = job.alt_titles, // SKYRAT EDIT
 		)
 

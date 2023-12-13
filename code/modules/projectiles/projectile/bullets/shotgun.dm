@@ -85,7 +85,7 @@
 	stamina = 11
 	sharpness = NONE
 	embedding = null
-	speed = 1.2
+	speed = 0.5 // 1.2 У Skyrat было.
 	stamina_falloff_tile = -0.25
 	ricochets_max = 4
 	ricochet_chance = 120
