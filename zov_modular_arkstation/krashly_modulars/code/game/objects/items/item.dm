@@ -1,6 +1,6 @@
 /obj/item/storage/box/survival/security/PopulateContents()
 	. = ..()
-	new = /obj/item/crowbar/red
+	new /obj/item/crowbar/red(src)
 
 /obj/item/icona_madonna
 	name = "Madonna icon"

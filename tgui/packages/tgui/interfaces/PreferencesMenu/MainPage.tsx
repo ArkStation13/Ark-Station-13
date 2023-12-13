@@ -1,20 +1,38 @@
 import { classes } from 'common/react';
 import { sendAct, useBackend, useLocalState } from '../../backend';
-import { Box, Button, Flex, LabeledList, Popper, Stack, TrackOutsideClicks, FitText, Input, Icon, Dropdown } from '../../components';
-import { createSetPreference, PreferencesMenuData, RandomSetting } from './data';
+import {
+  Box,
+  Button,
+  Flex,
+  LabeledList,
+  Popper,
+  Stack,
+  TrackOutsideClicks,
+  FitText,
+  Input,
+  Icon,
+  Dropdown,
+} from '../../components'; // SKYRAT EDIT CHANGE
+import {
+  createSetPreference,
+  PreferencesMenuData,
+  RandomSetting,
+} from './data';
 import { CharacterPreview } from '../common/CharacterPreview';
 import { RandomizationButton } from './RandomizationButton';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 import { MultiNameInput, NameInput } from './names';
 import { Gender, GENDERS } from './preferences/gender';
 import features from './preferences/features';
-import { FeatureChoicedServerData, FeatureValueInput } from './preferences/features/base';
+import {
+  FeatureChoicedServerData,
+  FeatureValueInput,
+} from './preferences/features/base';
 import { filterMap, sortBy } from 'common/collections';
 import { useRandomToggleState } from './useRandomToggleState';
-import { createSearch } from 'common/string';
 
 const CLOTHING_CELL_SIZE = 64;
-const CLOTHING_SIDEBAR_ROWS = 10;
+const CLOTHING_SIDEBAR_ROWS = 13.4; // SKYRAT EDIT CHANGE - ORIGINAL:  9
 
 const CLOTHING_SELECTION_CELL_SIZE = 64;
 const CLOTHING_SELECTION_WIDTH = 6.3;
@@ -86,7 +104,7 @@ const ChoicedSelection = (
     searchText: string;
     setSearchText: (value: string) => void;
   },
-  context
+  context,
 ) => {
   const { act } = useBackend<PreferencesMenuData>(context);
 
@@ -114,16 +132,21 @@ const ChoicedSelection = (
     <Box
       className="theme-generic"
       style={{
+        background: 'white',
+        padding: '5px',
+
         height: `${
           CLOTHING_SELECTION_CELL_SIZE * CLOTHING_SELECTION_MULTIPLIER
         }px`,
         width: `${CLOTHING_SELECTION_CELL_SIZE * CLOTHING_SELECTION_WIDTH}px`,
-      }}>
+      }}
+    >
       <Box
         className="PopupWindow"
-        style={{ 'padding': '5px' }}
+        style={{ padding: '5px' }}
         width="100%"
-        height="100%">
+        height="100%"
+      >
         <Stack vertical fill>
           <Stack.Item>
             <Stack fill>
@@ -146,7 +169,8 @@ const ChoicedSelection = (
                     'font-weight': 'bold',
                     'font-size': '14px',
                     'text-align': 'center',
-                  }}>
+                  }}
+                >
                   Select {props.name}
                 </Box>
               </Stack.Item>
@@ -180,7 +204,8 @@ const ChoicedSelection = (
             overflowX="hidden"
             overflowY="auto"
             grow
-            className="section-background">
+            className="section-background"
+          >
             <Flex wrap>
               {Object.entries(catalog.icons)
                 .filter(([n, _]) => searchText?.length < 1 || search(n))
@@ -191,16 +216,20 @@ const ChoicedSelection = (
                       basis={`${CLOTHING_SELECTION_CELL_SIZE}px`}
                       style={{
                         padding: '5px',
-                      }}>
+                      }}
+                    >
                       <Button
                         onClick={() => {
                           props.onSelect(name);
                         }}
                         selected={name === props.selected}
+                        tooltip={name}
+                        tooltipPosition="right"
                         style={{
                           height: `${CLOTHING_SELECTION_CELL_SIZE}px`,
                           width: `${CLOTHING_SELECTION_CELL_SIZE}px`,
-                        }}>
+                        }}
+                      >
                         <Box
                           className={classes([
                             'preferences32x32',
@@ -216,7 +245,8 @@ const ChoicedSelection = (
                       <Box textAlign="center">
                         <FitText
                           maxWidth={CLOTHING_SELECTION_CELL_SIZE}
-                          maxFontSize={12}>
+                          maxFontSize={12}
+                        >
                           {name}
                         </FitText>
                       </Box>
@@ -235,7 +265,8 @@ const ChoicedSelection = (
                     'font-weight': 'bold',
                     'font-size': '14px',
                     'text-align': 'center',
-                  }}>
+                  }}
+                >
                   Select {features[supplementalFeature].name}
                 </Box>
               </Stack.Item>
@@ -261,12 +292,12 @@ const GenderButton = (
     handleSetGender: (gender: Gender) => void;
     gender: Gender;
   },
-  context
+  context,
 ) => {
   const [genderMenuOpen, setGenderMenuOpen] = useLocalState(
     context,
     'genderMenuOpen',
-    false
+    false,
   );
 
   return (
@@ -277,26 +308,29 @@ const GenderButton = (
       popperContent={
         genderMenuOpen && (
           <Stack backgroundColor="white" ml={0.5} p={0.3}>
-            {[Gender.Male, Gender.Female, Gender.Other].map((gender) => {
-              return (
-                <Stack.Item key={gender}>
-                  <Button
-                    selected={gender === props.gender}
-                    onClick={() => {
-                      props.handleSetGender(gender);
-                      setGenderMenuOpen(false);
-                    }}
-                    fontSize="22px"
-                    icon={GENDERS[gender].icon}
-                    tooltip={GENDERS[gender].text}
-                    tooltipPosition="top"
-                  />
-                </Stack.Item>
-              );
-            })}
+            {[Gender.Male, Gender.Female, Gender.Other, Gender.Other2].map(
+              (gender) => {
+                return (
+                  <Stack.Item key={gender}>
+                    <Button
+                      selected={gender === props.gender}
+                      onClick={() => {
+                        props.handleSetGender(gender);
+                        setGenderMenuOpen(false);
+                      }}
+                      fontSize="22px"
+                      icon={GENDERS[gender].icon}
+                      tooltip={GENDERS[gender].text}
+                      tooltipPosition="top"
+                    />
+                  </Stack.Item>
+                );
+              },
+            )}
           </Stack>
         )
-      }>
+      }
+    >
       <Button
         onClick={() => {
           setGenderMenuOpen(!genderMenuOpen);
@@ -324,7 +358,7 @@ const MainFeature = (
     randomization?: RandomSetting;
     setRandomization: (newSetting: RandomSetting) => void;
   },
-  context
+  context,
 ) => {
   const { act, data } = useBackend<PreferencesMenuData>(context);
 
@@ -343,7 +377,7 @@ const MainFeature = (
   let [searchText, setSearchText] = useLocalState(
     context,
     catalog.name + '_choiced_search',
-    ''
+    '',
   );
   const handleCloseInternal = () => {
     handleClose();
@@ -357,7 +391,7 @@ const MainFeature = (
       }}
       popperContent={
         isOpen && (
-          <TrackOutsideClicks onOutsideClick={handleCloseInternal}>
+          <TrackOutsideClicks onOutsideClick={props.handleClose}>
             <ChoicedSelection
               name={catalog.name}
               catalog={catalog}
@@ -369,18 +403,17 @@ const MainFeature = (
                   supplementalFeature
                 ]
               }
-              onClose={handleCloseInternal}
+              onClose={handleClose}
               onSelect={handleSelect}
-              searchText={searchText}
-              setSearchText={setSearchText}
             />
           </TrackOutsideClicks>
         )
-      }>
+      }
+    >
       <Button
         onClick={() => {
           if (isOpen) {
-            handleCloseInternal();
+            handleClose();
           } else {
             handleOpen();
           }
@@ -391,7 +424,8 @@ const MainFeature = (
         }}
         position="relative"
         tooltip={catalog.name}
-        tooltipPosition="right">
+        tooltipPosition="right"
+      >
         <Box
           className={classes([
             'preferences32x32',
@@ -457,7 +491,8 @@ const PreferenceList = (props: {
         padding: '4px',
       }}
       overflowX="hidden"
-      overflowY="scroll">
+      overflowY="scroll"
+    >
       <LabeledList>
         {sortPreferences(Object.entries(props.preferences)).map(
           ([featureId, value]) => {
@@ -476,8 +511,8 @@ const PreferenceList = (props: {
               <LabeledList.Item
                 key={featureId}
                 label={feature.name}
-                tooltip={feature.description}
-                verticalAlign="middle">
+                verticalAlign="middle"
+              >
                 <Stack fill>
                   {randomSetting && (
                     <Stack.Item>
@@ -499,7 +534,7 @@ const PreferenceList = (props: {
                 </Stack>
               </LabeledList.Item>
             );
-          }
+          },
         )}
       </LabeledList>
     </Stack.Item>
@@ -510,7 +545,7 @@ export const MainPage = (
   props: {
     openSpecies: () => void;
   },
-  context
+  context,
 ) => {
   const { act, data } = useBackend<PreferencesMenuData>(context);
   const [currentClothingMenu, setCurrentClothingMenu] = useLocalState<
@@ -519,7 +554,7 @@ export const MainPage = (
   const [multiNameInputOpen, setMultiNameInputOpen] = useLocalState(
     context,
     'multiNameInputOpen',
-    false
+    false,
   );
   const [randomToggleEnabled] = useRandomToggleState(context);
 
@@ -544,7 +579,7 @@ export const MainPage = (
               return (
                 currentSpeciesData.enabled_features.indexOf(featureName) !== -1
               );
-            }
+            },
           ),
         ];
 
@@ -553,7 +588,7 @@ export const MainPage = (
             RandomSetting.Disabled || randomToggleEnabled;
 
         const getRandomization = (
-          preferences: Record<string, unknown>
+          preferences: Record<string, unknown>,
         ): Record<string, RandomSetting> => {
           if (!serverData) {
             return {};
@@ -576,12 +611,12 @@ export const MainPage = (
                 data.character_preferences.randomization[preferenceKey] ||
                   RandomSetting.Disabled,
               ];
-            })
+            }),
           );
         };
 
         const randomizationOfMainFeatures = getRandomization(
-          Object.fromEntries(mainFeatures)
+          Object.fromEntries(mainFeatures),
         );
 
         const nonContextualPreferences = {
@@ -639,14 +674,15 @@ export const MainPage = (
 
                   <Stack.Item grow>
                     <CharacterPreview
-                      height="80%" // 100% Bugged
+                      height="80%" // SKYRAT EDIT - ORIGINAL: height="100%"
                       id={data.character_preview_view}
                     />
                   </Stack.Item>
 
                   <Stack.Item
                     // SKYRAT EDIT ADDITION
-                    position="relative">
+                    position="relative"
+                  >
                     <Dropdown
                       width="100%"
                       selected={data.preview_selection}
@@ -664,7 +700,7 @@ export const MainPage = (
                       name={data.character_preferences.names[data.name_to_use]}
                       handleUpdateName={createSetPreference(
                         act,
-                        data.name_to_use
+                        data.name_to_use,
                       )}
                       openMultiNameInput={() => {
                         setMultiNameInputOpen(true);
@@ -702,7 +738,7 @@ export const MainPage = (
                             }
                             setRandomization={createSetRandomization(
                               act,
-                              clothingKey
+                              clothingKey,
                             )}
                           />
                         </Stack.Item>
