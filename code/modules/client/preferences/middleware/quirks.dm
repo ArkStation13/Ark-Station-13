@@ -59,7 +59,7 @@
 	var/quirk_name = params["quirk"]
 
 	//SKYRAT EDIT ADDITION
-	var/list/quirks = SSquirks.get_quirks()
+	// var/list/quirks = SSquirks.get_quirks()
 	// var/datum/quirk/quirk = quirks[quirk_name]
 	// if(initial(quirk.veteran_only) && !SSplayer_ranks.is_veteran(preferences?.parent))
 	// 	return FALSE
@@ -99,7 +99,7 @@
 
 	for (var/quirk in preferences.all_quirks)
 		//SKYRAT EDIT ADDITION
-		var/list/quirks = SSquirks.get_quirks()
+		// var/list/quirks = SSquirks.get_quirks()
 		// var/datum/quirk/quirk_datum = quirks[quirk]
 		// if(initial(quirk_datum.veteran_only) && !SSplayer_ranks.is_veteran(preferences?.parent))
 		// 	preferences.all_quirks -= quirk

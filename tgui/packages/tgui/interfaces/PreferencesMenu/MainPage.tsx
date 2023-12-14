@@ -130,7 +130,7 @@ const ChoicedSelection = (
   return (
     <Box
       style={{
-        background: 'grey',
+        background: '#40628a',
         padding: '5px',
 
         height: `${
@@ -333,7 +333,7 @@ const MainFeature = (
   } = props;
 
   const supplementalFeature = catalog.supplemental_feature;
-  let [searchText, setSearchText] = useLocalState(context, catalog.name + '');
+  let [searchText, setSearchText] = useLocalState(context, '');
   const handleCloseInternal = () => {
     handleClose();
     setSearchText('');
@@ -613,7 +613,7 @@ export const MainPage = (props: { openSpecies: () => void }) => {
               />
             )}
 
-            <Stack height={`${CLOTHING_SIDEBAR_ROWS * CLOTHING_CELL_SIZE}px`}>
+            <Stack height={`${9 * CLOTHING_CELL_SIZE}px`}>
               <Stack.Item>
                 <Stack vertical fill>
                   <Stack.Item>
@@ -635,7 +635,7 @@ export const MainPage = (props: { openSpecies: () => void }) => {
 
                   <Stack.Item grow>
                     <CharacterPreview
-                      height="50%" // SKYRAT EDIT - ORIGINAL: height="100%"
+                      height="80%" // SKYRAT EDIT - ORIGINAL: height="100%"
                       id={data.character_preview_view}
                     />
                   </Stack.Item>
