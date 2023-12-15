@@ -636,7 +636,7 @@ export const Secrets = (props) => {
   const TabComponent = TAB2NAME[tabIndex - 1].component();
 
   return (
-    <Window title="Secrets Panel" width={500} height={488} theme="admin">
+    <Window title="Secrets Panel" width={500} height={488} theme="ntos">
       <Window.Content>
         <Flex direction="column" height="100%">
           <Flex.Item mb={1}>

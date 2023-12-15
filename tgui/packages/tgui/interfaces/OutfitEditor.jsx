@@ -6,7 +6,7 @@ export const OutfitEditor = (props) => {
   const { act, data } = useBackend();
   const { outfit, saveable, dummy64 } = data;
   return (
-    <Window width={380} height={600} theme="admin">
+    <Window width={380} height={600} theme="ntos">
       <Window.Content>
         <Box
           as="img"

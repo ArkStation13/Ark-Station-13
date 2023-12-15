@@ -6,7 +6,7 @@ export const OutfitManager = (props) => {
   const { act, data } = useBackend();
   const { outfits } = data;
   return (
-    <Window title="Outfit Manager" width={300} height={300} theme="admin">
+    <Window title="Outfit Manager" width={300} height={300} theme="ntos">
       <Window.Content>
         <Section
           fill

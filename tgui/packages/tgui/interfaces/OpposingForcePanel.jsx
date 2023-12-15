@@ -20,13 +20,13 @@ import { Window } from '../layouts';
 export const OpposingForcePanel = (props) => {
   const [tab, setTab] = useState(1);
   const { act, data } = useBackend();
-  const { admin_mode, creator_ckey, owner_antag } = data;
+  const { admin_mode, creator_ckey } = data;
   return (
     <Window
       title={'Opposing Force: ' + creator_ckey}
       width={585}
       height={840}
-      theme={owner_antag ? 'syndicate' : 'admin'}
+      theme={'syndicate'}
     >
       <Window.Content scrollable>
         <Stack vertical grow mb={1}>

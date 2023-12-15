@@ -8,7 +8,7 @@ export const ShuttleManipulator = (props) => {
   const [tab, setTab] = useState(1);
 
   return (
-    <Window title="Shuttle Manipulator" width={800} height={600} theme="admin">
+    <Window title="Shuttle Manipulator" width={800} height={600} theme="ntos">
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab selected={tab === 1} onClick={() => setTab(1)}>

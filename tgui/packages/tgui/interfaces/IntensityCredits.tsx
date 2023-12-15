@@ -35,7 +35,7 @@ export const IntensityCredits = (props) => {
   } = data;
 
   return (
-    <Window title="ICES Events Panel" width={480} height={320} theme="admin">
+    <Window title="ICES Events Panel" width={480} height={320} theme="ntos">
       <Window.Content>
         <Section title="Status">
           <Flex direction="column">

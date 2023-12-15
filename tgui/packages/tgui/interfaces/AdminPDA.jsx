@@ -5,7 +5,7 @@ import { Window } from '../layouts';
 
 export const AdminPDA = (props) => {
   return (
-    <Window title="Send PDA Message" width={300} height={575} theme="admin">
+    <Window title="Send PDA Message" width={300} height={575} theme="ntos">
       <Window.Content>
         <ReceiverChoice />
         <SenderInfo />

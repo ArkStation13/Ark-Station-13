@@ -17,7 +17,7 @@ export const EventPanel = (props) => {
     next_low_chaos_time,
   } = data;
   return (
-    <Window title={'Event Panel'} width={500} height={900} theme={'admin'}>
+    <Window title={'Event Panel'} width={500} height={900} theme={'ntos'}>
       <Window.Content>
         <Stack vertical fill>
           {!!admin_mode && (

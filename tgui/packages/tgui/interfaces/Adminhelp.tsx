@@ -25,7 +25,7 @@ export const Adminhelp = (props) => {
 
   const confirmationText = 'alert admins';
   return (
-    <Window title="Create Adminhelp" theme="admin" height={300} width={500}>
+    <Window title="Create Adminhelp" theme="ntos" height={300} width={500}>
       <Window.Content
         style={{
           backgroundImage: 'none',

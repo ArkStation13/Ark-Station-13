@@ -21,7 +21,7 @@ export const LibraryAdmin = (props) => {
   return (
     <Window
       title="Admin Library Console"
-      theme="admin"
+      theme="ntos"
       width={800}
       height={600}
     >

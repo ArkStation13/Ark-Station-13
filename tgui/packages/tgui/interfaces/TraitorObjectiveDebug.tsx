@@ -197,7 +197,7 @@ export const TraitorObjectiveDebug = (props) => {
   }
 
   return (
-    <Window width={1000} height={1000} theme="admin">
+    <Window width={1000} height={1000} theme="ntos">
       <Window.Content scrollable>
         <Box position="absolute" height="100px" width="100%" top={0} left={0}>
           <Stack vertical>
