@@ -12,7 +12,7 @@
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
 	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL // WEIGHT_CLASS_BULKY
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
 
 /obj/item/storage/belt/suicide_act(mob/living/carbon/user)
@@ -487,6 +487,7 @@
 	icon_state = "soulstonebelt"
 	inhand_icon_state = "soulstonebelt"
 	worn_icon_state = "soulstonebelt"
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/storage/belt/soulstone/Initialize(mapload)
 	. = ..()
@@ -525,6 +526,7 @@
 	inhand_icon_state = "militarywebbing"
 	worn_icon_state = "militarywebbing"
 	resistance_flags = FIRE_PROOF
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/storage/belt/military/Initialize(mapload)
 	. = ..()
@@ -625,6 +627,7 @@
 	icon_state = "grenadebeltnew"
 	inhand_icon_state = "security"
 	worn_icon_state = "grenadebeltnew"
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/storage/belt/grenade/Initialize(mapload)
 	. = ..()
@@ -663,6 +666,7 @@
 	icon_state = "soulstonebelt"
 	inhand_icon_state = "soulstonebelt"
 	worn_icon_state = "soulstonebelt"
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/storage/belt/wands/Initialize(mapload)
 	. = ..()
