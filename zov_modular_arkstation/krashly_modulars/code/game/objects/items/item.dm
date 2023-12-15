@@ -242,7 +242,7 @@
 	health = 100
 	held_state = "fennec_eldritch"
 
-/mob/living/simple_animal/pet/cat/moro
+/mob/living/basic/pet/cat/moro
 	name = "Moro"
 	desc = "He likes grechkya."
 	icon_state = "moro"
@@ -270,7 +270,7 @@
 	gender = MALE
 	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
 
-/mob/living/simple_animal/pet/cat/alta
+/mob/living/basic/pet/cat/alta
 	name = "Alta"
 	desc = "A cute white cat."
 	icon_state = "alta"
