@@ -68,41 +68,41 @@
 
 /datum/loadout_item/under/jumpsuit/skinsuitleo
 	name = "Minisuit"
-	icon_state = "skinsuitleo"
+	item_path = /obj/item/clothing/under/arkstation/skinsuitleo
 
 /datum/loadout_item/under/jumpsuit/skinsuitleo/grey
 	name = "Grey Minisuit"
-	icon_state = "g_skinsuitleo"
+	item_path = /obj/item/clothing/under/arkstation/skinsuitleo/grey
 
 /datum/loadout_item/under/jumpsuit/leotard
 	name = "Leotard"
-	icon_state = "leotard"
+	item_path = /obj/item/clothing/under/arkstation/leotard
 
 /datum/loadout_item/under/jumpsuit/leotard/color
 	name = "Colored Leotard"
-	icon_state = "leotard_color"
+	item_path = /obj/item/clothing/under/arkstation/leotard/color
 	additional_tooltip_contents = list(TOOLTIP_GREYSCALE)
 
 /datum/loadout_item/under/jumpsuit/half_moon
 	name = "Half Moon Undersuit"
-	icon_state = "half_moon"
+	item_path = /obj/item/clothing/under/arkstation/half_moon
 
 /datum/loadout_item/under/jumpsuit/swim_striped
 	name = "Striped Swimsuit"
-	icon_state = "swim_striped"
+	item_path = /obj/item/clothing/under/arkstation/swim_striped
 
 /datum/loadout_item/under/jumpsuit/swim_cow
 	name = "Cow Swimsuit"
-	icon_state = "swim_cow"
+	item_path = /obj/item/clothing/under/arkstation/swim_cow
 
 /datum/loadout_item/under/jumpsuit/swim_highclass
 	name = "Highclass Swimsuit"
-	icon_state = "swim_highclass"
+	item_path = /obj/item/clothing/under/arkstation/swim_highclass
 
 /datum/loadout_item/under/jumpsuit/swim_risque
 	name = "Risque Swimsuit"
-	icon_state = "swim_risque"
+	item_path = /obj/item/clothing/under/arkstation/swim_risque
 
 /datum/loadout_item/under/jumpsuit/swim_stream
 	name = "Stream Swimsuit"
-	icon_state = "swim_stream"
+	item_path = /obj/item/clothing/under/arkstation/swim_stream
