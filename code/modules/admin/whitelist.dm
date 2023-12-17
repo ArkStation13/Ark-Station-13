@@ -15,6 +15,7 @@ GLOBAL_LIST(whitelist)
 		GLOB.whitelist = null
 
 /proc/check_whitelist(ckey)
+	load_whitelist()
 	if(!GLOB.whitelist)
 		return FALSE
 	. = (ckey in GLOB.whitelist)
