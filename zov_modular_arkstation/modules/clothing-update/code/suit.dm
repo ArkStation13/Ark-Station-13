@@ -30,9 +30,12 @@
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head_digi.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+
 /obj/item/clothing/suit/utility/bomb_suit
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/head/utility/bomb_hood/security
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head.dmi'
