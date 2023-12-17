@@ -225,6 +225,8 @@
 	/// A lazylist used for applying fantasy values, contains the actual modification applied to a variable.
 	var/list/fantasy_modifications = null
 
+	var/female_sprite = FALSE
+
 /obj/item/Initialize(mapload)
 	if(attack_verb_continuous)
 		attack_verb_continuous = string_list(attack_verb_continuous)
@@ -674,6 +676,12 @@
 	equipped(user, slot, initial)
 	if(SEND_SIGNAL(src, COMSIG_ITEM_POST_EQUIPPED, user, slot) && COMPONENT_EQUIPPED_FAILED)
 		return FALSE
+	if(female_sprite == TRUE)
+		var/mob/living/carbon/human/owner = user
+		if(owner.physique == FEMALE)
+			icon_state = base_icon_state + "_female"
+		else if(owner.physique == MALE)
+			icon_state = base_icon_state
 	return TRUE
 
 /**
