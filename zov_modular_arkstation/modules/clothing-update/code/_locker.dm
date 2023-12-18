@@ -1,7 +1,5 @@
 // HoS locker and garments
 /obj/structure/closet/secure_closet/hos/PopulateContents()
-	..()
-
 	new /obj/item/computer_disk/command/hos(src)
 	new /obj/item/radio/headset/heads/hos(src)
 	new /obj/item/storage/bag/garment/hos(src)
@@ -14,13 +12,13 @@
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/circuitboard/machine/techfab/department/security(src)
 	new /obj/item/storage/photo_album/hos(src)
+	new /obj/item/card/id/departmental_budget/sec(src)
 
 /obj/structure/closet/secure_closet/hos/populate_contents_immediate()
-	. = ..()
-
 	// Traitor steal objectives
 	new /obj/item/gun/energy/e_gun/hos(src)
 	new /obj/item/pinpointer/nuke(src)
+	new /obj/item/gun/ballistic/shotgun/automatic/combat/compact(src)
 
 
 /obj/item/storage/bag/garment/hos/PopulateContents()
@@ -43,7 +41,6 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Warden's locker
 /obj/structure/closet/secure_closet/warden/PopulateContents()
-	..()
 	new /obj/item/dog_bone(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/holosign_creator/security(src)
@@ -65,7 +62,6 @@
 
 
 /obj/structure/closet/secure_closet/blueshield/New()
-	..()
 	new /obj/item/storage/briefcase/secure(src)
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/grenade/flashbang(src)
