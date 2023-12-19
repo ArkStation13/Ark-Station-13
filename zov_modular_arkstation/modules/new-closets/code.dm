@@ -26,3 +26,9 @@
 
 /obj/structure/closet/secure_closet/blueshield
 	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/barber
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/nanotrasen_consultant/station
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
