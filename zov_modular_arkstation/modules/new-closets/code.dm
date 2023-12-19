@@ -23,3 +23,6 @@
 
 /obj/structure/closet/secure_closet/armory_kiboko_but_evil
 	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+
+/obj/structure/closet/secure_closet/blueshield
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
