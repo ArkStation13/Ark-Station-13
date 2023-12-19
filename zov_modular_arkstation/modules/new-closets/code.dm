@@ -32,3 +32,19 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_consultant/station
 	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/security/cargo
+	icon_state = "sec"
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/security/engine
+	icon_state = "sec"
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/security/science
+	icon_state = "sec"
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
+
+/obj/structure/closet/secure_closet/security/med
+	icon_state = "sec"
+	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'
