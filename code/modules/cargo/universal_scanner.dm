@@ -35,8 +35,8 @@
 	. = ..()
 	scale_mode = sort_list(list(
 		"export scanner" = image(icon = src.icon, icon_state = "export scanner"),
-		"price tagger" = image(icon = src.icon, icon_state = "price tagger"),
-		"sales tagger" = image(icon = src.icon, icon_state = "sales tagger"),
+		"price tagger" = image(icon = src.icon, icon_state = "export scanner"),
+		"sales tagger" = image(icon = src.icon, icon_state = "export scanner"),
 ))
 	register_context()
 
