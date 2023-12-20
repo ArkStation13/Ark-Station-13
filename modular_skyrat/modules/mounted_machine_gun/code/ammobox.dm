@@ -10,7 +10,8 @@
 
 /obj/item/ammo_casing/b50cal
 	name = ".50 BMG bullet casing"
-	icon_state = ".50"
+	icon = 'modular_skyrat/modules/gunsgalore/icons/ammo/ammo.dmi'
+	icon_state = "792x57-casing"
 	caliber = CALIBER_50BMG
 	projectile_type = /obj/projectile/bullet/c50cal
 

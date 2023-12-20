@@ -44,7 +44,6 @@
 		)
 	)
 
-	)
 	// SKYRAT EDIT ADDITION END
 
 /obj/item/clothing/gloves/color/black/Initialize(mapload)

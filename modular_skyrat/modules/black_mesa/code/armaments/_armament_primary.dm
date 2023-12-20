@@ -8,13 +8,13 @@
 	subcategory = ARMAMENT_SUBCATEGORY_SUBMACHINEGUN
 	mags_to_spawn = 4
 
-/datum/armament_entry/hecu/primary/submachinegun/sindano
-	item_type = /obj/item/gun/ballistic/automatic/sol_smg
+/datum/armament_entry/hecu/primary/submachinegun/p90
+	item_type = /obj/item/gun/ballistic/automatic/p90
 	max_purchase = 4
 	cost = 7
 
-/datum/armament_entry/hecu/primary/submachinegun/bogseo
-	item_type = /obj/item/gun/ballistic/automatic/xhihao_smg
+/datum/armament_entry/hecu/primary/submachinegun/mp5
+	item_type = /obj/item/gun/ballistic/automatic/mp5
 	max_purchase = 2
 	cost = 8
 
@@ -22,17 +22,17 @@
 	subcategory = ARMAMENT_SUBCATEGORY_ASSAULTRIFLE
 	mags_to_spawn = 3
 
-/datum/armament_entry/hecu/primary/assaultrifle/automaties
-	item_type = /obj/item/gun/ballistic/automatic/sol_rifle/machinegun
+/datum/armament_entry/hecu/primary/assaultrifle/m16
+	item_type = /obj/item/gun/ballistic/automatic/m16
 	max_purchase = 1
 	cost = 14
-	magazine = /obj/item/ammo_box/magazine/c40sol_rifle/drum
+	magazine = /obj/item/ammo_box/magazine/m16
 
-/datum/armament_entry/hecu/primary/assaultrifle/infanteria
-	item_type = /obj/item/gun/ballistic/automatic/sol_rifle
+/datum/armament_entry/hecu/primary/assaultrifle/m16_but_horrible
+	item_type = /obj/item/gun/ballistic/automatic/m16/oldarms
 	max_purchase = 2
 	cost = 11
-	magazine = /obj/item/ammo_box/magazine/c40sol_rifle/standard
+	magazine = /obj/item/ammo_box/magazine/m16/vintage/oldarms
 
 /datum/armament_entry/hecu/primary/shotgun
 	subcategory = ARMAMENT_SUBCATEGORY_SHOTGUN

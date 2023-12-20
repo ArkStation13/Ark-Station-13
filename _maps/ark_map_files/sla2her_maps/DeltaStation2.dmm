@@ -4932,9 +4932,6 @@
 /obj/structure/cable,
 /obj/effect/landmark/start/hangover,
 /obj/structure/disposalpipe/segment,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
@@ -9422,10 +9419,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
 "cmi" = (
-/obj/structure/flora/bush/stalky/style_random,
-/obj/structure/flora/bush/leavy/style_random,
-/obj/structure/railing,
-/turf/open/misc/grass,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "cmq" = (
 /obj/machinery/status_display/ai/directional/south,
@@ -11840,10 +11834,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "cRA" = (
-/obj/structure/flora/bush/generic/style_random,
-/obj/structure/flora/bush/pointy/style_random,
-/obj/structure/flora/bush/lavendergrass/style_random,
-/turf/open/misc/grass,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "cRJ" = (
 /obj/effect/turf_decal/stripes/line{
@@ -13796,9 +13788,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L3"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/up/two,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "drS" = (
@@ -15415,8 +15405,7 @@
 /area/station/service/library/abandoned)
 "dMy" = (
 /obj/structure/flora/bush/ferny/style_random,
-/obj/structure/flora/bush/leavy/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "dMA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -21242,7 +21231,7 @@
 "fju" = (
 /obj/structure/flora/bush/flowers_br/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
-/turf/open/misc/grass,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "fjx" = (
 /obj/structure/table/wood,
@@ -21339,12 +21328,11 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
 "fkU" = (
-/obj/item/kirbyplants/random,
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
-/turf/open/floor/iron,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "fli" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -22121,10 +22109,16 @@
 /turf/open/floor/iron,
 /area/station/maintenance/department/chapel)
 "fuT" = (
-/obj/structure/flora/bush/grassy/style_random,
-/obj/structure/flora/rock/pile/jungle/style_random,
-/obj/structure/railing,
-/turf/open/misc/grass,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/structure/deployable_barricade/snow{
+	dir = 1
+	},
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "fuV" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -22453,8 +22447,8 @@
 "fzw" = (
 /obj/structure/flora/bush/flowers_pp/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/flora/rock/pile/jungle/style_random,
-/turf/open/misc/grass,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "fzx" = (
 /obj/effect/turf_decal/stripes/line,
@@ -25660,6 +25654,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "gnH" = (
@@ -27255,10 +27250,6 @@
 /area/station/security/execution/transfer)
 "gGw" = (
 /obj/effect/landmark/start/hangover,
-/obj/structure/railing,
-/obj/structure/chair/sofa/bench/right{
-	dir = 1
-	},
 /obj/effect/turf_decal/box/corners{
 	dir = 4
 	},
@@ -27266,6 +27257,25 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/structure/table/wood,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "gGE" = (
@@ -33122,11 +33132,8 @@
 /turf/open/floor/iron/grimy,
 /area/station/security/detectives_office/private_investigators_office)
 "ihF" = (
-/obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_yw/style_random,
-/obj/structure/flora/bush/stalky/style_random,
-/obj/structure/flora/rock/pile/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "ihN" = (
 /obj/structure/cable,
@@ -34263,9 +34270,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "ivX" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L14"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/seven,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "iwn" = (
@@ -34954,10 +34959,8 @@
 	c_tag = "Central Hallway - Fore";
 	name = "hallway camera"
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L12"
-	},
 /obj/item/radio/intercom/directional/south,
+/obj/effect/turf_decal/snowdin_station_sign/six,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "iFI" = (
@@ -35275,9 +35278,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "iJY" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L10"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/five,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "iKd" = (
@@ -37368,9 +37369,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L11"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/up/six,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "jkk" = (
@@ -39716,6 +39715,10 @@
 "jNB" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/turf_decal/tile/neutral,
+/obj/structure/deployable_barricade/snow,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "jNC" = (
@@ -40652,7 +40655,6 @@
 /area/station/hallway/primary/central/fore)
 "jZH" = (
 /obj/effect/landmark/start/hangover,
-/obj/structure/chair/sofa/bench/right,
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
@@ -40662,6 +40664,26 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
+/obj/structure/table/wood,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
+/obj/item/toy/snowball,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "jZS" = (
@@ -41140,13 +41162,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L7"
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /obj/effect/landmark/observer_start,
+/obj/effect/turf_decal/snowdin_station_sign/up/four,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "kfL" = (
@@ -47302,11 +47322,15 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/theatre)
 "lII" = (
-/obj/structure/railing,
-/obj/structure/chair/sofa/bench{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/wood,
+/obj/item/food/snowcones/clown,
+/obj/item/food/snowcones/blue{
+	pixel_x = 3
+	},
+/obj/item/food/snowcones/berry{
+	pixel_x = 6
+	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "lIJ" = (
@@ -48957,15 +48981,11 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "mgd" = (
-/obj/structure/railing{
-	dir = 10
-	},
-/obj/item/kirbyplants/random,
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "mgk" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -49507,9 +49527,8 @@
 /turf/open/floor/carpet,
 /area/station/command/bridge)
 "moY" = (
-/obj/structure/flora/tree/jungle/style_random,
 /obj/structure/flora/bush/fullgrass/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "moZ" = (
 /obj/structure/table,
@@ -49776,7 +49795,6 @@
 /area/station/engineering/supermatter)
 "msF" = (
 /obj/effect/landmark/start/hangover,
-/obj/structure/chair/sofa/bench/left,
 /obj/effect/turf_decal/box/corners,
 /obj/effect/turf_decal/box/corners{
 	dir = 4
@@ -49784,6 +49802,9 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
 	},
+/obj/structure/table/wood,
+/obj/item/food/snowcones/pwrgame,
+/obj/item/food/snowcones/rainbow,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "msR" = (
@@ -53883,15 +53904,6 @@
 /mob/living/basic/pet/dog/corgi/ian,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
-"nvo" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/fore)
 "nvu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/landmark/start/hangover,
@@ -58007,9 +58019,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L13"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/up/seven,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "ozp" = (
@@ -58392,7 +58402,7 @@
 "oEp" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/grassy/style_random,
-/turf/open/misc/grass,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "oEy" = (
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -59920,7 +59930,7 @@
 "pbk" = (
 /obj/structure/flora/bush/reed/style_random,
 /obj/structure/flora/bush/leavy/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "pbn" = (
 /obj/structure/cable,
@@ -60903,11 +60913,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "plm" = (
-/obj/structure/flora/bush/fullgrass/style_random,
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/rock/pile/style_random,
-/turf/open/misc/grass,
-/area/station/hallway/primary/fore)
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/plating/snowed,
+/area/space/nearstation)
 "plr" = (
 /obj/structure/chair/pew/right,
 /turf/open/floor/iron/chapel{
@@ -61353,9 +61361,7 @@
 /turf/open/floor/iron,
 /area/station/security/checkpoint/escape)
 "psZ" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L2"
-	},
+/obj/effect/turf_decal/snowdin_station_sign,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "ptc" = (
@@ -63741,9 +63747,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "pTK" = (
-/obj/structure/flora/bush/fullgrass/style_random,
-/obj/structure/flora/bush/lavendergrass/style_random,
-/turf/open/misc/grass,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "pTM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -65002,9 +65007,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port/fore)
 "qjr" = (
-/obj/structure/flora/bush/sunny/style_random,
-/obj/structure/flora/bush/jungle/c/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "qjy" = (
 /turf/open/floor/circuit/green,
@@ -68764,13 +68767,9 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai)
 "rhK" = (
-/obj/structure/flora/bush/stalky/style_random,
 /obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/misc/grass,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "rhN" = (
 /obj/effect/turf_decal/stripes/line,
@@ -69778,8 +69777,7 @@
 "rtT" = (
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/railing,
-/turf/open/misc/grass,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "rua" = (
 /obj/machinery/chem_master/condimaster{
@@ -71764,9 +71762,7 @@
 	},
 /area/station/engineering/lobby)
 "rSq" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L8"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/four,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "rSv" = (
@@ -72005,9 +72001,6 @@
 "rVs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
@@ -72819,9 +72812,7 @@
 	codes_txt = "patrol;next_patrol=hall2";
 	location = "hall1"
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L5"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/up/three,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "sfD" = (
@@ -75021,18 +75012,16 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "sIk" = (
-/obj/structure/railing,
-/obj/structure/chair/sofa/bench/left{
-	dir = 1
-	},
 /obj/effect/turf_decal/box/corners{
 	dir = 1
 	},
-/obj/effect/landmark/start/assistant,
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/structure/table/wood,
+/obj/item/clothing/suit/costume/snowman,
+/obj/item/clothing/head/costume/snowman,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "sIn" = (
@@ -75139,13 +75128,10 @@
 /turf/open/floor/plating,
 /area/station/cargo/storage)
 "sJj" = (
-/obj/structure/flora/bush/ferny/style_random,
 /obj/structure/flora/bush/style_random,
-/obj/structure/flora/bush/jungle/a/style_random,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/misc/grass,
+/obj/structure/flora/bush/snow/style_random,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "sJo" = (
 /obj/machinery/door/firedoor,
@@ -75712,13 +75698,9 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "sQN" = (
-/obj/structure/railing{
-	dir = 6
-	},
-/obj/item/kirbyplants/random,
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
-/turf/open/floor/iron,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "sQO" = (
 /obj/structure/sign/poster/random/directional/north,
@@ -77795,10 +77777,8 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "ttz" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L4"
-	},
 /obj/machinery/firealarm/directional/south,
+/obj/effect/turf_decal/snowdin_station_sign/two,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "ttD" = (
@@ -78602,7 +78582,8 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "tDw" = (
-/turf/open/misc/grass,
+/obj/structure/flora/tree/pine/xmas/presents,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "tDx" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -79719,9 +79700,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
@@ -83005,9 +82983,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "uFM" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L6"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/three,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "uFO" = (
@@ -83391,10 +83367,8 @@
 /turf/open/floor/iron,
 /area/station/maintenance/department/electrical)
 "uKD" = (
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/flowers_yw/style_random,
 /obj/structure/flora/rock/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "uKK" = (
 /obj/effect/spawner/random/trash/cigbutt,
@@ -83612,12 +83586,11 @@
 /turf/open/floor/wood/tile,
 /area/station/service/library/artgallery)
 "uNg" = (
-/obj/item/kirbyplants/random,
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
 	},
-/turf/open/floor/iron,
+/turf/open/floor/plating/snowed/smoothed,
 /area/station/hallway/primary/fore)
 "uNh" = (
 /obj/item/kirbyplants/random,
@@ -84812,9 +84785,9 @@
 /area/station/commons/locker)
 "vbK" = (
 /obj/effect/landmark/start/hangover,
-/obj/structure/chair/sofa/bench,
-/obj/effect/landmark/start/assistant,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/wood,
+/obj/item/toy/plush/skyrat/snow_owl,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "vbO" = (
@@ -86502,11 +86475,11 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "vys" = (
-/obj/structure/flora/bush/jungle/c/style_random,
-/obj/structure/railing{
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
-/turf/open/misc/grass,
+/obj/effect/landmark/start/assistant,
+/turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "vyt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -90804,13 +90777,11 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "L9"
-	},
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=hall15";
 	location = "hall14"
 	},
+/obj/effect/turf_decal/snowdin_station_sign/up/five,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "wBG" = (
@@ -90839,9 +90810,7 @@
 /area/station/medical/treatment_center)
 "wCc" = (
 /obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/grassy/style_random,
-/obj/structure/flora/bush/large/style_random,
-/turf/open/misc/grass,
+/turf/open/misc/asteroid/snow/atmosphere,
 /area/station/hallway/primary/fore)
 "wCh" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
@@ -91546,9 +91515,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L1"
-	},
+/obj/effect/turf_decal/snowdin_station_sign/up,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "wKt" = (
@@ -92439,14 +92406,15 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "xap" = (
-/obj/structure/flora/bush/flowers_br/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/flora/bush/grassy/style_random,
-/obj/structure/railing,
-/obj/structure/railing{
+/obj/effect/landmark/start/hangover,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/misc/grass,
+/obj/structure/deployable_barricade/snow,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "xav" = (
 /obj/effect/decal/cleanable/dirt,
@@ -93228,6 +93196,13 @@
 	codes_txt = "delivery;dir=2";
 	location = "Hydroponics"
 	},
+/obj/structure/deployable_barricade/snow{
+	dir = 1
+	},
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
+/obj/effect/spawner/random/exotic/snow_gear,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "xjJ" = (
@@ -130837,9 +130812,9 @@ ryb
 kel
 qeS
 qRx
-nvo
-nvo
-nvo
+wsp
+wsp
+wsp
 fMo
 vpJ
 vCf
@@ -131098,7 +131073,7 @@ fzw
 pTK
 cmi
 fkU
-fMo
+fuT
 lvl
 rZf
 rul
@@ -131347,14 +131322,14 @@ wsp
 guq
 wsp
 hAU
-wsp
+vys
 fXk
 sIk
 sJj
 ihF
 wCc
 uKD
-xap
+cmi
 jZH
 gnG
 pAP
@@ -131611,7 +131586,7 @@ oEp
 pbk
 tDw
 moY
-fuT
+pTK
 vbK
 aXu
 dRJ
@@ -131864,7 +131839,7 @@ lPz
 lPz
 tlL
 gGw
-vys
+pTK
 cRA
 dMy
 qjr
@@ -132120,10 +132095,10 @@ fRo
 fRo
 fRo
 hTi
-xVa
+xap
 mgd
 fju
-plm
+cmi
 rtT
 uNg
 xjF
@@ -136256,7 +136231,7 @@ eNJ
 kfI
 rSq
 xms
-aaa
+plm
 wyH
 tms
 drj
