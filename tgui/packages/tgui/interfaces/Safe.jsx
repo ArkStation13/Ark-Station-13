@@ -9,7 +9,7 @@ export const Safe = (properties) => {
   const { act, data } = useBackend();
   const { dial, open } = data;
   return (
-    <Window width={625} height={800} theme="ntos">
+    <Window width={625} height={800} theme="ntos_darkmode">
       <Window.Content>
         <Box className="Safe__engraving">
           <Dialer />
