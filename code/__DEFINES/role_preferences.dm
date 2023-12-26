@@ -133,6 +133,12 @@
 #define ROLE_PORT_TARKON "Port Tarkon Survivor"
 //SKYRAT EDIT END
 
+// ARK STATION ROLES START
+#define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_VAMPIRICACCIDENT "Bloodsucker (Midround)"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker (Latejoin)"
+// ARK STATION ROLES END
+
 /// This defines the antagonists you can operate with in the settings.
 /// Keys are the antagonist, values are the number of days since the player's
 /// first connection in order to play.
