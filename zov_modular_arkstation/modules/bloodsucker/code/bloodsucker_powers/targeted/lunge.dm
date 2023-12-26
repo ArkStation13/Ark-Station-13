@@ -130,13 +130,13 @@
 	if(!owner.Adjacent(hit_atom))
 		return
 
-	var/mob/living/user = owner
+	var/mob/living/carbon/human/user = owner
 	var/mob/living/carbon/target = hit_atom
 
 	// Did I slip or get knocked unconscious?
 	if(user.body_position != STANDING_UP || user.incapacitated())
 		var/send_dir = get_dir(user, target_turf)
-		new /datum/forced_movement(user, get_ranged_target_turf(user, send_dir, 1), 1, FALSE)
+		user.throw_at(target, get_ranged_target_turf(user, send_dir, 1), 1, FALSE)
 		user.spin(10)
 		return
 	// Is my target a Monster hunter?

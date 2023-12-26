@@ -292,9 +292,10 @@
 /datum/antagonist/bloodsucker/get_preview_icon()
 	var/mob/living/carbon/human/dummy/consistent/victim_dummy = new
 	victim_dummy.set_haircolor("#846AAE", update = FALSE)
-	victim_dummy.set_hairstyle("Long Bedhead", update = FALSE)
 	victim_dummy.skin_tone = "albino"
 	victim_dummy.physique = FEMALE
+	victim_dummy.set_hairstyle("Long Bedhead", update = TRUE)
+
 
 	var/icon/bloodsucker_icon = render_preview_outfit(preview_outfit)
 
@@ -306,7 +307,16 @@
 	name = "Bloodsucker (Preview only)"
 	suit = /obj/item/clothing/suit/costume/dracula
 	shoes = /obj/item/clothing/shoes/laceup
-	uniform = /obj/item/clothing/under/arkstation/half_moon
+	uniform = /obj/item/clothing/under/costume/draculass
+
+/datum/outfit/bloodsucker_outfit/post_equip(mob/living/carbon/human/dummy/consistent/victim_dummy, visualsOnly)
+	victim_dummy.eye_color_left = RUNE_COLOR_DARKRED
+	victim_dummy.eye_color_right = RUNE_COLOR_DARKRED
+	victim_dummy.set_haircolor("#846AAE", update = FALSE)
+	victim_dummy.skin_tone = "albino"
+	victim_dummy.physique = FEMALE
+	victim_dummy.set_hairstyle("Long Bedhead", update = FALSE)
+	victim_dummy.update_body()
 
 /datum/antagonist/bloodsucker/ui_static_data(mob/user)
 	var/list/data = list()
