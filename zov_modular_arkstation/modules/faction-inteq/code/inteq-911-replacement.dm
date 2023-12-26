@@ -143,7 +143,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 			cell_phone_number = "Dogginos"
 			list_to_use = "dogginos"
 	priority_announce(announcement_message, announcer, 'zov_modular_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message=TRUE, color_override = "orange")
-	var/list/candidates = poll_ghost_candidates(poll_question, "deathsquad")
+	var/list/candidates = SSpolling.poll_ghost_candidates(poll_question, "deathsquad")
 
 	if(candidates.len)
 		//Pick the (un)lucky players
@@ -454,7 +454,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				station_balance?.adjust_money(SOLFED_FINE_AMOUNT) // paying for the gas to drive all the fuckin' way out to the frontier
 
 			priority_announce(announcement_message, announcement_source, 'zov_modular_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message = TRUE, color_override = "orange")
-			var/list/candidates = poll_ghost_candidates(ghost_poll_msg, jobban_to_check)
+			var/list/candidates = SSpolling.poll_ghost_candidates(ghost_poll_msg, jobban_to_check)
 
 			if(candidates.len)
 				//Pick the (un)lucky players

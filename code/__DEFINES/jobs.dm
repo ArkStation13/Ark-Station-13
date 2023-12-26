@@ -41,6 +41,7 @@
 //No department
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
+#define JOB_STOWAWAY "Stowaway" // Ark Station 13 Edit
 //Command
 #define JOB_CAPTAIN "Captain"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
@@ -61,30 +62,31 @@
 #define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
 #define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
 #define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
-#define JOB_CORRECTIONS_OFFICER "Corrections Officer" // SKYRAT EDIT ADDITION
+#define JOB_SECURITY_MEDIC "Security Medic" // Ark Station 13 Edit
+// #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // SKYRAT EDIT ADDITION
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
-#define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION
+// #define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION
 //Medical
 #define JOB_CORONER "Coroner"
 #define JOB_MEDICAL_DOCTOR "Medical Doctor"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist"
-#define JOB_ORDERLY "Orderly" // SKYRAT EDIT ADDITION
+// #define JOB_ORDERLY "Orderly" // SKYRAT EDIT ADDITION
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
 #define JOB_GENETICIST "Geneticist"
-#define JOB_SCIENCE_GUARD "Science Guard"
+// #define JOB_SCIENCE_GUARD "Science Guard"
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Shaft Miner"
 #define JOB_BITRUNNER "Bitrunner"
-#define JOB_CUSTOMS_AGENT "Customs Agent" // SKYRAT EDIT ADDITION
+// #define JOB_CUSTOMS_AGENT "Customs Agent" // SKYRAT EDIT ADDITION
 //Service
 #define JOB_BARTENDER "Bartender"
 #define JOB_BOTANIST "Botanist"
@@ -123,6 +125,7 @@
 // SKYRAT EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
 #define JOB_NT_REP "Nanotrasen Consultant"
+#define JOB_BRIDGE_OFFICER "Bridge Officer" // Ark Station 13 Edit
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
@@ -137,6 +140,11 @@
 #define JOB_SOLFED "SolFed"
 #define JOB_SOLFED_LIASON "SolFed Liason"
 // SKYRAT EDIT ADDITION END
+
+// ARK STATION EDIT START
+#define JOB_INTEQ_VANGUARD "InteQ Mercenary Vanguard"
+#define JOB_INTEQ_MERCENARY "InteQ Mercenary"
+// ARK STATION EDIT END
 
 #define JOB_GROUP_ENGINEERS list( \
 	JOB_STATION_ENGINEER, \
@@ -194,6 +202,8 @@
 #define JOB_DISPLAY_ORDER_CUSTOMS_AGENT 108 //SKYRAT EDIT ADDITION
 #define JOB_DISPLAY_ORDER_EXP_CORPS 109 //SKYRAT EDIT ADDITON
 
+#define JOB_DISPLAY_ORDER_STOWAWAY 110 // ARK STATION EDIT ADDITION
+
 #define DEPARTMENT_UNASSIGNED "No Department"
 
 #define DEPARTMENT_BITFLAG_SECURITY (1<<0)
@@ -217,7 +227,7 @@
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
 #define DEPARTMENT_CAPTAIN "Captain"
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //SKYRAT EDIT CHANGE
-#define DEPARTMENT_CENTRAL_COMMAND "Central Command" //SKYRAT EDIT CHANGE
+#define DEPARTMENT_CENTRAL_COMMAND "Command Support" //SKYRAT EDIT CHANGE
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.

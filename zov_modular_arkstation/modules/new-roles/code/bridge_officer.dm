@@ -25,7 +25,7 @@
 
 	//liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
 
-	display_order = JOB_DISPLAY_ORDER_BRIDGE_OFFICER
+	display_order = JOB_DISPLAY_ORDER_BRIDGE_ASSISTANT
 	bounty_types = CIV_JOB_RANDOM
 	departments_list = list(
 		/datum/job_department/central_command,

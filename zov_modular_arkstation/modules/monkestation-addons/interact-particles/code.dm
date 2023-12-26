@@ -3,7 +3,7 @@
 	icon = 'zov_modular_arkstation/modules/monkestation-addons/interact-particles/interact.dmi'
 	icon_state = "interact"
 	alpha = 180
-	plane = GAME_PLANE_UPPER_FOV_HIDDEN
+	plane = GAME_PLANE_FOV_HIDDEN
 	layer = ABOVE_ALL_MOB_LAYER
 
 /mob/proc/animate_interact(mob/living/target, state)
