@@ -290,11 +290,23 @@
 	new_owner.add_antag_datum(src)
 
 /datum/antagonist/bloodsucker/get_preview_icon()
+	var/mob/living/carbon/human/dummy/consistent/victim_dummy = new
+	victim_dummy.set_haircolor("#846AAE", update = FALSE)
+	victim_dummy.set_hairstyle("Long Bedhead", update = FALSE)
+	victim_dummy.skin_tone = "albino"
+	victim_dummy.physique = FEMALE
 
-	var/icon/final_icon = render_preview_outfit(/datum/outfit/bloodsucker_outfit)
-	final_icon.Blend(icon('icons/effects/blood.dmi', "uniformblood"), ICON_OVERLAY)
+	var/icon/bloodsucker_icon = render_preview_outfit(preview_outfit)
+
+	var/icon/final_icon = finish_preview_icon(bloodsucker_icon)
 
 	return finish_preview_icon(final_icon)
+
+/datum/outfit/bloodsucker_outfit
+	name = "Bloodsucker (Preview only)"
+	suit = /obj/item/clothing/suit/costume/dracula
+	shoes = /obj/item/clothing/shoes/laceup
+	uniform = /obj/item/clothing/under/arkstation/half_moon
 
 /datum/antagonist/bloodsucker/ui_static_data(mob/user)
 	var/list/data = list()
