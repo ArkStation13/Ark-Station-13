@@ -794,7 +794,7 @@
 
 /obj/singularity/Initialize(mapload, starting_energy = 50)
 	. = ..()
-	//SKYRAT EDIT ADDITION BEGIN
+	//NOVA EDIT ADDITION BEGIN
 	new /obj/effect/singularity_creation(loc)
 	warp = new(src)
 	vis_contents += warp
@@ -802,7 +802,7 @@
 	addtimer(CALLBACK(src, PROC_REF(make_visible)), 62)
 
 	energy = starting_energy
-	//SKYRAT EDIT END
+	//NOVA EDIT END
 
 /obj/singularity/expand(force_size, seconds_per_tick)
 

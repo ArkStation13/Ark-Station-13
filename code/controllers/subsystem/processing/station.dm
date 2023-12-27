@@ -22,7 +22,7 @@ PROCESSING_SUBSYSTEM_DEF(station)
 	// Autowiki also wants consistent outputs, for example making sure the vending machine page always reports the normal products
 	#if !defined(UNIT_TESTS) && !defined(AUTOWIKI)
 	SetupTraits()
-	//display_lobby_traits() SKYRAT EDIT REMOVAL
+	//display_lobby_traits() NOVA EDIT REMOVAL
 	#endif
 
 	announcer = new announcer() //Initialize the station's announcer datum
@@ -102,7 +102,7 @@ PROCESSING_SUBSYSTEM_DEF(station)
 		var/datum/station_trait/trait_to_remove = i
 		selectable_traits_by_types[initial(trait_to_remove.trait_type)] -= trait_to_remove
 
-/* SKYRAT EDIT REMOVAL
+/* NOVA EDIT REMOVAL
 /// Update station trait lobby buttons for clients who joined before we initialised this subsystem
 /datum/controller/subsystem/processing/station/proc/display_lobby_traits()
 	for (var/mob/dead/new_player/player as anything in GLOB.new_player_list)

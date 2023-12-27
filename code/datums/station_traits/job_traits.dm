@@ -29,7 +29,7 @@
 			SSstation.antag_restricted_roles += job_to_add::title
 	blacklist += subtypesof(/datum/station_trait/job) - type // All but ourselves
 	RegisterSignal(SSdcs, COMSIG_GLOB_PRE_JOBS_ASSIGNED, PROC_REF(pre_jobs_assigned))
-/* SKYRAT EDIT REMOVAL
+/* NOVA EDIT REMOVAL
 /datum/station_trait/job/setup_lobby_button(atom/movable/screen/lobby/button/sign_up/lobby_button)
 	RegisterSignal(lobby_button, COMSIG_ATOM_UPDATE_OVERLAYS, PROC_REF(on_lobby_button_update_overlays))
 	lobby_button.desc = button_desc
@@ -90,7 +90,7 @@
 	. = ..()
 	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(replace_cargo))
 
-/* SKYRAT EDIT REMOVAL
+/* NOVA EDIT REMOVAL
 /datum/station_trait/job/cargorilla/on_lobby_button_update_overlays(atom/movable/screen/lobby/button/sign_up/lobby_button, list/overlays)
 	. = ..()
 	overlays += LAZYFIND(lobby_candidates, lobby_button.get_mob()) ? "gorilla_on" : "gorilla_off"
@@ -123,7 +123,7 @@
 /datum/station_trait/job/bridge_assistant/New()
 	. = ..()
 	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(add_coffeemaker))
-/* SKYRAT EDIT REMOVAL
+/* NOVA EDIT REMOVAL
 /datum/station_trait/job/bridge_assistant/on_lobby_button_update_overlays(atom/movable/screen/lobby/button/sign_up/lobby_button, list/overlays)
 	. = ..()
 	overlays += "bridge_assistant"
