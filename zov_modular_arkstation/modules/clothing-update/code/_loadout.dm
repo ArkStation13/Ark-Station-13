@@ -113,7 +113,7 @@
 
 /datum/loadout_item/under/jumpsuit/hooded_pajamas
 	name = "Blue Cat Pajamas"
-	item_path = /obj/item/clothing/under/arkstation/hooded/siffet
+	item_path = /obj/item/clothing/suit/hooded/pijama
 
 /datum/loadout_item/under/jumpsuit/drivejacket
 	name = "Drive Jacket"

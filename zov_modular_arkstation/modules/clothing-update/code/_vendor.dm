@@ -527,7 +527,7 @@
 				/obj/item/clothing/under/arkstation/swim_risque = 2,
 				/obj/item/clothing/under/arkstation/swim_stream = 2,
 				/obj/item/clothing/under/arkstation/croptops/main = 4,
-				/obj/item/clothing/under/arkstation/hooded/siffet = 4,
+				/obj/item/clothing/suit/hooded/pijama = 4,
 				/obj/item/clothing/under/arkstation/croptops/drivejacket = 2,
 				/obj/item/clothing/under/arkstation/croptops/olive_civ = 2,
 				/obj/item/clothing/under/arkstation/croptops/grey_civ = 2,

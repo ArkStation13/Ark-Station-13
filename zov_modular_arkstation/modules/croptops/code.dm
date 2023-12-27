@@ -1,6 +1,9 @@
 /obj/item/clothing/under/arkstation/croptops
 	icon = 'zov_modular_arkstation/modules/croptops/suit_item.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/croptops/suit_mob.dmi'
+	flags_1 = 0
+	slot_flags = ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING
+	body_parts_covered = CHEST|ARMS
 
 /obj/item/clothing/under/arkstation/croptops/main
 	name = "cropped hoodie"
@@ -9,7 +12,7 @@
 
 /obj/item/clothing/under/arkstation/croptops/main/examine_more(mob/user)
 	. = ..()
-	return . + span_yellow("(Alt + Click for reskins).")
+	return . += span_yellow("(Alt + Click for reskins).")
 
 
 /obj/item/clothing/under/arkstation/croptops/main/AltClick(mob/user)
@@ -22,18 +25,22 @@
 		if("Standart")
 			icon_state = "croppedhoodie"
 			user.update_appearance()
+			body_parts_covered = CHEST|ARMS
 			update_icon()
 		if("Short")
 			icon_state = "croppierhoodie"
 			user.update_appearance()
+			body_parts_covered = CHEST|ARMS
 			update_icon()
 		if("Very Short")
 			icon_state = "highcrophoodie"
 			user.update_appearance()
+			body_parts_covered = ARMS
 			update_icon()
 		if("Extremely Short")
 			icon_state = "supercroppedhoodie"
 			user.update_appearance()
+			body_parts_covered = ARMS
 			update_icon()
 
 
@@ -89,46 +96,24 @@
 	desc = "I can't think of a description."
 	icon_state = "altevian-jacket-med"
 
-/obj/item/clothing/under/arkstation/hooded // Делаем грязь.
-	name = "hooded undersuit"
-	actions_types = list(/datum/action/item_action/toogle_hood)
+/obj/item/clothing/suit/hooded/pijama
+	name = "blue cat pajamas"
+	desc = "Meow!"
 	icon = 'zov_modular_arkstation/modules/croptops/suit_item.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/croptops/suit_mob.dmi'
-	var/is_hood_toogled = FALSE
-
-/datum/action/item_action/toogle_hood
-	name = "Toogle Hood"
-
-/obj/item/clothing/under/arkstation/hooded/verb/toogle_hood()
-	set category = "Object"
-	set name = "Toogle Hood"
-	set src in usr
-	if(!isliving(usr))
-		return
-	if(!can_use(usr))
-		return
-
-	if(is_hood_toogled == TRUE)
-		icon_state = base_icon_state
-		to_chat(usr, span_info("You took off your hood."))
-		is_hood_toogled = FALSE
-		update_icon()
-
-	if(is_hood_toogled == FALSE)
-		icon_state = base_icon_state + "_t"
-		to_chat(usr, span_info("You take on your hood."))
-		is_hood_toogled = TRUE
-		update_icon()
-
-/obj/item/clothing/under/arkstation/hooded/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toogle_hood))
-		toogle_hood()
-
-/obj/item/clothing/under/arkstation/hooded/Initialize(mapload)
-	. = ..()
-
-/obj/item/clothing/under/arkstation/hooded/siffet
-	name = "blue cat pajamas"
-	desc = "Stinky!"
 	icon_state = "siffet"
-	base_icon_state = "siffet"
+	hoodtype = /obj/item/clothing/head/hooded/pijama
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/head/hooded/pijama
+	name = "blue cat pajamas hood"
+	desc = "Meow!"
+	icon = 'zov_modular_arkstation/modules/croptops/furry_hoods.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/croptops/furry_hoods.dmi'
+	icon_state = "siffet"
+	flags_inv = null
+	flags_cover = null
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT

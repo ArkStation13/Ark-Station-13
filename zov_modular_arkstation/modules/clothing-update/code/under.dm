@@ -83,8 +83,7 @@
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under_digi.dmi'
 	supports_variations_flags = CLOTHING_NO_VARIATION
-
-/obj/item/clothing/under/arkstation
+	flags_1 = 0
 	can_adjust = FALSE
 
 /obj/item/clothing/under/arkstation/female/skinsuit
