@@ -44,3 +44,6 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/syndicate = 1)
 	category = CAT_MISC
+
+/obj/item/station_charter/banner
+	icon = 'zov_modular_arkstation/modules/new-banners/banner_dolbajob.dmi'

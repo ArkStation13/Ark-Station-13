@@ -526,6 +526,8 @@
 				/obj/item/clothing/under/arkstation/swim_highclass = 2,
 				/obj/item/clothing/under/arkstation/swim_risque = 2,
 				/obj/item/clothing/under/arkstation/swim_stream = 2,
+				/obj/item/clothing/under/arkstation/croptops/main = 4,
+				/obj/item/clothing/under/arkstation/hooded/siffet = 4,
 				/obj/item/clothing/shoes/jackboots/tall = 3,
 				/obj/item/clothing/shoes/jackboots/toeless = 3,
 				/obj/item/clothing/neck/bandagewraps = 5,

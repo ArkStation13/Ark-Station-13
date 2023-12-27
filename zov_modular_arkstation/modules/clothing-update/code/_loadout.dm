@@ -106,3 +106,11 @@
 /datum/loadout_item/under/jumpsuit/swim_stream
 	name = "Stream Swimsuit"
 	item_path = /obj/item/clothing/under/arkstation/swim_stream
+
+/datum/loadout_item/under/jumpsuit/crop_top
+	name = "Cropped Hoodie"
+	item_path = /obj/item/clothing/under/arkstation/croptops/main
+
+/datum/loadout_item/under/jumpsuit/hooded_pajamas
+	name = "Blue Cat Pajamas"
+	item_path = /obj/item/clothing/under/arkstation/hooded/siffet
