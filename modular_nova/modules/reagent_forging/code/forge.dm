@@ -90,6 +90,26 @@
 	)
 	/// List of possible choices for the selection radial
 	var/list/radial_choice_list = list()
+	/// Blacklist that contains reagents that weapons and armor are unable to be imbued with.
+	var/static/list/disallowed_reagents = typecacheof(list(
+		/datum/reagent/inverse/,
+		/datum/reagent/consumable/entpoly,
+		/datum/reagent/pax,
+		/datum/reagent/consumable/liquidelectricity/enriched,
+		/datum/reagent/teslium,
+		/datum/reagent/eigenstate,
+		/datum/reagent/drug/pcp,
+		/datum/reagent/consumable/cum,
+		/datum/reagent/consumable/femcum,
+		/datum/reagent/consumable/breast_milk,
+		/datum/reagent/toxin/acid,
+		/datum/reagent/phlogiston,
+		/datum/reagent/napalm,
+		/datum/reagent/thermite,
+		/datum/reagent/medicine/earthsblood,
+		/datum/reagent/medicine/ephedrine,
+		/datum/reagent/medicine/epinephrine,
+	))
 
 /obj/structure/reagent_forge/examine(mob/user)
 	. = ..()
@@ -140,7 +160,7 @@
 
 	. += span_notice("<br>[src] is currently [forge_temperature] degrees hot, going towards [target_temperature] degrees.<br>")
 
-	if(reagent_forging)
+	if(reagent_forging && (is_species(user, /datum/species/lizard/ashwalker) || is_species(user, /datum/species/human/felinid/primitive)))
 		. += span_warning("[src] has a fine gold trim, it is ready to imbue chemicals into reagent objects.")
 
 	return .
@@ -387,8 +407,11 @@
 
 		if(SKILL_LEVEL_LEGENDARY)
 			if(!forced)
-				to_chat(user, span_notice("With just the right heat treating technique, metal could be made to accept reagents..."))
-			create_reagent_forge()
+				if(is_species(user, /datum/species/lizard/ashwalker) || is_species(user, /datum/species/human/felinid/primitive))
+					to_chat(user, span_notice("With just the right heat treating technique, metal could be made to accept reagents..."))
+					create_reagent_forge()
+				if(forge_level == FORGE_LEVEL_MASTER)
+					to_chat(user, span_warning("It is impossible to further improve the forge!"))
 			temperature_loss_reduction = MAX_TEMPERATURE_LOSS_DECREASE
 			minimum_target_temperature = 25 // This won't matter except in a few cases here, but we still need to cover those few cases
 			forge_level = FORGE_LEVEL_LEGENDARY
@@ -542,6 +565,11 @@
 		to_chat(user, span_danger("It is impossible for you to imbue!")) //maybe remove (ashwalkers & icecats only) after some time
 		return
 
+	var/mob/living/carbon/human/human_user = user
+	if(!is_species(human_user, /datum/species/lizard/ashwalker) && !is_species(human_user, /datum/species/human/felinid/primitive))
+		to_chat(user, span_danger("It is impossible for you to imbue!")) //maybe remove (ashwalkers & icecats only) after some time
+		return
+
 	in_use = TRUE
 	balloon_alert_to_viewers("imbuing...")
 
@@ -565,6 +593,11 @@
 			attacking_weapon.reagents.remove_reagent(weapon_reagent.type)
 			continue
 
+		if(is_type_in_typecache(weapon_reagent, disallowed_reagents))
+			balloon_alert(user, "cannot imbue with [weapon_reagent.name]")
+			attacking_weapon.reagents.remove_reagent(weapon_reagent.type, include_subtypes = TRUE)
+			continue
+
 		weapon_component.imbued_reagent += weapon_reagent.type
 		attacking_weapon.name = "[weapon_reagent.name] [attacking_weapon.name]"
 
@@ -579,6 +612,11 @@
 /obj/structure/reagent_forge/proc/handle_clothing_imbue(obj/attacking_item, mob/living/user)
 	//This code will refuse all non-ashwalkers & non-icecats from imbuing
 	if(!ishuman(user))
+		to_chat(user, span_danger("It is impossible for you to imbue!")) //maybe remove (ashwalkers & icecats only) after some time
+		return
+
+	var/mob/living/carbon/human/human_user = user
+	if(!is_species(human_user, /datum/species/lizard/ashwalker) && !is_species(human_user, /datum/species/human/felinid/primitive))
 		to_chat(user, span_danger("It is impossible for you to imbue!")) //maybe remove (ashwalkers & icecats only) after some time
 		return
 
@@ -602,6 +640,11 @@
 
 	for(var/datum/reagent/clothing_reagent as anything in attacking_clothing.reagents.reagent_list)
 		if(clothing_reagent.volume < MINIMUM_IMBUING_REAGENT_AMOUNT)
+			attacking_clothing.reagents.remove_reagent(clothing_reagent.type, include_subtypes = TRUE)
+			continue
+
+		if(is_type_in_typecache(clothing_reagent, disallowed_reagents))
+			balloon_alert(user, "cannot imbue with [clothing_reagent.name]")
 			attacking_clothing.reagents.remove_reagent(clothing_reagent.type, include_subtypes = TRUE)
 			continue
 

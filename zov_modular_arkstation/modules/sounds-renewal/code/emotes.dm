@@ -176,15 +176,15 @@ var/static/list/female_yawn = list(
 /datum/scream_type/human
 	name = "Human Scream"
 	male_screamsounds = list(
-		'modular_skyrat/modules/emotes/sound/voice/scream_m1.ogg',
-		'modular_skyrat/modules/emotes/sound/voice/scream_m2.ogg',
+		'modular_nova/modules/emotes/sound/voice/scream_m1.ogg',
+		'modular_nova/modules/emotes/sound/voice/scream_m2.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_male_1.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_male_2.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_male_3.ogg',
 	)
 	female_screamsounds = list(
-		'modular_skyrat/modules/emotes/sound/voice/scream_f1.ogg',
-		'modular_skyrat/modules/emotes/sound/voice/scream_f2.ogg',
+		'modular_nova/modules/emotes/sound/voice/scream_f1.ogg',
+		'modular_nova/modules/emotes/sound/voice/scream_f2.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_female_1.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_female_2.ogg',
 		'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/scream_female_3.ogg',
@@ -208,7 +208,7 @@ var/static/list/female_yawn = list(
 
 /datum/emote/living/cough/get_sound(mob/living/user)
 	if(isvox(user))
-		return 'modular_skyrat/modules/emotes/sound/emotes/voxcough.ogg'
+		return 'modular_nova/modules/emotes/sound/emotes/voxcough.ogg'
 	if(iscarbon(user))
 		if(user.gender == MALE)
 			return pick(male_cough)
@@ -277,7 +277,7 @@ var/static/list/female_yawn = list(
 
 /datum/emote/living/sneeze/get_sound(mob/living/user)
 	if(isvox(user))
-		return 'modular_skyrat/modules/emotes/sound/emotes/voxsneeze.ogg'
+		return 'modular_nova/modules/emotes/sound/emotes/voxsneeze.ogg'
 	if(iscarbon(user))
 		if(user.gender == MALE)
 			return pick(male_sneeze)

@@ -83,7 +83,7 @@
 		return
 	// Congratulations you have won a special prize: cancer
 	var/obj/item/organ/internal/legion_tumour/cancer = new()
-	cancer.Insert(consumed, special = TRUE, movement_flags = DELETE_IF_REPLACED)
+	cancer.Insert(consumed, special = TRUE, drop_if_replaced = FALSE)
 
 /// A Legion which only drops skeletons instead of corpses which might have fun loot, so it cannot be farmed
 

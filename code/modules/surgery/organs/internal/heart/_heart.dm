@@ -22,7 +22,7 @@
 
 	/// Whether the heart is currently beating.
 	/// Do not set this directly. Use Restart() and Stop() instead.
-	VAR_PRIVATE/beating = TRUE
+	var/beating = TRUE
 
 	/// is this mob having a heatbeat sound played? if so, which?
 	var/beat = BEAT_NONE
@@ -33,7 +33,7 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[beating ? "on" : "off"]"
 
-/obj/item/organ/internal/heart/Remove(mob/living/carbon/heartless, special, movement_flags)
+/obj/item/organ/internal/heart/Remove(mob/living/carbon/heartless, special = 0)
 	. = ..()
 	if(!special)
 		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 12 SECONDS)
@@ -146,14 +146,12 @@
 	else
 		return ..()
 
-/obj/item/organ/internal/heart/cursed/on_mob_insert(mob/living/carbon/accursed)
+/obj/item/organ/internal/heart/cursed/on_insert(mob/living/carbon/accursed)
 	. = ..()
-
 	accursed.AddComponent(/datum/component/manual_heart, pump_delay = pump_delay, blood_loss = blood_loss, heal_brute = heal_brute, heal_burn = heal_burn, heal_oxy = heal_oxy)
 
-/obj/item/organ/internal/heart/cursed/on_mob_remove(mob/living/carbon/accursed, special = FALSE)
+/obj/item/organ/internal/heart/cursed/Remove(mob/living/carbon/accursed, special = FALSE)
 	. = ..()
-
 	qdel(accursed.GetComponent(/datum/component/manual_heart))
 
 /obj/item/organ/internal/heart/cybernetic

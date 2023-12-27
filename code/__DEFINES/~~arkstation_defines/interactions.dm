@@ -1,0 +1,5 @@
+#define INTERACTION_REQUIRE_SELF_MOUTH "self_mouth"
+#define INTERACTION_REQUIRE_TARGET_MOUTH "target_mouth"
+
+#define INTERACTION_REQUIRE_SELF_CHEST "self_chest"
+#define INTERACTION_REQUIRE_TARGET_CHEST "target_chest"

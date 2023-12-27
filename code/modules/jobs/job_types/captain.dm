@@ -23,7 +23,6 @@
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_CMD // NOVA EDIT - Original: paycheck_department = ACCOUNT_SEC
 
-	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
 	liver_traits = list(TRAIT_ROYAL_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
@@ -43,7 +42,7 @@
 		/obj/item/skillchip/sabrage = 5,
 	)
 
-	job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
 	rpg_title = "Star Duke"
 
 	voice_of_god_power = 1.4 //Command staff has authority

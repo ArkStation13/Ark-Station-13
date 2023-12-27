@@ -52,8 +52,9 @@
 	if(!istype(H))
 		return
 
-	H.drop_everything(del_on_drop = FALSE, force = TRUE, del_if_nodrop = TRUE)
-
+	for(var/obj/item/I in H)
+		if(!H.dropItemToGround(I))
+			qdel(I)
 	H.regenerate_icons()
 	H.revive(ADMIN_HEAL_ALL)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/costume/kilt/highlander(H), ITEM_SLOT_ICLOTHING)

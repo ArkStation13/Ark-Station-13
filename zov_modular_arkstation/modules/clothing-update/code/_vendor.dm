@@ -3,7 +3,7 @@
 /obj/machinery/vending/wardrobe/sec_wardrobe //(RED) // ARK STATION EDIT || REDSEC
 	name = "\improper SecDrobe"
 	desc = "A vending machine stocked with \"Security\" package, including standardized uniforms and general equipment."
-	// icon = 'modular_skyrat/modules/sec_haul/icons/vending/vending.dmi'
+	// icon = 'modular_nova/modules/sec_haul/icons/vending/vending.dmi'
 	// light_mask = "sec-light-mask"
 	// icon_state = "peace"
 	product_ads = "Beat perps in style!;The stains wash right out!;You have the right to be fashionable!;Now you can be the fashion police you always wanted to be!"
@@ -53,7 +53,7 @@
 					/obj/item/clothing/mask/gas/sechailer/swat = 1,
 					/obj/item/clothing/head/beret/sec/navyofficer = 3,
 					)
-	refill_canister = /obj/item/vending_refill/wardrobe/peacekeeper_wardrobe
+	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_DARK_RED
 
@@ -61,7 +61,7 @@
 	name = "\improper SecTech Equipment Vendor"
 	desc = "An Armadyne peacekeeper equipment vendor."
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
-	//icon = 'modular_skyrat/modules/sec_haul/icons/vending/vending.dmi'
+	//icon = 'modular_nova/modules/sec_haul/icons/vending/vending.dmi'
 	products = list(
 		/obj/item/restraints/handcuffs = 8,
 		/obj/item/restraints/handcuffs/cable/zipties = 12,
@@ -86,7 +86,7 @@
 		/obj/item/watertank/pepperspray = 2,
 		/obj/item/clothing/suit/armor/vest/alt/sec/metropolice = 3,
 	)
-	refill_canister = /obj/item/vending_refill/security_peacekeeper
+	refill_canister = /obj/item/vending_refill/security
 
 
 /// EngiDrobe

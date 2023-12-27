@@ -104,6 +104,7 @@
 			download_netspeed *= 0.5
 		download_completion += download_netspeed
 
+
 /datum/computer_file/program/ntnetdownload/ui_act(action, params, datum/tgui/ui, datum/ui_state/state)
 	switch(action)
 		if("PRG_downloadfile")

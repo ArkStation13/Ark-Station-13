@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/toggle/labcoat/skyrat/security_medic
 	name = "security medic labcoat"
-	icon_state = "secmed_labcoat" //Icon located in modular_skyrat/master_files/icons/(obj or mob)/clothing/suits/labcoat.dmi
+	icon_state = "secmed_labcoat" //Icon located in modular_nova/master_files/icons/(obj or mob)/clothing/suits/labcoat.dmi
 	blood_overlay_type = "armor"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	armor_type = /datum/armor/skyrat_security_medic

@@ -640,9 +640,9 @@
 	return SSmodular_computers.add_log("[src]: [text]")
 
 /obj/item/modular_computer/proc/close_all_programs()
-	active_program?.kill_program()
+	active_program = null
 	for(var/datum/computer_file/program/idle as anything in idle_threads)
-		idle.kill_program()
+		idle_threads.Remove(idle)
 
 /obj/item/modular_computer/proc/shutdown_computer(loud = TRUE)
 	close_all_programs()

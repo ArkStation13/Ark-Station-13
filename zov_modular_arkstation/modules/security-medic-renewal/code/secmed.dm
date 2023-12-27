@@ -94,7 +94,7 @@
 /obj/effect/landmark/start/security_medic
 	name = "Security Medic"
 	icon_state = "Security Medic"
-	icon = 'modular_skyrat/master_files/icons/mob/landmarks.dmi'
+	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 
 /obj/item/encryptionkey/headset_sec/medsec
 	name = "medical-security encryption key"
@@ -108,7 +108,7 @@
 
 /datum/id_trim/job/security_medic
 	assignment = "Security Medic"
-	//trim_icon = 'modular_skyrat/master_files/icons/obj/card.dmi'
+	//trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_ASSEMBLY_RED
 	subdepartment_color = COLOR_ASSEMBLY_RED

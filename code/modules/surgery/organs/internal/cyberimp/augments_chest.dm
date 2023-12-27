@@ -181,7 +181,7 @@
 		/datum/effect_system/trail_follow/ion \
 	)
 
-/obj/item/organ/internal/cyberimp/chest/thrusters/Remove(mob/living/carbon/thruster_owner, special, movement_flags)
+/obj/item/organ/internal/cyberimp/chest/thrusters/Remove(mob/living/carbon/thruster_owner, special = 0)
 	if(on)
 		deactivate(silent = TRUE)
 	..()

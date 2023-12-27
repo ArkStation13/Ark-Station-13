@@ -25,7 +25,7 @@
 	var/bloodloss_rate = NORMAL_BLOOD_DRAIN
 
 
-/obj/item/organ/internal/heart/hemophage/Insert(mob/living/carbon/tumorful, special, movement_flags)
+/obj/item/organ/internal/heart/hemophage/Insert(mob/living/carbon/tumorful, special, drop_if_replaced)
 	. = ..()
 	if(!. || !owner)
 		return

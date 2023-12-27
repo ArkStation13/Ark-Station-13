@@ -67,7 +67,7 @@
 	if(visualsOnly)
 		return
 	var/obj/item/organ/internal/eyes/robotic/glow/eyes = new()
-	eyes.Insert(H, movement_flags = DELETE_IF_REPLACED)
+	eyes.Insert(H, drop_if_replaced = FALSE)
 
 /datum/outfit/invisible_man
 	name = "Invisible Man"

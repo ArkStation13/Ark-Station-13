@@ -14,23 +14,21 @@
 	if(mutantpart_key)
 		color = mutantpart_info[MUTANT_INDEX_COLOR_LIST][1]
 
-/obj/item/organ/Insert(mob/living/carbon/M, special = FALSE, movement_flags = DELETE_IF_REPLACED)
+/obj/item/organ/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = TRUE)
 	var/mob/living/carbon/human/H = M
 	if(mutantpart_key && istype(H))
 		H.dna.species.mutant_bodyparts[mutantpart_key] = mutantpart_info.Copy()
-		if(!special)
-			H.update_body()
+		H.update_body()
 	. = ..()
 
-/obj/item/organ/Remove(mob/living/carbon/M, special = FALSE, movement_flags)
+/obj/item/organ/Remove(mob/living/carbon/M, special = FALSE)
 	var/mob/living/carbon/human/H = M
 	if(mutantpart_key && istype(H))
 		if(H.dna.species.mutant_bodyparts[mutantpart_key])
 			mutantpart_info = H.dna.species.mutant_bodyparts[mutantpart_key].Copy() //Update the info in case it was changed on the person
 		color = mutantpart_info[MUTANT_INDEX_COLOR_LIST][1]
 		H.dna.species.mutant_bodyparts -= mutantpart_key
-		if(!special)
-			H.update_body()
+		H.update_body()
 	. = ..()
 
 /obj/item/organ/proc/build_from_dna(datum/dna/DNA, associated_key)

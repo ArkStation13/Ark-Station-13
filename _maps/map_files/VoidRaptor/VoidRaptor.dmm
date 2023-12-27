@@ -7993,7 +7993,7 @@
 "cut" = (
 /obj/effect/turf_decal/tile/blue/full,
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/erokez.dmi';
+	icon = 'modular_nova/modules/advanced_shuttles/icons/erokez.dmi';
 	icon_state = "floor1"
 	},
 /area/space/nearstation)
@@ -8378,6 +8378,7 @@
 /area/station/medical/surgery)
 "cAR" = (
 /obj/item/mod/module/plasma_stabilizer,
+/obj/item/mod/module/thermal_regulator,
 /obj/structure/table,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/door/window/right/directional/west{
@@ -8395,8 +8396,6 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/mid_joiner{
 	dir = 1
 	},
-/obj/item/mod/module/signlang_radio,
-/obj/item/mod/module/thermal_regulator,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/storage)
 "cBb" = (
@@ -9279,7 +9278,7 @@
 /area/station/hallway/secondary/command)
 "cOf" = (
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/erokez.dmi';
+	icon = 'modular_nova/modules/advanced_shuttles/icons/erokez.dmi';
 	icon_state = "floor1"
 	},
 /area/space/nearstation)
@@ -13966,8 +13965,8 @@
 /obj/machinery/door/window/right/directional/east{
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy");
-	pixel_x = -25;
-	safe = 4
+	safe = 4;
+	dir = 8
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/pharmacy)
@@ -15731,7 +15730,6 @@
 /obj/item/restraints/handcuffs,
 /obj/effect/turf_decal/tile/dark_red/diagonal_centre,
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
-/obj/item/paper/fluff/genpop_instructions,
 /turf/open/floor/iron/dark/diagonal,
 /area/station/security/execution/transfer)
 "eBa" = (
@@ -16728,7 +16726,7 @@
 /area/station/ai_monitored/security/armory)
 "eNH" = (
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/evac_shuttle.dmi'
+	icon = 'modular_nova/modules/advanced_shuttles/icons/evac_shuttle.dmi'
 	},
 /area/space/nearstation)
 "eNR" = (
@@ -26513,7 +26511,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/erokez.dmi';
+	icon = 'modular_nova/modules/advanced_shuttles/icons/erokez.dmi';
 	icon_state = "floor1"
 	},
 /area/space/nearstation)
@@ -39494,8 +39492,7 @@
 /area/station/maintenance/department/medical/central)
 "lgZ" = (
 /obj/machinery/door/airlock/security{
-	name = "Isolation Cell";
-	id_tag = "IsolationCell"
+	name = "Isolation Cell"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -46263,9 +46260,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/machinery/chem_dispenser{
-	layer = 2.7
-	},
+/obj/machinery/chem_heater/withbuffer,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/pharmacy)
 "mZe" = (
@@ -46946,7 +46941,7 @@
 /obj/machinery/door/window/right/directional/west{
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy");
-	pixel_x = 25
+	dir = 4
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/pharmacy)
@@ -47935,7 +47930,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/erokez.dmi';
+	icon = 'modular_nova/modules/advanced_shuttles/icons/erokez.dmi';
 	icon_state = "floor1"
 	},
 /area/space/nearstation)
@@ -48601,11 +48596,8 @@
 	pixel_x = 3;
 	pixel_y = -32
 	},
+/obj/machinery/chem_master,
 /obj/effect/turf_decal/bot_red,
-/obj/structure/table/reinforced/rglass,
-/obj/item/reagent_containers/cup/beaker/large,
-/obj/item/reagent_containers/cup/beaker/large,
-/obj/item/reagent_containers/dropper,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/pharmacy)
 "nIK" = (
@@ -55636,7 +55628,10 @@
 	dir = 9;
 	layer = 3.1
 	},
-/obj/machinery/chem_master,
+/obj/structure/table/reinforced/rglass,
+/obj/item/reagent_containers/cup/beaker/large,
+/obj/item/reagent_containers/cup/beaker/large,
+/obj/item/reagent_containers/dropper,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/pharmacy)
 "pAZ" = (
@@ -58482,7 +58477,7 @@
 /area/station/ai_monitored/turret_protected/ai)
 "qmI" = (
 /obj/machinery/flasher/directional/south{
-	id = "IsolationCell"
+	id = "Cell 6"
 	},
 /obj/machinery/light/small/broken/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -68536,9 +68531,9 @@
 "tbw" = (
 /obj/structure/table,
 /obj/effect/turf_decal/bot,
-/obj/item/mod/module/plasma_stabilizer,
-/obj/item/mod/module/signlang_radio,
-/obj/item/mod/module/thermal_regulator,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/flashlight,
+/obj/item/clothing/glasses/meson/engine,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/engineering/main)
 "tbD" = (
@@ -70870,15 +70865,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
-"tFq" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/status_display/door_timer{
-	id = "IsolationCell";
-	name = "Isolation Cell";
-	pixel_y = 32
-	},
-/turf/open/floor/iron/dark/smooth_large,
-/area/station/security/execution/transfer)
 "tFt" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/department/engine/atmos)
@@ -75330,7 +75316,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/airless{
-	icon = 'modular_skyrat/modules/advanced_shuttles/icons/erokez.dmi';
+	icon = 'modular_nova/modules/advanced_shuttles/icons/erokez.dmi';
 	icon_state = "floor1"
 	},
 /area/space/nearstation)
@@ -83950,13 +83936,15 @@
 /obj/effect/turf_decal/trimline/yellow/filled/mid_joiner{
 	dir = 4
 	},
-/obj/effect/turf_decal/bot_red,
 /obj/machinery/requests_console/directional/south{
 	department = "Pharmacy";
 	name = "Pharmacy Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/ore_update,
-/obj/machinery/chem_heater/withbuffer,
+/obj/effect/turf_decal/bot_red,
+/obj/machinery/chem_dispenser{
+	layer = 2.7
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/pharmacy)
 "xnR" = (
@@ -86260,9 +86248,6 @@
 	pixel_y = 16
 	},
 /obj/item/inspector,
-/obj/item/mod/module/signlang_radio{
-	pixel_y = 12
-	},
 /obj/item/mod/module/thermal_regulator{
 	pixel_y = 16
 	},
@@ -131375,7 +131360,7 @@ pbe
 okn
 okn
 cDj
-tFq
+lFM
 rPq
 gPQ
 bsr

@@ -875,6 +875,9 @@
 			report += "</b>[opfor_equipment.opposing_force_equipment.name]<b><br>"
 			report += "<br>"
 
+	if(contractor_hub)
+		report += contractor_round_end()
+
 	return report.Join("\n")
 
 /// Adds the OPFOR in question to the ticket ping subsystem should it not be approved.

@@ -25,7 +25,6 @@ GLOBAL_LIST_INIT(megacarp_first_names, world.file2list("strings/names/megacarp1.
 GLOBAL_LIST_INIT(megacarp_last_names, world.file2list("strings/names/megacarp2.txt"))
 GLOBAL_LIST_INIT(cyberauth_names, world.file2list("strings/names/cyberauth.txt"))
 GLOBAL_LIST_INIT(syndicate_monkey_names, world.file2list("strings/names/syndicate_monkey.txt"))
-GLOBAL_LIST_INIT(cargorilla_names, world.file2list("strings/names/cargorilla.txt"))
 GLOBAL_LIST_INIT(guardian_first_names, world.file2list("strings/names/guardian_descriptions.txt"))
 GLOBAL_LIST_INIT(guardian_tech_surnames, world.file2list("strings/names/guardian_gamepieces.txt"))
 GLOBAL_LIST_INIT(guardian_fantasy_surnames, world.file2list("strings/names/guardian_tarot.txt"))
@@ -41,13 +40,5 @@ GLOBAL_LIST_INIT(dream_strings, world.file2list("strings/dreamstrings.txt"))
 GLOBAL_LIST_INIT(vampire_house_names, world.file2list("strings/names/vampire_house_names.txt"))
 GLOBAL_LIST_INIT(greek_alphabet, world.file2list("strings/greek_alphabet.txt"))
 GLOBAL_LIST_INIT(hive_names,  world.file2list("strings/names/hive_names.txt"))
-
-// ARK STATION 13
-GLOBAL_LIST_INIT(jobs, world.file2list("strings/names/jobs.txt"))
-GLOBAL_LIST_INIT(cocktails, world.file2list("strings/names/cocktails.txt"))
-GLOBAL_LIST_INIT(locations, world.file2list("strings/names/locations.txt"))
-GLOBAL_LIST_INIT(ru_nouns, world.file2list("strings/names/ru_nouns.txt"))
-GLOBAL_LIST_INIT(ru_adjectives, world.file2list("strings/names/ru_adjectives.txt"))
-GLOBAL_LIST_INIT(ru_verbs, world.file2list("strings/names/ru_verbs.txt"))
 //loaded on startup because of "
 //would include in rsc if ' was used

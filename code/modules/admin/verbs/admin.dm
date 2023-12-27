@@ -174,8 +174,10 @@
 	if(confirm != "Yes")
 		return
 
-	M.drop_everything(del_on_drop = FALSE, force = TRUE, del_if_nodrop = TRUE)
-	M.regenerate_icons()
+	for(var/obj/item/W in M)
+		if(!M.dropItemToGround(W))
+			qdel(W)
+			M.regenerate_icons()
 
 	log_admin("[key_name(usr)] made [key_name(M)] drop everything!")
 	var/msg = "[key_name_admin(usr)] made [ADMIN_LOOKUPFLW(M)] drop everything!"

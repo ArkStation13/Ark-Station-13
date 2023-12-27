@@ -13,16 +13,16 @@
 	icon_state = "inteq_vanguard"
 
 /obj/structure/closet/shuttle
-	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
 /obj/structure/closet/secure_closet/interdynefob/armory_gear_locker
-	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
 /obj/structure/closet/secure_closet/interdynefob/munitions_locker
-	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
 /obj/structure/closet/secure_closet/armory_kiboko_but_evil
-	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
 /obj/structure/closet/secure_closet/blueshield
 	icon = 'zov_modular_arkstation/modules/new-closets/closet_dolbajob.dmi'

@@ -117,8 +117,8 @@
 	armor_type = /datum/armor/mod_theme_security
 	skins = list(
 		"security" = list(
-			MOD_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
-			MOD_WORN_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
+			MOD_ICON_OVERRIDE = 'modular_nova/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
+			MOD_WORN_ICON_OVERRIDE = 'modular_nova/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = null,
 				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
@@ -162,8 +162,8 @@
 	default_skin = "safeguard"
 	skins = list(
 		"safeguard" = list(
-			MOD_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
-			MOD_WORN_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
+			MOD_ICON_OVERRIDE = 'modular_nova/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
+			MOD_WORN_ICON_OVERRIDE = 'modular_nova/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = null,
 				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,

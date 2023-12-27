@@ -43,6 +43,7 @@
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 //NOVA EDIT START
 #define ROLE_BORER "Borer"
+#define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
 #define ROLE_LONE_INFILTRATOR "Lone Infiltrator"
 #define ROLE_MUTANT "Mutated Abomination"
 #define ROLE_CLOCK_CULTIST "Clock Cultist"
@@ -116,10 +117,6 @@
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"
 
-// ARK STATION EDIT START //
-#define ROLE_NECROMORPH "Necromorph"
-// ARK STATION EDIT END //
-
 // Virtual dom related
 #define ROLE_GLITCH "Glitch" // the parent type of all vdom roles
 #define ROLE_CYBER_POLICE "Cyber Police"
@@ -175,6 +172,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	//NOVA EDIT START
 	ROLE_LONE_INFILTRATOR = 0,
 	ROLE_BORER = 0,
+	ROLE_DRIFTING_CONTRACTOR = 14,
 	ROLE_MUTANT = 0,
 	//NOVA EDIT END
 

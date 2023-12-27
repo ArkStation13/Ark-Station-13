@@ -113,38 +113,7 @@
 	wound = 15
 
 /datum/mod_theme/security // Security Officer
-	default_skin = "security"
 	armor_type = /datum/armor/mod_theme_security
-	skins = list(
-		"security" = list(
-			MOD_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
-			MOD_WORN_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
-			HELMET_FLAGS = list(
-				UNSEALED_LAYER = null,
-				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE|HEADINTERNALS,
-				UNSEALED_INVISIBILITY = HIDEFACIALHAIR|HIDEEARS|HIDEHAIR|HIDESNOUT,
-				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE,
-				UNSEALED_COVER = HEADCOVERSMOUTH,
-				SEALED_COVER = HEADCOVERSEYES|PEPPERPROOF,
-			),
-			CHESTPLATE_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				SEALED_INVISIBILITY = HIDEJUMPSUIT,
-			),
-			GAUNTLETS_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				CAN_OVERSLOT = TRUE,
-			),
-			BOOTS_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				CAN_OVERSLOT = TRUE,
-			),
-		),
-	)
 
 /datum/armor/mod_theme_security
 	melee = 30
@@ -159,35 +128,6 @@
 
 /datum/mod_theme/safeguard // Head of Security
 	armor_type = /datum/armor/mod_theme_safeguard
-	default_skin = "safeguard"
-	skins = list(
-		"safeguard" = list(
-			MOD_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/obj/clothing/modsuit/mod_clothing.dmi',
-			MOD_WORN_ICON_OVERRIDE = 'modular_skyrat/master_files/icons/mob/clothing/modsuit/mod_clothing.dmi',
-			HELMET_FLAGS = list(
-				UNSEALED_LAYER = null,
-				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE|HEADINTERNALS,
-				UNSEALED_INVISIBILITY = HIDEFACIALHAIR|HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT,
-				UNSEALED_COVER = HEADCOVERSMOUTH|HEADCOVERSEYES|PEPPERPROOF,
-			),
-			CHESTPLATE_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				SEALED_INVISIBILITY = HIDEJUMPSUIT,
-			),
-			GAUNTLETS_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				CAN_OVERSLOT = TRUE,
-			),
-			BOOTS_FLAGS = list(
-				UNSEALED_CLOTHING = THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				CAN_OVERSLOT = TRUE,
-			),
-		),
-	)
 
 /datum/armor/mod_theme_safeguard
 	melee = 40
@@ -245,17 +185,10 @@
 	armor_mod = /datum/armor/mod_module_armor_boost_override
 
 /datum/armor/mod_module_armor_boost_override
-	melee = 40
-	bullet = 50
-	laser = 30
-	energy = 40
-
-	// ARK STATION EDIT
-	// melee = 20
-	// bullet = 25
-	// laser = 15
-	// energy = 20
-	///////////////////
+	melee = 20
+	bullet = 25
+	laser = 15
+	energy = 20
 
 /datum/mod_theme/elite // Elite Syndiate
 	armor_type = /datum/armor/mod_theme_elite
@@ -276,16 +209,10 @@
 	armor_mod = /datum/armor/mod_module_armor_boost_elite
 
 /datum/armor/mod_module_armor_boost_elite
-	melee = 60
-	bullet = 60
-	laser = 50
-	energy = 60
-	// ARK STATION EDIT
-	// melee = 30
-	// bullet = 30
-	// laser = 25
-	// energy = 30
-	///////////////////
+	melee = 30
+	bullet = 30
+	laser = 25
+	energy = 30
 
 /datum/mod_theme/prototype // Charlie Station
 	armor_type = /datum/armor/mod_theme_prototype

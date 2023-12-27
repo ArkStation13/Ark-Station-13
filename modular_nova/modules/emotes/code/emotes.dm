@@ -38,15 +38,15 @@
 
 // /datum/emote/living/cough/get_sound(mob/living/user)
 // 	if(isvox(user))
-// 		return 'modular_skyrat/modules/emotes/sound/emotes/voxcough.ogg'
+// 		return 'modular_nova/modules/emotes/sound/emotes/voxcough.ogg'
 // 	if(iscarbon(user))
 // 		if(user.gender == MALE)
-// 			return pick('modular_skyrat/modules/emotes/sound/emotes/male/male_cough_1.ogg',
-// 						'modular_skyrat/modules/emotes/sound/emotes/male/male_cough_2.ogg',
-// 						'modular_skyrat/modules/emotes/sound/emotes/male/male_cough_3.ogg')
-// 		return pick('modular_skyrat/modules/emotes/sound/emotes/female/female_cough_1.ogg',
-// 					'modular_skyrat/modules/emotes/sound/emotes/female/female_cough_2.ogg',
-// 					'modular_skyrat/modules/emotes/sound/emotes/female/female_cough_3.ogg')
+// 			return pick('modular_nova/modules/emotes/sound/emotes/male/male_cough_1.ogg',
+// 						'modular_nova/modules/emotes/sound/emotes/male/male_cough_2.ogg',
+// 						'modular_nova/modules/emotes/sound/emotes/male/male_cough_3.ogg')
+// 		return pick('modular_nova/modules/emotes/sound/emotes/female/female_cough_1.ogg',
+// 					'modular_nova/modules/emotes/sound/emotes/female/female_cough_2.ogg',
+// 					'modular_nova/modules/emotes/sound/emotes/female/female_cough_3.ogg')
 // 	return
 
 // /datum/emote/living/sneeze
@@ -54,11 +54,11 @@
 
 // /datum/emote/living/sneeze/get_sound(mob/living/user)
 // 	if(isvox(user))
-// 		return 'modular_skyrat/modules/emotes/sound/emotes/voxsneeze.ogg'
+// 		return 'modular_nova/modules/emotes/sound/emotes/voxsneeze.ogg'
 // 	if(iscarbon(user))
 // 		if(user.gender == MALE)
-// 			return 'modular_skyrat/modules/emotes/sound/emotes/male/male_sneeze.ogg'
-// 		return 'modular_skyrat/modules/emotes/sound/emotes/female/female_sneeze.ogg'
+// 			return 'modular_nova/modules/emotes/sound/emotes/male/male_sneeze.ogg'
+// 		return 'modular_nova/modules/emotes/sound/emotes/female/female_sneeze.ogg'
 // 	return
 
 /datum/emote/flip/can_run_emote(mob/user, status_check, intentional)
@@ -203,8 +203,8 @@
 // /datum/emote/living/sigh/get_sound(mob/living/user)
 // 	if(iscarbon(user))
 // 		if(user.gender == MALE)
-// 			return 'modular_skyrat/modules/emotes/sound/emotes/male/male_sigh.ogg'
-// 		return 'modular_skyrat/modules/emotes/sound/emotes/female/female_sigh.ogg'
+// 			return 'modular_nova/modules/emotes/sound/emotes/male/male_sigh.ogg'
+// 		return 'modular_nova/modules/emotes/sound/emotes/female/female_sigh.ogg'
 // 	return
 
 /datum/emote/living/sniff
@@ -244,8 +244,8 @@
 // /datum/emote/living/burp/get_sound(mob/living/user)
 // 	if(iscarbon(user))
 // 		if(user.gender == MALE)
-// 			return 'modular_skyrat/modules/emotes/sound/emotes/male/burp_m.ogg'
-// 		return 'modular_skyrat/modules/emotes/sound/emotes/female/burp_f.ogg'
+// 			return 'modular_nova/modules/emotes/sound/emotes/male/burp_m.ogg'
+// 		return 'modular_nova/modules/emotes/sound/emotes/female/burp_f.ogg'
 // 	return
 
 /datum/emote/living/clap

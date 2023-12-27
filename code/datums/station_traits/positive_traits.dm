@@ -100,7 +100,7 @@
 	name = "deathrattled department"
 	trait_type = STATION_TRAIT_POSITIVE
 	show_in_report = TRUE
-	abstract_type = /datum/station_trait/deathrattle_department
+	trait_flags = STATION_TRAIT_ABSTRACT
 	blacklist = list(/datum/station_trait/deathrattle_all)
 
 	var/department_to_apply_to
@@ -128,42 +128,49 @@
 
 /datum/station_trait/deathrattle_department/service
 	name = "Deathrattled Service"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_SERVICE
 	department_name = "Service"
 
 /datum/station_trait/deathrattle_department/cargo
 	name = "Deathrattled Cargo"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_CARGO
 	department_name = "Cargo"
 
 /datum/station_trait/deathrattle_department/engineering
 	name = "Deathrattled Engineering"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_ENGINEERING
 	department_name = "Engineering"
 
 /datum/station_trait/deathrattle_department/command
 	name = "Deathrattled Command"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_COMMAND
 	department_name = "Command"
 
 /datum/station_trait/deathrattle_department/science
 	name = "Deathrattled Science"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_SCIENCE
 	department_name = "Science"
 
 /datum/station_trait/deathrattle_department/security
 	name = "Deathrattled Security"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_SECURITY
 	department_name = "Security"
 
 /datum/station_trait/deathrattle_department/medical
 	name = "Deathrattled Medical"
+	trait_flags = STATION_TRAIT_MAP_UNRESTRICTED
 	weight = 1
 	department_to_apply_to = DEPARTMENT_BITFLAG_MEDICAL
 	department_name = "Medical"
@@ -235,7 +242,7 @@
 		/datum/job/station_engineer = /obj/item/organ/internal/cyberimp/arm/toolset,
 		/datum/job/virologist = /obj/item/organ/internal/lungs/cybernetic/tier2,
 		/datum/job/warden = /obj/item/organ/internal/cyberimp/eyes/hud/security,
-		// SKYRAT EDIT ADDITION START - MODULAR JOBS
+		// NOVA EDIT ADDITION START - MODULAR JOBS
 		/datum/job/blueshield = /obj/item/organ/internal/cyberimp/brain/anti_stun,
 		/datum/job/nanotrasen_consultant = /obj/item/organ/internal/heart/cybernetic/tier3,
 		/datum/job/barber = /obj/item/organ/internal/ears/cybernetic/whisper,
@@ -246,6 +253,8 @@
 		/datum/job/bouncer = /obj/item/organ/internal/cyberimp/arm/muscle,
 		// /datum/job/engineering_guard = /obj/item/organ/internal/cyberimp/arm/flash,
 		// SKYRAT EDIT END
+
+		/datum/job/security_medic = /obj/item/organ/internal/cyberimp/eyes/hud/medical, // ARK STATION EDIT
 	)
 
 /datum/station_trait/cybernetic_revolution/New()
@@ -265,7 +274,7 @@
 			ai.eyeobj.relay_speech = TRUE //surveillance upgrade. the ai gets cybernetics too.
 		return
 	var/obj/item/organ/internal/cybernetic = new cybernetic_type()
-	cybernetic.Insert(spawned, special = TRUE, movement_flags = DELETE_IF_REPLACED)
+	cybernetic.Insert(spawned, special = TRUE, drop_if_replaced = FALSE)
 
 /datum/station_trait/luxury_escape_pods
 	name = "Luxury Escape Pods"

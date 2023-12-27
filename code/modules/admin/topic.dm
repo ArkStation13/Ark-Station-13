@@ -48,7 +48,7 @@
 			return
 		cmd_show_exp_panel(M.client)
 
-// SKYRAT EDIT BEGIN -- ONE CLICK ANTAG
+// NOVA EDIT BEGIN -- ONE CLICK ANTAG
 	else if(href_list["makeAntag"])
 
 		message_admins("[key_name_admin(usr)] is attempting to make [href_list["makeAntag"]]")
@@ -56,8 +56,8 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if (!SSticker.HasRoundStarted())
-			to_chat(usr, span_danger("Not until the round starts!"), confidential = TRUE)
+		if(!SSticker.HasRoundStarted())
+			to_chat(usr, "<span class='danger'>Not until the round starts!</span>", confidential = TRUE)
 			return
 
 		var/opt = null
@@ -78,10 +78,12 @@
 				opt = input("How Many", ROLE_OPERATIVE, 3) as num|null
 			if(ROLE_BROTHER)
 				opt = input("How Many", ROLE_BROTHER, 2) as num|null
+			if(ROLE_DRIFTING_CONTRACTOR)
+				opt = input("How Many", ROLE_DRIFTING_CONTRACTOR, 2) as num|null
 		if(src.make_antag(href_list["makeAntag"], opt))
 			message_admins("[key_name_admin(usr)] created '[href_list["makeAntag"]]' with a parameter of '[opt]'.")
 		else message_admins("[key_name_admin(usr)] FAILED to create '[href_list["makeAntag"]]' with a parameter of '[opt]'.")
-// SKYRAT EDIT END -- ONE CLICK ANTAG
+// NOVA EDIT END -- ONE CLICK ANTAG
 
 	else if(href_list["editrightsbrowser"])
 		edit_admin_permissions(0)
@@ -594,13 +596,13 @@
 		if(tgui_alert(usr, "Send [key_name(M)] to Prison?", "Message", list("Yes", "No")) != "Yes")
 			return
 
-		/// SKYRAT EDIT START - Immersion-friendly Admin Prison
+		/// NOVA EDIT START - Immersion-friendly Admin Prison
 		var/datum/effect_system/spark_spread/quantum/sparks = new
 		sparks.set_up(10, 1, M)
 		sparks.attach(M.loc)
 		sparks.start()
 		M.forceMove(pick(GLOB.prisonwarp))
-		/// SKYRAT EDIT END
+		/// NOVA EDIT END
 
 		to_chat(M, span_adminnotice("You have been sent to Prison!"), confidential = TRUE)
 

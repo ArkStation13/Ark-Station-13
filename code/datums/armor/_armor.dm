@@ -25,16 +25,16 @@ GLOBAL_LIST_INIT(armor_by_type, generate_armor_type_cache())
  * It also contains logic and helpers for calculating damage and effective damage
  */
 /datum/armor
-	VAR_PROTECTED/acid = 0
-	VAR_PROTECTED/bio = 0
-	VAR_PROTECTED/bomb = 0
-	VAR_PROTECTED/bullet = 0
-	VAR_PROTECTED/consume = 0
-	VAR_PROTECTED/energy = 0
-	VAR_PROTECTED/laser = 0
-	VAR_PROTECTED/fire = 0
-	VAR_PROTECTED/melee = 0
-	VAR_PROTECTED/wound = 0
+	var/acid = 0
+	var/bio = 0
+	var/bomb = 0
+	var/bullet = 0
+	var/consume = 0
+	var/energy = 0
+	var/laser = 0
+	var/fire = 0
+	var/melee = 0
+	var/wound = 0
 
 /// A version of armor with no protections
 /datum/armor/none

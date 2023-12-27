@@ -565,11 +565,12 @@ SUBSYSTEM_DEF(dynamic)
 
 	if (!CONFIG_GET(flag/no_intercept_report))
 		addtimer(CALLBACK(src, PROC_REF(send_intercept)), rand(waittime_l, waittime_h))
-	//SKYRAT EDIT START - DIVERGENCY/GOALS REPORT
+
+		addtimer(CALLBACK(src, PROC_REF(display_roundstart_logout_report)), ROUNDSTART_LOGOUT_REPORT_TIME)
+	//NOVA EDIT START - DIVERGENCY/GOALS REPORT
 	else
 		addtimer(CALLBACK(src, PROC_REF(send_trait_report)), rand(waittime_l, waittime_h))
-	//SKYRAT EDIT END
-		addtimer(CALLBACK(src, PROC_REF(display_roundstart_logout_report)), ROUNDSTART_LOGOUT_REPORT_TIME)
+	//NOVA EDIT END
 
 	if(CONFIG_GET(flag/reopen_roundstart_suicide_roles))
 		var/delay = CONFIG_GET(number/reopen_roundstart_suicide_roles_delay)
@@ -934,14 +935,11 @@ SUBSYSTEM_DEF(dynamic)
 			stack_trace("Invalid dynamic configuration variable [variable] in [ruleset.ruletype] [ruleset.name].")
 			continue
 		ruleset.vars[variable] = rule_conf[variable]
-	ruleset.restricted_roles |= SSstation.antag_restricted_roles
-	if(length(ruleset.protected_roles)) //if we care to protect any role, we should protect station trait roles too
-		ruleset.protected_roles |= SSstation.antag_protected_roles
 	if(CONFIG_GET(flag/protect_roles_from_antagonist))
 		ruleset.restricted_roles |= ruleset.protected_roles
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		ruleset.restricted_roles |= JOB_ASSISTANT
-	// SKYRAT EDIT ADDITION
+	// NOVA EDIT ADDITION
 	for(var/datum/job/iterating_job as anything in subtypesof(/datum/job))
 		if(!initial(iterating_job.antagonist_restricted))
 			continue
@@ -952,7 +950,7 @@ SUBSYSTEM_DEF(dynamic)
 			ruleset.restricted_roles |= initial(iterating_job.title)
 		else
 			ruleset.restricted_roles |= initial(iterating_job.title)
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 /// Get station traits and call for their config
 /datum/controller/subsystem/dynamic/proc/configure_station_trait_costs()

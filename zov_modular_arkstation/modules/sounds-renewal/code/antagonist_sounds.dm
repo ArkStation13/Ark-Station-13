@@ -15,7 +15,7 @@
 //////////////////// Звуки при появлении ОБР
 
 /datum/ert
-	var/ert_sound = 'modular_skyrat/modules/alerts/sound/alerts/yesert.ogg'
+	var/ert_sound = 'modular_nova/modules/alerts/sound/alerts/yesert.ogg'
 
 /datum/ert/nri
 	ert_sound = 'zov_modular_arkstation/modules/sounds-renewal/sound/ert/nri_send.ogg'

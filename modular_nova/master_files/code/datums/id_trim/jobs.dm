@@ -80,20 +80,20 @@
 	minimal_wildcard_access = list(ACCESS_CAPTAIN, ACCESS_CENT_GENERAL)
 	template_access = list(ACCESS_CAPTAIN, ACCESS_CHANGE_IDS)
 
-/datum/id_trim/job/corrections_officer
-	assignment = "Corrections Officer"
-	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
-	trim_state = "trim_corrections_officer"
-	department_color = COLOR_ASSEMBLY_BLACK
-	subdepartment_color = COLOR_ASSEMBLY_BLACK
-	sechud_icon_state = SECHUD_CORRECTIONS_OFFICER
-	extra_access = list()
-	minimal_access = list(
-				ACCESS_BRIG, ACCESS_BRIG_ENTRANCE, ACCESS_COURT,
-				ACCESS_MAINT_TUNNELS, ACCESS_SECURITY, ACCESS_WEAPONS
-				)
-	template_access = list(ACCESS_CAPTAIN, ACCESS_CHANGE_IDS, ACCESS_HOS)
-	job = /datum/job/corrections_officer
+// /datum/id_trim/job/corrections_officer
+// 	assignment = "Corrections Officer"
+// 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
+// 	trim_state = "trim_corrections_officer"
+// 	department_color = COLOR_ASSEMBLY_BLACK
+// 	subdepartment_color = COLOR_ASSEMBLY_BLACK
+// 	sechud_icon_state = SECHUD_CORRECTIONS_OFFICER
+// 	extra_access = list()
+// 	minimal_access = list(
+// 				ACCESS_BRIG, ACCESS_BRIG_ENTRANCE, ACCESS_COURT,
+// 				ACCESS_MAINT_TUNNELS, ACCESS_SECURITY, ACCESS_WEAPONS
+// 				)
+// 	template_access = list(ACCESS_CAPTAIN, ACCESS_CHANGE_IDS, ACCESS_HOS)
+// 	job = /datum/job/corrections_officer
 
 /datum/id_trim/job/barber
 	assignment = "Barber"

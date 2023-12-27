@@ -77,7 +77,7 @@
 /obj/effect/landmark/start/bridge_officer
 	name = "Bridge Officer"
 	icon_state = "Captain"
-	icon = 'modular_skyrat/master_files/icons/mob/landmarks.dmi'
+	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 
 /obj/item/encryptionkey/headset_bridge_officer
 	name = "bridge officer encryption key"

@@ -13,12 +13,12 @@ GLOBAL_LIST_EMPTY(scream_types)
 // /datum/scream_type/human
 // 	name = "Human Scream"
 // 	male_screamsounds = list(
-// 		'modular_skyrat/modules/emotes/sound/voice/scream_m1.ogg',
-// 		'modular_skyrat/modules/emotes/sound/voice/scream_m2.ogg',
+// 		'modular_nova/modules/emotes/sound/voice/scream_m1.ogg',
+// 		'modular_nova/modules/emotes/sound/voice/scream_m2.ogg',
 // 	)
 // 	female_screamsounds = list(
-// 		'modular_skyrat/modules/emotes/sound/voice/scream_f1.ogg',
-// 		'modular_skyrat/modules/emotes/sound/voice/scream_f2.ogg',
+// 		'modular_nova/modules/emotes/sound/voice/scream_f1.ogg',
+// 		'modular_nova/modules/emotes/sound/voice/scream_f2.ogg',
 // 	)
 
 /datum/scream_type/human_two

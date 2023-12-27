@@ -139,7 +139,6 @@
 /datum/techweb_node/cyber_organs/New()
 	design_ids += list(
 		"cybernetic_tongue",
-		"cybernetic_tongue_lizard",
 	)
 	return ..()
 

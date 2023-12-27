@@ -1,4 +1,4 @@
-// THIS IS A SKYRAT UI FILE
+// THIS IS A NOVA SECTOR UI FILE
 import { BooleanLike } from 'common/react';
 import { createSearch } from 'common/string';
 import { useState } from 'react';
@@ -66,14 +66,13 @@ export const LoadoutManager = (props) => {
               <Stack>
                 <Stack.Item>
                   <Input
-                    autoFocus
                     mt={0.5}
                     bottom="5%"
                     height="20px"
                     width="150px"
                     placeholder="Search..."
                     value={searchItem}
-                    onChange={(e, value) => {
+                    onInput={(e, value) => {
                       setSearchItem(value);
                     }}
                     fluid

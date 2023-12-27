@@ -52,7 +52,7 @@
 	/// Native FOV that will be applied if a config is enabled
 	var/native_fov = FOV_180_DEGREES //NOVA EDIT CHANGE
 
-/obj/item/organ/internal/eyes/Insert(mob/living/carbon/eye_recipient, special = FALSE, movement_flags = DELETE_IF_REPLACED)
+/obj/item/organ/internal/eyes/Insert(mob/living/carbon/eye_recipient, special = FALSE, drop_if_replaced = FALSE)
 	// If we don't do this before everything else, heterochromia will be reset leading to eye_color_right no longer being accurate
 	if(ishuman(eye_recipient))
 		var/mob/living/carbon/human/human_recipient = eye_recipient
@@ -99,7 +99,7 @@
 	if(call_update)
 		affected_human.update_body()
 
-/obj/item/organ/internal/eyes/Remove(mob/living/carbon/eye_owner, special, movement_flags)
+/obj/item/organ/internal/eyes/Remove(mob/living/carbon/eye_owner, special = FALSE)
 	. = ..()
 	if(ishuman(eye_owner))
 		var/mob/living/carbon/human/human_owner = eye_owner
@@ -109,8 +109,7 @@
 			human_owner.eye_color_right = old_eye_color_right
 		if(native_fov)
 			eye_owner.remove_fov_trait(type)
-		if(!special)
-			human_owner.update_body()
+		human_owner.update_body()
 
 	// Cure blindness from eye damage
 	eye_owner.cure_blind(EYE_DAMAGE)
@@ -354,11 +353,11 @@
 	eye_color_right = "000"
 	sight_flags = SEE_MOBS | SEE_OBJS | SEE_TURFS
 
-/obj/item/organ/internal/eyes/robotic/xray/on_mob_insert(mob/living/carbon/eye_owner)
+/obj/item/organ/internal/eyes/robotic/xray/on_insert(mob/living/carbon/eye_owner)
 	. = ..()
 	ADD_TRAIT(eye_owner, TRAIT_XRAY_VISION, ORGAN_TRAIT)
 
-/obj/item/organ/internal/eyes/robotic/xray/on_mob_remove(mob/living/carbon/eye_owner)
+/obj/item/organ/internal/eyes/robotic/xray/on_remove(mob/living/carbon/eye_owner)
 	. = ..()
 	REMOVE_TRAIT(eye_owner, TRAIT_XRAY_VISION, ORGAN_TRAIT)
 
@@ -386,7 +385,7 @@
 /obj/item/organ/internal/eyes/robotic/flashlight/emp_act(severity)
 	return
 
-/obj/item/organ/internal/eyes/robotic/flashlight/on_mob_insert(mob/living/carbon/victim)
+/obj/item/organ/internal/eyes/robotic/flashlight/on_insert(mob/living/carbon/victim)
 	. = ..()
 	if(!eye)
 		eye = new /obj/item/flashlight/eyelight()
@@ -395,7 +394,7 @@
 	eye.update_brightness(victim)
 	victim.become_blind(FLASHLIGHT_EYES)
 
-/obj/item/organ/internal/eyes/robotic/flashlight/on_mob_remove(mob/living/carbon/victim)
+/obj/item/organ/internal/eyes/robotic/flashlight/on_remove(mob/living/carbon/victim)
 	. = ..()
 	eye.set_light_on(FALSE)
 	eye.update_brightness(victim)
@@ -452,18 +451,18 @@
 	deactivate(close_ui = TRUE)
 
 /// Set the initial color of the eyes on insert to be the mob's previous eye color.
-/obj/item/organ/internal/eyes/robotic/glow/Insert(mob/living/carbon/eye_recipient, special = FALSE, movement_flags = DELETE_IF_REPLACED)
+/obj/item/organ/internal/eyes/robotic/glow/Insert(mob/living/carbon/eye_recipient, special = FALSE, drop_if_replaced = FALSE)
 	. = ..()
 	left_eye_color_string = old_eye_color_left
 	right_eye_color_string = old_eye_color_right
 	update_mob_eye_color(eye_recipient)
 
-/obj/item/organ/internal/eyes/robotic/glow/on_mob_insert(mob/living/carbon/eye_recipient)
+/obj/item/organ/internal/eyes/robotic/glow/on_insert(mob/living/carbon/eye_recipient)
 	. = ..()
 	deactivate(close_ui = TRUE)
 	eye.forceMove(eye_recipient)
 
-/obj/item/organ/internal/eyes/robotic/glow/on_mob_remove(mob/living/carbon/eye_owner)
+/obj/item/organ/internal/eyes/robotic/glow/on_remove(mob/living/carbon/eye_owner)
 	deactivate(eye_owner, close_ui = TRUE)
 	if(!QDELETED(eye))
 		eye.forceMove(src)
@@ -751,7 +750,7 @@
 	high_light_cutoff = list(30, 35, 50)
 	var/obj/item/flashlight/eyelight/adapted/adapt_light
 
-/obj/item/organ/internal/eyes/night_vision/maintenance_adapted/on_mob_insert(mob/living/carbon/eye_owner)
+/obj/item/organ/internal/eyes/night_vision/maintenance_adapted/on_insert(mob/living/carbon/eye_owner)
 	. = ..()
 	//add lighting
 	if(!adapt_light)
@@ -770,7 +769,7 @@
 		apply_organ_damage(-10) //heal quickly
 	. = ..()
 
-/obj/item/organ/internal/eyes/night_vision/maintenance_adapted/on_mob_remove(mob/living/carbon/unadapted, special = FALSE)
+/obj/item/organ/internal/eyes/night_vision/maintenance_adapted/Remove(mob/living/carbon/unadapted, special = FALSE)
 	//remove lighting
 	adapt_light.set_light_on(FALSE)
 	adapt_light.update_brightness(unadapted)

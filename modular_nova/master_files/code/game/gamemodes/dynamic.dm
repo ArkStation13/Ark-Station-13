@@ -7,54 +7,33 @@
 	. = "<b><i>Central Command Status Summary</i></b><hr>"
 
 	var/greenshift = GLOB.dynamic_forced_extended || (threat_level < MIN_MIDROUND_COST && shown_threat < MIN_MIDROUND_COST) // if both shown and real threat are below any ruleset, its greenshift time
-	generate_station_goals(greenshift)
+	generate_station_goals(greenshift ? INFINITY : CONFIG_GET(number/station_goal_budget))
 
-	if(!GLOB.station_goals.len)
+	if(GLOB.station_goals.len > 0)
 		. = "<hr><b>No assigned goals.</b><BR>"
 	else
-		. += generate_station_goal_report()
+		var/list/texts = list("<hr><b>Special Orders for [station_name()]:</b><BR>")
+		for(var/datum/station_goal/station_goal as anything in GLOB.station_goals)
+			station_goal.on_report()
+			texts += station_goal.get_report()
+
+		. += texts.Join("<hr>")
 	if(!SSstation.station_traits.len)
 		. = "<hr><b>No identified shift divergencies.</b><BR>"
 	else
-		. += generate_station_trait_report()
+		var/list/trait_list_strings = list()
+		for(var/datum/station_trait/station_trait as anything in SSstation.station_traits)
+			if(!station_trait.show_in_report)
+				continue
+			trait_list_strings += "[station_trait.get_report()]<BR>"
+		if(trait_list_strings.len > 0)
+			. += "<hr><b>Identified shift divergencies:</b><BR>" + trait_list_strings.Join()
 
 	. += "<hr>This concludes your shift-start evaluation. Have a secure shift!<hr>\
 	<p style=\"color: grey; text-align: justify;\">This label certifies an Intern has reviewed the above before sending. This document is the property of Nanotrasen Corporation.</p>"
 
 	print_command_report(., "Central Command Status Summary", announce = FALSE)
 	priority_announce("Hello, crew of [station_name()]. Our intern has finished their shift-start divergency and goals evaluation, which has been sent to your communications console. Have a secure shift!", "Divergency Report", SSstation.announcer.get_rand_report_sound())
-
-/*
- * Generate a list of station goals available to purchase to report to the crew.
- *
- * Returns a formatted string all station goals that are available to the station.
- */
-/datum/controller/subsystem/dynamic/proc/generate_station_goal_report()
-	if(!GLOB.station_goals.len)
-		return
-	. = "<hr><b>Special Orders for [station_name()]:</b><BR>"
-	var/list/goal_reports = list()
-	for(var/datum/station_goal/station_goal as anything in GLOB.station_goals)
-		station_goal.on_report()
-		goal_reports += station_goal.get_report()
-
-	. += goal_reports.Join("<hr>")
-	return
-
-/*
- * Generate a list of active station traits to report to the crew.
- *
- * Returns a formatted string of all station traits (that are shown) affecting the station.
- */
-/datum/controller/subsystem/dynamic/proc/generate_station_trait_report()
-	var/trait_list_string = ""
-	for(var/datum/station_trait/station_trait as anything in SSstation.station_traits)
-		if(!station_trait.show_in_report)
-			continue
-		trait_list_string += "[station_trait.get_report()]<BR>"
-	if(trait_list_string != "")
-		return "<hr><b>Identified shift divergencies:</b><BR>" + trait_list_string
-	return
 
 /datum/controller/subsystem/dynamic
 	/// Desired median point for midrounds, plus or minus the midround_roll_distance.

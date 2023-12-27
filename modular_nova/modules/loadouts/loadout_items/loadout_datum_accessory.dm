@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(loadout_accessory, generate_loadout_items(/datum/loadout_item/a
 /datum/loadout_item/accessory/armband_security_deputy
 	name = "Security Deputy Armband"
 	item_path = /obj/item/clothing/accessory/armband/deputy
-	restricted_roles = list(JOB_CORRECTIONS_OFFICER)
+	// restricted_roles = list(JOB_CORRECTIONS_OFFICER)
 
 /datum/loadout_item/accessory/armband_science
 	name = "Purple Armband"

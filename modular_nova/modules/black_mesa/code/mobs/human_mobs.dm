@@ -222,5 +222,5 @@
 	casingtype = /obj/item/ammo_casing/c40sol
 	projectilesound = 'modular_nova/modules/modular_weapons/sounds/rifle_heavy.ogg'
 	attack_sound = 'sound/weapons/punch1.ogg'
-	loot = list(/obj/effect/gibspawner/human, /obj/item/ammo_box/magazine/m16)
+	loot = list(/obj/effect/gibspawner/human, /obj/item/ammo_box/magazine/c40sol_rifle/standard)
 	rapid_melee = 1

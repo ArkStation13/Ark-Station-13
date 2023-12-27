@@ -995,6 +995,7 @@
 	for(var/obj/item/bodypart/bodypart_path as anything in bodyparts_paths)
 		var/real_body_part_path = overrides?[initial(bodypart_path.body_zone)] || bodypart_path
 		var/obj/item/bodypart/bodypart_instance = new real_body_part_path()
+		bodypart_instance.set_owner(src)
 		add_bodypart(bodypart_instance)
 
 /// Called when a new hand is added
@@ -1011,12 +1012,8 @@
 /mob/living/carbon/proc/add_bodypart(obj/item/bodypart/new_bodypart)
 	SHOULD_NOT_OVERRIDE(TRUE)
 
-	new_bodypart.on_adding(src)
 	bodyparts += new_bodypart
-	new_bodypart.update_owner(src)
-
-	for(var/obj/item/organ/organ in new_bodypart)
-		organ.mob_insert(src)
+	new_bodypart.set_owner(src)
 
 	switch(new_bodypart.body_part)
 		if(LEG_LEFT, LEG_RIGHT)
@@ -1031,17 +1028,10 @@
 	synchronize_bodytypes()
 
 ///Proc to hook behavior on bodypart removals.  Do not directly call. You're looking for [/obj/item/bodypart/proc/drop_limb()].
-/mob/living/carbon/proc/remove_bodypart(obj/item/bodypart/old_bodypart, special)
+/mob/living/carbon/proc/remove_bodypart(obj/item/bodypart/old_bodypart)
 	SHOULD_NOT_OVERRIDE(TRUE)
 
-	if(special)
-		for(var/obj/item/organ/organ in old_bodypart)
-			organ.bodypart_remove(limb_owner = src, movement_flags = NO_ID_TRANSFER)
-	else
-		for(var/obj/item/organ/organ in old_bodypart)
-			organ.mob_remove(src, special)
-
-	old_bodypart.on_removal(src)
+	old_bodypart.on_removal()
 	bodyparts -= old_bodypart
 
 	switch(old_bodypart.body_part)
@@ -1447,8 +1437,3 @@
 	our_splatter.blood_dna_info = get_blood_dna_list()
 	var/turf/targ = get_ranged_target_turf(src, splatter_direction, splatter_strength)
 	our_splatter.fly_towards(targ, splatter_strength)
-
-/mob/living/carbon/dropItemToGround(obj/item/item, force = FALSE, silent = FALSE, invdrop = TRUE)
-	if(item && ((item in organs) || (item in bodyparts))) //let's not do this, aight?
-		return FALSE
-	return ..()

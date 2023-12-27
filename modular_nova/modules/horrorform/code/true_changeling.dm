@@ -247,7 +247,7 @@
 		guts.dismember()
 		dismembered = TRUE
 	playsound(lunch, 'sound/effects/splat.ogg', 50, 1)
-	playsound(lunch, 'modular_skyrat/modules/horrorform/sound/tear.ogg', 50, 1)
+	playsound(lunch, 'modular_nova/modules/horrorform/sound/tear.ogg', 50, 1)
 	lunch.emote("agony") // Ark Station 13 Edit
 	if(lunch.nutrition >= NUTRITION_LEVEL_FAT)
 		horrorform.adjustBruteLoss(-100) //Tasty leetle peegy

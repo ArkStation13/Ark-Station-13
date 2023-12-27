@@ -2,14 +2,14 @@
 	name = "\improper M63A4 \"Smartgun\""
 	desc = "A weapon with a blistering rate of fire, so heavy that it needs to be mounted on a modsuit to wield. \
 	It's equipped with IFF technology, allowing the bullets to intentionally miss friendly targets."
-	icon = 'modular_skyrat/modules/marines/icons/items/guns.dmi'
-	lefthand_file = 'modular_skyrat/modules/marines/icons/mobs/guns_l.dmi'
-	righthand_file = 'modular_skyrat/modules/marines/icons/mobs/guns_r.dmi'
-	worn_icon = 'modular_skyrat/modules/marines/icons/mobs/mod_modules.dmi'
+	icon = 'modular_nova/modules/marines/icons/items/guns.dmi'
+	lefthand_file = 'modular_nova/modules/marines/icons/mobs/guns_l.dmi'
+	righthand_file = 'modular_nova/modules/marines/icons/mobs/guns_r.dmi'
+	worn_icon = 'modular_nova/modules/marines/icons/mobs/mod_modules.dmi'
 	icon_state = "smartgun"
 	worn_icon_state = "module_smartgun_off" // just in case. You shouldn't be able to do this, though
 	inhand_icon_state = "smartgun"
-	fire_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/fire/mg34_fire.ogg'
+	fire_sound = 'modular_nova/modules/modular_weapons/sounds/rifle_heavy.ogg'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 	fire_sound_volume = 70
@@ -92,7 +92,7 @@
 
 /obj/item/ammo_box/magazine/smartgun_drum
 	name = "smartgun drum (10x28mm caseless)"
-	icon = 'modular_skyrat/modules/marines/icons/items/ammo.dmi'
+	icon = 'modular_nova/modules/marines/icons/items/ammo.dmi'
 	icon_state = "smartgun_drum"
 	ammo_type = /obj/item/ammo_casing/smart/a10x28
 	caliber = "a10x28"
@@ -103,7 +103,6 @@
 // Smart ammo casings
 
 /obj/item/ammo_casing/smart
-	icon = 'modular_skyrat/modules/gunsgalore/icons/ammo/ammo.dmi'
 
 /obj/item/ammo_casing/smart/Initialize(mapload)
 	. = ..()
@@ -140,7 +139,7 @@
 /obj/item/ammo_casing/smart/a10x28
 	name = "10x28mm bullet"
 	desc = "A 10x28m caseless bullet."
-	icon_state = "792x57-casing"
+	icon_state = "762-casing"
 	caliber = "a10x28"
 	projectile_type = /obj/projectile/bullet/smart/a10x28
 

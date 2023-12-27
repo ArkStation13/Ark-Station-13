@@ -1,11 +1,11 @@
 /datum/computer_file/program/news_archive
 	filename = "NewsArchive"
 	filedesc = "Nanotrasen News Archives"
-	downloader_category = PROGRAM_CATEGORY_EQUIPMENT
+	downloader_category = PROGRAM_CATEGORY_DEVICE
 	program_open_overlay = "generic"
 	extended_desc = "This program lets you view out-of-circulation articles from the Nanotrasen News Network."
 	can_run_on_flags = PROGRAM_ALL
-	program_flags = PROGRAM_REQUIRES_NTNET
+	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
 	size = 6
 	tgui_id = "NtosNewsArchive"
 	program_icon = "newspaper"

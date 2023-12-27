@@ -1,12 +1,12 @@
 /obj/item/gun/ballistic/automatic/m16/oldarms
 	name = "\improper Mk-11.4 Rifle"
 	desc = "An old-fashioned rifle from Sol-3's bygone era. Rumor has it that it can shoot apart an entire jungle (or desert, given the time). It has \"Keep out of water\" laser-engraved on the side. Now including a free reflex sight!"
-	icon = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_guns40x32.dmi'
+	icon = 'modular_nova/modules/gunsgalore/icons/guns/gunsgalore_guns40x32.dmi'
 	icon_state = "m16"
-	lefthand_file = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_lefthand.dmi'
-	righthand_file = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_righthand.dmi'
+	lefthand_file = 'modular_nova/modules/gunsgalore/icons/guns/gunsgalore_lefthand.dmi'
+	righthand_file = 'modular_nova/modules/gunsgalore/icons/guns/gunsgalore_righthand.dmi'
 	inhand_icon_state = "m16"
-	worn_icon = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_back.dmi'
+	worn_icon = 'modular_nova/modules/gunsgalore/icons/guns/gunsgalore_back.dmi'
 	worn_icon_state = "m16"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -15,12 +15,12 @@
 	fire_delay = 3.5
 	burst_size = 1
 	actions_types = list()
-	fire_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/fire/m16_fire.ogg'
+	fire_sound = 'modular_nova/modules/gunsgalore/sound/guns/fire/m16_fire.ogg'
 	fire_sound_volume = 50
-	rack_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/sfrifle_cock.ogg'
-	load_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/sfrifle_magin.ogg'
-	load_empty_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/sfrifle_magin.ogg'
-	eject_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/sfrifle_magout.ogg'
+	rack_sound = 'modular_nova/modules/gunsgalore/sound/guns/interact/sfrifle_cock.ogg'
+	load_sound = 'modular_nova/modules/gunsgalore/sound/guns/interact/sfrifle_magin.ogg'
+	load_empty_sound = 'modular_nova/modules/gunsgalore/sound/guns/interact/sfrifle_magin.ogg'
+	eject_sound = 'modular_nova/modules/gunsgalore/sound/guns/interact/sfrifle_magout.ogg'
 	alt_icons = TRUE
 
 /obj/item/gun/ballistic/automatic/m16/oldarms/Initialize(mapload)
@@ -31,7 +31,7 @@
 /obj/item/ammo_box/magazine/m16/vintage/oldarms
 	name = "old-fashioned mk-11.4 rifle magazine"
 	desc = "A double-stack solid magazine that looks rather dated. Holds 20 rounds of .223 Stinger."
-	icon = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_items.dmi'
+	icon = 'modular_nova/modules/gunsgalore/icons/guns/gunsgalore_items.dmi'
 	icon_state = "m16"
 	ammo_type = /obj/item/ammo_casing/oldarms/a223s
 	caliber = CALIBER_223S
