@@ -114,3 +114,15 @@
 /datum/loadout_item/under/jumpsuit/hooded_pajamas
 	name = "Blue Cat Pajamas"
 	item_path = /obj/item/clothing/under/arkstation/hooded/siffet
+
+/datum/loadout_item/under/jumpsuit/drivejacket
+	name = "Drive Jacket"
+	item_path = /obj/item/clothing/under/arkstation/croptops/drivejacket
+
+/datum/loadout_item/under/jumpsuit/olive_civ
+	name = "Olive Jacket"
+	item_path = /obj/item/clothing/under/arkstation/croptops/olive_civ
+
+/datum/loadout_item/under/jumpsuit/grey_civ
+	name = "Civilian Jacket"
+	item_path = /obj/item/clothing/under/arkstation/croptops/grey_civ
