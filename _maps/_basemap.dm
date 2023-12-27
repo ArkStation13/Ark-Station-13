@@ -13,10 +13,10 @@
 		#include "map_files\Mining\Lavaland.dmm"
 		#include "ark_map_files\sla2her_maps\north_star.dmm"
 		#include "ark_map_files\sla2her_maps\tramstation.dmm"
-		// SKYRAT EDIT ADDITON START - Compiling our modular maps too!
+		// NOVA EDIT ADDITON START - Compiling our modular maps too!
 		#include "ark_map_files\sla2her_maps\VoidRaptor.dmm"
 		#include "ark_map_files\sla2her_maps\Blueshift.dmm"
-		// SKYRAT EDIT END
+		// NOVA EDIT END
 		// ARK STATION ADDITION START
 		#include "ark_map_files/sla2her_maps/foxycabinrev.dmm"
 		#include "ark_map_files/sla2her_maps/KiloStation2.dmm"
