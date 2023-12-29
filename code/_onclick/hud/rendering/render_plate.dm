@@ -82,7 +82,7 @@
 	// if(check_holidays(HALLOWEEN))
 	// 	// Makes things a tad greyscale (leaning purple) and drops low colors for vibes
 	// 	// We're basically using alpha as better constant here btw
-	add_filter("spook_color", 2, color_matrix_filter(list(0.75,0.13,0.13,0, 0.13,0.7,0.13,0, 0.13,0.13,0.75,0, -0.06,-0.09,-0.08,1, 0,0,0,0)))
+	// add_filter("spook_color", 2, color_matrix_filter(list(0.75,0.13,0.13,0, 0.13,0.7,0.13,0, 0.13,0.13,0.75,0, -0.06,-0.09,-0.08,1, 0,0,0,0)))
 
 // Blackness renders weird when you view down openspace, because of transforms and borders and such
 // This is a consequence of not using lummy's grouped transparency, but I couldn't get that to work without totally fucking up
@@ -114,8 +114,12 @@
 	if(!.)
 		return
 	remove_filter("AO")
+	remove_filter("spook_color")
 	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/ambient_occlusion))
 		add_filter("AO", 1, drop_shadow_filter(x = 0, y = -2, size = 4, color = "#04080FAA"))
+
+	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/poopdark_filter))
+		add_filter("spook_color", 2, color_matrix_filter(list(0.75,0.13,0.13,0, 0.13,0.7,0.13,0, 0.13,0.13,0.75,0, -0.06,-0.09,-0.08,1, 0,0,0,0)))
 
 ///Contains all lighting objects
 /atom/movable/screen/plane_master/rendering_plate/lighting
