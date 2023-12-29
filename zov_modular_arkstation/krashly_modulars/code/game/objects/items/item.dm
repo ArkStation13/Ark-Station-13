@@ -182,7 +182,7 @@
 	desc = "Жёлтое мыло с крайне мощными химическими агентами, которые отмывают кровь быстрее."
 	icon_state = "soapinteq"
 	cleanspeed = 10
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_soap.dmi'
+	// icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_soap.dmi' // ПЕРЕЕХАЛИ НИЖЕ
 	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/mob/inhands/obj/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/mob/inhands/obj/righthand.dmi'
 
