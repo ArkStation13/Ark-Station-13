@@ -9,3 +9,6 @@
 
 /obj/structure/sign/departments
 	icon = 'zov_modular_arkstation/modules/new-signs-sprites/signs.dmi'
+
+/obj/structure/sign/nanotrasen
+	icon = 'zov_modular_arkstation/modules/new-signs-sprites/signs.dmi'
