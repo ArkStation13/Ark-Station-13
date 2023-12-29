@@ -1,7 +1,7 @@
 /obj/machinery/vending/inteq_vendomat
 	name = "\improper InteDrobe"
 	desc = "Spend your hard earned credits!"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/structures.dmi'
+	// icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/structures.dmi' // ПЕРЕЕХАЛИ ЧУТЬ НИЖЕ.
 	icon_state = "intedrobe"
 	product_slogans = "Почти не пачкается кровью!;Потрать свои тяжело заработанные кредиты!;Новые поставки от наших клиентов!"
 	vend_reply = "Удачных контрактов, наёмник!"

@@ -1,7 +1,7 @@
 /obj/structure/closet/syndicate/inteq
 	name = "armory closet"
 	desc = "Why is this here?"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/closets.dmi'
+	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/closets.dmi' // ЭТО СТАРЫЕ. НОВЫЕ СПРАЙТЫ НАЙТИ ПО ПОИСКУ /obj/structure/closet/syndicate/inteq
 	icon_state = "inteq"
 
 /obj/structure/closet/syndicate/inteq/vanguard
