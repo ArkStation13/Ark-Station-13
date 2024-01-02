@@ -168,7 +168,6 @@
 // 		stack_trace("Something is trying to destroy [type], which is a singleton")
 // 		return QDEL_HINT_LETMELIVE
 // 	return ..()
-
 // /// Checks if we should perform the tutorial for the given user, and performs if so.
 // /// Use `SStutorials.suggest_tutorial` instead of calling this directly.
 // /datum/tutorial_manager/proc/try_perform(mob/user, list/arguments)
