@@ -15,7 +15,6 @@
 
 /obj/item/flashlight/flare/candle
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/candles.dmi'
-	icon_state = "red_candle1"
 
 /turf/open/floor/catwalk_floor
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/catwalks.dmi'
