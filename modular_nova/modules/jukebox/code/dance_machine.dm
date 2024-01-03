@@ -8,7 +8,7 @@
 	icon_state = "jukebox"
 	verb_say = "states"
 	density = TRUE
-	req_access = list(ACCESS_BAR)
+	// req_access = list(ACCESS_BAR)
 	/// Whether we're actively playing music
 	var/active = FALSE
 	/// List of weakrefs to mobs listening to the current song
