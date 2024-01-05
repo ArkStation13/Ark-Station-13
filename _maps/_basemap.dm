@@ -1,4 +1,4 @@
-#define LOWMEMORYMODE //uncomment this to load centcom and runtime station and thats it.
+//#define LOWMEMORYMODE //uncomment this to load centcom and runtime station and thats it.
 
 #include "map_files\generic\CentCom_arkstation_rework.dmm" // ARK STATION EDIT
 
