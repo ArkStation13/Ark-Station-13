@@ -127,7 +127,7 @@
 	fire = 80
 	acid = 50
 
-/obj/item/storage/backpack/duffelbag/expeditionary_corps
+/obj/item/storage/backpack/expeditionary_corps
 	name = "expeditionary corps bag"
 	desc = "A large bag for holding extra tactical supplies."
 	icon_state = "exp_corps"

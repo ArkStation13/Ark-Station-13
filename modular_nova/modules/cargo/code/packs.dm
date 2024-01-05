@@ -340,7 +340,7 @@
 	contains = list(
 		/obj/item/storage/box/expeditionary_survival,
 		/obj/item/melee/tomahawk,
-		/obj/item/storage/backpack/duffelbag/expeditionary_corps,
+		/obj/item/storage/backpack/expeditionary_corps,
 		/obj/item/clothing/gloves/color/black/expeditionary_corps,
 		/obj/item/clothing/head/helmet/expeditionary_corps,
 		/obj/item/clothing/suit/armor/vest/expeditionary_corps,

@@ -14698,9 +14698,11 @@
 /turf/open/floor/iron,
 /area/station/command/teleporter)
 "esc" = (
-/obj/machinery/computer/order_console/mining,
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 4
+	},
+/obj/machinery/computer/order_console/mining{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock)
@@ -29959,6 +29961,7 @@
 /area/station/commons/lounge)
 "jfR" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "jfZ" = (
@@ -34533,6 +34536,7 @@
 "kyi" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/stripes/line,
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "kyp" = (
@@ -34841,6 +34845,7 @@
 	dir = 4;
 	pixel_x = -4
 	},
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "kCH" = (
@@ -48943,6 +48948,7 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
 	},
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "oQo" = (
@@ -51044,10 +51050,12 @@
 /turf/open/misc/asteroid/snow/standard_air,
 /area/station/science/research)
 "pvY" = (
-/obj/machinery/computer/order_console/mining,
 /obj/machinery/light_switch/directional/north,
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 4
+	},
+/obj/machinery/computer/order_console/mining{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock)
@@ -71113,6 +71121,7 @@
 	},
 /obj/effect/landmark/start/hangover,
 /obj/machinery/light_switch/directional/west,
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "vJY" = (
@@ -78159,6 +78168,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
+"xNV" = (
+/obj/effect/landmark/start/expeditionary_corps,
+/turf/open/floor/iron,
+/area/station/command/gateway)
 "xOb" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -234387,7 +234400,7 @@ jXN
 rcP
 viV
 gbd
-uOj
+xNV
 pdW
 jfR
 aNq

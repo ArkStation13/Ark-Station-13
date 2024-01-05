@@ -4474,6 +4474,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "byD" = (
@@ -20038,7 +20039,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
 /obj/structure/noticeboard/directional/east,
-/obj/machinery/computer/gateway_control,
+/obj/machinery/computer/gateway_control{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
 "gxi" = (
@@ -25323,6 +25326,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "icQ" = (
@@ -33887,6 +33891,7 @@
 	},
 /obj/effect/spawner/random/engineering/tracking_beacon,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/landmark/start/expeditionary_corps,
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "kRu" = (
@@ -47216,7 +47221,6 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/execution/transfer)
 "pmk" = (
-/obj/machinery/computer/order_console/mining,
 /obj/effect/turf_decal/bot,
 /obj/machinery/status_display/supply{
 	pixel_y = -32
@@ -47227,6 +47231,9 @@
 	network = list("ss13","qm")
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/computer/order_console/mining{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
