@@ -16,7 +16,14 @@
 /mob/living/ShiftMiddleClickOn(atom/A)
 	var/obj/item/gun/G = get_active_held_item()
 	if(istype(G, /obj/item/gun))
-		DoGunpoint(A, G)
+
+		// ARK STATION CHECK START
+		if(istype(G, /obj/item/gun/magic/melee))
+			src.pointed(A)
+		//ARK STATION CHECK END
+
+		else
+			DoGunpoint(A, G)
 	else
 		src.pointed(A)
 	return
