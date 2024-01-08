@@ -55,12 +55,12 @@
 	. = ..()
 	UnregisterSignal(stomach_owner, COMSIG_PROCESS_BORGCHARGER_OCCUPANT)
 
-///Handles charging the synth from borg chargers
-// /obj/item/organ/internal/stomach/synth/proc/on_borg_charge(datum/source, amount)
-// 	SIGNAL_HANDLER
+// /Handles charging the synth from borg chargers
+/obj/item/organ/internal/stomach/synth/proc/on_borg_charge(datum/source, amount)
+	SIGNAL_HANDLER
 
-// 	if(owner.nutrition >= NUTRITION_LEVEL_ALMOST_FULL)
-// 		return
+	if(owner.nutrition >= NUTRITION_LEVEL_ALMOST_FULL)
+		return
 
-// 	amount /= 50 // Lowers the charging amount so it isn't instant
-// 	owner.nutrition = min((owner.nutrition + amount), NUTRITION_LEVEL_ALMOST_FULL) // Makes sure we don't make the synth too full, which would apply the overweight slowdown
+	amount /= 50 // Lowers the charging amount so it isn't instant
+	owner.nutrition = min((owner.nutrition + amount), NUTRITION_LEVEL_ALMOST_FULL) // Makes sure we don't make the synth too full, which would apply the overweight slowdown
