@@ -123,8 +123,8 @@
 
 /obj/structure/closet/secure_closet/bridge_officer/PopulateContents()
 	..()
-	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skyrat/turtleneck(src)
-	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skyrat/turtleneck/skirt(src)
+	new /obj/item/clothing/under/rank/civilian/head_of_personnel/nova/turtleneck(src)
+	new /obj/item/clothing/under/rank/civilian/head_of_personnel/nova/turtleneck/skirt(src)
 	new /obj/item/clothing/under/rank/bridge_officer_uniform(src)
 	new /obj/item/clothing/under/rank/bridge_officer_uniform(src)
 	new /obj/item/clothing/under/rank/bridge_officer_uniform/skirt(src)

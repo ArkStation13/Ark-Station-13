@@ -117,7 +117,7 @@
 	new /obj/item/clothing/suit/armor/vest/expeditionary_corps(src)
 	new /obj/item/storage/belt/military/expeditionary_corps/marksman(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
-	new /obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/skild(src)
+	new /obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/skild(src)
 
 //shield guy
 /obj/structure/closet/crate/secure/exp_corps/pointman/PopulateContents()

@@ -69,7 +69,7 @@
 	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/storage/medkit/tactical/blueshield(src)
-	new /obj/item/storage/toolbox/guncase/skyrat/carwo_large_case/sindano(src)
+	new /obj/item/storage/toolbox/guncase/nova/carwo_large_case/sindano(src)
 	new /obj/item/storage/bag/garment/blueshield(src)
 	new /obj/item/mod/control/pre_equipped/blueshield(src)
 	new /obj/item/armorkit/blueshield(src)
@@ -77,7 +77,7 @@
 
 
 /obj/item/storage/bag/garment/blueshield/PopulateContents()
-	new /obj/item/clothing/suit/hooded/wintercoat/skyrat/blueshield(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/nova/blueshield(src)
 	new /obj/item/clothing/head/beret/blueshield(src)
 	new /obj/item/clothing/head/beret/blueshield/navy(src)
 	new /obj/item/clothing/under/rank/blueshield(src)

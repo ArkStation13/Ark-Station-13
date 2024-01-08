@@ -40,7 +40,7 @@
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	should_generate_icons = TRUE
 
-	var/static/list/ghost_forms = list(
+	var/list/ghost_forms = list(
 		"catghost" = "Cat",
 		"ghost" = "Default",
 		"ghost_black" = "Black",

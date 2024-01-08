@@ -172,22 +172,22 @@ GLOBAL_LIST_INIT(loadout_glasses, generate_loadout_items(/datum/loadout_item/gla
 /datum/loadout_item/glasses/medicpatch
 	name = "Medical HUD Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/eyepatch/med
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_GENETICIST, JOB_CHEMIST, JOB_VIROLOGIST, JOB_PARAMEDIC, JOB_ORDERLY, JOB_CORONER)
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_GENETICIST, JOB_CHEMIST, JOB_VIROLOGIST, JOB_PARAMEDIC, JOB_CORONER)
 
 /datum/loadout_item/glasses/robopatch
 	name = "Diagnostic HUD Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/eyepatch/diagnostic
-	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENCE_GUARD)
+	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/loadout_item/glasses/scipatch
 	name = "Science HUD Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/eyepatch/sci
-	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CHEMIST, JOB_SCIENCE_GUARD, JOB_VIROLOGIST)
+	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CHEMIST, JOB_VIROLOGIST)
 
 /datum/loadout_item/glasses/mesonpatch
 	name = "Meson HUD Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/eyepatch/meson
-	restricted_roles = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_CUSTOMS_AGENT, JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEERING_GUARD)
+	restricted_roles = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
 
 /datum/loadout_item/glasses/secpatch
 	name = "Security HUD Eyepatch"
