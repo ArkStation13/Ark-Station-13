@@ -91,7 +91,7 @@ const GhostFormInput = (
 export const ghost_form: FeatureChoiced = {
   name: 'Ghosts form',
   category: 'GHOST',
-  description: 'The appearance of your ghost. Requires BYOND membership.',
+  description: 'The appearance of your ghost.',
   component: GhostFormInput,
 };
 
@@ -107,7 +107,6 @@ export const ghost_orbit: FeatureChoiced = {
   category: 'GHOST',
   description: multiline`
     The shape in which your ghost will orbit.
-    Requires BYOND membership.
   `,
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
