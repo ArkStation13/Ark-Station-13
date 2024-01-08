@@ -38,5 +38,15 @@
 
 /datum/sprite_accessory/tails/mammal/arkstation/sergal_second
 	name = "Sergal 2"
-	icon = 'zov_modular_arkstation/modules/new-accessories/tails.dmi'
 	icon_state = "sergal1"
+
+/datum/sprite_accessory/tails/mammal/arkstation/otie_alt
+	name = "Otie Alt"
+	icon_state = "otie"
+
+// SNOUTS //
+
+/datum/sprite_accessory/snouts/mammal/arkstation
+	name = "Fox Alt 2"
+	icon = 'zov_modular_arkstation/modules/new-accessories/snouts.dmi'
+	icon_state = "flcanidstripealt"
