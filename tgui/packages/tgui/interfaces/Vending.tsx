@@ -329,7 +329,7 @@ const ProductStock = (props) => {
         'good'
       }
     >
-      {remaining} left
+      {remaining} in stock
     </Box>
   );
 };
@@ -361,6 +361,7 @@ const ProductButton = (props) => {
     </Button>
   ) : (
     <Button
+      icon={free ? 'download' : 'credit-card'}
       fluid
       disabled={disabled}
       onClick={() =>

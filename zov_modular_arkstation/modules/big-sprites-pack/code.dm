@@ -49,3 +49,6 @@
 
 /obj/item/soap/syndie
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/soap.dmi'
+
+/obj/item/disk
+	icon = 'zov_modular_arkstation/modules/big-sprites-pack/circuitry_n_data.dmi'

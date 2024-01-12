@@ -107,7 +107,7 @@ const BountyPickBox = (props) => {
             content={id_bounty_names[0]}
             onClick={() => act('pick', { value: 1 })}
           >
-            <Box fontSize="14px">Payout: {id_bounty_values[0]} cr</Box>
+            <Box fontSize="14px">Payout: {id_bounty_values[0]} ₮</Box>
           </Button>
         </Flex.Item>
         <Flex.Item shrink={0} grow={0.5} px={1}>
@@ -117,7 +117,7 @@ const BountyPickBox = (props) => {
             content={id_bounty_names[1]}
             onClick={() => act('pick', { value: 2 })}
           >
-            <Box fontSize="14px">Payout: {id_bounty_values[1]} cr</Box>
+            <Box fontSize="14px">Payout: {id_bounty_values[1]} ₮</Box>
           </Button>
         </Flex.Item>
         <Flex.Item shrink={0} grow={0.5}>
@@ -127,7 +127,7 @@ const BountyPickBox = (props) => {
             content={id_bounty_names[2]}
             onClick={() => act('pick', { value: 3 })}
           >
-            <Box fontSize="14px">Payout: {id_bounty_values[2]} cr</Box>
+            <Box fontSize="14px">Payout: {id_bounty_values[2]} ₮</Box>
           </Button>
         </Flex.Item>
       </Flex>

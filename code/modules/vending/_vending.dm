@@ -175,7 +175,7 @@
 	///fontawesome icon name to use in to display the user's balance in the vendor UI
 	var/displayed_currency_icon = "coins"
 	///String of the used currency to display in the vendor UI
-	var/displayed_currency_name = " cr"
+	var/displayed_currency_name = " ₮"
 	///Whether our age check is currently functional
 	var/age_restrictions = TRUE
 	/**

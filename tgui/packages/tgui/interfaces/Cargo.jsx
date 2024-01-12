@@ -300,7 +300,7 @@ export const CargoCatalog = (props) => {
                           ? Math.round(pack.cost * 1.1)
                           : pack.cost,
                       )}
-                      {' cr'}
+                      {' ₮'}
                     </Button>
                   </Table.Cell>
                 </Table.Row>
@@ -348,7 +348,7 @@ const CargoRequests = (props) => {
                 <i>{request.reason}</i>
               </Table.Cell>
               <Table.Cell collapsing textAlign="right">
-                {formatMoney(request.cost)} cr
+                {formatMoney(request.cost)} ₮
               </Table.Cell>
               {(!requestonly || can_send) && can_approve_requests && (
                 <Table.Cell collapsing>
@@ -391,7 +391,7 @@ const CargoCartButtons = (props) => {
         {cart.length === 0 && 'Cart is empty'}
         {cart.length === 1 && '1 item'}
         {cart.length >= 2 && cart.length + ' items'}{' '}
-        {total > 0 && `(${formatMoney(total)} cr)`}
+        {total > 0 && `(${formatMoney(total)} ₮)`}
       </Box>
       {!requestonly && !!can_send && !!can_approve_requests && (
         <Button

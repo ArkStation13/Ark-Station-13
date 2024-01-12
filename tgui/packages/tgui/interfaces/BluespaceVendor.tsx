@@ -176,7 +176,7 @@ const GasDisplay = (props: GasDisplayProps) => {
         {name}
       </TableCell>
       <TableCell color="yellow" collapsing textAlign="right">
-        {price} cr
+        {price} ₮
       </TableCell>
       <TableCell>
         <ProgressBar

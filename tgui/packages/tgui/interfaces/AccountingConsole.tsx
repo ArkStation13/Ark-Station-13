@@ -107,7 +107,7 @@ const AuditScreen = (props) => {
     <Section fill scrollable>
       {AuditLog.map((purchase) => (
         <BlockQuote key={purchase.index} p={1}>
-          <b>{purchase.account}</b> spent <b>{purchase.cost}</b> cr at{' '}
+          <b>{purchase.account}</b> spent <b>{purchase.cost}</b> ₮ at{' '}
           <i>{purchase.vendor}.</i>
         </BlockQuote>
       ))}

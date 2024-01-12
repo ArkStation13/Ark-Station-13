@@ -55,7 +55,7 @@ const ProductInfo = (props) => {
       <Section fontSize="18px" align="center">
         <b>{product_name ? product_name : 'Empty'}</b>
         <Box fontSize="16px">
-          <i>{product_name ? product_cost : 'N/A'} cr </i>
+          <i>{product_name ? product_cost : 'N/A'} ₮ </i>
           <Button icon="pen" onClick={() => act('Adjust')} />
         </Box>
       </Section>
