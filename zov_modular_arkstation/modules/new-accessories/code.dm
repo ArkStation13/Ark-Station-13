@@ -49,4 +49,4 @@
 /datum/sprite_accessory/snouts/mammal/arkstation
 	name = "Fox Alt 2"
 	icon = 'zov_modular_arkstation/modules/new-accessories/snouts.dmi'
-	icon_state = "flcanidstripealt"
+	icon_state = "lcanidstripealt"

@@ -78,7 +78,6 @@ const GhostFormInput = (
 
   return (
     <Dropdown
-      disabled={!data.content_unlocked}
       selected={props.value}
       displayText={displayTexts[props.value]}
       onSelected={props.handleSetValue}
@@ -108,15 +107,7 @@ export const ghost_orbit: FeatureChoiced = {
   description: multiline`
     The shape in which your ghost will orbit.
   `,
-  component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
-  ) => {
-    const { data } = useBackend<PreferencesMenuData>();
-
-    return (
-      <FeatureDropdownInput {...props} disabled={!data.content_unlocked} />
-    );
-  },
+  component: FeatureDropdownInput,
 };
 
 export const ghost_others: FeatureChoiced = {

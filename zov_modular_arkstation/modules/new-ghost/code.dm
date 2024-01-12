@@ -37,3 +37,6 @@
 		"skeleghost" = "Skeleton",
 		"vulpghost" = "Vulpkanine",
 	)
+
+/mob/dead/observer // Fuck this, LMAO
+	icon = 'zov_modular_arkstation/modules/new-ghost/mob.dmi'
