@@ -152,7 +152,7 @@
 	new /obj/item/clothing/suit/jacket/straight_jacket(src)
 	new /obj/item/storage/belt/medical(src)
 	new /obj/item/storage/belt/security/medic/full(src)
-	new /obj/item/clothing/under/rank/medical/scrubs/skyrat/red/sec(src)
+	new /obj/item/clothing/under/rank/medical/scrubs/nova/red/sec(src)
 	new /obj/item/clothing/under/rank/security/peacekeeper/security_medic/alternate(src)
 	new /obj/item/clothing/under/rank/security/peacekeeper/security_medic(src)
 	new /obj/item/clothing/under/rank/security/peacekeeper/security_medic/skirt(src)
@@ -169,7 +169,7 @@
 
 ////////////////
 
-/obj/item/clothing/under/rank/medical/scrubs/skyrat/red/sec
+/obj/item/clothing/under/rank/medical/scrubs/nova/red/sec
 	name = "security medic scrubs"
 	desc = "It's made of a special fiber that provides minor protection against biohazards and acid, along with some light padding. This one is in a deep red."
 	armor_type = /datum/armor/red_sec
