@@ -105,6 +105,7 @@ GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list(
 	"ghostian2",
 	"ghostking",
 	"skeleghost",
+	"vulpghost", // ARK STATION ADD
 ))
 //stores the ghost forms that support directional sprites
 
@@ -133,6 +134,7 @@ GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list(
 	"ghost_yellow",
 	"ghost",
 	"skeleghost",
+	"vulpghost", // ARK STATION ADD
 ))
 //stores the ghost forms that support hair and other such things
 
