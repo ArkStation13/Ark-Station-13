@@ -86,6 +86,7 @@
 			/obj/item/food/eggsausage = 5,
 			/datum/custom_order/icecream = 14,
 			/obj/item/food/danish_hotdog = 3,
+			/obj/item/food/shaurma = 15, // ARK STATION EDIT
 		),
 		VENUE_BAR = list(
 			/datum/reagent/consumable/ethanol/beer = 25,
