@@ -117,7 +117,7 @@
 		"diagnostic_hud_projector",
 		"meson_hud_projector",
 		"science_hud_projector",
-		"permit_glasses",
+		// "permit_glasses",
 		"nifsoft_money_sense",
 		"nifsoft_hud_kit",
 		"nifsoft_hud_science",
@@ -125,7 +125,7 @@
 		"nifsoft_hud_medical",
 		"nifsoft_hud_security",
 		"nifsoft_hud_diagnostic",
-		"nifsoft_hud_cargo",
+		// "nifsoft_hud_cargo",
 	)
 	return ..()
 

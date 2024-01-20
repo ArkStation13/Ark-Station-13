@@ -38,7 +38,7 @@
 			var/path = pick_weight(events)
 			events -= path
 			mobile.event_list.Add(new path(mobile))
-	
+
 /datum/map_template/shuttle/emergency/backup
 	prefix = "_maps/shuttles/"
 	suffix = "backup"
