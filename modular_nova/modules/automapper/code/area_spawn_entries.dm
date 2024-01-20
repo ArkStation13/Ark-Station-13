@@ -16,10 +16,10 @@
 	desired_atom = /mob/living/simple_animal/pet/poppy
 
 // Structures
-/datum/area_spawn/blueshield_locker
-	target_areas = list(/area/station/command/heads_quarters/captain, /area/station/command/bridge, /area/station/command/corporate_dock, /area/station/command/meeting_room, /area/station/command/gateway)
-	desired_atom = /obj/structure/closet/secure_closet/blueshield
-	mode = AREA_SPAWN_MODE_HUG_WALL
+// /datum/area_spawn/blueshield_locker
+// 	target_areas = list(/area/station/command/heads_quarters/captain, /area/station/command/bridge, /area/station/command/corporate_dock, /area/station/command/meeting_room, /area/station/command/gateway)
+// 	desired_atom = /obj/structure/closet/secure_closet/blueshield
+// 	mode = AREA_SPAWN_MODE_HUG_WALL
 
 /datum/area_spawn/command_drobe
 	target_areas = list(/area/station/command/meeting_room, /area/station/command/meeting_room/council, /area/station/command/bridge)
