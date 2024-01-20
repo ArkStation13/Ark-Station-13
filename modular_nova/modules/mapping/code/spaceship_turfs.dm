@@ -8,7 +8,7 @@
 	base_icon_state = "ship_walls"
 	sheet_type = /obj/item/stack/sheet/spaceship
 	smoothing_groups = SMOOTH_GROUP_SHIPWALLS + SMOOTH_GROUP_WALLS + SMOOTH_GROUP_CLOSED_TURFS
-	canSmoothWith = SMOOTH_GROUP_SHUTTLE_PARTS + SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_SHIPWALLS + SMOOTH_GROUP_SURVIVAL_TITANIUM_POD
+	canSmoothWith = SMOOTH_GROUP_SHUTTLE_PARTS + SMOOTH_GROUP_SHIPWALLS + SMOOTH_GROUP_SURVIVAL_TITANIUM_POD
 
 /turf/closed/wall/mineral/titanium/spaceship/nodiagonal
 	icon_state = "map-shuttle_nd"
