@@ -33,7 +33,6 @@
 	jobtype = /datum/job/stowaway
 
 	id = /obj/item/card/id/stowaway
-	id_trim = /datum/id_trim/job/stowaway
 	uniform = /obj/item/clothing/under/pants/jeans
 	belt = /obj/item/storage/belt/utility/full
 	ears = null
@@ -42,7 +41,7 @@
 	r_pocket = /obj/item/radio
 	head = /obj/item/clothing/head/beanie/black
 
-/datum/id_trim/job/stowaway
+/datum/id_trim/stowaway
 	assignment = null
 	trim_state = JOB_STOWAWAY
 	department_color = COLOR_ASSISTANT_GRAY
@@ -71,3 +70,4 @@
 	desc = "A strange-looking old ID card. Looks like there's some old bank account attached."
 	registered_name = null
 	assignment = null
+	trim = /datum/id_trim/stowaway
