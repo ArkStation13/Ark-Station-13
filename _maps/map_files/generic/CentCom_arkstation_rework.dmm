@@ -2450,6 +2450,7 @@
 /obj/effect/turf_decal/stripes{
 	dir = 4
 	},
+/obj/machinery/light/directional/south,
 /turf/open/misc/grass/jungle,
 /area/centcom/central_command_areas/control)
 "gZ" = (
@@ -3651,10 +3652,8 @@
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
 "ks" = (
-/obj/machinery/modular_computer/preset/id/centcom{
-	step_y = 30
-	},
 /obj/machinery/status_display/ai/directional/north,
+/obj/machinery/modular_computer/preset/id/centcom,
 /turf/open/floor/iron/grimy,
 /area/centcom/central_command_areas/admin)
 "kt" = (
@@ -5993,10 +5992,8 @@
 /area/centcom/central_command_areas/briefing)
 "rj" = (
 /obj/effect/turf_decal/tile/green/opposingcorners,
-/obj/structure/chair{
-	dir = 4
-	},
 /obj/structure/sign/poster/random/directional/west,
+/obj/machinery/vending/coffee,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/control)
 "rk" = (
@@ -9454,9 +9451,6 @@
 	pixel_x = 13;
 	pixel_y = 3
 	},
-/obj/machinery/vending/dinnerware{
-	pixel_x = 26
-	},
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/kitchen{
 	dir = 1
@@ -12165,15 +12159,13 @@
 /turf/open/floor/iron/kitchen,
 /area/centcom/central_command_areas/briefing)
 "JO" = (
-/obj/machinery/modular_computer/preset/id/centcom{
-	step_y = 30
-	},
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons and the AI's satellite from the safety of his office.";
 	name = "Research Monitor";
 	network = list("rd","minisat");
 	pixel_y = 28
 	},
+/obj/machinery/modular_computer/preset/id/centcom,
 /turf/open/floor/iron/grimy,
 /area/centcom/central_command_areas/admin)
 "JP" = (
@@ -12199,11 +12191,13 @@
 /turf/open/floor/wood/tile,
 /area/centcom/central_command_areas/control)
 "JR" = (
-/obj/machinery/modular_computer/preset/id/centcom{
-	dir = 4;
-	pixel_x = 15
+/obj/effect/turf_decal/tile/red{
+	dir = 1
 	},
-/turf/closed/indestructible/riveted,
+/obj/machinery/modular_computer/preset/id/centcom{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
 "JT" = (
 /obj/effect/turf_decal/tile/red/opposingcorners,
@@ -12345,7 +12339,6 @@
 /area/centcom/central_command_areas/control)
 "Kl" = (
 /obj/structure/table/wood,
-/obj/machinery/light_switch/directional/east,
 /obj/item/toy/figure/curator,
 /obj/machinery/requests_console/directional/south{
 	department = "Library";
@@ -15848,6 +15841,7 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/structure/closet/wardrobe/white/medical,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/white,
 /area/centcom/central_command_areas/control)
 "UB" = (
@@ -16866,7 +16860,7 @@
 /turf/open/floor/iron/grimy,
 /area/centcom/tdome/administration)
 "Xx" = (
-/obj/machinery/smartfridge,
+/obj/machinery/vending/dinnerware,
 /turf/closed/indestructible/riveted,
 /area/centcom/central_command_areas/control)
 "Xy" = (
@@ -17136,12 +17130,6 @@
 /turf/open/floor/iron/kitchen{
 	dir = 1
 	},
-/area/centcom/central_command_areas/control)
-"Yw" = (
-/obj/machinery/vending/coffee{
-	pixel_y = -10
-	},
-/turf/closed/indestructible/riveted,
 /area/centcom/central_command_areas/control)
 "Yx" = (
 /turf/open/floor/iron/white/herringbone,
@@ -65951,7 +65939,7 @@ io
 io
 io
 io
-Yw
+io
 Ab
 ai
 QC
@@ -67749,7 +67737,7 @@ io
 eb
 ZD
 nR
-JR
+io
 MB
 MD
 MD
@@ -68006,7 +67994,7 @@ UN
 qF
 MB
 rt
-MB
+JR
 MB
 MD
 MD
@@ -72685,7 +72673,7 @@ aa
 aa
 aa
 io
-aa
+cO
 io
 aa
 aa
