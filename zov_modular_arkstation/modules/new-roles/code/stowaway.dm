@@ -44,7 +44,7 @@
 
 /datum/id_trim/job/stowaway
 	assignment = null
-	trim_state = ""
+	trim_state = JOB_STOWAWAY
 	department_color = COLOR_ASSISTANT_GRAY
 	subdepartment_color = COLOR_ASSISTANT_GRAY
 	sechud_icon_state = SECHUD_UNKNOWN
