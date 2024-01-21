@@ -47,10 +47,9 @@
 	department_color = COLOR_ASSISTANT_GRAY
 	subdepartment_color = COLOR_ASSISTANT_GRAY
 	sechud_icon_state = SECHUD_UNKNOWN
-	template_access = list(
+	access = list(
 		ACCESS_MAINT_TUNNELS,
-		)
-	job = /datum/job/stowaway
+	)
 
 /obj/effect/landmark/start/stowaway
 	name = "Stowaway"
