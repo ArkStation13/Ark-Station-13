@@ -32,8 +32,8 @@
 	name = "Stowaway"
 	jobtype = /datum/job/stowaway
 
-	//id = /obj/item/card/id/stowaway
-	//id_trim = /datum/id_trim/job/stowaway
+	id = /obj/item/card/id/stowaway
+	id_trim = /datum/id_trim/job/stowaway
 	uniform = /obj/item/clothing/under/pants/jeans
 	belt = /obj/item/storage/belt/utility/full
 	ears = null
