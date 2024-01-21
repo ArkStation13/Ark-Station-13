@@ -209,6 +209,8 @@
 	uses_advanced_reskins = TRUE
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon_state = "riot"
+	inhand_icon_state = "swat_suit"
 	unique_reskin = list(
 		"Default" = list(
 			RESKIN_ICON_STATE = "riot",
