@@ -1,5 +1,7 @@
 // THIS IS A NOVA SECTOR UI FILE
-import { useBackend, useLocalState } from '../backend';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -12,8 +14,8 @@ import {
 import { Window } from '../layouts';
 
 export const ArmamentStation = (props) => {
-  const [category, setCategory] = useLocalState('category', '');
-  const [weapon, setArmament] = useLocalState('weapon');
+  const [category, setCategory] = useState('category', '');
+  const [weapon, setArmament] = useState('weapon');
   const { act, data } = useBackend();
   const { armaments_list = [], card_inserted, card_points, card_name } = data;
   return (
@@ -92,7 +94,7 @@ export const ArmamentStation = (props) => {
                                 key={item.ref}
                                 onClick={() => setArmament(item.ref)}
                               >
-                                <img
+                                <Image
                                   src={`data:image/jpeg;base64,${item.icon}`}
                                   style={{
                                     'vertical-align': 'middle',
@@ -119,15 +121,15 @@ export const ArmamentStation = (props) => {
                         item.ref === weapon && (
                           <Stack vertical key={item.ref}>
                             <Stack.Item>
-                              <Image>
-                                src=
-                                {`data:image/jpeg;base64,${item.icon}`}
-                                height={'100%'} width={'100%'} style=
-                                {{
+                              <Image
+                                src={`data:image/jpeg;base64,${item.icon}`}
+                                height={'100%'}
+                                width={'100%'}
+                                style={{
                                   'vertical-align': 'middle',
                                   'horizontal-align': 'middle',
                                 }}
-                              </Image>
+                              />
                             </Stack.Item>
                             <Stack.Item>{item.description}</Stack.Item>
                             <Stack.Item
