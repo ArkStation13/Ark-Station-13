@@ -58,7 +58,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/workboots
 	glasses = /obj/item/clothing/glasses/sunglasses
-	head = /obj/item/clothing/head/bridge_officer_beret
+	head = /obj/item/clothing/head/utility/hardhat/welding/dblue
 	backpack = /obj/item/storage/backpack
 	satchel = /obj/item/storage/backpack/satchel
 	duffelbag = /obj/item/storage/backpack/duffelbag

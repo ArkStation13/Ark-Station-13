@@ -257,6 +257,7 @@
 		mob_occupant.update_mouse_pointer()
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby(obj/item/I, mob/user, params)
+	. = ..()
 	if(istype(I, /obj/item/shlang))
 		var/obj/item/shlang/B = I
 		if(B.tank.balance == 0)
@@ -274,7 +275,6 @@
 			user.visible_message(span_notice("[user] refills [user.p_their()] [name]."), span_notice("You refill [src]."))
 			playsound(src, 'sound/effects/refill.ogg', 20, TRUE)
 			return
-	..()
 
 /obj/item/reagent_containers/cup/beaker/large/benzobak
 	volume = 1200
@@ -344,11 +344,11 @@
 	check_boost()
 	calc_acceleration()
 	calc_vector(cached_direction)
-	addtimer(CALLBACK(src, PROC_REF(toplivo_minus)), 3 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(toplivo_minus)), 1 SECONDS)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/toplivo_minus()
-	if(benzobak.reagents.has_reagent(/datum/reagent/fuel, 0.25))
-		benzobak.reagents.remove_reagent(/datum/reagent/fuel, 0.25)
+	if(benzobak.reagents.has_reagent(/datum/reagent/fuel, 0.1))
+		benzobak.reagents.remove_reagent(/datum/reagent/fuel, 0.1)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/start_engine()
 	if(dead_check())

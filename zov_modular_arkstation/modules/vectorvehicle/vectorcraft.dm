@@ -37,7 +37,6 @@
 	if(!driver)
 		driver = M
 	start_engine()
-	to_chat(M, "<span class='big notice'>How to drive:</span> \n<span class='notice'><i>Hold wasd to gain speed in a direction, c to enable/disable the clutch, 1 2 3 4 to change gears while holding a direction (make sure the clutch is enabled when you change gears, you should hear a sound when you've successfully changed gears), r to toggle handbrake, hold alt for brake and press shift for boost (the machine will beep when the boost is recharged)! If you hear an ebbing sound like \"brbrbrbrbr\" you need to gear down, the whining sound means you need to gear up. Hearing a pleasant \"whumwhumwhum\" is optimal gearage! It can be a lil slow to start, so make sure you're in the 1st gear.\n</i></span>")
 	return ..()
 
 /obj/vehicle/sealed/vectorcraft/mob_exit(mob/living/M, silent = FALSE, randomstep = FALSE)
@@ -91,6 +90,7 @@
 	check_boost()
 	calc_acceleration()
 	calc_vector(cached_direction)
+	. = try_step_multiz(direction)
 	/*
 	var/direction = calc_angle()
 	if(!direction)
@@ -248,7 +248,6 @@
 //////////////////////////////////////////////////////////////
 //Repairing
 /obj/vehicle/sealed/vectorcraft/attackby_secondary(obj/item/O, mob/user, params)
-	. = ..()
 	if(istype(O, /obj/item/weldingtool))
 		if(atom_integrity < max_integrity)
 			if(!O.tool_start_check(user, amount=0))
@@ -263,7 +262,6 @@
 				apply_damage(-max_integrity)
 		else
 			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
-
 
 /obj/vehicle/sealed/vectorcraft/attack_hand(mob/user)
 	remove_key(driver)
