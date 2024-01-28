@@ -452,14 +452,14 @@ if(driver.sprinting && !(boost_cooldown))
 		enginesound_delay = world.time + 16
 	return
 
-	if(acceleration > ((max_acceleration*calc_speed())/90) && acceleration > max_acceleration/5)
-		acceleration -= accel_step*2
-		if(!enginesound_delay)
-			playsound(src.loc,'zov_modular_arkstation/modules/vectorvehicle/sound/high_eng.ogg', 25, 0)
-			enginesound_delay = world.time + 16
-		return
+	// if(acceleration > ((max_acceleration*calc_speed())/90) && acceleration > max_acceleration/5)
+	// 	acceleration -= accel_step*2
+	// 	if(!enginesound_delay)
+	// 		playsound(src.loc,'zov_modular_arkstation/modules/vectorvehicle/sound/high_eng.ogg', 25, 0)
+	// 		enginesound_delay = world.time + 16
+	// 	return
 
-	acceleration = clamp(acceleration, initial(acceleration), max_acceleration)
+	// acceleration = clamp(acceleration, initial(acceleration), max_acceleration)
 
 //calulate the vector change
 /obj/vehicle/sealed/vectorcraft/proc/calc_vector(direction)

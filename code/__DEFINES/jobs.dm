@@ -124,7 +124,6 @@
 // NOVA EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
 #define JOB_NT_REP "Nanotrasen Consultant"
-#define JOB_BRIDGE_OFFICER "Bridge Officer" // Ark Station 13 Edit
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
@@ -202,6 +201,7 @@
 #define JOB_DISPLAY_ORDER_EXP_CORPS 49 //NOVA EDIT ADDITON
 
 #define JOB_DISPLAY_ORDER_STOWAWAY 50 // ARK STATION EDIT ADDITION
+#define JOB_DISPLAY_ORDER_MECHANIC 51 // ARK STATION EDIT ADDITION
 
 #define DEPARTMENT_UNASSIGNED "No Department"
 
