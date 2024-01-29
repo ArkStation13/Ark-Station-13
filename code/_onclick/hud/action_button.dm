@@ -59,6 +59,14 @@
 	if(LAZYACCESS(modifiers, RIGHT_CLICK))
 		trigger_flags |= TRIGGER_SECONDARY_ACTION
 	linked_action.Trigger(trigger_flags = trigger_flags)
+
+	// ARK STATION EDIT ADD START
+	transform = transform.Scale(0.8, 0.8)
+	var/prev_alpha = alpha
+	alpha = clamp(prev_alpha - 55, 0, 200)
+	animate(src, transform = matrix(), time = 0.3 SECONDS, alpha = prev_alpha)
+	// ARK STATION EDIT ADD END
+
 	return TRUE
 
 // Entered and Exited won't fire while you're dragging something, because you're still "holding" it
