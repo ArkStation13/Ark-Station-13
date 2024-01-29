@@ -136,3 +136,7 @@
 /obj/item/phone
 	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/phone_pickup.ogg'
 	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/phone_drop.ogg'
+
+/obj/item/paper
+	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/dosh_pickup.ogg'
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/dosh_drop.ogg'
