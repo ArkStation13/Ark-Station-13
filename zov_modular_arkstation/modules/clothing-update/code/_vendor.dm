@@ -589,3 +589,43 @@
 	payment_department = NO_FREEBIES
 	light_mask = "wardrobe-light-mask"
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+
+// BLUE SEC VENDING (NOVA SECTOR) //
+/obj/machinery/vending/wardrobe/sec_wardrobe/blue
+	name = "\improper Peacekeeper Outfitting Station"
+	desc = "A vending machine stocked with Lopland's \"Peacekeeper\" security package, including standardized uniforms and general equipment."
+	icon = 'modular_nova/modules/sec_haul/icons/vending/vending.dmi'
+	light_mask = "sec-light-mask"
+	icon_state = "peace"
+	product_ads = "Beat perps in style!;The stains wash right out!;You have the right to be fashionable!;Now you can be the fashion police you always wanted to be!"
+	vend_reply = "Good luck, Peacekeeper!"
+	products = list(/obj/item/clothing/suit/hooded/wintercoat/security = 5,
+					/obj/item/clothing/suit/toggle/jacket/sec = 5,
+					/obj/item/clothing/suit/armor/vest/peacekeeper/brit = 5,
+					/obj/item/clothing/suit/armor/vest/peacekeeper/jacket = 5,
+					/obj/item/clothing/suit/armor/vest/peacekeeper/jacket/badge = 5,
+					/obj/item/clothing/neck/security_cape = 5,
+					/obj/item/clothing/neck/security_cape/armplate = 5,
+					/obj/item/storage/backpack/security = 5,
+					/obj/item/storage/backpack/satchel/sec = 5,
+					/obj/item/storage/backpack/duffelbag/sec = 5,
+					/obj/item/storage/backpack/duffelbag/sec = 5,
+					/obj/item/clothing/under/rank/security/officer = 10,
+					/obj/item/clothing/under/rank/security/officer/skirt = 10,
+					/obj/item/clothing/under/rank/security/peacekeeper = 10,
+					/obj/item/clothing/under/rank/security/nova/utility = 3,
+					/obj/item/clothing/shoes/jackboots/sec = 10,
+					/obj/item/clothing/head/security_garrison = 10,
+					/obj/item/clothing/head/security_cap = 10,
+					/obj/item/clothing/head/beret/sec/peacekeeper = 5,
+					/obj/item/clothing/head/helmet/sec/sol = 5,
+					/obj/item/clothing/head/hats/warden/police/patrol = 5,
+					/obj/item/clothing/head/costume/ushanka/sec = 10,
+					/obj/item/clothing/gloves/color/black/security = 10,
+					)
+	premium = list( /obj/item/clothing/under/rank/security/officer/formal = 3,
+					/obj/item/clothing/suit/jacket/officer/blue = 3,
+					/obj/item/clothing/head/beret/sec/navyofficer = 3)
+	payment_department = ACCOUNT_SEC
+	light_color = COLOR_MODERATE_BLUE
+>>>>>>> d44222ee53d6770614326bb5393cd6bc287723dd
