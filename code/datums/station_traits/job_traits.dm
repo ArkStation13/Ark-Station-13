@@ -30,6 +30,7 @@
 	blacklist += subtypesof(/datum/station_trait/job) - type // All but ourselves
 	RegisterSignal(SSdcs, COMSIG_GLOB_PRE_JOBS_ASSIGNED, PROC_REF(pre_jobs_assigned))
 /* NOVA EDIT REMOVAL
+
 /datum/station_trait/job/setup_lobby_button(atom/movable/screen/lobby/button/sign_up/lobby_button)
 	RegisterSignal(lobby_button, COMSIG_ATOM_UPDATE_OVERLAYS, PROC_REF(on_lobby_button_update_overlays))
 	lobby_button.desc = button_desc
@@ -90,11 +91,10 @@
 	. = ..()
 	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(replace_cargo))
 
-/* NOVA EDIT REMOVAL
 /datum/station_trait/job/cargorilla/on_lobby_button_update_overlays(atom/movable/screen/lobby/button/sign_up/lobby_button, list/overlays)
 	. = ..()
 	overlays += LAZYFIND(lobby_candidates, lobby_button.get_mob()) ? "gorilla_on" : "gorilla_off"
-*/
+
 /// Remove the cargo equipment and personnel that are being replaced by a gorilla.
 /datum/station_trait/job/cargorilla/proc/replace_cargo(datum/source)
 	SIGNAL_HANDLER
@@ -123,11 +123,11 @@
 /datum/station_trait/job/bridge_assistant/New()
 	. = ..()
 	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(add_coffeemaker))
-/* NOVA EDIT REMOVAL
+
 /datum/station_trait/job/bridge_assistant/on_lobby_button_update_overlays(atom/movable/screen/lobby/button/sign_up/lobby_button, list/overlays)
 	. = ..()
 	overlays += "bridge_assistant"
-*/
+
 /// Creates a coffeemaker in the bridge, if we don't have one yet.
 /datum/station_trait/job/bridge_assistant/proc/add_coffeemaker(datum/source)
 	SIGNAL_HANDLER
@@ -140,7 +140,7 @@
 		if(is_type_in_list(get_area(coffeemaker), possible_coffeemaker_positions))
 			return
 	var/list/tables = list()
-	for(var/turf/area_turf as anything in bridge.get_contained_turfs())
+	for(var/turf/area_turf as anything in bridge.get_turfs_from_all_zlevels())
 		var/obj/structure/table/table = locate() in area_turf
 		if(isnull(table))
 			continue

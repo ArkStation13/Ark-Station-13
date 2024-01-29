@@ -307,6 +307,7 @@
 	strip_delay = 80
 	equip_delay_other = 60
 	clothing_traits = list(TRAIT_SHOVE_KNOCKDOWN_BLOCKED)
+	clothing_traits = list(TRAIT_SHOVE_KNOCKDOWN_BLOCKED)
 
 /datum/armor/armor_riot
 	melee = 50
@@ -403,6 +404,7 @@
 	armor_type = /datum/armor/armor_swat
 	strip_delay = 120
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	clothing_flags = THICKMATERIAL
 	clothing_flags = THICKMATERIAL
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
