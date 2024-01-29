@@ -68,6 +68,13 @@ const BASEICONS = {
   'Science Guard': 'shield-heart',
   'Security Medic': 'heart-pulse',
   // NOVA EDIT END
+  // ARK STATION EDIT START - Our Jobs
+  Mechanic: 'space-shuttle',
+  'Brig Pilot': 'space-shuttle',
+  'Bridge Officer': 'paperclip',
+  'Vanguard Operative': 'shopping-cart',
+  Stowaway: 'question',
+  //
 } as const;
 
 // NOVA EDIT START - ALT TITLES
@@ -265,7 +272,6 @@ const ALTTITLES = {
   Electrician: BASEICONS['Station Engineer'],
   'Engine Technician': BASEICONS['Station Engineer'],
   'EVA Technician': BASEICONS['Station Engineer'],
-  Mechanic: BASEICONS['Station Engineer'],
   'Apprentice Engineer': BASEICONS['Station Engineer'],
   'Engineering Trainee': BASEICONS['Station Engineer'],
   // Virologist - virus
@@ -276,6 +282,32 @@ const ALTTITLES = {
   'Dispatch Officer': BASEICONS['Warden'],
   'Brig Governor': BASEICONS['Warden'],
   Jailer: BASEICONS['Warden'],
+  // ARK STATION JOBS
+  // Mechanic - space-shuttle
+  'Pod Pilot': BASEICONS['Mechanic'],
+  'Space Pods Builder': BASEICONS['Mechanic'],
+  'Space Pods Maintainer': BASEICONS['Mechanic'],
+  Coachman: BASEICONS['Mechanic'],
+  // Brig Pilot - space-shuttle
+  'Security Pilot': BASEICONS['Brig Pilot'],
+  'Space Guard': BASEICONS['Brig Pilot'],
+  'Brig Pilot Recruit': BASEICONS['Brig Pilot'],
+  'Security Mecha Pilot': BASEICONS['Brig Pilot'],
+  // Bridge Officer - paperclip
+  'Command Secretary': BASEICONS['Bridge Officer'],
+  'Command Officer': BASEICONS['Bridge Officer'],
+  'Bridge Secretary': BASEICONS['Bridge Officer'],
+  Ensign: BASEICONS['Bridge Officer'],
+  'Bridge Advisor': BASEICONS['Bridge Officer'],
+  'Bridge Intern': BASEICONS['Bridge Officer'],
+  // Vanguard Operative - shopping-cart
+  'Expeditionary Trooper': BASEICONS['Vanguard Operative'],
+  'Vanguard Pointman': BASEICONS['Vanguard Operative'],
+  'Expeditionary Field Medic': BASEICONS['Vanguard Operative'],
+  'Vanguard Marksman': BASEICONS['Vanguard Operative'],
+  'Expeditionary Combat Technician': BASEICONS['Vanguard Operative'],
+  // Stowaway - question
+  Interloper: BASEICONS['Stowaway'],
 } as const;
 
 // Combine the Base icons and ALt titles

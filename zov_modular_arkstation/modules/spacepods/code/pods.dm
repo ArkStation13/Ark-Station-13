@@ -194,7 +194,7 @@
 	mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse.dmi'
 	var/preview_tip = /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview
 	// Fuel //
-	// Мнимая емкость с топливом
+	// Мнимая емкость с топливом // ЭТО ЕСЛИ ЧТО ЖИДКАЯ ПЛАЗМА
 	var/obj/item/reagent_containers/cup/beaker/large/benzobak/benzobak
 	// Будет ли полным бак при спавне?
 	var/starting_fuel = FALSE
@@ -256,7 +256,7 @@
 	for(var/mob/mob_occupant as anything in occupants)
 		mob_occupant.update_mouse_pointer()
 
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby(obj/item/I, mob/user, params)
+/obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby_secondary(obj/item/I, mob/user, params)
 	. = ..()
 	if(istype(I, /obj/item/shlang))
 		var/obj/item/shlang/B = I
@@ -266,17 +266,19 @@
 			return
 		// if(B.tank.target_fuel < B.tank.balance*10)
 		// 	return
-		if(benzobak.reagents.has_reagent(/datum/reagent/fuel, max_fuel))
+		if(benzobak.reagents.has_reagent(/datum/reagent/stable_plasma, max_fuel))
 			to_chat(user, span_warning("Your [name] is already full!"))
 			return
 		if(B.use_tool(src, user, 60))
 			B.tank.balance -= B.tank.target_fuel
-			benzobak.reagents.add_reagent(/datum/reagent/fuel, B.tank.target_fuel)
+			benzobak.reagents.add_reagent(/datum/reagent/stable_plasma, B.tank.target_fuel)
 			user.visible_message(span_notice("[user] refills [user.p_their()] [name]."), span_notice("You refill [src]."))
 			playsound(src, 'sound/effects/refill.ogg', 20, TRUE)
 			return
 
 /obj/item/reagent_containers/cup/beaker/large/benzobak
+	name = "Fuel Tank"
+	desc = "A tank designed for vehicles that can hold 1200 units of liquid."
 	volume = 1200
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/Initialize(mapload)
@@ -287,7 +289,7 @@
 	pod_flags &= ~LIGHTS_ON
 	set_light_on(pod_flags & LIGHTS_ON)
 	if(starting_fuel)
-		benzobak.reagents.add_reagent(/datum/reagent/fuel, max_fuel)
+		benzobak.reagents.add_reagent(/datum/reagent/stable_plasma, max_fuel)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/Destroy()
 	. = ..()
@@ -301,7 +303,7 @@
 	return max_fuel
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/get_fuel()
-	return benzobak.reagents.get_reagent_amount(/datum/reagent/fuel)
+	return benzobak.reagents.get_reagent_amount(/datum/reagent/stable_plasma)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/mob_enter(mob/living/M)
 	if(!driver)

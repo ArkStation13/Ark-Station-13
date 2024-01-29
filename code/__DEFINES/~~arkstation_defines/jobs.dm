@@ -2,3 +2,4 @@
 #define JOB_SECURITY_MEDIC "Security Medic"
 #define JOB_BRIDGE_OFFICER "Bridge Officer"
 #define JOB_MECHANIC "Mechanic"
+#define JOB_BRIG_PILOT "Brig Pilot"

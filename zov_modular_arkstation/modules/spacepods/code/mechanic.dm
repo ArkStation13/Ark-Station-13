@@ -62,6 +62,7 @@
 	backpack = /obj/item/storage/backpack
 	satchel = /obj/item/storage/backpack/satchel
 	duffelbag = /obj/item/storage/backpack/duffelbag
+	l_pocket = /obj/item/modular_computer/pda/engineering
 
 	box = /obj/item/storage/box/survival
 
@@ -115,7 +116,7 @@
 /////////////////////////////////////////////////////////////////////
 
 /obj/structure/closet/secure_closet/mechanic
-	name = "bridge officer's locker"
+	name = "mechanic's locker"
 	req_access = list(ACCESS_ENGINEERING)
 	icon_state = "eng_secure"
 
