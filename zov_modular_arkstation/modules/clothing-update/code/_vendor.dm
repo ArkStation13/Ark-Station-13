@@ -628,4 +628,3 @@
 					/obj/item/clothing/head/beret/sec/navyofficer = 3)
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_MODERATE_BLUE
->>>>>>> d44222ee53d6770614326bb5393cd6bc287723dd

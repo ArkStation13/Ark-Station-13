@@ -1,35 +1,35 @@
 /// Helper macro to check if the passed mob has jukebox sound preference enabled
-#define HAS_JUKEBOX_PREF(mob) (!QDELETED(mob) && !isnull(mob.client) && mob.client.prefs.read_preference(/datum/preference/toggle/sound_jukebox))
+// #define HAS_JUKEBOX_PREF(mob) (!QDELETED(mob) && !isnull(mob.client) && mob.client.prefs.read_preference(/datum/preference/toggle/sound_jukebox))
 
-/obj/machinery/jukebox
-	name = "jukebox"
-	desc = "A classic music player."
-	icon = 'icons/obj/machines/music.dmi'
-	icon_state = "jukebox"
-	verb_say = "states"
-	density = TRUE
-	// req_access = list(ACCESS_BAR)
-	/// Whether we're actively playing music
-	var/active = FALSE
-	/// List of weakrefs to mobs listening to the current song
-	var/list/datum/weakref/rangers = list()
-	/// World.time when the current song will stop playing, but also a cooldown between activations
-	var/stop = 0
-	/// List of /datum/tracks we can play
-	var/list/songs = list()
-	/// Current song selected
-	var/datum/track/selection = null
-	/// Volume of the songs played
-	var/volume = 100
+// /obj/machinery/jukebox
+// 	name = "jukebox"
+// 	desc = "A classic music player."
+// 	icon = 'icons/obj/machines/music.dmi'
+// 	icon_state = "jukebox"
+// 	verb_say = "states"
+// 	density = TRUE
+// 	// req_access = list(ACCESS_BAR)
+// 	/// Whether we're actively playing music
+// 	var/active = FALSE
+// 	/// List of weakrefs to mobs listening to the current song
+// 	var/list/datum/weakref/rangers = list()
+// 	/// World.time when the current song will stop playing, but also a cooldown between activations
+// 	var/stop = 0
+// 	/// List of /datum/tracks we can play
+// 	var/list/songs = list()
+// 	/// Current song selected
+// 	var/datum/track/selection = null
+// 	/// Volume of the songs played
+// 	var/volume = 100
 
-/obj/machinery/jukebox/disco
-	name = "radiant dance machine mark IV"
-	desc = "The first three prototypes were discontinued after mass casualty incidents."
-	icon = 'icons/obj/machines/music.dmi'
-	icon_state = "disco"
-	anchored = FALSE
-	var/list/spotlights = list()
-	var/list/sparkles = list()
+// /obj/machinery/jukebox/disco
+// 	name = "radiant dance machine mark IV"
+// 	desc = "The first three prototypes were discontinued after mass casualty incidents."
+// 	icon = 'icons/obj/machines/music.dmi'
+// 	icon_state = "disco"
+// 	anchored = FALSE
+// 	var/list/spotlights = list()
+// 	var/list/sparkles = list()
 
 /obj/machinery/jukebox/disco/indestructible
 	name = "radiant dance machine mark V"
