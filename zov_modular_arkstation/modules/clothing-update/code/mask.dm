@@ -25,9 +25,6 @@
 	name = "Green facescarf"
 	icon_state = "green"
 
-/obj/item/clothing/mask/gas/syndicate
-	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS|HIDEFACIALHAIR
-
 /obj/item/clothing/mask/gas/syndicate/ds/wide
 	name = "wide shape balaclava"
 	desc = "For organising your tricky covert operations. Provided with additional fibers, allowing user to breath normally"
