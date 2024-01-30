@@ -459,22 +459,25 @@ const PageMain = (props) => {
           }
           {!!canMakeAnnouncement && (
             <Button
+              backgroundColor="orange"
               icon="bullhorn"
-              content="Call Sol Federation 911: Marshals Response"
+              content="Call InteQ Mercenaries: Soldiers"
               onClick={() => act('callThePolice')}
             />
           )}
           {!!canMakeAnnouncement && (
             <Button
+              backgroundColor="orange"
               icon="bullhorn"
-              content="Call Sol Federation 811: Advanced Atmospherics Response"
+              content="Call InteQ Mercenaries: Engineers"
               onClick={() => act('callTheCatmos')}
             />
           )}
           {!!canMakeAnnouncement && (
             <Button
+              backgroundColor="orange"
               icon="bullhorn"
-              content="Call Sol Federation 911: Medical Response"
+              content="Call InteQ Mercenaries: Paramedics"
               onClick={() => act('callTheParameds')}
             />
           )}
