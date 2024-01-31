@@ -256,8 +256,7 @@
 	for(var/mob/mob_occupant as anything in occupants)
 		mob_occupant.update_mouse_pointer()
 
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby_secondary(obj/item/I, mob/user, params)
-	. = ..()
+/obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/shlang))
 		var/obj/item/shlang/B = I
 		if(B.tank.balance == 0)
@@ -275,6 +274,7 @@
 			user.visible_message(span_notice("[user] refills [user.p_their()] [name]."), span_notice("You refill [src]."))
 			playsound(src, 'sound/effects/refill.ogg', 20, TRUE)
 			return
+	return ..()
 
 /obj/item/reagent_containers/cup/beaker/large/benzobak
 	name = "Fuel Tank"
