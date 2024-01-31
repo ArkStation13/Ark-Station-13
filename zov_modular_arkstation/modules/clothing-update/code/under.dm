@@ -36,6 +36,7 @@
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under_digi.dmi'
+	can_adjust = FALSE
 	icon_state = "squatteroutfit"
 
 /obj/item/clothing/under/rank/security/russobluecamo
