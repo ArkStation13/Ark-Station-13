@@ -272,7 +272,7 @@
 			B.tank.balance -= B.tank.target_fuel
 			benzobak.reagents.add_reagent(/datum/reagent/stable_plasma, B.tank.target_fuel)
 			user.visible_message(span_notice("[user] refills [user.p_their()] [name]."), span_notice("You refill [src]."))
-			playsound(src, 'sound/effects/refill.ogg', 20, TRUE)
+			playsound(src, 'sound/effects/refill.ogg', 40, TRUE)
 			return
 	return ..()
 
