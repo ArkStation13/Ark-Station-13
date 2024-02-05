@@ -43,8 +43,7 @@
 			RESKIN_WORN_ICON_STATE = "gloves_white"
 		)
 	)
-
-	// SKYRAT EDIT ADDITION END
+	clothing_traits = list(TRAIT_FAST_CUFFING)
 
 /obj/item/clothing/gloves/color/black/Initialize(mapload)
 	. = ..()
