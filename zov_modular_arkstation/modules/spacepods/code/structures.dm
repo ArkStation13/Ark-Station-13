@@ -180,7 +180,6 @@
 	desc = "Converts raw materials into useful objects."
 	circuit = /obj/item/circuitboard/machine/podfabricator
 	allowed_buildtypes = POD_FABRICATOR
-	charges_tax = FALSE
 
 /obj/item/circuitboard/machine/podfabricator
 	name = "\improper Space Pod Fabricator - Engineering"
