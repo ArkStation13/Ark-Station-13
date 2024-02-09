@@ -125,3 +125,7 @@ GLOBAL_DATUM_INIT(language_holder_adjustor, /datum/language_holder_adjustor, new
 		/datum/language/akulan = list(LANGUAGE_ATOM),
 		/datum/language/german = list(LANGUAGE_ATOM), // Ark Station 13 Edit
 	)
+
+/datum/language_holder/drone_nova
+	understood_languages = list(/datum/language/drone = list(LANGUAGE_ATOM), /datum/language/common = list(LANGUAGE_ATOM))
+	spoken_languages = list(/datum/language/drone = list(LANGUAGE_ATOM))
