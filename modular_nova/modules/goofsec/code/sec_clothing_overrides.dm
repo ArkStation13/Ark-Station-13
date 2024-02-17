@@ -51,23 +51,23 @@
 // 	// righthand_file = 'modular_nova/master_files/icons/mob/inhands/clothing/backpack_righthand.dmi'
 // 	// icon_state = "backpack_security_black"
 // 	// inhand_icon_state = "backpack_security_black"
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Black Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
-			RESKIN_ICON_STATE = "backpack_security_black",
-			RESKIN_WORN_ICON_STATE = "backpack_security_black",
-			RESKIN_INHAND_STATE = "backpack_security_black"
-		),
-		"White Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
-			RESKIN_ICON_STATE = "backpack_security_white",
-			RESKIN_WORN_ICON_STATE = "backpack_security_white",
-			RESKIN_INHAND_STATE = "backpack_security_white"
-		),
-	)
+	// uses_advanced_reskins = TRUE
+	// unique_reskin = list(
+	// 	"Black Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
+	// 		RESKIN_ICON_STATE = "backpack_security_black",
+	// 		RESKIN_WORN_ICON_STATE = "backpack_security_black",
+	// 		RESKIN_INHAND_STATE = "backpack_security_black"
+	// 	),
+	// 	"White Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
+	// 		RESKIN_ICON_STATE = "backpack_security_white",
+	// 		RESKIN_WORN_ICON_STATE = "backpack_security_white",
+	// 		RESKIN_INHAND_STATE = "backpack_security_white"
+	// 	),
+	// )
 
 /obj/item/storage/backpack/satchel/sec // ARK STATION EDIT || REDSEC
 // 	// icon = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi'
@@ -76,23 +76,23 @@
 // 	// righthand_file = 'modular_nova/master_files/icons/mob/inhands/clothing/backpack_righthand.dmi'
 // 	// icon_state = "satchel_security_black"
 // 	// inhand_icon_state = "satchel_security_black"
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Black Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
-			RESKIN_ICON_STATE = "satchel_security_black",
-			RESKIN_WORN_ICON_STATE = "satchel_security_black",
-			RESKIN_INHAND_STATE = "satchel_security_black"
-		),
-		"White Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
-			RESKIN_ICON_STATE = "satchel_security_white",
-			RESKIN_WORN_ICON_STATE = "satchel_security_white",
-			RESKIN_INHAND_STATE = "satchel_security_white"
-		),
-	)
+	// uses_advanced_reskins = TRUE
+	// unique_reskin = list(
+	// 	"Black Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
+	// 		RESKIN_ICON_STATE = "satchel_security_black",
+	// 		RESKIN_WORN_ICON_STATE = "satchel_security_black",
+	// 		RESKIN_INHAND_STATE = "satchel_security_black"
+	// 	),
+	// 	"White Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi',
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/back.dmi',
+	// 		RESKIN_ICON_STATE = "satchel_security_white",
+	// 		RESKIN_WORN_ICON_STATE = "satchel_security_white",
+	// 		RESKIN_INHAND_STATE = "satchel_security_white"
+	// 	),
+	// )
 
 /obj/item/storage/backpack/duffelbag/sec // ARK STATION EDIT || REDSEC
 	// icon = 'modular_nova/master_files/icons/obj/clothing/backpacks.dmi'
@@ -146,12 +146,6 @@
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/belt.dmi',
 			RESKIN_ICON_STATE = "belt_white",
 			RESKIN_WORN_ICON_STATE = "belt_white"
-		),
-		"Slim Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/belts.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/belt.dmi',
-			RESKIN_ICON_STATE = "belt_slim",
-			RESKIN_WORN_ICON_STATE = "belt_slim"
 		),
 		"Basic Variant" = list(
 			RESKIN_ICON = 'icons/obj/clothing/belts.dmi',
@@ -497,27 +491,27 @@
 	// icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
 	// worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi'
 	// icon_state = "vest_white"
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Black Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_ICON_STATE = "vest_black",
-			RESKIN_WORN_ICON_STATE = "vest_black"
-		),
-		"Blue Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_ICON_STATE = "vest_blue",
-			RESKIN_WORN_ICON_STATE = "vest_blue"
-		),
-		"White Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_ICON_STATE = "vest_white",
-			RESKIN_WORN_ICON_STATE = "vest_white"
-		),
-	)
+	// uses_advanced_reskins = TRUE
+	// unique_reskin = list(
+	// 	"Black Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_ICON_STATE = "vest_black",
+	// 		RESKIN_WORN_ICON_STATE = "vest_black"
+	// 	),
+	// 	"Blue Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_ICON_STATE = "vest_blue",
+	// 		RESKIN_WORN_ICON_STATE = "vest_blue"
+	// 	),
+	// 	"White Variant" = list(
+	// 		RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+	// 		RESKIN_ICON_STATE = "vest_white",
+	// 		RESKIN_WORN_ICON_STATE = "vest_white"
+	// 	),
+	// )
 
 /obj/item/clothing/suit/armor/hos
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON

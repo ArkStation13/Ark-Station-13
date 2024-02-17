@@ -255,6 +255,37 @@
 		)
 	)
 
+/obj/item/clothing/suit/armor/vest/alt/sec
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Black Variant" = list(
+			RESKIN_ICON_STATE = "armor",
+			RESKIN_WORN_ICON_STATE = "armor"
+		),
+		"Black Alt Variant" = list(
+			RESKIN_ICON_STATE = "armoralt",
+			RESKIN_WORN_ICON_STATE = "armoralt"
+		),
+		"Black-Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON_STATE = "vest_black",
+			RESKIN_WORN_ICON_STATE = "vest_black"
+		),
+		"Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON_STATE = "vest_blue",
+			RESKIN_WORN_ICON_STATE = "vest_blue"
+		),
+		"White Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON_STATE = "vest_white",
+			RESKIN_WORN_ICON_STATE = "vest_white"
+		),
+	)
+
 /obj/item/clothing/suit/toggle/labcoat/paramedic/red
 	name = "red EMT coat"
 	desc = "Patch themselves up."

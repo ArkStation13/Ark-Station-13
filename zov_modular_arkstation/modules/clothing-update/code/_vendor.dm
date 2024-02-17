@@ -13,6 +13,8 @@
 					/obj/item/clothing/suit/armor/vest/peacekeeper/brit = 5,
 					/obj/item/clothing/neck/security_cape = 5,
 					/obj/item/clothing/neck/security_cape/armplate = 5,
+					/obj/item/clothing/mask/balaclava/breath/redscarf = 2,
+					/obj/item/clothing/mask/gas/sechailer = 5,
 					/obj/item/storage/backpack/security = 5,
 					/obj/item/storage/backpack/satchel/sec = 5,
 					/obj/item/storage/backpack/duffelbag/sec = 5,
@@ -22,26 +24,28 @@
 					/obj/item/clothing/under/rank/security/peacekeeper = 10,
 					/obj/item/clothing/under/rank/security/skyrat/utility = 3,
 					/obj/item/clothing/under/rank/security/officer/metropolice = 3,
+					/obj/item/clothing/under/rank/security/russobluecamo = 3,
+					/obj/item/clothing/under/rank/security/tacticool = 3,
 					/obj/item/clothing/head/helmet/sec/metropolice = 3,
-					/obj/item/clothing/shoes/jackboots/sec = 10,
 					/obj/item/clothing/head/beret/sec = 5,
 					/obj/item/clothing/head/beret/sec/peacekeeper = 5,
 					/obj/item/clothing/head/helmet/sec/sol = 5,
 					/obj/item/clothing/head/hats/warden/police/patrol = 5,
 					/obj/item/clothing/head/costume/ushanka/sec = 10,
 					/obj/item/clothing/gloves/color/black = 10,
+					/obj/item/clothing/shoes/jackboots/sec = 10,
 					/obj/item/clothing/shoes/jackboots/black = 3,
 					/obj/item/clothing/shoes/jackboots/tall = 3,
-					/obj/item/clothing/mask/balaclava/breath/redscarf = 2,
-					/obj/item/clothing/under/rank/security/russobluecamo = 3,
-					/obj/item/clothing/under/rank/security/tacticool = 3,
 					/obj/item/storage/belt/security/medic/alternate = 3,
 					/obj/item/storage/belt/security/medic = 3,
+					/obj/item/clothing/glasses/hud/security/ballistic = 3,
 					)
 	premium = list( /obj/item/clothing/under/rank/security/officer/formal = 3,
+					/obj/item/clothing/under/rank/security/officer/hecu = 3,
 					/obj/item/clothing/suit/jacket/officer/blue = 3,
 					/obj/item/clothing/mask/gas/sechailer/syndicate = 2,
 					/obj/item/clothing/mask/balaclava = 2,
+					/obj/item/clothing/mask/gas/sechailer/swat = 1,
 					/obj/item/clothing/mask/gas/syndicate/ds = 2,
 					/obj/item/clothing/mask/gas/syndicate/ds/wide = 2,
 					/obj/item/clothing/mask/gas/syndicate/ds/mouth = 2,
@@ -49,10 +53,8 @@
 					/obj/item/clothing/mask/gas/sechailer/syndicate/flektarn = 2,
 					/obj/item/clothing/mask/gas/sechailer/syndicate/flektarn/green = 2,
 					/obj/item/clothing/mask/gas/sechailer/syndicate/flektarn/tan = 2,
-					/obj/item/clothing/under/rank/security/officer/hecu = 3,
 					/obj/item/storage/backpack/rucksack = 2,
 					/obj/item/storage/backpack/hipbag = 2,
-					/obj/item/clothing/mask/gas/sechailer/swat = 1,
 					/obj/item/clothing/head/beret/sec/navyofficer = 3,
 					)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
@@ -61,7 +63,7 @@
 
 /obj/machinery/vending/security
 	name = "\improper SecTech Equipment Vendor"
-	desc = "An Armadyne peacekeeper equipment vendor."
+	desc = "An NanoTrasen Security equipment vendor."
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
 	//icon = 'modular_nova/modules/sec_haul/icons/vending/vending.dmi'
 	products = list(
