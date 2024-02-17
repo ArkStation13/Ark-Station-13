@@ -113,11 +113,35 @@
 
 /obj/item/storage/belt/security/medic
 	name = "security medic belt"
-	desc = "A fancy looking security belt emblazoned with markings of the security medic. Sadly only holds security gear."
+	desc = "A fancy looking security belt emblazoned with markings of the security medic."
 	icon = 'zov_modular_arkstation/modules/security-medic-renewal/icons/obj/belts.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/security-medic-renewal/icons/mob/belts.dmi'
 	worn_icon_state = "belt_medic"
 	icon_state = "belt_medic"
+
+/obj/item/storage/belt/security/medic/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 5
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_box,
+		/obj/item/ammo_casing/shotgun,
+		/obj/item/assembly/flash/handheld,
+		/obj/item/clothing/glasses,
+		/obj/item/clothing/gloves,
+		/obj/item/flashlight/seclite,
+		/obj/item/food/donut,
+		/obj/item/grenade,
+		/obj/item/gun, //NOVA EDIT ADDITION
+		/obj/item/holosign_creator/security,
+		/obj/item/knife/combat,
+		/obj/item/melee/baton,
+		/obj/item/radio,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/restraints/handcuffs,
+		/obj/item/restraints/legcuffs/bola,
+		/obj/item/stack/medical,
+		))
 
 /obj/item/storage/belt/security/medic/full/PopulateContents()
 	new /obj/item/reagent_containers/spray/pepper(src)
@@ -131,3 +155,11 @@
 	name = "security medic belt"
 	worn_icon_state = "belt_medic_alt"
 	icon_state = "belt_medic_alt"
+
+/obj/item/storage/belt/security/medic/alternate/full/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/melee/baton/security/loaded(src)
+	update_appearance()

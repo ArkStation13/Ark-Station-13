@@ -35,6 +35,8 @@
 					/obj/item/clothing/mask/balaclava/breath/redscarf = 2,
 					/obj/item/clothing/under/rank/security/russobluecamo = 3,
 					/obj/item/clothing/under/rank/security/tacticool = 3,
+					/obj/item/storage/belt/security/medic/alternate = 3,
+					/obj/item/storage/belt/security/medic = 3,
 					)
 	premium = list( /obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/suit/jacket/officer/blue = 3,
