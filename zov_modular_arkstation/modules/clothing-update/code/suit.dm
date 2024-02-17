@@ -219,10 +219,10 @@
 			RESKIN_WORN_ICON_STATE = "riot"
 		),
 		"Black" = list(
-			RESKIN_ICON_STATE = "riot_wm",
+			RESKIN_ICON_STATE = "riot-wm",
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
-			RESKIN_WORN_ICON_STATE = "riot_wm"
+			RESKIN_WORN_ICON_STATE = "riot-wm"
 		)
 	)
 
@@ -242,13 +242,18 @@
 			RESKIN_WORN_ICON_STATE = "bulletproof"
 		),
 		"Black" = list(
-			RESKIN_ICON_STATE = "bulletproof_wm",
+			RESKIN_ICON_STATE = "bulletproof-wm",
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
-			RESKIN_WORN_ICON_STATE = "bulletproof_wm"
+			RESKIN_WORN_ICON_STATE = "bulletproof-wm"
+		),
+		"Old" = list(
+			RESKIN_ICON	= 'icons/obj/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'icons/mob/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON_STATE = "bulletproof",
+			RESKIN_ICON_STATE = "bulletproof"
 		)
 	)
-
 
 /obj/item/clothing/suit/toggle/labcoat/paramedic/red
 	name = "red EMT coat"

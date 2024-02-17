@@ -19,27 +19,34 @@
 		/obj/item/gun/energy/e_gun,
 	)
 
+/obj/structure/closet/ammunitionlocker/useful
+	name = "non-lethal ammunition locker"
+	icon_state = "sec"
+	icon_door = "sec_wardrobe"
+
 /obj/structure/closet/ammunitionlocker/useful/PopulateContents()
 	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/storage/box/rubbershot(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
+
 
 /obj/effect/spawner/armory_spawn/smg
-	guns = list()
+	guns = list(
+		/obj/item/gun/ballistic/automatic/wt550/ammoless,
+		/obj/item/gun/ballistic/automatic/wt550/ammoless,
+		/obj/item/gun/ballistic/automatic/wt550/ammoless,
+	)
 	vertical_guns = TRUE
-	new	/obj/item/gun/ballistic/automatic/wt550/no_ammo,
-	new	/obj/item/gun/ballistic/automatic/wt550/no_ammo,
-	new	/obj/item/gun/ballistic/automatic/wt550/no_ammo,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
-	new /obj/item/ammo_box/magazine/wt550m9/rubber,
 
 /obj/structure/closet/secure_closet/armory_kiboko
 	name = "lethal ammunition locker"
@@ -58,7 +65,7 @@
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
 
-/obj/item/gun/ballistic/automatic/wt550/no_ammo
+/obj/item/gun/ballistic/automatic/wt550/ammoless
 	spawnwithmagazine = FALSE
 
 /obj/item/ammo_box/magazine/wt550m9/rubber
