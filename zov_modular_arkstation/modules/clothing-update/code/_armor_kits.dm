@@ -52,8 +52,8 @@
 
 	var/obj/item/clothing/C = target
 
-	if(C.armor_type != /datum/armor/suit_armor/blueshield)
-		C.armor_type = /datum/armor/suit_armor/blueshield
+	if(C.armor_type != /datum/armor/suit_armor)
+		C.armor_type = /datum/armor/suit_armor
 		used = TRUE
 
 	if(used)
@@ -82,8 +82,8 @@
 
 	var/obj/item/clothing/C = target
 
-	if(C.armor_type != /datum/armor/head_helmet/blueshield)
-		C.armor_type = /datum/armor/head_helmet/blueshield
+	if(C.armor_type != /datum/armor/head_helmet)
+		C.armor_type = /datum/armor/head_helmet
 		used = TRUE
 
 	if(used)

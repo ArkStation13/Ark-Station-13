@@ -1168,7 +1168,7 @@
 /area/station/maintenance/fore/lesser)
 "avU" = (
 /obj/structure/bed,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/button/door/directional/east{
 	id = "Cabin2";
@@ -2017,6 +2017,9 @@
 "aKn" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
 	},
 /turf/open/floor/wood,
 /area/station/commons/lounge)
@@ -7158,9 +7161,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/sec{
-	dir = 1
-	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "cAG" = (
@@ -12019,18 +12019,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
-"eoo" = (
-/obj/structure/flora/bush/style_random,
-/obj/structure/flora/bush/snow/style_random,
-/obj/structure/flora/bush/snow/style_random,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "eov" = (
 /obj/machinery/computer/slot_machine{
 	pixel_y = 2
@@ -15116,17 +15104,6 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)
-"ftz" = (
-/obj/structure/flora/bush/fullgrass/style_random,
-/obj/structure/flora/bush/grassy/style_random,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "ftK" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance/four,
@@ -16397,13 +16374,6 @@
 	dir = 1
 	},
 /area/station/engineering/atmos)
-"fVC" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "fVF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -16883,10 +16853,8 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "gfe" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -22165,14 +22133,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
-"hZn" = (
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/snow/style_random,
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "hZy" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 1
@@ -26287,14 +26247,10 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "joP" = (
-/obj/structure/flora/bush/snow/style_random,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "jpj" = (
 /obj/item/radio/intercom/directional/north,
@@ -27455,11 +27411,6 @@
 /obj/item/multitool,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva)
-"jIk" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "jIz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
@@ -31284,12 +31235,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
-"kZn" = (
-/obj/structure/flora/bush/fullgrass/style_random,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "kZq" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -32478,7 +32423,7 @@
 /area/station/medical/virology)
 "lxf" = (
 /obj/structure/bed,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/machinery/button/door/directional/west{
 	id = "Cabin5";
@@ -34083,16 +34028,10 @@
 /area/station/engineering/atmos)
 "men" = (
 /obj/machinery/light/floor,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "mez" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -34822,7 +34761,6 @@
 /obj/item/storage/backpack/blueshield,
 /obj/item/storage/backpack/duffelbag/blueshield,
 /obj/item/storage/backpack/satchel/blueshield,
-/obj/item/clothing/gloves/tackler/combat/insulated/blueshield,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
@@ -37514,6 +37452,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/vehicle/sealed/vectorcraft/auto/spacepod/sec{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "nlP" = (
@@ -37928,10 +37869,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/command/gateway)
-"nsk" = (
-/obj/structure/flora/bush/lavendergrass/style_random,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "nsq" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -39770,17 +39707,13 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "nZz" = (
-/obj/structure/flora/bush/flowers_yw/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "nZC" = (
 /obj/machinery/airalarm/directional/north,
@@ -42495,7 +42428,7 @@
 "oYv" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/bed,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/machinery/button/door/directional/west{
 	id = "Cabin4";
@@ -43703,22 +43636,6 @@
 /area/station/engineering/atmos)
 "pur" = (
 /obj/structure/table/wood,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
-/obj/item/toy/snowball,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "puD" = (
@@ -44162,17 +44079,10 @@
 /area/station/medical/chemistry)
 "pCJ" = (
 /obj/machinery/light/floor,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "pCL" = (
 /obj/effect/turf_decal/delivery,
@@ -44487,16 +44397,10 @@
 /area/station/engineering/atmos)
 "pHE" = (
 /obj/machinery/light/floor,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
-	dir = 1
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "pHS" = (
 /obj/structure/light_construct/directional/east,
@@ -45206,7 +45110,6 @@
 	pixel_x = -4;
 	pixel_y = 10
 	},
-/obj/item/storage/medkit/tactical/blueshield,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/blueshield)
 "pUp" = (
@@ -45609,10 +45512,6 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
-"qcQ" = (
-/obj/structure/flora/tree/pine/xmas/presents,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "qdm" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/stripes/corner{
@@ -46312,16 +46211,6 @@
 /obj/structure/sign/warning/secure_area,
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/command/nuke_storage)
-"qpM" = (
-/obj/structure/flora/bush/snow/style_random,
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "qqg" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -47922,19 +47811,13 @@
 /area/station/commons/locker)
 "qRo" = (
 /obj/machinery/light/floor,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
-	dir = 8
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
 	},
+/turf/open/floor/wood,
 /area/station/commons/lounge)
 "qRz" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
@@ -50165,17 +50048,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
-"rEQ" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "rES" = (
 /turf/closed/wall/r_wall,
 /area/station/security/office)
@@ -50743,18 +50615,6 @@
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
-"rOB" = (
-/obj/structure/flora/bush/flowers_pp/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/flora/bush/snow/style_random,
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "rOF" = (
 /turf/closed/wall,
 /area/station/medical/psychology)
@@ -51075,7 +50935,7 @@
 /area/station/commons/locker)
 "rUo" = (
 /obj/structure/bed,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
@@ -52773,7 +52633,7 @@
 "sBa" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/button/door/directional/east{
 	id = "Cabin3";
@@ -52993,13 +52853,6 @@
 /obj/structure/window/spawner/directional/west,
 /turf/open/floor/wood,
 /area/station/service/library)
-"sEh" = (
-/obj/structure/flora/bush/snow/style_random,
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "sEk" = (
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/structure/cable,
@@ -54334,10 +54187,6 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"tay" = (
-/obj/structure/flora/bush/snow/style_random,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "taz" = (
 /obj/structure/cable,
 /obj/machinery/power/solar{
@@ -63425,17 +63274,6 @@
 /obj/effect/spawner/random/trash/bin,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
-"wbU" = (
-/obj/structure/flora/bush/flowers_br/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random,
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/turf/open/floor/plating/snowed/smoothed{
-	name = "safe snowed-over plating";
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/station/commons/lounge)
 "wcf" = (
 /obj/structure/closet/crate/coffin,
 /obj/structure/window/spawner/directional/east,
@@ -63732,7 +63570,6 @@
 /turf/closed/wall,
 /area/station/maintenance/port/fore)
 "wgC" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table/wood,
 /obj/item/food/snowcones/clown,
 /obj/item/food/snowcones/blue{
@@ -63936,11 +63773,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
-"wkX" = (
-/obj/structure/flora/bush/reed/style_random,
-/obj/structure/flora/bush/leavy/style_random,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "wlj" = (
 /obj/machinery/hydroponics/soil{
 	pixel_y = 8
@@ -65156,10 +64988,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood,
 /area/station/service/bar/backroom)
-"wHQ" = (
-/obj/structure/flora/bush/flowers_yw/style_random,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "wHW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -65227,10 +65055,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
-"wKu" = (
-/obj/structure/flora/bush/ferny/style_random,
-/turf/open/misc/snow/actually_safe,
-/area/station/commons/lounge)
 "wKC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -65341,7 +65165,7 @@
 "wNp" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/bedsheet/dorms,
+/obj/effect/spawner/random/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/landmark/start/hangover,
 /obj/machinery/button/door/directional/west{
@@ -105136,9 +104960,9 @@ mjs
 rac
 fWl
 pCJ
-rOB
-qpM
-rEQ
+hkG
+hkG
+qVt
 men
 eHS
 bpq
@@ -105392,11 +105216,11 @@ tqU
 kLh
 rac
 nXG
-eoo
-wHQ
-nsk
-jIk
-fVC
+joP
+hkG
+hkG
+qVt
+hNn
 fZV
 dWg
 mal
@@ -105649,11 +105473,11 @@ fRS
 tUv
 rac
 rzi
-ftz
-wkX
-qcQ
-kZn
-sEh
+joP
+hkG
+hkG
+qVt
+hkG
 gwc
 bUk
 mal
@@ -105907,10 +105731,10 @@ tUv
 rac
 bQO
 joP
-tay
-wKu
-jIk
-hZn
+hkG
+hkG
+qVt
+hkG
 cgl
 uZu
 mal
@@ -106164,7 +105988,7 @@ tUv
 bvJ
 aKn
 qRo
-wbU
+geX
 geX
 nZz
 pHE

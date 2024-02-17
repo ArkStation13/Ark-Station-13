@@ -6,3 +6,6 @@
 
 /obj/machinery/door/poddoor
 	icon = 'zov_modular_arkstation/modules/new-blastdoor-sprites/blast_door.dmi'
+
+/obj/machinery/door/poddoor/shutters/window
+	icon = 'zov_modular_arkstation/modules/new-blastdoor-sprites/shutters_window.dmi'
