@@ -3,13 +3,13 @@
 	unique_reskin = list(
 		"Dark-Tint Variant" = list(
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/glasses.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/obj/clothing/glasses.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/eyes.dmi',
 			RESKIN_ICON_STATE = "security_hud_black",
 			RESKIN_WORN_ICON_STATE = "security_hud_black"
 		),
 		"Light-Tint Variant" = list(
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/glasses.dmi',
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/obj/clothing/glasses.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/eyes.dmi',
 			RESKIN_ICON_STATE = "security_hud_blue",
 			RESKIN_WORN_ICON_STATE = "security_hud_blue"
 		),
