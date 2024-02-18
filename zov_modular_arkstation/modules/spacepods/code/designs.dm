@@ -22,7 +22,7 @@
 	build_path = /obj/item/circuitboard/machine/podfabricator
 	materials = list(/datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT*2)
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_FAB
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
