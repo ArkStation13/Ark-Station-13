@@ -348,7 +348,10 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/effect/turf_decal/tile/red/half{
+	dir = 8
+	},
+/obj/item/storage/toolbox/drone,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "agG" = (
@@ -2570,6 +2573,10 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/stone,
 /area/mine/eva/lower)
+"aQB" = (
+/obj/structure/chair,
+/turf/open/floor/iron/dark,
+/area/station/security/processing)
 "aQJ" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -6718,11 +6725,11 @@
 /turf/open/floor/iron/dark,
 /area/mine/mechbay)
 "bYg" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/tile/red/half/contrasted{
+/obj/effect/turf_decal/tile/red/half{
 	dir = 4
 	},
-/obj/effect/spawner/random/armory/laser_gun,
+/obj/structure/rack/gunrack,
+/obj/effect/spawner/armory_spawn/mod_lasers_big,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "bYm" = (
@@ -11035,14 +11042,14 @@
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "dkB" = (
-/obj/structure/rack,
 /obj/structure/window/reinforced/spawner/directional/north{
 	layer = 2.9
 	},
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/spawner/random/armory/shotgun,
+/obj/structure/rack/gunrack,
+/obj/effect/spawner/armory_spawn/mod_lasers_small,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "dkK" = (
@@ -13337,6 +13344,7 @@
 "dVn" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/firealarm/directional/north,
+/obj/structure/chair,
 /turf/open/floor/iron/dark,
 /area/station/security/processing)
 "dVq" = (
@@ -20551,7 +20559,7 @@
 /obj/item/clothing/head/helmet/toggleable/riot{
 	pixel_y = 6
 	},
-/obj/item/storage/medkit/tactical/blueshield,
+/obj/item/storage/medkit/tactical,
 /obj/item/gun_maintenance_supplies{
 	pixel_x = -4;
 	pixel_y = 10
@@ -25112,7 +25120,6 @@
 /obj/item/storage/backpack/blueshield,
 /obj/item/storage/backpack/duffelbag/blueshield,
 /obj/item/storage/backpack/satchel/blueshield,
-/obj/item/clothing/gloves/tackler/combat/insulated/blueshield,
 /obj/item/clothing/neck/mantle/bsmantle,
 /obj/item/clothing/shoes/winterboots/ice_boots{
 	pixel_x = 6;
@@ -48242,10 +48249,8 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Armory - Internal - Lower"
 	},
-/obj/structure/rack,
-/obj/item/storage/toolbox/drone,
-/obj/effect/turf_decal/tile/red/half/contrasted,
-/obj/machinery/light/small/directional/north,
+/obj/effect/turf_decal/tile/red/half,
+/obj/structure/closet/secure_closet/armory_kiboko,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "oBg" = (
@@ -58608,10 +58613,11 @@
 /turf/open/floor/engine/cult,
 /area/station/service/library)
 "rGh" = (
-/obj/machinery/recharge_station,
-/obj/effect/turf_decal/tile/red/anticorner/contrasted{
-	dir = 1
+/obj/effect/turf_decal/tile/red/half{
+	dir = 8
 	},
+/obj/effect/spawner/armory_spawn/shotguns,
+/obj/structure/rack/gunrack,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "rGl" = (
@@ -59609,6 +59615,9 @@
 /area/mine/laborcamp)
 "rXh" = (
 /obj/effect/spawner/random/vending/colavend,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/processing)
 "rXi" = (
@@ -62666,6 +62675,9 @@
 /area/station/hallway/primary/starboard)
 "sQO" = (
 /obj/effect/spawner/random/vending/snackvend,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/processing)
 "sRp" = (
@@ -71180,9 +71192,10 @@
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "vDx" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/tile/red/half/contrasted,
-/obj/effect/spawner/random/armory/disablers,
+/obj/machinery/light/directional/north,
+/obj/structure/rack/gunrack,
+/obj/effect/turf_decal/tile/red/half,
+/obj/effect/spawner/armory_spawn/smg,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "vDy" = (
@@ -71410,14 +71423,17 @@
 /turf/open/floor/iron,
 /area/station/cargo/sorting)
 "vHM" = (
-/obj/structure/rack,
 /obj/structure/window/reinforced/spawner/directional/north{
 	layer = 2.9
 	},
-/obj/effect/turf_decal/tile/red/half/contrasted{
+/obj/effect/turf_decal/tile/red/half{
 	dir = 8
 	},
-/obj/effect/spawner/random/armory/rubbershot,
+/obj/structure/closet/ammunitionlocker/useful,
+/obj/item/storage/box/lethalshot,
+/obj/item/storage/box/lethalshot,
+/obj/item/storage/box/lethalshot,
+/obj/item/storage/box/lethalshot,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "vHR" = (
@@ -74178,9 +74194,10 @@
 /obj/item/gun/energy/ionrifle,
 /obj/item/gun/energy/temperature/security,
 /obj/item/clothing/suit/hooded/ablative,
-/obj/effect/turf_decal/tile/red/half/contrasted{
+/obj/effect/turf_decal/tile/red/half{
 	dir = 8
 	},
+/obj/item/gun/grenadelauncher,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "wyO" = (
@@ -243260,7 +243277,7 @@ bln
 bln
 sEB
 ykw
-clq
+aQB
 clq
 tCR
 lGK
