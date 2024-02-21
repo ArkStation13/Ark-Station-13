@@ -67,7 +67,6 @@
 	playsound(src.loc, 'zov_modular_arkstation/modules/new-sounds/sound/watersplash.ogg', 40, 1)
 
 /obj/item/shard/on_entered(datum/source, atom/movable/AM)
-	SIGNAL_HANDLER
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(!(L.movement_type & MOVETYPES_NOT_TOUCHING_GROUND) || L.buckled)
