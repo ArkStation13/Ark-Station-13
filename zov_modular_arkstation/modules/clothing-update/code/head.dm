@@ -13,42 +13,49 @@
 			RESKIN_ICON_STATE = "helmet",
 			RESKIN_ICON = 'icons/obj/clothing/head/helmet.dmi',
 			RESKIN_WORN_ICON = 'icons/mob/clothing/head/helmet.dmi',
-			RESKIN_WORN_ICON_STATE = "helmet"
+			RESKIN_WORN_ICON_STATE = "helmet",
+			RESKIN_BASE_ICON_STATE = "helmet"
 		),
 		"Blue" = list(
 			RESKIN_ICON_STATE = "helmetalt_blue",
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi',
-			RESKIN_WORN_ICON_STATE = "helmetalt_blue"
+			RESKIN_WORN_ICON_STATE = "helmetalt_blue",
+			RESKIN_BASE_ICON_STATE = "helmetalt_blue"
 		),
 		"Blue Alt" = list(
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/obj/obj.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/mob/mob.dmi',
 			RESKIN_WORN_ICON_STATE = "inteq_helmet_blue",
-			RESKIN_ICON_STATE = "inteq_helmet_blue"
+			RESKIN_ICON_STATE = "inteq_helmet_blue",
+			RESKIN_BASE_ICON_STATE = "inteq_helmet_blue"
 		),
 		"Red Alt" = list(
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/obj/obj.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/mob/mob.dmi',
 			RESKIN_WORN_ICON_STATE = "inteq_helmet_red",
-			RESKIN_ICON_STATE = "inteq_helmet_red"
+			RESKIN_ICON_STATE = "inteq_helmet_red",
+			RESKIN_BASE_ICON_STATE = "inteq_helmet_red"
 		),
 		"Black" = list(
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/obj/obj.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/mob/mob.dmi',
 			RESKIN_WORN_ICON_STATE = "inteq_helmet_black",
-			RESKIN_ICON_STATE = "inteq_helmet_black"
+			RESKIN_ICON_STATE = "inteq_helmet_black",
+			RESKIN_BASE_ICON_STATE = "inteq_helmet_black"
 		),
 		"Peacekeeper" = list(
 			RESKIN_ICON_STATE = "peacekeeper_helmet",
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi',
-			RESKIN_WORN_ICON_STATE = "peacekeeper_helmet"
+			RESKIN_WORN_ICON_STATE = "peacekeeper_helmet",
+			RESKIN_BASE_ICON_STATE = "peacekeeper_helmet"
 		),
 		"No Visor" = list(
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi',
 			RESKIN_WORN_ICON_STATE = "security_helmet_novisor",
-			RESKIN_ICON_STATE = "security_helmet_novisor"
+			RESKIN_ICON_STATE = "security_helmet_novisor",
+			RESKIN_BASE_ICON_STATE = "security_helmet_novisor"
 		)
 	)

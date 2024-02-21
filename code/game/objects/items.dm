@@ -1472,6 +1472,12 @@
 		inhand_icon_state = unique_reskin[pick][RESKIN_INHAND_STATE]
 	if(unique_reskin[pick][RESKIN_SUPPORTS_VARIATIONS_FLAGS])
 		supports_variations_flags = unique_reskin[pick][RESKIN_SUPPORTS_VARIATIONS_FLAGS]
+
+// ARK STATION EDIT START
+	if(unique_reskin[pick][RESKIN_BASE_ICON_STATE])
+		base_icon_state = unique_reskin[pick][RESKIN_BASE_ICON_STATE]
+// ARK STATION EDIT END
+
 	if(ishuman(M))
 		var/mob/living/carbon/human/wearer = M
 		wearer.regenerate_icons() // update that mf

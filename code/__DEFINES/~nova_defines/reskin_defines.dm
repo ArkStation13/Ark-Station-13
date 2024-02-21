@@ -6,3 +6,6 @@
 #define RESKIN_INHAND_L "reskin_inhand_l"
 #define RESKIN_INHAND_R "reskin_inhand_r"
 #define RESKIN_INHAND_STATE "reskin_inhand_state"
+
+// ARK STATION ADD:
+#define RESKIN_BASE_ICON_STATE "reskin_base_icon_state"
