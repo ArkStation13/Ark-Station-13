@@ -141,8 +141,8 @@
 	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/dosh_drop.ogg'
 
 /obj/machinery/door/airlock
-	doorOpen = 'zov_modular_arkstation/modules/new-sounds/sound/hall1o.ogg'
-	doorClose = 'zov_modular_arkstation/modules/new-sounds/sound/hall1c.ogg'
+	doorOpen = 'zov_modular_arkstation/modules/new-sounds/sound/open.ogg'
+	doorClose = 'zov_modular_arkstation/modules/new-sounds/sound/close.ogg'
 	forcedOpen = 'zov_modular_arkstation/modules/new-sounds/sound/blastdooropen.ogg'
 
 /obj/machinery/door/poddoor
