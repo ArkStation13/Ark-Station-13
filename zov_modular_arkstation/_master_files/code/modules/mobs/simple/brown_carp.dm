@@ -1,7 +1,7 @@
 /mob/living/basic/carp/brown
 	name = "brown space carp"
 	desc = "A ferocious, fang-bearing creature that resembles a fish."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/mob/simple_mob/brown_carp.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/mob/simple_mob/brown_carp.dmi'
 	faction = list("carp", "InteQ")
 	var/list/loot = list()
 
@@ -12,7 +12,7 @@
 
 /mob/living/basic/carp/brown/beret
 	name = "brown space carp with beret"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/mob/simple_mob/brown_carp_beret.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/mob/simple_mob/brown_carp_beret.dmi'
 	loot = list(/obj/item/clothing/suit/armor/inteq/vanguard , /obj/item/clothing/head/HoS/inteq_vanguard)
 
 /mob/living/basic/carp/brown/beret/death(gibbed)

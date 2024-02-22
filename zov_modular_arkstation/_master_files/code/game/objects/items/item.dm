@@ -5,11 +5,11 @@
 /obj/item/icona_madonna
 	name = "Madonna icon"
 	desc = "Икона великой Мадонны."
-	icon =  'zov_modular_arkstation/krashly_modulars/icons/obj/structures.dmi'
+	icon =  'zov_modular_arkstation/_master_files/icons/obj/structures.dmi'
 	icon_state = "madonna"
 
 /obj/structure/desk_bell
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/structures.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/structures.dmi'
 	icon_state = "table-bell"
 
 // VULP POSTERS //
@@ -17,7 +17,7 @@
 /obj/structure/sign/poster/contraband/vulpes
 	name = "Vulpes"
 	desc = "Looks like an advertisement for lewd movie about vulpkanines."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "vulpes"
 
 /obj/structure/sign/poster/contraband/vulpes/vulp_beer
@@ -100,14 +100,14 @@
 /obj/structure/sign/flag/inteq
 	name = "flag of PMC InteQ"
 	desc = "Коричнево-Оранжевый флаг с щитом по центру. Флаг пахнет кровью."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_flag.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_flag.dmi'
 	icon_state = "full"
 	item_flag = /obj/item/sign/flag/inteq
 
 /obj/item/sign/flag/inteq
 	name = "folded flag of the PMC InteQ"
 	desc = "Сложенный флаг ЧВК 'InteQ'."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_flag.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_flag.dmi'
 	icon_state = "mini"
 	sign_path = /obj/structure/sign/flag/inteq
 
@@ -125,43 +125,43 @@
 /obj/structure/sign/poster/contraband/inteq/inteq_recruitment
 	name = "InteQ Recruitment"
 	desc = "Увидь Галактику! Заработай денег! Вступай сегодня!"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_sign
 	name = "InteQ poster"
 	desc = "Частная Военная Компания, занимающаяся обороной частных предприятий и выполнением заказов."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_baza"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_better_dead
 	name = "Better Dead!"
 	desc = "Сокрушим врагов!"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_better_dead"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_no_peace
 	name = "No peace!"
 	desc = "Не имей сто друзей, а имей сто рублей, Вступай в ЧВК 'InteQ'!"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_no_love"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_no_sex
 	name = "No SEX"
 	desc = "Хватит дрочить, вступай в ЧВК 'InteQ'!"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_no_sex"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_vulp
 	name = "InteQ Recruitment"
 	desc = "Коричневый постер. На нём написано: 'Даже если ты дрочишь на вульп, вступай в ЧВК 'InteQ'. Сокрушим врагов вместе!'."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/poster.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_vulp"
 
 /obj/item/storage/box/inteq_box
 	name = "brown box"
 	desc = "В неё определенно нет ничего опасного."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/box.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/box.dmi'
 	icon_state = "inteqbox"
 
 /obj/item/storage/box/inteq_box/inteq_clothes
@@ -182,14 +182,14 @@
 	desc = "Жёлтое мыло с крайне мощными химическими агентами, которые отмывают кровь быстрее."
 	icon_state = "soapinteq"
 	cleanspeed = 10
-	// icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_soap.dmi' // ПЕРЕЕХАЛИ НИЖЕ
-	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/mob/inhands/obj/lefthand.dmi'
-	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/mob/inhands/obj/righthand.dmi'
+	// icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_soap.dmi' // ПЕРЕЕХАЛИ НИЖЕ
+	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/obj/lefthand.dmi'
+	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/obj/righthand.dmi'
 
 /obj/item/food/chips/intecookies
 	name = "InteCookies"
 	desc = "Песочное печенье, каждое из которых в форме маленьких щитов."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_snacks.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_snacks.dmi'
 	icon_state = "inteqcookies"
 	trash_type = /obj/item/trash/intecookies
 	tastes = list("shortbread cookies" = 1)
@@ -197,14 +197,14 @@
 
 /obj/item/trash/intecookies
 	name = "intecookies bag"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_snacks.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_snacks.dmi'
 	icon_state = "inteqcookies_trash"
 	grind_results = list(/datum/reagent/aluminium = 1)
 
 // /obj/item/storage/fancy/cigarettes/cigpack_inteq
 // 	name = "cigarette packet"
 // 	desc = "Пачка сигарет от известной ЧВК."
-// 	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/inteq_cigarettes.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_cigarettes.dmi'
 // 	icon_state = "inteq"
 // 	spawn_type = /obj/item/clothing/mask/cigarette/inteq
 
@@ -214,13 +214,13 @@
 
 /obj/item/toy/mecha/hermes
 	name = "toy Hermes"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/toys.dmi'
 	icon_state = "toy_hermes"
 	max_combat_health = 6 //300 integrity
 
 /obj/item/toy/mecha/ares
 	name = "toy Ares"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/toys.dmi'
 	icon_state = "toy_ares"
 	max_combat_health = 7 //350 integrity
 
@@ -231,13 +231,13 @@
 /mob/living/basic/pig/assistant
 	name = "Danya"
 	real_name = "Danya"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 	maxHealth = 250
 	health = 250
 	gender = MALE
 
 /mob/living/basic/pet/fox/fennec/eldritch
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 	maxHealth = 100
 	health = 100
 	held_state = "fennec_eldritch"
@@ -254,7 +254,7 @@
 	maxHealth = 250
 	health = 250
 	gender = MALE
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 
 /mob/living/simple_animal/pet/fox/fennec
 	name = "Red"
@@ -268,7 +268,7 @@
 	maxHealth = 50
 	health = 50
 	gender = MALE
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 
 /mob/living/basic/pet/cat/alta
 	name = "Alta"
@@ -279,7 +279,7 @@
 	held_state = "alta"
 	unique_pet = TRUE
 	gender = FEMALE
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 
 /mob/living/basic/pet/dog/corgi/Lisa/ada
 	name = "Ada"
@@ -292,7 +292,7 @@
 	icon_living = "ada"
 	icon_dead = "ada_dead"
 	held_state = "ada"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 
 /mob/living/basic/pet/fox/emma
 	name = "Emma"
@@ -302,7 +302,7 @@
 	held_state = "emma"
 	see_in_dark = 10
 	gender = FEMALE
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/animals.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
 
 ///////////////
 
@@ -310,9 +310,9 @@
 	name = "Emma plushie"
 	desc = "An adorable stuffed toy resembling a vulp."
 	icon_state = "emma"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps.dmi'
-	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_l.dmi'
-	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_r.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/vulps/vulps.dmi'
+	lefthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_l.dmi'
+	righthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_r.dmi'
 
 /obj/item/toy/plush/fox/emma/shiro
 	name = "Shiro plushie"
@@ -335,34 +335,34 @@
 	name = "security officer plushie"
 	desc = "A stuffed toy that resembles a Nanotrasen operative. He smells like burnt cotton."
 	icon_state = "who"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps.dmi'
-	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_l.dmi'
-	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_r.dmi'
-	squeak_override = list('zov_modular_arkstation/krashly_modulars/sound/plush/plush_1.ogg' = 9, 'zov_modular_arkstation/krashly_modulars/sound/plush/plush_2.ogg' = 1)
+	icon = 'zov_modular_arkstation/_master_files/icons/vulps/vulps.dmi'
+	lefthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_l.dmi'
+	righthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_r.dmi'
+	squeak_override = list('zov_modular_arkstation/_master_files/sound/plush/plush_1.ogg' = 9, 'zov_modular_arkstation/_master_files/sound/plush/plush_2.ogg' = 1)
 
 /obj/item/toy/plush/qm
 	name = "supply chief plushie"
 	desc = "A stuffed toy that resembles a Cargonia Chief. Looks like a fallen economy."
 	icon_state = "qm"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps.dmi'
-	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_l.dmi'
-	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_r.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/vulps/vulps.dmi'
+	lefthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_l.dmi'
+	righthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_r.dmi'
 
 /obj/item/toy/plush/judas
 	name = "yellow shark plushie"
 	desc = "An adorable stuffed plushie that resembles a yellow security shark."
 	icon_state = "judas"
-	squeak_override = list('zov_modular_arkstation/krashly_modulars/sound/plush/voice_alphys.ogg' = 9)
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps.dmi'
-	lefthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_l.dmi'
-	righthand_file = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps_r.dmi'
+	squeak_override = list('zov_modular_arkstation/_master_files/sound/plush/voice_alphys.ogg' = 9)
+	icon = 'zov_modular_arkstation/_master_files/icons/vulps/vulps.dmi'
+	lefthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_l.dmi'
+	righthand_file = 'zov_modular_arkstation/_master_files/icons/vulps/vulps_r.dmi'
 
 /obj/item/toy/plush/nukeplushie/omega
 	name = "Omega plushie"
 	desc = "This plushie really has an empty noggin and zero thoughts about commiting something especially cruel."
 	icon_state = "omega"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/vulps/vulps.dmi'
-	squeak_override = list('zov_modular_arkstation/krashly_modulars/sound/plush/ooh.ogg' = 9)
+	icon = 'zov_modular_arkstation/_master_files/icons/vulps/vulps.dmi'
+	squeak_override = list('zov_modular_arkstation/_master_files/sound/plush/ooh.ogg' = 9)
 
 /obj/item/toy/plush/judas/vance
 	name = "Vance plushie"
@@ -374,7 +374,7 @@
 ///////////////////
 
 /obj/item/toy/figure
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
 
 /obj/item/toy/figure/inteq
 	name = "\improper InteQ Mercenary action figure"
@@ -392,9 +392,9 @@
 	toysay = "At the cost of my life!"
 
 /obj/item/toy/toy_xeno
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
 	icon_state = "toy_xeno"
 
 /obj/item/toy/cattoy
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
 	icon_state = "toy_mouse"

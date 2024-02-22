@@ -1,7 +1,7 @@
 /obj/structure/dead_syndie
 	name = "syndicate synthetic"
 	desc = "Повешеный на своих же проводах прототип Боевых Машин Синдиката. Кажется с него стекает кровь."
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/32x64.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/32x64.dmi'
 	icon_state = "syndproto"
 	density = TRUE
 	anchored = TRUE

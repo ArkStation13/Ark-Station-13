@@ -2,7 +2,7 @@
 /obj/vehicle/sealed/mecha/marauder/mauler/ares
 	desc = "Бог Войны среди Мехов. Разработки Солнечной Федерации дали нам Ареса. Бронированная машина будет давить ваших врагов."
 	name = "\improper MIB-02 Ares"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/mecha/ares.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/mecha/ares.dmi'
 	icon_state = "ares"
 	base_icon_state = "ares"
 	ui_theme = "inteq"
@@ -39,7 +39,7 @@
 
 /obj/structure/mecha_wreckage/ares
 	name = "\improper MIB-02 Ares wreckage"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/mecha/ares.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/mecha/ares.dmi'
 	icon_state = "ares-broken"
 	parts = list(
 			/obj/item/mecha_parts/part/durand_torso,
@@ -54,7 +54,7 @@
 	desc = "Отличный для быстрых атак Мех. Разработки Солнечной Федерации позволили нападать с флангов на металлической коннице. Гермес не заменим своей маневренностью и скоростью."
 	name = "\improper MIB-01 Hermes"
 	base_icon_state = "hermes"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/mecha/hermes.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/mecha/hermes.dmi'
 	icon_state = "hermes"
 	ui_theme = "inteq"
 	accesses = list(ACCESS_CENT_GENERAL)
@@ -66,7 +66,7 @@
 
 /obj/structure/mecha_wreckage/hermes
 	name = "\improper MIB-01 Hermes wreckage"
-	icon = 'zov_modular_arkstation/krashly_modulars/icons/obj/mecha/hermes.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/mecha/hermes.dmi'
 	icon_state = "hermes-broken"
 	parts = list(
 			/obj/item/mecha_parts/part/durand_torso,
