@@ -10,4 +10,4 @@
 		a great many chemicals or even drinks have been loaded in by adventurous or careless explorers of the New Principalities-- at fantastic personal risk to their gills. "
 	icon_state = "default"
 	base_icon_state = "default"
-	icon = 'zov_modular_arkstation/akula-skinsuit-fix/akula.dmi'
+	icon = 'zov_modular_arkstation/modules/akula-skinsuit-fix/akula.dmi'
