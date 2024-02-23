@@ -46,3 +46,4 @@
 		if(M.stat != DEAD)
 			if(prob(20))
 				M.gib()
+			damage = 40
