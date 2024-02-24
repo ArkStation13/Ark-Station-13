@@ -7,6 +7,7 @@
 		/datum/weather/ash_storm,
 		/datum/weather/snow_storm,
 		/datum/weather/void_storm,
+		/datum/weather/rain_storm, // ARK STATION ADDITION
 	)
 
 /datum/component/storm_hating/Initialize()
