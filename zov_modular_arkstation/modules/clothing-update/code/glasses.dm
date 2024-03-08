@@ -106,7 +106,7 @@
 	result = /obj/item/clothing/glasses/meson/ballistic
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	reqs = list(/obj/item/clothing/glasses/hud/meson = 1,
+	reqs = list(/obj/item/clothing/glasses/meson = 1,
 				  /obj/item/clothing/glasses/ballistic = 1,
 				  /obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
