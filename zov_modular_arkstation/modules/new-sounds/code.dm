@@ -147,3 +147,17 @@
 
 /obj/machinery/door/poddoor
 	animation_sound = 'zov_modular_arkstation/modules/new-sounds/sound/blastdooropen.ogg'
+
+/obj/item/clothing/glasses
+	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/glasses_pickup.ogg'
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/glasses_drop.ogg'
+
+/obj/item/tank
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/canistra_drop.ogg'
+
+/obj/item/storage/pill_bottle
+	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/pillbottle_pickup.ogg'
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/pillbottle_drop.ogg'
+
+/obj/item/pen
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/pen_drop.ogg'
