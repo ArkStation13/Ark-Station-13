@@ -38,7 +38,7 @@
 					/obj/item/clothing/shoes/jackboots/tall = 3,
 					/obj/item/storage/belt/security/medic/alternate = 3,
 					/obj/item/storage/belt/security/medic = 3,
-					/obj/item/clothing/glasses/hud/security/ballistic = 3,
+					/obj/item/clothing/glasses/hud/security/sunglasses/ballistic = 3,
 					)
 	premium = list( /obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/under/rank/security/officer/hecu = 3,
@@ -106,6 +106,7 @@
 		/obj/item/clothing/head/utility/hardhat = 3,
 		/obj/item/clothing/head/utility/hardhat/welding = 3,
 		/obj/item/clothing/head/beret/engi = 3,
+		/obj/item/clothing/glasses/meson/ballistic = 3,
 		/obj/item/clothing/mask/bandana/striped/engineering = 3,
 		/obj/item/clothing/under/rank/engineering/engineer = 3,
 		/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
@@ -238,6 +239,7 @@
 		/obj/item/clothing/head/utility/head_mirror = 4,
 		/obj/item/clothing/mask/bandana/striped/medical = 4,
 		/obj/item/clothing/mask/surgical = 4,
+		/obj/item/clothing/glasses/hud/health/ballistic = 3,
 		/obj/item/clothing/under/rank/medical/doctor = 4,
 		/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
 		/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
@@ -511,6 +513,7 @@
 				/obj/item/storage/backpack/security/inteq = 2,
 				/obj/item/storage/backpack/satchel/inteq = 2,
 				/obj/item/clothing/mask/balaclava/breath/inteq = 2,
+				/obj/item/clothing/glasses/ballistic = 2,
 				/obj/item/clothing/head/costume/ushanka = 5,
 				/obj/item/clothing/suit/jacket/letterman_syndie = 1,
 				/obj/item/clothing/under/costume/jabroni = 3,
@@ -632,3 +635,30 @@
 					/obj/item/clothing/head/beret/sec/navyofficer = 3)
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_MODERATE_BLUE
+
+/obj/machinery/vending/wardrobe/science_wardrobe
+	name = "SciDrobe"
+	desc = "A simple vending machine suitable to dispense well tailored science clothing. Endorsed by Space Cubans."
+	icon_state = "scidrobe"
+	product_ads = "Longing for the smell of plasma burnt flesh? Buy your science clothing now!;Made with 10% Auxetics, so you don't have to worry about losing your arm!"
+	vend_reply = "Thank you for using the SciDrobe!"
+	products = list(
+		/obj/item/clothing/accessory/pocketprotector = 3,
+		/obj/item/clothing/head/beret/science = 3,
+		/obj/item/clothing/mask/gas = 3,
+		/obj/item/clothing/mask/bandana/striped/science = 3,
+		/obj/item/clothing/glasses/science/ballistic = 3,
+		/obj/item/clothing/under/rank/rnd/scientist = 3,
+		/obj/item/clothing/under/rank/rnd/scientist/skirt = 3,
+		/obj/item/clothing/suit/toggle/labcoat/science = 3,
+		/obj/item/clothing/suit/hooded/wintercoat/science = 3,
+		/obj/item/clothing/gloves/latex = 3,
+		/obj/item/clothing/shoes/sneakers/white = 3,
+		/obj/item/storage/backpack/science = 3,
+		/obj/item/storage/backpack/satchel/science = 3,
+		/obj/item/storage/backpack/duffelbag/science = 3,
+		/obj/item/storage/backpack/messenger/science = 3,
+		/obj/item/radio/headset/headset_sci = 3,
+	)
+	refill_canister = /obj/item/vending_refill/wardrobe/science_wardrobe
+	payment_department = ACCOUNT_SCI
