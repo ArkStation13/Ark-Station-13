@@ -26,6 +26,7 @@
 					/obj/item/clothing/under/rank/security/officer/metropolice = 3,
 					/obj/item/clothing/under/rank/security/russobluecamo = 3,
 					/obj/item/clothing/under/rank/security/tacticool = 3,
+					/obj/item/clothing/under/rank/security/officer/saare = 5,
 					/obj/item/clothing/head/helmet/sec/metropolice = 3,
 					/obj/item/clothing/head/beret/sec = 5,
 					/obj/item/clothing/head/beret/sec/peacekeeper = 5,
