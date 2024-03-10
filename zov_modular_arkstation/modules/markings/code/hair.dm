@@ -5,10 +5,10 @@
 	icon_state = "hair_bun_alt"
 	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
 
-/datum/sprite_accessory/hair/kajam
-	name = "Kajam"
-	icon_state = "kajam_s"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+// /datum/sprite_accessory/hair/kajam // Иуда залил на Нова Секторы.
+// 	name = "Kajam"
+// 	icon_state = "kajam_s"
+// 	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
 
 /datum/sprite_accessory/hair/kajam2
 	name = "Kajam (Alt)"
