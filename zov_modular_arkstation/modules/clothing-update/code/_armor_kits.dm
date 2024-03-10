@@ -85,7 +85,6 @@
 	if(C.armor_type != /datum/armor/head_helmet)
 		C.set_armor(/datum/armor/head_helmet)
 		used = TRUE
-		armor
 
 	if(used)
 		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \

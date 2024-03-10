@@ -108,7 +108,7 @@
  */
 /datum/bloodsucker_clan/proc/on_final_death(datum/antagonist/bloodsucker/source)
 	SIGNAL_HANDLER
-	return FALSE
+	// return FALSE
 
 /**
  * Called during Bloodsucker's LifeTick
