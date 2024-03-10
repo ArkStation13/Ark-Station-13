@@ -441,3 +441,18 @@ var/static/list/female_yawn = list(
 	if(ishuman(user))
 		return 'zov_modular_arkstation/modules/sounds-renewal/sound/emotes/snap.ogg'
 	return null
+
+/datum/emote/living/coyhowl
+	key = "coyhowl"
+	key_third_person = "coyhowls"
+	message = "howls like coyote!"
+	emote_type = EMOTE_AUDIBLE
+	audio_cooldown = 5 SECONDS
+	vary = TRUE
+
+/datum/emote/living/coyhowl/get_sound(mob/living/user)
+	return pick('zov_modular_arkstation/modules/sounds-renewal/sound/voice/coyotehowl.ogg',
+				'zov_modular_arkstation/modules/sounds-renewal/sound/voice/coyotehowl2.ogg',
+				'zov_modular_arkstation/modules/sounds-renewal/sound/voice/coyotehowl3.ogg',
+				'zov_modular_arkstation/modules/sounds-renewal/sound/voice/coyotehowl4.ogg',
+				'zov_modular_arkstation/modules/sounds-renewal/sound/voice/coyotehowl5.ogg')

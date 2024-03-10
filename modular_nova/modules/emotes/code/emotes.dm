@@ -540,20 +540,3 @@
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 	sound = 'sound/voice/moth/moth_flutter.ogg'
-
-// Ark Station Added - BEGIN
-/datum/emote/living/coyhowl
-	key = "coyhowl"
-	key_third_person = "coyhowls"
-	message = "howls like coyote!"
-	emote_type = EMOTE_AUDIBLE
-	audio_cooldown = 5 SECONDS
-	vary = TRUE
-
-/datum/emote/living/coyhowl/get_sound(mob/living/user)
-	return pick('zov_modular_arkstation/modules/emotes/sound/voice/coyotehowl.ogg',
-				'zov_modular_arkstation/modules/emotes/sound/voice/coyotehowl2.ogg',
-				'zov_modular_arkstation/modules/emotes/sound/voice/coyotehowl3.ogg',
-				'zov_modular_arkstation/modules/emotes/sound/voice/coyotehowl4.ogg',
-				'zov_modular_arkstation/modules/emotes/sound/voice/coyotehowl5.ogg')
-// Ark Station Added - END
