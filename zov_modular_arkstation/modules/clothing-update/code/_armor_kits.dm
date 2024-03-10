@@ -19,7 +19,7 @@
 			to_chat(user,"<span class='warning'>Kind of hard to sew around [C.attached_accessories.Join(", ")].</span>")
 			return
 		if(C.armor_type != /datum/armor/clothing_under/rank_security)
-			C.armor_type = /datum/armor/clothing_under/rank_security
+			C.set_armor(/datum/armor/clothing_under/rank_security)
 			used = TRUE
 
 		if(used)
@@ -53,7 +53,7 @@
 	var/obj/item/clothing/C = target
 
 	if(C.armor_type != /datum/armor/suit_armor)
-		C.armor_type = /datum/armor/suit_armor
+		C.set_armor(/datum/armor/suit_armor)
 		used = TRUE
 
 	if(used)
@@ -83,8 +83,9 @@
 	var/obj/item/clothing/C = target
 
 	if(C.armor_type != /datum/armor/head_helmet)
-		C.armor_type = /datum/armor/head_helmet
+		C.set_armor(/datum/armor/head_helmet)
 		used = TRUE
+		armor
 
 	if(used)
 		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
@@ -112,7 +113,7 @@
 	var/obj/item/clothing/C = target
 
 	if(C.armor_type != /datum/armor/suit_armor)
-		C.armor_type = /datum/armor/suit_armor
+		C.set_armor(/datum/armor/suit_armor)
 		used = TRUE
 
 	if(used)
@@ -142,7 +143,7 @@
 	var/obj/item/clothing/C = target
 
 	if(C.armor_type != /datum/armor/head_helmet)
-		C.armor_type = /datum/armor/head_helmet
+		C.set_armor(/datum/armor/head_helmet)
 		used = TRUE
 
 	if(used)
