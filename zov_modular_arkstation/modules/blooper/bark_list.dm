@@ -543,3 +543,8 @@
 	soundpath = 'zov_modular_arkstation/modules/blooper/voice/new_barks/bullet.ogg'
 	minspeed = 3
 	maxspeed = 10
+
+/datum/blooper/weh
+	name = "Weh"
+	id = "weh"
+	soundpath = 'modular_nova/modules/emotes/sound/voice/weh.ogg'
