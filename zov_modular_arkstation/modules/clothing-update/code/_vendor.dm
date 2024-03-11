@@ -417,6 +417,7 @@
 				/obj/item/clothing/shoes/cowboy/white = 2,
 				/obj/item/clothing/shoes/cowboy/black = 2,
 				/obj/item/clothing/shoes/jackboots/sec = 4, // Ark Station 13 Edit
+				/obj/item/clothing/shoes/high_heels = 4, // Ark Station 13 Edit
 			),
 		),
 
