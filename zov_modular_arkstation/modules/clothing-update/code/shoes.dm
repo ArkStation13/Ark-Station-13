@@ -21,3 +21,7 @@
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/shoes.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/shoes_digi.dmi'
 	icon_state = "workboots-toeless"
+
+/obj/item/clothing/shoes/high_heels/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/squeak, list('modular_nova/modules/modular_items/lewd_items/sounds/highheel1.ogg' = 1, 'modular_nova/modules/modular_items/lewd_items/sounds/highheel2.ogg' = 1), 70)
