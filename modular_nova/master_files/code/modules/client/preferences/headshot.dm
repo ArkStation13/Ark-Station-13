@@ -8,7 +8,7 @@
 	/// Assoc list of ckeys and their link, used to cut down on chat spam
 	var/list/stored_link = list()
 	//var/static/link_regex = regex("i.gyazo.com|media.discordapp.net|cdn.discordapp.com|files.byondhome.com")
-	var/static/link_regex = regex("i.imgur.com|i.postimg.cc|i.ibb.co|i.gyazo.com|media.discordapp.net|cdn.discordapp.com|files.byondhome.com") // Ark Station Edited
+	var/static/link_regex = regex("i.postimg.cc|i.ibb.co|i.gyazo.com|files.byondhome.com") // Ark Station Edited
 	var/static/list/valid_extensions = list("jpg", "png", "jpeg") // Regex works fine, if you know how it works
 
 /datum/preference/text/headshot/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
@@ -37,7 +37,8 @@
 
 	find_index = findtext(value, link_regex)
 	if(find_index != 9)
-		to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo, Discord, Byond'"))
+		//to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo, Discord, Byond'"))
+		to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo, postimg, ibb, Byond'")) // Ark Station Editing
 		return
 
 	apply_headshot(value)
