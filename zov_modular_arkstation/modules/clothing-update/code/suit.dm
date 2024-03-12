@@ -6,6 +6,16 @@
 	//worn_icon_digi = 'zov_modular_arkstation/clothing-update/icons/mob/clothing/suits_digi.dmi'
 	icon_state = "metrocop_armor"
 
+/obj/item/clothing/suit/jacket/snufkin_dress
+	name = "\improper Snufkin's raincoat"
+	desc = "Wide green raincoat of the legendary Snufkin. Or is this a copy?"
+	icon_state = "snus"
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/obj/obj.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/mob/mob.dmi'
+	lefthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/obj/left.dmi'
+	righthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/obj/right.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+
 /obj/item/clothing/under/dress/baroness
 	name = "distinguished red dress"
 	desc = "A luxurious dress."

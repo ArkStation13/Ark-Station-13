@@ -59,3 +59,11 @@
 			RESKIN_BASE_ICON_STATE = "security_helmet_novisor"
 		)
 	)
+
+/obj/item/clothing/head/hats/snufkin_hat
+	name = "\improper Snufkin's hat"
+	desc = "Wide hat with a feather on the top."
+	icon_state = "snus-hat"
+	inhand_icon_state = null
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/obj/obj.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/mob/mob.dmi'

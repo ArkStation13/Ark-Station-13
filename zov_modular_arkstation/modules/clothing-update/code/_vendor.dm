@@ -570,6 +570,8 @@
 				/obj/item/clothing/under/dress/wedding_dress/bride_blue/bride_orange = 1,
 				/obj/item/clothing/under/dress/wedding_dress/bride_blue/bride_purple = 1,
 				/obj/item/clothing/under/dress/wedding_dress/bride_blue/bride_red = 1,
+				/obj/item/clothing/suit/jacket/snufkin_dress = 1,
+				/obj/item/clothing/head/hats/snufkin_hat = 1,
 				/obj/item/clothing/neck/windy_scarf = 3,
 			),
 		),

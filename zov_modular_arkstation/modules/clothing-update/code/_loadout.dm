@@ -56,6 +56,10 @@
 	name = "Purple Hawaii Shirt"
 	item_path = /obj/item/clothing/suit/toggle/hawaiiblack/hawaiimotu
 
+/datum/loadout_item/suit/snufkin_dress
+	name = "Snufkin's Raincoat"
+	item_path = /obj/item/clothing/suit/jacket/snufkin_dress
+
 // UNDER //
 
 /datum/loadout_item/under/jumpsuit/skinsuit
@@ -126,3 +130,9 @@
 /datum/loadout_item/under/jumpsuit/grey_civ
 	name = "Civilian Jacket"
 	item_path = /obj/item/clothing/under/arkstation/croptops/grey_civ
+
+// HEAD|HATS //
+
+/datum/loadout_item/head/snufkin_hat
+	name = "Snufkin's Hat"
+	item_path = /obj/item/clothing/head/hats/snufkin_hat
