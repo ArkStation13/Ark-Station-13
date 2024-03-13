@@ -1,3 +1,5 @@
+// SPAWNERS //
+
 /obj/effect/spawner/armory_spawn/shotguns
 	guns = list(
 		/obj/item/gun/ballistic/shotgun/riot,
@@ -80,12 +82,56 @@
 	icon_state = "[base_icon_state]-[round(ammo_count(), 4)]"
 
 /obj/item/ammo_casing/c46x30mm/rubber
-	name = "4.6x30mm bullet casing"
-	desc = "A 4.6x30mm bullet casing."
+	name = "8mm Usurpator rubber bullet casing"
+	desc = "A 8mm rubber bullet casing."
 	caliber = CALIBER_46X30MM
 	projectile_type = /obj/projectile/bullet/c46x30mm/rubber
 
 /obj/projectile/bullet/c46x30mm/rubber
-	name = "4.6x30mm rubber bullet"
+	name = "8mm rubber bullet"
 	damage = 3
 	stamina = 15
+
+// IN CARGO //
+
+/datum/supply_pack/security/armory/wt_gun
+	name = "WT-550 Guns Crate"
+	desc = "Contains three automatic WT-550 guns. Has no ammo in box!"
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/gun/ballistic/automatic/wt550/ammoless = 3)
+	crate_name = "WT-550 gun crate"
+
+/datum/supply_pack/security/armory/wt_ammo_lethal
+	name = "WT-550 Lethal Ammo Crate"
+	desc = "6 magazines with lethal bullets for WT-550."
+	cost = CARGO_CRATE_VALUE * 4
+	contains = list(/obj/item/ammo_box/magazine/wt550m9 = 6)
+	crate_name = "WT-550 lethal ammo crate"
+
+/datum/supply_pack/security/armory/wt_ammo_rubber
+	name = "WT-550 Rubber Ammo Crate"
+	desc = "6 magazines with rubber bullets for WT-550."
+	cost = CARGO_CRATE_VALUE * 3
+	contains = list(/obj/item/ammo_box/magazine/wt550m9/rubber = 6)
+	crate_name = "WT-550 rubber ammo crate"
+
+/datum/supply_pack/security/armory/riot_shotgun
+	name = "Riot Shotguns Crate"
+	desc = "Contains three riot shotguns."
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/gun/ballistic/shotgun/riot = 3)
+	crate_name = "riot shotguns crate"
+
+/datum/supply_pack/security/armory/shotgun_slug
+	name = "Shotgun Slug Ammo Crate"
+	desc = "3 boxes with slug bullets for shotguns."
+	cost = CARGO_CRATE_VALUE * 3
+	contains = list(/obj/item/storage/box/slugs = 3)
+	crate_name = "shotgun slug ammo crate"
+
+/datum/supply_pack/security/armory/shotgun_rubber
+	name = "Shotgun Rubber Ammo Crate"
+	desc = "3 boxes with rubber bullets for shotguns."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/storage/box/rubbershot = 3)
+	crate_name = "shotgun rubber ammo crate"

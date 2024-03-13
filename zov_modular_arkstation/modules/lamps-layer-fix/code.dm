@@ -10,12 +10,12 @@
 	return TRUE
 
 /obj/machinery/light
-	brightness = 5.5
+	brightness = 6
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
 	nightshift_light_color = null
 
 /obj/machinery/light/dim
-	brightness = 3
+	brightness = 4
 	nightshift_brightness = 2.5
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
 	bulb_power = 0.8
@@ -35,7 +35,7 @@
 	nightshift_light_color = null
 
 /obj/machinery/light/floor
-	brightness = 5.5
+	brightness = 6
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
 	nightshift_light_color = null
 	nightshift_brightness = 4

@@ -131,6 +131,7 @@
 		"universal_scanner",
 		"voice_analyzer",
 		"watering_can",
+		"colormate", // Ark Station Edit
 	)
 	experiments_to_unlock = list(
 		/datum/experiment/autopsy/nonhuman,

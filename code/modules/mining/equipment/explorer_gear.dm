@@ -62,7 +62,7 @@
 	desc = "A military-grade gas mask that can be connected to an air supply."
 	icon_state = "gas_mining"
 	inhand_icon_state = "explorer_gasmask"
-	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | PEPPERPROOF // Ark Station Edit | PEPPERPROOF
 	visor_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	visor_flags_inv = HIDEFACIALHAIR
 	visor_flags_cover = MASKCOVERSMOUTH
