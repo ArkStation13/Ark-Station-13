@@ -241,6 +241,8 @@
 	maxHealth = 100
 	health = 100
 	held_state = "fennec_eldritch"
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 /mob/living/basic/pet/cat/moro
 	name = "Moro"
@@ -255,6 +257,8 @@
 	health = 250
 	gender = MALE
 	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 /mob/living/simple_animal/pet/fox/fennec
 	name = "Red"
@@ -269,6 +273,8 @@
 	health = 50
 	gender = MALE
 	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 /mob/living/basic/pet/cat/alta
 	name = "Alta"
@@ -280,6 +286,8 @@
 	unique_pet = TRUE
 	gender = FEMALE
 	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 /mob/living/basic/pet/dog/corgi/Lisa/ada
 	name = "Ada"
@@ -293,6 +301,8 @@
 	icon_dead = "ada_dead"
 	held_state = "ada"
 	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 /mob/living/basic/pet/fox/emma
 	name = "Emma"
@@ -303,6 +313,8 @@
 	see_in_dark = 10
 	gender = FEMALE
 	icon = 'zov_modular_arkstation/_master_files/icons/animals.dmi'
+	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
+	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
 ///////////////
 
