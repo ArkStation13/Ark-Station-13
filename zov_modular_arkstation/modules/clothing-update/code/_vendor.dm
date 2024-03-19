@@ -573,6 +573,10 @@
 				/obj/item/clothing/suit/jacket/snufkin_dress = 1,
 				/obj/item/clothing/head/hats/snufkin_hat = 1,
 				/obj/item/clothing/neck/windy_scarf = 3,
+				/obj/item/clothing/shoes/laceup/gwen_shoes = 1,
+				/obj/item/clothing/gloves/color/gwens_gloves = 1,
+				/obj/item/clothing/head/hats/gwen_bow = 1,
+				/obj/item/clothing/under/arkstation/gwen_dress = 1,
 			),
 		),
 	)

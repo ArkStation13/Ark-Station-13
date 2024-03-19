@@ -67,3 +67,11 @@
 	inhand_icon_state = null
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/obj/obj.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/snufkin_clothes/mob/mob.dmi'
+
+/obj/item/clothing/head/hats/gwen_bow
+	name = "\improper Doll's bow"
+	desc = "some dolly bow"
+	icon_state = "gwen_bow"
+	inhand_icon_state = null
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/bow.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/mob/clothes_on.dmi'
