@@ -60,11 +60,26 @@
 	name = "Snufkin's Raincoat"
 	item_path = /obj/item/clothing/suit/jacket/snufkin_dress
 
+//GLOVES //
+
+/datum/loadout_item/gloves/gwen_gloves
+	name = "Doll's gloves"
+	item_path = /obj/item/clothing/gloves/color/gwens_gloves
+
+// BOOTS //
+/datum/loadout_item/shoes/gwen_shoes
+	name = "Doll's shoes"
+	item_path = /obj/item/clothing/shoes/laceup/gwen_shoes
+
 // UNDER //
 
 /datum/loadout_item/under/jumpsuit/skinsuit
 	name = "Skinsuit"
 	item_path = /obj/item/clothing/under/arkstation/female/skinsuit
+
+/datum/loadout_item/under/jumpsuit/gwen_dress
+	name = "Doll dress"
+	item_path = /obj/item/clothing/under/arkstation/gwen_dress
 
 /datum/loadout_item/under/jumpsuit/skinsuit_grey
 	name = "Grey Skinsuit"
@@ -136,3 +151,7 @@
 /datum/loadout_item/head/snufkin_hat
 	name = "Snufkin's Hat"
 	item_path = /obj/item/clothing/head/hats/snufkin_hat
+
+/datum/loadout_item/under/head/gwen_bow
+	name = "Doll bow"
+	item_path = /obj/item/clothing/head/hats/gwen_bow

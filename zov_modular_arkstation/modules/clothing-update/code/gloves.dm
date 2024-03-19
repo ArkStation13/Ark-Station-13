@@ -44,7 +44,8 @@
 			RESKIN_WORN_ICON_STATE = "military_gloves"
 		)
 	)
-/obj/item/clothing/hands/gwen
+
+/obj/item/clothing/gloves/color/gwens_gloves
 	name = "\improper Doll's gloves"
 	desc = "some dolly gloves"
 	icon_state = "gwen_gloves"
