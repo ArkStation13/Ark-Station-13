@@ -44,3 +44,10 @@
 			RESKIN_WORN_ICON_STATE = "military_gloves"
 		)
 	)
+/obj/item/clothing/hands/gwen
+	name = "\improper Doll's gloves"
+	desc = "some dolly gloves"
+	icon_state = "gwen_gloves"
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/hands.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/mob/clothes_on.dmi'
+

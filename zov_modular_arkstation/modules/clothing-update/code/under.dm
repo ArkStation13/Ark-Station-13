@@ -140,3 +140,14 @@
 /obj/item/clothing/under/arkstation/swim_stream
 	name = "stream swimsuit"
 	icon_state = "swim_stream"
+
+/obj/item/clothing/under/arkstation/gwen_dress
+	name = "\improper Doll's dress"
+	desc = "some dolly dress. Snip-snip"
+	icon_state = "gwen_dress"
+	inhand_icon_state = null
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/dress.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/mob/clothes_on.dmi'
+	lefthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/dress_left.dmi'
+	righthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/dress_right.dmi'
+	can_adjust = FALSE
