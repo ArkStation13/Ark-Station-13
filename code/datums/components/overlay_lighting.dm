@@ -5,6 +5,8 @@
 
 #define GET_PARENT (parent_attached_to || parent)
 
+#define GET_LIGHT_SOURCE (directional_atom || current_holder)
+
 #define SHORT_CAST 2
 
 /**
@@ -73,6 +75,8 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
+	var/obj/effect/abstract/directional_lighting/directional_atom
+
 /datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional, is_beam)
 	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -90,7 +94,8 @@
 	visible_mask.alpha = 0
 	if(is_directional)
 		directional = TRUE
-		cone = image('icons/effects/light_overlays/light_cone.dmi', icon_state = "light")
+		directional_atom = new()
+		cone = image('zov_modular_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light")
 		SET_PLANE_EXPLICIT(cone, O_LIGHTING_VISUAL_PLANE, movable_parent)
 		cone.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 		cone.alpha = 110
@@ -163,6 +168,8 @@
 	visible_mask = null
 	cone = null
 	parent_attached_to = null
+	qdel(directional_atom, TRUE)
+	directional_atom = null
 	return ..()
 
 
@@ -210,6 +217,7 @@
 	current_holder.update_dynamic_luminosity()
 	if(directional)
 		current_holder.underlays -= cone
+		directional_atom.moveToNullspace()
 
 ///Called to change the value of parent_attached_to.
 /datum/component/overlay_lighting/proc/set_parent_attached_to(atom/movable/new_parent_attached_to)
@@ -494,7 +502,7 @@
 	for(var/i in 1 to final_distance)
 		var/turf/next_turf = get_step(scanning, current_direction)
 		if(isnull(next_turf) || IS_OPAQUE_TURF(next_turf))
-			final_distance = i
+			// final_distance = i // ARK STATION EDIT
 			break
 		scanning = next_turf
 
@@ -533,6 +541,9 @@
 	if(overlay_lighting_flags & LIGHTING_ON)
 		current_holder.underlays += visible_mask
 
+	directional_atom.forceMove(scanning)
+	directional_atom.face_light(GET_PARENT, dir2angle(current_direction), .)
+
 ///Called when current_holder changes loc.
 /datum/component/overlay_lighting/proc/on_holder_dir_change(atom/movable/source, olddir, newdir)
 	SIGNAL_HANDLER
@@ -550,6 +561,15 @@
 	if(current_direction == newdir)
 		return
 	current_direction = newdir
+	if(newdir & SOUTH)
+		directional_atom.pixel_y = 1
+	else
+		directional_atom.pixel_y = 0
+	if(newdir & NORTH)
+		directional_atom.pixel_x = -1
+	else
+		directional_atom.pixel_x = 0
+
 	if(overlay_lighting_flags & LIGHTING_ON)
 		make_luminosity_update()
 
@@ -569,7 +589,33 @@
 	light_queue[parent] = TRUE
 	return NONE
 
+/datum/component/overlay_lighting/proc/place_directional_light(turf/target)
+	var/final_distance = round(cast_range*2)
+
+	//Lower the distance by 1 if we're not looking at a cardinal direction, and we're not a short cast
+	if(final_distance > SHORT_CAST && !(ALL_CARDINALS & get_dir(GET_PARENT, target)))
+		final_distance -= 1
+	var/turf/scanning = get_turf(GET_PARENT)
+
+	. = 0
+	for(var/i in 1 to final_distance)
+		var/next_dir = get_dir(scanning, target)
+		var/turf/next_turf = get_step(scanning, next_dir)
+		if(isnull(next_turf) || IS_OPAQUE_TURF(next_turf))
+			break
+		scanning = next_turf
+		.++
+
+	directional_atom.forceMove(scanning)
+	var/turf/Ts = get_turf(GET_PARENT)
+	var/turf/To = get_turf(GET_LIGHT_SOURCE)
+
+	var/angle = get_angle(Ts, To)
+
+	directional_atom.face_light(GET_PARENT, angle, .)
+
 #undef LIGHTING_ON
 #undef LIGHTING_ATTACHED
 #undef GET_PARENT
+#undef GET_LIGHT_SOURCE
 #undef SHORT_CAST

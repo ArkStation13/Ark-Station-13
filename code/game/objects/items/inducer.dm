@@ -106,16 +106,19 @@
 		return FALSE
 	if(recharging)
 		return TRUE
-	
+
 	recharging = TRUE
 	var/obj/item/stock_parts/cell/our_cell = get_cell()
 	var/obj/item/stock_parts/cell/target_cell = target.get_cell()
+	var/obj/item/gun/energy/E // ARK STATION EDIT
 	var/obj/target_as_object = target
 	var/coefficient = 1
 
 	if(istype(target, /obj/item/gun/energy) || istype(target, /obj/item/clothing/suit/space))
-		to_chat(user, span_alert("Error: unable to interface with device."))
-		return FALSE
+		// ARK STATION EDIT START
+		coefficient = 0.075 // 14 loops to recharge an egun from 0-1000
+		E = target
+		// ARK STATION EDIT END
 
 	if(target_cell)
 		var/done_any = FALSE
@@ -127,6 +130,10 @@
 		user.visible_message(span_notice("[user] starts recharging [target] with [src]."), span_notice("You start recharging [target] with [src]."))
 
 		while(target_cell.charge < target_cell.maxcharge)
+			// ARK STATION EDIT START
+			if(E)
+				E.semicd = TRUE
+			// ARK STATION EDIT END
 			if(do_after(user, 10, target = user) && our_cell.charge)
 				done_any = TRUE
 				induce(target_cell, coefficient)
@@ -135,6 +142,10 @@
 					target_as_object.update_appearance()
 			else
 				break
+		// ARK STATION EDIT START
+		if(E)
+			E.reset_semicd() //We're done charging, so we'll let someone fire it now.
+		// ARK STATION EDIT END
 		if(done_any) // Only show a message if we succeeded at least once
 			user.visible_message(span_notice("[user] recharged [target]!"), span_notice("You recharged [target]!"))
 		recharging = FALSE
