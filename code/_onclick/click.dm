@@ -89,7 +89,9 @@
 	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 		if(LAZYACCESS(modifiers, CTRL_CLICK))
 			CtrlMiddleClickOn(A)
-		else
+		else if(LAZYACCESS(modifiers, ALT_CLICK))// ARK STATION EDIT
+			AltMiddleClickOn(A) 		 		 // ARK STATION EDIT
+		else									 // ARK STATION EDIT
 			MiddleClickOn(A, params)
 		return
 	if(LAZYACCESS(modifiers, ALT_CLICK)) // alt and alt-gr (rightalt)
@@ -383,6 +385,14 @@
 		client.toggle_tag_datum(A)
 	else
 		A.CtrlClick(src)
+	return
+
+/mob/proc/AltMiddleClickOn(var/atom/A)
+	A.AltMiddleClick(src)
+	return
+
+/atom/proc/AltMiddleClick(var/mob/living/carbon/user)
+	try_jump(src, user)
 	return
 
 /**
