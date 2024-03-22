@@ -18,7 +18,6 @@
 		#include "ark_map_files\sla2her_maps\Blueshift.dmm"
 		// NOVA EDIT END
 		// ARK STATION ADDITION START
-		#include "ark_map_files/sla2her_maps/foxycabinrev.dmm"
 		#include "ark_map_files/sla2her_maps/KiloStation2.dmm"
 		#include "ark_map_files/sla2her_maps/OmegaStation.dmm"
 		// ARK STATION ADDITION END
