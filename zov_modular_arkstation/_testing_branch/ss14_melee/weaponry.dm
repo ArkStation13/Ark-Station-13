@@ -4,7 +4,7 @@
 	icon = 'zov_modular_arkstation/_testing_branch/ss14_melee/icons/obj/weapons.dmi'
 	icon_state = "sabre"
 	inhand_icon_state = "sabre"
-	worn_icon_state = "sabre"
+	worn_icon_state = null
 	throwforce = 10
 	throw_speed = 3
 	throw_range = 5

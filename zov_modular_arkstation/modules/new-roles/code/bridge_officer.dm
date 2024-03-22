@@ -76,7 +76,7 @@
 
 /obj/effect/landmark/start/bridge_officer
 	name = "Bridge Officer"
-	icon_state = "Captain"
+	icon_state = "Nanotrasen Consultant"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 
 /obj/item/encryptionkey/headset_bridge_officer

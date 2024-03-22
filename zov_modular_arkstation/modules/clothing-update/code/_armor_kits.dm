@@ -3,7 +3,7 @@
 	desc = "A glorified sewing kit with durathread sheets, thread, and a titanium needle, for reinforcing jumpsuits and uniforms."
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "durathread_kit" // shoutout to my guy Toriate for being good at sprites tho
+	icon_state = "blueshield_armor_kit" // shoutout to my guy Toriate for being good at sprites tho
 
 /obj/item/armorkit/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	// yeah have fun making subtypes and modifying the afterattack if you want to make variants

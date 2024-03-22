@@ -1197,7 +1197,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		return 0
 
 	if(!isnum(player_age) || player_age < 0)
-		return 0 
+		return 0
 
 	if(!isnum(days_needed))
 		return 0
@@ -1226,25 +1226,25 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	tgui_panel?.stop_music()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Stop Self Sounds"))
 
-// /client/verb/toggle_fullscreen()
-// 	set name = "Toggle Fullscreen"
-// 	set category = "OOC"
+/client/verb/toggle_fullscreen()
+	set name = "Toggle Fullscreen"
+	set category = "OOC"
 
-// 	fullscreen = !fullscreen
+	fullscreen = !fullscreen
 
-// 	if (fullscreen)
-// 		winset(usr, "mainwindow", "on-size=")
-// 		winset(usr, "mainwindow", "titlebar=false")
-// 		winset(usr, "mainwindow", "can-resize=false")
-// 		winset(usr, "mainwindow", "menu=")
-// 		winset(usr, "mainwindow", "is-maximized=false")
-// 		winset(usr, "mainwindow", "is-maximized=true")
-// 	else
-// 		winset(usr, "mainwindow", "menu=menu")
-// 		winset(usr, "mainwindow", "titlebar=true")
-// 		winset(usr, "mainwindow", "can-resize=true")
-// 		winset(usr, "mainwindow", "is-maximized=false")
-// 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport")
+	if (fullscreen)
+		winset(usr, "mainwindow", "on-size=")
+		winset(usr, "mainwindow", "titlebar=false")
+		winset(usr, "mainwindow", "can-resize=false")
+		winset(usr, "mainwindow", "menu=")
+		winset(usr, "mainwindow", "is-maximized=false")
+		winset(usr, "mainwindow", "is-maximized=true")
+	else
+		winset(usr, "mainwindow", "menu=menu")
+		winset(usr, "mainwindow", "titlebar=true")
+		winset(usr, "mainwindow", "can-resize=true")
+		winset(usr, "mainwindow", "is-maximized=false")
+		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport")
 
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"

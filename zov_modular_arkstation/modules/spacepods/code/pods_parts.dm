@@ -9,7 +9,7 @@
 /obj/item/pods_parts
 	name = "space pod part"
 	icon = 'zov_modular_arkstation/modules/spacepods/icons/pod_parts/pod_construct.dmi'
-	icon_state = "blank"
+	icon_state = "raptor0"
 	w_class = WEIGHT_CLASS_GIGANTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 

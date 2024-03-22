@@ -311,7 +311,8 @@
 
 /obj/item/circuitboard/machine/colormate
 	name = "Colormate (Machine Board)"
-	icon_state = "generic"
+	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon_state = "circuit_map"
 	build_path = /obj/machinery/gear_painter
 	req_components = list()
 

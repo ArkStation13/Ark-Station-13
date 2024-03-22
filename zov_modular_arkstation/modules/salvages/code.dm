@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT(salvage_list, list(
 	name = "item_for_salvage (check desc)"
 	desc = "Если ты это видишь - пиши @Krashly"
 	icon = 'zov_modular_arkstation/modules/salvages/structures.dmi'
-	icon_state = "protolathe"
+	icon_state = "wreck_pda"
 	density = TRUE
 	var/climbable = TRUE
 	anchored = TRUE

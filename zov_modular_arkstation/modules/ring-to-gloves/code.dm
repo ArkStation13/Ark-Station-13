@@ -1,7 +1,5 @@
 /obj/item/clothing/gloves
 	var/obj/item/clothing/gloves/ring/attached_ring
-	lefthand_file = null
-	righthand_file = null
 
 /obj/item/clothing/gloves/attackby(obj/item/hitting_item, mob/living/carbon/human/user)
 	. = ..()

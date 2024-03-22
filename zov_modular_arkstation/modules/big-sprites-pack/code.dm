@@ -2,13 +2,13 @@
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/paperbins.dmi'
 
 /obj/item/paper
-	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pens and labeler and paper.dmi'
+	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pensandlabelerandpaper.dmi'
 
 /obj/item/hand_labeler
-	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pens and labeler and paper.dmi'
+	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pensandlabelerandpaper.dmi'
 
 /obj/item/clipboard
-	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pens and labeler and paper.dmi'
+	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pensandlabelerandpaper.dmi'
 
 /obj/item/book
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/books.dmi'
@@ -52,3 +52,6 @@
 
 /obj/item/disk
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/circuitry_n_data.dmi'
+
+/obj/item/pen
+	icon = 'zov_modular_arkstation/modules/big-sprites-pack/pensandlabelerandpaper.dmi'

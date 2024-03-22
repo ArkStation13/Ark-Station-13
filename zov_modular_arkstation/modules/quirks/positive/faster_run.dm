@@ -1,7 +1,7 @@
 /datum/quirk/fastrun
 	name = "Fast Runner"
 	desc = "You've dedicated your life to running, or you've been lucky enough to be born fast and agile. Your running speed increases slightly."
-	icon = FA_ICON_RUNNING
+	icon = FA_ICON_FAST_FORWARD
 	value = 4
 	mob_trait = TRAIT_FAST_RUNNER
 	gain_text = span_notice("You feel a surge of strength in your legs.")

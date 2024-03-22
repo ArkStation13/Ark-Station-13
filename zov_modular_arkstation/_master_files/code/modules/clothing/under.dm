@@ -46,15 +46,6 @@
 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under.dmi'
 	icon_state = "chaplain"
 
-
-//Plasmaman outfit
-	//centcom//
-/obj/item/clothing/under/plasmaman/captain/centcom
-	name = "central command envirosuit"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under.dmi'
-	icon_state = "centcom_envirosuit"
-
 //InteQ
 
 /obj/item/clothing/under/syndicate/inteq_honorable_vanguard

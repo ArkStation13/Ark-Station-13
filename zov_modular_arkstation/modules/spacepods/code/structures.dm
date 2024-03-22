@@ -42,6 +42,12 @@
 
 	set_light((!(machine_stat & BROKEN) && powered()) ? MINIMUM_USEFUL_LIGHT_RANGE : 0)
 
+/obj/machinery/walltank/Destroy()
+	. = ..()
+	qdel(shlang)
+	qdel(current_beam)
+	qdel(light_mask)
+
 /obj/item/shlang
 	name = "fuel hose"
 	desc = "A device help to transport fuel."
@@ -60,6 +66,10 @@
 
 /obj/item/shlang/examine(mob/user)
 	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
+
+/obj/item/shlang/Destroy(force)
+	. = ..()
+	qdel(tank.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()

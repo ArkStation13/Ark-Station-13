@@ -16,4 +16,6 @@
 	loot = list(/obj/item/clothing/suit/armor/inteq/vanguard , /obj/item/clothing/head/HoS/inteq_vanguard)
 
 /mob/living/basic/carp/brown/beret/death(gibbed)
+	. = ..()
+
 	drop_loot()

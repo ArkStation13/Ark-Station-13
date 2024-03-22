@@ -19,15 +19,6 @@
 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
 	icon_state = "inqhat"
 
-//Plasmaman outfit
-	//centcom//
-/obj/item/clothing/head/helmet/space/plasmaman/captain/centcom
-	name = "central command plasma envirosuit helmet"
-	desc = "A green and gold envirohelm designed for the CentCom interns, nonetheless. Made of superior materials to protect them from the station hazards and more."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
-	icon_state = "centcom_envirohelm"
-
 //InteQ
 /obj/item/clothing/head/HoS/inteq_honorable_vanguard
 	name = "honorable vanguard beret"

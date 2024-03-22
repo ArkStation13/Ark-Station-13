@@ -114,7 +114,7 @@
 /obj/item/poster/random_inteq
 	name = "random InteQ poster"
 	poster_type = /obj/structure/sign/poster/contraband/inteq/random
-	icon_state = "rolled_contraband"
+	icon_state = "rolled_poster"
 
 /obj/structure/sign/poster/contraband/inteq/random
 	name = "random contraband poster"
@@ -183,6 +183,7 @@
 	icon_state = "soapinteq"
 	cleanspeed = 10
 	// icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_soap.dmi' // ПЕРЕЕХАЛИ НИЖЕ
+	inhand_icon_state = "soapinteq"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/obj/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/obj/righthand.dmi'
 
@@ -260,7 +261,7 @@
 	held_lh = 'zov_modular_arkstation/_master_files/icons/animals_held_lh.dmi'
 	held_rh = 'zov_modular_arkstation/_master_files/icons/animals_held_rh.dmi'
 
-/mob/living/simple_animal/pet/fox/fennec
+/mob/living/basic/pet/fox/fennec
 	name = "Red"
 	desc = "It's a fennec!"
 	icon_state = "fennec"
@@ -268,7 +269,6 @@
 	icon_dead = "fennec_dead"
 	held_state = "fennec"
 	see_in_dark = 10
-	speak_chance = 15
 	maxHealth = 50
 	health = 50
 	gender = MALE
@@ -387,6 +387,7 @@
 
 /obj/item/toy/figure
 	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
+	icon_state = "syndie"
 
 /obj/item/toy/figure/inteq
 	name = "\improper InteQ Mercenary action figure"

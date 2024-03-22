@@ -247,7 +247,12 @@
 		// /datum/job/engineering_guard = /obj/item/organ/internal/cyberimp/arm/flash,
 		// SKYRAT EDIT END
 
-		/datum/job/security_medic = /obj/item/organ/internal/cyberimp/eyes/hud/medical, // ARK STATION EDIT
+		// ARK STATION ADDITION START
+		/datum/job/bridge_officer = /obj/item/organ/internal/ears/cybernetic/whisper,
+		/datum/job/brig_pilot = /obj/item/organ/internal/cyberimp/eyes/hud/security,
+		/datum/job/mechanic = /obj/item/organ/internal/cyberimp/arm/toolset,
+		/datum/job/expeditionary_trooper = /obj/item/organ/internal/eyes/robotic/shield,
+		/datum/job/security_medic = /obj/item/organ/internal/cyberimp/eyes/hud/medical,
 	)
 
 /datum/station_trait/cybernetic_revolution/New()

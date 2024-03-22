@@ -841,7 +841,6 @@
 			dissipate_delay = 10
 			time_since_last_dissipiation = 0
 			dissipate_strength = 1
-			warp.transform.Scale(1, 1)
 		if(STAGE_TWO)
 			if(check_cardinals_range(1, TRUE))
 				current_size = STAGE_TWO
@@ -854,7 +853,6 @@
 				dissipate_delay = 5
 				time_since_last_dissipiation = 0
 				dissipate_strength = 5
-				warp.transform.Scale(1, 1)
 				warp.pixel_x = -32
 				warp.pixel_y = -32
 		if(STAGE_THREE)
@@ -869,7 +867,6 @@
 				dissipate_delay = 4
 				time_since_last_dissipiation = 0
 				dissipate_strength = 20
-				warp.transform.Scale(2, 2)
 				warp.pixel_x = -64
 				warp.pixel_y = -64
 		if(STAGE_FOUR)
@@ -884,7 +881,6 @@
 				dissipate_delay = 10
 				time_since_last_dissipiation = 0
 				dissipate_strength = 10
-				warp.transform.Scale(3, 3)
 				warp.pixel_x = -96
 				warp.pixel_y = -96
 		if(STAGE_FIVE)//this one also lacks a check for gens because it eats everything
@@ -896,7 +892,6 @@
 			new_grav_pull = 10
 			new_consume_range = 4
 			dissipate = FALSE //It cant go smaller due to e loss
-			warp.transform.Scale(3, 3)
 			warp.pixel_x = -128
 			warp.pixel_y = -128
 		if(STAGE_SIX) //This only happens if a stage 5 singulo consumes a supermatter shard.
@@ -908,7 +903,6 @@
 			new_grav_pull = 15
 			new_consume_range = 5
 			dissipate = FALSE
-			warp.transform.Scale(4, 4)
 			warp.pixel_x = -160
 			warp.pixel_y = -160
 

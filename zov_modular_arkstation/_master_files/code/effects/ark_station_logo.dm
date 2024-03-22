@@ -1,5 +1,6 @@
 /obj/effect/turf_decal/plaque/ark
 	icon = 'zov_modular_arkstation/_master_files/icons/ui_icons/chat_icon/ark_icon.dmi'
+	icon_state = "bot_1"
 
 ///// BOTTOM
 

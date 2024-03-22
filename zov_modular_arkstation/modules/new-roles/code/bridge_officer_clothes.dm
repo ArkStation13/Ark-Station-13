@@ -23,7 +23,7 @@
 	worn_icon = 'zov_modular_arkstation/modules/new-roles/icons/mob/under.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/modules/new-roles/icons/mob/under_digi.dmi'
 	icon_state = "bridgesec"
-	armor_type = /datum/armor/bridge_officer
+	armor_type = /datum/armor/clothing_under/bridge_officer
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/bridge_officer_uniform/skirt
@@ -31,7 +31,7 @@
 	icon_state = "bridgesecf"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
-/datum/armor/bridge_officer
+/datum/armor/clothing_under/bridge_officer
 	melee = 5
 	bullet = 0
 	laser = 5

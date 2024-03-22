@@ -6,6 +6,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "siegesword"
 	inhand_icon_state = "siegesword"
+	worn_icon_state = null
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	force = 30
@@ -38,6 +39,7 @@
 	name = "tribal spear"
 	force = 25
 	icon_prefix = "tribal_spear"
+	worn_icon_state = null
 
 /obj/item/claymore/cerberus/bardiche
 	name = "bardiche"
@@ -55,6 +57,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "wbuckler"
 	inhand_icon_state = "wbuckler"
+	worn_icon_state = null
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 
@@ -64,6 +67,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "paladin"
 	inhand_icon_state = "paladin"
+	worn_icon_state = null
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 
@@ -100,6 +104,8 @@
 	desc = "Простая в использовании Автоматическая Винтовка. Её придумали ещё столетия назад, а популярна она и по сей день."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "ak12"
+	inhand_icon_state = "ak12"
+	worn_icon_state = null
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK

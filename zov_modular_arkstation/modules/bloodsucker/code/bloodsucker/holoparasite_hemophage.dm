@@ -8,7 +8,7 @@
 		used = FALSE
 		return
 	if(IS_BLOODSUCKER(user))
-		var/mob/living/basic/guardian/standard/timestop/bloodsucker_guardian = new(user, GUARDIAN_THEME_MAGIC)
+		var/mob/living/basic/guardian/standard/timestop/bloodsucker_guardian = new(user, /datum/guardian_fluff)
 
 		bloodsucker_guardian.set_summoner(user, different_person = TRUE)
 		bloodsucker_guardian.key = candidate.key

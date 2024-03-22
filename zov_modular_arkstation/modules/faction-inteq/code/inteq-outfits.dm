@@ -1,8 +1,8 @@
 /datum/outfit/request_911
 	name = "PMC InteQ Response: Base"
 	back = /obj/item/storage/backpack/security/inteq
+	uniform = /obj/item/clothing/under/syndicate/inteq
 	backpack_contents = list(/obj/item/solfed_reporter/swat_caller = 1)
-
 	id = /obj/item/card/id/advanced/centcom/ert/inteq
 
 /datum/outfit/request_911/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
@@ -50,7 +50,6 @@
 	head = /obj/item/clothing/head/soft/inteq
 	mask = /obj/item/clothing/mask/gas/atmos/glass
 	belt = /obj/item/storage/belt/utility/full/powertools/ircd
-	suit_store = /obj/item/tank/internals/oxygen/yellow
 	id = /obj/item/card/id/advanced/centcom/ert/inteq
 	backpack_contents = list(/obj/item/storage/box/rcd_ammo = 1,
 		/obj/item/storage/box/smart_metal_foam = 1,
@@ -60,6 +59,7 @@
 		/obj/item/beamout_tool = 1,
 		/obj/item/solfed_reporter/swat_caller = 1,
 		/obj/item/storage/box/syndie_kit/space/inteq = 1,
+		/obj/item/tank/internals/oxygen/yellow = 1,
 		)
 
 // PMC medic

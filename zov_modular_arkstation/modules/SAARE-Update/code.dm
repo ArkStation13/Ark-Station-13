@@ -7,6 +7,7 @@
 	lefthand_file = 'zov_modular_arkstation/modules/SAARE-Update/icons/saare_left.dmi'
 	righthand_file = 'zov_modular_arkstation/modules/SAARE-Update/icons/obj.dmi'
 	icon_state = "saare"
+	inhand_icon_state = "saare"
 	uses_advanced_reskins = FALSE
 
 /datum/loadout_item/under/jumpsuit/saare_suit

@@ -15,10 +15,10 @@
 /obj/structure/closet/shuttle
 	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
-/obj/structure/closet/secure_closet/interdynefob/armory_gear_locker
+/obj/structure/closet/secure_closet/des_two/armory_gear_locker
 	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
-/obj/structure/closet/secure_closet/interdynefob/munitions_locker
+/obj/structure/closet/secure_closet/des_two/munitions_locker
 	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 
 /obj/structure/closet/secure_closet/armory_kiboko_but_evil

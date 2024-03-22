@@ -9,6 +9,7 @@
 	desc = "Can hold various medical equipment."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/belt.dmi'
 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/belt.dmi'
+	worn_icon_state = "medicalbelt"
 	icon_state = "medicalbelt"
 	content_overlays = FALSE
 

@@ -1,7 +1,7 @@
 /datum/quirk/slowrun
 	name = "Slow Runner"
 	desc = "You could never keep up with your peers. Your running speed is slightly slower."
-	icon = FA_ICON_RUNNING
+	icon = FA_ICON_FAST_BACKWARD
 	value = -4
 	mob_trait = TRAIT_SLOW_RUNNER
 	gain_text = span_notice("You felt a slight cramp in your leg.")
