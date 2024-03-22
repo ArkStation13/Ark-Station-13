@@ -4,5 +4,8 @@
 /obj/item/gun/energy/pulse
 	icon = 'zov_modular_arkstation/modules/new-cap-and-pulse-weapon-sprites/pulse-gun.dmi'
 
-/obj/item/gun/energy/pulse/pistol/m1911
+/obj/item/gun/energy/pulse/pistol
+	icon = 'icons/obj/weapons/guns/energy.dmi'
+
+/obj/item/gun/energy/pulse/carbine
 	icon = 'icons/obj/weapons/guns/energy.dmi'
