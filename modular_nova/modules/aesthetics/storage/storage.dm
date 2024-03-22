@@ -100,25 +100,25 @@
 /*
 // Security
 */
-/obj/item/storage/box/rubbershot
-	icon_state = "secbox_xl"
-	illustration = "rubbershot"
+// /obj/item/storage/box/rubbershot
+// 	icon_state = "secbox_xl"
+// 	illustration = "rubbershot"
 
-/obj/item/storage/box/lethalshot
-	icon_state = "secbox_xl"
-	illustration = "buckshot"
+// /obj/item/storage/box/lethalshot
+// 	icon_state = "secbox_xl"
+// 	illustration = "buckshot"
 
-/obj/item/storage/box/beanbag
-	icon_state = "secbox_xl"
-	illustration = "beanbag"
+// /obj/item/storage/box/beanbag
+// 	icon_state = "secbox_xl"
+// 	illustration = "beanbag"
 
-/obj/item/storage/box/breacherslug
-	icon_state = "secbox_xl"
-	illustration = "breacherslug"
+// /obj/item/storage/box/breacherslug
+// 	icon_state = "secbox_xl"
+// 	illustration = "breacherslug"
 
-/obj/item/storage/box/slugs
-	icon_state = "secbox_xl"
-	illustration = "breacherslug"
+// /obj/item/storage/box/slugs
+// 	icon_state = "secbox_xl"
+// 	illustration = "breacherslug"
 
 /obj/item/storage/box/evidence
 	icon_state = "secbox"
