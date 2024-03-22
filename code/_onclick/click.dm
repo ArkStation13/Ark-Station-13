@@ -387,11 +387,11 @@
 		A.CtrlClick(src)
 	return
 
-/mob/proc/AltMiddleClickOn(var/atom/A)
+/mob/proc/AltMiddleClickOn(atom/A)
 	A.AltMiddleClick(src)
 	return
 
-/atom/proc/AltMiddleClick(var/mob/living/carbon/user)
+/atom/proc/AltMiddleClick(mob/living/carbon/user)
 	try_jump(src, user)
 	return
 

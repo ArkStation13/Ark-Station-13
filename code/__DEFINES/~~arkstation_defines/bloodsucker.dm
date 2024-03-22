@@ -117,8 +117,8 @@
 #define BLOODSUCKER_EXIT_TORPOR "bloodsucker_exit_torpor"
 ///Called when a Bloodsucker reaches Final Death.
 #define BLOODSUCKER_FINAL_DEATH "bloodsucker_final_death"
-	///Whether the Bloodsucker should not be dusted when arriving Final Death
-	#define DONT_DUST (1<<0)
+///Whether the Bloodsucker should not be dusted when arriving Final Death
+#define DONT_DUST (1<<0)
 ///Called when a Bloodsucker breaks the Masquerade
 #define COMSIG_BLOODSUCKER_BROKE_MASQUERADE "comsig_bloodsucker_broke_masquerade"
 ///Called when a Bloodsucker enters Frenzy
