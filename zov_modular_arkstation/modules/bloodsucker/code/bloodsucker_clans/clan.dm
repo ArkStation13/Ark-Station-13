@@ -100,6 +100,7 @@
  */
 /datum/bloodsucker_clan/proc/on_exit_torpor(datum/antagonist/bloodsucker/source)
 	SIGNAL_HANDLER
+	return
 
 /**
  * Called when a Bloodsucker enters Final Death
@@ -107,7 +108,7 @@
  * source - the Bloodsucker exiting Torpor
  */
 /datum/bloodsucker_clan/proc/on_final_death(datum/antagonist/bloodsucker/source)
-	SIGNAL_HANDLER
+	// SIGNAL_HANDLER
 	// return FALSE
 
 /**
@@ -117,6 +118,7 @@
  */
 /datum/bloodsucker_clan/proc/handle_clan_life(datum/antagonist/bloodsucker/source)
 	SIGNAL_HANDLER
+	return
 
 /**
  * Called when a Bloodsucker successfully Vassalizes someone.
