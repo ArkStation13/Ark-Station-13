@@ -16,6 +16,7 @@
 	icon_state = "medium"
 	pixel_x = -16
 	pixel_y = -16
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/abstract/directional_lighting
 	var/obj/effect/abstract/light_spot/light_spot = new
