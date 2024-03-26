@@ -9,4 +9,6 @@
 #define TRAIT_FAST_RUNNER "fast_runner"
 #define TRAIT_SLOW_RUNNER "slow_runner"
 
+#define TRAIT_JUMPER "jumper"
+
 // END TRAIT DEFINES

@@ -22,5 +22,8 @@
 		playsound(user, user.gender == MALE ? 'zov_modular_arkstation/modules/now-we-can-jump/jump_male.ogg' : 'zov_modular_arkstation/modules/now-we-can-jump/jump_female.ogg', 25, 0, 1)
 	user.visible_message("<span class='danger'>[user.name] jumps.</span>", \
 					"<span class='warning'> I jump at the [loc]!</span>")
-	user.adjustStaminaLoss(rand(30,50))
+	if(HAS_TRAIT(user, TRAIT_JUMPER))
+		user.adjustStaminaLoss(10)
+	else
+		user.adjustStaminaLoss(rand(30,50))
 	user.throw_at(target, 3, 1, user, spin = (HAS_TRAIT(user, TRAIT_CLUMSY) ? TRUE : FALSE))
