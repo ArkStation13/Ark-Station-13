@@ -27,6 +27,6 @@
 	icon_state = "floor_white"
 	floor_tile = /obj/item/stack/tile/iron/old/white
 
-/obj/item/stack/tile/iron/old/rust
+/obj/item/stack/tile/iron/old/white
 	icon_state = "tile_old_white"
 	merge_type = /obj/item/stack/tile/iron/old/white
