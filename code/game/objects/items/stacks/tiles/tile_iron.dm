@@ -81,7 +81,6 @@
 		/obj/item/stack/tile/iron/freezer,
 		/obj/item/stack/tile/iron/grimy,
 		/obj/item/stack/tile/iron/sepia,
-		/obj/item/stack/tile/iron/old, // ARK STATION EDIT
 	)
 
 /obj/item/stack/tile/iron/two
