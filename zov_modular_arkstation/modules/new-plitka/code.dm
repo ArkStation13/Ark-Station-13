@@ -69,6 +69,7 @@
 	icon = 'zov_modular_arkstation/modules/new-plitka/tiles.dmi'
 	icon_state = "tile_old"
 	merge_type = /obj/item/stack/tile/iron/old
+	turf_type = /turf/open/floor/iron/old
 
 // RUST (YELLOW)
 /turf/open/floor/iron/old/rust
@@ -78,6 +79,7 @@
 /obj/item/stack/tile/iron/old/rust
 	icon_state = "tile_old_rust"
 	merge_type = /obj/item/stack/tile/iron/old/rust
+	turf_type = /turf/open/floor/iron/old/rust
 
 // WHITE
 /turf/open/floor/iron/old/white
@@ -87,3 +89,4 @@
 /obj/item/stack/tile/iron/old/white
 	icon_state = "tile_old_white"
 	merge_type = /obj/item/stack/tile/iron/old/white
+	turf_type = /turf/open/floor/iron/old/white
