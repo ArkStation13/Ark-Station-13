@@ -193,6 +193,7 @@
 		"Baker",
 		"Confectionist",
 		"Pastry Chef",
+		"Junior Chef",
 	)
 
 /datum/job/coroner
