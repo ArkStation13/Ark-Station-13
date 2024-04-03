@@ -161,3 +161,21 @@
 
 /obj/item/pen
 	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/pen_drop.ogg'
+
+/obj/item/stack/sheet/iron
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/metal_list_drop.ogg'
+
+/obj/item/stack/sheet/plasteel
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/metal_list_drop.ogg'
+
+/obj/item/stack/sheet/mineral/wood
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/wooden_drop.ogg'
+
+/obj/item/stack/sheet/glass
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/accessory_drop.ogg'
+
+/obj/item/stack/sheet/plasmaglass
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/accessory_drop.ogg'
+
+/obj/item/stack/sheet/titaniumglass
+	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/accessory_drop.ogg'

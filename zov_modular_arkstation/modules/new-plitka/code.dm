@@ -59,6 +59,13 @@
 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
 	icon_state = "floor"
 
+/turf/open/floor
+	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+	icon_state = "floor"
+
+/turf/open/floor/stone
+	icon = 'icons/turf/floors.dmi'
+
 // STANDART
 /turf/open/floor/iron/old
 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
