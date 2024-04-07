@@ -89,8 +89,11 @@
 
 /obj/projectile/bullet/c46x30mm/rubber
 	name = "8mm rubber bullet"
-	damage = 3
+	damage = 1
 	stamina = 15
+	wound_bonus = 0
+	bare_wound_bonus = 0
+	embed_falloff_tile = 0
 
 // IN CARGO //
 
