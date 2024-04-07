@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Button, Icon, NoticeBox, NumberInput, Section, Table, Tabs, Slider } from '../components';
+import { Button, Icon, NoticeBox, NumberInput, Section, Slider, Table, Tabs } from '../components';
 import { Window } from '../layouts';
 
 export const Colormate = (props, context) => {
@@ -131,7 +131,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.rr}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 1,
               value,
             })} />
@@ -143,7 +143,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.gr}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 4,
               value,
             })} />
@@ -155,7 +155,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.br}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 7,
               value,
             })} />
@@ -169,7 +169,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.rg}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 2,
               value,
             })} />
@@ -181,7 +181,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.gg}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 5,
               value,
             })} />
@@ -193,7 +193,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.bg}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 8,
               value,
             })} />
@@ -207,7 +207,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.rb}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 3,
               value,
             })} />
@@ -219,7 +219,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.gb}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 6,
               value,
             })} />
@@ -231,7 +231,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.bb}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 9,
               value,
             })} />
@@ -245,7 +245,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.cr}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 10,
               value,
             })} />
@@ -257,7 +257,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.cg}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 11,
               value,
             })} />
@@ -269,7 +269,7 @@ export const ColormateMatrix = (props, context) => {
             maxValue={10}
             step={0.01}
             value={matrixcolors.cb}
-            onChange={(e, value) => act('set_matrix_color', {
+            onChange={(value) => act('set_matrix_color', {
               color: 12,
               value,
             })} />
