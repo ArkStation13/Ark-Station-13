@@ -105,6 +105,10 @@
 		update_icon()
 
 /obj/structure/deployable_barricade/attack_animal(mob/user)
+	if(istype(user, /mob/living/carbon/alien)) // ARK STATION ADDITION
+		var/mob/living/carbon/alien/userr = user // ARK STATION ADDITION
+		if(is_wired == TRUE) // ARK STATION ADDITION
+			userr.adjustBruteLoss(10) // ARK STATION ADDITION
 	return attack_alien(user)
 
 /obj/structure/deployable_barricade/proc/wire()
@@ -131,7 +135,6 @@
 	is_wired = FALSE
 	update_icon()
 
-/obj/structure/deployable_barricade/climb
 /obj/structure/deployable_barricade/deconstruct(disassembled = TRUE)
 	if(stack_type)
 		var/stack_amt

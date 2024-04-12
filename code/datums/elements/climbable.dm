@@ -106,6 +106,10 @@
 		else
 			dir_step = get_dir(user, get_step(climbed_thing, climbed_thing.dir))
 	. = step(user, dir_step)
+	if(istype(climbed_thing, /obj/structure/deployable_barricade)) // ARK STATION ADDITION
+		var/obj/structure/deployable_barricade/cad = climbed_thing // ARK STATION ADDITION
+		if(cad.is_wired == TRUE) // ARK STATION ADDITION
+			user.adjustBruteLoss(25) // ARK STATION ADDITION
 	climbed_thing.set_density(TRUE)
 
 ///Handles climbing onto the atom when you click-drag
