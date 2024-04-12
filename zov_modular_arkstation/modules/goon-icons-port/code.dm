@@ -54,9 +54,40 @@
 	icon_state = "mop"
 
 /obj/item/station_charter
-	name = "station charter"
-	icon = 'icons/obj/scrolls.dmi'
-	icon_state = "charter"
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/frog_contract
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/teleportation_scroll
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/book/granter/martial/plasma_fist
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/book/granter/martial/carp
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/implant/krav_maga
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/antag_spawner/contract
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/book/manual/ancient_parchment
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/datum/grand_finale/magic
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/upgradescroll
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/paper/holy_writ
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
+
+/obj/item/sparring_contract
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-scrolls.dmi'
 
 /obj/item/clothing/neck/stethoscope
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-stethoscope.dmi'
