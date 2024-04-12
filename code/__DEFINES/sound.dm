@@ -234,3 +234,5 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define SFX_SEAR "sear"
 #define SFX_REEL "reel"
 #define SFX_RATTLE "rattle"
+// ARK STATION ADDITIONS BELOW
+#define SFX_GASBREATH "gasbreath"

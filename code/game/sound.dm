@@ -431,4 +431,7 @@
 					'sound/items/rattle2.ogg',
 					'sound/items/rattle3.ogg',
 				)
+			// ARK STATION SOUNDS BELOW
+			if(SFX_GASBREATH)
+				soundin = pick('zov_modular_arkstation/modules/gasmask_breath/gasmaskbreath.ogg', 'zov_modular_arkstation/modules/gasmask_breath/gasmaskbreath2.ogg')
 	return soundin

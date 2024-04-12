@@ -131,7 +131,7 @@
 	is_wired = FALSE
 	update_icon()
 
-
+/obj/structure/deployable_barricade/climb
 /obj/structure/deployable_barricade/deconstruct(disassembled = TRUE)
 	if(stack_type)
 		var/stack_amt

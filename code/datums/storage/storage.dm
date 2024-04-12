@@ -446,6 +446,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 
 	SEND_SIGNAL(parent, COMSIG_STORAGE_STORED_ITEM, to_insert, user, force)
 	to_insert.forceMove(real_location)
+	to_insert.update_icon() // ARK STATION ADDITION
 	item_insertion_feedback(user, to_insert, override)
 	parent.update_appearance()
 	return TRUE
@@ -695,6 +696,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(length(pick_up | current_contents) == length(current_contents))
 		return
 	parent.balloon_alert(user, "picked up")
+	thing.update_icon() // ARK STATION ADDITION
 
 /// Signal handler for whenever we drag the storage somewhere.
 /datum/storage/proc/on_mousedrop_onto(datum/source, atom/over_object, mob/user)
@@ -759,6 +761,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(!do_after(user, 2 SECONDS, target = dest_object))
 		return
 
+	dest_object.update_icon() // ARK STATION ADDITION
 	remove_all(dump_loc)
 
 /// Signal handler for whenever something gets mouse-dropped onto us.
@@ -778,6 +781,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(user_living.incapacitated())
 		return
 
+	dropping.update_icon() // ARK STATION ADDITION
 	attempt_insert(dropping, user)
 
 /// Signal handler for whenever we're attacked by an object.
