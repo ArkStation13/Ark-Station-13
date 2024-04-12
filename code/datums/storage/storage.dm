@@ -446,9 +446,9 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 
 	SEND_SIGNAL(parent, COMSIG_STORAGE_STORED_ITEM, to_insert, user, force)
 	to_insert.forceMove(real_location)
-	to_insert.update_icon() // ARK STATION ADDITION
 	item_insertion_feedback(user, to_insert, override)
 	parent.update_appearance()
+	to_insert.update_icon() // ARK STATION ADDITION
 	return TRUE
 
 /**
@@ -554,6 +554,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 			continue
 		thing.pixel_x = thing.base_pixel_x + rand(-8, 8)
 		thing.pixel_y = thing.base_pixel_y + rand(-8, 8)
+		thing.update_icon() // ARK STATION ADDITION
 
 /**
  * Allows a mob to attempt to remove a single item from the storage
@@ -761,7 +762,6 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(!do_after(user, 2 SECONDS, target = dest_object))
 		return
 
-	dest_object.update_icon() // ARK STATION ADDITION
 	remove_all(dump_loc)
 
 /// Signal handler for whenever something gets mouse-dropped onto us.
@@ -781,7 +781,6 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(user_living.incapacitated())
 		return
 
-	dropping.update_icon() // ARK STATION ADDITION
 	attempt_insert(dropping, user)
 
 /// Signal handler for whenever we're attacked by an object.

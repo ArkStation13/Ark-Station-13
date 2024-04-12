@@ -130,40 +130,48 @@
 /turf/open/indestructible/void
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "void"
-	name = "V̷̙̲̫̙͈͈̠̭̮̗͓̣͉̤̪̘͉͈̤́̓̀̀̿̓͛͒̄̂̈́̎̄̐̄̿̾̈́ȯ̶͙̬͚̙̫̫̯͓̳͈̤͎̗͙͔̫̙̙͚̿̓͒̍̌̒̑̎̅̊̍̇́̿̄i҈͚̯͉͉̜̪̜͈͙͇̠̦̬̟̱̞͎͕̞̈̋̑̒̄̎̀̐̐̐̀̏d̸͕͓̝̰͕͔͚̣̥̙͍̲͍͔̗͔̞͎̔̈́̅̽̀͑͒͌̌̊̇̒̓̂̌̈́̑̔͗̃͆͆͆̚ͅ"
-	desc = "W҉̧̘̾̂͠h̵̢̥͔̋͡ä̶̡͇̙̈͝t҉̢̖̪͉͐̾̕ t̸͙͔̭̊͋͜͠h̴̫̅̕͜ĕ̵͔̬̥͆̕͢ F҉̡̥̤̩҇̀͂Ù̸̫̟̈̊͢͠C̴̨͖̀̀͠Ķ̶̰͕҇̿"
+	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
+	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
 
-/turf/open/indestructible/void/Initialize(mapload)
+/turf/closed/indestructible/void
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
+	icon_state = "void-wall"
+	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
+	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
+
+/obj/effect/step_trigger/void/proc/activate_void(atom/movable/triggerer)
+	new /obj/effect/particle_effect/sparks/void_fissure(src.loc)
+
+/obj/effect/particle_effect/sparks/void_fissure
+	name = "void"
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
+	icon_state = "fissure"
+	light_color = LIGHT_COLOR_LAVENDER
+
+/obj/effect/step_trigger/void
+	mobs_only = TRUE
+
+/obj/effect/step_trigger/void/Initialize(mapload)
 	. = ..()
-
 	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 		COMSIG_ATOM_EXITED = PROC_REF(on_exited),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
-/turf/open/indestructible/void/proc/on_exited(datum/source, atom/movable/gone)
-	SIGNAL_HANDLER
-
-	if(prob(10))
-		activate_void(gone)
-
-/turf/open/indestructible/void/proc/activate_void(atom/movable/triggerer)
-	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-	s.set_up(3, 1, src)
-	s.start()
-
-/obj/effect/particle_effect/sparks/void_fissure
-	name = "W̐̽͊͆͞h̅̋͠à̽̆̍̕t͌͐̍͠ a҇̃͋̚r̛̎̃ȇ̾̔̒̏͝ y̛͌̀o͐̂̌́͗͠ů̾̄̈̔̕ l̄̽͗̓̕ȏ̔̕ó̾̈́̌̚͝k̄͑̈̔̃͡i͊̿̑͝n̑̿͞g͋̒̈̂̕̚ f̛͗̀̊o͐̿̋͌́͠r̓͌̈̈́͠ here?͒̀̒͡"
-	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
-	icon_state = "fissure"
-	light_color = LIGHT_COLOR_LAVENDER
+/obj/effect/step_trigger/void/on_exited(datum/source, H as mob|obj)
+	. = ..()
+	if(ismob(H))
+		var/mob/AM = H
+		if(prob(40))
+			activate_void(AM)
 
 /area/misc/void
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
 	// static_lighting = FALSE
 	// base_lighting_alpha = 255
-	name = "V̷O̵I҈̸D҉̴"
+	name = "void"
 	icon_state = "test_room"
 
 /obj/effect/light_emitter/void
