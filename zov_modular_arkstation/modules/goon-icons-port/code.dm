@@ -127,6 +127,27 @@
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
 
+/obj/structure/goon_computers
+	name = "computer"
+	desc = "It is modular computer."
+	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-computers.dmi'
+	icon_state = "minicomputer_1"
+	max_integrity = 1000
+	bound_width = 64
+	bound_height = 48
+	density = TRUE
+	anchored = TRUE
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = ABOVE_GAME_PLANE
+
+/obj/structure/goon_computers/blue
+	icon_state = "minicomputer_2"
+
+/obj/structure/goon_computers/green
+	icon_state = "minicomputer_3"
+
+// VOID // Перенесу потом в отдельный модуль.
+
 /turf/open/indestructible/void
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "void"
@@ -159,8 +180,7 @@
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
-/obj/effect/step_trigger/void/on_exited(datum/source, H as mob|obj)
-	. = ..()
+/obj/effect/step_trigger/void/proc/on_exited(datum/source, H as mob|obj)
 	if(ismob(H))
 		var/mob/AM = H
 		if(prob(40))
@@ -177,22 +197,3 @@
 /obj/effect/light_emitter/void
 	light_color = LIGHT_COLOR_LAVENDER
 	set_cap = 1
-
-/obj/structure/goon_computers
-	name = "computer"
-	desc = "It is modular computer."
-	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-computers.dmi'
-	icon_state = "minicomputer_1"
-	max_integrity = 1000
-	bound_width = 64
-	bound_height = 48
-	density = TRUE
-	anchored = TRUE
-	layer = ABOVE_ALL_MOB_LAYER
-	plane = ABOVE_GAME_PLANE
-
-/obj/structure/goon_computers/blue
-	icon_state = "minicomputer_2"
-
-/obj/structure/goon_computers/green
-	icon_state = "minicomputer_3"
