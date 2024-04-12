@@ -32,7 +32,7 @@
 /obj/item/assembly/igniter/activate()
 	. = ..()
 	icon_state = "[base_icon_state]_light"
-	sleep(2 SECONDS)
+	sleep(next_activate)
 	icon_state = base_icon_state
 
 /obj/item/assembly/signaler
@@ -120,8 +120,6 @@
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-vagons_stoped.dmi'
 	icon_state = "car-platform"
 	max_integrity = 1000
-	bound_width = 64
-	bound_height = 48
 	density = TRUE
 	anchored = TRUE
 	layer = ABOVE_ALL_MOB_LAYER
@@ -133,8 +131,6 @@
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-computers.dmi'
 	icon_state = "minicomputer_1"
 	max_integrity = 1000
-	bound_width = 64
-	bound_height = 48
 	density = TRUE
 	anchored = TRUE
 	layer = ABOVE_ALL_MOB_LAYER
