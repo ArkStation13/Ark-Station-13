@@ -22,12 +22,17 @@ GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item
 			LAZYADD(outfit.backpack_contents, outfit.l_hand)
 		outfit.l_hand = item_path
 
-/datum/loadout_item/whitelisted/jumpsuit/arkstation/sneaksuit
+/datum/loadout_item/whitelisted/sneaksuit
 	name = "Blood-Red Sneaksuit"
 	item_path = /obj/item/clothing/under/syndicate/bloodred/no_armor
 	ckeywhitelist = list("lordoftheflie")
 
-/datum/loadout_item/whitelisted/jumpsuit/arkstation/ordinarylife_custom
+/datum/loadout_item/whitelisted/ordinarylife_custom
 	name = "Emma T-shirt"
 	item_path = /obj/item/clothing/under/arkstation/ordinarylife_emma
+	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
+
+/datum/loadout_item/whitelisted/vulp_couple
+	name = "Vulp Couple Plushie"
+	item_path = /obj/item/toy/plush/fox/vulp_couple
 	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
