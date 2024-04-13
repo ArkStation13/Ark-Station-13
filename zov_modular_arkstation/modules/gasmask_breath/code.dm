@@ -3,6 +3,10 @@
 	savefile_key = "gas_breath"
 	savefile_identifier = PREFERENCE_PLAYER
 
+/datum/preference/toggle/gas_breath/apply_to_client_updated(client/client, value)
+	if(!value)
+		client.mob.stop_sound_channel(CHANNEL_GASMASK)
+
 /obj/item/clothing/mask/gas
 	///Does this particular mask have breath noises
 	var/breathy = TRUE
@@ -36,5 +40,5 @@
 	// if(ismob(user))
 	// 	if(!user.canon_client?.prefs?.read_preference(/datum/preference/toggle/gas_breath))
 	// 		return
-	playsound(src, SFX_GASBREATH, 20, TRUE)
+	playsound(src, SFX_GASBREATH, 20, TRUE, channel = CHANNEL_GASMASK)
 	TIMER_COOLDOWN_START(src, COOLDOWN_GAS_BREATH, 10 SECONDS)
