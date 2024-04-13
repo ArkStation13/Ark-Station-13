@@ -10,9 +10,17 @@
 	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
 	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
 
-/obj/effect/step_trigger/void/proc/activate_void(atom/movable/triggerer)
+/obj/effect/step_trigger/void/proc/activate_void(mob/living/carbon/triggerer)
 	var/obj/effect/particle_effect/sparks/void_fissure/void_hueta = new /obj/effect/particle_effect/sparks/void_fissure(src.loc)
 	animate(void_hueta, pixel_z = rand(60, 300), pixel_x = rand(-30, 30), time = 8, easing = LINEAR_EASING)
+	if(prob(6))
+		var/sound/sound = sound('zov_modular_arkstation/modules/void/trip_blast.wav')
+		sound.environment = 23
+		sound.volume = 100
+		SEND_SOUND(triggerer.client, sound)
+		triggerer.emote("agony")
+		triggerer.overlay_fullscreen("screamers", /atom/movable/screen/fullscreen/screamers, rand(1, 23))
+		triggerer.clear_fullscreen("screamers", rand(15, 60))
 
 /obj/effect/particle_effect/sparks/void_fissure
 	name = "void"
@@ -55,3 +63,11 @@
 /obj/effect/light_emitter/void
 	light_color = LIGHT_COLOR_LAVENDER
 	set_cap = 1
+
+// Warning //
+
+/atom/movable/screen/fullscreen/screamers
+	icon = 'zov_modular_arkstation/modules/void/screamers.dmi'
+	plane = SPLASHSCREEN_PLANE
+	screen_loc = "CENTER-7,SOUTH"
+	icon_state = ""
