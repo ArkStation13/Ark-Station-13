@@ -123,14 +123,6 @@
 				target_fuel = clamp(pressure, 0, balance)
 	update_appearance()
 
-/obj/machinery/walltank/update_overlays()
-	. = ..()
-
-	if(!shlang)
-		return
-
-	. += "shlang"
-
 //defib interaction
 /obj/machinery/walltank/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
