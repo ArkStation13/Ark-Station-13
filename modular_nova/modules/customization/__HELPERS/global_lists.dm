@@ -121,6 +121,7 @@
 		GLOB.loadout_inhand_items,
 		GLOB.loadout_toys,
 		GLOB.loadout_pocket_items,
+		GLOB.loadout_whitelisted, // ARK STATION ADDITION
 	)
 	for(var/loadout_list in loadout_lists)
 		for(var/datum/loadout_item/loadout_typepath in loadout_list)

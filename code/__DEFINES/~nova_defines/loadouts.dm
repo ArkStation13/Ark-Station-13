@@ -14,6 +14,8 @@
 #define LOADOUT_ITEM_MISC "pocket_items"
 #define LOADOUT_ITEM_TOYS "toys"
 
+#define LOADOUT_ITEM_WHITELIST "whitelisted" // ARK STATION ADDITION
+
 #define INFO_GREYSCALE "greyscale"
 #define INFO_NAMED "name"
 #define INFO_DESCRIBED "description"

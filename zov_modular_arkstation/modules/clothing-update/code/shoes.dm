@@ -31,5 +31,5 @@
 	desc = "some dolly shoes"
 	icon_state = "gwen_shoes"
 	inhand_icon_state = null
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/laceup.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/mob/clothes_on.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/laceup.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/mob/clothes_on.dmi'

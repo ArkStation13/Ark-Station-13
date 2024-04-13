@@ -49,6 +49,6 @@
 	name = "\improper Doll's gloves"
 	desc = "some dolly gloves"
 	icon_state = "gwen_gloves"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/obj/hands.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/Gwen_clothes/mob/clothes_on.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/hands.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/mob/clothes_on.dmi'
 

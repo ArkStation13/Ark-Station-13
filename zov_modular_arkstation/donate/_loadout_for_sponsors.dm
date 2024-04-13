@@ -1,4 +1,33 @@
-/datum/loadout_item/under/jumpsuit/donator/sneaksuit
+/*
+*	LOADOUT ITEM DATUMS FOR WHITELISTED CKEYS
+*/
+
+/// Whitelisted items (Moves overrided items to backpack)
+GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item/whitelisted))
+
+/datum/loadout_item/whitelisted
+	category = LOADOUT_ITEM_WHITELIST
+
+/datum/loadout_item/whitelisted/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
+	if(initial(outfit_important_for_life.r_hand) && initial(outfit_important_for_life.l_hand))
+		if(!visuals_only)
+			LAZYADD(outfit.backpack_contents, item_path)
+		return TRUE
+
+/datum/loadout_item/whitelisted/insert_path_into_outfit(datum/outfit/outfit, mob/living/carbon/human/equipper, visuals_only = FALSE, override_items = LOADOUT_OVERRIDE_BACKPACK)
+	if(outfit.l_hand && !outfit.r_hand)
+		outfit.r_hand = item_path
+	else
+		if(outfit.l_hand)
+			LAZYADD(outfit.backpack_contents, outfit.l_hand)
+		outfit.l_hand = item_path
+
+/datum/loadout_item/whitelisted/jumpsuit/arkstation/sneaksuit
 	name = "Blood-Red Sneaksuit"
 	item_path = /obj/item/clothing/under/syndicate/bloodred/no_armor
-	donator_only = TRUE
+	ckeywhitelist = list("lordoftheflie")
+
+/datum/loadout_item/whitelisted/jumpsuit/arkstation/ordinarylife_custom
+	name = "Emma T-shirt"
+	item_path = /obj/item/clothing/under/arkstation/ordinarylife_emma
+	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
