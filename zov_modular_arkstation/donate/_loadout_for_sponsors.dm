@@ -29,7 +29,7 @@ GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item
 
 /datum/loadout_item/whitelisted/ordinarylife_custom
 	name = "Emma T-shirt"
-	item_path = /obj/item/clothing/under/arkstation/ordinarylife_emma
+	item_path = /obj/item/clothing/suit/arkstation/ordinarylife_emma
 	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
 
 /datum/loadout_item/whitelisted/vulp_couple
