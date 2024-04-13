@@ -5,7 +5,7 @@
 	inhand_icon_state = "bl_suit"
 	armor_type = /datum/armor/clothing_under/none
 
-/obj/item/clothing/under/arkstation/ordinarylife_emma
+/obj/item/clothing/suit/arkstation/ordinarylife_emma
 	name = "\improper T-shirt with fox"
 	desc = "White T-shirt with Emma the fox on the chest."
 	icon_state = "emma_shirt"
