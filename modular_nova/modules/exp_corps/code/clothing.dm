@@ -227,8 +227,11 @@
 	if(current_user)
 		var/obj/item/organ/internal/eyes/my_eyes = current_user.get_organ_by_type(/obj/item/organ/internal/eyes)
 		if(my_eyes)
-			my_eyes.color_cutoffs = list(10, 30, 10)
+			my_eyes.color_cutoffs = list(5, 15, 30)
+			my_eyes.lighting_cutoff = LIGHTING_CUTOFF_MEDIUM
 			my_eyes.flash_protect = FLASH_PROTECTION_SENSITIVE
+			current_user.update_sight()
+			current_user.update_worn_glasses()
 		current_user.add_client_colour(/datum/client_colour/glass_colour/lightgreen)
 
 /obj/item/clothing/head/helmet/expeditionary_corps/proc/disable_nv()
@@ -236,7 +239,10 @@
 		var/obj/item/organ/internal/eyes/my_eyes = current_user.get_organ_by_type(/obj/item/organ/internal/eyes)
 		if(my_eyes)
 			my_eyes.color_cutoffs = initial(my_eyes.color_cutoffs)
+			my_eyes.lighting_cutoff = initial(my_eyes.lighting_cutoff)
 			my_eyes.flash_protect = initial(my_eyes.flash_protect)
+			current_user.update_sight()
+			current_user.update_worn_glasses()
 		current_user.remove_client_colour(/datum/client_colour/glass_colour/lightgreen)
 		current_user.update_sight()
 

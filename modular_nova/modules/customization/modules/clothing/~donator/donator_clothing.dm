@@ -217,6 +217,9 @@
 	can_adjust = FALSE //There wasnt an adjustable sprite anyways
 	has_sensor = HAS_SENSORS	//Actually has sensors, to balance the new lack of armor
 
+	uses_advanced_reskins = FALSE // ARK STATION ADDITION
+	unique_reskin = NONE // ARK STATION ADDITION
+
 /datum/armor/clothing_under/none
 
 /obj/item/clothing/shoes/jackboots/heel

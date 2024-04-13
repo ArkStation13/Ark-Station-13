@@ -11,6 +11,8 @@
 	melee_damage_upper = 16
 	pass_flags = PASSTABLE
 
+	worn_slot_flags = null // ARK STATION ADDITON
+
 /mob/living/basic/lizard/tegu/gus
 	name = "Gus"
 	real_name = "Gus"

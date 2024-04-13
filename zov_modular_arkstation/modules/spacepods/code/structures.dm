@@ -9,6 +9,7 @@
 	icon = 'zov_modular_arkstation/modules/spacepods/icons/structures/spacegas_dolbajob.dmi'
 	icon_state = "spacegas"
 	anchored = TRUE
+	layer = ABOVE_WINDOW_LAYER
 	var/balance = 0
 	var/target_fuel = 0
 	var/shlang_na_meste = TRUE
@@ -18,7 +19,7 @@
 
 /obj/effect/ebeam/fuel_hose
 	name = "fuel hose"
-	layer = LYING_MOB_LAYER
+	layer = ABOVE_WINDOW_LAYER
 
 /obj/machinery/walltank/update_icon_state()
 	icon_state = "[initial(icon_state)]"

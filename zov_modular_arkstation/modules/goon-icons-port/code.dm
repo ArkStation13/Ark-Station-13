@@ -39,11 +39,17 @@
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-devices.dmi'
 	icon_state = "signaller"
 
-/obj/structure/holosign/big_structure
+/obj/structure/big_structure
 	name = "hologramm"
 	desc = "Giant sctricture."
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-golo.dmi'
 	icon_state = "structure-relay"
+	density = TRUE
+	anchored = TRUE
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = ABOVE_GAME_PLANE
+	bound_height = 160
+	bound_width = 160
 
 /obj/item/bikehorn
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-instruments.dmi'
@@ -120,6 +126,7 @@
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-vagons_stoped.dmi'
 	icon_state = "car-platform"
 	max_integrity = 1000
+	bound_width = 64
 	density = TRUE
 	anchored = TRUE
 	layer = ABOVE_ALL_MOB_LAYER

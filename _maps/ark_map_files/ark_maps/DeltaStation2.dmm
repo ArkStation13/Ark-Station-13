@@ -890,13 +890,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron,
 /area/station/security/prison/visit)
-"alb" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/drone{
-	plants_off = 1
-	},
-/turf/open/misc/asteroid/airless,
-/area/ruin/space)
 "ale" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -14811,9 +14804,6 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
-/obj/machinery/computer/department_orders/science{
-	dir = 4
-	},
 /obj/effect/turf_decal/bot/left,
 /obj/structure/sign/nanotrasen{
 	pixel_x = -32
@@ -28482,11 +28472,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
-"gTQ" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/queen/large,
-/turf/open/misc/asteroid/airless,
-/area/ruin/space)
 "gTS" = (
 /obj/effect/landmark/start/botanist,
 /turf/open/misc/grass,
@@ -33295,13 +33280,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/maintenance/department/chapel)
-"ifA" = (
-/obj/structure/alien/weeds/node,
-/mob/living/simple_animal/hostile/alien/drone{
-	plants_off = 1
-	},
-/turf/open/misc/asteroid/airless,
-/area/ruin/space)
 "ifR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -35072,9 +35050,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "iDS" = (
-/obj/machinery/computer/department_orders/engineering{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
 	},
@@ -41146,7 +41121,6 @@
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "kbc" = (
-/obj/machinery/computer/department_orders/medical,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 6
 	},
@@ -43038,7 +43012,6 @@
 /area/station/science/research)
 "kzV" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/department_orders/service,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/checker,
 /area/station/hallway/secondary/service)
@@ -54302,13 +54275,12 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos/storage/gas)
 "nsp" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Security Pods";
-	req_access = list(71)
-	},
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Pods"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "nsG" = (
@@ -69074,15 +69046,14 @@
 /area/station/cargo/storage)
 "rcv" = (
 /obj/structure/cable,
-/obj/machinery/door/airlock/security/glass{
-	name = "Security Pods";
-	req_access = list(71)
-	},
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Pods"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "rcw" = (
@@ -93184,9 +93155,6 @@
 "wWH" = (
 /obj/structure/plaque/static_plaque/golden{
 	pixel_y = -32
-	},
-/obj/machinery/computer/department_orders/security{
-	dir = 1
 	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
@@ -157230,7 +157198,7 @@ iMH
 rRi
 dGQ
 uiM
-alb
+uiM
 uiM
 uiM
 iMH
@@ -158779,7 +158747,7 @@ uiM
 uiM
 uiM
 uiM
-alb
+uiM
 uiM
 iMH
 eOF
@@ -159540,7 +159508,7 @@ eOF
 eOF
 iMH
 caW
-ifA
+dGQ
 dfn
 iMH
 uiM
@@ -160572,7 +160540,7 @@ eOF
 eOF
 iMH
 hHe
-gTQ
+uiM
 uiM
 rRi
 iMH
