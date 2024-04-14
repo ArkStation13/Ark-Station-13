@@ -596,6 +596,28 @@
 		log_admin("[key_name(usr)] has sent [key_name(M)] to Prison!")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to Prison!")
 
+// ARK STATION EDIT START /////////////////////////////////////////////////////////////////////////////////////////////////////
+	else if(href_list["sendtovoid"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/mob/M = locate(href_list["sendtovoid"])
+		if(!ismob(M))
+			to_chat(usr, "This can only be used on instances of type /mob.", confidential = TRUE)
+			return
+		if(isAI(M))
+			to_chat(usr, "This cannot be used on instances of type /mob/living/silicon/ai.", confidential = TRUE)
+			return
+
+		if(tgui_alert(usr, "Send [key_name(M)] to Void?", "Message", list("Yes", "No")) != "Yes")
+			return
+
+		M.forceMove(pick(GLOB.void))
+		to_chat(M, span_narsiesmall("WHAT'S WRONG WITH YOU, MATE?"), confidential = TRUE)
+		log_admin("[key_name(usr)] has sent [key_name(M)] to Void!")
+		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to Void!")
+// ARK STATION EDIT END /////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	else if(href_list["sendbacktolobby"])
 		if(!check_rights(R_ADMIN))
 			return

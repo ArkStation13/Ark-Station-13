@@ -1,3 +1,13 @@
+// Landmark //
+/obj/effect/landmark/voidspawn
+	name = "voidspawn"
+	icon_state = "x"
+
+/obj/effect/landmark/voidspawn/Initialize(mapload)
+	..()
+	GLOB.void += loc
+	return INITIALIZE_HINT_QDEL
+
 /turf/open/indestructible/void
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "void"
@@ -12,7 +22,7 @@
 
 /obj/effect/step_trigger/void/proc/activate_void(mob/living/carbon/triggerer)
 	var/obj/effect/particle_effect/sparks/void_fissure/void_hueta = new /obj/effect/particle_effect/sparks/void_fissure(src.loc)
-	animate(void_hueta, pixel_z = rand(60, 300), pixel_x = rand(-30, 30), time = 8, easing = LINEAR_EASING)
+	animate(void_hueta, pixel_z = 0, pixel_x = 0, time = 8, easing = LINEAR_EASING)
 	if(prob(6))
 		var/sound/sound = sound('zov_modular_arkstation/modules/void/trip_blast.wav')
 		sound.environment = 23
