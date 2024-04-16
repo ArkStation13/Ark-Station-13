@@ -3,7 +3,7 @@
 #define COLORMATE_MATRIX 3
 
 /obj/machinery/gear_painter
-	name = "\improper Color Mate"
+	name = "\improper ColorMate"
 	desc = "A machine to give your apparel a fresh new color!"
 	icon = 'zov_modular_arkstation/modules/colormate/icons/colormate.dmi'
 	icon_state = "colormate"
