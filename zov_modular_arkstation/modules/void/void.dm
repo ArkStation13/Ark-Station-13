@@ -143,7 +143,7 @@
 				INVOKE_ASYNC(M, TYPE_PROC_REF(/mob, emote), "agony")
 				M.overlay_fullscreen("flash_void", /atom/movable/screen/fullscreen/flash/black)
 				sleep(5 SECONDS)
-				M.clear_fullscreen("screamers", rand(15, 60))
+				M.clear_fullscreen("flash_void", rand(15, 60))
 
 
 
