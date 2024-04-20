@@ -1,8 +1,17 @@
 import { Button, Stack } from '../../../../../../components';
-import { CheckboxInput, FeatureChoiced, FeatureChoicedServerData, FeatureDropdownInput, FeatureNumberInput, FeatureNumeric, FeatureToggle, FeatureValueProps } from '../../base';
+import {
+  CheckboxInput,
+  FeatureChoiced,
+  FeatureChoicedServerData,
+  FeatureNumberInput,
+  FeatureNumeric,
+  FeatureToggle,
+  FeatureValueProps,
+} from '../../base';
+import { FeatureDropdownInput } from '../../dropdowns';
 
 const FeatureBlooperDropdownInput = (
-  props: FeatureValueProps<string, string, FeatureChoicedServerData>
+  props: FeatureValueProps<string, string, FeatureChoicedServerData>,
 ) => {
   return (
     <Stack>

@@ -5,6 +5,10 @@
 	name = "void_door_and_monster_spawn"
 	icon_state = "x2"
 
+/turf/open/indestructible/void/Initialize(mapload)
+	. = ..()
+	GLOB.void_door_or_monster_spawn += src
+
 /obj/effect/landmark/voidspawn_monster_and_door/Initialize(mapload)
 	..()
 
@@ -39,10 +43,6 @@
 	icon_state = "void"
 	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
 	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
-
-/turf/open/indestructible/void/Initialize(mapload)
-	. = ..()
-	GLOB.void_door_or_monster_spawn += src
 
 // Void Wall
 /turf/closed/indestructible/void
