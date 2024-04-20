@@ -5,7 +5,7 @@
 // CONSTRUCTION //
 /obj/item/pods_parts/hull/examine(mob/user)
 	. = ..()
-	if(obj_flags & NO_DECONSTRUCTION)
+	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
 		return
 	switch(state)
 		if(POD_MAIN_BORD)
@@ -34,7 +34,7 @@
 			. += span_notice("Под готов. Однако теперь нужно доварить швы <b>сварочным аппаратом</b>.")
 
 /obj/item/pods_parts/hull/attackby(obj/item/tool, mob/user, params)
-	if(obj_flags & NO_DECONSTRUCTION)
+	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
 		return ..()
 
 	switch(state)

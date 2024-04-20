@@ -15,7 +15,7 @@
 	return . += span_yellow("(Alt + Click for reskins).")
 
 
-/obj/item/clothing/under/arkstation/croptops/main/AltClick(mob/user)
+/obj/item/clothing/under/arkstation/croptops/main/click_alt(mob/user)
 	. = ..()
 	var/list/choices = list("Standart","Short","Very Short","Extremely Short")
 	var/skin = tgui_input_list(user, "How much should I shorten this hoodie?", "Hoodie variables.", choices)

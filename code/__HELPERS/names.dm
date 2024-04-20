@@ -218,8 +218,6 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 						. += pick(GLOB.cocktails)
 					if(2)
 						. += pick(GLOB.locations)
-					if(3)
-						. += LOWER_TEXT(pick(locations))
 				safety -= 2
 			if(3)
 				switch(rand(1,3))//Abstract nouns, adjectives, verbs. Can be selected more than once.
@@ -229,8 +227,6 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 						. += pick(GLOB.ru_adjectives)
 					if(3)
 						. += pick(GLOB.ru_verbs)
-					if(4)
-						. += LOWER_TEXT(pick(threats))
 		if(!return_list)
 			if(words == 1)
 				. += "."

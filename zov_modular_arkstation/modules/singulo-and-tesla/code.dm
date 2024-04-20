@@ -254,8 +254,8 @@
 	return ..()
 
 
-/obj/structure/particle_accelerator/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NO_DECONSTRUCTION))
+/obj/structure/particle_accelerator/atom_deconstruct(disassembled = TRUE)
+	if(!(flags_1 & NO_DEBRIS_AFTER_DECONSTRUCTION))
 		new /obj/item/stack/sheet/iron (loc, 5)
 	qdel(src)
 

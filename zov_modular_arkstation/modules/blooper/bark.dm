@@ -16,16 +16,13 @@ GLOBAL_VAR_INIT(blooper_allowed, TRUE) // For administrators
 	set category = "Server"
 	set desc = "Toggle ANNOYING NOIZES"
 	set name = "Toggle Blooper"
-	toggle_blooper()
+	toggleblooper()
 	log_admin("[key_name(usr)] toggled Blooper.")
 	message_admins("[key_name_admin(usr)] toggled Blooper.")
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Blooper", "[GLOB.blooper_allowed ? "Enabled" : "Disabled"]")) // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
-/world/AVerbsAdmin()
-	. = ..()
-	return . + /datum/admins/proc/toggleblooper
-
-/proc/toggle_blooper(toggle = null)
+ADMIN_VERB(toggleblooper, R_SERVER, "Toggle Blooper", "Toggles the global Blooper.", ADMIN_CATEGORY_SERVER)
+	var/toggle = null
 	if(toggle != null)
 		if(toggle != GLOB.blooper_allowed)
 			GLOB.blooper_allowed = toggle

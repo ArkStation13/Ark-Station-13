@@ -114,7 +114,7 @@
 // 		inserted = null
 // 	return ..()
 
-/obj/machinery/gear_painter/AltClick(mob/user)
+/obj/machinery/gear_painter/click_alt(mob/user)
 	. = ..()
 	drop_item()
 
