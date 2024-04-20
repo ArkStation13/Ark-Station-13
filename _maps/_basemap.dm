@@ -16,6 +16,7 @@
 		// NOVA EDIT ADDITON START - Compiling our modular maps too!
 		#include "ark_map_files\ark_maps\VoidRaptor.dmm"
 		#include "ark_map_files\ark_maps\Blueshift.dmm"
+		#include "map_files\Ouroboros\Ouroboros.dmm"
 		// NOVA EDIT END
 		// ARK STATION ADDITION START
 		#include "ark_map_files\ark_maps\KiloStation2.dmm"
