@@ -616,6 +616,11 @@
 		if(tgui_alert(usr, "Send [key_name(M)] to Void?", "Message", list("Yes", "No")) != "Yes")
 			return
 
+		if(is_already_spawned == FALSE)
+			new /obj/structure/void_safe_door(pick(GLOB.void_door_or_monster_spawn))
+			new /mob/living/basic/void_monster(pick(GLOB.void_door_or_monster_spawn))
+			is_already_spawned = TRUE
+
 		M.forceMove(pick(GLOB.void))
 		to_chat(M, span_narsiesmall("WHAT'S WRONG WITH YOU, MATE?"), confidential = TRUE)
 		log_admin("[key_name(usr)] has sent [key_name(M)] to Void!")
