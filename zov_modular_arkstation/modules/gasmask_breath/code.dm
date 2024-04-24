@@ -24,6 +24,12 @@
 	. = ..()
 	if(!breathy)
 		return
+	if(HAS_TRAIT(user, TRAIT_NOBREATH))
+		STOP_PROCESSING(SSgasmask, src)
+		return
+	if(user.stat == DEAD)
+		STOP_PROCESSING(SSgasmask, src)
+		return
 	if(slot != ITEM_SLOT_MASK)
 		STOP_PROCESSING(SSgasmask, src)
 		return
