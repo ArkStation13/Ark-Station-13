@@ -3,23 +3,22 @@
 	savefile_key = "height_scaling"
 	savefile_identifier = PREFERENCE_CHARACTER
 
-	/// Assoc list of stringified HUMAN_HEIGHT_### defines to string. Passed into CHOICED_PREFERENCE_DISPLAY_NAMES.
-	// var/static/list/height_scaling_strings = list( 						// ARK STATION REMOVAL
-	// 	"[HUMAN_HEIGHT_SHORT]" = "Short", 									// ARK STATION REMOVAL
-	// 	"[HUMAN_HEIGHT_MEDIUM]" = "Medium", 								// ARK STATION REMOVAL
-	// 	"[HUMAN_HEIGHT_TALL]" = "Tall", 									// ARK STATION REMOVAL
-	// ) 																	// ARK STATION REMOVAL
+	var/static/list/height_scaling_strings = list(
+		"[HUMAN_HEIGHT_SHORTEST]" = "Shortest",
+		"[HUMAN_HEIGHT_SHORT]" = "Short",
+		"[HUMAN_HEIGHT_MEDIUM]" = "Medium",
+		"[HUMAN_HEIGHT_TALL]" = "Tall",
+		"[HUMAN_HEIGHT_TALLER]" = "Taller",
+		"[HUMAN_HEIGHT_TALLEST]" = "Tallest"
+	)
 
-	/// List of strings, representing quirk ids that prevent this from applying and being accessed.
-	// var/static/list/incompatable_quirk_ids = list( 						// ARK STATION REMOVAL
-	// 	"Spacer", 															// ARK STATION REMOVAL
-	// 	"Settler" 															// ARK STATION REMOVAL
-	// ) 																	// ARK STATION REMOVAL
+	var/static/list/incompatable_quirk_ids = list(
+		"Spacer",
+		"Settler"
+	)
 
 /datum/preference/choiced/height_scaling/init_possible_values()
-	// HUMAN_HEIGHT_SHORTEST and HUMAN_HEIGHT_TALLER are left out on maintainer request unless desired later
-	// HUMAN_HEIGHT_TALLEST is disabled because it constantly artifacts
-	return list(HUMAN_HEIGHT_SHORT, HUMAN_HEIGHT_MEDIUM, HUMAN_HEIGHT_TALL)
+	return list(HUMAN_HEIGHT_SHORTEST, HUMAN_HEIGHT_SHORT, HUMAN_HEIGHT_MEDIUM, HUMAN_HEIGHT_TALL, HUMAN_HEIGHT_TALLER, HUMAN_HEIGHT_TALLEST)
 
 /datum/preference/choiced/height_scaling/create_default_value()
 	return HUMAN_HEIGHT_MEDIUM
@@ -47,9 +46,6 @@
 		if (quirk_id in incompatable_quirk_ids)
 			return FALSE
 
-	if (isteshari(target))
-		value = (max(value, HUMAN_HEIGHT_MEDIUM)) // to respect junis tesh rework i am preventing them from getting shorter
-
 	target.set_mob_height(value)
 
 /datum/preference/choiced/height_scaling/compile_constant_data()
@@ -59,3 +55,16 @@
 	data[CHOICED_PREFERENCE_DISPLAY_NAMES] = height_scaling_strings
 
 	return data
+
+// To speed up the preference menu, we apply 1 filter to the entire mob
+/mob/living/carbon/human/dummy/regenerate_icons()
+	. = ..()
+	apply_height_filters(src, TRUE)
+
+/mob/living/carbon/human/dummy/apply_height_filters(mutable_appearance/appearance, only_apply_in_prefs = FALSE)
+	if(only_apply_in_prefs)
+		return ..()
+
+// Not necessary with above
+/mob/living/carbon/human/dummy/apply_height_offsets(mutable_appearance/appearance, upper_torso)
+	return

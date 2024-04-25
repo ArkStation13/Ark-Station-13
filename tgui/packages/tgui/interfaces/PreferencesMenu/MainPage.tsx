@@ -1,14 +1,16 @@
-import { filter, map, sortBy } from 'common/collections';
+import { filterMap, sortBy } from 'common/collections';
+import { exhaustiveCheck } from 'common/exhaustive';
 import { classes } from 'common/react';
-import { createSearch } from 'common/string';
 import { useState } from 'react';
 
+import { filter } from '../../../common/collections';
+import { createSearch } from '../../../common/string';
 import { sendAct, useBackend } from '../../backend';
 import {
   Autofocus,
   Box,
   Button,
-  Dropdown, // NOVA EDIT ADDITION
+  Dropdown, // ARK STATION EDIT ADDITION
   Flex,
   Input,
   LabeledList,
@@ -23,6 +25,7 @@ import {
   ServerData,
 } from './data';
 import { MultiNameInput, NameInput } from './names';
+import { PageButton } from './PageButton';
 import features from './preferences/features';
 import {
   FeatureChoicedServerData,
@@ -34,7 +37,7 @@ import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 import { useRandomToggleState } from './useRandomToggleState';
 
 const CLOTHING_CELL_SIZE = 48;
-const CLOTHING_SIDEBAR_ROWS = 13.4; // NOVA EDIT CHANGE - ORIGINAL:  9
+const CLOTHING_SIDEBAR_ROWS = 13.4; // ARK STATION EDIT CHANGE - ORIGINAL:  9
 
 const CLOTHING_SELECTION_CELL_SIZE = 48;
 const CLOTHING_SELECTION_WIDTH = 5.4;
@@ -43,8 +46,8 @@ const CLOTHING_SELECTION_MULTIPLIER = 5.2;
 const CharacterControls = (props: {
   handleRotate: () => void;
   handleOpenSpecies: () => void;
-  handleLoadout: () => void; // NOVA EDIT ADDITION
-  handleFood: () => void; // NOVA EDIT ADDITION
+  handleLoadout: () => void; // ARK STATION EDIT ADDITION
+  handleFood: () => void; // ARK STATION EDIT ADDITION
   gender: Gender;
   setGender: (gender: Gender) => void;
   showGender: boolean;
@@ -79,7 +82,7 @@ const CharacterControls = (props: {
           />
         </Stack.Item>
       )}
-      {/* NOVA EDIT ADDITION START */}
+      {/* ARK STATION EDIT ADDITION START */}
       {props.handleLoadout && (
         <Stack.Item>
           <Button
@@ -99,7 +102,7 @@ const CharacterControls = (props: {
           tooltip="Edit Food Preferences"
           tooltipPosition="top"
         />
-        {/* NOVA EDIT ADDITION END */}
+        {/* ARK STATION EDIT ADDITION END */}
       </Stack.Item>
     </Stack>
   );
@@ -481,20 +484,22 @@ export const getRandomization = (
 
   const { data } = useBackend<PreferencesMenuData>();
 
-  if (!randomBodyEnabled) {
-    return {};
-  }
-
   return Object.fromEntries(
-    map(
-      filter(Object.keys(preferences), (key) =>
-        serverData.random.randomizable.includes(key),
-      ),
-      (key) => [
-        key,
-        data.character_preferences.randomization[key] || RandomSetting.Disabled,
-      ],
-    ),
+    filterMap(Object.keys(preferences), (preferenceKey) => {
+      if (serverData.random.randomizable.indexOf(preferenceKey) === -1) {
+        return undefined;
+      }
+
+      if (!randomBodyEnabled) {
+        return undefined;
+      }
+
+      return [
+        preferenceKey,
+        data.character_preferences.randomization[preferenceKey] ||
+          RandomSetting.Disabled,
+      ];
+    }),
   );
 };
 
@@ -505,6 +510,15 @@ export const MainPage = (props: { openSpecies: () => void }) => {
   );
   const [multiNameInputOpen, setMultiNameInputOpen] = useState(false);
   const [randomToggleEnabled] = useRandomToggleState();
+
+  // SKYRAT EDIT BEGIN: SWAPPABLE PREF MENUS
+  enum PrefPage {
+    Visual, // The visual parts
+    Lore, // Lore, Flavor Text, Age, Records
+  }
+
+  const [currentPrefPage, setCurrentPrefPage] = useState(PrefPage.Visual);
+  // SKYRAT EDIT END
 
   return (
     <ServerPreferencesFetcher
@@ -554,6 +568,41 @@ export const MainPage = (props: { openSpecies: () => void }) => {
           delete nonContextualPreferences['random_name'];
         }
 
+        // SKYRAT EDIT BEGIN: SWAPPABLE PREF MENUS
+        let prefPageContents;
+        switch (currentPrefPage) {
+          case PrefPage.Visual:
+            prefPageContents = (
+              <PreferenceList
+                act={act}
+                randomizations={getRandomization(
+                  contextualPreferences,
+                  serverData,
+                  randomBodyEnabled,
+                )}
+                preferences={contextualPreferences}
+                maxHeight="auto"
+              />
+            );
+            break;
+          case PrefPage.Lore:
+            prefPageContents = (
+              <PreferenceList
+                act={act}
+                randomizations={getRandomization(
+                  nonContextualPreferences,
+                  serverData,
+                  randomBodyEnabled,
+                )}
+                preferences={nonContextualPreferences}
+                maxHeight="auto"
+              />
+            );
+            break;
+          default:
+            exhaustiveCheck(currentPrefPage);
+        }
+        // SKYRAT EDIT END
         return (
           <>
             {multiNameInputOpen && (
@@ -587,11 +636,11 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                       handleLoadout={() => {
                         act('open_loadout');
                       }}
-                      // NOVA EDIT ADDITION - BEGIN
+                      // SKYRAT EDIT ADDITION - BEGIN
                       handleFood={() => {
                         act('open_food');
                       }}
-                      // NOVA EDIT ADDITION - END
+                      // SKYRAT EDIT ADDITION - END
                       setGender={createSetPreference(act, 'gender')}
                       showGender={
                         currentSpeciesData ? !!currentSpeciesData.sexes : true
@@ -601,13 +650,13 @@ export const MainPage = (props: { openSpecies: () => void }) => {
 
                   <Stack.Item grow>
                     <CharacterPreview
-                      height="80%" // NOVA EDIT - ORIGINAL: height="100%"
+                      height="80%" // SKYRAT EDIT - ORIGINAL: height="100%"
                       id={data.character_preview_view}
                     />
                   </Stack.Item>
 
                   <Stack.Item
-                    // NOVA EDIT ADDITION
+                    // SKYRAT EDIT ADDITION
                     position="relative"
                   >
                     <Dropdown
@@ -676,29 +725,32 @@ export const MainPage = (props: { openSpecies: () => void }) => {
               </Stack.Item>
 
               <Stack.Item grow basis={0}>
-                <Stack vertical fill>
-                  <PreferenceList
-                    act={act}
-                    randomizations={getRandomization(
-                      contextualPreferences,
-                      serverData,
-                      randomBodyEnabled,
-                    )}
-                    preferences={contextualPreferences}
-                    maxHeight="auto"
-                  />
-
-                  <PreferenceList
-                    act={act}
-                    randomizations={getRandomization(
-                      nonContextualPreferences,
-                      serverData,
-                      randomBodyEnabled,
-                    )}
-                    preferences={nonContextualPreferences}
-                    maxHeight="auto"
-                  />
+                {/* SKYRAT EDIT BEGIN: Swappable pref menus */}
+                <Stack>
+                  <Stack.Item grow>
+                    <PageButton
+                      currentPage={currentPrefPage}
+                      page={PrefPage.Visual}
+                      setPage={setCurrentPrefPage}
+                    >
+                      Character Visuals
+                    </PageButton>
+                  </Stack.Item>
+                  <Stack.Item grow>
+                    <PageButton
+                      currentPage={currentPrefPage}
+                      page={PrefPage.Lore}
+                      setPage={setCurrentPrefPage}
+                    >
+                      Character Lore
+                    </PageButton>
+                  </Stack.Item>
                 </Stack>
+                <Stack fill vertical>
+                  <Stack.Divider />
+                  {prefPageContents}
+                </Stack>
+                {/* SKYRAT EDIT END: Swappable pref menus */}
               </Stack.Item>
             </Stack>
           </>

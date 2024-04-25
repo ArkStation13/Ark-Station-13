@@ -1,5 +1,5 @@
 // ARK STATION UI FILE
-import { CheckboxInput, FeatureToggle } from '../base';
+import { CheckboxInput, FeatureToggle } from '../../base';
 
 export const gas_breath: FeatureToggle = {
   name: 'Enable Gasmask Breath Sound',

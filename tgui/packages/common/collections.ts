@@ -78,6 +78,22 @@ export const map: MapFunction = (collection, iterateeFn) => {
   throw new Error(`map() can't iterate on type ${typeof collection}`);
 };
 
+export const filterMap = <T, U>( // ARK STATION CONST
+  collection: T[],
+  iterateeFn: (value: T) => U | undefined,
+): U[] => {
+  const finalCollection: U[] = [];
+
+  for (const value of collection) {
+    const output = iterateeFn(value);
+    if (output !== undefined) {
+      finalCollection.push(output);
+    }
+  }
+
+  return finalCollection;
+};
+
 const COMPARATOR = (objA, objB) => {
   const criteriaA = objA.criteria;
   const criteriaB = objB.criteria;

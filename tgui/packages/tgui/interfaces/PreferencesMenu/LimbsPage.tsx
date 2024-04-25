@@ -1,4 +1,4 @@
-// THIS IS A NOVA SECTOR UI FILE
+// THIS IS A SKYRAT UI FILE
 import { useBackend } from '../../backend';
 import {
   Box,
@@ -167,7 +167,7 @@ export const AugmentationPage = (props) => {
                   <Dropdown
                     width="100%"
                     options={props.data.robotic_styles}
-                    selected={props.limb.chosen_styleg}
+                    selected={props.limb.chosen_style}
                     onSelected={(value) =>
                       act('set_limb_aug_style', {
                         limb_slot: props.limb.slot,

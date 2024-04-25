@@ -32,7 +32,7 @@ const PriorityButton = (props: {
   const className = `PreferencesMenu__Jobs__departments__priority`;
 
   return (
-    // NOVA EDIT START
+    // ARK STATION EDIT START
     <Button
       className={classes([
         className,
@@ -46,7 +46,7 @@ const PriorityButton = (props: {
       height={PRIORITY_BUTTON_SIZE}
       width={PRIORITY_BUTTON_SIZE}
     />
-    // NOVA EDIT END
+    // ARK STATION EDIT END
   );
 };
 
@@ -113,14 +113,14 @@ const PriorityButtons = (props: {
   const { createSetPriority, isOverflow, priority } = props;
 
   return (
-    <Box // NOVA EDIT - Originally a stack
+    <Box // ARK STATION EDIT - ORIGINALLY STACK
       style={{
         alignItems: 'center',
         height: '100%',
         justifyContent: 'flex-end',
         paddingLeft: '0.3em',
-        paddingTop: '0.12em', // NOVA EDIT ADDITION - Add some vertical padding
-        paddingBottom: '0.12em', // NOVA EDIT ADDITION - To make this look nicer
+        paddingTop: '0.12em', // ARK STATION EDIT - Add some vertical padding
+        paddingBottom: '0.12em', // ARK STATION EDIT - To make this look nicer
       }}
     >
       {isOverflow ? (
@@ -172,12 +172,12 @@ const PriorityButtons = (props: {
           />
         </>
       )}
-    </Box> // NOVA EDIT - Originally a stack
+    </Box> // SKYRAT EDIT - Originally a stack
   );
 };
 
 const JobRow = (props: { className?: string; job: Job; name: string }) => {
-  const { data, act } = useBackend<PreferencesMenuData>(); // NOVA EDIT CHANGE - Adds act param
+  const { data, act } = useBackend<PreferencesMenuData>(); // SKYRAT EDIT CHANGE - Adds act param
   const { className, job, name } = props;
 
   const isOverflow = data.overflow_role === name;
@@ -189,11 +189,11 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
     data.job_required_experience && data.job_required_experience[name];
   const daysLeft = data.job_days_left ? data.job_days_left[name] : 0;
 
-  // NOVA EDIT ADDITION
+  // ARK STATION EDIT START
   const alt_title_selected = data.job_alt_titles[name]
     ? data.job_alt_titles[name]
     : name;
-  // NOVA EDIT END
+  // ARK STATION EDIT END
 
   let rightSide: ReactNode;
 
@@ -224,15 +224,6 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
-    // NOVA EDIT START
-  } else if (job.veteran && !data.is_veteran) {
-    rightSide = (
-      <Stack align="center" height="100%" pr={1}>
-        <Stack.Item grow textAlign="right">
-          <b>Veteran Only</b>
-        </Stack.Item>
-      </Stack>
-    );
   } else if (
     data.species_restricted_jobs &&
     data.species_restricted_jobs.indexOf(name) !== -1
@@ -244,7 +235,6 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
-    // NOVA EDIT END
   } else {
     rightSide = (
       <PriorityButtons
@@ -267,7 +257,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
             }}
           >
             {
-              // NOVA EDIT CHANGE START - ORIGINAL: {name}
+              // ARK STATION EDIT START
               !job.alt_titles ? (
                 name
               ) : (
@@ -280,7 +270,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
                   }
                 />
               )
-              // NOVA EDIT CHANGE END
+              // ARK STATION EDIT END
             }
           </Stack.Item>
         </Tooltip>
@@ -325,7 +315,7 @@ const Department = (props: { department: string } & PropsWithChildren) => {
             {
               jobsForDepartment.map(([name, job]) => {
                 return (
-                  <JobRow /* NOVA EDIT START - Fixing alt titles */
+                  <JobRow // ARK STATION EDIT START
                     className={classes([
                       className,
                       name === department.head && 'head',
@@ -335,7 +325,7 @@ const Department = (props: { department: string } & PropsWithChildren) => {
                     name={name}
                   />
                 );
-              }) /* NOVA EDIT END */
+              }) // ARK STATION EDIT END
             }
 
             {children}
@@ -385,6 +375,12 @@ const JoblessRoleDropdown = (props) => {
         selected={selection}
         onSelected={createSetPreference(act, 'joblessrole')}
         options={options}
+        displayText={
+          // ARK STATION EDIT
+          <Box pr={1}>
+            {options.find((option) => option.value === selected)!.displayText}
+          </Box>
+        }
       />
     </Box>
   );

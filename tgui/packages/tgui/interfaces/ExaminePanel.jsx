@@ -1,7 +1,9 @@
-// THIS IS A NOVA SECTOR UI FILE
+// THIS IS AN ARK STATION UI FILE
+import { useState } from 'react';
+
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { ByondUi, Section, Stack } from '../components';
+import { ByondUi, Section, Stack, Tabs } from '../components'; // ARK STATION edit: add Tabs
 import { Window } from '../layouts';
 
 const formatURLs = (text) => {
@@ -33,22 +35,29 @@ const formatURLs = (text) => {
 };
 
 export const ExaminePanel = (props) => {
+  const [tabIndex, setTabIndex] = useState(1); // ARK STATION edit addition
+  const [lowerTabIndex, setLowerTabIndex] = useState(1); // ARK STATION edit addition
   const { act, data } = useBackend();
   const {
     character_name,
     obscured,
     assigned_map,
     flavor_text,
+    flavor_text_nsfw, // ARK STATION edit addition
     ooc_notes,
     custom_species,
     custom_species_lore,
+    character_ad, // ARK STATION edit
     headshot,
-    ideal_antag_optin_status,
-    current_antag_optin_status,
-    opt_in_colors = { optin, color },
+    headshot_nsfw, // ARK STATION edit addition
   } = data;
   return (
-    <Window title="Examine Panel" width={900} height={670} theme="ntos">
+    <Window
+      title={character_name + "'s Examine Panel"} // ARK STATION edit
+      width={900}
+      height={670}
+    >
+      {/* ARK STATION EDIT: DON'T USE ADMIN THEME*/}
       <Window.Content>
         <Stack fill>
           <Stack.Item width="30%">
@@ -79,7 +88,12 @@ export const ExaminePanel = (props) => {
                 </Section>
                 <Section height="310px" title="Headshot">
                   <img
-                    src={resolveAsset(headshot)}
+                    src={
+                      // ARK STATION edit
+                      tabIndex === 2 // ARK STATION edit
+                        ? resolveAsset(headshot_nsfw) // ARK STATION edit
+                        : resolveAsset(headshot) // ARK STATION edit
+                    }
                     height="250px"
                     width="250px"
                   />
@@ -88,71 +102,115 @@ export const ExaminePanel = (props) => {
             )}
           </Stack.Item>
           <Stack.Item grow>
-            <Stack fill vertical>
-              <Stack.Item grow>
+            {/* ARK STATION EDIT BEGIN, NSFW FLAVOR TEXT */}
+            <Tabs fluid>
+              <Tabs.Tab
+                selected={tabIndex === 1}
+                onClick={() => setTabIndex(1)}
+              >
+                <Section fitted title={'Flavor Text'} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={tabIndex === 2}
+                onClick={() => setTabIndex(2)}
+              >
+                <Section fitted title={'NSFW (Warning)'} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={tabIndex === 3}
+                onClick={() => setTabIndex(3)}
+              >
                 <Section
-                  scrollable
-                  fill
-                  title={character_name + "'s Flavor Text:"}
-                  preserveWhitespace
-                >
-                  {formatURLs(flavor_text)}
-                </Section>
-              </Stack.Item>
-              <Stack.Item grow>
-                <Stack fill>
-                  <Stack.Item grow basis={0}>
-                    <Section
-                      scrollable
-                      fill
-                      title="OOC Notes"
-                      preserveWhitespace
-                    >
-                      {ideal_antag_optin_status && (
-                        <Stack.Item>
-                          Current Antag Opt-In Status:{' '}
-                          <span
-                            style={{
-                              fontWeight: 'bold',
-                              color: opt_in_colors[current_antag_optin_status],
-                            }}
-                          >
-                            {current_antag_optin_status}
-                          </span>
-                          {'\n'}
-                          Antag Opt-In Status {'(Preferences)'}:{' '}
-                          <span
-                            style={{
-                              color: opt_in_colors[ideal_antag_optin_status],
-                            }}
-                          >
-                            {ideal_antag_optin_status}
-                          </span>
-                          {'\n\n'}
-                        </Stack.Item>
-                      )}
-                      {formatURLs(ooc_notes)}
-                    </Section>
-                  </Stack.Item>
-                  <Stack.Item grow basis={0}>
-                    <Section
-                      scrollable
-                      fill
-                      title={
-                        custom_species
-                          ? 'Species: ' + custom_species
-                          : 'No Custom Species!'
-                      }
-                      preserveWhitespace
-                    >
-                      {custom_species
-                        ? formatURLs(custom_species_lore)
-                        : 'Just a normal space dweller.'}
-                    </Section>
-                  </Stack.Item>
-                </Stack>
-              </Stack.Item>
-            </Stack>
+                  fitted
+                  title={custom_species ? custom_species : 'Unnamed Species'}
+                />
+              </Tabs.Tab>
+            </Tabs>
+            {tabIndex === 1 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                fitted
+                preserveWhitespace
+                minHeight="50%"
+                maxHeight="50%"
+                fontSize="14px"
+                lineHeight="1.7"
+                textIndent="3em"
+              >
+                {formatURLs(flavor_text)}
+              </Section>
+            )}
+            {tabIndex === 2 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                fitted
+                preserveWhitespace
+                minHeight="50%"
+                maxHeight="50%"
+                fontSize="14px"
+                lineHeight="1.7"
+                textIndent="3em"
+              >
+                {formatURLs(flavor_text_nsfw)}
+              </Section>
+            )}
+            {tabIndex === 3 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                fitted
+                preserveWhitespace
+                minHeight="50%"
+                maxHeight="50%"
+                fontSize="14px"
+                lineHeight="1.7"
+                textIndent="3em"
+              >
+                {custom_species
+                  ? formatURLs(custom_species_lore)
+                  : 'Just a normal space dweller.'}
+              </Section>
+            )}
+            <Tabs fluid>
+              <Tabs.Tab
+                selected={lowerTabIndex === 1}
+                onClick={() => setLowerTabIndex(1)}
+              >
+                <Section fitted title={'OOC Notes'} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={lowerTabIndex === 2}
+                onClick={() => setLowerTabIndex(2)}
+              >
+                <Section fitted title={'Character Advert'} />
+              </Tabs.Tab>
+            </Tabs>
+            {lowerTabIndex === 1 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                preserveWhitespace
+                fitted
+                minHeight="35%"
+                maxHeight="35%"
+                fontSize="14px"
+                lineHeight="1.5"
+              >
+                <Stack.Item>{formatURLs(ooc_notes)}</Stack.Item>
+              </Section>
+            )}
+            {lowerTabIndex === 2 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                preserveWhitespace
+                fitted
+                minHeight="35%"
+                maxHeight="35%"
+                fontSize="14px"
+                lineHeight="1.5"
+              >
+                <Stack.Item>{formatURLs(character_ad)}</Stack.Item>
+              </Section>
+            )}
+            {/* ARK STATION EDIT END, NSFW FLAVOR TEXT */}
           </Stack.Item>
         </Stack>
       </Window.Content>

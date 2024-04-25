@@ -1,5 +1,5 @@
-import { sortBy } from 'common/collections';
-import { BooleanLike } from 'common/react';
+import { sortBy } from 'common/collections'; // ARK STATION EDIT
+import { BooleanLike, classes } from 'common/react'; // ARK STATION EDIT
 import {
   ComponentType,
   createElement,
@@ -17,7 +17,7 @@ import {
   NumberInput,
   Slider,
   Stack,
-  TextArea, // NOVA EDIT ADDITION
+  TextArea, // ARK STATION EDIT
 } from '../../../../components';
 import { createSetPreference, PreferencesMenuData } from '../../data';
 import { ServerPreferencesFetcher } from '../../ServerPreferencesFetcher';
@@ -124,11 +124,12 @@ export const CheckboxInputInverse = (
   );
 };
 
-export function createDropdownInput<T extends string | number = string>(
+export const createDropdownInput = <T extends string | number = string>( // ARK STATION EDIT
   // Map of value to display texts
   choices: Record<T, ReactNode>,
   dropdownProps?: Record<T, unknown>,
-): FeatureValue<T> {
+): FeatureValue<T> => {
+  // ARK STATION EDIT
   return (props: FeatureValueProps<T>) => {
     return (
       <Dropdown
@@ -147,7 +148,7 @@ export function createDropdownInput<T extends string | number = string>(
       />
     );
   };
-}
+}; // ARK STATION EDIT
 
 export type FeatureChoicedServerData = {
   choices: string[];
@@ -156,6 +157,141 @@ export type FeatureChoicedServerData = {
 };
 
 export type FeatureChoiced = Feature<string, string, FeatureChoicedServerData>;
+
+const capitalizeFirstLetter = (
+  text: string, // ARK STATION EDIT
+) => text.toString().charAt(0).toUpperCase() + text.toString().slice(1); // ARK STATION EDIT
+
+export const StandardizedDropdown = (props: {
+  // ARK STATION EDIT
+  choices: string[];
+  disabled?: boolean;
+  displayNames: Record<string, ReactNode>;
+  onSetValue: (newValue: string) => void;
+  value: string;
+  buttons?: boolean;
+}) => {
+  const { choices, disabled, buttons, displayNames, onSetValue, value } = props;
+
+  return (
+    <Dropdown
+      disabled={disabled}
+      buttons={buttons}
+      selected={value}
+      onSelected={onSetValue}
+      width="100%"
+      displayText={displayNames[value]}
+      options={choices.map((choice) => {
+        return {
+          displayText: displayNames[choice],
+          value: choice,
+        };
+      })}
+    />
+  );
+};
+
+export const FeatureDropdownInput = (
+  // ARK STATION EDIT
+  props: FeatureValueProps<string, string, FeatureChoicedServerData> & {
+    disabled?: boolean;
+    buttons?: boolean;
+  },
+) => {
+  const serverData = props.serverData;
+  if (!serverData) {
+    return null;
+  }
+
+  const displayNames =
+    serverData.display_names ||
+    Object.fromEntries(
+      serverData.choices.map((choice) => [
+        choice,
+        capitalizeFirstLetter(choice),
+      ]),
+    );
+
+  return (
+    <StandardizedDropdown
+      choices={sortBy(serverData.choices)}
+      disabled={props.disabled}
+      buttons={props.buttons}
+      displayNames={displayNames}
+      onSetValue={props.handleSetValue}
+      value={props.value}
+    />
+  );
+};
+
+export type FeatureWithIcons<T> = Feature<
+  // ARK STATION EDIT
+  { value: T },
+  T,
+  FeatureChoicedServerData
+>;
+
+export const FeatureIconnedDropdownInput = (
+  // ARK STATION EDIT
+  props: FeatureValueProps<
+    {
+      value: string;
+    },
+    string,
+    FeatureChoicedServerData
+  >,
+) => {
+  const serverData = props.serverData;
+  if (!serverData) {
+    return null;
+  }
+
+  const icons = serverData.icons;
+
+  const textNames =
+    serverData.display_names ||
+    Object.fromEntries(
+      serverData.choices.map((choice) => [
+        choice,
+        capitalizeFirstLetter(choice),
+      ]),
+    );
+
+  const displayNames = Object.fromEntries(
+    Object.entries(textNames).map(([choice, textName]) => {
+      let element: ReactNode = textName;
+
+      if (icons && icons[choice]) {
+        const icon = icons[choice];
+        element = (
+          <Stack>
+            <Stack.Item>
+              <Box
+                className={classes(['preferences32x32', icon])}
+                style={{
+                  transform: 'scale(0.8)',
+                }}
+              />
+            </Stack.Item>
+
+            <Stack.Item grow>{element}</Stack.Item>
+          </Stack>
+        );
+      }
+
+      return [choice, element];
+    }),
+  );
+
+  return (
+    <StandardizedDropdown
+      choices={sortBy(serverData.choices)}
+      displayNames={displayNames}
+      onSetValue={props.handleSetValue}
+      value={props.value.value}
+    />
+  );
+};
 
 export type FeatureNumericData = {
   minimum: number;
@@ -306,7 +442,6 @@ export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
                     ? props.value[index]
                     : `#${props.value[index]}`,
                   border: '2px solid white',
-                  boxSizing: 'content-box',
                   height: '11px',
                   width: '11px',
                   ...(props.shrink
