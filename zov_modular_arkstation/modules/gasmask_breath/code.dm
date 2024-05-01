@@ -16,9 +16,9 @@
 /obj/item/clothing/mask/gas/signalis_gaiter
 	breathy = FALSE
 
-/obj/item/clothing/mask/gas/adjustmask(mob/living/carbon/user)
+/obj/item/clothing/mask/gas/adjust_visor(mob/living/carbon/user)
 	. = ..()
-	breathy = mask_adjusted ? FALSE : TRUE
+	breathy = up ? FALSE : TRUE
 
 /obj/item/clothing/mask/gas/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
