@@ -275,10 +275,10 @@
 // 	update_icon_state()
 // 	to_chat(user, span_notice("[up ? alt_toggle_message : toggle_message] \the [src]."))
 
-// 	user.update_worn_head()
-// 	if(iscarbon(user))
-// 		var/mob/living/carbon/carbon_user = user
-// 		carbon_user.head_update(src, forced = TRUE)
+	// user.update_worn_head()
+	// if(iscarbon(user))
+	// 	var/mob/living/carbon/carbon_user = user
+	// 	carbon_user.update_worn_head()
 
 
 //Beret replacement
