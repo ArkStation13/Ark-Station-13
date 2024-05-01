@@ -15,7 +15,7 @@
 
 	if(istype(O, /obj/item/storage))
 		var/obj/item/storage/I = O
-		if(I.storage_type)
+		if(I.storage_type && I == /datum/storage)
 			I.storage_type.dump_content_at(drop_location(), user)
 			return
 

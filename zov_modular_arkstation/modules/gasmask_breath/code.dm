@@ -40,11 +40,7 @@
 	STOP_PROCESSING(SSgasmask, src)
 
 /obj/item/clothing/mask/gas/process(seconds_per_tick)
-	// var/mob/living/carbon/user
 	if(TIMER_COOLDOWN_RUNNING(src, COOLDOWN_GAS_BREATH))
 		return
-	// if(ismob(user))
-	// 	if(!user.canon_client?.prefs?.read_preference(/datum/preference/toggle/gas_breath))
-	// 		return
 	playsound(src, SFX_GASBREATH, 20, TRUE, channel = CHANNEL_GASMASK)
 	TIMER_COOLDOWN_START(src, COOLDOWN_GAS_BREATH, 10 SECONDS)

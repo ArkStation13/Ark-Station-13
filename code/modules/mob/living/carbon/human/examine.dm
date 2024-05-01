@@ -48,6 +48,11 @@
 		. += "You can't make out what species they are."
 	//NOVA EDIT CHANGE END
 
+	// ARK STATION EDIT START
+	if(user?.stat == CONSCIOUS && ishuman(user))
+		user.visible_message(span_small("<b>[user]</b> looks at <b>[!obscure_name ? name : "Unknown"]</b>.") , span_small("Looking at <b>[!obscure_name ? name : "Unknown"]</b>.") , null, COMBAT_MESSAGE_RANGE)
+	// ARK STATION EDIT END
+
 	/* NOVA EDIT REMOVAL
 	var/apparent_species
 	if(dna?.species && !skipface)
