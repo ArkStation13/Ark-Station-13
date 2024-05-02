@@ -70,7 +70,7 @@ window "mainwindow"
 		menu = "menu"
 	elem "split"
 		type = CHILD
-		pos = 0,0
+		pos = 3,0
 		size = 634x440
 		anchor1 = 0,0
 		anchor2 = 100,100
@@ -131,14 +131,16 @@ window "mapwindow"
 		style = ".center { text-align: center; } .maptext { font-family: 'Grand9K Pixel'; font-size: 6pt; -dm-text-outline: 1px black; color: white; line-height: 1.0; } .command_headset { font-weight: bold; } .small { font-family: 'TinyUnicode'; font-size: 12pt; line-height: 0.75; } .big { font-size: 8pt; } .reallybig { font-size: 8pt; } .extremelybig { font-size: 8pt; } .greentext { color: #00FF00; font-size: 6pt; } .redtext { color: #FF0000; font-size: 6pt; } .clown { color: #FF69BF; font-weight: bold; } .his_grace { color: #15D512; } .hypnophrase { color: #0d0d0d; font-weight: bold; } .yell { font-weight: bold; } .italics { font-family: 'TinyUnicode'; font-size: 12pt; line-height: 0.75; }"
 	elem "status_bar"
 		type = LABEL
-		pos = 0,464
-		size = 280x16
+		pos = 0,460
+		size = 280x20
 		anchor1 = 0,100
 		is-visible = true
+		font-family = "Chakra Petch"
+		font-size = 10pt
 		text = ""
 		align = left
-		background-color = #222222
-		text-color = #ffffff
+		background-color = #1c1d22
+		text-color = #e6e7eb
 		border = line
 
 window "infowindow"
@@ -162,58 +164,70 @@ window "infowindow"
 		is-vert = false
 	elem "changelog"
 		type = BUTTON
-		pos = 16,5
-		size = 104x20
-		anchor1 = 3,0
-		anchor2 = 19,0
+		pos = 0,8
+		size = 92x20
+		anchor1 = 0,0
+		anchor2 = 14,0
+		is-flat = true
+		font-family = "Chakra Petch"
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "changelog"
 	elem "rules"
 		type = BUTTON
-		pos = 120,5
-		size = 100x20
-		anchor1 = 19,0
-		anchor2 = 34,0
+		pos = 92,8
+		size = 92x20
+		anchor1 = 14,0
+		anchor2 = 28,0
+		is-flat = true
+		font-family = "Chakra Petch"
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
+	elem "forum"
+		type = BUTTON
+		pos = 184,8
+		size = 92x20
+		anchor1 = 28,0
+		anchor2 = 42,0
+		is-flat = true
+		font-family = "Chakra Petch"
+		saved-params = "is-checked"
+		text = "Forum"
+		command = "wiki"
 	elem "wiki"
 		type = BUTTON
-		pos = 220,5
-		size = 100x20
-		anchor1 = 34,0
-		anchor2 = 50,0
+		pos = 276,8
+		size = 92x20
+		anchor1 = 42,0
+		anchor2 = 56,0
+		is-flat = true
+		font-family = "Chakra Petch"
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
-	elem "forum"
+	elem "ahelp"
 		type = BUTTON
-		pos = 320,5
-		size = 100x20
-		anchor1 = 50,0
-		anchor2 = 66,0
+		pos = 368,8
+		size = 92x20
+		anchor1 = 56,0
+		anchor2 = 70,0
+		is-flat = true
+		font-family = "Chakra Petch"
 		saved-params = "is-checked"
-		text = "Forum"
-		command = "forum"
-	elem "github"
-		type = BUTTON
-		pos = 420,5
-		size = 100x20
-		anchor1 = 66,0
-		anchor2 = 81,0
-		saved-params = "is-checked"
-		text = "Github"
-		command = "github"
+		text = "AdminHelp"
+		command = "Adminhelp"
 	elem "report-issue"
 		type = BUTTON
-		pos = 520,5
-		size = 100x20
-		anchor1 = 81,0
-		anchor2 = 97,0
+		pos = 506,8
+		size = 140x20
+		anchor1 = 84,0
+		anchor2 = 100,0
+		is-flat = true
+		font-family = "Chakra Petch"
 		saved-params = "is-checked"
-		text = "Report Issue"
-		command = "report-issue"
+		text = "Open Github"
+		command = "github"
 
 window "outputwindow"
 	elem "outputwindow"
@@ -229,48 +243,51 @@ window "outputwindow"
 		inner-size = 640x499
 	elem "input"
 		type = INPUT
-		pos = 2,460
-		size = 517x20
+		pos = 2,456
+		size = 503x24
 		anchor1 = 0,100
 		anchor2 = 100,100
+		font-family = "Chakra Petch"
+		font-size = 12pt
 		is-default = true
-		border = line
+		border = none
 		saved-params = "command"
 	elem "oocbutton"
 		type = BUTTON
-		pos = 599,460
-		size = 40x20
+		pos = 600,456
+		size = 40x24
 		anchor1 = 100,100
 		anchor2 = -1,-1
-		background-color = none
-		border = line
+		border = none
 		saved-params = "is-checked"
+		font-family = "Chakra Petch"
 		text = "OOC"
 		command = ".winset \"oocbutton.is-checked=true ? input.command=\"!ooc \\\"\" : input.command=\"\"oocbutton.is-checked=true ? mebutton.is-checked=false\"\"oocbutton.is-checked=true ? saybutton.is-checked=false\""
 		is-flat = true
 		button-type = pushbox
 	elem "saybutton"
 		type = BUTTON
-		pos = 519,460
-		size = 40x20
+		pos = 510,456
+		size = 40x24
 		anchor1 = 100,100
 		anchor2 = -1,-1
-		background-color = none
-		border = line
+		border = none
 		saved-params = "is-checked"
+		font-family = "Chakra Petch"
 		text = "Say"
 		command = ".winset \"saybutton.is-checked=true ? input.command=\"!say \\\"\" : input.command=\"\"saybutton.is-checked=true ? mebutton.is-checked=false\"\"saybutton.is-checked=true ? oocbutton.is-checked=false\""
 		is-flat = true
 		button-type = pushbox
 	elem "mebutton"
 		type = BUTTON
-		pos = 559,460
-		size = 40x20
+		pos = 555,456
+		size = 40x24
 		anchor1 = 100,100
 		anchor2 = -1,-1
 		background-color = none
-		border = line
+		border = none
 		saved-params = "is-checked"
+		font-family = "Chakra Petch"
 		text = "Me"
 		command = ".winset \"mebutton.is-checked=true ? input.command=\"!me \\\"\" : input.command=\"\"mebutton.is-checked=true ? saybutton.is-checked=false\"\"mebutton.is-checked=true ? oocbutton.is-checked=false\""
 		is-flat = true

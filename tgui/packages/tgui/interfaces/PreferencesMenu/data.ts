@@ -1,4 +1,4 @@
-import { BooleanLike } from 'common/react';
+import { BooleanLike } from 'common/react'; // REPLACED WITH ARK STATION UI FILE
 
 import { sendAct } from '../../backend';
 import { Gender } from './preferences/gender';

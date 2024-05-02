@@ -1,4 +1,4 @@
-import { filterMap, sortBy } from 'common/collections';
+/* import { filterMap, sortBy } from 'common/collections'; // REPLACED WITH ARK STATION UI FILE
 import { exhaustiveCheck } from 'common/exhaustive';
 import { classes } from 'common/react';
 import { useState } from 'react';
@@ -82,7 +82,7 @@ const CharacterControls = (props: {
           />
         </Stack.Item>
       )}
-      {/* ARK STATION EDIT ADDITION START */}
+      {/* ARK STATION EDIT ADDITION START */ /* }
       {props.handleLoadout && (
         <Stack.Item>
           <Button
@@ -102,7 +102,7 @@ const CharacterControls = (props: {
           tooltip="Edit Food Preferences"
           tooltipPosition="top"
         />
-        {/* ARK STATION EDIT ADDITION END */}
+        {/* ARK STATION EDIT ADDITION END */ /* }
       </Stack.Item>
     </Stack>
   );
@@ -130,6 +130,7 @@ const ChoicedSelection = (props: {
     <Box
       className="ChoicedSelection"
       style={{
+        background: '#424651', // ARK STATION EDIT
         padding: '5px',
 
         height: `${
@@ -160,6 +161,7 @@ const ChoicedSelection = (props: {
                   fontWeight: 'bold',
                   fontSize: '14px',
                   textAlign: 'center',
+                  color: '#e6e7eb', // ARK STATION EDIT
                 }}
               >
                 Select {props.name.toLowerCase()}
@@ -167,7 +169,7 @@ const ChoicedSelection = (props: {
             </Stack.Item>
 
             <Stack.Item>
-              <Button color="red" onClick={props.onClose}>
+              <Button color="#424651" onClick={props.onClose}>
                 X
               </Button>
             </Stack.Item>
@@ -725,7 +727,7 @@ export const MainPage = (props: { openSpecies: () => void }) => {
               </Stack.Item>
 
               <Stack.Item grow basis={0}>
-                {/* SKYRAT EDIT BEGIN: Swappable pref menus */}
+                {/* SKYRAT EDIT BEGIN: Swappable pref menus */ /* }
                 <Stack>
                   <Stack.Item grow>
                     <PageButton
@@ -750,7 +752,7 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                   <Stack.Divider />
                   {prefPageContents}
                 </Stack>
-                {/* SKYRAT EDIT END: Swappable pref menus */}
+                {/* SKYRAT EDIT END: Swappable pref menus */ /* }
               </Stack.Item>
             </Stack>
           </>
@@ -759,3 +761,5 @@ export const MainPage = (props: { openSpecies: () => void }) => {
     />
   );
 };
+
+*/

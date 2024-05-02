@@ -200,7 +200,7 @@ a.popt {
 
 .motd {
   color: #a4bad6;
-  font-family: Verdana, sans-serif;
+  font-family: 'Chakra Petch', 'Impact', sans-serif; // ARK STATION EDIT
   white-space: normal;
 }
 
@@ -256,7 +256,7 @@ h4,
 h5,
 h6 {
   color: #a4bad6;
-  font-family: Georgia, Verdana, sans-serif;
+  font-family: 'Chakra Petch', sans-serif; // ARK STATION EDIT
 }
 
 h1.alert,
@@ -270,7 +270,7 @@ em {
 }
 
 .ooc {
-  color: #cca300;
+  color: #00b300; // ARK STATION EDIT
   font-weight: bold;
 }
 
@@ -327,7 +327,7 @@ em {
 /* IF YOU CHANGE THIS KEEP IT IN SYNC WITH TGUI CONSTANTS */
 
 .radio {
-  color: #1ecc43;
+  color: #3cdb71; // ARK STATION EDIT
 }
 
 .sciradio {
@@ -343,7 +343,7 @@ em {
 }
 
 .medradio {
-  color: #57b8f0;
+  color: #50a350; // ARK STATION EDIT
 }
 
 .engradio {
@@ -531,12 +531,12 @@ em {
 }
 
 .unconscious {
-  color: #a4bad6;
+  color: #69e8ff; // ARK STATION EDIT
   font-weight: bold;
 }
 
 .suicide {
-  color: #ff5050;
+  color: #ff0066; // ARK STATION EDIT
   font-style: italic;
 }
 
@@ -549,11 +549,11 @@ em {
 }
 
 .red {
-  color: #ff0000;
+  color: #ff0066; // ARK STATION EDIT
 }
 
 .blue {
-  color: #215cff;
+  color: #00b2ff; // ARK STATION EDIT
 }
 
 .nicegreen {
@@ -1108,53 +1108,56 @@ $alert-subheader-header-colors: (
 */
 
 $alert-stripe-colors: (
-  'default': #0e152c,
-  'green': #0f2e0f,
-  'blue': #121c3a,
-  'pink': #240c19,
+  // Ark Station Change
+  'default': #252525,
+  'green': #003d00,
+  'blue': #00283a,
+  'pink': #30001b,
   'yellow': #574a00,
-  'orange': #431b16,
+  'orange': #593400,
   'red': #420000,
-  'purple': #220c24,
-  'grey': #252525,
+  'purple': #2c0030,
+  'grey': #252525
 );
 
 $alert-stripe-alternate-colors: (
-  'default': #111934,
-  'green': #123512,
-  'blue': #151f41,
-  'pink': #301022,
+  // Ark Station Change
+  'default': #292929,
+  'green': #004700,
+  'blue': #003045,
+  'pink': #400025,
   'yellow': #4d4100,
-  'orange': #50211b,
+  'orange': #6b4200,
   'red': #520000,
-  'purple': #2b0f2e,
-  'grey': #292929,
+  'purple': #38003d,
+  'grey': #292929
 );
 
 $alert-major-header-colors: (
+  // Ark Station Change
   'default': #94a5db,
-  'green': #00a854,
-  'blue': #94a5db,
-  'pink': #e990c3,
+  'green': #289231,
+  'blue': #33d5ff,
+  'pink': #ff5297,
   'yellow': #e6af4c,
   'orange': #e79f79,
   'red': #ff4542,
   'purple': #bf9cde,
-  'grey': #ff4542,
+  'grey': #ff4542
 );
 
 $alert-subheader-header-colors: (
-  'default': #c5ba7c,
-  'green': #d5a0a0,
-  'blue': #c5ba7c,
-  'pink': #f7cfcf,
-  'yellow': #ffddbd,
-  'orange': #ffddbd,
-  'red': #e9aa72,
-  'purple': #f7cfcf,
-  'grey': #e9aa72,
+  // Ark Station Change
+  'default': #289231,
+  'green': #ffbc85,
+  'blue': #ff9752,
+  'pink': #2ca136,
+  'yellow': #2ca136,
+  'orange': #2ca136,
+  'red': #2ca136,
+  'purple': #2ca136,
+  'grey': #2ca136
 );
-// NOVA EDIT CHANGE END
 
 $border-width: 4;
 
@@ -1181,8 +1184,8 @@ $border-width-px: $border-width * 1px;
 }
 
 .major_announcement_text {
-  color: #eaeaea;
-  background-color: #131313;
+  color: #e6e7eb; // ARK STATION EDIT
+  background-color: #1c1d22;
   font-weight: bold;
   font-size: 100%;
   text-align: left;
@@ -1192,6 +1195,7 @@ $border-width-px: $border-width * 1px;
 }
 
 .minor_announcement_title {
+  color: #e6e7eb; // ARK STATION EDIT
   font-weight: bold;
   padding: 0 0.5rem;
   padding-top: 0;
@@ -1203,7 +1207,7 @@ $border-width-px: $border-width * 1px;
 }
 
 .minor_announcement_text {
-  background-color: #202020;
+  background-color: #1c1d22;
   color: #eaeaea;
   padding: 0.5rem 0.5rem;
   text-align: left;
@@ -1218,7 +1222,7 @@ $border-width-px: $border-width * 1px;
 
 .ooc_alert {
   background: #4d4100;
-  border: 1px solid #cca300;
+  border: 1px solid #ffd861; // ARK STATION EDIT
   margin: 0.5em;
   padding: 0.5em 0.5em 0.5em 0.2em;
   color: #ffffff;
@@ -1228,7 +1232,7 @@ $border-width-px: $border-width * 1px;
 }
 
 .ooc_announcement_text {
-  color: #cca300;
+  color: #ffd861; // ARK STATION EDIT
   padding: 0.5em 0 0 0.35em;
   display: flex;
   flex-direction: column;

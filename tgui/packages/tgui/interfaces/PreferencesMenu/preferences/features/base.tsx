@@ -77,7 +77,7 @@ export const FeatureColorInput = (props: FeatureValueProps<string>) => {
               background: props.value.startsWith('#')
                 ? props.value
                 : `#${props.value}`,
-              border: '2px solid white',
+              border: '2px solid #eaeaea', // ARK STATION EDIT
               boxSizing: 'content-box',
               height: '11px',
               width: '11px',
@@ -441,7 +441,7 @@ export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
                   background: props.value[index].startsWith('#')
                     ? props.value[index]
                     : `#${props.value[index]}`,
-                  border: '2px solid white',
+                  border: '2px solid #eaeaea', // ARK STATION EDIT
                   height: '11px',
                   width: '11px',
                   ...(props.shrink

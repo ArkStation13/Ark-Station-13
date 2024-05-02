@@ -8,15 +8,15 @@
 @use '../colors.scss';
 
 $text-color: rgba(255, 255, 255, 0.75) !default;
-$background-color: #363636 !default;
+$background-color: base.$color-bg !default; // ARK STATION EDIT
 $shadow-color-core: #161616 !default;
 $shadow-color: rgba(0, 0, 0, 0.1) !default;
 
 .TitleBar {
   background-color: $background-color;
-  border-bottom: 1px solid $shadow-color-core;
-  box-shadow: 0 2px 2px $shadow-color;
-  box-shadow: 0 base.rem(2px) base.rem(2px) $shadow-color;
+  // border-bottom: 1px solid $shadow-color-core; // ARK STATION REMOVED
+  // box-shadow: 0 2px 2px $shadow-color; // ARK STATION REMOVED
+  // box-shadow: 0 base.rem(2px) base.rem(2px) $shadow-color; // ARK STATION REMOVED
   user-select: none;
   -ms-user-select: none;
 }
@@ -44,10 +44,10 @@ $shadow-color: rgba(0, 0, 0, 0.1) !default;
   left: 46px;
   left: base.rem(46px);
   color: $text-color;
-  font-size: 14px;
-  font-size: base.rem(14px);
-  line-height: 31px;
-  line-height: base.rem(31px);
+  font-size: 18px; // ARK STATION EDIT (14px)
+  font-size: base.rem(18px); // ARK STATION EDIT (14px)
+  line-height: 34px; // ARK STATION EDIT (31px)
+  line-height: base.rem(34px); // ARK STATION EDIT (31px)
   white-space: nowrap;
   pointer-events: none;
 }
@@ -74,8 +74,8 @@ $shadow-color: rgba(0, 0, 0, 0.1) !default;
   left: 12px;
   left: base.rem(12px);
   transition: color 0.5s;
-  font-size: 20px;
-  font-size: base.rem(20px);
+  font-size: 21px; // ARK STATION EDIT (20px)
+  font-size: base.rem(21px); // ARK STATION EDIT (20px)
   line-height: 32px !important;
   line-height: base.rem(32px) !important;
 }
@@ -86,12 +86,12 @@ $shadow-color: rgba(0, 0, 0, 0.1) !default;
   right: 0;
   width: 45px;
   width: base.rem(45px);
-  height: 32px;
-  height: base.rem(32px);
-  font-size: 20px;
-  font-size: base.rem(20px);
-  line-height: 31px;
-  line-height: base.rem(31px);
+  height: 34px; // ARK STATION EDIT (32px)
+  height: base.rem(34px); // ARK STATION EDIT (32px)
+  font-size: 36px; // ARK STATION EDIT (20px)
+  font-size: base.rem(36px); // ARK STATION EDIT (20px)
+  line-height: 32px; // ARK STATION EDIT (31px)
+  line-height: base.rem(32px); // ARK STATION EDIT (31px)
   text-align: center;
 }
 

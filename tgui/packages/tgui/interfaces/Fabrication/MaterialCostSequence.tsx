@@ -88,7 +88,7 @@ export const MaterialCostSequence = (props: MaterialCostSequenceProps) => {
                       ? '#fff'
                       : (amount || 1) * quantity <= available[material]
                         ? '#f08f11'
-                        : '#db2828',
+                        : '#c42222', // ARK STATION EDIT
                 }
               }
             >

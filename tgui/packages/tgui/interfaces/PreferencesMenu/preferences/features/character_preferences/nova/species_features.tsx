@@ -5,14 +5,14 @@ import {
   FeatureChoiced,
   FeatureChoicedServerData,
   FeatureColorInput,
-  FeatureNumberInput,
   FeatureShortTextInput,
+  FeatureSliderInput,
   FeatureTextInput,
   FeatureToggle,
   FeatureTriBoolInput,
   FeatureTriColorInput,
   FeatureValueProps,
-} from '../../base';
+} from '../../base'; // ARK STATION EDIT
 import { FeatureDropdownInput } from '../../dropdowns';
 
 export const feature_leg_type: FeatureChoiced = {
@@ -557,7 +557,7 @@ export const feature_hair_opacity_toggle: Feature<boolean> = {
 
 export const feature_hair_opacity: Feature<number> = {
   name: 'Hair Opacity',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput,
 };
 
 export const neck_acc_toggle: FeatureToggle = {

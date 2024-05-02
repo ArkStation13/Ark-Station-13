@@ -7,8 +7,8 @@
 @use '../functions.scss' as *;
 
 $text-color: base.$color-fg !default;
-$background-color: #0a0a0a !default;
-$border-color: #88bfff !default;
+$background-color: #1c1d22 !default; // ARK STATION EDIT
+$border-color: #535865 !default; // ARK STATION EDIT
 $border-radius: base.$border-radius !default;
 
 .Input {
@@ -16,7 +16,7 @@ $border-radius: base.$border-radius !default;
   display: inline-block;
   width: base.em(120px);
   border: base.em(1px) solid $border-color;
-  border: base.em(1px) solid rgba($border-color, 0.75);
+  // border: base.em(1px) solid rgba($border-color, 0.75); // ARK STATION REMOVED
   border-radius: $border-radius;
   color: $text-color;
   background-color: $background-color;
@@ -46,12 +46,12 @@ $border-radius: base.$border-radius !default;
   border: 0;
   outline: 0;
   width: 100%;
-  font-size: base.em(12px);
+  font-size: base.em(14px); // ARK STATION EDIT (12px)
   line-height: base.em(17px);
   height: base.em(17px);
   margin: 0;
   padding: 0 0.5em;
-  font-family: Verdana, sans-serif;
+  font-family: 'Chakra Petch', sans-serif; // ARK STATION EDIT (Verdana)
   background-color: transparent;
   color: $text-color;
   color: inherit;
@@ -64,5 +64,5 @@ $border-radius: base.$border-radius !default;
 }
 
 .Input--monospace .Input__input {
-  font-family: 'Consolas', monospace;
+  font-family: 'Chakra Petch', Consolas, monospace; // ARK STATION EDIT
 }

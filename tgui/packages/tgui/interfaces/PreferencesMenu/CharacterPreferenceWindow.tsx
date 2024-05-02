@@ -1,4 +1,4 @@
-import { exhaustiveCheck } from 'common/exhaustive';
+/* import { exhaustiveCheck } from 'common/exhaustive'; // REPLACED WITH ARK STATION UI FILE
 import { useState } from 'react';
 
 import { useBackend } from '../../backend';
@@ -11,7 +11,7 @@ import { JobsPage } from './JobsPage';
 import { LanguagesPage } from './LanguagesMenu';
 import { LimbsPage } from './LimbsPage';
 // NOVA EDIT END
-import { MainPage } from './MainPage';
+import { MainPage } from './Arkstation/MainPage';
 import { PageButton } from './PageButton';
 import { QuirksPage } from './QuirksPage';
 import { SpeciesPage } from './SpeciesPage';
@@ -36,7 +36,7 @@ const CharacterProfiles = (props: {
   const { profiles, activeSlot, onClick } = props; // NOVA EDIT CHANGE
 
   return (
-    <Flex /* NOVA EDIT CHANGE START - Nova uses a dropdown instead of buttons */
+    <Flex /* NOVA EDIT CHANGE START - Nova uses a dropdown instead of buttons */ /*
       align="center"
       justify="center"
     >
@@ -54,7 +54,7 @@ const CharacterProfiles = (props: {
           }}
         />
       </Flex.Item>
-    </Flex> /* NOVA EDIT CHANGE END */
+    </Flex> /* NOVA EDIT CHANGE END */ /*
   );
 };
 
@@ -145,7 +145,7 @@ export const CharacterPreferenceWindow = (props) => {
                   {/*
                     Fun fact: This isn't "Jobs" so that it intentionally
                     catches your eyes, because it's really important!
-                  */}
+                  */ /* }
                   Occupations
                 </PageButton>
               </Stack.Item>
@@ -204,3 +204,4 @@ export const CharacterPreferenceWindow = (props) => {
     </Window>
   );
 };
+*/

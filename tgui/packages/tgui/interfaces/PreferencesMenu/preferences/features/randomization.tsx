@@ -1,12 +1,12 @@
 import { useBackend } from '../../../../backend';
 import { Button, Stack } from '../../../../components';
-import { PreferencesMenuData, RandomSetting } from '../../data';
+import { PreferencesMenuData, RandomSetting } from '../../data'; // ARK STATION EDIT
 import { RandomizationButton } from '../../RandomizationButton';
 import { useRandomToggleState } from '../../useRandomToggleState';
-import { CheckboxInput, Feature, FeatureToggle } from './base';
+import { CheckboxInput, Feature, FeatureToggle } from './base'; // ARK STATION EDIT
 
 export const random_body: Feature<RandomSetting> = {
-  name: 'Random body',
+  name: 'Random Body', // ARK STATION EDIT
   component: (props) => {
     const [randomToggle, setRandomToggle] = useRandomToggleState();
 
@@ -50,12 +50,12 @@ export const random_body: Feature<RandomSetting> = {
 };
 
 export const random_hardcore: FeatureToggle = {
-  name: 'Hardcore random',
+  name: 'Hardcore Random', // ARK STATION EDIT
   component: CheckboxInput,
 };
 
 export const random_name: Feature<RandomSetting> = {
-  name: 'Random name',
+  name: 'Random Name', // ARK STATION EDIT
   component: (props) => {
     return (
       <RandomizationButton
@@ -67,7 +67,7 @@ export const random_name: Feature<RandomSetting> = {
 };
 
 export const random_species: Feature<RandomSetting> = {
-  name: 'Random species',
+  name: 'Random Species', // ARK STATION EDIT
   component: (props) => {
     const { act, data } = useBackend<PreferencesMenuData>();
 

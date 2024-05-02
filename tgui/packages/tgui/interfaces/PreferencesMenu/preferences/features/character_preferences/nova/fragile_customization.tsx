@@ -1,12 +1,12 @@
 // THIS IS A NOVA SECTOR UI FILE
-import { Feature, FeatureNumberInput } from '../../base';
+import { Feature, FeatureSliderInput } from '../../base'; // ARK STATION EDIT
 
 export const fragile_brute: Feature<number> = {
   name: 'Brute Modifier',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput,
 };
 
 export const fragile_burn: Feature<number> = {
   name: 'Burn Modifier',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput,
 };

@@ -31,7 +31,7 @@ export const ChatTabs = (props) => {
   const currentPage = useSelector(selectCurrentChatPage);
   const dispatch = useDispatch();
   return (
-    <Flex align="center">
+    <Flex align="center" mb={1}>
       <Flex.Item>
         <Tabs textAlign="center">
           {pages.map((page) => (
@@ -57,7 +57,7 @@ export const ChatTabs = (props) => {
           ))}
         </Tabs>
       </Flex.Item>
-      <Flex.Item ml={1}>
+      <Flex.Item mt={0.7}>
         <Button
           color="transparent"
           icon="plus"

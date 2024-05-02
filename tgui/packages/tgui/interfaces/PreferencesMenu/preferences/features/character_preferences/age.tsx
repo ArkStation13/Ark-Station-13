@@ -1,4 +1,4 @@
-import { Feature, FeatureNumberInput } from '../base';
+import { Feature, FeatureSliderInput } from '../base'; // ARK STATION EDIT
 
 export const age: Feature<number> = {
   // name: 'Age', // ORIGINAL
@@ -9,5 +9,5 @@ export const age: Feature<number> = {
     Includes 'normal' aging, such as experiences which physically age the body, and 'anti-aging' medical procedures.\
     Does not include time spent in cryo-sleep.",
   // NOVA EDIT ADDITION END
-  component: FeatureNumberInput,
+  component: FeatureSliderInput, // ARK STATION EDIT
 };

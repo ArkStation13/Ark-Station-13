@@ -5,20 +5,20 @@ import {
   FeatureColorInput,
   FeatureDropdownInput, // ARK STATION EDIT
   FeatureValueProps,
-} from './base';
+} from './base'; // ARK STATION EDIT
 
 export const eye_color: Feature<string> = {
-  name: 'Eye color',
+  name: 'Eye Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const facial_hair_color: Feature<string> = {
-  name: 'Facial hair color',
+  name: 'Facial Hair Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const facial_hair_gradient: FeatureChoiced = {
-  name: 'Facial hair gradient',
+  name: 'Facial Hair Gradient', // ARK STATION EDIT
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -27,17 +27,17 @@ export const facial_hair_gradient: FeatureChoiced = {
 };
 
 export const facial_hair_gradient_color: Feature<string> = {
-  name: 'Facial hair gradient color',
+  name: 'Facial Hair Gradient Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const hair_color: Feature<string> = {
-  name: 'Hair color',
+  name: 'Hair Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const hair_gradient: FeatureChoiced = {
-  name: 'Hair gradient',
+  name: 'Hair Gradient', // ARK STATION EDIT
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -46,7 +46,7 @@ export const hair_gradient: FeatureChoiced = {
 };
 
 export const hair_gradient_color: Feature<string> = {
-  name: 'Hair gradient color',
+  name: 'Hair Gradient Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
@@ -96,26 +96,26 @@ export const feature_lizard_tail: FeatureChoiced = {
 };
 
 export const feature_mcolor: Feature<string> = {
-  name: 'Mutant color',
+  name: 'Mutant Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const underwear_color: Feature<string> = {
-  name: 'Underwear color',
+  name: 'Underwear Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const bra_color: Feature<string> = {
-  name: 'Bra color',
+  name: 'Bra Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };
 
 export const feature_vampire_status: Feature<string> = {
-  name: 'Vampire status',
+  name: 'Vampire Status', // ARK STATION EDIT
   component: FeatureDropdownInput,
 };
 
 export const heterochromatic: Feature<string> = {
-  name: 'Heterochromatic (Right Eye) color',
+  name: 'Heterochromatic (Right Eye) Color', // ARK STATION EDIT
   component: FeatureColorInput,
 };

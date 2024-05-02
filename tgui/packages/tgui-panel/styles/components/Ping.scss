@@ -5,13 +5,13 @@
 
 @use 'sass:math';
 
-$border-color: rgba(140, 140, 140, 0.5) !default;
+$border-color: #424651 !default; // ARK STATION EDIT
 
 .Ping {
   position: relative;
   padding: 0.125em 0.25em;
   border: math.div(1em, 12) solid $border-color;
-  border-radius: 0.25em;
+  // border-radius: 0.25em; // ARK STATION REMOVED
   width: 3.75em;
   text-align: right;
 }
@@ -23,6 +23,6 @@ $border-color: rgba(140, 140, 140, 0.5) !default;
   left: 0.5em;
   width: 0.5em;
   height: 0.5em;
-  background-color: #888;
+  background-color: #8f94a3; // ARK STATION EDIT
   border-radius: 0.25em;
 }

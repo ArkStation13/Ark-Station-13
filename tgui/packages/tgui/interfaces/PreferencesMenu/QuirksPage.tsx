@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 import { useBackend } from '../../backend';
 import { Box, Button, Icon, Popper, Stack, Tooltip } from '../../components';
+import { getRandomization, PreferenceList } from './ArkStation/MainPage';
 import { PreferencesMenuData, Quirk, RandomSetting, ServerData } from './data';
-import { getRandomization, PreferenceList } from './MainPage';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 import { useRandomToggleState } from './useRandomToggleState';
 

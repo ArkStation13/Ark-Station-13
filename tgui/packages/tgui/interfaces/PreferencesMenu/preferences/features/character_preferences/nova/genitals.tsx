@@ -4,13 +4,13 @@ import {
   Feature,
   FeatureChoiced,
   FeatureChoicedServerData,
-  FeatureNumberInput,
   FeatureNumeric,
+  FeatureSliderInput, // ARK STATION EDIT
   FeatureToggle,
   FeatureTriBoolInput,
   FeatureTriColorInput,
   FeatureValueProps,
-} from '../../base';
+} from '../../base'; // ARK STATION EDIT
 import { FeatureDropdownInput } from '../../dropdowns';
 
 export const feature_penis: Feature<string> = {
@@ -54,12 +54,12 @@ export const penis_sheath: Feature<string> = {
 
 export const penis_length: FeatureNumeric = {
   name: 'Penis Length',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput, // ARK STATION EDIT
 };
 
 export const penis_girth: FeatureNumeric = {
   name: 'Penis Girth',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput, // ARK STATION EDIT
 };
 
 export const penis_taur_mode_toggle: FeatureToggle = {
@@ -102,7 +102,7 @@ export const testicles_emissive: Feature<boolean[]> = {
 
 export const balls_size: FeatureNumeric = {
   name: 'Testicles Size',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput, // ARK STATION EDIT
 };
 
 export const feature_vagina: Feature<string> = {
@@ -195,7 +195,7 @@ export const feature_anus: Feature<string> = {
 
 export const body_size: FeatureNumeric = {
   name: 'Body Size',
-  component: FeatureNumberInput,
+  component: FeatureSliderInput, // ARK STATION EDIT
 };
 
 export const erp_status_pref: FeatureChoiced = {

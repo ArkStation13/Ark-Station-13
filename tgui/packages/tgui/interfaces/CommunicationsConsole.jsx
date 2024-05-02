@@ -137,7 +137,7 @@ const NoConnectionModal = () => {
           <Blink>
             <div
               style={{
-                background: '#db2828',
+                background: '#c42222', // ARK STATION EDIT
                 bottom: '60%',
                 left: '25%',
                 height: '10px',

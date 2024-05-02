@@ -1,0 +1,74 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+@use '../base.scss';
+
+.SideDropdown {
+  position: relative;
+  align-items: center;
+}
+
+.SideDropdown__control {
+  display: inline-block;
+  align-items: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: base.em(14px);
+  width: base.em(100px);
+  line-height: base.em(19px);
+  user-select: none;
+}
+
+.SideDropdown__arrow-button {
+  float: right;
+  padding-left: 0.35em;
+  width: 1.2em;
+  height: base.em(22px);
+}
+
+.SideDropdown__menu {
+  overflow-y: auto;
+  align-items: center;
+  z-index: 5;
+  max-height: base.em(200px);
+  border-radius: 0 0 base.em(2px) base.em(2px);
+  color: #fff;
+  background-color: #565554;
+}
+
+.SideDropdown__menu-scroll {
+  overflow-y: scroll;
+}
+
+.SideDropdown__menuentry {
+  padding: base.em(2px) base.em(4px);
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: base.em(14px);
+  line-height: base.em(17px);
+  transition: background-color 100ms ease-out;
+
+  &.selected {
+    background-color: #289231 !important; // ARK STATION EDIT
+    color: #1b1c21; // ARK STATION EDIT
+    transition: background-color 0ms;
+  }
+
+  &:hover {
+    background-color: #353841; // ARK STATION EDIT
+    transition: background-color 0ms;
+  }
+}
+
+.SideDropdown__over {
+  top: auto;
+  bottom: 100%;
+}
+
+.SideDropdown__selected-text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: base.em(17px);
+  width: calc(100% - 1.2em);
+}

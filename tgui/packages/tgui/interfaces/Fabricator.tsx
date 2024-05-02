@@ -28,7 +28,8 @@ export const Fabricator = (props) => {
   }
 
   return (
-    <Window title={fabName} width={670} height={600}>
+    <Window title={fabName} width={778} height={600}>
+      {/* ARK STATION EDIT (width = {670}) */}
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item grow>

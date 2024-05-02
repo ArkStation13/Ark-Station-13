@@ -292,7 +292,7 @@
     if (type === 'js') {
       var node = document.createElement('script');
       node.type = 'text/javascript';
-      node.crossOrigin = 'anonymous';      
+      node.crossOrigin = 'anonymous';
       node.src = url;
       if (sync) {
         node.defer = true;
@@ -313,7 +313,7 @@
     if (type === 'css') {
       var node = document.createElement('link');
       node.type = 'text/css';
-      node.rel = 'stylesheet';      
+      node.rel = 'stylesheet';
       node.href = url;
       // Temporarily set media to something inapplicable
       // to ensure it'll fetch without blocking render
@@ -511,8 +511,8 @@ blink {
   right: 0;
   bottom: 0;
   padding: 12px;
-  font-size: 12px;
-  font-family: Consolas, monospace;
+  font-size: 14px; /* ARK STATION EDIT (12px) */
+  font-family: 'Ubuntu Mono', Consolas, monospace; /* ARK STATION EDIT */
   color: #ffffff;
   background-color: #0000dd;
   z-index: 1000;

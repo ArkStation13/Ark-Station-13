@@ -24,7 +24,7 @@ export const COLORS = {
   department: {
     captain: '#c06616',
     security: '#e74c3c',
-    medbay: '#3498db',
+    medbay: '#50a350', // ARK STATION EDIT
     science: '#9b59b6',
     engineering: '#f1c40f',
     cargo: '#f39c12',
@@ -126,7 +126,7 @@ export const RADIO_CHANNELS = [
   {
     name: 'Medical',
     freq: 1355,
-    color: '#57b8f0',
+    color: '#50a350', // ARK STATION EDIT
   },
   {
     name: 'Engineering',
