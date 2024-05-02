@@ -2,28 +2,23 @@ import { exhaustiveCheck } from 'common/exhaustive';
 import { useState } from 'react';
 
 import { useBackend } from '../../../backend';
-import { Dropdown, Flex, Stack } from '../../../components'; // NOVA EDIT CHANGE - ORIGINAL: import { Stack } from '../../components';
+import { Flex, SideDropdown, Stack } from '../../../components';
 import { Window } from '../../../layouts';
+import { AntagsPage } from '../AntagsPage';
 import { PreferencesMenuData } from '../data';
-import { AntagsPage } from './../AntagsPage';
-import { JobsPage } from './../JobsPage';
-// NOVA EDIT
-import { LanguagesPage } from './../LanguagesMenu';
-import { PageButton } from './../PageButton';
-import { QuirksPage } from './../QuirksPage';
-import { SpeciesPage } from './../SpeciesPage';
+import { JobsPage } from '../JobsPage';
+import { LanguagesPage } from '../LanguagesMenu';
+import { PageButton } from '../PageButton';
+import { QuirksPage } from '../QuirksPage';
+import { SpeciesPage } from '../SpeciesPage';
 import { LimbsPage } from './LimbsPage';
-// NOVA EDIT END
 import { MainPage } from './MainPage';
-
 enum Page {
   Antags,
   Main,
   Jobs,
-  // NOVA EDIT
   Limbs,
   Languages,
-  // NOVA EDIT END
   Species,
   Quirks,
 }
@@ -33,17 +28,13 @@ const CharacterProfiles = (props: {
   onClick: (index: number) => void;
   profiles: (string | null)[];
 }) => {
-  const { profiles, activeSlot, onClick } = props; // NOVA EDIT CHANGE
-
+  const { profiles, activeSlot, onClick } = props;
   return (
-    <Flex /* NOVA EDIT CHANGE START - Nova uses a dropdown instead of buttons */
-      align="center"
-      justify="center"
-    >
-      <Flex.Item width="25%">
-        <Dropdown
+    <Flex align="center" justify="left">
+      <Flex.Item width="336px">
+        <SideDropdown
           width="100%"
-          selected={activeSlot as unknown as string}
+          selected={activeSlot}
           displayText={profiles[activeSlot]}
           options={profiles.map((profile, slot) => ({
             value: slot,
@@ -54,7 +45,7 @@ const CharacterProfiles = (props: {
           }}
         />
       </Flex.Item>
-    </Flex> /* NOVA EDIT CHANGE END */
+    </Flex>
   );
 };
 
@@ -72,14 +63,12 @@ export const CharacterPreferenceWindow = (props) => {
     case Page.Jobs:
       pageContents = <JobsPage />;
       break;
-    // NOVA EDIT
     case Page.Limbs:
       pageContents = <LimbsPage />;
       break;
     case Page.Languages:
       pageContents = <LanguagesPage />;
       break;
-    // NOVA EDIT END
     case Page.Main:
       pageContents = (
         <MainPage openSpecies={() => setCurrentPage(Page.Species)} />

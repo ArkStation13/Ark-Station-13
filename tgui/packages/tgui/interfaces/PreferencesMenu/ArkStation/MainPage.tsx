@@ -9,12 +9,12 @@ import { sendAct, useBackend } from '../../../backend';
 import {
   Autofocus,
   Box,
-  Button,
-  Dropdown, // ARK STATION EDIT ADDITION
+  Button, // ARK STATION EDIT ADDITION
   Flex,
   Input,
   LabeledList,
   Popper,
+  SideDropdown,
   Stack,
 } from '../../../components';
 import { CharacterPreview } from '../../common/CharacterPreview';
@@ -652,16 +652,18 @@ export const MainPage = (props: { openSpecies: () => void }) => {
 
                   <Stack.Item grow>
                     <CharacterPreview
-                      height="80%" // SKYRAT EDIT - ORIGINAL: height="100%"
+                      height="60%"
+                      width="100%"
                       id={data.character_preview_view}
                     />
                   </Stack.Item>
 
                   <Stack.Item
-                    // SKYRAT EDIT ADDITION
+                    // Preview Mode
                     position="relative"
+                    mt="-40px"
                   >
-                    <Dropdown
+                    <SideDropdown
                       width="100%"
                       selected={data.preview_selection}
                       options={data.preview_options}
@@ -688,7 +690,7 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                 </Stack>
               </Stack.Item>
 
-              <Stack.Item width={`${CLOTHING_CELL_SIZE * 2 + 15}px`}>
+              <Stack.Item width={`${CLOTHING_CELL_SIZE * 2.15}px`}>
                 <Stack height="100%" vertical wrap>
                   {mainFeatures.map(([clothingKey, clothing]) => {
                     const catalog =
@@ -699,7 +701,12 @@ export const MainPage = (props: { openSpecies: () => void }) => {
 
                     return (
                       catalog && (
-                        <Stack.Item key={clothingKey} mt={0.5} px={0.5}>
+                        <Stack.Item
+                          key={clothingKey}
+                          mt={0.5}
+                          mr={1.6}
+                          px={0.5}
+                        >
                           <MainFeature
                             catalog={catalog}
                             currentValue={clothing}
