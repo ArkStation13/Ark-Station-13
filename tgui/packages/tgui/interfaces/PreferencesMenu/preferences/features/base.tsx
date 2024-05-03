@@ -17,8 +17,8 @@ import {
   NumberInput,
   Slider,
   Stack,
-  TextArea, // ARK STATION EDIT
-} from '../../../../components';
+  TextArea,
+} from '../../../../components'; // EffigyEdit Add
 import { createSetPreference, PreferencesMenuData } from '../../data';
 import { ServerPreferencesFetcher } from '../../ServerPreferencesFetcher';
 
@@ -34,6 +34,7 @@ export type Feature<
   component: FeatureValue<TReceiving, TSending, TServerData>;
   category?: string;
   description?: string;
+  small_supplemental?: boolean;
 };
 
 /**
@@ -77,7 +78,7 @@ export const FeatureColorInput = (props: FeatureValueProps<string>) => {
               background: props.value.startsWith('#')
                 ? props.value
                 : `#${props.value}`,
-              border: '2px solid #eaeaea', // ARK STATION EDIT
+              border: '2px solid white',
               boxSizing: 'content-box',
               height: '11px',
               width: '11px',
@@ -124,7 +125,7 @@ export const CheckboxInputInverse = (
   );
 };
 
-export const createDropdownInput = <T extends string | number = string>( // ARK STATION EDIT
+export const createDropdownInput = <T extends string | number = string>(
   // Map of value to display texts
   choices: Record<T, ReactNode>,
   dropdownProps?: Record<T, unknown>,
@@ -148,7 +149,7 @@ export const createDropdownInput = <T extends string | number = string>( // ARK 
       />
     );
   };
-}; // ARK STATION EDIT
+};
 
 export type FeatureChoicedServerData = {
   choices: string[];
@@ -158,12 +159,10 @@ export type FeatureChoicedServerData = {
 
 export type FeatureChoiced = Feature<string, string, FeatureChoicedServerData>;
 
-const capitalizeFirstLetter = (
-  text: string, // ARK STATION EDIT
-) => text.toString().charAt(0).toUpperCase() + text.toString().slice(1); // ARK STATION EDIT
+const capitalizeFirstLetter = (text: string) =>
+  text.toString().charAt(0).toUpperCase() + text.toString().slice(1);
 
 export const StandardizedDropdown = (props: {
-  // ARK STATION EDIT
   choices: string[];
   disabled?: boolean;
   displayNames: Record<string, ReactNode>;
@@ -191,8 +190,55 @@ export const StandardizedDropdown = (props: {
   );
 };
 
+export const FeatureButtonedDropdownInput = (
+  props: FeatureValueProps<string, string, FeatureChoicedServerData> & {
+    disabled?: boolean;
+  },
+) => {
+  return <FeatureDropdownInput disabled={props.disabled} buttons {...props} />;
+};
+
 export const FeatureDropdownInput = (
-  // ARK STATION EDIT
+  props: FeatureValueProps<string, string, FeatureChoicedServerData> & {
+    disabled?: boolean;
+    buttons?: boolean;
+  },
+) => {
+  const serverData = props.serverData;
+  if (!serverData) {
+    return null;
+  }
+
+  const displayNames =
+    serverData.display_names ||
+    Object.fromEntries(
+      serverData.choices.map((choice) => [
+        choice,
+        capitalizeFirstLetter(choice),
+      ]),
+    );
+
+  return serverData.choices.length > 7 ? (
+    <StandardizedDropdown
+      choices={sortBy(serverData.choices)}
+      disabled={props.disabled}
+      buttons={props.buttons}
+      displayNames={displayNames}
+      onSetValue={props.handleSetValue}
+      value={props.value}
+    />
+  ) : (
+    <StandardizedChoiceButtons
+      choices={sortBy(serverData.choices)}
+      disabled={props.disabled}
+      displayNames={displayNames}
+      onSetValue={props.handleSetValue}
+      value={props.value}
+    />
+  );
+};
+
+export const FeatureForcedDropdownInput = (
   props: FeatureValueProps<string, string, FeatureChoicedServerData> & {
     disabled?: boolean;
     buttons?: boolean;
@@ -239,7 +285,9 @@ export const FeatureIconnedDropdownInput = (
     },
     string,
     FeatureChoicedServerData
-  >,
+  > & {
+    buttons?: boolean;
+  },
 ) => {
   const serverData = props.serverData;
   if (!serverData) {
@@ -285,6 +333,7 @@ export const FeatureIconnedDropdownInput = (
 
   return (
     <StandardizedDropdown
+      buttons={props.buttons}
       choices={sortBy(serverData.choices)}
       displayNames={displayNames}
       onSetValue={props.handleSetValue}
@@ -293,6 +342,33 @@ export const FeatureIconnedDropdownInput = (
   );
 };
 
+export const StandardizedChoiceButtons = (props: {
+  choices: string[];
+  disabled?: boolean;
+  displayNames: Record<string, ReactNode>;
+  onSetValue: (newValue: string) => void;
+  value?: string;
+}) => {
+  const { choices, disabled, displayNames, onSetValue, value } = props;
+  return (
+    <>
+      {choices.map((choice) => (
+        <Button
+          key={choice}
+          content={displayNames[choice]}
+          selected={choice === value}
+          disabled={disabled}
+          onClick={() => onSetValue(choice)}
+        />
+      ))}
+    </>
+  );
+};
+
+export type HexValue = {
+  lightness: number;
+  value: string;
+};
 export type FeatureNumericData = {
   minimum: number;
   maximum: number;
@@ -403,7 +479,7 @@ export const FeatureShortTextInput = (
   );
 };
 
-// SKYRAT FEATURES DOWN HERE
+// EffigyEdit Add - Customization
 
 export const FeatureTextInput = (
   props: FeatureValueProps<string, string, FeatureShortTextData>,
@@ -441,7 +517,8 @@ export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
                   background: props.value[index].startsWith('#')
                     ? props.value[index]
                     : `#${props.value[index]}`,
-                  border: '2px solid #eaeaea', // ARK STATION EDIT
+                  border: '2px solid #e6e7eb',
+                  boxSizing: 'content-box',
                   height: '11px',
                   width: '11px',
                   ...(props.shrink
