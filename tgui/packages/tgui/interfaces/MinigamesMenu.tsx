@@ -6,7 +6,7 @@ export const MinigamesMenu = (props) => {
   const { act } = useBackend();
 
   return (
-    <Window title="Minigames Menu" width={530} height={320}>
+    <Window title="Minigames Menu" width={580} height={350}>
       <Window.Content>
         <Section title="Select Minigame" textAlign="center" fill>
           <Stack>

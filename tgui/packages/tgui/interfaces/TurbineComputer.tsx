@@ -57,7 +57,7 @@ export const TurbineComputer = (props) => {
     </Modal>
   );
   return (
-    <Window width={310} height={240}>
+    <Window width={330} height={300}>
       <Window.Content>
         <Section
           title="Status"

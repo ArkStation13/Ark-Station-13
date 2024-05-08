@@ -195,7 +195,7 @@ export const ChemHeater = (props) => {
   const isBeakerLoaded = beaker !== null;
 
   return (
-    <Window width={350} height={350}>
+    <Window width={355} height={350}>
       <Window.Content scrollable>
         <Section
           title="Controls"

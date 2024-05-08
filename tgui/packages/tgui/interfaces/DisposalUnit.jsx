@@ -20,7 +20,7 @@ export const DisposalUnit = (props) => {
     stateText = 'Off';
   }
   return (
-    <Window width={300} height={180}>
+    <Window width={300} height={185}>
       <Window.Content>
         <Section>
           <LabeledList>
