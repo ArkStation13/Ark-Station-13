@@ -55,7 +55,7 @@ export const ExaminePanel = (props) => {
     <Window
       title={character_name + "'s Examine Panel"} // ARK STATION edit
       width={900}
-      height={670}
+      height={755}
     >
       {/* ARK STATION EDIT: DON'T USE ADMIN THEME*/}
       <Window.Content>
