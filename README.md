@@ -1,4 +1,4 @@
-## Nova Sector (/tg/station Downstream)
+## Ark Station 13 (Nova Sector => /tg/station Downstream)
 
 [![CI Suite](https://github.com/Krashly/Ark-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/Krashly/Ark-Station-13/actions?query=workflow%3A%22CI+Suite%22)
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/Krashly/Ark-Station-13.svg)](https://isitmaintained.com/project/Krashly/Ark-Station-13 "Percentage of issues still open")
@@ -9,55 +9,50 @@
 
 | Website                   | Link                                           |
 |---------------------------|------------------------------------------------|
-| Git / GitHub cheatsheet   | [https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833](https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833) |
-| Guide to Modularization   | [./modular_nova/readme.md](./modular_nova/readme.md)            |
-| Website                   | [https://www.tgstation13.org](https://www.tgstation13.org)          |
-| Code                      | [https://github.com/NovaSector/NovaSector](https://github.com/NovaSector/NovaSector)    |
-| Wiki                      | [https://wiki.novasector13.com](https://wiki.novasector13.com)   |
-| Codedocs                  | [https://GalacticStation.github.io/GalaxiaStation/](https://GalacticStation.github.io/GalaxiaStation/)       |
-| Nova Sector's Discord     | [https://discord.gg/novasector](https://discord.gg/novasector) |
-| Coderbus Discord          | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)               |
+| Вебсайт                   | [https://www.spacestation13.space/](https://www.spacestation13.space/)      							   |
+| Код	                      | [https://github.com/Krashly/Ark-Station-13](https://github.com/Krashly/Ark-Station-13) 		   |
+| Вики                      | [https://wiki.spacestation13.space/](https://wiki.spacestation13.space/)  									 |
+| Дискорд Сервер			      | [https://discord.gg/novasector](https://discord.gg/novasector)															 |
+| Coderbus Discord          | [https://discord.com/invite/eAvpD6a7av](https://discord.com/invite/eAvpD6a7av)               |
 
-This is Nova Sector's downstream fork of /tg/station created in byond.
+Это Арк Станция 13. Форк Нова Сектора, который в свою очередь является форком ТГ станции.
 
-**Please note that this repository contains sexually explicit content and is not suitable for those under the age of 18.**
+**Данный репозиторий содержит контент, предназначеный для лиц старше 18-и лет.**
 
-Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
+Space Station 13 — это наполненная паранойей ролевая игра, действие которой разворачивается на фоне бессмысленной металлической смертельной ловушки, маскирующейся под космическую станцию, с очаровательными спрайтами, призванными передать научно-фантастический сеттинг и его опасный подтекст. Веселитесь и выживайте!
 
-## Important note - TEST YOUR PULL REQUESTS
+## ВАЖНАЯ ЗАМЕТКА - ТЕСТИРУЙТЕ СВОИ ПУЛЛ РЕКВЕСТЫ
 
-You are responsible for the testing of your content and providing proof of such in your pull request. You should not mark a pull request ready for review until you have actually tested it. If you require a separate client for testing, you can use a guest account by logging out of BYOND and connecting to your test server. Test merges are not for bug finding, they are for stress tests where local testing simply doesn't allow for this.
+Вы несете ответственность за тестирование вашего контента и предоставление доказательств этого в вашем Пулл Реквесте. Не следует помечать Пулл Реквест готовым к рассмотрению до тех пор, пока вы его не протестируете. Если вам нужен отдельный клиент для тестирования, вы можете использовать гостевую учетную запись, выйдя из BYOND и подключившись к тестовому серверу. Тестовые слияния предназначены не для поиска ошибок, а для стресс-тестов, где локальное тестирование просто не позволяет этого.
 
-## DEVELOPMENT FLOWCHART
+## ГАЙД ПО РАЗРАБОТКЕ
 ![image](https://i.imgur.com/aJnE4WT.png)
 
-[Modularisation Guide](./modular_nova/readme.md)
+[Гайд по модульности](./modular_nova/readme.md)
 
-## DOWNLOADING
-[Downloading](.github/guides/DOWNLOADING.md)
+## УСТАНОВКА БИЛДА
+[Скачивание и установка](.github/guides/DOWNLOADING.md)
 
-[Running on the server](.github/guides/RUNNING_A_SERVER.md)
+[Запуск локального сервера](.github/guides/RUNNING_A_SERVER.md)
 
-[Maps and Away Missions](.github/guides/MAPS_AND_AWAY_MISSIONS.md)
+[Карты и Гейты](.github/guides/MAPS_AND_AWAY_MISSIONS.md)
 
-## Compilation
+## КОМПИЛЯЦИЯ БИЛДА
 
-Find `BUILD.bat` here in the root folder of tgstation, and double click it to initiate the build. It consists of multiple steps and might take around 1-5 minutes to compile.
+Найди `BUILD.bat` в корневой папке билда, и запусти. Компиляция состоит из нескольких шагов, и его работа может занять около 1–5 минут.
 
-**The long way**. Find `bin/build.cmd` in this folder, and double click it to initiate the build. It consists of multiple steps and might take around 1-5 minutes to compile. If it closes, it means it has finished its job. You can then [setup the server](.github/guides/RUNNING_A_SERVER.md) normally by opening `tgstation.dmb` in DreamDaemon.
+**Сборка tgstation напрямую в DreamMaker устарела и может привести к ошибкам**, таким как `'tgui.bundle.js': cannot find file`.
 
-**Building tgstation in DreamMaker directly is deprecated and might produce errors**, such as `'tgui.bundle.js': cannot find file`.
+**[Как скомпилировать билд в VSCode и настроить его](tools/build/README.md).**
 
-**[How to compile in VSCode and other build options](tools/build/README.md).**
+## КОНТРИБЬЮТОРЫ
+[Гайды для Контрибьюторов](.github/CONTRIBUTING.md)
 
-## Contributors
-[Guides for Contributors](.github/CONTRIBUTING.md)
+[/tg/station HACKMD аккаунт](https://hackmd.io/@tgstation)
 
-[/tg/station HACKMD account](https://hackmd.io/@tgstation) - Design documentation here
+Заинтерисованы в развитии лора сервер? [Заходите в наш Дискорд сервер](https://discord.com/invite/eAvpD6a7av)
 
-[Interested in some starting lore?](https://github.com/tgstation/common_core)
-
-## LICENSE
+## ЛИЦЕНЗИЯ
 
 All code after [commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST](https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html).
 
