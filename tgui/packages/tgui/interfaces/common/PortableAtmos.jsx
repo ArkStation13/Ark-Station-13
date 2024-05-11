@@ -54,7 +54,7 @@ export const PortableBasicInfo = (props) => {
       </Section>
       <Section
         title="Holding Tank"
-        minHeight="82px"
+        minHeight="100px"
         buttons={
           <Button
             icon="eject"

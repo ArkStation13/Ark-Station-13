@@ -34,7 +34,7 @@ export const OperatingComputer = (props) => {
   const [tab, setTab] = useSharedState('tab', 1);
 
   return (
-    <Window width={400} height={470}>
+    <Window width={430} height={480}>
       {/* Ark Station Edit */}
       <Window.Content scrollable>
         <Tabs>

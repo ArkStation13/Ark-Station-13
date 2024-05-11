@@ -32,7 +32,7 @@ export const GamePreferenceWindow = (props: {
   }
 
   return (
-    <Window title="Game Preferences" width={920} height={770}>
+    <Window title="Game Preferences" width={1200} height={800}>
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>

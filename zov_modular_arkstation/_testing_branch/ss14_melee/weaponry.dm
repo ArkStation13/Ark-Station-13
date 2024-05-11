@@ -63,7 +63,7 @@
 // 	..()
 
 /obj/item/gun/magic/melee/fire_gun(atom/target, mob/living/user, flag, params)
-	user.do_attack_animation()
+	user.do_attack_animation(target, used_item = src)
 	..()
 
 /obj/item/ammo_casing/shotgun/buckshot/melee

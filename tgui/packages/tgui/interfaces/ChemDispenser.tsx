@@ -55,7 +55,7 @@ export const ChemDispenser = (props) => {
     }));
 
   return (
-    <Window width={565} height={645}>
+    <Window width={565} height={760}>
       <Window.Content scrollable>
         <Section
           title="Status"
