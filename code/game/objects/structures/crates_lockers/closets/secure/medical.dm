@@ -9,7 +9,7 @@
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/cup/beaker = 2,
 		/obj/item/reagent_containers/dropper = 2,
-		/obj/item/storage/belt/medical = 1,
+		/obj/item/storage/belt/medical/green = 1, // ARK STATION EDIT || GREEN MEDBAY
 		/obj/item/storage/box/syringes = 1,
 		/obj/item/reagent_containers/cup/bottle/toxin = 1,
 		/obj/item/reagent_containers/cup/bottle/morphine = 2,
@@ -38,11 +38,11 @@
 
 /obj/structure/closet/secure_closet/medical3/PopulateContents()
 	..()
-	new /obj/item/radio/headset/headset_med(src)
+	new /obj/item/radio/headset/headset_med/green(src) // ARK STATION EDIT || GREEN MEDBAY
 	new /obj/item/defibrillator/loaded(src)
 	new /obj/item/clothing/gloves/latex/nitrile(src)
-	new /obj/item/storage/belt/medical(src)
-	new /obj/item/clothing/glasses/hud/health(src)
+	new /obj/item/storage/belt/medical/green(src) // ARK STATION EDIT || GREEN MEDBAY
+	new /obj/item/clothing/glasses/hud/health/green(src) // ARK STATION EDIT || GREEN MEDBAY
 	return
 
 /obj/structure/closet/secure_closet/psychology
@@ -61,7 +61,7 @@
 	new /obj/item/clothing/under/costume/buttondown/skirt/service(src)
 	new /obj/item/clothing/neck/tie/black(src)
 	new /obj/item/clothing/shoes/laceup(src)
-	new /obj/item/storage/backpack/medic(src)
+	new /obj/item/storage/backpack/medic/green(src) // ARK STATION EDIT || GREEN MEDBAY
 	new /obj/item/radio/headset/headset_srvmed(src)
 	new /obj/item/clipboard(src)
 	new /obj/item/clothing/suit/jacket/straight_jacket(src)

@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 		new/datum/stack_recipe("tool belt", /obj/item/storage/belt/utility, 4, check_density = FALSE, category = CAT_CONTAINERS), \
 		new/datum/stack_recipe("botanical belt", /obj/item/storage/belt/plant, 2, check_density = FALSE, category = CAT_CONTAINERS), \
 		new/datum/stack_recipe("janitorial belt", /obj/item/storage/belt/janitor, 2, check_density = FALSE, category = CAT_CONTAINERS), \
-		new/datum/stack_recipe("medical belt", /obj/item/storage/belt/medical, 2, check_density = FALSE, category = CAT_CONTAINERS), \
+		new/datum/stack_recipe("medical belt", /obj/item/storage/belt/medical/green, 2, check_density = FALSE, category = CAT_CONTAINERS), \  // ARK STATION EDIT || GREEN MEDBAY
 		new/datum/stack_recipe("security belt", /obj/item/storage/belt/security, 2, check_density = FALSE, category = CAT_CONTAINERS), \
 		new/datum/stack_recipe("shoulder holster", /obj/item/storage/belt/holster, 3, check_density = FALSE, category = CAT_CONTAINERS), \
 		new/datum/stack_recipe("bandolier", /obj/item/storage/belt/bandolier, 5, check_density = FALSE, category = CAT_CONTAINERS), \

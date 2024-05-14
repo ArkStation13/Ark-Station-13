@@ -27,7 +27,7 @@
 	)
 	premium = list(
 		/obj/item/reagent_containers/hypospray/medipen = 3,
-		/obj/item/storage/belt/medical = 3,
+		// /obj/item/storage/belt/medical = 3, // ARK STATION EDIT || GREEN MEDBAY
 		/obj/item/sensor_device = 2,
 		/obj/item/pinpointer/crew = 2,
 		/obj/item/storage/medkit/advanced = 2,

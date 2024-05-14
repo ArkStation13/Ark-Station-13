@@ -180,7 +180,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 	list(//equipment
 		/obj/item/clothing/ears/earmuffs = 1,
 		/obj/item/clothing/glasses/hud/diagnostic = 1,
-		/obj/item/clothing/glasses/hud/health = 1,
+		/obj/item/clothing/glasses/hud/health/green = 1, // ARK STATION EDIT || GREEN MEDBAY
 		/obj/item/clothing/glasses/salesman = 1,
 		/obj/item/clothing/glasses/nightmare_vision = 1,
 		/obj/item/clothing/glasses/welding = 1,
@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/clothing/head/utility/welding = 1,
 		/obj/item/clothing/mask/muzzle = 1,
 		/obj/item/clothing/suit/armor/vest/old = 1,
-		/obj/item/storage/belt/medical = 1,
+		/obj/item/storage/belt/medical/green = 1, // ARK STATION EDIT || GREEN MEDBAY
 		/obj/item/storage/belt/utility = 1,
 		/obj/item/pen/screwdriver = 1,
 		) = 8,
