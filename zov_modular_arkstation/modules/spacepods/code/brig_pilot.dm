@@ -1,5 +1,3 @@
-/datum/job/security_officer
-
 /datum/job/brig_pilot
 	title = JOB_BRIG_PILOT
 	description = "Patrols a sector of the station on his space Pod."
@@ -41,7 +39,7 @@
 	)
 	rpg_title = "Dragon Knight"
 	job_flags = STATION_JOB_FLAGS
-
+	antagonist_restricted = TRUE
 
 	alt_titles = list("Brig Pilot", "Pod Pilot", "Security Pilot", "Space Guard", "Brig Pilot Recruit", "Security Mecha Pilot")
 
