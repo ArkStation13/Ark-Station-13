@@ -41,3 +41,7 @@
 /obj/item/stack/dropped(mob/user, silent)
 	. = ..()
 	update_icon()
+
+/obj/item/stack/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
+	. = ..()
+	update_icon()
