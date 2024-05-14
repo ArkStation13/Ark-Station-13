@@ -6,7 +6,7 @@
 	desc = "A hood that protects the head and face from biological contaminants."
 	icon = 'icons/obj/clothing/head/bio.dmi'
 	worn_icon = 'icons/mob/clothing/head/bio.dmi'
-	icon_state = "bio"
+	icon_state = "bio_virology" // ARK STATION EDIT || GREEN MEDBAY
 	inhand_icon_state = "bio_hood"
 	clothing_flags = THICKMATERIAL | BLOCK_GAS_SMOKE_EFFECT | SNUG_FIT | STACKABLE_HELMET_EXEMPT | HEADINTERNALS
 	armor_type = /datum/armor/head_bio_hood
@@ -28,7 +28,7 @@
 	name = "bio suit"
 	desc = "A suit that protects against biological contamination."
 	icon = 'icons/obj/clothing/suits/bio.dmi'
-	icon_state = "bio"
+	icon_state = "bio_virology" // ARK STATION EDIT || GREEN MEDBAY
 	worn_icon = 'icons/mob/clothing/suits/bio.dmi'
 	inhand_icon_state = "bio_suit"
 	w_class = WEIGHT_CLASS_BULKY
@@ -49,10 +49,10 @@
 	acid = 100
 
 /obj/item/clothing/head/bio_hood/general
-	icon_state = "bio"
+	icon_state = "bio_virology" // ARK STATION EDIT || GREEN MEDBAY
 
 /obj/item/clothing/suit/bio_suit/general
-	icon_state = "bio"
+	icon_state = "bio_virology" // ARK STATION EDIT || GREEN MEDBAY
 
 //Virology biosuit, green stripe
 /obj/item/clothing/head/bio_hood/virology
