@@ -20,6 +20,7 @@
 							// JOB_SCIENCE_GUARD,
 							JOB_VANGUARD_OPERATIVE, // ARK STATION EDIT
 							JOB_SECURITY_MEDIC, // ARK STATION EDIT
+							JOB_BRIG_PILOT, // ARK STATION EDIT
 							)
 	required_candidates = 1
 	weight = 4 //Slightly less common than normal midround traitors.

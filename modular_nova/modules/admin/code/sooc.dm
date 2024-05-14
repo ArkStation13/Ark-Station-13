@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(ckey_to_sooc_name)
 	else //otherwise just toggle it
 		GLOB.sooc_allowed = !GLOB.sooc_allowed
 	var/list/listeners = list()
-	var/static/list/job_lookup = list(JOB_SECURITY_OFFICER = TRUE, JOB_WARDEN = TRUE, JOB_DETECTIVE = TRUE, JOB_HEAD_OF_SECURITY = TRUE, JOB_CAPTAIN = TRUE, JOB_BLUESHIELD = TRUE, JOB_SECURITY_MEDIC = TRUE, JOB_LAWYER = TRUE)
+	var/static/list/job_lookup = list(JOB_SECURITY_OFFICER = TRUE, JOB_WARDEN = TRUE, JOB_DETECTIVE = TRUE, JOB_HEAD_OF_SECURITY = TRUE, JOB_CAPTAIN = TRUE, JOB_BLUESHIELD = TRUE, JOB_SECURITY_MEDIC = TRUE, JOB_LAWYER = TRUE, JOB_BRIG_PILOT = TRUE) // ARK STATION EDIT
 	for(var/iterated_player as anything in GLOB.player_list)
 		var/mob/iterated_mob = iterated_player
 		if(!iterated_mob.client?.holder?.deadmined)
