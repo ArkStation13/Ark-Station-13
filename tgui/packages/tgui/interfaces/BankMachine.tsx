@@ -42,7 +42,7 @@ export const BankMachine = (props) => {
                 value={current_balance}
                 format={(value) => formatMoney(value)}
               />
-              {' cr'}
+              {' ₮' /* Ark Station Edit */}
             </LabeledList.Item>
           </LabeledList>
         </Section>
