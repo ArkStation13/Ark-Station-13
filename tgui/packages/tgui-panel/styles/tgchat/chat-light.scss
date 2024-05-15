@@ -983,13 +983,6 @@ h2.alert {
   border-bottom: 1px dashed #333;
 }
 
-.looc {
-  color: #b300b0;
-}
-.rlooc {
-  color: #b300b0;
-}
-
 $alert-stripe-colors: (
   // Ark Station Change
   'default': #e3e3e3,
@@ -1174,3 +1167,120 @@ $border-width-px: $border-width * 1px;
     );
   }
 }
+/* NOVA EDIT ADDITION START - LIGHT MODE CLASSES */
+
+.mentor {
+  color: #8a2be2;
+}
+.looc {
+  color: #6699cc;
+  font-weight: bold;
+}
+.rlooc {
+  color: #507294;
+  font-weight: bold;
+}
+
+// .examine_block {
+//   background: rgba(0, 0, 0, 0.1);
+//   border: 1px solid #111a27;
+//   margin: 2px 8px;
+//   padding: 8px 12px;
+//   max-width: 550px;
+// }
+
+// .examine_block hr {
+//   border: none;
+//   background: #333;
+//   height: 1px;
+//   margin: 8px 16px 8px 16px;
+// }
+
+.crossooc {
+  color: #9f6efc;
+  font-weight: bold;
+}
+
+.crossasay {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.pink {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+.brown {
+  color: #3d2009;
+  font-weight: bold;
+}
+
+.orange {
+  color: #b8761a;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #c7b72c;
+  font-weight: bold;
+}
+
+.cyan {
+  color: #0ea1e6;
+  font-weight: bold;
+}
+
+.brass {
+  color: #be8700;
+}
+
+.big_brass {
+  color: #be8700;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockyellow {
+  color: #daaa18;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockgray {
+  color: #42474d;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockred {
+  color: #6e001a;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.glossy {
+  color: #9b6000;
+  font-weight: bold;
+  animation: glossy 5000ms infinite;
+}
+
+@keyframes glossy {
+  0% {
+    color: #9b6000;
+  }
+  30% {
+    color: #c88800;
+  }
+  60% {
+    color: #bdbd00;
+  }
+  70% {
+    color: #c88800;
+  }
+  100% {
+    color: #9b6000;
+  }
+}
+// NOVA EDIT ADDITION END
