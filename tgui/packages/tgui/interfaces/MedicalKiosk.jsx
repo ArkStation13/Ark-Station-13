@@ -112,7 +112,7 @@ const MedicalKioskInstructions = (props) => {
     <Section minHeight="100%">
       <Box italic>
         Greetings Valued Employee! Please select a desired automatic health
-        check procedure. Diagnosis costs <b>{kiosk_cost} credits.</b>
+        check procedure. Diagnosis costs <b>{kiosk_cost} ₮.</b>
       </Box>
       <Box mt={1}>
         <Box inline color="label" mr={1}>

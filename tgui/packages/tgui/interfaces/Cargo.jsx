@@ -119,7 +119,7 @@ const CargoStatus = (props) => {
             value={points}
             format={(value) => formatMoney(value)}
           />
-          {' credits'}
+          {' ₮' /* Ark Station Edit */}
         </Box>
       }
     >

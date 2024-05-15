@@ -34,7 +34,7 @@ export function CargoStatus(props) {
             value={points}
             format={(value) => formatMoney(value)}
           />
-          {' credits'}
+          {' ₮'}
         </Box>
       }
     >

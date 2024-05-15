@@ -17,10 +17,10 @@ export const FuelTank = (props) => {
         <Section>
           <LabeledList>
             <LabeledList.Item label="Balance">
-              {data.balance} credits
+              {data.balance} ₮
             </LabeledList.Item>
             <LabeledList.Item label="Fuel Price">
-              {data.price} credits for liter!
+              {data.price} ₮ for liter!
             </LabeledList.Item>
             <LabeledList.Item label="How many liters?">
               <NumberInput

@@ -58,7 +58,7 @@ function CargoExpressContent(props) {
         buttons={
           <Box inline bold>
             <AnimatedNumber value={Math.round(points)} />
-            {' credits'}
+            {' ₮' /* Ark Station Edit */}
           </Box>
         }
       >

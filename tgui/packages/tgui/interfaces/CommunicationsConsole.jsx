@@ -171,7 +171,7 @@ const PageBuyingShuttle = (props) => {
       </Section>
 
       <Section>
-        Budget: <b>{data.budget.toLocaleString()}</b> credits
+        Budget: <b>{data.budget.toLocaleString()}</b> ₮
       </Section>
 
       {sortShuttles(data.shuttles).map((shuttle) => (
@@ -189,7 +189,7 @@ const PageBuyingShuttle = (props) => {
           key={shuttle.ref}
           buttons={
             <Button
-              content={`${shuttle.creditCost.toLocaleString()} credits`}
+              content={`${shuttle.creditCost.toLocaleString()} ₮`}
               color={shuttle.emagOnly ? 'red' : 'default'}
               disabled={data.budget < shuttle.creditCost}
               onClick={() =>
