@@ -11,4 +11,6 @@
 
 #define TRAIT_JUMPER "jumper"
 
+#define TRAIT_COFFIN_ENLARGED "coffin_enlarged"
+
 // END TRAIT DEFINES

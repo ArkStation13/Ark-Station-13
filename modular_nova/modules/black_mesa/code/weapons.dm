@@ -41,7 +41,6 @@
 	attack_verb_simple = list("shove", "bash")
 	transparent = TRUE
 	max_integrity = 150
-	repairable_by = /obj/item/stack/sheet/iron //what to repair the shield with
 	shield_break_leftover = /obj/item/ballistic_broken
 
 /obj/item/ballistic_broken
@@ -50,3 +49,22 @@
 	icon_state = "ballistic_broken"
 	icon = 'modular_nova/modules/awaymissions_nova/icons/ballistic.dmi'
 	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/ballistic_broken/Initialize(mapload)
+	. = ..()
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ballistic_repair)
+	AddComponent(
+		/datum/component/slapcrafting,\
+		slapcraft_recipes = slapcraft_recipe_list,\
+	)
+
+//broken shield fixing
+/datum/crafting_recipe/ballistic_repair
+	name = "ballistic shield (repaired)"
+	result = /obj/item/shield/riot/pointman/hecu
+	reqs = list(/obj/item/ballistic_broken = 1,
+				/obj/item/stack/sheet/plasteel = 3,
+				/obj/item/stack/sheet/rglass = 3)
+	time = 5 SECONDS
+	category = CAT_MISC
+	tool_behaviors = list(TOOL_WELDER)

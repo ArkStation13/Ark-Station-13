@@ -1,8 +1,9 @@
-import { Antagonist, Category } from '../base';
 import { multiline } from 'common/string';
 
+import { Antagonist, Category } from '../base';
+
 const BloodsuckerBreakout: Antagonist = {
-  key: 'bloodsuckerbreakout',
+  key: 'bloodsuckerlatejoin',
   name: 'Bloodsucker (Latejoin)',
   description: [
     multiline`

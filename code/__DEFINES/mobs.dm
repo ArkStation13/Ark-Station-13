@@ -66,6 +66,8 @@
 #define MOB_PLANT (1 << 10)
 ///The mob is a goopy creature, probably coming from xenobiology.
 #define MOB_SLIME (1 << 11)
+///The mob is some kind of vampire, species or antag
+#define MOB_VAMPIRIC (1 << 12) // ARK STATION ADDITION
 
 //Lung respiration type flags
 #define RESPIRATION_OXYGEN (1 << 0)

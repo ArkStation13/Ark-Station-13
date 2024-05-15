@@ -193,6 +193,13 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_GLITCH = 0,
 	ROLE_PAI = 0,
 	ROLE_SENTIENCE = 0,
+
+	// ARK STATION EDIT START
+	ROLE_BLOODSUCKER = 14,
+	ROLE_VAMPIRICACCIDENT = 14,
+	ROLE_BLOODSUCKERBREAKOUT = 14,
+	ROLE_MONSTERHUNTER = 14,
+	// ARK STATION EDIT END
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

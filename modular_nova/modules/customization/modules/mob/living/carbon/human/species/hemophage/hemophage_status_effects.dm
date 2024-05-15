@@ -15,7 +15,6 @@
 	/// What will the bloodloss_speed_multiplier of the Hemophage be changed by upon receiving this status effect?
 	var/bloodloss_speed_multiplier = 0.5
 
-
 /datum/status_effect/blood_thirst_satiated/on_apply()
 	// This status effect should not exist on its own, or on a non-human.
 	if(!owner || !ishuman(owner))
@@ -30,7 +29,6 @@
 
 	return TRUE
 
-
 /datum/status_effect/blood_thirst_satiated/on_remove()
 	// This status effect should not exist on its own, or on a non-human.
 	if(!owner || !ishuman(owner))
@@ -43,7 +41,6 @@
 
 	tumor_heart.bloodloss_rate /= bloodloss_speed_multiplier
 
-
 /datum/status_effect/blood_regen_active
 	id = "blood_regen_active"
 	status_type = STATUS_EFFECT_UNIQUE
@@ -51,7 +48,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/blood_regen_active
 	/// Current multiplier for how much blood they spend healing themselves for every point of damage healed.
 	var/blood_to_health_multiplier = 1
-
+	var/cost_blood = 1 /// ARK STATION CHANGE, allows scaling of hemophage healing blood cost.
 
 /datum/status_effect/blood_regen_active/on_apply()
 	// This status effect should not exist on its own, or on a non-human.
@@ -61,7 +58,6 @@
 	to_chat(owner, span_notice("You feel the tumor inside you pulse faster as the absence of light eases its work, allowing it to knit your flesh and reconstruct your body."))
 
 	return TRUE
-
 
 // This code also had to be copied over from /datum/action/item_action to ensure that we could display the heart in the alert.
 /datum/status_effect/blood_regen_active/on_creation(mob/living/new_owner, ...)
@@ -88,14 +84,12 @@
 
 	return .
 
-
 /datum/status_effect/blood_regen_active/on_remove()
 	// This status effect should not exist on its own.
 	if(!owner)
 		return
 
 	to_chat(owner, span_notice("You feel the pulse of the tumor in your chest returning back to normal."))
-
 
 /datum/status_effect/blood_regen_active/tick(seconds_between_ticks)
 	var/mob/living/carbon/human/regenerator = owner
@@ -135,14 +129,12 @@
 		regenerator.remove_status_effect(/datum/status_effect/blood_regen_active)
 		return
 
-	regenerator.blood_volume = max(regenerator.blood_volume - blood_used, MINIMUM_VOLUME_FOR_REGEN)
-
+	regenerator.blood_volume = max(regenerator.blood_volume - blood_used * cost_blood, MINIMUM_VOLUME_FOR_REGEN) // ARK STATION CHANGE, allows scaling of hemophage healing blood cost.
 
 /datum/movespeed_modifier/hemophage_dormant_state
 	id = "hemophage_dormant_state"
 	multiplicative_slowdown = 3 // Yeah, they'll be quite significantly slower when in their dormant state.
 	blacklisted_movetypes = FLOATING
-
 
 /atom/movable/screen/alert/status_effect/blood_thirst_satiated
 	name = "Thirst Satiated"

@@ -101,7 +101,8 @@
 		// clothes incl. storage
 		/obj/item/clothing/under/rank/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
 		/obj/item/storage/belt/military/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
-		/obj/item/storage/backpack/duffelbag/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
+		// ARK STATION EDIT \/
+		/obj/item/storage/backpack/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
 		/obj/item/clothing/gloves/color/black/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
 		/obj/item/clothing/shoes/combat/expeditionary_corps = ITEM_WEIGHT_CLOTHING,
 		/obj/item/clothing/gloves/latex/nitrile/expeditionary_corps = ITEM_WEIGHT_CLOTHING,

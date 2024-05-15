@@ -63,15 +63,6 @@
 			GLOB.blooper_random_list[B.id] = sound_blooper_path
 	// ARK STATION EDIT END
 
-
-/// Inits GLOB.species_list. Not using GLOBAL_LIST_INIT b/c it depends on GLOB.string_lists
-/proc/init_species_list()
-	for(var/species_path in subtypesof(/datum/species))
-		var/datum/species/species = new species_path()
-		GLOB.species_list[species.id] = species_path
-	sort_list(GLOB.species_list, GLOBAL_PROC_REF(cmp_typepaths_asc))
-	// NOVA EDIT ADDITION END
-
 /// Inits GLOB.surgeries
 /proc/init_surgeries()
 	var/surgeries = list()

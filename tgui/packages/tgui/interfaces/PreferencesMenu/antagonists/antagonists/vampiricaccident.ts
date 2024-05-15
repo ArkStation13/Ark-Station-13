@@ -1,8 +1,9 @@
-import { Antagonist, Category } from '../base';
 import { multiline } from 'common/string';
 
+import { Antagonist, Category } from '../base';
+
 const VampiricAccident: Antagonist = {
-  key: 'vampiricaccident',
+  key: 'bloodsuckermidround',
   name: 'Bloodsucker (Midround)',
   description: [
     multiline`
