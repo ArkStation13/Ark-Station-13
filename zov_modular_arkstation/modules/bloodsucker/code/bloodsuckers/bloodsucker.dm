@@ -54,9 +54,9 @@
 	var/list/datum/antagonist/vassal/special_vassals = list()
 
 	///How many ranks we have, don't modify this directly, use AdjustRank() and use GetRank() to get the current value.
-	VAR_PRIVATE/bloodsucker_level = 0
+	var/bloodsucker_level = 0
 	/// Unspent ranks, don't modify this directly, use AdjustUnspentRanks() and use GetUnspentRanks() to get the current value.
-	VAR_PRIVATE/bloodsucker_level_unspent = 1
+	var/bloodsucker_level_unspent = 1
 	var/additional_regen
 	var/blood_over_cap = 0
 	var/bloodsucker_regen_rate = 0.3
