@@ -15,9 +15,9 @@
 
 	if(istype(O, /obj/item/storage))
 		var/obj/item/storage/I = O
-		if(I.storage_type && I == /datum/storage)
+		if(I.storage_type)
 			I.storage_type.dump_content_at(drop_location(), user)
-			return
+			return TRUE
 
 	if(O.forceMove(drop_location()))
 		if(!LAZYACCESS(modifiers, ICON_X) || !LAZYACCESS(modifiers, ICON_Y))
