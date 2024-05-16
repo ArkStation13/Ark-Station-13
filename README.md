@@ -15,6 +15,7 @@
 | Дискорд Сервер			      | [https://discord.gg/novasector](https://discord.gg/novasector)															 |
 | Coderbus Discord          | [https://discord.com/invite/eAvpD6a7av](https://discord.com/invite/eAvpD6a7av)               |
 
+
 Это Арк Станция 13. Форк Нова Сектора, который в свою очередь является форком ТГ станции.
 
 **Данный репозиторий содержит контент, предназначеный для лиц старше 18-и лет.**
