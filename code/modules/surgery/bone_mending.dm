@@ -214,14 +214,14 @@
 // 	time = 2.4 SECONDS
 // 	preop_sound = 'sound/surgery/hemostat1.ogg'
 
-/datum/surgery_step/clamp_bleeders/discard_skull_debris/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	display_results(
-		user,
-		target,
-		span_notice("You begin to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-		span_notice("[user] begins to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-		span_notice("[user] begins to poke around in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-	)
+///datum/surgery_step/clamp_bleeders/discard_skull_debris/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
+//	display_results(
+//		user,
+//		target,
+//		span_notice("You begin to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+//		span_notice("[user] begins to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+//		span_notice("[user] begins to poke around in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+//	)
 
 // 	display_pain(target, "Your brain feels like it's getting stabbed by little shards of glass!")
 
