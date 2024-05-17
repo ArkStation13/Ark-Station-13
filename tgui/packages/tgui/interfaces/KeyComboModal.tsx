@@ -84,7 +84,7 @@ export const KeyComboModal = (props) => {
 
   // Dynamically changes the window height based on the message.
   const windowHeight =
-    130 +
+    150 +
     (message.length > 30 ? Math.ceil(message.length / 3) : 0) +
     (message.length && large_buttons ? 5 : 0);
 
