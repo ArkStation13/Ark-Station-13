@@ -20,12 +20,7 @@ import { PageSelect } from './LibraryConsole';
 export const LibraryAdmin = (props) => {
   const [modifyMethod, setModifyMethod] = useLocalState('ModifyMethod', null);
   return (
-    <Window
-      title="Admin Library Console"
-      theme="ntos"
-      width={800}
-      height={600}
-    >
+    <Window title="Admin Library Console" theme="ntos" width={800} height={600}>
       {modifyMethod ? <ModifyPage /> : <BookListing />}
     </Window>
   );
