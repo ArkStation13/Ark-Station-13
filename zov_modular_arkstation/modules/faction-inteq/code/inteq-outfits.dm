@@ -59,7 +59,7 @@
 		/obj/item/beamout_tool = 1,
 		/obj/item/solfed_reporter/swat_caller = 1,
 		/obj/item/storage/box/syndie_kit/space/inteq = 1,
-		/obj/item/tank/internals/oxygen/yellow = 1,
+		/obj/item/tank/internals/emergency_oxygen/engi = 1,
 		)
 
 // PMC medic
