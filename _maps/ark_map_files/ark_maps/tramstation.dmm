@@ -5956,8 +5956,7 @@
 /area/station/hallway/secondary/entry)
 "aRE" = (
 /obj/machinery/mass_driver/chapelgun,
-/obj/machinery/door/window{
-	dir = 1;
+/obj/machinery/door/window/left/directional/north{
 	name = "Mass Driver";
 	req_access = list("chapel_office")
 	},
@@ -6700,10 +6699,7 @@
 /turf/open/floor/wood/large,
 /area/station/service/barber)
 "bjb" = (
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/east{
 	name = "Infirmary"
 	},
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -22113,8 +22109,7 @@
 /area/station/medical/treatment_center)
 "gNK" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
+/obj/machinery/door/window/brigdoor/left/directional/north{
 	name = "Armory Desk";
 	req_access = list("armory")
 	},
@@ -28900,8 +28895,7 @@
 /turf/open/floor/plating,
 /area/station/cargo/lobby)
 "jnJ" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
+/obj/machinery/door/window/brigdoor/left/directional/east{
 	id = "crgcell";
 	name = "Cargo Cell";
 	req_access = list("security")
@@ -45358,9 +45352,7 @@
 /turf/open/floor/iron,
 /area/station/security/prison/safe)
 "peA" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 8
-	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
@@ -54695,8 +54687,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/tram/right)
 "srY" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
+/obj/machinery/door/window/brigdoor/left/directional/west{
 	id = "engcell";
 	name = "Engineering Cell";
 	req_access = list("security")
@@ -64648,9 +64639,7 @@
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "vGv" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 8
-	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
 "vGB" = (
@@ -67696,9 +67685,7 @@
 /obj/structure/sink{
 	pixel_y = 17
 	},
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
+/obj/structure/window/reinforced/tinted/spawner/directional/east,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
 "wOb" = (
