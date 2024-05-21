@@ -35,8 +35,8 @@
 /turf/closed/indestructible/void
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "void-wall"
-	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
-	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
+	name = "VOID"
+	desc = "VOID?"
 
 // Effects and trigger
 /obj/effect/particle_effect/sparks/void_fissure
@@ -58,11 +58,12 @@
 
 /obj/effect/step_trigger/void/Initialize(mapload)
 	. = ..()
-	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
-		COMSIG_ATOM_EXITED = PROC_REF(on_exited),
-	)
-	AddElement(/datum/element/connect_loc, loc_connections)
+	// Вернешь как починишь чтобы не было рантаймов на тестах
+	//var/static/list/loc_connections = list(
+	//	COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+	//	COMSIG_ATOM_EXITED = PROC_REF(on_exited),
+	//)
+	//AddElement(/datum/element/connect_loc, loc_connections)
 
 /obj/effect/step_trigger/void/proc/on_exited(datum/source, H as mob|obj)
 	if(ismob(H))
