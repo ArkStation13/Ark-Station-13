@@ -1,5 +1,5 @@
-import { resolveAsset } from '../assets';
 import { BooleanLike } from '../../common/react';
+import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Divider, Dropdown, Section, Stack } from '../components';
 import { Window } from '../layouts';
@@ -102,7 +102,7 @@ const PowerSection = (props: any, context: any) => {
   const [selectedPower, setSelectedPower] = useLocalState(
     context,
     'power',
-    power[0]
+    power[0],
   );
 
   return (
@@ -116,7 +116,8 @@ const PowerSection = (props: any, context: any) => {
           tooltipPosition="left"
           tooltip={'Select a Power to explain.'}
         />
-      }>
+      }
+    >
       <Stack>
         <Stack.Item grow>
           <Dropdown
@@ -126,7 +127,7 @@ const PowerSection = (props: any, context: any) => {
             options={power.map((powers) => powers.power_name)}
             onSelected={(powerName: string) =>
               setSelectedPower(
-                power.find((p) => p.power_name === powerName) || power[0]
+                power.find((p) => p.power_name === powerName) || power[0],
               )
             }
           />
