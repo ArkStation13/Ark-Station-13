@@ -17561,11 +17561,8 @@
 	id = "AI";
 	pixel_x = 20
 	},
-/obj/machinery/door/window{
+/obj/machinery/door/window/brigdoor/right/directional/north{
 	atom_integrity = 300;
-	base_state = "rightsecure";
-	dir = 1;
-	icon_state = "rightsecure";
 	name = "Primary AI Core Access";
 	req_access = list("ai_upload")
 	},
@@ -21292,11 +21289,8 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "gyL" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/west{
 	name = "Captain's Desk";
-	dir = 8
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
@@ -23918,10 +23912,7 @@
 /area/station/command/meeting_room)
 "hyK" = (
 /obj/structure/window/reinforced/spawner/directional/north,
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	dir = 8;
-	icon_state = "left";
+/obj/machinery/door/window/left/directional/west{
 	name = "Fitness Ring"
 	},
 /turf/open/floor/iron/dark/smooth_corner,
@@ -30429,9 +30420,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "jOH" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
+/obj/machinery/door/window/right{
 	name = "Captain's Desk"
 	},
 /turf/open/floor/wood,
@@ -31309,10 +31298,7 @@
 	name = "Atmospherics Blast Door"
 	},
 /obj/effect/landmark/navigate_destination/atmos,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/east{
 	name = "Atmospherics Front Desk";
 	req_access = list("atmospherics")
 	},
@@ -39557,10 +39543,7 @@
 /area/station/service/chapel)
 "mVS" = (
 /obj/structure/window/reinforced/spawner/directional/south,
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	dir = 8;
-	icon_state = "left";
+/obj/machinery/door/window/east/directional/west{
 	name = "Fitness Ring"
 	},
 /turf/open/floor/iron/dark/smooth_corner{
@@ -44165,9 +44148,7 @@
 /obj/structure/table/wood,
 /obj/item/folder/blue,
 /obj/item/stamp/head/captain,
-/obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
+/obj/machinery/door/window/right{
 	name = "Captain's Desk"
 	},
 /turf/open/floor/wood,
@@ -55425,8 +55406,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "sFw" = (
-/obj/machinery/door/window/left/directional/north{
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/north{
 	name = "Incoming Mail";
 	req_access = list("shipping")
 	},
