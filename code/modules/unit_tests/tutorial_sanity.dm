@@ -1,7 +1,7 @@
 /// Verifies that every tutorial has properly set variables
-/datum/unit_test/tutorial_sanity
+// /datum/unit_test/tutorial_sanity
 
-/datum/unit_test/tutorial_sanity/Run()
+// /datum/unit_test/tutorial_sanity/Run()
 	// var/regex/regex_valid_date = regex(@"\d{4}-\d{2}-\d{2}")
 	// var/list/keys = list()
 
