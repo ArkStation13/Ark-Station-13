@@ -30,7 +30,8 @@ export const FuelTank = (props) => {
                 width="75px"
                 minValue={0}
                 maxValue={max_fuel}
-                onChange={(_, value) =>
+                step={1}
+                onChange={(value) =>
                   act('fuel', {
                     fuel: value,
                   })
