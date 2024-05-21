@@ -792,6 +792,7 @@
 #define FA_ICON_FACEBOOK_SQUARE "fa-facebook-square"
 #define FA_ICON_FAN "fa-fan"
 #define FA_ICON_FANTASY_FLIGHT_GAMES "fa-fantasy-flight-games"
+#define FA_ICON_FAST "fa-fast"
 #define FA_ICON_FAST_BACKWARD "fa-fast-backward"
 #define FA_ICON_FAST_FORWARD "fa-fast-forward"
 #define FA_ICON_FAUCET "fa-faucet"

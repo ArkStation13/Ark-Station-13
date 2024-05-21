@@ -52,14 +52,13 @@
 	belt = /obj/item/storage/belt/utility/full/powertools/ircd
 	id = /obj/item/card/id/advanced/centcom/ert/inteq
 	backpack_contents = list(/obj/item/storage/box/rcd_ammo = 1,
-		/obj/item/storage/box/smart_metal_foam = 1,
 		/obj/item/multitool = 1,
 		/obj/item/extinguisher/advanced = 1,
 		/obj/item/rwd/loaded = 1,
 		/obj/item/beamout_tool = 1,
 		/obj/item/solfed_reporter/swat_caller = 1,
 		/obj/item/storage/box/syndie_kit/space/inteq = 1,
-		/obj/item/tank/internals/emergency_oxygen/engi = 1,
+		/obj/item/tank/internals/emergency_oxygen/engi = 1
 		)
 
 // PMC medic
