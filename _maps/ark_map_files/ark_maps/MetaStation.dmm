@@ -548,10 +548,7 @@
 	},
 /obj/structure/table/wood/fancy/blue,
 /obj/effect/spawner/random/aimodule/neutral,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/east{
 	name = "Core Modules";
 	req_access = list("captain")
 	},
@@ -3526,9 +3523,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "bjI" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /obj/machinery/computer/records/security,
 /turf/open/floor/iron/dark,
@@ -4510,7 +4505,6 @@
 /area/station/commons/dorms)
 "bAI" = (
 /obj/machinery/disposal/bin,
-/obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -5061,12 +5055,8 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "bLT" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
 /obj/effect/turf_decal/stripes,
@@ -5713,8 +5703,6 @@
 "bWS" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
 	name = "MiniSat Walkway Access"
 	},
 /obj/machinery/camera/directional/west{
@@ -7857,8 +7845,6 @@
 /area/station/engineering/atmos)
 "cQV" = (
 /obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
 	name = "MiniSat Walkway Access"
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -12989,7 +12975,6 @@
 /area/station/ai_monitored/aisat/exterior)
 "eGd" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "MiniSat Walkway Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -13708,8 +13693,7 @@
 	id = "briglockdown";
 	name = "Warden Desk Shutters"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
+/obj/machinery/door/window/brigdoor/left/directional/north{
 	name = "Brig Control Desk";
 	req_access = list("armory")
 	},
@@ -14869,9 +14853,7 @@
 /turf/open/floor/iron,
 /area/station/command/teleporter)
 "fnH" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /obj/machinery/suit_storage_unit/security,
 /obj/machinery/light/directional/north,
@@ -14940,10 +14922,7 @@
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/storage)
 "fpd" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/west{
 	name = "MiniSat Airlock Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -20763,7 +20742,6 @@
 "hyn" = (
 /obj/machinery/airalarm/directional/west,
 /obj/effect/spawner/random/vending/snackvend,
-/obj/machinery/airalarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/neutral/opposingcorners{
 	dir = 1
@@ -22325,8 +22303,7 @@
 	name = "Justice Chamber";
 	req_access = list("armory")
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
+/obj/machinery/door/window/brigdoor/left/directional/north{
 	name = "Justice Chamber";
 	req_access = list("armory")
 	},
@@ -23350,10 +23327,7 @@
 	dir = 8;
 	id = "garbage"
 	},
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	dir = 1;
-	icon_state = "left";
+/obj/machinery/door/window/right/directional/north{
 	name = "Danger: Conveyor Access";
 	req_access = list("maint_tunnels")
 	},
@@ -24637,9 +24611,7 @@
 /area/station/medical/storage)
 "iNE" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/status_display/ai/directional/north,
 /obj/effect/turf_decal/stripes/box,
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -27694,7 +27666,6 @@
 /obj/item/circuitboard/mecha/spacepod_main,
 /obj/item/circuitboard/mecha/spacepod_peri,
 /obj/machinery/status_display/ai/directional/north,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/smooth_half,
@@ -28365,12 +28336,9 @@
 "jVZ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	icon_state = "right";
 	name = "Outer Window"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
+/obj/machinery/door/window/brigdoor/left/directional/east{
 	name = "Security Desk";
 	req_access = list("security")
 	},
@@ -28960,8 +28928,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "kho" = (
-/obj/machinery/door/window{
-	dir = 4;
+/obj/machinery/door/window/left/directional/east{
 	name = "Mass Driver";
 	req_access = list("chapel_office")
 	},
@@ -30860,12 +30827,8 @@
 /obj/structure/rack{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/item/tank/internals/oxygen,
 /obj/item/clothing/shoes/magboots,
 /obj/item/tank/jetpack/oxygen,
@@ -32671,8 +32634,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "lAH" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
+/obj/machinery/door/window/brigdoor/left/directional/north{
 	name = "Research Director Observation";
 	req_access = list("rd")
 	},
@@ -36230,8 +36192,7 @@
 	icon_state = "right";
 	name = "Outer Window"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
+/obj/machinery/door/window/brigdoor/left/directional/west{
 	name = "Brig Control Desk";
 	req_access = list("armory")
 	},
@@ -36491,7 +36452,6 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "mRY" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Mass Driver";
 	req_access = list("maint_tunnels")
 	},
@@ -40942,8 +40902,6 @@
 /area/station/science/cytology)
 "ouj" = (
 /obj/structure/bed/medical/emergency,
-/obj/structure/bed/medical/emergency,
-/obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 6
@@ -45731,11 +45689,7 @@
 	pixel_x = 3;
 	pixel_y = -23
 	},
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "leftsecure";
-	dir = 8;
-	icon_state = "leftsecure";
+/obj/machinery/door/window/left/directional/west{
 	name = "Primary AI Core Access";
 	req_access = list("ai_upload")
 	},
@@ -50144,7 +50098,6 @@
 /area/station/command/heads_quarters/ce)
 "rEg" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Captain's Bedroom";
 	req_access = list("captain")
 	},
@@ -50628,9 +50581,7 @@
 	maxcharge = 15000
 	},
 /obj/item/clothing/glasses/welding,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/dark,
@@ -52070,8 +52021,6 @@
 "snu" = (
 /obj/structure/table/wood,
 /obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
 	name = "Captain's Desk";
 	req_access = list("captain")
 	},
@@ -53427,11 +53376,7 @@
 	name = "Private Channel";
 	pixel_x = 8
 	},
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "leftsecure";
-	dir = 8;
-	icon_state = "leftsecure";
+/obj/machinery/door/window/left/directional/west{
 	layer = 4.1;
 	name = "Tertiary AI Core Access";
 	pixel_x = -3;
@@ -56080,9 +56025,6 @@
 "tIv" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor{
-	base_state = "rightsecure";
-	dir = 1;
-	icon_state = "rightsecure";
 	name = "Head of Personnel's Desk";
 	req_access = list("hop")
 	},
@@ -56859,11 +56801,7 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/station/tcommsat/server)
 "tUF" = (
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "rightsecure";
-	dir = 4;
-	icon_state = "rightsecure";
+/obj/machinery/door/window/left/directional/east{
 	name = "Primary AI Core Access";
 	req_access = list("ai_upload")
 	},
@@ -56910,10 +56848,7 @@
 /obj/machinery/disposal/delivery_chute{
 	dir = 4
 	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/east{
 	layer = 3
 	},
 /obj/structure/disposalpipe/trunk{
@@ -57709,10 +57644,7 @@
 /area/station/command/heads_quarters/rd)
 "uhW" = (
 /obj/structure/cable,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/west{
 	name = "Theater Stage"
 	},
 /turf/open/floor/carpet,
@@ -59972,8 +59904,7 @@
 /area/station/engineering/atmospherics_engine)
 "uWA" = (
 /obj/structure/table/wood/fancy/royalblue,
-/obj/machinery/door/window{
-	dir = 8;
+/obj/machinery/door/window/left/directional/west{
 	name = "Secure Art Exhibition";
 	req_access = list("library")
 	},
@@ -60497,8 +60428,7 @@
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "vgW" = (
-/obj/machinery/door/window{
-	dir = 8;
+/obj/machinery/door/window/left/directional/east{
 	name = "MiniSat Airlock Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -61239,7 +61169,6 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/wrench,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/smooth,
@@ -63749,9 +63678,7 @@
 "wgD" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/closet/secure_closet/brig_pilot,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -64124,9 +64051,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "woV" = (
-/obj/machinery/door/window{
-	dir = 1
-	},
+/obj/machinery/door/window,
 /turf/open/floor/iron/grimy,
 /area/station/security/detectives_office)
 "woY" = (
@@ -65783,8 +65708,7 @@
 /area/station/cargo/storage)
 "wTp" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
+/obj/machinery/door/window/brigdoor/left/directional/north{
 	name = "Weapon Distribution";
 	req_access = list("armory")
 	},
@@ -66258,9 +66182,7 @@
 /area/station/hallway/primary/port)
 "xbx" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/stripes/box,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/dark,
@@ -66654,11 +66576,7 @@
 	name = "Private Channel";
 	pixel_x = -8
 	},
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "rightsecure";
-	dir = 4;
-	icon_state = "rightsecure";
+/obj/machinery/door/window/left/directional/east{
 	layer = 4.1;
 	name = "Secondary AI Core Access";
 	pixel_x = 4;

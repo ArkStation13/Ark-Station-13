@@ -51,7 +51,6 @@
 /area/station/service/bar)
 "agt" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Captain's Bedroom";
 	req_access = list("captain")
 	},
@@ -1639,7 +1638,6 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
-/obj/machinery/firealarm/directional/east,
 /obj/structure/bed/dogbed{
 	anchored = 1;
 	name = "Markus's bed"
@@ -4787,8 +4785,7 @@
 /area/mine/storage)
 "irQ" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
+/obj/machinery/door/window/brigdoor/left/directional/west{
 	name = "Brig Control Desk";
 	req_access = list("armory")
 	},
@@ -5300,10 +5297,9 @@
 /turf/open/water/jungle,
 /area/omega/underground/explored)
 "jmR" = (
-/obj/machinery/door/window/brigdoor/security/cell{
+/obj/machinery/door/window/brigdoor/security/cell/left/directional/west{
 	id = "Cell 1";
 	name = "Cell 1";
-	dir = 8
 	},
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/dark,
@@ -6316,7 +6312,6 @@
 /area/station/service/bar)
 "lEg" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "AI Core Door";
 	req_access = list("ai_upload")
 	},
@@ -8690,10 +8685,7 @@
 /area/station/cargo)
 "qNc" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	base_state = "rightsecure";
-	dir = 4;
-	icon_state = "rightsecure";
+/obj/machinery/door/window/brigdoor/left/directional/east{
 	name = "Head of Personnel's Desk";
 	req_access = list("hop")
 	},
@@ -8864,10 +8856,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/bot,
-/obj/machinery/door/window/brigdoor{
-	base_state = "rightsecure";
-	dir = 4;
-	icon_state = "rightsecure";
+/obj/machinery/door/window/brigdoor/left/directional/east{
 	name = "CentCom Customs";
 	req_access = list("cent_captain")
 	},
@@ -10999,10 +10988,9 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/machinery/door/window/left/directional/east{
+/obj/machinery/door/window/left/directional/south{
 	name = "Cargo Desk";
 	req_access = list("cargo");
-	dir = 2
 	},
 /turf/open/floor/iron/smooth_large,
 /area/station/cargo)
