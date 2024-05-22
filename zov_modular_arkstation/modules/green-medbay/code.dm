@@ -303,7 +303,7 @@
 /obj/item/storage/belt/medical/green
 	name = "green medical belt"
 	icon_state = "medical_belt"
-	inhand_icon_state = "medical_belt"
+	inhand_icon_state = "medical"
 	worn_icon_state = "medical_belt"
 	icon = 'zov_modular_arkstation/modules/green-medbay/icons/clothing/obj.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/green-medbay/icons/clothing/mob.dmi'

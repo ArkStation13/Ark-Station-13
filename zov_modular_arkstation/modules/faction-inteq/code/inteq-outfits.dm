@@ -52,14 +52,13 @@
 	belt = /obj/item/storage/belt/utility/full/powertools/ircd
 	id = /obj/item/card/id/advanced/centcom/ert/inteq
 	backpack_contents = list(/obj/item/storage/box/rcd_ammo = 1,
-		/obj/item/storage/box/smart_metal_foam = 1,
 		/obj/item/multitool = 1,
 		/obj/item/extinguisher/advanced = 1,
 		/obj/item/rwd/loaded = 1,
 		/obj/item/beamout_tool = 1,
 		/obj/item/solfed_reporter/swat_caller = 1,
 		/obj/item/storage/box/syndie_kit/space/inteq = 1,
-		/obj/item/tank/internals/oxygen/yellow = 1,
+		/obj/item/tank/internals/emergency_oxygen/engi = 1
 		)
 
 // PMC medic
@@ -104,10 +103,11 @@
 		/obj/item/solfed_reporter/treason_reporter = 1,
 		/obj/item/beamout_tool = 1)
 
-/datum/outfit/request_911/condom_destroyer/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(prob(15))
-		r_pocket = /obj/item/choice_beacon/inteq_mech
+// Не прошло юнит тестирование, попробй H.r_pocket
+// /datum/outfit/request_911/condom_destroyer/pre_equip(mob/living/carbon/human/H)
+//	..()
+//	if(prob(15))
+//		r_pocket = /obj/item/choice_beacon/inteq_mech
 
 // PMC Vanguard
 /datum/outfit/request_911/treason_destroyer
@@ -131,10 +131,11 @@
 		/obj/item/ammo_box/magazine/m223 = 4
 	)
 
-/datum/outfit/request_911/treason_destroyer/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(prob(25))
-		r_pocket = /obj/item/choice_beacon/inteq_mech
+// Не прошло юнит тестирование, попробй H.r_pocket
+///datum/outfit/request_911/treason_destroyer/pre_equip(mob/living/carbon/human/H)
+//	..()
+//	if(prob(25))
+//		r_pocket = /obj/item/choice_beacon/inteq_mech
 
 // Pizza Delivery
 /datum/outfit/centcom/ert/pizza/false_call

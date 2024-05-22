@@ -1,6 +1,6 @@
 /turf/closed/wall
 	icon = 'zov_modular_arkstation/modules/new-walls/walls.dmi'
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS + SMOOTH_GROUP_AIRLOCK
+	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
 
 /turf/closed/wall/r_wall
 	icon = 'zov_modular_arkstation/modules/new-walls/r_walls.dmi'

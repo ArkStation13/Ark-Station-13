@@ -1,3 +1,4 @@
+/* REFACTOR OR DELETE
 /obj/item/gun/magic/melee
 	name = "melee gun"
 	desc = "It's a gun. But Melee."
@@ -95,3 +96,4 @@
 	name = "muzzle"
 	icon = 'icons/obj/weapons/guns/projectiles_muzzle.dmi'
 
+*/

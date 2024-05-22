@@ -18,12 +18,10 @@
 	if(istype(G, /obj/item/gun))
 
 		// ARK STATION CHECK START
-		if(istype(G, /obj/item/gun/magic/melee))
-			src.pointed(A)
+		//if(istype(G, /obj/item/gun/magic/melee))
+		//	src.pointed(A)
 		//ARK STATION CHECK END
-
-		else
-			DoGunpoint(A, G)
+		DoGunpoint(A, G)
 	else
 		src.pointed(A)
 	return

@@ -109,6 +109,8 @@
 		for(var/atom/thing as anything in nearby_atoms)
 			if(!ismovable(thing))
 				continue
+			if(istype(thing, /obj/effect/abstract/liquid_turf)) //ARK EDIT
+				continue
 			if(isitem(thing))
 				var/obj/item/item = thing
 				if(item.item_flags & ABSTRACT) //bodyparts and stuff will get registered otherwise

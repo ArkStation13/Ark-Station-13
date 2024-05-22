@@ -14,8 +14,8 @@
 	var/target_fuel = 0
 	var/shlang_na_meste = TRUE
 	var/obj/item/shlang/shlang
-	var/light_mask = "spacegas-light-mask"
-	var/datum/beam/current_beam
+	//var/light_mask = "spacegas-light-mask"
+	//var/datum/beam/current_beam
 
 /obj/effect/ebeam/fuel_hose
 	name = "fuel hose"
@@ -31,12 +31,14 @@
 
 /obj/machinery/walltank/update_overlays()
 	. = ..()
+	/*
 	if(light_mask && !(machine_stat & BROKEN) && powered())
 		. += emissive_appearance(icon, light_mask, src)
 	if(shlang_na_meste == TRUE)
 		. += mutable_appearance(icon, "spacegas-pistol-inmachine", src)
 	else
 		. -= mutable_appearance(icon, "spacegas-pistol-inmachine", src)
+	*/
 
 /obj/machinery/walltank/update_appearance(updates=ALL)
 	. = ..()
@@ -45,9 +47,9 @@
 
 /obj/machinery/walltank/Destroy()
 	. = ..()
-	qdel(shlang)
-	qdel(current_beam)
-	qdel(light_mask)
+	//qdel(shlang)
+	//qdel(current_beam)
+	//qdel(light_mask)
 
 /obj/item/shlang
 	name = "fuel hose"
@@ -63,14 +65,14 @@
 
 /obj/machinery/walltank/Initialize(mapload) //starts without a cell for rnd
 	. = ..()
-	shlang = new(src)
+	//shlang = new(src)
 
 /obj/item/shlang/examine(mob/user)
 	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
-	qdel(tank.current_beam)
+	//qdel(tank.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
@@ -131,15 +133,15 @@
 		return
 	user.put_in_hands(shlang)
 	shlang_na_meste = FALSE
-	current_beam = new(user, src, icon = 'zov_modular_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
-	INVOKE_ASYNC(current_beam, TYPE_PROC_REF(/datum/beam, Start))
+	//current_beam = new(user, src, icon = 'zov_modular_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
+	//INVOKE_ASYNC(current_beam, TYPE_PROC_REF(/datum/beam, Start))
 
 /obj/item/shlang/proc/snap_back()
 	if(!tank)
 		return
 	forceMove(tank)
 	tank.shlang_na_meste = TRUE
-	qdel(tank.current_beam)
+	//qdel(tank.current_beam)
 
 /obj/item/shlang/proc/check_range()
 	SIGNAL_HANDLER

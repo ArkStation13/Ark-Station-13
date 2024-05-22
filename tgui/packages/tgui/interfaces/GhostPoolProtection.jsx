@@ -12,12 +12,7 @@ export const GhostPoolProtection = (props) => {
     minigames,
   } = data;
   return (
-    <Window
-      title="Ghost Pool Protection"
-      width={400}
-      height={270}
-      theme="ntos"
-    >
+    <Window title="Ghost Pool Protection" width={400} height={270} theme="ntos">
       <Window.Content>
         <Flex grow={1} height="100%">
           <Section

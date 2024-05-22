@@ -601,6 +601,7 @@
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to Prison!")
 
 // ARK STATION EDIT START /////////////////////////////////////////////////////////////////////////////////////////////////////
+/* Вернешь как починишь
 	else if(href_list["sendtovoid"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -625,6 +626,7 @@
 		to_chat(M, span_narsiesmall("WHAT'S WRONG WITH YOU, MATE?"), confidential = TRUE)
 		log_admin("[key_name(usr)] has sent [key_name(M)] to Void!")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to Void!")
+*/
 // ARK STATION EDIT END /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	else if(href_list["sendbacktolobby"])
