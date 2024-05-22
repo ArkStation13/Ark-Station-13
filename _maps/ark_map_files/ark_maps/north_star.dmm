@@ -1822,6 +1822,12 @@
 	dir = 9
 	},
 /area/station/hallway/floor1/fore)
+"axf" = (
+/obj/effect/turf_decal/trimline/green/warning{
+	dir = 1
+	},
+/turf/open/floor/pod/dark,
+/area/station/maintenance/floor2/starboard/aft)
 "axF" = (
 /obj/machinery/gateway/centerstation,
 /turf/open/floor/iron/large,
@@ -31344,12 +31350,6 @@
 /obj/structure/grille/broken,
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor4/starboard/aft)
-"imI" = (
-/obj/effect/turf_decal/trimline/green/warning{
-	dir = 1
-	},
-/turf/open/floor/pod/dark,
-/area/station/maintenance/floor2/starboard/aft)
 "imJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -51477,6 +51477,10 @@
 /obj/effect/spawner/structure/window/hollow/reinforced/directional,
 /turf/open/floor/plating,
 /area/station/maintenance/floor2/starboard)
+"nrX" = (
+/obj/effect/turf_decal/tile/green/opposingcorners,
+/turf/open/floor/iron/white,
+/area/station/hallway/floor2/aft)
 "nse" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -67320,9 +67324,12 @@
 /turf/open/floor/plating,
 /area/station/construction)
 "rCW" = (
-/obj/effect/turf_decal/tile/green/opposingcorners,
-/turf/open/floor/iron/white,
-/area/station/hallway/floor2/aft)
+/obj/effect/turf_decal/tile/green/half/contrasted,
+/obj/item/piggy_bank/vault,
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/station/ai_monitored/command/nuke_storage)
 "rDh" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/item/radio/intercom/directional/west,
@@ -68097,13 +68104,6 @@
 /obj/machinery/duct,
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor4/starboard/fore)
-"rPC" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/obj/effect/turf_decal/tile/green/opposingcorners,
-/turf/open/floor/iron/white,
-/area/station/medical/virology)
 "rPF" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -75291,16 +75291,12 @@
 /turf/open/floor/pod/dark,
 /area/station/maintenance/floor3/port/aft)
 "tKr" = (
-/obj/effect/turf_decal/tile/red/half{
-	dir = 1
-	},
-/obj/machinery/modular_computer/preset/cargochat/security{
-	dir = 8
-	},
-/turf/open/floor/iron/dark/side{
-	dir = 1
-	},
-/area/station/security/brig)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/green/opposingcorners,
+/turf/open/floor/iron/white,
+/area/station/medical/virology)
 "tKs" = (
 /obj/structure/curtain,
 /obj/structure/fans/tiny{
@@ -194057,7 +194053,7 @@ dVV
 xNy
 sPp
 mcI
-rPC
+tKr
 sJn
 lJu
 dPk
@@ -194312,7 +194308,7 @@ iOA
 rMR
 kpx
 gHU
-rPC
+tKr
 dqm
 aBK
 wRc
@@ -194569,7 +194565,7 @@ iOA
 utl
 doh
 gJz
-rPC
+tKr
 hwQ
 piz
 aWO
@@ -194826,7 +194822,7 @@ iOA
 dwN
 eDl
 ovY
-rPC
+tKr
 tpW
 flD
 bAq
@@ -195083,7 +195079,7 @@ iOA
 dfU
 pZm
 wJy
-rPC
+tKr
 dVV
 bLm
 yhv
@@ -195340,7 +195336,7 @@ iOA
 bsX
 bIy
 riF
-rPC
+tKr
 hwQ
 bLm
 coH
@@ -195597,7 +195593,7 @@ iOA
 joT
 pCU
 pHu
-rPC
+tKr
 xyd
 aBK
 gef
@@ -197401,7 +197397,7 @@ gHi
 qeu
 eyJ
 gst
-rCW
+nrX
 lia
 rMY
 cJI
@@ -197658,7 +197654,7 @@ wiv
 lbq
 eyJ
 xmh
-rCW
+nrX
 kzK
 xEh
 kzK
@@ -197673,7 +197669,7 @@ kzK
 rpa
 kzK
 jSW
-rCW
+nrX
 mkE
 gQx
 avX
@@ -201506,7 +201502,7 @@ fxm
 pJA
 wBg
 fpN
-imI
+axf
 dEt
 dEt
 uZF
@@ -204853,7 +204849,7 @@ scK
 qEE
 dEt
 mPw
-imI
+axf
 wWk
 uZF
 svu
@@ -205110,7 +205106,7 @@ aZA
 hsW
 dEt
 mPw
-imI
+axf
 qVm
 uZF
 svu
@@ -205367,7 +205363,7 @@ dEt
 dEt
 dEt
 mPw
-imI
+axf
 oWS
 uZF
 svu
@@ -308697,7 +308693,7 @@ eCM
 nET
 eCM
 uNm
-vQR
+rCW
 hEQ
 uIx
 rhJ
@@ -321805,7 +321801,7 @@ sEk
 mwe
 oCc
 dPH
-tKr
+neR
 jwG
 gAi
 qOJ

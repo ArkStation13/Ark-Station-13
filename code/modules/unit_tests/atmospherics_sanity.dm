@@ -89,6 +89,7 @@
 		/area/station/engineering/mechanic,
 		/area/station/engineering/mechanic/hallway,
 		/area/station/security/mechbay,
+		/area/station/service/hydroponics/garden/abandoned,
 		//ARK EDIT END
 
 	)
