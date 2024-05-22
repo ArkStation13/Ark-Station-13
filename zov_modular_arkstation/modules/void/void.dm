@@ -3,7 +3,7 @@
 /obj/effect/landmark/voidspawn
 	name = "voidteleport"
 	icon_state = "x"
-
+/* ВСЕ ПИЗДЕЦ СЛОМАНО
 /obj/effect/landmark/voidspawn/Initialize(mapload)
 	..()
 	GLOB.void += loc
@@ -24,8 +24,8 @@
 /turf/open/indestructible/void
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "void"
-	name = "V̸̥͎̜̗̎̀̅̂̆̉̔O̷͖͚̩͚͒̎͌́̾I̷̭͙̗̝̫͈̞͙͙̖͇̊́͋̽͗̀̿͛̑̽̏̃D̸̮̣̬̝̙̠̜̟̘̯͚͇̩͖͙͌͗̈́̆̆̀̚"
-	desc = "W҉̨̥̬̗̇̈́̀͞H҉̜̳̠̿͊͜͡A̵͈̯͎͒̕͜T̸̡͚̙͊̀͞ T҉̗͚̄̾͛̕͜H̸̪̤̤̐͜͞E҈̡͖̰̱͋̏͠ F̵̗҇̾͜U҉͇҇̋͌̑͢Ḉ̸̖͕̳͞K̷̨̛̜̤̙̀ I҉̢̠͗͠S҉̧̣̂͡ I҈̞̭͙̇͜͡T̸̨̤͑͡!̵̧̛͉̅̂ I҉̢̣͛͡ W҈̡͇̳̠҇͊A̷̘̬̤̓͜͠Ǹ̸̛̙͉̽̋͢ͅT̷̢͇͙͗̔̐͞ Ţ̸̛̦͙̠͐̾O҈̢̘̦͛̕ͅ S҈̰́̃͋͢͠C̷̢̠͑̕R̷̛͔̒̚͢Ȅ̶̡̞̬͡Å̵̡͔̠͔͠M̶̢̭͔̑͠!̴̡͍̖̀́̔͠"
+	name = "VOID"
+	desc = "VOID"
 
 /turf/open/indestructible/void/Initialize(mapload)
 	. = ..()
@@ -224,3 +224,4 @@
 /datum/idle_behavior/walk_near_target/void
 	walk_chance = 50
 	minimum_distance = 20
+*/
