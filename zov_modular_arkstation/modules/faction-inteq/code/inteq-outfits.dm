@@ -103,10 +103,11 @@
 		/obj/item/solfed_reporter/treason_reporter = 1,
 		/obj/item/beamout_tool = 1)
 
-/datum/outfit/request_911/condom_destroyer/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(prob(15))
-		r_pocket = /obj/item/choice_beacon/inteq_mech
+// Не прошло юнит тестирование, попробй H.r_pocket
+// /datum/outfit/request_911/condom_destroyer/pre_equip(mob/living/carbon/human/H)
+//	..()
+//	if(prob(15))
+//		r_pocket = /obj/item/choice_beacon/inteq_mech
 
 // PMC Vanguard
 /datum/outfit/request_911/treason_destroyer
@@ -130,10 +131,11 @@
 		/obj/item/ammo_box/magazine/m223 = 4
 	)
 
-/datum/outfit/request_911/treason_destroyer/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(prob(25))
-		r_pocket = /obj/item/choice_beacon/inteq_mech
+// Не прошло юнит тестирование, попробй H.r_pocket
+///datum/outfit/request_911/treason_destroyer/pre_equip(mob/living/carbon/human/H)
+//	..()
+//	if(prob(25))
+//		r_pocket = /obj/item/choice_beacon/inteq_mech
 
 // Pizza Delivery
 /datum/outfit/centcom/ert/pizza/false_call

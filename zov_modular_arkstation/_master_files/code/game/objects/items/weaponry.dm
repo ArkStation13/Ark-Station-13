@@ -5,6 +5,7 @@
 	desc = "Чего ты пялишься? Руби врагов!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "siegesword"
+	worn_icon_state = "claymore"
 	inhand_icon_state = "siegesword"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
@@ -16,6 +17,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "silversword"
 	inhand_icon_state = "silversword"
+	worn_icon_state = "claymore"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	force = 35
@@ -26,6 +28,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "sabre"
 	inhand_icon_state = "sabre"
+	worn_icon_state = "claymore"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	force = 40
@@ -33,6 +36,7 @@
 /obj/item/spear/cerberus
 	icon_state = "tribal_spear0"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
+	worn_icon_state = "military_spear0"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	name = "tribal spear"
@@ -55,6 +59,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "wbuckler"
 	inhand_icon_state = "wbuckler"
+	worn_icon_state = "buckler"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 
@@ -64,6 +69,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "paladin"
 	inhand_icon_state = "paladin"
+	worn_icon_state = "buckler"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 
