@@ -6711,9 +6711,7 @@
 	},
 /area/station/ai_monitored/command/storage/eva)
 "bGV" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 1
-	},
+/obj/machinery/door/window/brigdoor,
 /mob/living/basic/pet/fox,
 /turf/open/floor/noslip,
 /area/station/maintenance/floor1/port)
@@ -10600,13 +10598,10 @@
 /area/station/service/hydroponics/garden)
 "cIo" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/west{
 	name = "Outer Window"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
+/obj/machinery/door/window/brigdoor/left/directional/east{
 	name = "Security Desk";
 	req_access = list("security")
 	},
@@ -16703,9 +16698,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/floor2/fore)
 "enB" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 1
-	},
+/obj/machinery/door/window/brigdoor,
 /mob/living/basic/mothroach,
 /turf/open/floor/noslip,
 /area/station/maintenance/floor1/port)
@@ -33395,10 +33388,7 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 2;
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/south{
 	layer = 3.1;
 	name = "Upload Console Window";
 	req_access = list("ai_upload")
@@ -54074,7 +54064,6 @@
 "oad" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/pump,
-/obj/machinery/portable_atmospherics/pump,
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor4/port/fore)
 "oar" = (
@@ -69015,9 +69004,6 @@
 /area/station/maintenance/floor2/starboard/aft)
 "scn" = (
 /obj/machinery/netpod,
-/obj/machinery/airalarm/directional/east,
-/obj/machinery/airalarm/directional/east,
-/obj/machinery/airalarm/directional/east,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/cargo/bitrunning/den)
