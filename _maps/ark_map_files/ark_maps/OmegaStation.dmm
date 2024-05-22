@@ -698,6 +698,9 @@
 /obj/machinery/camera/directional/south{
 	c_tag = "Brig - Hallway - Starboard"
 	},
+/obj/machinery/modular_computer/preset/cargochat/security{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "bfL" = (
@@ -2819,6 +2822,10 @@
 	dir = 4
 	},
 /area/station/cargo)
+"eHP" = (
+/obj/item/piggy_bank/vault,
+/turf/open/floor/iron/grimy,
+/area/station/tcommsat/computer)
 "eIa" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -5299,7 +5306,7 @@
 "jmR" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/west{
 	id = "Cell 1";
-	name = "Cell 1";
+	name = "Cell 1"
 	},
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/dark,
@@ -10990,7 +10997,7 @@
 	},
 /obj/machinery/door/window/left/directional/south{
 	name = "Cargo Desk";
-	req_access = list("cargo");
+	req_access = list("cargo")
 	},
 /turf/open/floor/iron/smooth_large,
 /area/station/cargo)
@@ -193345,7 +193352,7 @@ csV
 csV
 urw
 kiY
-nId
+eHP
 nId
 nId
 nuK

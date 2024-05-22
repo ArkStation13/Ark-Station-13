@@ -9029,13 +9029,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
-"chU" = (
-/obj/structure/window/reinforced/spawner/directional/east,
-/obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/station/ai_monitored/aisat/exterior)
 "chY" = (
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
@@ -48935,10 +48928,6 @@
 	dir = 4
 	},
 /area/station/hallway/secondary/entry)
-"mcF" = (
-/obj/structure/window/reinforced/spawner/directional/west,
-/turf/open/space,
-/area/space/nearstation)
 "mcG" = (
 /obj/machinery/button/door/directional/east{
 	id = "Dorm6";
@@ -62223,10 +62212,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/customs/aft)
-"pzp" = (
-/obj/structure/window/reinforced/spawner/directional/north,
-/turf/open/space,
-/area/space/nearstation)
 "pzr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -64087,7 +64072,7 @@
 	},
 /obj/machinery/door/window/left/directional/east{
 	name = "Pharmacy Desk";
-	req_access = list("pharmacy");
+	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
@@ -65863,11 +65848,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
-"qpQ" = (
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/west,
-/turf/open/space,
-/area/space/nearstation)
 "qpU" = (
 /obj/effect/turf_decal/trimline/neutral/mid_joiner{
 	dir = 4
@@ -76687,7 +76667,7 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/right/directional/west{
 	name = "Hydroponics Delivery";
-	req_access = list("hydroponics");
+	req_access = list("hydroponics")
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/siding/green/end{
@@ -77285,11 +77265,6 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
-"tfO" = (
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/space,
-/area/space/nearstation)
 "tgl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -92326,6 +92301,7 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/small/directional/south,
+/obj/item/piggy_bank/vault,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
 "wQo" = (
@@ -95062,6 +95038,9 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
+	},
+/obj/machinery/modular_computer/preset/cargochat/security{
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/security/brig)
@@ -103154,15 +103133,15 @@ aaa
 qYo
 pYJ
 fMb
-chU
+iXE
 hRq
-chU
+iXE
 tkt
 nBm
 jOW
-chU
-chU
-chU
+iXE
+iXE
+iXE
 iIm
 mxs
 efQ
@@ -103411,7 +103390,7 @@ efQ
 efQ
 uJr
 ePZ
-qpQ
+bMw
 smV
 ryt
 urA
@@ -103918,14 +103897,14 @@ hVA
 hVA
 hvd
 pSa
-chU
-chU
-chU
-chU
-chU
-chU
+iXE
+iXE
+iXE
+iXE
+iXE
+iXE
 aaQ
-pzp
+mTB
 bPC
 bRy
 eQF
@@ -104181,7 +104160,7 @@ nOy
 smV
 smV
 nOy
-mcF
+smV
 aaa
 bPC
 bRz
@@ -104192,7 +104171,7 @@ caa
 bPC
 pYJ
 ePZ
-tfO
+nCB
 cVr
 bAU
 cVr
@@ -104449,8 +104428,8 @@ vdB
 bPC
 idU
 hVt
-chU
-chU
+iXE
+iXE
 ggn
 hVA
 kdS
@@ -104683,7 +104662,7 @@ aaa
 qYo
 xwo
 gGJ
-pzp
+mTB
 aad
 aad
 btH
@@ -104940,7 +104919,7 @@ aaa
 efQ
 clr
 gGJ
-pzp
+mTB
 aaa
 btH
 btH
@@ -105454,7 +105433,7 @@ aaa
 gLJ
 vgS
 gGJ
-pzp
+mTB
 aaa
 btH
 btH
@@ -105968,7 +105947,7 @@ xwo
 kXC
 hwa
 hfl
-pzp
+mTB
 btH
 btH
 bwo
@@ -106482,7 +106461,7 @@ xwo
 kXC
 hwa
 hfl
-pzp
+mTB
 btH
 btH
 cQw
@@ -106996,7 +106975,7 @@ aaa
 smV
 yko
 gGJ
-pzp
+mTB
 aaa
 btH
 btH
@@ -107027,7 +107006,7 @@ cdt
 cdt
 pYJ
 gGJ
-qpQ
+bMw
 aOl
 aaa
 efQ
@@ -107510,7 +107489,7 @@ aaa
 efQ
 pYJ
 gGJ
-pzp
+mTB
 aaa
 btH
 btH
@@ -107541,7 +107520,7 @@ aad
 aad
 uJr
 gGJ
-pzp
+mTB
 efQ
 aaa
 aaa
@@ -107767,7 +107746,7 @@ aaa
 qYo
 pYJ
 gGJ
-pzp
+mTB
 aad
 aad
 btH
@@ -108047,15 +108026,15 @@ fXG
 bPC
 idU
 fMb
-chU
-chU
+iXE
+iXE
 ggn
 hVA
 iPR
 hVA
 hVA
 dws
-pzp
+mTB
 qYo
 aaa
 aaa
@@ -108544,14 +108523,14 @@ hVA
 hVA
 sGa
 pSa
-chU
-chU
-chU
 iXE
-chU
-chU
+iXE
+iXE
+iXE
+iXE
+iXE
 iIm
-pzp
+mTB
 bPC
 uNh
 asa
@@ -108818,7 +108797,7 @@ bPC
 bPC
 idU
 ePZ
-pzp
+mTB
 efQ
 aaa
 aaa
@@ -109324,13 +109303,13 @@ pYJ
 hVt
 nBm
 dNT
-chU
+iXE
 pxs
 wJq
 eAf
-chU
-chU
-chU
+iXE
+iXE
+iXE
 aaQ
 mTB
 qYo
@@ -109580,7 +109559,7 @@ qYo
 aaa
 yko
 cVx
-qpQ
+bMw
 ryt
 kXC
 qdF

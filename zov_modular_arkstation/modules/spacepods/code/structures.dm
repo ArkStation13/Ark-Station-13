@@ -45,9 +45,9 @@
 
 /obj/machinery/walltank/Destroy()
 	. = ..()
-	qdel(shlang)
+	del(shlang)
 	//qdel(current_beam)
-	qdel(light_mask)
+	del(light_mask)
 
 /obj/item/shlang
 	name = "fuel hose"

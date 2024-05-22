@@ -10159,12 +10159,6 @@
 "aTX" = (
 /turf/open/floor/iron,
 /area/station/command/bridge)
-"aTY" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/command/bridge)
 "aTZ" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -14888,7 +14882,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/window/brigdoor/left/directional/east{
 	req_access = list("morgue_secure");
-	name = "Coroner's Office";
+	name = "Coroner's Office"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -34341,7 +34335,6 @@
 "dZT" = (
 /obj/machinery/airalarm/directional/north,
 /obj/structure/rack/gunrack,
-/obj/effect/spawner/armory_spawn/microfusion,
 /obj/effect/turf_decal/delivery/red,
 /turf/open/floor/iron/smooth,
 /area/station/ai_monitored/security/armory)
@@ -45226,6 +45219,9 @@
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
 	dir = 5
 	},
+/obj/machinery/modular_computer/preset/cargochat/security{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "mAr" = (
@@ -51712,6 +51708,7 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/east,
+/obj/item/piggy_bank/vault,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
 "rGU" = (
@@ -88852,7 +88849,7 @@ aOE
 aPS
 aRn
 aSz
-aTY
+aSA
 aVl
 aWT
 bfv

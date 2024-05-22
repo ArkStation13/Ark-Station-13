@@ -85,6 +85,12 @@
 		/area/station/science/ordnance/freezerchamber,
 		/area/station/solars,
 		/area/station/tcommsat/server,
+		//ARK EDIT START
+		/area/station/engineering/mechanic,
+		/area/station/engineering/mechanic/hallway,
+		/area/station/security/mechbay,
+		//ARK EDIT END
+
 	)
 
 	for(var/area/ignored as anything in ignored_types)
