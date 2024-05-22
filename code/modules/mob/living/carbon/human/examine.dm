@@ -51,6 +51,9 @@
 	// ARK STATION EDIT START
 	if(user?.stat == CONSCIOUS && ishuman(user))
 		user.visible_message(span_small("<b>[user]</b> looks at <b>[!obscure_name ? name : "Unknown"]</b>.") , span_small("Looking at <b>[!obscure_name ? name : "Unknown"]</b>.") , null, COMBAT_MESSAGE_RANGE)
+
+	var/h = round((dna.current_body_size + ((mob_height - HUMAN_HEIGHT_MEDIUM)/100)) * 180,5)
+	. += "[t_His] height [t_is] about <b>[h] cm</b>."
 	// ARK STATION EDIT END
 
 	/* NOVA EDIT REMOVAL
