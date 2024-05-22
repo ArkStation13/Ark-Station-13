@@ -9,6 +9,9 @@
 #define TRAIT_FAST_RUNNER "fast_runner"
 #define TRAIT_SLOW_RUNNER "slow_runner"
 
+#define TRAIT_TOUGHNESS "toughness"
+#define TRAIT_FLIMSY "flimsy"
+
 #define TRAIT_JUMPER "jumper"
 
 #define TRAIT_COFFIN_ENLARGED "coffin_enlarged"
