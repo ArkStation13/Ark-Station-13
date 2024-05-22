@@ -5056,7 +5056,6 @@
 /area/space/nearstation)
 "bLT" = (
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
 /obj/effect/turf_decal/stripes,
@@ -13679,10 +13678,7 @@
 /area/station/medical/medbay/central)
 "eVa" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 2;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/south{
 	name = "Reception Window"
 	},
 /obj/item/paper,
@@ -23030,10 +23026,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "iom" = (
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/east{;
 	name = "Infirmary"
 	},
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -33006,10 +32999,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "lLw" = (
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	dir = 2;
-	icon_state = "left";
+/obj/machinery/door/window/right/directional/south{
 	name = "Shower"
 	},
 /obj/machinery/shower/directional/south,
@@ -36455,10 +36445,6 @@
 	name = "Mass Driver";
 	req_access = list("maint_tunnels")
 	},
-/obj/machinery/door/window{
-	name = "Mass Driver";
-	req_access = list("maint_tunnels")
-	},
 /obj/effect/turf_decal/loading_area{
 	dir = 1
 	},
@@ -38225,10 +38211,7 @@
 /area/station/engineering/atmos/pumproom)
 "nwL" = (
 /obj/machinery/computer/upload/ai,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 2;
-	icon_state = "right";
+/obj/machinery/door/window/left/directional/south{
 	layer = 3.1;
 	name = "Upload Console Window";
 	req_access = list("ai_upload")
@@ -44961,8 +44944,6 @@
 /area/station/science/xenobiology)
 "pQu" = (
 /obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	icon_state = "left";
 	name = "Danger: Conveyor Access";
 	req_access = list("maint_tunnels")
 	},
@@ -63398,10 +63379,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "wcL" = (
-/obj/machinery/door/window/right/directional/north{
-	base_state = "left";
-	dir = 8;
-	icon_state = "left";
+/obj/machinery/door/window/right/directional/west{
 	name = "Library Desk Door";
 	pixel_x = 3;
 	req_access = list("library")
