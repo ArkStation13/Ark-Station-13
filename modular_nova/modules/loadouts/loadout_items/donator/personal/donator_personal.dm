@@ -114,7 +114,11 @@
 /datum/loadout_item/mask/composite_filtration
 	name = "Composite Filtration Mask"
 	item_path = /obj/item/clothing/mask/gas/psycho_malice
+<<<<<<< HEAD
 	// ARK STATION REMOVE: ckeywhitelist = list("snakebittenn", "chillylobster", "candlejax", "theooz")
+=======
+	ckeywhitelist = list("snakebittenn", "chillylobster", "candlejax", "theooz", "alvcyktor")
+>>>>>>> 9588f7bf555... Trades Donator Items w/ My New Friend (#2497)
 
 /datum/loadout_item/suit/jacket/cherno
 	name = "Blue-Silvered Coat"
@@ -797,9 +801,17 @@
 /datum/loadout_item/under/jumpsuit/techpants
     name = "Techwear Pants"
     item_path = /obj/item/clothing/under/techpants
+<<<<<<< HEAD
     // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor")
+=======
+    ckeywhitelist = list("alvcyktor", "snakebittenn")
+>>>>>>> 9588f7bf555... Trades Donator Items w/ My New Friend (#2497)
 
 /datum/loadout_item/inhand/drop_pouch
     name = "Drop Pouch"
     item_path = /obj/item/storage/backpack/satchel/drop_pouch
+<<<<<<< HEAD
     // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor")
+=======
+    ckeywhitelist = list("alvcyktor", "snakebittenn")
+>>>>>>> 9588f7bf555... Trades Donator Items w/ My New Friend (#2497)
