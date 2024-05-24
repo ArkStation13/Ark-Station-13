@@ -8,13 +8,19 @@
 // 	/// The mob we are giving the tutorial to
 // 	VAR_PROTECTED/mob/user
 
+<<<<<<< HEAD
 // 	VAR_PRIVATE/atom/movable/screen/tutorial_instruction/instruction_screen
+=======
+	VAR_PRIVATE/atom/movable/screen/tutorial_instruction/instruction_screen
+	VAR_PRIVATE/atom/movable/screen/tutorial_skip/skip_button
+>>>>>>> 4501072f775... [MIRROR] Adds a "Remind me later" button for tutorials (#2633)
 
 // /datum/tutorial/New(mob/user)
 // 	src.user = user
 
 // RegisterSignals(user, list(COMSIG_QDELETING, COMSIG_MOB_LOGOUT), PROC_REF(destroy_self))
 
+<<<<<<< HEAD
 // /datum/tutorial/Destroy(force, ...)
 // 	user.client?.screen -= instruction_screen
 // 	QDEL_NULL(instruction_screen)
@@ -22,6 +28,16 @@
 // 	user = null
 
 // 	return ..()
+=======
+/datum/tutorial/Destroy(force)
+	user.client?.screen -= instruction_screen
+	user.client?.screen -= skip_button
+	QDEL_NULL(instruction_screen)
+	QDEL_NULL(skip_button)
+
+	user = null
+	return ..()
+>>>>>>> 4501072f775... [MIRROR] Adds a "Remind me later" button for tutorials (#2633)
 
 // /// Gets the [`/datum/tutorial_manager`] that owns this tutorial.
 // /datum/tutorial/proc/manager()
@@ -68,9 +84,16 @@
 
 // 	var/delay = perform_completion_effects_with_delay()
 
+<<<<<<< HEAD
 // 	if (!isnull(instruction_screen))
 // 		animate(instruction_screen, time = INSTRUCTION_SCREEN_DELAY, alpha = 0, easing = SINE_EASING)
 // 		delay += INSTRUCTION_SCREEN_DELAY
+=======
+	if (!isnull(instruction_screen))
+		animate(instruction_screen, time = INSTRUCTION_SCREEN_DELAY, alpha = 0, easing = SINE_EASING)
+		animate(skip_button, time = INSTRUCTION_SCREEN_DELAY, alpha = 0, easing = SINE_EASING)
+		delay += INSTRUCTION_SCREEN_DELAY
+>>>>>>> 4501072f775... [MIRROR] Adds a "Remind me later" button for tutorials (#2633)
 
 // 	QDEL_IN(src, delay)
 
@@ -98,11 +121,22 @@
 // /datum/tutorial/proc/show_instruction(message)
 // 	PROTECTED_PROC(TRUE)
 
+<<<<<<< HEAD
 // 	if (isnull(instruction_screen))
 // 		instruction_screen = new(null, null, message, user.client)
 // 		user.client?.screen += instruction_screen
 // 	else
 // 		instruction_screen.change_message(message)
+=======
+/// Shows a large piece of text on the user's screen with the given message.
+/// If a message already exists, will fade it out and replace it.
+/datum/tutorial/proc/show_instruction(message)
+	PROTECTED_PROC(TRUE)
+	if(isnull(skip_button))
+		skip_button = new
+		user.client?.screen += skip_button
+		RegisterSignal(skip_button, COMSIG_SCREEN_ELEMENT_CLICK, PROC_REF(dismiss))
+>>>>>>> 4501072f775... [MIRROR] Adds a "Remind me later" button for tutorials (#2633)
 
 // /// Given a keybind and a message, will replace %KEY% in `message` with the first keybind they have.
 // /// As a fallback, will return the third parameter, `message_without_keybinds`, if none are set.
