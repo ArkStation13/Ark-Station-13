@@ -7,7 +7,7 @@
 
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "A xenomorph larva spawns on a random vent."
+	description = "Личинка ксеноморфа появляется в случайном вентиляции."
 
 /datum/round_event_control/alien_infestation/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()
@@ -41,7 +41,7 @@
 			living_aliens = TRUE
 
 	if(living_aliens || fake)
-		priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", ANNOUNCER_ALIENS)
+		priority_announce("Обнаружены неопознанные признаки жизни, приближающиеся к борту [station_name()]. Обезопасьте любой внешний доступ, включая пылесборники и вентиляцию.", "Lifesign Alert", ANNOUNCER_ALIENS)
 
 
 /datum/round_event/ghost_role/alien_infestation/spawn_role()

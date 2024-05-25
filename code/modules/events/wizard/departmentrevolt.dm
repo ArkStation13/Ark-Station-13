@@ -7,7 +7,7 @@
 	typepath = /datum/round_event/wizard/deprevolt
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "A department is turned into an independent state."
+	description = "Департамент превращается в независимое государство."
 	admin_setup = list(
 		/datum/event_admin_setup/listed_options/departmental_revolt,
 		/datum/event_admin_setup/question/departmental_revolt_annouce,
@@ -33,7 +33,7 @@
 
 /datum/event_admin_setup/listed_options/departmental_revolt/get_list()
 	return subtypesof(/datum/job_department)
-	
+
 /datum/event_admin_setup/listed_options/departmental_revolt/apply_to_event(datum/round_event/wizard/deprevolt/event)
 	event.picked_department = chosen
 

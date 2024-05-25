@@ -6,7 +6,7 @@
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
 	category = EVENT_CATEGORY_HOLIDAY
-	description = "Hides surprise filled easter eggs in maintenance."
+	description = "Скрывает пасхальные яйца с сюрпризом при обслуживании."
 
 /datum/round_event/easter/announce(fake)
 	priority_announce(pick("Hip-hop into Easter!","Find some Bunny's stash!","Today is National 'Hunt a Wabbit' Day.","Be kind, give Chocolate Eggs!"))
@@ -22,7 +22,7 @@
 	description = "Summons a wave of cute rabbits."
 
 /datum/round_event/rabbitrelease/announce(fake)
-	priority_announce("Unidentified furry objects detected coming aboard [station_name()]. Beware of Adorable-ness.", "Fluffy Alert", ANNOUNCER_ALIENS)
+	priority_announce("Обнаружены неопознанные пушистые объекты, приближающиеся к борту [station_name()]. Остерегайтесь очаровательности.", "Fluffy Alert", ANNOUNCER_ALIENS)
 
 
 /datum/round_event/rabbitrelease/start()
@@ -69,14 +69,14 @@
 	name = "Easter Bunny Head"
 	icon_state = "bunnyhead"
 	inhand_icon_state = null
-	desc = "Considerably more cute than 'Frank'."
+	desc = "Гораздо более милый, чем «Фрэнк»."
 	slowdown = -0.3
 	clothing_flags = THICKMATERIAL | SNUG_FIT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
 /obj/item/clothing/suit/costume/bunnysuit
 	name = "Easter Bunny Suit"
-	desc = "Hop Hop Hop!"
+	desc = "Хоп-хоп-хоп!"
 	icon_state = "bunnysuit"
 	icon = 'icons/obj/clothing/suits/costume.dmi'
 	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
@@ -89,14 +89,14 @@
 //Bunny bag!
 /obj/item/storage/backpack/satchel/bunnysatchel
 	name = "Easter Bunny Satchel"
-	desc = "Good for your eyes."
+	desc = "Полезно для ваших глаз."
 	icon_state = "satchel_carrot"
 	inhand_icon_state = null
 
 //Egg prizes and egg spawns!
 /obj/item/surprise_egg
 	name = "wrapped egg"
-	desc = "A chocolate egg containing a little something special. Unwrap and enjoy!"
+	desc = "Шоколадное яйцо, содержащее что-то особенное. Разверните и наслаждайтесь!"
 	icon_state = "egg"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
@@ -136,14 +136,14 @@
 
 /obj/item/surprise_egg/attack_self(mob/user)
 	..()
-	to_chat(user, span_notice("You unwrap [src] and find a prize inside!"))
+	to_chat(user, span_notice("Вы разворачиваете [src] и находите внутри приз!"))
 	dispensePrize(get_turf(src))
 	qdel(src)
 
 //Easter Recipes + food
 /obj/item/food/hotcrossbun
 	name = "hot cross bun"
-	desc = "The cross represents the Assistants that died for your sins."
+	desc = "Крест символизирует Ассистентов, умерших за ваши грехи."
 	icon_state = "hotcrossbun"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/sugar = 1)
 	foodtypes = SUGAR | GRAIN | BREAKFAST
@@ -172,7 +172,7 @@
 
 /obj/item/food/scotchegg
 	name = "scotch egg"
-	desc = "A boiled egg wrapped in a delicious, seasoned meatball."
+	desc = "Вареное яйцо, завернутое в вкусную фрикадельку с приправами."
 	icon = 'icons/obj/food/egg.dmi'
 	icon_state = "scotchegg"
 	bite_consumption = 3
@@ -202,7 +202,7 @@
 
 /obj/item/food/chocolatebunny
 	name = "chocolate bunny"
-	desc = "Contains less than 10% real rabbit!"
+	desc = "Содержит менее 10% настоящего кролика!"
 	icon_state = "chocolatebunny"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/coco = 2, /datum/reagent/consumable/nutriment/vitamin = 1)
 	crafting_complexity = FOOD_COMPLEXITY_1

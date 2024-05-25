@@ -188,12 +188,12 @@
 		var/datum/bank_account/department_account = SSeconomy.get_dep_account(account_job.paycheck_department)
 		if(department_account)
 			if(!transfer_money(department_account, money_to_transfer))
-				bank_card_talk("ERROR: Payday aborted, departmental funds insufficient.")
+				bank_card_talk("ERROR: Выплата зарплаты отменёна, средств ведомства недостаточно.")
 				return FALSE
 			else
-				bank_card_talk("Payday processed, account now holds [account_balance] cr.")
+				bank_card_talk("Выплата зарплаты обработана, счёт теперь [account_balance] cr.")
 				return TRUE
-	bank_card_talk("ERROR: Payday aborted, unable to contact departmental account.")
+	bank_card_talk("ERROR: Выплата зарплаты прервана, невозможно связаться со счётом отдела.")
 	return FALSE
 
 /**

@@ -19,7 +19,7 @@ $include auxtools.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME tgstation
+SERVERNAME Temm4ancki ARKstation
 
 ## Server tagline: This will appear right below the server's title.
 # SERVERTAGLINE A generic TG-based server
@@ -31,7 +31,7 @@ $include auxtools.txt
 # SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Space Station 13
+STATIONNAME Space ARKstation 13
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -48,7 +48,7 @@ ROUND_END_COUNTDOWN 90
 ## Comment this out if you want to use the SQL based admin system, the legacy system uses admins.txt.
 ## You need to set up your database to use the SQL based system.
 ## This flag is automatically enabled if SQL_ENABLED isn't
-ADMIN_LEGACY_SYSTEM
+#ADMIN_LEGACY_SYSTEM
 
 ##Uncomment this to stop any admins loaded by the legacy system from having their rank edited by the permissions panel
 #PROTECT_LEGACY_ADMINS
@@ -153,26 +153,16 @@ GUEST_BAN
 
 ## IPINTEL:
 ## This allows you to detect likely proxies by checking ips against getipintel.net
-## Rating to warn at: (0.8 is good, 1 is 100% likely to be a spammer/proxy, 0.8 is 80%, etc) anything equal to or higher then this number triggers an admin warning
-#IPINTEL_RATING_BAD 0.8
+## Rating to warn at: (0.9 is good, 1 is 100% likely to be a spammer/proxy, 0.8 is 80%, etc) anything equal to or higher then this number triggers an admin warning
+#IPINTEL_RATING_BAD 0.9
 ## Contact email, (required to use the service, leaving blank or default disables IPINTEL)
 #IPINTEL_EMAIL ch@nge.me
-## Query base, if you pay for more queries this is what you want to change.
-#IPINTEL_BASE check.getipintel.net
-## Maximum number of queries in a minute
-#IPINTEL_MAX_QUERY_MINUTE 15
-## Maximum number of queries in a day
-#IPINTEL_MAX_QUERY_DAY 500
-## Whether clients which cannot be checked due to a rate limit will be denied
-#IPINTEL_REJECT_RATE_LIMITED
-## Whether clients which are flagged as a VPN will be denied
-IPINTEL_REJECT_BAD
-## Whether clients which cannot be checked due to an error of some form will be denied
-#IPINTEL_REJECT_UNKNOWN
-## How long to store results in the cache before they must be retrieved again. IN DAYS.
-#IPINTEL_CACHE_LENGTH 7
-## How many minutes of living playtime to be automatically exempt from IPIntel. 0 for never.
-#IPINTEL_EXEMPT_PLAYTIME_LIVING 0
+## How long to save good matches (ipintel rate limits to 15 per minute and 500 per day. so this shouldn't be too low, getipintel.net suggests 6 hours, time is in hours) (Your ip will get banned if you go over 500 a day too many times)
+#IPINTEL_SAVE_GOOD 12
+## How long to save bad matches (these numbers can change as ips change hands, best not to save these for too long in case somebody gets a new ip used by a spammer/proxy before.)
+#IPINTEL_SAVE_BAD 3
+## Domain name to query (leave commented out for the default, only needed if you pay getipintel.net for more querys)
+#IPINTEL_DOMAIN check.getipintel.net
 
 ## Uncomment to allow web client connections
 #ALLOW_WEBCLIENT
@@ -190,16 +180,16 @@ IPINTEL_REJECT_BAD
 # SERVER ss13.example.com:2506
 
 ## forum address
-# FORUMURL http://tgstation13.org/phpBB/index.php
+FORUMURL http://tgstation13.org/phpBB/index.php
 
 ## Wiki address
-# WIKIURL http://www.tgstation13.org/wiki
+WIKIURL http://www.tgstation13.org/wiki
 
 ## Rules address
-# RULESURL http://www.tgstation13.org/wiki/Rules
+RULESURL http://www.tgstation13.org/wiki/Rules
 
 ## Github address
-# GITHUBURL https://www.github.com/tgstation/tgstation
+GITHUBURL https://github.com/Temm4ancki/Ark-Station-13-translate-for-RUSLAN
 
 ## Discord bot command prefix, if the discord bot is used
 # DISCORDBOTCOMMANDPREFIX ?
@@ -356,7 +346,7 @@ ANNOUNCE_ADMIN_LOGOUT
 
 ## Map rotation
 ## You should edit maps.txt to match your configuration when you enable this.
-MAPROTATION
+## MAPROTATION
 
 ## Map voting
 ## Allows players to vote with their preffered map setting
@@ -391,14 +381,14 @@ AUTOADMIN_RANK Game Master
 ## These trigger for any version below (non-inclusive) the given version, so 510 triggers on 509 or lower.
 ## These messages will be followed by one stating the clients current version and the required version for clarity.
 ## If CLIENT_WARN_POPUP is uncommented a popup window with the message will be displayed instead
-#CLIENT_WARN_VERSION 515
-#CLIENT_WARN_BUILD 1635
+#CLIENT_WARN_VERSION 511
+#CLIENT_WARN_BUILD 1421
 #CLIENT_WARN_POPUP
-#CLIENT_WARN_MESSAGE Byond released 515 as the stable release. This comes bundled with a host of niceties, including image generation for UIs and :: operators.
-CLIENT_ERROR_VERSION 515
+#CLIENT_WARN_MESSAGE Byond released 511 as the stable release. You can set the framerate your client runs at, which makes the game feel very different and cool. Shortly after its release we will end up using 511 client features and you will be forced to update.
+CLIENT_ERROR_VERSION 511
 CLIENT_ERROR_MESSAGE Your version of byond is not supported. Please upgrade.
-## The minimum build needed for joining the server.
-CLIENT_ERROR_BUILD 1590
+## The minimum build needed for joining the server, if using 512, a good minimum build would be 1421 as that disables the Middle Mouse Button exploit.
+CLIENT_ERROR_BUILD 1421
 
 ## TOPIC RATE LIMITING
 ## This allows you to limit how many topic calls (clicking on an interface window) the client can do in any given game second and/or game minute.

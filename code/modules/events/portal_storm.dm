@@ -5,7 +5,7 @@
 	min_players = 15
 	earliest_start = 30 MINUTES
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Syndicate troops pour out of portals."
+	description = "Войска Синдиката выходят из порталов."
 
 /datum/round_event/portal_storm/syndicate_shocktroop
 	boss_types = list(/mob/living/basic/trooper/syndicate/melee/space/stormtrooper = 2)
@@ -20,7 +20,7 @@
 	weight = 0
 	max_occurrences = 0
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Nar'sie constructs pour out of portals."
+	description = "Из порталов выходят конструкции Нар'си."
 	min_wizard_trigger_potency = 5
 	max_wizard_trigger_potency = 7
 
@@ -74,7 +74,7 @@
 	set waitfor = 0
 	sound_to_playing_players('sound/magic/lightning_chargeup.ogg')
 	sleep(8 SECONDS)
-	priority_announce("Massive bluespace anomaly detected en route to [station_name()]. Brace for impact.")
+	priority_announce("На пути к [station_name()] обнаружена мощная блюспейс аномалия. Приготовиться к удару.")
 	sleep(2 SECONDS)
 	sound_to_playing_players('sound/magic/lightningbolt.ogg')
 
@@ -108,7 +108,7 @@
 
 /datum/round_event/portal_storm/proc/spawn_effects(turf/T)
 	if(!T)
-		log_game("Portal Storm failed to spawn effect due to an invalid location.")
+		log_game("Портальный шторм не смог породить эффект из-за недопустимого местоположения.")
 		return
 	T = get_step(T, SOUTHWEST) //align center of image with turf
 	T.flick_overlay_static(storm_appearances[GET_TURF_PLANE_OFFSET(T) + 1], 15)

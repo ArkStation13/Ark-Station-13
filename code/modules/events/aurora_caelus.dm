@@ -5,7 +5,7 @@
 	weight = 1
 	earliest_start = 5 MINUTES
 	category = EVENT_CATEGORY_FRIENDLY
-	description = "A colourful display can be seen through select windows. And the kitchen."
+	description = "Красочный дисплей можно увидеть через некоторые окна. И кухню."
 
 /datum/round_event_control/aurora_caelus/can_spawn_event(players, allow_magic = FALSE)
 	if(!SSmapping.empty_space)
@@ -18,7 +18,7 @@
 	end_when = 80
 
 /datum/round_event/aurora_caelus/announce()
-	priority_announce("[station_name()]: A harmless cloud of ions is approaching your station, and will exhaust their energy battering the hull. Nanotrasen has approved a short break for all employees to relax and observe this very rare event. During this time, starlight will be bright but gentle, shifting between quiet green and blue colors. Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. We hope you enjoy the lights.",
+	priority_announce("[station_name()]: Безобидное облако ионов приближается к вашей станции и истощает свою энергию, ударяя по корпусу. Компания Nanotrasen одобрила небольшой перерыв для всех сотрудников, чтобы они могли расслабиться и понаблюдать за этим очень редким событием. В это время звездный свет будет ярким, но нежным, меняющимся между спокойными зелеными и синими цветами. Любой персонал, желающий увидеть эти огни самостоятельно, может пройти в ближайшую к ним зону со смотровыми иллюминаторами на открытое пространство. Мы надеемся, что вам понравится свет.",
 	sound = 'sound/misc/notice2.ogg',
 	sender_override = "Nanotrasen Meteorology Division")
 	for(var/V in GLOB.player_list)
@@ -58,7 +58,7 @@
 /datum/round_event/aurora_caelus/end()
 	fade_space()
 	fade_kitchen()
-	priority_announce("The aurora caelus event is now ending. Starlight conditions will slowly return to normal. When this has concluded, please return to your workplace and continue work as normal. Have a pleasant shift, [station_name()], and thank you for watching with us.",
+	priority_announce("Событие Aurora Caelus подходит к концу. Условия звездного света постепенно вернутся в норму. Когда все закончится, пожалуйста, вернитесь на свое рабочее место и продолжайте работать в обычном режиме. Приятной смены, [station_name()] и спасибо, что смотрели с нами.",
 	sound = 'sound/misc/notice2.ogg',
 	sender_override = "Nanotrasen Meteorology Division")
 

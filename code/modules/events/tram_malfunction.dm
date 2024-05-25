@@ -8,7 +8,7 @@
 	max_occurrences = 4
 	earliest_start = 15 MINUTES
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Tram crossing signals malfunction, tram collision damage is increased."
+	description = "Трамвайный переезд сигнализирует о неисправности, увеличивается ущерб от столкновения трамвая."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 3
 
@@ -35,7 +35,7 @@
 	end_when = rand(TRAM_MALFUNCTION_TIME_LOWER, TRAM_MALFUNCTION_TIME_UPPER)
 
 /datum/round_event/tram_malfunction/announce()
-	priority_announce("Our automated control system has lost contact with the tram's onboard computer. Please take extra care while engineers diagnose and resolve the issue.", "[command_name()] Engineering Division")
+	priority_announce("Наша автоматизированная система управления потеряла связь с бортовым компьютером трамвая. Пожалуйста, будьте особенно внимательны, пока инженеры диагностируют и решают проблему.", "[command_name()] Engineering Division")
 
 /datum/round_event/tram_malfunction/start()
 	for(var/datum/transport_controller/linear/tram/malfunctioning_controller as anything in SStransport.transports_by_type[TRANSPORT_TYPE_TRAM])
@@ -47,7 +47,7 @@
 	for(var/datum/transport_controller/linear/tram/malfunctioning_controller as anything in SStransport.transports_by_type[TRANSPORT_TYPE_TRAM])
 		if(malfunctioning_controller.specific_transport_id == specific_transport_id && malfunctioning_controller.controller_status & COMM_ERROR)
 			malfunctioning_controller.end_malf_event()
-			priority_announce("The software on the tram has been reset, normal operations are now resuming. Sorry for any inconvienence this may have caused.", "[command_name()] Engineering Division")
+			priority_announce("Программное обеспечение трамвая было сброшено, нормальная работа возобновляется. Приносим извинения за возможные неудобства.", "[command_name()] Engineering Division")
 			return
 
 #undef TRAM_MALFUNCTION_TIME_UPPER

@@ -4,7 +4,7 @@
 	weight = 10
 	max_occurrences = 3
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Turns off all APCs for a while, or until they are manually rebooted."
+	description = "Выключает все APCы на время, либо до тех пор, пока они не будут перезагружены вручную."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 	/// Cooldown for the announement associated with this event.
@@ -22,7 +22,7 @@
 			CRASH("event started without controller!")
 		if(!COOLDOWN_FINISHED(controller, announcement_spam_protection))
 			return
-	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
+	priority_announce("В сети питания [station_name()] обнаружена аномальная активность. В качестве меры предосторожности электростанция будет отключена на неопределенный срок.", "Critical Power Failure", ANNOUNCER_POWEROFF)
 	if(!fake) // Only start the CD if we're real
 		COOLDOWN_START(controller, announcement_spam_protection, 30 SECONDS)
 

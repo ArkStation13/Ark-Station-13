@@ -4,7 +4,7 @@
 	weight = 0
 	max_occurrences = 0
 	category = EVENT_CATEGORY_SPACE
-	description = "Throw a dark matt-eor somewhere near the station."
+	description = "Бросаем темный матт-еор где-нибудь рядом со станцией."
 	admin_setup = list(/datum/event_admin_setup/warn_admin/dark_matteor)
 	map_flags = EVENT_SPACE_ONLY
 
@@ -25,7 +25,7 @@
 	spawn_meteor(list(/obj/effect/meteor/dark_matteor = 1), null, target)
 
 /datum/round_event/dark_matteor/announce(fake)
-	priority_announce("Warning. Excessive tampering of meteor satellites has attracted a dark matt-eor. Signature approaching [GLOB.station_name]. Please brace for impact.", "Meteor Alert", 'sound/misc/airraid.ogg')
+	priority_announce("Предупреждение. Чрезмерное вмешательство в метеорные спутники привлекло темные силы. Подпись приближается к [GLOB.station_name]. Пожалуйста, приготовьтесь к удару.", "Meteor Alert", 'sound/misc/airraid.ogg')
 
 /datum/event_admin_setup/warn_admin/dark_matteor
 	warning_text = "Dark Matt-eors spawn singularities. The round is ending once a dark matt-eor hits the station. Proceed anyways?"

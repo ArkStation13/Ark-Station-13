@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/fake_virus
 	weight = 20
 	category = EVENT_CATEGORY_HEALTH
-	description = "Some crewmembers suffer from temporary hypochondria."
+	description = "Некоторые члены экипажа страдают временной ипохондрией."
 
 /datum/round_event/fake_virus/start()
 	var/list/fake_virus_victims = list()
@@ -34,6 +34,6 @@
 	for(var/i in 1 to rand(1, defacto_min))
 		var/mob/living/carbon/human/onecoughman = pick_n_take(fake_virus_victims)
 		if(prob(25))//1/4 odds to get a spooky message instead of coughing out loud
-			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), onecoughman, span_warning("[pick("Your head hurts.", "Your head pounds.")]")), rand(3 SECONDS, 15 SECONDS))
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), onecoughman, span_warning("[pick("Твоя голова болит.", "Твоя голова кружится.")]")), rand(3 SECONDS, 15 SECONDS))
 		else
 			addtimer(CALLBACK(onecoughman, TYPE_PROC_REF(/mob, emote), pick("cough", "sniff", "sneeze")), rand(3 SECONDS, 15 SECONDS))//deliver the message with a slightly randomized time interval so there arent multiple people coughing at the exact same time

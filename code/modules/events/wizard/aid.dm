@@ -7,7 +7,7 @@
 	typepath = /datum/round_event/wizard/robelesscasting
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Wizard no longer needs robes to cast spells."
+	description = "Волшебнику больше не нужны мантии для произнесения заклинаний."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 
@@ -25,7 +25,7 @@
 				spell_improved = TRUE
 
 		if(spell_improved)
-			to_chat(caster, span_notice("You suddenly feel like you never needed those garish robes in the first place..."))
+			to_chat(caster, span_notice("Вы внезапно чувствуете, что вам вообще никогда не были нужны эти яркие мантии..."))
 
 //--//
 
@@ -52,4 +52,4 @@
 			upgraded_a_spell = spell.level_spell(TRUE)
 
 		if(upgraded_a_spell)
-			to_chat(caster, span_notice("You suddenly feel more competent with your casting!"))
+			to_chat(caster, span_notice("Вы внезапно почувствуете себя более компетентным в колдунстве!"))

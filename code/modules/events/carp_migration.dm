@@ -6,7 +6,7 @@
 	earliest_start = 10 MINUTES
 	max_occurrences = 6
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Summons a school of space carp."
+	description = "Призывает стаю космических карпов."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 3
 	admin_setup = list(/datum/event_admin_setup/carp_migration)
@@ -37,7 +37,7 @@
 	start_when = rand(40, 60)
 
 /datum/round_event/carp_migration/announce(fake)
-	priority_announce("[fluff_signal] have been detected near [station_name()], please stand-by.", "Lifesign Alert")
+	priority_announce("[fluff_signal] обнаружен рядом с [station_name()], пожалуйста, будьте готовы.", "Lifesign Alert")
 
 /datum/round_event/carp_migration/start()
 	// Stores the most recent fish we spawn
@@ -84,10 +84,10 @@
 
 /datum/event_admin_setup/carp_migration/prompt_admins()
 	targets_per_z = list()
-	if (tgui_alert(usr, "Direct carp to your current location? Only applies to your current Z level.", "Carp Direction", list("Yes", "No")) != "Yes")
+	if (tgui_alert(usr, "Направить карпа к вашему текущему местоположению? Применяется только к вашему текущему уровню Z.", "Carp Direction", list("Yes", "No")) != "Yes")
 		return
 	record_admin_location()
-	while (tgui_alert(usr, "Add additional locations? Only applies to your current Z level.", "More Carp Direction", list("Yes", "No")) == "Yes")
+	while (tgui_alert(usr, "Добавить дополнительные места? Применяется только к вашему текущему уровню Z.", "More Carp Direction", list("Yes", "No")) == "Yes")
 		record_admin_location()
 
 /// Stores the admin's current location corresponding to the z level of that location

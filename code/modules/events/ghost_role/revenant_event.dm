@@ -8,7 +8,7 @@
 	min_players = 5
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns an angry, soul sucking ghost."
+	description = "Создает злобного призрака, высасывающего душу."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 

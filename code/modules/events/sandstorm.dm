@@ -14,7 +14,7 @@
 	min_players = 35
 	earliest_start = 35 MINUTES
 	category = EVENT_CATEGORY_SPACE
-	description = "A wave of space dust continually grinds down a side of the station."
+	description = "Волна космической пыли непрерывно хлещет по борту станции."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
 	admin_setup = list(/datum/event_admin_setup/listed_options/sandstorm)
@@ -46,11 +46,11 @@
 		if(WEST)
 			start_side_text = "port"
 		else
-			stack_trace("Sandstorm event given [start_side] as unrecognized direction. Cancelling event...")
+			stack_trace("Ивент Sandstorm указало [start_side] как нераспознанное направление. Отмена ивента...")
 			kill()
 			return
 
-	priority_announce("A large wave of space dust is approaching from the [start_side_text] side of the station. \
+	priority_announce("Со стороны [start_side_text] станции приближается большая волна космической пыли. \
 		Impact is expected in the next two minutes. All employees are encouranged to assist in repairs and damage mitigation if possible.", "Collision Emergency Alert")
 
 /datum/round_event/sandstorm/tick()

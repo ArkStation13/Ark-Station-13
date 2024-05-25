@@ -4,12 +4,12 @@
 	typepath = /datum/round_event/wizard/ghost
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Ghosts become visible."
+	description = "Призраки становятся видимыми."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 7
 
 /datum/round_event/wizard/ghost/start()
-	var/msg = span_warning("You suddenly feel extremely obvious...")
+	var/msg = span_warning("Вы внезапно чувствуете себя совершенно очевидным...")
 	set_observer_default_invisibility(0, msg)
 
 
@@ -21,10 +21,10 @@
 	typepath = /datum/round_event/wizard/possession
 	max_occurrences = 5
 	earliest_start = 0 MINUTES
-	description = "Ghosts become visible and gain the power of possession."
+	description = "Призраки становятся видимыми и обретают силу одержимости.."
 
 /datum/round_event/wizard/possession/start()
 	for(var/mob/dead/observer/G in GLOB.player_list)
 		add_verb(G, /mob/dead/observer/verb/boo)
 		add_verb(G, /mob/dead/observer/verb/possess)
-		to_chat(G, "You suddenly feel a welling of new spooky powers...")
+		to_chat(G, "Вы внезапно чувствуете прилив новых жутких сил...")

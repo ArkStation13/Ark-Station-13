@@ -6,7 +6,7 @@
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
 	category = EVENT_CATEGORY_HOLIDAY
-	description = "Gives everyone treats, and turns Ian and Poly into their festive versions."
+	description = "Раздает всем угощения и превращает Ian и Poly в их праздничные версии."
 
 /datum/round_event/spooky/start()
 	..()
@@ -23,19 +23,19 @@
 		qdel(bird)
 
 /datum/round_event/spooky/announce(fake)
-	priority_announce(pick("RATTLE ME BONES!","THE RIDE NEVER ENDS!", "A SKELETON POPS OUT!", "SPOOKY SCARY SKELETONS!", "CREWMEMBERS BEWARE, YOU'RE IN FOR A SCARE!") , "THE CALL IS COMING FROM INSIDE THE HOUSE")
+	priority_announce(pick("ПОГРУЗИТЕ МЕНЯ КОСТЯМИ!», «ПОЕЗДКА НИКОГДА НЕ ЗАКОНЧИТСЯ!», «ВЫСКАКИВАЕТ СКЕЛЕТ!», «ЖУТКО, СТРАШНЫЕ СКЕЛЕТЫ!», «ЧЛЕНЫ ЭКИПАЖА, ОСТЕРЕГАЙТЕСЬ, ВАС НАПУГАЮТ!") , "THE CALL IS COMING FROM INSIDE THE HOUSE")
 
 //spooky foods (you can't actually make these when it's not halloween)
 /obj/item/food/cookie/sugar/spookyskull
 	name = "skull cookie"
-	desc = "Spooky! It's got delicious calcium flavouring!"
+	desc = "Жуткий! У него восхитительный кальциевый вкус!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "skeletoncookie"
 	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/cookie/sugar/spookycoffin
 	name = "coffin cookie"
-	desc = "Spooky! It's got delicious coffee flavouring!"
+	desc = "Жуткий! Имеет восхитительный кофейный вкус!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "coffincookie"
 	crafting_complexity = FOOD_COMPLEXITY_2
@@ -48,7 +48,7 @@
 
 /obj/item/storage/spooky
 	name = "trick-o-treat bag"
-	desc = "A pumpkin-shaped bag that holds all sorts of goodies!"
+	desc = "Сумка в форме тыквы, в которую поместятся всевозможные вкусности!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "treatbag"
 

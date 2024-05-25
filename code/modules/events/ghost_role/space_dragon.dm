@@ -6,7 +6,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns a space dragon, which will try to take over the station."
+	description = "Создает космического дракона, который попытается захватить станцию."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
 
@@ -16,7 +16,7 @@
 	announce_when = 10
 
 /datum/round_event/ghost_role/space_dragon/announce(fake)
-	priority_announce("A large organic energy flux has been recorded near [station_name()], please stand by.", "Lifesign Alert")
+	priority_announce("Рядом с [station_name()] зафиксирован большой поток органической энергии, пожалуйста, подождите.", "Lifesign Alert")
 
 /datum/round_event/ghost_role/space_dragon/spawn_role()
 	var/mob/chosen_one = SSpolling.poll_ghost_candidates(check_jobban = ROLE_SPACE_DRAGON, role = ROLE_SPACE_DRAGON, alert_pic = /mob/living/basic/space_dragon, amount_to_pick = 1)

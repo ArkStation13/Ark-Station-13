@@ -6,7 +6,7 @@
 	max_occurrences = 4
 	earliest_start = 10 MINUTES
 	category = EVENT_CATEGORY_BUREAUCRATIC
-	description = "A pod containing a random supply crate lands on the station."
+	description = "На станцию приземляется капсула со случайным ящиком с припасами."
 	admin_setup = list(/datum/event_admin_setup/set_location/stray_cargo, /datum/event_admin_setup/listed_options/stray_cargo)
 
 /datum/event_admin_setup/set_location/stray_cargo
@@ -42,7 +42,7 @@
 /datum/round_event/stray_cargo/announce(fake)
 	if(fake)
 		impact_area = find_event_area()
-	priority_announce("Stray cargo pod detected on long-range scanners. Expected location of impact: [impact_area.name].", "Collision Alert")
+	priority_announce("Бродячая грузовая капсула обнаружена на сканерах дальнего действия. Ожидаемое место падения: [impact_area.name].", "Collision Alert")
 
 /**
 * Tries to find a valid area, throws an error if none are found
@@ -58,7 +58,7 @@
 		CRASH("No valid areas for cargo pod found.")
 	var/list/turf_test = get_area_turfs(impact_area)
 	if(!turf_test.len)
-		CRASH("Stray Cargo Pod : No valid turfs found for [impact_area] - [impact_area.type]")
+		CRASH("Бродячая грузовая капсула : Не найдено ни одной действующей территории для [impact_area] - [impact_area.type]")
 
 	if(!stray_spawnable_supply_packs.len)
 		stray_spawnable_supply_packs = SSshuttle.supply_packs.Copy()
@@ -162,7 +162,7 @@
 	if(isnull(pack_telecrystals))
 		return ADMIN_CANCEL_EVENT
 	var/list/possible_uplinks = list("Traitor" = UPLINK_TRAITORS, "Nuke Op" = UPLINK_NUKE_OPS, "Clown Op" = UPLINK_CLOWN_OPS)
-	var/uplink_type = tgui_input_list(usr, "Choose uplink to draw items from.", "Choose uplink type.", possible_uplinks)
+	var/uplink_type = tgui_input_list(usr, "Выберите uplink, из которого будут взяты предметы.", "Выберите тип uplink.", possible_uplinks)
 	var/selection
 	if(!isnull(uplink_type))
 		selection = possible_uplinks[uplink_type]
@@ -173,7 +173,7 @@
 
 /datum/event_admin_setup/syndicate_cargo_pod/apply_to_event(datum/round_event/stray_cargo/syndicate/event)
 	event.admin_override_contents = pack_type_override
-	var/log_message = "[key_name_admin(usr)] has aimed a stray syndicate cargo pod at [event.admin_override_turf ? AREACOORD(event.admin_override_turf) : "a random location"]. The pod contents are [pack_type_override ? pack_type_override : "random"]."
+	var/log_message = "[key_name_admin(usr)] нацелил шальную грузовую капсулу синдиката на [event.admin_override_turf ? AREACOORD(event.admin_override_turf) : "случайное место"]. Содержимое капсулы [pack_type_override ? pack_type_override : "random"]."
 	message_admins(log_message)
 	log_admin(log_message)
 

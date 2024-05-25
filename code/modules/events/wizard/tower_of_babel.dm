@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/tower_of_babel
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Everyone forgets their current languages and gains a randomized one"
+	description = "Каждый забывает свой текущий язык и получает случайный язык."
 	min_wizard_trigger_potency = 5
 	max_wizard_trigger_potency = 7
 

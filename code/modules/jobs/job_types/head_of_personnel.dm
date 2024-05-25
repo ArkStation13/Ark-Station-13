@@ -45,7 +45,7 @@
 
 
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Из-за нехватки кадров на мостике назначен исполняющий обязанности капитана [captain.real_name]!"
 
 
 /datum/outfit/job/hop

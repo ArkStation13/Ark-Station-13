@@ -4,7 +4,7 @@
 	weight = 15
 	min_players = 2
 	category = EVENT_CATEGORY_AI
-	description = "Gives the AI a new, randomized law."
+	description = "Дает ИИ новый рандомизированный закон."
 	min_wizard_trigger_potency = 2
 	max_wizard_trigger_potency = 7
 
@@ -27,7 +27,7 @@
 
 /datum/round_event/ion_storm/announce(fake)
 	if(prob(announce_chance) || fake)
-		priority_announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", ANNOUNCER_IONSTORM)
+		priority_announce("Возле станции обнаружена ионная буря. Пожалуйста, проверьте все оборудование, управляемое ИИ, на наличие ошибок.", "Anomaly Alert", ANNOUNCER_IONSTORM)
 
 
 /datum/round_event/ion_storm/start()

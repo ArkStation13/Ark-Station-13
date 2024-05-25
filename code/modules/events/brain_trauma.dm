@@ -4,7 +4,7 @@
 	weight = 25
 	min_players = 13
 	category = EVENT_CATEGORY_HEALTH
-	description = "A crewmember gains a random trauma."
+	description = "Член экипажа получает случайную травму."
 	min_wizard_trigger_potency = 2
 	max_wizard_trigger_potency = 6
 

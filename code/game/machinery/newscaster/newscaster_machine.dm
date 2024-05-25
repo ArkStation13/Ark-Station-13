@@ -622,7 +622,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/newscaster, 30)
 /obj/machinery/newscaster/proc/news_alert(channel, update_alert = TRUE)
 	if(channel)
 		if(update_alert)
-			say("Breaking news from [channel]!")
+			say("Срочные новости из [channel]!")
 			playsound(loc, 'sound/machines/twobeep_high.ogg', 75, TRUE)
 		alert = TRUE
 		update_appearance()
@@ -641,13 +641,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/newscaster, 30)
 		return
 	for(var/datum/feed_channel/iterated_feed_channel as anything in GLOB.news_network.network_channels)
 		if(iterated_feed_channel.channel_name == channel_name)
-			tgui_alert(usr, "ERROR: Feed channel with that name already exists on the Network.", list("Okay"))
+			tgui_alert(usr, "ERROR: Канал с таким названием уже существует в Сети.", list("Okay"))
 			return TRUE
 	if(!channel_desc)
 		return TRUE
 	if(isnull(channel_locked))
 		return TRUE
-	var/choice = tgui_alert(usr, "Please confirm feed channel creation","Network Channel Handler", list("Confirm","Cancel"))
+	var/choice = tgui_alert(usr, "Пожалуйста, подтвердите создание канала канала","Network Channel Handler", list("Confirm","Cancel"))
 	if(choice == "Confirm")
 		GLOB.news_network.create_feed_channel(channel_name, newscaster_username, channel_desc, locked = channel_locked)
 		SSblackbox.record_feedback("text", "newscaster_channels", 1, "[channel_name]")

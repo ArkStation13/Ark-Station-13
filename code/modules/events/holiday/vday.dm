@@ -13,8 +13,8 @@
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
 	category = EVENT_CATEGORY_HOLIDAY
-	description = "Puts people on dates! They must protect each other. \
-		Some dates will have third wheels, and any odd ones out will be given the role of 'heartbreaker'."
+	description = "Приводит людей на свидания! Они должны защищать друг друга. \
+		У некоторых свиданий будут третьи колеса, а всем лишним будет отведена роль «heartbreaker»."
 	/// If TRUE, any odd candidate out will be given the role of "heartbreaker" and will be tasked with ruining the dates.
 	var/heartbreaker = TRUE
 	/// Probability that any given pair will be given a third wheel candidate
@@ -126,7 +126,7 @@
 
 /obj/item/paper/valentine
 	name = "valentine"
-	desc = "A Valentine's card! Wonder what it says..."
+	desc = "Валентинка! Интересно, что там написано..."
 	icon = 'icons/obj/toys/playing_cards.dmi'
 	icon_state = "sc_Ace of Hearts_syndicate" // shut up // bye felicia
 	show_written_words = FALSE
@@ -139,7 +139,7 @@
 	name = "candy heart"
 	icon = 'icons/obj/holiday/holiday_misc.dmi'
 	icon_state = "candyheart"
-	desc = "A heart-shaped candy that reads: "
+	desc = "Конфета в форме сердца с надписью: "
 	food_reagents = list(/datum/reagent/consumable/sugar = 2)
 	junkiness = 5
 

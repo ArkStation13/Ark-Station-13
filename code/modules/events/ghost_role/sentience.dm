@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 	typepath = /datum/round_event/ghost_role/sentience
 	weight = 10
 	category = EVENT_CATEGORY_FRIENDLY
-	description = "An animal or robot becomes sentient!"
+	description = "Животное или робот становятся разумными!"
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 7
 
@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 	var/pets = pick("animals/bots", "bots/animals", "pets", "simple animals", "lesser lifeforms", "\[REDACTED\]")
 	var/strength = pick("human", "moderate", "lizard", "security", "command", "clown", "low", "very low", "\[REDACTED\]")
 
-	sentience_report += "Based on [data], we believe that [one] of the station's [pets] has developed [strength] level intelligence, and the ability to communicate."
+	sentience_report += "На основании [data] мы полагаем, что [one] из [pets] станции развил интеллект [strength] уровня и способность общаться."
 
 	priority_announce(sentience_report,"[command_name()] Medium-Priority Update")
 

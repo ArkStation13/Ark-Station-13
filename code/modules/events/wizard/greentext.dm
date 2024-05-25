@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/greentext
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "The Green Text appears on the station, tempting people to try and pick it up."
+	description = "На станции появляется Зеленый Текст, соблазняющий людей попытаться подобрать его."
 	min_wizard_trigger_potency = 5
 	max_wizard_trigger_potency = 7
 
@@ -24,7 +24,7 @@
 
 /obj/item/greentext
 	name = "greentext"
-	desc = "No one knows what this massive tome does, but it feels <i><font color='green'>desirable</font></i> all the same..."
+	desc = "Никто не знает, что делает этот массивный том, но он всё равно <i><font color='green'>желанный</font></i>..."
 	w_class = WEIGHT_CLASS_BULKY
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "greentext"
@@ -49,9 +49,9 @@
 
 /obj/item/greentext/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
-	to_chat(user, span_green("So long as you leave this place with greentext in hand you know will be happy..."))
+	to_chat(user, span_green("Пока ты покинешь это место с зеленым текстом в руке, ты знаешь, что ты будешь счастлив..."))
 	if(user.mind && length(user.mind.get_all_objectives()) > 0)
-		to_chat(user, span_warning("... so long as you still perform your other objectives that is!"))
+		to_chat(user, span_warning("... до тех пор, пока вы все еще выполняете другие свои цели!"))
 	holder = user
 	if(!HAS_TRAIT(user, TRAIT_GREENTEXT_CURSED))
 		LAZYOR(color_altered_mobs, WEAKREF(user))
@@ -60,7 +60,7 @@
 
 /obj/item/greentext/dropped(mob/user, silent = FALSE)
 	if(HAS_TRAIT(user, TRAIT_GREENTEXT_CURSED))
-		to_chat(user, span_warning("A sudden wave of failure washes over you..."))
+		to_chat(user, span_warning("Внезапная волна неудач накрывает вас..."))
 		user.add_atom_colour("#ff0000", ADMIN_COLOUR_PRIORITY) //ya blew it
 	holder = null
 	return ..()
@@ -81,9 +81,9 @@
 
 	var/list/announce_list = quiet ? victims : GLOB.player_list
 	for(var/mob/player as anything in announce_list)
-		var/list/messages = list(span_warning("A dark temptation has passed from this world!"))
+		var/list/messages = list(span_warning("Темное искушение покинуло этот мир!"))
 		if(HAS_TRAIT(player, TRAIT_GREENTEXT_CURSED))
-			messages += span_green("You're finally able to forgive yourself...")
+			messages += span_green("Наконец-то ты сможешь простить себя...")
 		to_chat(player, messages.Join("\n"))
 	for(var/mob/player as anything in victims)
 		REMOVE_TRAIT(player, TRAIT_GREENTEXT_CURSED, REF(src))

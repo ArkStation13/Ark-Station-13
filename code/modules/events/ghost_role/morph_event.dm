@@ -4,7 +4,7 @@
 	weight = 0
 	max_occurrences = 1
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns a hungry shapeshifting blobby creature."
+	description = "Создает голодное существо, меняющее форму."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 

@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/fake_explosion
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "The nuclear explosion cutscene begins to play to scare the crew."
+	description = "Начинается ролик о ядерном взрыве, чтобы напугать команду."
 
 /datum/round_event/wizard/fake_explosion/start()
 	sound_to_playing_players('sound/machines/alarm.ogg')

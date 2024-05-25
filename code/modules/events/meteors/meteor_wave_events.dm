@@ -8,7 +8,7 @@
 	max_occurrences = 3
 	earliest_start = 25 MINUTES
 	category = EVENT_CATEGORY_SPACE
-	description = "A regular meteor wave."
+	description = "Обычная метеорная волна."
 	map_flags = EVENT_SPACE_ONLY
 
 /datum/round_event/meteor_wave
@@ -50,7 +50,7 @@
 			kill()
 
 /datum/round_event/meteor_wave/announce(fake)
-	priority_announce("Meteors have been detected on collision course with the station.", "Meteor Alert", ANNOUNCER_METEORS)
+	priority_announce("Метеоры были обнаружены на пути к столкновению со станцией.", "Meteor Alert", ANNOUNCER_METEORS)
 
 /datum/round_event/meteor_wave/tick()
 	if(ISMULTIPLE(activeFor, 3))
@@ -63,7 +63,7 @@
 	min_players = 20
 	max_occurrences = 3
 	earliest_start = 35 MINUTES
-	description = "A meteor wave with higher chance of big meteors."
+	description = "Метеорная волна с более высокой вероятностью появления больших метеоров."
 
 /datum/round_event/meteor_wave/threatening
 	wave_name = "threatening"
@@ -75,7 +75,7 @@
 	min_players = 25
 	max_occurrences = 3
 	earliest_start = 45 MINUTES
-	description = "A meteor wave that might summon a tunguska class meteor."
+	description = "Метеорная волна, которая может вызвать метеор класса Тунгуска."
 
 /datum/round_event/meteor_wave/catastrophic
 	wave_name = "catastrophic"
@@ -85,19 +85,19 @@
 	typepath = /datum/round_event/meteor_wave/meaty
 	weight = 2
 	max_occurrences = 1
-	description = "A meteor wave made of meat."
+	description = "Метеорная волна из мяса."
 
 /datum/round_event/meteor_wave/meaty
 	wave_name = "meaty"
 
 /datum/round_event/meteor_wave/meaty/announce(fake)
-	priority_announce("Meaty ores have been detected on collision course with the station.", "Oh crap, get the mop.", ANNOUNCER_METEORS)
+	priority_announce("На пути столкновения со станцией обнаружены мясистые руды.", "Вот черт, возьми швабру.", ANNOUNCER_METEORS)
 
 /datum/round_event_control/meteor_wave/dust_storm
 	name = "Major Space Dust"
 	typepath = /datum/round_event/meteor_wave/dust_storm
 	weight = 14
-	description = "The station is pelted by sand."
+	description = "Станцию забросали песком."
 	earliest_start = 15 MINUTES
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
@@ -109,24 +109,24 @@
 /datum/round_event/meteor_wave/dust_storm/announce(fake)
 	var/list/reasons = list()
 
-	reasons += "[station_name()] is passing through a debris cloud, expect minor damage \
-		to external fittings and fixtures."
+	reasons += "[station_name()] проходит сквозь облако обломков, ожидайте незначительных повреждений \
+		к внешней фурнитуре и приспособлениям."
 
-	reasons += "Nanotrasen Superweapons Division is testing a new prototype \
-		[pick("field","projection","nova","super-colliding","reactive")] \
-		[pick("cannon","artillery","tank","cruiser","\[REDACTED\]")], \
-		some mild debris is expected."
+	reasons += "Подразделение супероружия Nanotrasen тестирует новый прототип \
+		[pick("поля","проекции","Нова","сверхстолкновенной","реактивной")] \
+		[pick("пушки","артиллерии","танка","крейсера","\[REDACTED\]")], \
+		ожидается небольшой мусор."
 
-	reasons += "A neighbouring station is throwing rocks at you. (Perhaps they've \
-		grown tired of your messages.)"
+	reasons += "Соседняя станция кидает в вас камни. (Возможно, они \
+		устал от ваших сообщений.)"
 
-	reasons += "[station_name()]'s orbit is passing through a cloud of remnants from an asteroid \
-		mining operation. Minor hull damage is to be expected."
+	reasons += "Орбита [station_name()] проходит через облако остатков астероида \
+		горнодобывающей деятельности. Ожидаются незначительные повреждения корпуса."
 
-	reasons += "A large meteoroid on intercept course with [station_name()] has been demolished. \
-		Residual debris may impact the station exterior."
+	reasons += "Большой метеорит, следовавший по курсу на перехват с [station_name()], был снесен. \
+		Остаточный мусор может повлиять на внешний вид станции."
 
-	reasons += "[station_name()] has hit a particularly rough patch of space. \
-		Please mind any turbulence or damage from debris."
+	reasons += "[station_name()] попал в особенно трудный участок пространства. \
+		Пожалуйста, обратите внимание на любые турбулентности или повреждения от мусора."
 
 	priority_announce(pick(reasons), "Collision Alert")

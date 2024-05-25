@@ -30,7 +30,7 @@
 	min_players = 10
 	weight = 5
 	category = EVENT_CATEGORY_HEALTH
-	description = "A 'classic' virus will infect some members of the crew."
+	description = "«Классический» вирус заразит некоторых членов экипажа."
 	min_wizard_trigger_potency = 2
 	max_wizard_trigger_potency = 6
 	admin_setup = list(/datum/event_admin_setup/minimum_candidate_requirement/disease_outbreak, /datum/event_admin_setup/listed_options/disease_outbreak)
@@ -71,7 +71,7 @@
 
 ///Handles checking and alerting admins about the number of valid candidates
 /datum/event_admin_setup/minimum_candidate_requirement/disease_outbreak
-	output_text = "There are no candidates eligible to receive a disease!"
+	output_text = "Нет кандидатов, подходящих для получения заболевания!"
 
 /datum/event_admin_setup/minimum_candidate_requirement/disease_outbreak/count_candidates()
 	var/datum/round_event_control/disease_outbreak/disease_control = event_control
@@ -81,9 +81,9 @@
 
 ///Handles actually selecting whicch disease will spawn.
 /datum/event_admin_setup/listed_options/disease_outbreak
-	input_text = "Select a specific disease? Warning: Some are EXTREMELY dangerous."
-	normal_run_option = "Random Classic Disease (Safe)"
-	special_run_option = "Entirely Random Disease (Dangerous)"
+	input_text = "Выбрать конкретное заболевание? Предупреждение: некоторые из них ОЧЕНЬ опасны."
+	normal_run_option = "Случайное классическое заболевание (Безопасно)"
+	special_run_option = "Совершенно случайное заболевание (Опасное)"
 
 /datum/event_admin_setup/listed_options/disease_outbreak/get_list()
 	return subtypesof(/datum/disease)
@@ -123,7 +123,7 @@
 		)
 		var/datum/disease/fake_virus = pick(virus_candidates)
 		illness_type = initial(fake_virus.name)
-	priority_announce("Confirmed outbreak of level 7 viral biohazard aboard [station_name()]. All personnel must contain the outbreak.", "[illness_type] Alert", ANNOUNCER_OUTBREAK7)
+	priority_announce("Подтверждена вспышка вирусной биологической опасности 7-го уровня на борту [station_name()]. Весь персонал должен локализовать вспышку.", "[illness_type] Alert", ANNOUNCER_OUTBREAK7)
 
 /datum/round_event/disease_outbreak/setup()
 	announce_when = ADV_ANNOUNCE_DELAY
@@ -156,14 +156,14 @@
 	while(length(afflicted))
 		victim = pick_n_take(afflicted)
 		if(victim.ForceContractDisease(new_disease, FALSE))
-			message_admins("Event triggered: Disease Outbreak - [new_disease.name] starting with patient zero [ADMIN_LOOKUPFLW(victim)]!")
-			log_game("Event triggered: Disease Outbreak - [new_disease.name] starting with patient zero [key_name(victim)].")
+			message_admins("Сработало событие: Вспышка заболевания — [new_disease.name] начиная с нулевого пациента [ADMIN_LOOKUPFLW(victim)]!")
+			log_game("Сработало событие: Вспышка заболевания — [new_disease.name] начиная с нулевого пациента [key_name(victim)].")
 			announce_to_ghosts(victim)
 			return
 		CHECK_TICK //don't lag the server to death
 	if(isnull(victim))
-		message_admins("Event Disease Outbreak: Classic attempted to start, but failed to find a candidate target.")
-		log_game("Event Disease Outbreak: Classic attempted to start, but failed to find a candidate target")
+		message_admins("Вспышка событийного заболевания: Классическое попыталась запуститься, но не смогла найти потенциальную цель.")
+		log_game("Вспышка событийного заболевания: Классическое попыталась запуститься, но не смогла найти потенциальную цель.")
 
 /datum/round_event_control/disease_outbreak/advanced
 	name = "Disease Outbreak: Advanced"
@@ -189,7 +189,7 @@
  */
 
 /datum/event_admin_setup/listed_options/disease_outbreak_advanced/severity
-	input_text = "Pick a severity!"
+	input_text = "Выбирайте степень тяжести!"
 	normal_run_option = "Random"
 
 /datum/event_admin_setup/listed_options/disease_outbreak_advanced/severity/get_list()
@@ -209,7 +209,7 @@
 			return ADMIN_CANCEL_EVENT
 
 /datum/event_admin_setup/listed_options/disease_outbreak_advanced/transmissibility
-	input_text = "Pick a transmissibility!"
+	input_text = "Выберите передачу!"
 	normal_run_option = "Random"
 
 /datum/event_admin_setup/listed_options/disease_outbreak_advanced/transmissibility/get_list()
@@ -229,13 +229,13 @@
 			return ADMIN_CANCEL_EVENT
 
 /datum/event_admin_setup/input_number/disease_outbreak_advanced
-	input_text = "How many symptoms do you want your virus to have?"
+	input_text = "Сколько симптомов вы хотите, чтобы у вашего вируса было?"
 	default_value = 4
 	max_value = 7
 	min_value = 1
 
 /datum/event_admin_setup/input_number/disease_outbreak_advanced/prompt_admins()
-	var/customize_number_of_symptoms = tgui_alert(usr, "Select number of symptoms?", event_control.name, list("Default", "Custom"))
+	var/customize_number_of_symptoms = tgui_alert(usr, "Выбрать количество симптомов?", event_control.name, list("Default", "Custom"))
 	switch(customize_number_of_symptoms)
 		if("Custom")
 			return ..()
@@ -292,15 +292,15 @@
 	while(length(afflicted))
 		victim = pick_n_take(afflicted)
 		if(victim.ForceContractDisease(advanced_disease, FALSE))
-			message_admins("Event triggered: Disease Outbreak: Advanced - starting with patient zero [ADMIN_LOOKUPFLW(victim)]! Details: [advanced_disease.admin_details()] sp:[advanced_disease.spread_flags] ([advanced_disease.spread_text])")
-			log_game("Event triggered: Disease Outbreak: Advanced - starting with patient zero [key_name(victim)]. Details: [advanced_disease.admin_details()] sp:[advanced_disease.spread_flags] ([advanced_disease.spread_text])")
-			log_virus("Disease Outbreak: Advanced has triggered a custom virus outbreak of [advanced_disease.admin_details()] in [victim]!")
+			message_admins("Event инициирован: Вспышка заболевания: Advanced – начиная с нулевого пациента. [ADMIN_LOOKUPFLW(victim)]! Details: [advanced_disease.admin_details()] sp:[advanced_disease.spread_flags] ([advanced_disease.spread_text])")
+			log_game("Event инициирован: Вспышка заболевания: Advanced – начиная с нулевого пациента. [key_name(victim)]. Details: [advanced_disease.admin_details()] sp:[advanced_disease.spread_flags] ([advanced_disease.spread_text])")
+			log_virus("Вспышка болезни: Advanced вызвала специальную вирусную вспышку [advanced_disease.admin_details()] in [victim]!")
 			announce_to_ghosts(victim)
 			return
 		CHECK_TICK //don't lag the server to death
 	if(isnull(victim))
-		message_admins("Event Disease Outbreak: Advanced attempted to start, but failed to find a candidate target.")
-		log_game("Event Disease Outbreak: Advanced attempted to start, but failed to find a candidate target.")
+		message_admins("Event Вспышка болезни: Продвинутый попытался запуститься, но не смог найти потенциальную цель.")
+		log_game("Event Вспышка болезни: Продвинутый попытался запуститься, но не смог найти потенциальную цель.")
 
 /datum/disease/advance/random/event
 	name = "Event Disease"

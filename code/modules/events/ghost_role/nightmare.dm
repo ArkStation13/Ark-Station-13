@@ -5,7 +5,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns a nightmare, aiming to darken the station."
+	description = "Создает кошмар, стремящийся затемнить станцию."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
 

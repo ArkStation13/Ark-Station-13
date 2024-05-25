@@ -27,7 +27,7 @@ GLOBAL_LIST_INIT(petsplosion_candidates, typecacheof(list(
 	typepath = /datum/round_event/wizard/petsplosion
 	max_occurrences = 1 //Exponential growth is nothing to sneeze at!
 	earliest_start = 0 MINUTES
-	description = "Rapidly multiplies the animals on the station."
+	description = "Быстро размножается животное на станции."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 	/// Number of mobs we're going to duplicate

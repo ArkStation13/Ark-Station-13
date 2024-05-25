@@ -3,7 +3,7 @@
 	weight = 5
 	typepath = /datum/round_event/wizard/identity_spoof
 	max_occurrences = 1
-	description = "Makes everyone dressed up like a wizard."
+	description = "Заставляет всех одеваться как волшебники." //SHADOW WIZARDS MONEY GANG
 
 /datum/round_event_control/wizard/identity_spoof/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()

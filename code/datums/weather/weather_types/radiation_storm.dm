@@ -1,7 +1,7 @@
 //Radiation storms occur when the station passes through an irradiated area, and irradiate anyone not standing in protected areas (maintenance, emergency storage, etc.)
 /datum/weather/rad_storm
 	name = "radiation storm"
-	desc = "A cloud of intense radiation passes through the area dealing rad damage to those who are unprotected."
+	desc = "Облако интенсивной радиации проходит через область, нанося радиационный урон тем, кто не защищен.."
 
 	telegraph_duration = 400
 	telegraph_message = "<span class='danger'>The air begins to grow warm.</span>"
@@ -60,7 +60,7 @@
 /datum/weather/rad_storm/end()
 	if(..())
 		return
-	priority_announce("The radiation threat has passed. Please return to your workplaces.", "Anomaly Alert", ANNOUNCER_RADIATIONPASSED) //NOVA EDIT CHANGE
+	priority_announce("Радиационная угроза миновала. Пожалуйста, вернитесь на свои рабочие места.", "Anomaly Alert", ANNOUNCER_RADIATIONPASSED) //NOVA EDIT CHANGE
 	status_alarm(FALSE)
 
 /datum/weather/rad_storm/proc/do_mutate(mob/living/carbon/human/mutant)

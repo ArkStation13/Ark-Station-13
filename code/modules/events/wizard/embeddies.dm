@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/embedpocalypse
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Everything becomes pointy enough to embed in people when thrown."
+	description = "Все становится достаточно острым, чтобы при броске застревать в людях."
 	min_wizard_trigger_potency = 3
 	max_wizard_trigger_potency = 7
 

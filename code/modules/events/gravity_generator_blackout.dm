@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/gravity_generator_blackout
 	weight = 30
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Turns off the gravity generator."
+	description = "Выключает гравитационный генератор."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 
@@ -26,7 +26,7 @@
 	announce_chance = 33
 
 /datum/round_event/gravity_generator_blackout/announce(fake)
-	priority_announce("Gravnospheric anomalies detected near [station_name()]. Manual reset of generators is required.", "Anomaly Alert", ANNOUNCER_GRANOMALIES)
+	priority_announce("Гравитационносферные аномалии обнаружены вблизи [station_name()]. Требуется ручной сброс генераторов.", "Anomaly Alert", ANNOUNCER_GRANOMALIES)
 
 /datum/round_event/gravity_generator_blackout/start()
 	for(var/obj/machinery/gravity_generator/main/the_generator as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/gravity_generator/main))

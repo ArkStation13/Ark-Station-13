@@ -13,7 +13,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "A meteor containing a changeling is summoned and thrown at the exterior of the station."
+	description = "Метеор, содержащий changeling, вызывается и бросается за пределы станции."
 
 /datum/round_event/ghost_role/changeling
 	minimum_required = 1

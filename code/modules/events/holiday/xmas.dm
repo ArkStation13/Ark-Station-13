@@ -2,7 +2,7 @@
 	name = "xmas cracker"
 	icon = 'icons/obj/holiday/christmas.dmi'
 	icon_state = "cracker"
-	desc = "Directions for use: Requires two people, one to pull each end."
+	desc = "Указания по использованию: Требуется два человека, по одному за каждый конец."
 	w_class = WEIGHT_CLASS_TINY
 	/// The crack state of the toy. If set to TRUE, you can no longer crack it by attacking.
 	var/cracked = FALSE

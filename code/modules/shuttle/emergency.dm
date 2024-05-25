@@ -373,7 +373,7 @@
 		return
 	// NOVA EDIT ADDITION END
 	priority_announce(
-		text = "The emergency shuttle has been called. [red_alert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [(timeLeft(60 SECONDS))] minutes.[reason][SSshuttle.emergency_last_call_loc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ][SSshuttle.admin_emergency_no_recall ? "\n\nWarning: Shuttle recall subroutines disabled; Recall not possible." : ""]",
+		text = "Вызван аварийный шаттл. [red_alert ? "Состояние Red Alert подтверждено: Отправка приоритетного шаттла. " : "" ]Оно прибудет за [(timeLeft(60 SECONDS))] минут.[reason][SSshuttle.emergency_last_call_loc ? "\n\nСигнал вызова прослежен. Результаты можно просмотреть на любой консоли связи." : "" ][SSshuttle.admin_emergency_no_recall ? "\n\nWarning: Подпрограммы вызова шаттла отключены; Отозвать невозможно." : ""]",
 		title = "Emergency Shuttle Dispatched",
 		sound = ANNOUNCER_SHUTTLECALLED,
 		sender_override = "Emergency Shuttle Uplink Alert",
@@ -394,7 +394,7 @@
 	else
 		SSshuttle.emergency_last_call_loc = null
 	priority_announce(
-		text = "The emergency shuttle has been recalled.[SSshuttle.emergency_last_call_loc ? " Recall signal traced. Results can be viewed on any communications console." : "" ]",
+		text = "Аварийный шаттл отозван.[SSshuttle.emergency_last_call_loc ? " Сигнал возврата прослеживается. Результаты можно просмотреть на любой консоли связи.." : "" ]",
 		title = "Emergency Shuttle Recalled",
 		sound = ANNOUNCER_SHUTTLERECALLED,
 		sender_override = "Emergency Shuttle Uplink Alert",
@@ -489,7 +489,7 @@
 				setTimer(SSshuttle.emergency_dock_time)
 				send2adminchat("Server", "The Emergency Shuttle has docked with the station.")
 				priority_announce(
-					text = "[SSshuttle.emergency] has docked with the station. You have [DisplayTimeText(SSshuttle.emergency_dock_time)] to board the emergency shuttle.",
+					text = "[SSshuttle.emergency] состыковался со станцией. У вас есть [DisplayTimeText(SSshuttle.emergency_dock_time)] чтобы сесть на аварийный шаттл.",
 					title = "Emergency Shuttle Arrival",
 					sound = ANNOUNCER_SHUTTLEDOCK,
 					sender_override = "Emergency Shuttle Uplink Alert",
@@ -548,7 +548,7 @@
 				launch_status = ENDGAME_LAUNCHED
 				setTimer(SSshuttle.emergency_escape_time * engine_coeff)
 				priority_announce(
-					text = "The emergency shuttle has left the station. Estimate [timeLeft(60 SECONDS)] minutes until the shuttle docks at [command_name()].",
+					text = "Аварийный шаттл покинул станцию. Приблизительно [timeLeft(60 SECONDS)] минуты до стыковки шаттла в [command_name()].",
 					title = "Emergency Shuttle Departure",
 					sender_override = "Emergency Shuttle Uplink Alert",
 					color_override = "orange",
@@ -620,7 +620,7 @@
 	launch_status = ENDGAME_LAUNCHED
 	setTimer(SSshuttle.emergency_escape_time)
 	priority_announce(
-		text = "The emergency shuttle is preparing for direct jump. Estimate [timeLeft(60 SECONDS)] minutes until the shuttle docks at [command_name()].",
+		text = "Аварийный шаттл готовится к прямому прыжку. Приблизительно [timeLeft(60 SECONDS)] минут до стыковки шаттла в [command_name()].",
 		title = "Emergency Shuttle Transit Failure",
 		sender_override = "Emergency Shuttle Uplink Alert",
 		color_override = "orange",

@@ -7,7 +7,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_INVASION
-	description = "A space ninja infiltrates the station."
+	description = "Космический ниндзя проникает на станцию."
 
 /datum/round_event/ghost_role/space_ninja
 	minimum_required = 1

@@ -4,7 +4,7 @@
 
 	max_occurrences = 5
 	weight = 25
-	description = "This anomaly throws things around."
+	description = "Эта аномалия бросает вещи вокруг."
 	min_wizard_trigger_potency = 1
 	max_wizard_trigger_potency = 3
 
@@ -19,7 +19,7 @@
 	weight = 15
 	max_occurrences = 1
 	earliest_start = 20 MINUTES
-	description = "This anomaly has an intense gravitational field, and can disable the gravity generator."
+	description = "Эта аномалия имеет сильное гравитационное поле и может вывести из строя гравитационный генератор."
 
 /datum/round_event/anomaly/anomaly_grav/high
 	start_when = ANOMALY_START_HARMFUL_TIME
@@ -29,4 +29,4 @@
 /datum/round_event/anomaly/anomaly_grav/announce(fake)
 	if(isnull(impact_area))
 		impact_area = placer.findValidArea()
-	priority_announce("Gravitational anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert" , ANNOUNCER_GRAVANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Gravitational anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert" , ANNOUNCER_GRANOMALIES)
+	priority_announce("Гравитационная аномалия обнаружена в [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert" , ANNOUNCER_GRAVANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Gravitational anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert" , ANNOUNCER_GRANOMALIES)

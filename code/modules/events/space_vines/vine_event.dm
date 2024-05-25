@@ -5,7 +5,7 @@
 	max_occurrences = 3
 	min_players = 10
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Kudzu begins to overtake the station. Might spawn man-traps."
+	description = "Kudzu начинает обгонять станцию. Могут создать ловушки для людей."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 	admin_setup = list(

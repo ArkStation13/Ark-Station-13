@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(all_wormholes) // So we can pick wormholes to teleport to
 	weight = 2
 	min_players = 2
 	category = EVENT_CATEGORY_SPACE
-	description = "Space time anomalies appear on the station, randomly teleporting people who walk into them."
+	description = "На станции появляются пространственно-временные аномалии, случайным образом телепортирующие заходящих в них людей."
 	min_wizard_trigger_potency = 3
 	max_wizard_trigger_potency = 7
 
@@ -34,7 +34,7 @@ GLOBAL_LIST_EMPTY(all_wormholes) // So we can pick wormholes to teleport to
 		wormholes += new /obj/effect/portal/wormhole(T, 0, null, FALSE)
 
 /datum/round_event/wormholes/announce(fake)
-	priority_announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", ANNOUNCER_SPANOMALIES)
+	priority_announce("На станции обнаружены пространственно-временные аномалии. Дополнительных данных нет.", "Anomaly Alert", ANNOUNCER_SPANOMALIES)
 
 /datum/round_event/wormholes/tick()
 	if(activeFor % shift_frequency == 0)

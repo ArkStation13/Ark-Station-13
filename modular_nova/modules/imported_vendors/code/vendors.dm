@@ -31,11 +31,11 @@
 
 /obj/machinery/vending/imported/nt
 	name = "NT Sustenance Supplier"
-	desc = "A vending machine serving up only the finest of human college student food."
+	desc = "Торговый автомат, предлагающий только лучшую еду для студентов колледжа."
 	icon_state = "nt_food"
 	light_mask = "nt_food-light-mask"
 	light_color = LIGHT_COLOR_LIGHT_CYAN
-	product_slogans = "Caution, contents may be selling hot!;Look at these low prices!;Hungry? Me too- Wait, no, you didn't hear that!"
+	product_slogans = "Осторожно, содержимое может продаваться очень жарко!;Посмотрите на эти низкие цены!;Голодны? Я тоже- Подожди, нет, ты этого не слышал!"
 	product_categories = list(
 		list(
 			"name" = "Snacks",
@@ -69,15 +69,15 @@
 	refill_canister = /obj/item/vending_refill/snack/imported/nt
 
 /obj/item/vending_refill/snack/imported/nt
-	machine_name = "NT Sustenance Supplier"
+	machine_name = "NT Поставщик продуктов питания"
 
 /obj/machinery/vending/imported/yangyu
 	name = "Fudobenda"
-	desc = "A vendor selling traditional Sol eastern foods of dubious quality."
+	desc = "Продавец, торгующий традиционными восточными продуктами Sol сомнительного качества."
 	icon_state = "yangyu_food"
 	light_mask = "yangyu_food-light-mask"
 	light_color = LIGHT_COLOR_FLARE
-	product_slogans = "Fresh farmed space carp from local space!;Imitation lobstrocity sushi choices availible!;Made with traditional recipes and care!"
+	product_slogans = "Свежий выращенный на ферме космический карп из местных космосов!;Доступны суши, имитирующие омара!;Сделано по традиционным рецептам и с заботой!"
 	product_categories = list(
 		list(
 			"name" = "Snacks",
@@ -121,7 +121,7 @@
 
 /obj/machinery/vending/imported/yangyu/examine_more(mob/user)
 	. = ..()
-	. += span_notice("Someone appears to have written <i>\"Don't trust the sushi!\"</i> in marker on the side of the vendor.")
+	. += span_notice("Кажется кто-то написал <i>\"Не верьте суши!\"</i> в маркере на стороне продавца.")
 	return .
 
 /obj/item/vending_refill/snack/imported/yangyu
@@ -129,11 +129,11 @@
 
 /obj/machinery/vending/imported/mothic
 	name = "Nomad Fleet Ration Chit Exchange"
-	desc = "One of the Nomad Fleet's own ration vendors; in spite of the name engraved into it, it's been fitted to accept credits."
+	desc = "Один из продавцов продовольствия Кочевого флота; несмотря на выгравированное на нем имя, он приспособлен для приема кредитов."
 	icon_state = "moth_food"
 	light_mask = "moth_food-light-mask"
 	light_color = LIGHT_COLOR_HALOGEN
-	product_slogans = "Support the fleet, conserve rations today!;Some options in reduced portion and cost!;Do your part to keep the fleet flying!"
+	product_slogans = "Поддержите флот, сэкономьте пайки сегодня!;Некоторые варианты со сниженной порцией и стоимостью!;Внесите свой вклад, чтобы флот продолжал летать!"
 	product_categories = list(
 		list(
 			"name" = "Snacks",
@@ -176,15 +176,15 @@
 		)
 
 /obj/item/vending_refill/snack/imported/mothic
-	machine_name = "Nomad Fleet Ration Chit Exchange"
+	machine_name = "Nomad Fleet Рационно Счётовая Биржа"
 
 /obj/machinery/vending/imported/tiziran
 	name = "Tiziran Imported Delicacies"
-	desc = "A vendor serving a fine collection of what is very likely knock-offs of popular Tiziran brands."
+	desc = "Продавец, предлагающий прекрасную коллекцию подделок популярных Tiziran брендов.."
 	icon_state = "tizira_food"
 	light_mask = "tizira_food-light-mask"
 	light_color = LIGHT_COLOR_FIRE
-	product_slogans = "Real imports from the capital itself, we promise!;Rare selections of salt water catch!;Moonfish glaze included with all meat options!"
+	product_slogans = "Настоящий импорт из самой столицы, честно-честно!; Редкие сорта улова в соленой воде!; Глазурь из лунной рыбы включена во все варианты мяса!"
 	product_categories = list(
 		list(
 			"name" = "Snacks",
@@ -226,4 +226,4 @@
 		)
 
 /obj/item/vending_refill/snack/imported/tiziran
-	machine_name = "Tiziran Imported Delicacies"
+	machine_name = "Tiziran Импортные Деликатесы"

@@ -5,7 +5,7 @@
 	min_players = 20
 	max_occurrences = 2
 	weight = 10
-	description = "This anomaly sucks in and detonates items."
+	description = "Эта аномалия засасывает и взрывает предметы."
 	min_wizard_trigger_potency = 3
 	max_wizard_trigger_potency = 7
 
@@ -17,4 +17,4 @@
 /datum/round_event/anomaly/anomaly_vortex/announce(fake)
 	if(isnull(impact_area))
 		impact_area = placer.findValidArea()
-	priority_announce("Localized high-intensity vortex anomaly detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name]", "Anomaly Alert", ANNOUNCER_VORTEXANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Localized high-intensity vortex anomaly detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name]", "Anomaly Alert")
+	priority_announce("Локализованная вихревая аномалия высокой интенсивности обнаружена в [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name]", "Anomaly Alert", ANNOUNCER_VORTEXANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Localized high-intensity vortex anomaly detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name]", "Anomaly Alert")

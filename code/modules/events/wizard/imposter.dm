@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/imposter
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Spawns a doppelganger of the wizard."
+	description = "Создает двойника волшебника."
 	min_wizard_trigger_potency = 2
 	max_wizard_trigger_potency = 7
 
@@ -13,7 +13,7 @@
 		if(!ishuman(M.current))
 			continue
 		var/mob/living/carbon/human/W = M.current
-		var/mob/chosen_one = SSpolling.poll_ghost_candidates("Would you like to be an [span_notice("imposter wizard")]?", check_jobban = ROLE_WIZARD, alert_pic = /obj/item/clothing/head/wizard, jump_target = W, role_name_text = "imposter wizard", amount_to_pick = 1)
+		var/mob/chosen_one = SSpolling.poll_ghost_candidates("Хотели бы вы быть [span_notice("imposter wizard")]?", check_jobban = ROLE_WIZARD, alert_pic = /obj/item/clothing/head/wizard, jump_target = W, role_name_text = "imposter wizard", amount_to_pick = 1)
 		if(isnull(chosen_one))
 			return //Sad Trombone
 		new /obj/effect/particle_effect/fluid/smoke(W.loc)

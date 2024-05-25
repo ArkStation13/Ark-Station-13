@@ -5,7 +5,7 @@
 	min_players = 5
 	weight = 20
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Destroys all lights in a large area."
+	description = "Уничтожает все источники света на большой площади.."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 
@@ -15,7 +15,7 @@
 	announce_when = 1
 
 /datum/round_event/electrical_storm/announce(fake)
-	priority_announce("An electrical storm has been detected in your area, please repair potential electronic overloads.", "Electrical Storm Alert", ANNOUNCER_ELECTRICALSTORM) //NOVA EDIT CHANGE
+	priority_announce("В вашем районе обнаружена гроза, устраните возможную перегрузку электроники.", "Electrical Storm Alert", ANNOUNCER_ELECTRICALSTORM) //NOVA EDIT CHANGE
 
 
 /datum/round_event/electrical_storm/start()

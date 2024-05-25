@@ -6,7 +6,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_INVASION
-	description = "One or more abductor teams spawns, and they plan to experiment on the crew."
+	description = "Появляется одна или несколько команд похитителей, и они планируют провести эксперименты над командой."
 
 /datum/round_event/ghost_role/abductor
 	minimum_required = 2

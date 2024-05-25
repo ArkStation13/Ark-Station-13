@@ -78,21 +78,21 @@
 	phrases_to_return += read_memory() // must come first!!!
 	// now add some valuable lines every poly should have
 	phrases_to_return += list(
-		":e Check the crystal, you chucklefucks!",
-		":e OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE",
-		":e WHO TOOK THE DAMN MODSUITS?",
-		":e Wire the solars, you lazy bums!",
-		"Poly wanna cracker!",
+		":e Проверьте кристалл, ебланы!",
+		":e О БОЖЕ, ОН ВОТ-ВОТ РАССЛОИТСЯ, ВЫЗЫВАЙТЕ ШАТТЛ.",
+		":e КТО ЗАБРАЛ ЭТИ ЧЕРТОВЫ КОСТЮМЫ?",
+		":e Подключите солары, ленивые бездельники!",
+		"Поли, хочет крекер!",
 	)
 	switch(determine_special_poly())
 		if(POLY_DEFAULT)
-			phrases_to_return += pick("...alive?", "This isn't parrot heaven!", "I live, I die, I live again!", "The void fades!")
+			phrases_to_return += pick("...живой?", "Это не рай для попугаев!", "Я живу, я умираю, я снова живу!", "Пустота исчезает!")
 		if(POLY_LONGEST_SURVIVAL)
-			phrases_to_return += pick("...[longest_survival].", "The things I've seen!", "I have lived many lives!", "What are you before me?")
+			phrases_to_return += pick("...[longest_survival].", "Чего я только не повидал!", "Я прожил много жизней!", "Кто ты есть передо мной?")
 		if(POLY_BEATING_DEATHSTREAK)
-			phrases_to_return += pick("What are you waiting for!", "Violence breeds violence!", "Blood! Blood!", "Strike me down if you dare!")
+			phrases_to_return += pick("Чего вы ждете!", "Насилие порождает насилие!", "Кровь! Кровь!", "Поразите меня, если посмеете!")
 		if(POLY_CONSECUTIVE_ROUND)
-			phrases_to_return += pick("...again?", "No, It was over!", "Let me out!", "It never ends!")
+			phrases_to_return += pick("...снова?", "Нет, все закончилось!", "Выпустите меня!", "Это никогда не кончается!")
 
 	return phrases_to_return
 
@@ -149,40 +149,42 @@
 	else
 		return POLY_DEFAULT
 
+/// Процедура для записи данных в JSON файл.
 /mob/living/basic/parrot/poly/Write_Memory(dead, gibbed)
-	. = ..()
-	if(!. || memory_saved) // if we die, no more memory
-		return FALSE
+    . = ..()
+    if(!. || memory_saved) // если мы умерли, больше не запоминаем
+        return FALSE
 
-	if(!dead && (stat != DEAD))
-		dead = FALSE
+    if(!dead && (stat != DEAD))
+        dead = FALSE
 
-	var/file_path = "data/npc_saves/Poly.json"
-	var/list/file_data = list()
+    var/file_path = "data/npc_saves/Poly.json"
+    var/list/file_data = list()
 
-	var/list/exportable_speech_buffer = ai_controller.blackboard[BB_EXPORTABLE_STRING_BUFFER_LIST] // should have been populated when we sent the signal out on parent
-	if(!!length(exportable_speech_buffer))
-		file_data["phrases"] = exportable_speech_buffer
+    var/list/exportable_speech_buffer = ai_controller.blackboard[BB_EXPORTABLE_STRING_BUFFER_LIST] // должен быть заполнен, когда мы отправили сигнал на родителя
+    if(!!length(exportable_speech_buffer))
+        file_data["phrases"] = exportable_speech_buffer
 
-	if(dead)
-		file_data["roundssurvived"] = min(rounds_survived - 1, 0)
-		file_data["longestsurvival"] = longest_survival
-		if(rounds_survived - 1 < longest_deathstreak)
-			file_data["longestdeathstreak"] = rounds_survived - 1
-		else
-			file_data["longestdeathstreak"] = longest_deathstreak
-	else
+    if(dead)
+        file_data["roundssurvived"] = min(rounds_survived - 1, 0)
+        file_data["longestsurvival"] = longest_survival
+        if(rounds_survived - 1 < longest_deathstreak)
+            file_data["longestdeathstreak"] = rounds_survived - 1
+        else
+            file_data["longestdeathstreak"] = longest_deathstreak
+    else
+        file_data["roundssurvived"] = max(rounds_survived, 0) + 1
+        if(rounds_survived + 1 > longest_survival)
+            file_data["longestsurvival"] = rounds_survived + 1
+        else
+            file_data["longestsurvival"] = longest_survival
+        file_data["longestdeathstreak"] = longest_deathstreak
 
-		file_data["roundssurvived"] = max(rounds_survived, 0) + 1
-		if(rounds_survived + 1 > longest_survival)
-			file_data["longestsurvival"] = rounds_survived + 1
-		else
-			file_data["longestsurvival"] = longest_survival
-		file_data["longestdeathstreak"] = longest_deathstreak
-
-	rustg_file_write(json_encode(file_data, JSON_PRETTY_PRINT), file_path)
-	memory_saved = TRUE
-	return TRUE
+    /// Используем JSON_PRETTY_PRINT и уверяемся в использовании UTF-8.
+    var/json_text = json_encode(file_data, JSON_PRETTY_PRINT)
+    rustg_file_write(json_text, file_path)
+    memory_saved = TRUE
+    return TRUE
 
 /mob/living/basic/parrot/poly/setup_headset()
 	ears = new /obj/item/radio/headset/headset_eng(src)

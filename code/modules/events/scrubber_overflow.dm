@@ -5,7 +5,7 @@
 	max_occurrences = 3
 	min_players = 10
 	category = EVENT_CATEGORY_JANITORIAL
-	description = "The scrubbers release a tide of mostly harmless froth."
+	description = "Скрубберы выпускают прилив в основном безвредной пены."
 	admin_setup = list(/datum/event_admin_setup/listed_options/scrubber_overflow)
 
 /datum/round_event/scrubber_overflow
@@ -64,10 +64,10 @@
 	if(!forced_reagent_type)
 		//nothing out of the ordinary, so default announcement
 		return ..()
-	deadchat_broadcast(" has just been[random ? " randomly" : ""] triggered[cause ? " by [cause]" : ""]!", "<b>Scrubber Overflow: [initial(forced_reagent_type.name)]</b>", message_type=DEADCHAT_ANNOUNCEMENT)
+	deadchat_broadcast(" только что был[random ? " randomly" : ""] вызванный[cause ? " из-за [cause]" : ""]!", "<b>Scrubber Overflow: [initial(forced_reagent_type.name)]</b>", message_type=DEADCHAT_ANNOUNCEMENT)
 
 /datum/round_event/scrubber_overflow/announce(fake)
-	priority_announce("The scrubbers network is experiencing a backpressure surge. Some ejection of contents may occur.", "[command_name()] Engineering Division")
+	priority_announce("Сеть скрубберов испытывает скачок противодавления. Возможен некоторый выброс содержимого.", "[command_name()] Engineering Division")
 
 /datum/round_event/scrubber_overflow/setup()
 	for(var/obj/machinery/atmospherics/components/unary/vent_scrubber/temp_vent as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/atmospherics/components/unary/vent_scrubber))
@@ -107,7 +107,7 @@
 /datum/round_event/scrubber_overflow/start()
 	for(var/obj/machinery/atmospherics/components/unary/vent_scrubber/vent as anything in scrubbers)
 		if(!vent.loc)
-			CRASH("SCRUBBER SURGE: [vent] has no loc somehow?")
+			CRASH("SCRUBBER SURGE: [vent] не имеет места, так или иначе?")
 
 		var/datum/reagents/dispensed_reagent = new /datum/reagents(reagents_amount)
 		dispensed_reagent.my_atom = vent
@@ -131,7 +131,7 @@
 	min_players = 25
 	max_occurrences = 1
 	earliest_start = 35 MINUTES
-	description = "The scrubbers release a tide of moderately harmless froth."
+	description = "Скрубберы выпускают прилив умеренно безвредной пены."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 
@@ -146,7 +146,7 @@
 	min_players = 35
 	max_occurrences = 1
 	earliest_start = 45 MINUTES
-	description = "The scrubbers release a tide of mildly harmless froth."
+	description = "Скрубберы выпускают прилив мягкой безвредной пены."
 	min_wizard_trigger_potency = 3
 	max_wizard_trigger_potency = 6
 
@@ -159,7 +159,7 @@
 	typepath = /datum/round_event/scrubber_overflow/every_vent
 	weight = 0
 	max_occurrences = 0
-	description = "The scrubbers release a tide of mostly harmless froth, but every scrubber is affected."
+	description = "Скрубберы выбрасывают поток в основном безвредной пены, но каждый скруббер подвержен ее воздействию."
 
 /datum/round_event/scrubber_overflow/every_vent
 	overflow_probability = 100

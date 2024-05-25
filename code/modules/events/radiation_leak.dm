@@ -1,7 +1,7 @@
 /datum/round_event_control/radiation_leak
 	name = "Radiation Leak"
-	description = "A radiation leak happens somewhere on the station, emanating radiation around a machine in the area. \
-		Engineering can stop the leak by using certain tools on it."
+	description = "Где-то на станции происходит утечка радиации, излучаемая машиной, находящейся поблизости.. \
+		Инженеры могут остановить утечку, используя для этого определенные инструменты."
 	typepath = /datum/round_event/radiation_leak
 	weight = 15
 	max_occurrences = 3
@@ -58,9 +58,9 @@
 	else if(the_source_of_our_problems)
 		location_descriptor = get_area(the_source_of_our_problems)
 
-	priority_announce("A radiation leak has been detected in [location_descriptor || "an unknown area"]. \
-		All crew are to evacuate the affected area. Our [pick("mechanics", "engineers", "scientists", "interns", "sensors", "readings")] \
-		report that a machine within is causing it - repair it quickly to stop the leak.", "[command_name()] Engineering Division")
+	priority_announce("Обнаружена утечка радиации в [location_descriptor || "неизвестная территория"]. \
+			Все члены экипажа должны эвакуироваться из зоны поражения. Наши [pick("механики", "инженеры", "учёные", "интерны", "сенсоры", "readings")] \
+		сообщите, что причиной является неисправность машины, - быстро устраните ее, чтобы остановить утечку.", "[command_name()] Engineering Division")
 
 /datum/round_event/radiation_leak/start()
 	var/obj/machinery/the_source_of_our_problems = picked_machine_ref?.resolve()

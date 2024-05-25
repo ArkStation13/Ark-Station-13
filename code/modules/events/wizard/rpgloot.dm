@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/wizard/rpgloot
 	max_occurrences = 1
 	earliest_start = 0 MINUTES
-	description = "Every item in the world will have fantastical names."
+	description = "У каждого предмета в мире будут фантастические названия."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 
@@ -13,7 +13,7 @@
 
 /obj/item/upgradescroll
 	name = "item fortification scroll"
-	desc = "Somehow, this piece of paper can be applied to items to make them \"better\". Apparently there's a risk of losing the item if it's already \"too good\". <i>This all feels so arbitrary...</i>"
+	desc = "Каким-то образом этот листок бумаги можно применить к предметам, чтобы сделать их \"лучше\". Видимо, есть риск потерять вещь, если она и так \"слишком хороша\". <i>Все это кажется таким произвольным...</i>"
 	icon = 'icons/obj/scrolls.dmi'
 	icon_state = "scroll"
 	worn_icon_state = "scroll"
@@ -48,7 +48,7 @@
 
 /obj/item/upgradescroll/unlimited
 	name = "unlimited foolproof item fortification scroll"
-	desc = "Somehow, this piece of paper can be applied to items to make them \"better\". This scroll is made from the tongues of dead paper wizards, and can be used an unlimited number of times, with no drawbacks."
+	desc = "Каким-то образом этот листок бумаги можно применить к предметам, чтобы сделать их \"лучше\". Этот свиток сделан из языков мертвых бумажных волшебников, и его можно использовать неограниченное количество раз без каких-либо недостатков."
 	uses = INFINITY
 	can_backfire = FALSE
 

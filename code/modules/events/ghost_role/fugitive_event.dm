@@ -7,7 +7,7 @@
 	min_players = 20
 	earliest_start = 30 MINUTES //deadchat sink, lets not even consider it early on.
 	category = EVENT_CATEGORY_INVASION
-	description = "Fugitives will hide on the station, followed by hunters."
+	description = "На станции скроются беглецы, за которыми последуют охотники."
 	map_flags = EVENT_SPACE_ONLY
 
 /datum/round_event/ghost_role/fugitives
@@ -152,6 +152,6 @@
 					header = "Spawn Here!",
 				)
 
-	priority_announce("Unidentified ship detected near the station.")
+	priority_announce("Рядом со станцией обнаружен неопознанный корабль.")
 
 #undef TEAM_BACKSTORY_SIZE

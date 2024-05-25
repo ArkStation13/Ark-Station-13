@@ -5,7 +5,7 @@
 	max_occurrences = 2
 	min_players = 40 // To avoid shafting lowpop
 	category = EVENT_CATEGORY_HEALTH
-	description = "A random crewmember's heart gives out."
+	description = "У случайного члена экипажа отказывает сердце."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
 	admin_setup = list(/datum/event_admin_setup/minimum_candidate_requirement/heart_attack, /datum/event_admin_setup/input_number/heart_attack)
@@ -69,13 +69,13 @@
 /datum/round_event/heart_attack/proc/attack_heart()
 	var/mob/living/carbon/human/winner = pick_weight(victims)
 	if(winner.has_status_effect(/datum/status_effect/exercised)) //Stuff that should "block" a heart attack rather than just deny eligibility for one goes here.
-		winner.visible_message(span_warning("[winner] grunts and clutches their chest for a moment, catching [winner.p_their()] breath."), span_medal("Your chest lurches in pain for a brief moment, which quickly fades. \
-								You feel like you've just avoided a serious health disaster."), span_hear("You hear someone's breathing sharpen for a moment, followed by a sigh of relief."), 4)
+		winner.visible_message(span_warning("[winner] кряхтит и на мгновение хватается за грудь, ловя [winner.p_their()] дыхание."), span_medal("На короткое время ваша грудь сжимается от боли, которая быстро стихает. \
+								Вы чувствуете, что только что избежали серьезной катастрофы со здоровьем."), span_hear("Вы слышите, как чье-то дыхание на мгновение учащается, а затем следует вздох облегчения."), 4)
 		winner.playsound_local(get_turf(winner), 'sound/health/slowbeat.ogg', 40, 0, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 		winner.Stun(3 SECONDS)
 		if(winner.client)
 			winner.client.give_award(/datum/award/achievement/misc/healthy, winner)
-		message_admins("[winner] has just survived a random heart attack!") //time to spawn them a trophy :)
+		message_admins("[winner] только что пережил случайный сердечный приступ!") //time to spawn them a trophy :)
 		victims -= winner
 	else
 		var/datum/disease/heart_disease = new /datum/disease/heart_failure()

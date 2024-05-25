@@ -6,7 +6,7 @@
 	earliest_start = 0 MINUTES
 	alert_observers = FALSE
 	category = EVENT_CATEGORY_SPACE
-	description = "A single space dust is hurled at the station."
+	description = "На станцию летит одинокая космическая пыль."
 	map_flags = EVENT_SPACE_ONLY
 
 /datum/round_event/space_dust

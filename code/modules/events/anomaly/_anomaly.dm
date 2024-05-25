@@ -6,7 +6,7 @@
 	max_occurrences = 0 //This one probably shouldn't occur! It'd work, but it wouldn't be very fun.
 	weight = 15
 	category = EVENT_CATEGORY_ANOMALIES
-	description = "This anomaly shocks and explodes. This is the base type."
+	description = "Эта аномалия потрясает и взрывается. Это базовый тип."
 	admin_setup = list(/datum/event_admin_setup/set_location/anomaly)
 
 /datum/round_event/anomaly
@@ -28,7 +28,7 @@
 /datum/round_event/anomaly/announce(fake)
 	if(isnull(impact_area))
 		impact_area = placer.findValidArea()
-	priority_announce("Energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert", ANNOUNCER_ANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
+	priority_announce("Волна энергетического потока обнаружена в [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert", ANNOUNCER_ANOMALIES) //NOVA EDIT CHANGE - ORIGINAL: priority_announce("Energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
 
 /datum/round_event/anomaly/start()
 	var/turf/anomaly_turf

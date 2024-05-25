@@ -6,7 +6,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns spider eggs, ready to hatch."
+	description = "Создаёт паучьи яйца, готовые вылупиться."
 	min_wizard_trigger_potency = 5
 	max_wizard_trigger_potency = 7
 
@@ -18,7 +18,7 @@
 	announce_when = rand(announce_when, announce_when + 50)
 
 /datum/round_event/spider_infestation/announce(fake)
-	priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", ANNOUNCER_ALIENS)
+	priority_announce("Обнаружены неопознанные признаки жизни, приближающиеся к борту [station_name()]. Обезопасьте любой внешний доступ, включая воздуховоды и вентиляцию.", "Lifesign Alert", ANNOUNCER_ALIENS)
 
 /datum/round_event/spider_infestation/start()
 	create_midwife_eggs(spawncount)
@@ -31,6 +31,6 @@
 		var/obj/effect/mob_spawn/ghost_role/spider/midwife/new_eggs = new (spawn_loc)
 		new_eggs.amount_grown = 98
 		amount--
-	log_game("Midwife spider eggs were spawned via an event.")
+	log_game("Яйца Midwife spider были созданы в результате ивента.")
 	return TRUE
 

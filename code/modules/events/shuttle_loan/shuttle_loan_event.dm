@@ -5,7 +5,7 @@
 	max_occurrences = 3
 	earliest_start = 7 MINUTES
 	category = EVENT_CATEGORY_BUREAUCRATIC
-	description = "If cargo accepts the offer, fills the shuttle with loot and/or enemies."
+	description = "Если груз принимает предложение, наполняет шаттл добычей и/или врагами."
 	///The types of loan events already run (and to be excluded if the event triggers).
 	admin_setup = list(/datum/event_admin_setup/listed_options/shuttle_loan)
 	///A list of normally unavailable (or already run) situations datums

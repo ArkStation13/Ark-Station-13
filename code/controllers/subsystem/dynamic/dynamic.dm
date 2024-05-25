@@ -362,11 +362,11 @@ SUBSYSTEM_DEF(dynamic)
 #ifndef MAP_TEST
 	print_command_report(., "[command_name()] Status Summary", announce=FALSE)
 	// if(greenshift)
-	priority_announce("Welcome to Ark Station 13! Intelligence has not detected any threat to the Station at this time, but you should keep your ears open! All station construction projects have been authorized. Have a secure shift!", "Security Report", SSstation.announcer.get_rand_report_sound(), color_override = "green")
+	priority_announce("Добро пожаловать на станцию Ark Station 13! На данный момент разведка не обнаружила никакой угрозы для станции, но вам следует держать ухо востро! Все строительные проекты на станции разрешены. Удачной смены!", "Security Report", SSstation.announcer.get_rand_report_sound(), color_override = "green")
 	// else
 	// 	if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_BLUE)
 	// 		SSsecurity_level.set_level(SEC_LEVEL_BLUE, announce = FALSE)
-	// 	priority_announce("[SSsecurity_level.current_security_level.elevating_to_announcement]\n\nA summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT, color_override = SSsecurity_level.current_security_level.announcement_color)
+	// 	priority_announce("[SSsecurity_level.current_security_level.elevating_to_announcement]\n\nСводка была скопирована и распечатана на всех пультах связи.", "Security level elevated.", ANNOUNCER_INTERCEPT, color_override = SSsecurity_level.current_security_level.announcement_color)
 #endif
 
 	return .

@@ -1,7 +1,7 @@
 /// "What the fuck was that?!"
 /obj/effect/immovablerod
 	name = "immovable rod"
-	desc = "What the fuck is that?"
+	desc = "Что это за хуйня?"
 	icon = 'icons/obj/anomaly.dmi'
 	icon_state = "immrod"
 	throwforce = 100

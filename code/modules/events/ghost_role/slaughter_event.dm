@@ -7,7 +7,7 @@
 	min_players = 20
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Spawns a slaughter demon, to hunt by travelling through pools of blood."
+	description = "Создает демона-убийцу, который охотится, путешествуя по лужам крови."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
 

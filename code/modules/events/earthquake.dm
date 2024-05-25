@@ -4,7 +4,7 @@
 ///that aren't moved out of the epicenter area (indicated by the wobbly tiles) will not just be thrown down a z-level, but also be destroyed/maimed in the process.
 /datum/round_event_control/earthquake
 	name = "Chasmic Earthquake"
-	description = "Causes an earthquake, demolishing anything caught in the fault."
+	description = "Вызывает землетрясение, разрушающее все, что попало в разлом."
 	typepath = /datum/round_event/earthquake
 	category = EVENT_CATEGORY_ENGINEERING
 	min_players = 20
@@ -40,7 +40,7 @@
 /datum/round_event/earthquake/setup()
 	epicenter = get_turf(pick(GLOB.generic_event_spawns))
 	if(!epicenter)
-		message_admins("Earthquake event failed to find a turf! generic_event_spawn landmarks may be absent or bugged. Aborting...")
+		message_admins("Событие землетрясения не смогло найти газон! Ориентиры generic_event_spawn могут отсутствовать или содержать ошибки. Отмена...")
 		return
 
 	// Give a bit of variance so our epicenter isn't always on the landmark.
@@ -90,7 +90,7 @@
 		underbelly += GET_TURF_BELOW(turf_to_quake)
 
 /datum/round_event/earthquake/announce(fake)
-	priority_announce("Planetary monitoring systems indicate a devastating seismic event in the near future.", "Seismic Report")
+	priority_announce("Системы планетарного мониторинга указывают на разрушительное сейсмическое событие в ближайшем будущем.", "Seismic Report")
 
 /datum/round_event/earthquake/start()
 	notify_ghosts(

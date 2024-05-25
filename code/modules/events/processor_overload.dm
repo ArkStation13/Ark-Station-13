@@ -4,17 +4,17 @@
 	weight = 15
 	min_players = 20
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Emps the telecomm processors, scrambling radio speech. Might blow up a few."
+	description = "Усиливает процессоры телекома, скремблируя радиоречь. Может взорвать несколько."
 
 /datum/round_event/processor_overload
 	announce_when = 1
 
 /datum/round_event/processor_overload/announce(fake)
-	var/alert = pick("Exospheric bubble inbound. Processor overload is likely. Please contact you*%xp25)`6cq-BZZT",
-		"Exospheric bubble inbound. Processor overload is likel*1eta;c5;'1v¬-BZZZT",
-		"Exospheric bubble inbound. Processor ov#MCi46:5.;@63-BZZZZT",
-		"Exospheric bubble inbo'Fz\\k55_@-BZZZZZT",
-		"Exospheri:%£ QCbyj^j</.3-BZZZZZZT",
+	var/alert = pick("Приближается экзосферный пузырь. Возможна перегрузка процессора. Пожалуйста, свяжитесь с ваши*%xp25)`6cq-BZZT",
+		"Приближается экзосферный пузырь. Возможна перегрузка процессора*1eta;c5;'1v¬-BZZZT",
+		"Приближается экзосферный пузырь. Возможна пере ov#MCi46:5.;@63-BZZZZT",
+		"Приближается экзосферный пу'Fz\\k55_@-BZZZZZT",
+		"Экзосфер:%£ QCbyj^j</.3-BZZZZZZT",
 		"!!hy%;f3l7e,<$^-BZZZZZZZT",
 	)
 

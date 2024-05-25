@@ -7,7 +7,7 @@
 	typepath = /datum/round_event/wizard/shuffleloc
 	max_occurrences = 5
 	earliest_start = 0 MINUTES
-	description = "Shuffles everyone around on the station."
+	description = "Перетасовывает всех на станции."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 7
 
@@ -46,7 +46,7 @@
 	typepath = /datum/round_event/wizard/shufflenames
 	max_occurrences = 5
 	earliest_start = 0 MINUTES
-	description = "Shuffles the names of everyone around the station."
+	description = "Перетасовывает имена всех на станции."
 
 /datum/round_event/wizard/shufflenames/start()
 	var/list/mobnames = list()
@@ -81,7 +81,7 @@
 	typepath = /datum/round_event/wizard/shuffleminds
 	max_occurrences = 3
 	earliest_start = 0 MINUTES
-	description = "Shuffles the minds of everyone around the station, except for the wizard."
+	description = "Перетасовывает сознание всех на станции, кроме волшебника."
 
 /datum/round_event/wizard/shuffleminds/start()
 	var/list/mobs_to_swap = list()
