@@ -803,3 +803,9 @@
     name = "Drop Pouch"
     item_path = /obj/item/storage/backpack/satchel/drop_pouch
     // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor")
+
+/datum/loadout_item/inhand/melonseva
+	name = "Sundowner SEVA"
+	item_path = /obj/item/clothing/suit/hooded/seva/melon
+	// ARK STATION REMOVE: ckeywhitelist = list("deadmonwonderland")
+	restricted_roles = list(JOB_SHAFT_MINER)
