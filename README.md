@@ -1,6 +1,6 @@
 ## Ark Station 13 (Nova Sector => /tg/station Downstream)
 
-[![CI Suite](https://github.com/ArkStation13/Ark-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/ArkStation13/Ark-Station-13/actions?query=workflow%3A%22CI+Suite%22)
+[![CI Suite](https://github.com/ArkStation13/Ark-Station-13/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/ArkStation13/Ark-Station-13/actions/workflows/ci_suite.yml)
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/ArkStation13/Ark-Station-13.svg)](https://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Percentage of issues still open")
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/ArkStation13/Ark-Station-13.svg)](https://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Average time to resolve an issue")
 ![Coverage](https://img.shields.io/codecov/c/github/ArkStation13y/Ark-Station-13)
