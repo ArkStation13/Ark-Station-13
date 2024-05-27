@@ -1,9 +1,8 @@
 ## Ark Station 13 (Nova Sector => /tg/station Downstream)
 
-[![CI Suite](https://github.com/ArkStation13/Ark-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/ArkStation13/Ark-Station-13/actions?query=workflow%3A%22CI+Suite%22)
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/ArkStation13/Ark-Station-13.svg)](https://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Percentage of issues still open")
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/ArkStation13/Ark-Station-13.svg)](https://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Average time to resolve an issue")
-![Coverage](https://img.shields.io/codecov/c/github/ArkStation13y/Ark-Station-13)
+[![CI Suite](https://github.com/ArkStation13/Ark-Station-13/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/ArkStation13/Ark-Station-13/actions/workflows/ci_suite.yml)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/ArkStation13/Ark-Station-13.svg)](http://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/ArkStation13/Ark-Station-13.svg)](http://isitmaintained.com/project/ArkStation13/Ark-Station-13 "Average time to resolve an issue")
 
 [![resentment](.github/images/badges/built-with-resentment.svg)](.github/images/comics/131-bug-free.png) [![technical debt](.github/images/badges/contains-technical-debt.svg)](.github/images/comics/106-tech-debt-modified.png) [![forinfinityandbyond](.github/images/badges/made-in-byond.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
