@@ -470,23 +470,15 @@ const GenitalSlotsTab = () => {
                         content={
                           element.img ? (
                             <img
-                              style={{
-                                'margin-left': 'auto',
-                                'margin-right': 'auto',
-                                height: '100%',
-                                width: '100%',
-                              }}
+                              style={{}}
                               src={'data:image/png;base64,' + element.img}
                             />
                           ) : (
                             <Icon
                               style={{
-                                'margin-left': 'auto',
-                                'margin-right': 'auto',
+                                margin: 'auto',
                                 height: '100%',
                                 width: '100%',
-                                'align-items': 'center',
-                                'justify-content': 'center',
                                 top: '20px',
                                 right: '1px',
                               }}
@@ -533,12 +525,7 @@ const GenitalSlotsTab = () => {
                         content={
                           target_element.img ? (
                             <img
-                              style={{
-                                'margin-left': 'auto',
-                                'margin-right': 'auto',
-                                height: '100%',
-                                width: '100%',
-                              }}
+                              style={{}}
                               src={
                                 'data:image/png;base64,' + target_element.img
                               }
@@ -546,12 +533,9 @@ const GenitalSlotsTab = () => {
                           ) : (
                             <Icon
                               style={{
-                                'margin-left': 'auto',
-                                'margin-right': 'auto',
+                                margin: 'auto',
                                 height: '100%',
                                 width: '100%',
-                                'align-items': 'center',
-                                'justify-content': 'center',
                                 top: '20px',
                                 right: '1px',
                               }}
