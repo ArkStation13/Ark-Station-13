@@ -139,10 +139,10 @@ export const InteractionMenuArk = () => {
                     You...
                     <br />
                     {theirAttributes.map((attribute) => (
-                      <div key={attribute}>
+                      <Box key={attribute}>
                         {attribute}
                         <br />
-                      </div>
+                      </Box>
                     ))}
                   </BlockQuote>
                 </Table.Cell>
@@ -152,10 +152,10 @@ export const InteractionMenuArk = () => {
                       They...
                       <br />
                       {selfAttributes.map((attribute) => (
-                        <div key={attribute}>
+                        <Box key={attribute}>
                           {attribute}
                           <br />
-                        </div>
+                        </Box>
                       ))}
                     </BlockQuote>
                   </Table.Cell>
@@ -177,7 +177,10 @@ export const InteractionMenuArk = () => {
             <Stack.Item grow>
               <LabeledList>
                 {TargetPoloska.map((targetpoloska, index) => (
-                  <LabeledList.Item label={PoloskiName[index]}>
+                  <LabeledList.Item
+                    key={PoloskiName[index]}
+                    label={PoloskiName[index]}
+                  >
                     <ProgressBar
                       mt={'0.5px'}
                       mb={'3px'}
@@ -197,19 +200,21 @@ export const InteractionMenuArk = () => {
 
             {!isTargetSelf ? (
               <Stack.Item grow>
-                {SelfPoloska.map((selfpoloska) => (
-                  <ProgressBar
-                    mt={'0.5px'}
-                    mb={'8.76px'}
-                    minValue={0}
-                    maxValue={100}
-                    ranges={{
-                      purple: [67, 100],
-                      violet: [34, 66],
-                      blue: [0, 33],
-                    }}
-                    value={selfpoloska}
-                  />
+                {SelfPoloska.map((selfpoloska, index) => (
+                  <Box key={selfpoloska[index]}>
+                    <ProgressBar
+                      mt={'0.5px'}
+                      mb={'8.76px'}
+                      minValue={0}
+                      maxValue={100}
+                      ranges={{
+                        purple: [67, 100],
+                        violet: [34, 66],
+                        blue: [0, 33],
+                      }}
+                      value={selfpoloska}
+                    />
+                  </Box>
                 ))}
               </Stack.Item>
             ) : null}
