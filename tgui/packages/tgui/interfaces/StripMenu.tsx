@@ -287,7 +287,7 @@ export const StripMenu = (props) => {
   }
 
   return (
-    <Window title={`Stripping ${data.name}`} width={400} height={400}>
+    <Window title={`Stripping ${data.name}`} width={352} height={350}>
       <Window.Content>
         <Stack fill vertical>
           {range(0, ROWS).map((row) => (

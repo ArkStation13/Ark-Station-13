@@ -20,7 +20,7 @@ type Data = {
 
 export const TrainingMachine = () => {
   return (
-    <Window width={230} height={150} title="AURUMILL">
+    <Window width={230} height={160} title="AURUMILL">
       <Window.Content>
         <Section fill title="Training Machine">
           <TrainingControls />

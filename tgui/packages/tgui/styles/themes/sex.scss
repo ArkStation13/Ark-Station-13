@@ -1,0 +1,60 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+@use 'sass:color';
+@use 'sass:meta';
+
+$sex: #59328a;
+
+@use '../colors.scss' with (
+  $primary: $sex,
+  $fg-map-keys: (),
+  $bg-map-keys: ()
+);
+@use '../base.scss' with (
+  $color-bg: color.scale($sex, $lightness: -40%),
+  $color-bg-grad-spread: 6%
+);
+
+.theme-sex {
+  // Components
+  @include meta.load-css(
+    '../components/Button.scss',
+    $with: (
+      'color-default': color.scale($sex, $lightness: -30%),
+      'color-transparent-text': color.scale($sex, $lightness: 30%)
+    )
+  );
+  @include meta.load-css(
+    '../components/Tabs.scss',
+    $with: (
+      'color-default': colors.$primary,
+      'tab-color-selected': #9e4db3,
+      'text-color': #e7e7e7
+    )
+  );
+  @include meta.load-css(
+    '../components/ProgressBar.scss',
+    $with: (
+      'color-default-fill': $sex,
+      'background-color': rgba(61, 2, 73, 0.336)
+    )
+  );
+  @include meta.load-css('../components/Section.scss');
+
+  // Layouts
+  @include meta.load-css('../layouts/Layout.scss');
+  @include meta.load-css('../layouts/Window.scss');
+  @include meta.load-css(
+    '../layouts/TitleBar.scss',
+    $with: ('background-color': color.scale($sex, $lightness: -25%))
+  );
+
+  .Layout__content {
+    background-image: url('../../assets/bg-sex.svg');
+    background-size: 150%;
+    background-position-y: -120px;
+  }
+}

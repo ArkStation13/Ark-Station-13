@@ -198,7 +198,7 @@ export type PreferencesMenuData = {
     randomization: Record<string, RandomSetting>;
   };
 
-  content_unlocked: BooleanLike;
+  // content_unlocked: BooleanLike; // ARK STATION EDIT
 
   job_bans?: string[];
   job_days_left?: Record<string, number>;

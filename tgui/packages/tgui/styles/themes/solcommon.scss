@@ -1,0 +1,57 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+@use 'sass:color';
+@use 'sass:meta';
+
+$solcommon: #358a32;
+
+@use '../colors.scss' with (
+  $primary: $solcommon,
+  $fg-map-keys: (),
+  $bg-map-keys: ()
+);
+@use '../base.scss' with (
+  $color-bg: color.scale($solcommon, $lightness: -40%),
+  $color-bg-grad-spread: 6%
+);
+
+.theme-solcommon {
+  // Components
+  @include meta.load-css(
+    '../components/Button.scss',
+    $with: (
+      'color-default': color.scale($solcommon, $lightness: -30%),
+      'color-transparent-text': color.scale($solcommon, $lightness: 30%)
+    )
+  );
+  @include meta.load-css(
+    '../components/ProgressBar.scss',
+    $with: (
+      'color-default-fill': $solcommon,
+      'background-color': rgba(0, 0, 0, 0.5)
+    )
+  );
+  @include meta.load-css('../components/Section.scss');
+
+  // Layouts
+  @include meta.load-css('../layouts/Layout.scss');
+  @include meta.load-css('../layouts/Window.scss');
+  @include meta.load-css(
+    '../layouts/TitleBar.scss',
+    $with: ('background-color': color.scale($solcommon, $lightness: -25%))
+  );
+
+  .Layout__content {
+    background-image: url('../../assets/bg-solcommon.svg');
+  }
+  .Button {
+    color: #3f2e3a;
+  }
+  .Button:hover {
+    background-color: #e2b9e5;
+    transition: 0.1s;
+  }
+}

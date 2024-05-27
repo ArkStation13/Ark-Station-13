@@ -84,7 +84,7 @@
 	if (!istype(ghost))
 		return
 
-	// if (!client.is_content_unlocked())
+	// if (!client.is_content_unlocked()) // ARK STATION REMOVAL
 	// 	return
 
 	ghost.update_icon(ALL, value)
@@ -126,7 +126,7 @@
 	if (!istype(ghost))
 		return
 
-	// if (!client.is_content_unlocked())
+	// if (!client.is_content_unlocked()) // ARK STATION REMOVAL
 	// 	return
 
 	ghost.ghost_orbit = value
