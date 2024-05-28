@@ -96,7 +96,7 @@ export const InteractionMenuArk = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
-    <Window theme="sex" width={470} height={730} resizable>
+    <Window theme="sex" width={470} height={730}>
       <Window.Content>
         <Section
           title={interactingWith}
