@@ -79,7 +79,7 @@ export function DeathmatchLobby(props) {
   const isObserver = observers.find((observer) => observer.key === self);
 
   return (
-    <Window title="Deathmatch Lobby" width={560} height={480}>
+    <Window title="Deathmatch Lobby" width={560} height={500}>
       {showMenu && <ModSelector />}
       <Window.Content>
         <Stack fill vertical>

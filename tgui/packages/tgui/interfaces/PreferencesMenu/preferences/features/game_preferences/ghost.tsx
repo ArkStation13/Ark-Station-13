@@ -81,7 +81,7 @@ const GhostFormInput = (
   return (
     <Dropdown
       autoScroll={false}
-      disabled={!data.content_unlocked}
+      // disabled={!data.content_unlocked} // ARK STATION EDIT
       selected={props.value}
       placeholder={displayTexts[props.value]}
       onSelected={props.handleSetValue}

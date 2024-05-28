@@ -5177,6 +5177,9 @@
 "bmt" = (
 /obj/structure/table,
 /obj/machinery/recharger,
+/obj/item/toy/figure/vanguard{
+	pixel_x = 10
+	},
 /turf/open/floor/iron,
 /area/station/command/gateway)
 "bmw" = (
@@ -10556,9 +10559,9 @@
 /area/station/maintenance/department/chapel)
 "cAv" = (
 /obj/structure/table/reinforced,
-/obj/item/extinguisher,
 /obj/item/radio/intercom/directional/west,
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/item/toy/figure/pilot,
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "cAw" = (
@@ -14103,8 +14106,13 @@
 	dir = 4
 	},
 /obj/item/clipboard,
-/obj/item/toy/figure/miner,
 /obj/machinery/light/directional/south,
+/obj/item/toy/figure/bitrunner{
+	pixel_x = 5
+	},
+/obj/item/toy/figure/miner{
+	pixel_x = -5
+	},
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -15191,6 +15199,9 @@
 /obj/effect/turf_decal/siding/dark_red,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
+	},
+/obj/item/toy/figure/brigmedic{
+	pixel_x = 10
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/medical)
@@ -18559,6 +18570,9 @@
 "eBw" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/toy/figure/renault{
+	pixel_y = 16
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
 "eBE" = (
@@ -40541,10 +40555,10 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
-/obj/effect/turf_decal/bot_white{
-	color = "#74b2d3"
-	},
 /obj/effect/turf_decal/siding/thinplating/dark,
+/obj/effect/turf_decal/box/white{
+	color = "#9FED58"
+	},
 /turf/open/floor/iron/dark/smooth_half,
 /area/station/medical/morgue)
 "jWT" = (
@@ -49588,6 +49602,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/toy/figure/coroner{
+	pixel_y = 10
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "mmq" = (
@@ -54125,14 +54142,15 @@
 /area/station/service/kitchen/abandoned)
 "nuC" = (
 /obj/structure/table/reinforced,
-/obj/machinery/recharger{
-	pixel_x = 2
-	},
-/obj/machinery/recharger{
-	pixel_x = -8
-	},
 /obj/structure/reagent_dispensers/wall/peppertank/directional/north,
 /obj/effect/turf_decal/siding/dark_blue,
+/obj/item/toy/figure/blueshield{
+	pixel_x = 5
+	},
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 2
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/blueshield)
 "nuG" = (
@@ -66074,7 +66092,6 @@
 /obj/item/computer_disk/medical{
 	pixel_x = -3
 	},
-/obj/item/toy/figure/cmo,
 /obj/machinery/camera/directional/north{
 	c_tag = "Medbay - Chief Medical Officer's Office";
 	name = "medbay camera";
@@ -66082,6 +66099,12 @@
 	},
 /obj/machinery/status_display/evac/directional/north,
 /obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/item/toy/figure/runtime{
+	pixel_x = 5
+	},
+/obj/item/toy/figure/cmo{
+	pixel_x = -4
+	},
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "qtE" = (
@@ -76535,6 +76558,7 @@
 /obj/structure/table/reinforced,
 /obj/structure/cable,
 /obj/item/paper_bin,
+/obj/item/toy/figure/mechanic,
 /turf/open/floor/iron,
 /area/station/engineering/mechanic)
 "sWu" = (

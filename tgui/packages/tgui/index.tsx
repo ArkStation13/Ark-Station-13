@@ -26,7 +26,9 @@ import './styles/themes/syndicate.scss';
 import './styles/themes/wizard.scss';
 import './styles/themes/admin.scss';
 import './styles/themes/clockwork.scss'; // NOVA EDIT ADDITION
-import './styles/themes/inteq.scss'; // ARK STATION ADD START
+import './styles/themes/inteq.scss'; // ARK STATION ADDITION
+import './styles/themes/solcommon.scss'; // ARK STATION ADDITION
+import './styles/themes/sex.scss'; // ARK STATION ADDITION
 
 import { perf } from 'common/perf';
 import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';

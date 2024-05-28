@@ -215,13 +215,13 @@
 
 /obj/item/toy/mecha/hermes
 	name = "toy Hermes"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
 	icon_state = "toy_hermes"
 	max_combat_health = 6 //300 integrity
 
 /obj/item/toy/mecha/ares
 	name = "toy Ares"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/toys.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'
 	icon_state = "toy_ares"
 	max_combat_health = 7 //350 integrity
 
@@ -403,6 +403,31 @@
 	name = "\improper Blueshield action figure"
 	icon_state = "blueshield"
 	toysay = "At the cost of my life!"
+
+/obj/item/toy/figure/pilot
+	name = "\improper Brig Pilot action figure"
+	icon_state = "pilot"
+	toysay = "Star Wars!"
+
+/obj/item/toy/figure/vanguard
+	name = "\improper Vanguard action figure"
+	icon_state = "vanguard"
+	toysay = "I'm not a munchkin!"
+
+/obj/item/toy/figure/mechanic
+	name = "\improper Mechanic action figure"
+	icon_state = "mechanic"
+	toysay = "Fly me to the Moon!"
+
+/obj/item/toy/figure/renault
+	name = "\improper Renault action figure"
+	icon_state = "renault"
+	toysay = "Yank!"
+
+/obj/item/toy/figure/runtime
+	name = "\improper Runtime action figure"
+	icon_state = "runtime"
+	toysay = "Meow!"
 
 /obj/item/toy/toy_xeno
 	icon = 'zov_modular_arkstation/_master_files/icons/toys.dmi'

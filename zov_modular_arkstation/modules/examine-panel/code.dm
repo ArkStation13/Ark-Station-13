@@ -172,10 +172,10 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 	savefile_identifier = PREFERENCE_CHARACTER
 
 /datum/preference/choiced/attraction/init_possible_values()
-	return list("Gay", "Lesbian", "Straight", "Skolio", "Bi", "Pan", "Poly", "Omni", "Ace", "Aro", "Aro/Ace", "Unset", "Check OOC")
+	return GLOB.sexuality_erp_status
 
 /datum/preference/choiced/attraction/create_default_value()
-	return "Unset"
+	return "None"
 
 /datum/preference/choiced/attraction/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return FALSE

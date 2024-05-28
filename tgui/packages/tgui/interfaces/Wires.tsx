@@ -30,7 +30,7 @@ export const Wires = (props) => {
   const dynamicHeight = 270 + wires.length * 30 + (proper_name ? 30 : 0);
 
   return (
-    <Window width={350} height={dynamicHeight}>
+    <Window width={390} height={dynamicHeight}>
       <Window.Content>
         <Stack fill vertical>
           {!!proper_name && (
