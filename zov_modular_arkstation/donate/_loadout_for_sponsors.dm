@@ -22,17 +22,24 @@ GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item
 			LAZYADD(outfit.backpack_contents, outfit.l_hand)
 		outfit.l_hand = item_path
 
-/datum/loadout_item/whitelisted/sneaksuit
+///////////////////// LIST /////////////////////
+
+/datum/loadout_item/whitelisted/sneaksuit // lordoftheflie
 	name = "Blood-Red Sneaksuit"
 	item_path = /obj/item/clothing/under/syndicate/bloodred/no_armor
 	ckeywhitelist = list("lordoftheflie")
 
-/datum/loadout_item/whitelisted/ordinarylife_custom
+/datum/loadout_item/whitelisted/ordinarylife_custom // ordinarylife
 	name = "Emma T-shirt"
-	item_path = /obj/item/clothing/suit/arkstation/ordinarylife_emma
+	item_path = /obj/item/clothing/suit/ordinarylife_emma
 	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
 
-/datum/loadout_item/whitelisted/vulp_couple
+/datum/loadout_item/whitelisted/vulp_couple // dolbajob
 	name = "Vulp Couple Plushie"
 	item_path = /obj/item/toy/plush/fox/vulp_couple
 	ckeywhitelist = list("vulpshiro", "dolbajob", "ordinarylife")
+
+/datum/loadout_item/whitelisted/booba_suit // Kasalerza
+	name = "Tailor-Made Suit (Booba Suit)"
+	item_path = /obj/item/clothing/under/suit/booba_suit
+	ckeywhitelist = list("Kasalerza")
