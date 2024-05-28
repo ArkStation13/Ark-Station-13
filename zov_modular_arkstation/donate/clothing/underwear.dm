@@ -1,14 +1,18 @@
-/obj/item/clothing/under/syndicate/bloodred/no_armor
+/obj/item/clothing/under/syndicate/bloodred/no_armor // Повелитель Мух
 	name = "blood-red sneaksuit"
 	desc = "It still counts as stealth if there are no witnesses."
 	icon_state = "bloodred_pajamas"
 	inhand_icon_state = "bl_suit"
 	armor_type = /datum/armor/clothing_under/none
 
-/obj/item/clothing/suit/arkstation/ordinarylife_emma
-	name = "\improper T-shirt with fox"
-	desc = "White T-shirt with Emma the fox on the chest."
-	icon_state = "emma_shirt"
-	worn_icon_state = "emma_shirt"
-	icon = 'zov_modular_arkstation/donate/icons/ordinarylife/ema_custom_obj.dmi'
-	worn_icon = 'zov_modular_arkstation/donate/icons/ordinarylife/ema_custom_mob.dmi'
+/obj/item/clothing/under/suit/booba_suit // Kasalerza
+	name = "tailor-made suit."
+	desc = "Formal, tailored suit. Keeps its shape even without filling."
+	icon = 'zov_modular_arkstation/donate/icons/kasalerza/boobasuit_obj.dmi'
+	worn_icon = 'zov_modular_arkstation/donate/icons/kasalerza/boobasuit_mob.dmi'
+	icon_state = "suit"
+	worn_icon_state = "suit"
+	inhand_icon_state = "lawyer_black"
+	body_parts_covered = CHEST|GROIN|ARMS
+	female_sprite_flags = FEMALE_UNIFORM_NO_BREASTS
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
