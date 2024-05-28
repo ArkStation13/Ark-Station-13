@@ -12,12 +12,12 @@
 	for(var/mob/living/carbon/purr_target in user.loc)
 		if(purr_target == user || purr_target.stat == DEAD)
 			continue
-		var/list/damaged_bodyparts = purr_target.get_damaged_bodyparts(TRUE, TRUE, FALSE, BODYPART_ORGANIC)
+		var/list/damaged_bodyparts = purr_target.get_damaged_bodyparts(TRUE, TRUE, BODYTYPE_ORGANIC)
 		if(!damaged_bodyparts.len)
 			continue
 		damaged_purr_targets.Add(purr_target)
 		for(var/obj/item/bodypart/bodypart in damaged_bodyparts)
-			if (bodypart.heal_damage(1/damaged_bodyparts.len, 1/damaged_bodyparts.len, 0, BODYPART_ORGANIC))
+			if (bodypart.heal_damage(1/damaged_bodyparts.len, 1/damaged_bodyparts.len, TRUE, FALSE, BODYTYPE_ORGANIC))
 				purr_target.update_damage_overlays()
 	//print messages
 	if (!damaged_purr_targets.len)
