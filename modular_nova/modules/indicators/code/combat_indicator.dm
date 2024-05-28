@@ -21,31 +21,31 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
  * * source -- The mob in question that toggled CI status.
  */
 
-/obj/vehicle/sealed/proc/mob_toggled_ci(mob/living/source)
-	SIGNAL_HANDLER
-	if ((src.max_occupants > src.max_drivers) && (!(source in return_drivers())) && (src.driver_amount() > 0)) // Only returms true if the mob in question has the driver control flags and/or there are drivers.
-		return
-	combat_indicator_vehicle = source.combat_indicator	// Sync CI between mob and vehicle.
-	if (combat_indicator_vehicle)
-		if(world.time > vehicle_next_combat_popup) // As of the time of writing, COMBAT_NOTICE_COOLDOWN is 10 secs, so this is asking "has 10 secs past between last activation of CI?"
-			vehicle_next_combat_popup = world.time + COMBAT_NOTICE_COOLDOWN
-			playsound(src, 'sound/machines/chime.ogg', vol = 10, vary = FALSE, extrarange = -6, falloff_exponent = 4, frequency = null, channel = 0, pressure_affected = FALSE, ignore_walls = FALSE, falloff_distance = 1)
-			flick_emote_popup_on_obj("combat", 20)
-			visible_message(span_boldwarning("[src] prepares for combat!"))
-		combat_indicator_vehicle = TRUE
-	else
-		combat_indicator_vehicle = FALSE
-	update_appearance(UPDATE_ICON|UPDATE_OVERLAYS)
+// /obj/vehicle/sealed/proc/mob_toggled_ci(mob/living/source) // ARK STATION REMOVED
+// 	SIGNAL_HANDLER
+// 	if ((src.max_occupants > src.max_drivers) && (!(source in return_drivers())) && (src.driver_amount() > 0)) // Only returms true if the mob in question has the driver control flags and/or there are drivers.
+// 		return
+// 	combat_indicator_vehicle = source.combat_indicator	// Sync CI between mob and vehicle.
+// 	if (combat_indicator_vehicle)
+// 		if(world.time > vehicle_next_combat_popup) // As of the time of writing, COMBAT_NOTICE_COOLDOWN is 10 secs, so this is asking "has 10 secs past between last activation of CI?"
+// 			vehicle_next_combat_popup = world.time + COMBAT_NOTICE_COOLDOWN
+// 			playsound(src, 'sound/machines/chime.ogg', vol = 10, vary = FALSE, extrarange = -6, falloff_exponent = 4, frequency = null, channel = 0, pressure_affected = FALSE, ignore_walls = FALSE, falloff_distance = 1)
+// 			flick_emote_popup_on_obj("combat", 20)
+// 			visible_message(span_boldwarning("[src] prepares for combat!"))
+// 		combat_indicator_vehicle = TRUE
+// 	else
+// 		combat_indicator_vehicle = FALSE
+// 	update_appearance(UPDATE_ICON|UPDATE_OVERLAYS) // ARK STATION REMOVED
 
 /mob/living/update_overlays()
 	. = ..()
 	if(combat_indicator)
 		. += GLOB.combat_indicator_overlay
 
-/obj/vehicle/sealed/update_overlays()
-	. = ..()
-	if(combat_indicator_vehicle)
-		. += GLOB.combat_indicator_overlay
+// /obj/vehicle/sealed/update_overlays() // ARK STATION REMOVAL
+// 	. = ..()
+// 	if(combat_indicator_vehicle)
+// 		. += GLOB.combat_indicator_overlay // ARK STATION REMOVED
 
 /**
  * Called whenever a mob's stat changes.
@@ -161,15 +161,15 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
  * * user -- mob/living, the mob that is entering the vehicle.
  */
 
-/obj/vehicle/sealed/proc/handle_ci_migration(mob/living/user)
-	if(!typesof(user.loc, /obj/vehicle/sealed)) //Sanity check: If the mob's location (not the tile they are on) is NOT a type of vehicle/sealed, kill the proc.
-		return
-	//If the vehicle can have more passenger seats than driver seats (note: each driver seat counts as a passenger seat) AND both: The mob is not a driver, and the vehicle has a driver, return.
-	if ((src.max_occupants > src.max_drivers) && ((!(user in return_drivers())) && (src.driver_amount() > 0)))
-		return
-	if (user.combat_indicator && !combat_indicator_vehicle) // Finally, if all conditions prior are not met, and the mob has CI enabled and the vehicle doesn't, enable CI.
-		combat_indicator_vehicle = TRUE
-		update_appearance(UPDATE_ICON|UPDATE_OVERLAYS)
+// /obj/vehicle/sealed/proc/handle_ci_migration(mob/living/user) // ARK STATION REMOVED
+// 	if(!typesof(user.loc, /obj/vehicle/sealed)) //Sanity check: If the mob's location (not the tile they are on) is NOT a type of vehicle/sealed, kill the proc.
+// 		return
+// 	//If the vehicle can have more passenger seats than driver seats (note: each driver seat counts as a passenger seat) AND both: The mob is not a driver, and the vehicle has a driver, return.
+// 	if ((src.max_occupants > src.max_drivers) && ((!(user in return_drivers())) && (src.driver_amount() > 0)))
+// 		return
+// 	if (user.combat_indicator && !combat_indicator_vehicle) // Finally, if all conditions prior are not met, and the mob has CI enabled and the vehicle doesn't, enable CI.
+// 		combat_indicator_vehicle = TRUE
+// 		update_appearance(UPDATE_ICON|UPDATE_OVERLAYS) // ARK STATION REMOVED
 
 /**
  * Called whenever a mob exits a vehicle/sealed, after everything else.
@@ -180,23 +180,23 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
  * * user -- mob/living, the mob that is exiting the vehicle.
  */
 
-/obj/vehicle/sealed/proc/disable_ci(mob/living/user)
-	// If the vehicle can have more occupants than drivers, and either 1. The mob is not a driver and the vehicle has drivers, or 2. The user IS a driver but there is an occupant (drivers count as occupants), return.
-	if ((src.max_occupants > src.max_drivers) && ((!(user in return_drivers()) && (src.driver_amount() > 0)) || ((user in return_drivers()) && (src.occupant_amount() > 0))))
-		return
-	// If the preceding conditions are not met, and the vehicle has CI, look at each occupant to see if there is a non-driver with CI enabled. If yes, stop the proc, if no, disable CI.
-	if (combat_indicator_vehicle)
-		var/has_occupant_with_ci = FALSE
-		if (src.occupant_amount() > src.driver_amount())
-			for (var/mob/living/vehicle_occupant in return_occupants())
-				if (vehicle_occupant in return_drivers()) //this for loop does not account for multiple clowns in clown cars. i will not account for that. fuck that.
-					continue
-				if (vehicle_occupant.combat_indicator)
-					has_occupant_with_ci = TRUE
-					break
-		if (!has_occupant_with_ci)
-			combat_indicator_vehicle = FALSE
-			update_appearance(UPDATE_ICON|UPDATE_OVERLAYS)
+// /obj/vehicle/sealed/proc/disable_ci(mob/living/user) // ARK STATION REMOVED
+// 	// If the vehicle can have more occupants than drivers, and either 1. The mob is not a driver and the vehicle has drivers, or 2. The user IS a driver but there is an occupant (drivers count as occupants), return.
+// 	if ((src.max_occupants > src.max_drivers) && ((!(user in return_drivers()) && (src.driver_amount() > 0)) || ((user in return_drivers()) && (src.occupant_amount() > 0))))
+// 		return
+// 	// If the preceding conditions are not met, and the vehicle has CI, look at each occupant to see if there is a non-driver with CI enabled. If yes, stop the proc, if no, disable CI.
+// 	if (combat_indicator_vehicle)
+// 		var/has_occupant_with_ci = FALSE
+// 		if (src.occupant_amount() > src.driver_amount())
+// 			for (var/mob/living/vehicle_occupant in return_occupants())
+// 				if (vehicle_occupant in return_drivers()) //this for loop does not account for multiple clowns in clown cars. i will not account for that. fuck that.
+// 					continue
+// 				if (vehicle_occupant.combat_indicator)
+// 					has_occupant_with_ci = TRUE
+// 					break
+// 		if (!has_occupant_with_ci)
+// 			combat_indicator_vehicle = FALSE
+// 			update_appearance(UPDATE_ICON|UPDATE_OVERLAYS) // ARK STATION REMOVED
 
 #undef COMBAT_NOTICE_COOLDOWN
 
