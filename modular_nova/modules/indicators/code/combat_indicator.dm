@@ -42,10 +42,10 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
 	if(combat_indicator)
 		. += GLOB.combat_indicator_overlay
 
-/obj/vehicle/sealed/update_overlays()
-	. = ..()
-	if(combat_indicator_vehicle)
-		. += GLOB.combat_indicator_overlay
+// /obj/vehicle/sealed/update_overlays() // ARK STATION REMOVAL
+// 	. = ..()
+// 	if(combat_indicator_vehicle)
+// 		. += GLOB.combat_indicator_overlay
 
 /**
  * Called whenever a mob's stat changes.
