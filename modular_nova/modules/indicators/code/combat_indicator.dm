@@ -45,7 +45,7 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
 // /obj/vehicle/sealed/update_overlays() // ARK STATION REMOVAL
 // 	. = ..()
 // 	if(combat_indicator_vehicle)
-// 		. += GLOB.combat_indicator_overlay
+// 		. += GLOB.combat_indicator_overlay // ARK STATION REMOVED
 
 /**
  * Called whenever a mob's stat changes.
@@ -169,7 +169,7 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
 // 		return
 // 	if (user.combat_indicator && !combat_indicator_vehicle) // Finally, if all conditions prior are not met, and the mob has CI enabled and the vehicle doesn't, enable CI.
 // 		combat_indicator_vehicle = TRUE
-// 		update_appearance(UPDATE_ICON|UPDATE_OVERLAYS)
+// 		update_appearance(UPDATE_ICON|UPDATE_OVERLAYS) // ARK STATION REMOVED
 
 /**
  * Called whenever a mob exits a vehicle/sealed, after everything else.
@@ -196,7 +196,7 @@ GLOBAL_VAR_INIT(combat_indicator_overlay, GenerateCombatOverlay())
 // 					break
 // 		if (!has_occupant_with_ci)
 // 			combat_indicator_vehicle = FALSE
-// 			update_appearance(UPDATE_ICON|UPDATE_OVERLAYS)
+// 			update_appearance(UPDATE_ICON|UPDATE_OVERLAYS) // ARK STATION REMOVED
 
 #undef COMBAT_NOTICE_COOLDOWN
 
