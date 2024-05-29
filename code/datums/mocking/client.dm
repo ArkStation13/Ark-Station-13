@@ -44,7 +44,7 @@
 	return ..()
 
 /datum/client_interface/proc/IsByondMember()
-	return FALSE
+	return TRUE // ARK STATION EDIT
 
 /datum/client_interface/proc/set_macros()
 	return
