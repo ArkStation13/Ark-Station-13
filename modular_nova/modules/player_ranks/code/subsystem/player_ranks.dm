@@ -146,7 +146,7 @@ SUBSYSTEM_DEF(player_ranks)
 	if(!prefs)
 		return
 
-	prefs.unlock_content = !!prefs.parent.IsByondMember()
+	prefs.unlock_content = TRUE // ARK STATION EDIT // We are Russians
 	prefs.donator_status = is_donator(prefs.parent)
 	if(prefs.unlock_content || prefs.donator_status)
 		prefs.max_save_slots = 50
