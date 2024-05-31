@@ -119,14 +119,9 @@
 /datum/looping_sound/gravgen
 	mid_sounds = list('sound/machines/gravgen/gravgen_mid1.ogg' = 1, 'sound/machines/gravgen/gravgen_mid2.ogg' = 1, 'sound/machines/gravgen/gravgen_mid3.ogg' = 1, 'sound/machines/gravgen/gravgen_mid4.ogg' = 1)
 	mid_length = 1.8 SECONDS
-<<<<<<< HEAD
 	extra_range = -2 //ARK STATION EDIT ORIGINAL 10
-	volume = 20 //ARK STATION EDIT ORIGINAL 40
-=======
-	extra_range = 10
-	volume = 20
->>>>>>> e0d4640dc96... [MIRROR] Halves volume of Gravity Generator (#2745)
-	falloff_distance = 5
+	volume = 20 //ARK STATION EDIT ORIGINAL 20
+	falloff_distance = 1
 	falloff_exponent = 20
 
 /datum/looping_sound/firealarm
