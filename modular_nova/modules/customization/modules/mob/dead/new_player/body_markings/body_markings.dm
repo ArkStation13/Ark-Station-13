@@ -168,8 +168,6 @@
 	affected_bodyparts = HEAD
 	always_color_customizable = TRUE
 
-<<<<<<< HEAD
-=======
 /datum/body_marking/other/three_eyes
 	name = "Three Eyes"
 	icon_state = "3eyes"
@@ -200,7 +198,6 @@
 	icon_state = "splotcheswap"
 	affected_bodyparts = HEAD
 
->>>>>>> 0040741b9ee... Splotches, Top Surgery Scars, and Claw Tip Markings (#2683)
 /datum/body_marking/other/bands
 	name = "Color Bands"
 	icon_state = "bands"
