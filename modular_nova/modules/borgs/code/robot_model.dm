@@ -12,16 +12,17 @@
 	var/mob/living/silicon/robot/cyborg = robot || loc
 	if (!istype(robot))
 		return
-	if (model_features && (TRAIT_R_TALL in model_features))
-		cyborg.maptext_height = 48 //Runechat blabla
-		cyborg.AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 2, -6, sound_vary = TRUE)
+	if (model_features)
+		if(TRAIT_R_TALL in model_features)
+			cyborg.maptext_height = 48 //Runechat blabla
+		cyborg.AddElement(/datum/element/footstep, FOOTSTEP_MOB_SILICON, volume = 1, -6, sound_vary = TRUE) // ARK STATION EDIT
 		add_verb(cyborg, /mob/living/silicon/robot/proc/robot_lay_down)
 		switch(cyborg_base_icon)
 			if("mekamine")
 				cyborg.AddComponent(/datum/component/robot_smoke)
 	else
 		cyborg.maptext_height = initial(cyborg.maptext_height)
-		cyborg.RemoveElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 2, -6, sound_vary = TRUE)
+		cyborg.RemoveElement(/datum/element/footstep, FOOTSTEP_MOB_SILICON, 1, -6, sound_vary = TRUE) // ARK STATION EDIT
 		remove_verb(cyborg, /mob/living/silicon/robot/proc/robot_lay_down)
 		if(cyborg.GetComponent(/datum/component/robot_smoke))
 			qdel(cyborg.GetComponent(/datum/component/robot_smoke))
