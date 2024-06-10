@@ -21834,6 +21834,12 @@
 	},
 /turf/open/floor/engine/co2,
 /area/station/engineering/atmos/space_catwalk)
+"izw" = (
+/obj/machinery/transport/tram_controller/tcomms{
+	configured_transport_id = "bird_2"
+	},
+/turf/open/floor/circuit,
+/area/station/tcommsat/server)
 "izB" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/sign/painting/library{
@@ -60468,8 +60474,10 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
 "tUD" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/machinery/transport/tram_controller/tcomms{
+	configured_transport_id = "bird_1"
+	},
+/turf/open/floor/circuit,
 /area/station/tcommsat/server)
 "tUH" = (
 /obj/structure/disposalpipe/segment,
@@ -124208,7 +124216,7 @@ wos
 udv
 tSq
 mvo
-tUD
+izw
 bFw
 ulK
 cdn
