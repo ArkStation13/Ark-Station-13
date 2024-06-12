@@ -108,3 +108,15 @@
 	)
 	time = 20 SECONDS
 	category = CAT_WEAPON_RANGED
+<<<<<<< HEAD
+=======
+
+
+/datum/crafting_recipe/torch
+	name = "Torch"
+	reqs = list(/obj/item/grown/log = 1)
+	result = /obj/item/flashlight/flare/torch
+	category = CAT_MISC
+	non_craftable = TRUE
+	steps = list("Use any dried leaf-like plant on a towercap log! (Ambrosia, cannabis, tobacco, etc!)")
+>>>>>>> b33437a7a16... Fixes crafting menu (#2995)
