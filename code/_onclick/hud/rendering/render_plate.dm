@@ -206,12 +206,12 @@
 	if(!.)
 		return
 	remove_filter("AO")
-	remove_filter("spook_color")
+	remove_filter("spook_color") // ARK STATION ADDITION
 	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/ambient_occlusion))
 		add_filter("AO", 1, drop_shadow_filter(x = 0, y = -2, size = 4, color = "#04080FAA"))
 
-	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/poopdark_filter))
-		add_filter("spook_color", 2, color_matrix_filter(list(0.75,0.13,0.13,0, 0.13,0.7,0.13,0, 0.13,0.13,0.75,0, -0.06,-0.09,-0.08,1, 0,0,0,0)))
+	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/poopdark_filter)) // ARK STATION ADDITION
+		add_filter("spook_color", 2, color_matrix_filter(list(0.75,0.13,0.10,0, 0.13,0.7,0.10,0, 0.13,0.13,0.75,0, -0.02,-0.03,-0.04,1, 0,0,0,0))) // ARK STATION ADDITION
 
 ///Contains all lighting objects
 /atom/movable/screen/plane_master/rendering_plate/lighting
