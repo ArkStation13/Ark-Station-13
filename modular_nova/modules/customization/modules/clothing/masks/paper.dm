@@ -72,12 +72,18 @@
 	if(user.can_perform_action(src, NEED_DEXTERITY))
 		adjust_mask(user)
 
+<<<<<<< HEAD
 /obj/item/clothing/mask/paper/CtrlClick(mob/user)
 	. = ..()
 	if(.)
 		return
 	if(user.can_perform_action(src, NEED_DEXTERITY))
 		adjust_strap(user)
+=======
+/obj/item/clothing/mask/paper/item_ctrl_click(mob/user)
+	adjust_strap(user)
+	return CLICK_ACTION_SUCCESS
+>>>>>>> f70875c093d... [MIRROR] Ctrl click refactor [MDB IGNORE] (#3023)
 
 /obj/item/clothing/mask/paper/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()

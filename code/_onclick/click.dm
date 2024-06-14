@@ -350,6 +350,7 @@
 	if(user.client && (user.client.eye == user || user.client.eye == user.loc || flags & COMPONENT_ALLOW_EXAMINATE))
 		user.examinate(src)
 
+<<<<<<< HEAD
 /**
  * Ctrl click
  * For most objects, pull
@@ -413,25 +414,13 @@
 		user.client.toggle_tag_datum(src)
 		return
 
+=======
+>>>>>>> f70875c093d... [MIRROR] Ctrl click refactor [MDB IGNORE] (#3023)
 /mob/proc/TurfAdjacent(turf/tile)
 	return tile.Adjacent(src)
 
-/**
- * Control+Shift click
- * Unused except for AI
- */
-/mob/proc/CtrlShiftClickOn(atom/A)
-	A.CtrlShiftClick(src)
-	return
-
 /mob/proc/ShiftMiddleClickOn(atom/A)
 	src.pointed(A)
-	return
-//NOVA EDIT NOTE: CtrlShiftClick for HUMANS has been overriden in click.dm in the interaction module.
-/atom/proc/CtrlShiftClick(mob/user)
-	if(!can_interact(user))
-		return FALSE
-	SEND_SIGNAL(src, COMSIG_CLICK_CTRL_SHIFT, user)
 	return
 
 /*
