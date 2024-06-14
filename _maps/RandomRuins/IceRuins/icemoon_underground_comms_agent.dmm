@@ -317,6 +317,9 @@
 /obj/structure/filingcabinet,
 /obj/item/paperwork,
 /obj/item/paper/monitorkey,
+/obj/item/paper/fluff/ruins/listeningstation/briefing{
+	pixel_x = -2
+	},
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
 "sc" = (
@@ -401,10 +404,15 @@
 "vB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
-/obj/item/paper/fluff/ruins/listeningstation/briefing{
-	pixel_x = -2
+/obj/item/pen/survival{
+	pixel_x = 8;
+	pixel_y = 8
 	},
-/obj/item/pen/survival,
+/obj/machinery/button/door{
+	id = "syndie_lpost_icemoon_windows";
+	name = "Window Shutters";
+	req_access = list("syndicate")
+	},
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
 "vK" = (
@@ -519,6 +527,13 @@
 	pixel_y = 4
 	},
 /turf/open/floor/wood,
+<<<<<<< HEAD
+=======
+/area/ruin/comms_agent)
+"Bx" = (
+/obj/effect/baseturf_helper/asteroid/snow,
+/turf/closed/wall,
+>>>>>>> d610bd35690... [MIRROR] The Syndicate now imports warm air instead of cold air to the icemoon listening post [MDB IGNORE] (#3028)
 /area/ruin/comms_agent)
 "BD" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -680,6 +695,10 @@
 	pixel_x = -13;
 	pixel_y = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/storage/box/coffeepack,
+>>>>>>> d610bd35690... [MIRROR] The Syndicate now imports warm air instead of cold air to the icemoon listening post [MDB IGNORE] (#3028)
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
 "JD" = (
@@ -895,9 +914,12 @@
 "Qn" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
+<<<<<<< HEAD
 /obj/machinery/power/terminal{
 	dir = 4
 	},
+=======
+>>>>>>> d610bd35690... [MIRROR] The Syndicate now imports warm air instead of cold air to the icemoon listening post [MDB IGNORE] (#3028)
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
@@ -1038,6 +1060,9 @@
 /area/ruin/comms_agent)
 "XU" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "syndie_lpost_icemoon_windows"
+	},
 /turf/open/floor/plating,
 /area/ruin/comms_agent)
 "Yz" = (
