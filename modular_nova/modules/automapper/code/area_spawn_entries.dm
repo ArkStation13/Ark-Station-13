@@ -37,7 +37,7 @@
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
 /datum/area_spawn/lustwish_prison
-	target_areas = list(/area/station/security/prison, /area/station/security/prison/shower)
+	target_areas = list(/area/station/security/prison/*, /area/station/security/prison/shower*/) // ARK STATION EDIT
 	desired_atom = /obj/machinery/vending/dorms
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
@@ -103,5 +103,9 @@
 // 	target_areas = list(/area/station/security/prison/safe)
 
 // /datum/area_spawn/corrections_officer_landmark
-// 	desired_atom = /obj/effect/landmark/start/corrections_officer
-// 	target_areas = list(/area/station/security/brig, /area/station/security/prison/)
+//	desired_atom = /obj/effect/landmark/start/corrections_officer
+//	target_areas = list(/area/station/security/brig, /area/station/security/prison/)
+
+/datum/area_spawn/virologist_landmark
+	target_areas = list(/area/station/medical/virology, /area/station/medical/virology/isolation)
+	desired_atom = /obj/effect/landmark/start/virologist
