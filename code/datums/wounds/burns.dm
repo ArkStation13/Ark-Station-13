@@ -209,6 +209,7 @@
 
 	limb.heal_damage(I.heal_brute, I.heal_burn)
 	user.visible_message(span_green("[user] applies [I] to [victim]."), span_green("You apply [I] to [user == victim ? "your" : "[victim]'s"] [limb.plaintext_zone]."))
+	playsound(I, I.operating_sound, 50, TRUE) // ARK STATION ADDITION
 	I.use(1)
 	sanitization += I.sanitization
 	flesh_healing += I.flesh_regeneration
