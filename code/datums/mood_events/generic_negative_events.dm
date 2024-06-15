@@ -336,7 +336,21 @@
 /datum/mood_event/surgery
 	description = "THEY'RE CUTTING ME OPEN!!"
 	mood_change = -8
+	var/surgery_completed = FALSE
 
+<<<<<<< HEAD
+=======
+/datum/mood_event/surgery/success
+	description = "That surgery really hurt... Glad it worked, I guess..."
+	timeout = 3 MINUTES
+	surgery_completed = TRUE
+
+/datum/mood_event/surgery/failure
+	description = "AHHHHHGH! THEY FILLETED ME ALIVE!"
+	timeout = 10 MINUTES
+	surgery_completed = TRUE
+
+>>>>>>> aab16c95c7b... [MIRROR] Fixes certain surgery failure states not properly updating surgery moods [MDB IGNORE] (#3070)
 /datum/mood_event/bald
 	description = "I need something to cover my head..."
 	mood_change = -3
