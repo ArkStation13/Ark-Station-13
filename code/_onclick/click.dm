@@ -350,7 +350,6 @@
 	if(user.client && (user.client.eye == user || user.client.eye == user.loc || flags & COMPONENT_ALLOW_EXAMINATE))
 		user.examinate(src)
 
-<<<<<<< HEAD
 /**
  * Ctrl click
  * For most objects, pull
@@ -414,8 +413,6 @@
 		user.client.toggle_tag_datum(src)
 		return
 
-=======
->>>>>>> f70875c093d... [MIRROR] Ctrl click refactor [MDB IGNORE] (#3023)
 /mob/proc/TurfAdjacent(turf/tile)
 	return tile.Adjacent(src)
 
