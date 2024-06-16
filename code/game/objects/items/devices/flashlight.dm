@@ -148,10 +148,69 @@
 					user.visible_message(span_warning("[user] shines [src] into [M.p_their()] eyes."), ignored_mobs = user)
 					render_list += span_info("You direct [src] to into your eyes:\n")
 
+<<<<<<< HEAD
 					if(M.is_blind())
 						render_list += "<span class='notice ml-1'>You're not entirely certain what you were expecting...</span>\n"
 					else
 						render_list += "<span class='notice ml-1'>Trippy!</span>\n"
+=======
+	var/list/mouth_organs = list()
+	for(var/obj/item/organ/organ as anything in M.organs)
+		if(organ.zone == BODY_ZONE_PRECISE_MOUTH)
+			mouth_organs.Add(organ)
+	var/organ_list = ""
+	var/organ_count = LAZYLEN(mouth_organs)
+	if(organ_count)
+		for(var/I in 1 to organ_count)
+			if(I > 1)
+				if(I == mouth_organs.len)
+					organ_list += ", and "
+				else
+					organ_list += ", "
+			var/obj/item/organ/O = mouth_organs[I]
+			organ_list += (O.gender == "plural" ? O.name : "\an [O.name]")
+
+	var/pill_count = 0
+	for(var/datum/action/item_action/activate_pill/AP in M.actions)
+		pill_count++
+
+	if(M == user)//if we're looking on our own mouth
+		var/can_use_mirror = FALSE
+		if(isturf(user.loc))
+			var/obj/structure/mirror/mirror = locate(/obj/structure/mirror, user.loc)
+			if(mirror)
+				switch(user.dir)
+					if(NORTH)
+						can_use_mirror = mirror.pixel_y > 0
+					if(SOUTH)
+						can_use_mirror = mirror.pixel_y < 0
+					if(EAST)
+						can_use_mirror = mirror.pixel_x > 0
+					if(WEST)
+						can_use_mirror = mirror.pixel_x < 0
+
+		M.visible_message(span_notice("[M] directs [src] to [ M.p_their()] mouth."), ignored_mobs = user)
+		. += span_info("You point [src] into your mouth:\n")
+		if(!can_use_mirror)
+			to_chat(user, span_notice("You can't see anything without a mirror."))
+			return
+		if(organ_count)
+			. += "<span class='notice ml-1'>Inside your mouth [organ_count > 1 ? "are" : "is"] [organ_list].</span>\n"
+		else
+			. += "<span class='notice ml-1'>There's nothing inside your mouth.</span>\n"
+		if(pill_count)
+			. += "<span class='notice ml-1'>You have [pill_count] implanted pill[pill_count > 1 ? "s" : ""].</span>\n"
+
+	else //if we're looking in someone elses mouth
+		user.visible_message(span_notice("[user] directs [src] to [M]'s mouth."), ignored_mobs = user)
+		. += span_info("You point [src] into [M]'s mouth:\n")
+		if(organ_count)
+			. += "<span class='notice ml-1'>Inside [ M.p_their()] mouth [organ_count > 1 ? "are" : "is"] [organ_list].</span>\n"
+		else
+			. += "<span class='notice ml-1'>[M] doesn't have any organs in [ M.p_their()] mouth.</span>\n"
+		if(pill_count)
+			. += "<span class='notice ml-1'>[M] has [pill_count] pill[pill_count > 1 ? "s" : ""] implanted in [ M.p_their()] teeth.</span>\n"
+>>>>>>> a0b5bcd98b6... [MIRROR] Crit Dental Pills! [MDB IGNORE] (#3079)
 
 				else
 					user.visible_message(span_warning("[user] directs [src] to [M]'s eyes."), ignored_mobs = user)
