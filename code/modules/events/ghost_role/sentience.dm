@@ -17,7 +17,11 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 	/mob/living/basic/spider/giant/sgt_araneus,
 	/mob/living/simple_animal/bot/secbot/beepsky,
 	/mob/living/simple_animal/hostile/retaliate/goose/vomit,
+<<<<<<< HEAD
 	/mob/living/simple_animal/pet,
+=======
+	/mob/living/basic/bear/snow/misha,
+>>>>>>> 88d06830ef0... [MIRROR] Misha - the bear [MDB IGNORE] (#3075)
 )))
 
 /datum/round_event_control/sentience
