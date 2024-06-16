@@ -291,17 +291,10 @@
 			playsound(src, 'sound/machines/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
 			return FALSE
 
-<<<<<<< HEAD
-/obj/item/mod/control/MouseDrop(atom/over_object)
-	if(usr != wearer || !istype(over_object, /atom/movable/screen/inventory/hand))
-		return ..()
-	for(var/obj/item/part as anything in mod_parts)
-=======
 /obj/item/mod/control/mouse_drop_dragged(atom/over_object, mob/user)
 	if(user != wearer || !istype(over_object, /atom/movable/screen/inventory/hand))
 		return
 	for(var/obj/item/part as anything in get_parts())
->>>>>>> f9f54f93704... [MIRROR] Mouse drag & drop refactored attack chain [MDB IGNORE] (#3022)
 		if(part.loc != src)
 			balloon_alert(wearer, "retract parts first!")
 			playsound(src, 'sound/machines/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
