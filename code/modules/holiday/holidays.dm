@@ -353,18 +353,18 @@
 // JUNE
 
 // ARK STATION ADDITION
-/datum/holiday/russia
-	name = "National Day of Russia"
-	begin_month = JUNE
-	begin_day = 12
-	holiday_hat = /obj/item/clothing/head/costume/ushanka
-	holiday_colors = list(COLOR_WHITE, COLOR_TRUE_BLUE, COLOR_RED)
+// /datum/holiday/russia
+// 	name = "National Day of Russia"
+// 	begin_month = JUNE
+// 	begin_day = 12
+// 	holiday_hat = /obj/item/clothing/head/costume/ushanka
+// 	holiday_colors = list(COLOR_WHITE, COLOR_TRUE_BLUE, COLOR_RED)
 
-/datum/holiday/russia/getStationPrefix()
-	return pick("Moscow", "Russia", "Saint Petersburg")
+// /datum/holiday/russia/getStationPrefix()
+// 	return pick("Moscow", "Russia", "Saint Petersburg")
 
-/datum/holiday/russia/greet()
-	return "УРАААААА, ГОООЙДАААААА!"
+// /datum/holiday/russia/greet()
+// 	return "УРАААААА, ГОООЙДАААААА!"
 
 //The Festival of Atrakor's Might (Tizira's Moon) is celebrated on June 15th, the date on which the lizard visual revamp was merged (#9808)
 /datum/holiday/atrakor_festival
