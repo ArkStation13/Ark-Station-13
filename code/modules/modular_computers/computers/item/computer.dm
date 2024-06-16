@@ -52,7 +52,7 @@
 //	Options: PROGRAM_ALL | PROGRAM_CONSOLE | PROGRAM_LAPTOP | PROGRAM_PDA
 
 	///The theme, used for the main menu and file browser apps.
-	var/device_theme = PDA_THEME_NTOS
+	var/device_theme = PDA_THEME_DARK_MODE // ARK STATION EDIT // <"PDA_THEME_NTOS">
 
 	///Bool on whether the computer is currently active or not.
 	var/enabled = FALSE
