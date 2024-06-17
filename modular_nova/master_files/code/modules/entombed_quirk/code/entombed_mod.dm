@@ -102,11 +102,8 @@
 
 /obj/item/mod/control/pre_equipped/entombed/Initialize(mapload, new_theme, new_skin, new_core)
 	. = ..()
-<<<<<<< HEAD
-=======
 	// Apply the entombed mod piece component to our applicable clothing pieces, so that they *always* return to the unit or self-delete if they can't.
 	for (var/obj/item/part as anything in get_parts())
 		part.AddComponent(/datum/component/entombed_mod_piece, host_suit = src)
 
->>>>>>> 5cfc9d9bf5c... [MIRROR] unhardcodes modsuit parts (#2565)
 	ADD_TRAIT(src, TRAIT_NODROP, QUIRK_TRAIT)
