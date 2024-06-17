@@ -65,7 +65,7 @@ export const ChemMaster = (props) => {
   const [analyzedReagent, setAnalyzedReagent] = useState<AnalyzableReagent>();
 
   return (
-    <Window width={450} height={620}>
+    <Window width={590} height={720}>
       <Window.Content scrollable>
         {analyzedReagent ? (
           <AnalysisResults
