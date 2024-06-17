@@ -55,7 +55,7 @@ export const OreSilo = (props: any) => {
   const [currentTab, setCurrentTab] = useState<Tab>(Tab.Logs);
 
   return (
-    <Window title="Ore Silo" width={620} height={600}>
+    <Window title="Ore Silo" width={740} height={600}>
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>

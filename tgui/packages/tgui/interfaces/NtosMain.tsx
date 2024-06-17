@@ -27,8 +27,8 @@ export const NtosMain = (props) => {
         (PC_device_theme === 'syndicate' && 'Syndix Main Menu') ||
         'NtOS Main Menu'
       }
-      width={400}
-      height={500}
+      width={450}
+      height={550}
       z
     >
       <NtosWindow.Content scrollable>
