@@ -71,7 +71,7 @@ export function CargoHelp(props) {
         </Section>
       </Stack.Item>
       <Stack.Item>
-        <NoticeBox textAlign="center" info mb={0}>
+        <NoticeBox textAlign="center" mb={0}>
           Pondering something not included here? When in doubt, ask the QM!
         </NoticeBox>
       </Stack.Item>
