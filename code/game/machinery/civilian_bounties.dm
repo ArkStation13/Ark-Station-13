@@ -161,6 +161,10 @@
 		return
 	inserted_scan_id.registered_account.civilian_bounty = inserted_scan_id.registered_account.bounties[choice]
 	inserted_scan_id.registered_account.bounties = null
+<<<<<<< HEAD
+=======
+	SSblackbox.record_feedback("tally", "bounties_assigned", 1, inserted_scan_id.registered_account.civilian_bounty.type)
+>>>>>>> 78c13849b1d... [MIRROR] Fixes logging path on civilian bounties [MDB IGNORE] (#3105)
 	return inserted_scan_id.registered_account.civilian_bounty
 
 /obj/machinery/computer/piratepad_control/civilian/click_alt(mob/user)
