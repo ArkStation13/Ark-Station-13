@@ -364,6 +364,8 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/list/in_view = get_hearers_in_view(message_range + whisper_range, source)
 	var/list/listening = get_hearers_in_range(message_range + whisper_range, source)
 
+	var/list/the_dead = list() // ARK STATION ADDITION
+
 	// Pre-process listeners to account for line-of-sight
 	for(var/atom/movable/listening_movable as anything in listening)
 		if(!(listening_movable in in_view) && !HAS_TRAIT(listening_movable, TRAIT_XRAY_HEARING))
@@ -383,8 +385,32 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 					continue
 			listening |= player_mob
 
+	// ARK STATION ADDITIONS START
+			the_dead[player_mob] = TRUE
+
+	var/eavesdropping
+	var/eavesrendered
+	if(whisper_range)
+		eavesdropping = stars(message_raw)
+		eavesrendered = compose_message(src, message_language, eavesdropping, null, spans, message_mods, FALSE, source)
+
+	var/rendered = compose_message(src, message_language, message_raw, null, spans, message_mods, FALSE, source)
+	for(var/_AM in listening)
+		var/atom/movable/AM = _AM
+		if(whisper_range && get_dist(source, AM) > message_range && !(the_dead[AM]))
+			AM.Hear(eavesrendered, src, message_language, eavesdropping, null, spans, message_mods, source)
+		else
+			AM.Hear(rendered, src, message_language, message_raw, null, spans, message_mods, source)
+	// ARK STATION ADDITIONS END
+
 	// this signal ignores whispers or language translations (only used by beetlejuice component)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_LIVING_SAY_SPECIAL, src, message_raw)
+
+	// ARK STATION ADDITIONS START
+	var/is_yell = (say_test(message_raw) == "2")
+	if(client && !whisper_range && is_yell)	// Yell hook
+		listening |= process_yelling(listening, rendered, src, message_language, message_raw, spans, message_mods, source)
+	// ARK STATION ADDITIONS END
 
 	var/list/listened = list()
 	for(var/atom/movable/listening_movable as anything in listening)
