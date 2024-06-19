@@ -397,7 +397,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/rendered = compose_message(src, message_language, message_raw, null, spans, message_mods, FALSE, source)
 	for(var/_AM in listening)
 		var/atom/movable/AM = _AM
-		if(whisper_range && get_dist(source, AM) > message_range && !(the_dead[AM]))
+		if(EAVESDROP_EXTRA_RANGE && get_dist(source, AM) > message_range && !(the_dead[AM]))
 			AM.Hear(eavesrendered, src, message_language, eavesdropping, null, spans, message_mods, source)
 		else
 			AM.Hear(rendered, src, message_language, message_raw, null, spans, message_mods, source)
