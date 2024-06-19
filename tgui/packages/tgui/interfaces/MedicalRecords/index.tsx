@@ -29,7 +29,7 @@ const UnauthorizedView = (props) => {
       <Stack fill vertical>
         <Stack.Item grow />
         <Stack.Item align="center" grow={2}>
-          <Icon color="teal" name="staff-snake" size={15} />
+          <Icon color="#289231" name="staff-snake" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
           <Box color="good" fontSize="18px" bold mt={5}>
@@ -63,7 +63,7 @@ const AuthView = (props) => {
             <MedicalRecordView />
           </Stack.Item>
           <Stack.Item>
-            <NoticeBox align="right" info>
+            <NoticeBox align="right" color="green">
               Secure Your Workspace.
               <Button
                 align="right"
