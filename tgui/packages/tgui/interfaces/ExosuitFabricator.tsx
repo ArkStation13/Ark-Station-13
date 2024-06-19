@@ -72,7 +72,7 @@ export const ExosuitFabricator = (props) => {
               </Stack.Item>
             </Stack>
           </Stack.Item>
-          <Stack.Item width="420px">
+          <Stack.Item width="320px">
             <Queue
               availableMaterials={availableMaterials}
               SHEET_MATERIAL_AMOUNT={SHEET_MATERIAL_AMOUNT}
