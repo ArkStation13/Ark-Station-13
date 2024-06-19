@@ -20,8 +20,8 @@ export const CargoImportConsole = (props) => {
     <Window
       theme="armament"
       title="Company Import Requisition Console"
-      width={1000}
-      height={600}
+      width={1100}
+      height={750}
     >
       <Window.Content>
         <Section height="100%" title="Company Import Requisition Console">
