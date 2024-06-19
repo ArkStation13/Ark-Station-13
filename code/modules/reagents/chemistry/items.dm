@@ -122,8 +122,13 @@
 		return
 	var/list/out_message = list()
 	to_chat(user, "<i>The chemistry meter beeps and displays:</i>")
+<<<<<<< HEAD
 	out_message += "<span class='notice'><b>Total volume: [round(cont.volume, 0.01)] Current temperature: [round(cont.reagents.chem_temp, 0.1)]K Total pH: [round(cont.reagents.ph, 0.01)]\n"
 	out_message += "Chemicals found in [target.name]:</b>\n"
+=======
+	out_message += "<b>Total volume: [round(cont.volume, 0.01)] Current temperature: [round(cont.reagents.chem_temp, 0.1)]K Total pH: [round(cont.reagents.ph, 0.01)]\n"
+	out_message += "Chemicals found in [interacting_with.name]:</b>\n"
+>>>>>>> d36bd2671df... [MIRROR] Pretties up the Chemical Analyzer's output [MDB IGNORE] (#3144)
 	if(cont.reagents.is_reacting)
 		out_message += "[span_warning("A reaction appears to be occuring currently.")]<span class='notice'>\n"
 	for(var/datum/reagent/reagent in cont.reagents.reagent_list)
@@ -134,7 +139,7 @@
 			out_message += "<b>[round(reagent.volume, 0.01)]u of [reagent.name]</b>, <b>Purity:</b> [round(reagent.purity, 0.000001)*100]%, [(scanmode?"[(reagent.overdose_threshold?"<b>Overdose:</b> [reagent.overdose_threshold]u, ":"")]<b>Base pH:</b> [initial(reagent.ph)], <b>Current pH:</b> [reagent.ph].":"<b>Current pH:</b> [reagent.ph].")]\n"
 		if(scanmode)
 			out_message += "<b>Analysis:</b> [reagent.description]\n"
-	to_chat(user, "[out_message.Join()]</span>")
+	to_chat(user, examine_block(span_notice("[out_message.Join()]")))
 	desc = "An electrode attached to a small circuit box that will display details of a solution. Can be toggled to provide a description of each of the reagents. The screen currently displays detected vol: [round(cont.volume, 0.01)] detected pH:[round(cont.reagents.ph, 0.1)]."
 
 /obj/item/burner
