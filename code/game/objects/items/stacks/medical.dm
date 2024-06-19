@@ -120,6 +120,7 @@
 		return
 	if(!can_heal(patient, user))
 		return
+	playsound(patient.loc, operating_sound, 50, TRUE) // ARK STATION ADDITION
 	try_heal(patient, user, silent = TRUE, looping = TRUE)
 
 /// Apply the actual effects of the healing if it's a simple animal, goes to [/obj/item/stack/medical/proc/heal_carbon] if it's a carbon, returns TRUE if it works, FALSE if it doesn't
@@ -275,6 +276,7 @@
 			user.visible_message(span_warning("[user] begins expertly wrapping the wounds on [patient]'s [limb.plaintext_zone] with [src]..."), span_warning("You begin quickly wrapping the wounds on [patient]'s [limb.plaintext_zone] with [src], keeping the holo-image indications in mind..."))
 	else
 		user.visible_message(span_warning("[user] begins wrapping the wounds on [patient]'s [limb.plaintext_zone] with [src]..."), span_warning("You begin wrapping the wounds on [user == patient ? "your" : "[patient]'s"] [limb.plaintext_zone] with [src]..."))
+	playsound(src, operating_sound, 50, TRUE) // ARK STATION ADDITION
 
 	if(!do_after(user, treatment_delay, target = patient))
 		return

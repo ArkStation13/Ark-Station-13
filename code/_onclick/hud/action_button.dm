@@ -113,7 +113,7 @@
 	closeToolTip(usr)
 	return ..()
 
-/atom/movable/screen/movable/action_button/MouseDrop(over_object)
+/atom/movable/screen/movable/action_button/mouse_drop_dragged(atom/over_object, mob/user, src_location, over_location, params)
 	last_hovored_ref = null
 	if(!can_use(usr))
 		return
@@ -138,7 +138,6 @@
 		our_hud.position_action_relative(src, button)
 		save_position()
 		return
-	. = ..()
 	our_hud.position_action(src, screen_loc)
 	save_position()
 
