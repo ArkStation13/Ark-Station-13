@@ -144,7 +144,7 @@
 
 // NOVA EDIT ADDITION - CUSTOMIZATION
 /datum/bodypart_overlay/mutant/tail/get_global_feature_list()
-	return GLOB.sprite_accessories["tail"]
+	return SSaccessories.sprite_accessories["tail"]
 // NOVA EDIT ADDITION END
 
 /datum/bodypart_overlay/mutant/tail/can_draw_on_bodypart(mob/living/carbon/human/human)
@@ -161,7 +161,11 @@
 	wag_flags = WAG_ABLE
 
 /datum/bodypart_overlay/mutant/tail/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["tail"] // NOVA EDIT CHANGE - ORIGINAL: return GLOB.tails_list_human
+=======
+	return SSaccessories.sprite_accessories["tail"] // NOVA EDIT CHANGE - ORIGINAL: return SSaccessories.tails_list_human
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /obj/item/organ/external/tail/cat/get_butt_sprite()
 	return BUTT_SPRITE_CAT
@@ -202,7 +206,11 @@
 	feature_key = "tail" // NOVA EDIT - Customization - ORIGINAL: feature_key = "tail_lizard"
 
 /datum/bodypart_overlay/mutant/tail/lizard/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["tail"] // NOVA EDIT - Customization - ORIGINAL: return GLOB.tails_list_lizard
+=======
+	return SSaccessories.sprite_accessories["tail"] // NOVA EDIT - Customization - ORIGINAL: return SSaccessories.tails_list_lizard
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /obj/item/organ/external/tail/lizard/fake
 	name = "fabricated lizard tail"
@@ -218,7 +226,11 @@
 	var/tail_spine_key = NONE
 
 /datum/bodypart_overlay/mutant/tail_spines/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["tailspines"] // NOVA EDIT CHANGE - ORIGINAL: return GLOB.tail_spines_list
+=======
+	return SSaccessories.sprite_accessories["tailspines"] // NOVA EDIT CHANGE - ORIGINAL: return SSaccessories.tail_spines_list
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /datum/bodypart_overlay/mutant/tail_spines/get_base_icon_state()
 	return (!isnull(tail_spine_key) ? "[tail_spine_key]_" : "") + (wagging ? "wagging_" : "") + sprite_datum.icon_state // Select the wagging state if appropriate

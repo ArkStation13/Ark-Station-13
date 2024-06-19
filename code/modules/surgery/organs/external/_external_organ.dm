@@ -41,7 +41,7 @@
 
 	// cache_key = jointext(generate_icon_cache(), "_") // NOVA EDIT - Species stuff that Goofball ported from /tg/, apparently. Commented for now, to see if I can make it work without it.
 	// NOVA EDIT: we have like 145+ fucking dna blocks lmao
-	dna_block = GLOB.dna_mutant_bodypart_blocks[preference]
+	dna_block = SSaccessories.dna_mutant_bodypart_blocks[preference]
 
 	accessory_type = accessory_type ? accessory_type : sprite_accessory_override
 	var/update_overlays = TRUE
@@ -198,7 +198,11 @@
 	return TRUE
 
 /datum/bodypart_overlay/mutant/horns/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["horns"] // NOVA EDIT - Customization - ORIGINAL: return GLOB.horns_list
+=======
+	return SSaccessories.sprite_accessories["horns"] // NOVA EDIT - Customization - ORIGINAL: return SSaccessories.horns_list
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 ///The frills of a lizard (like weird fin ears)
 /obj/item/organ/external/frills
@@ -225,7 +229,11 @@
 	return FALSE
 
 /datum/bodypart_overlay/mutant/frills/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["frills"] // NOVA EDIT - Customization - ORIGINAL: return GLOB.frills_list
+=======
+	return SSaccessories.sprite_accessories["frills"] // NOVA EDIT - Customization - ORIGINAL: return SSaccessories.frills_list
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 ///Guess what part of the lizard this is?
 /obj/item/organ/external/snout
@@ -254,7 +262,11 @@
 	return FALSE
 
 /datum/bodypart_overlay/mutant/snout/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["snout"] // NOVA EDIT - Customization - ORIGINAL : return GLOB.snouts_list
+=======
+	return SSaccessories.sprite_accessories["snout"] // NOVA EDIT - Customization - ORIGINAL : return SSaccessories.snouts_list
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 ///A moth's antennae
 /obj/item/organ/external/antennae
@@ -331,7 +343,11 @@
 	burn_datum = fetch_sprite_datum(burn_datum) //turn the path into the singleton instance
 
 /datum/bodypart_overlay/mutant/antennae/get_global_feature_list()
+<<<<<<< HEAD
 	return GLOB.sprite_accessories["moth_antennae"] // NOVA EDIT - Customization - ORIGINAL: return GLOB.moth_antennae_list
+=======
+	return SSaccessories.sprite_accessories["moth_antennae"] // NOVA EDIT - Customization - ORIGINAL: return SSaccessories.moth_antennae_list
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /datum/bodypart_overlay/mutant/antennae/get_base_icon_state()
 	return burnt ? burn_datum.icon_state : sprite_datum.icon_state
