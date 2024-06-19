@@ -318,7 +318,7 @@
 	return TRUE
 
 /mob/proc/adjust_thirst(change, max = THIRST_LEVEL_THRESHOLD)
-	if(HAS_TRAIT(src, TRAIT_NOTHIRST) && !forced)
+	if(HAS_TRAIT(src, TRAIT_NOTHIRST))
 		return
 	water_level = clamp(water_level + change, 0, max)
 	hud_used?.thirst?.update_appearance()
@@ -328,7 +328,7 @@
 	mob_mood?.HandleThirst()
 
 /mob/proc/set_thirst(change)
-	if(HAS_TRAIT(src, TRAIT_NOTHIRST) && !forced)
+	if(HAS_TRAIT(src, TRAIT_NOTHIRST))
 		return
 	water_level = max(0, change)
 	hud_used?.thirst?.update_appearance()
