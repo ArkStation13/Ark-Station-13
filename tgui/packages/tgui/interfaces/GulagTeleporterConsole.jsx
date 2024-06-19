@@ -18,7 +18,7 @@ export const GulagTeleporterConsole = (props) => {
     prisoner = {},
   } = data;
   return (
-    <Window width={350} height={295}>
+    <Window width={390} height={350}>
       <Window.Content>
         <Section
           title="Teleporter Console"
