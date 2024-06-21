@@ -39,6 +39,11 @@
 
 	user.investigate_log("has been gibbed by a bag of holding recursive insertion.", INVESTIGATE_DEATHS)
 	user.gib()
+<<<<<<< HEAD
 	new /obj/boh_tear(rift_loc)
+=======
+	var/obj/reality_tear/tear = new(rift_loc)
+	tear.start_disaster()
+>>>>>>> 664d1720f62... [MIRROR] Event Horizon Anti-Existential Beam Rifle. The ultimate conclusion to the arms race and the sniper's art. [MDB IGNORE] (#3166)
 	qdel(to_insert)
 	qdel(parent)
