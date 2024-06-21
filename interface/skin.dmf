@@ -70,8 +70,16 @@ window "mainwindow"
 		menu = "menu"
 	elem "split"
 		type = CHILD
+<<<<<<< HEAD
 		pos = 3,0
+=======
+		pos = 0,0
+<<<<<<< HEAD
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		size = 634x440
+=======
+		size = 640x440
+>>>>>>> b02ff6e9463 (Fullscreen QoL (#84066))
 		anchor1 = 0,0
 		anchor2 = 100,100
 		saved-params = "splitter"
@@ -173,61 +181,97 @@ window "infowindow"
 		is-vert = false
 	elem "changelog"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 0,8
 		size = 92x20
 		anchor1 = 0,0
 		anchor2 = 14,0
 		is-flat = true
 		font-family = "Chakra Petch"
+=======
+		pos = 5,5
+		size = 90x20
+		anchor1 = 1,0
+		anchor2 = 15,0
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "changelog"
 	elem "rules"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 92,8
 		size = 92x20
 		anchor1 = 14,0
 		anchor2 = 28,0
 		is-flat = true
 		font-family = "Chakra Petch"
+=======
+		pos = 95,5
+		size = 90x20
+		anchor1 = 15,0
+		anchor2 = 29,0
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
 	elem "forum"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 184,8
 		size = 92x20
 		anchor1 = 28,0
 		anchor2 = 42,0
 		is-flat = true
 		font-family = "Chakra Petch"
+=======
+		pos = 185,5
+		size = 90x20
+		anchor1 = 29,0
+		anchor2 = 43,0
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		saved-params = "is-checked"
 		text = "Forum"
 		command = "wiki"
 	elem "wiki"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 276,8
 		size = 92x20
 		anchor1 = 42,0
 		anchor2 = 56,0
 		is-flat = true
 		font-family = "Chakra Petch"
+=======
+		pos = 275,5
+		size = 90x20
+		anchor1 = 43,0
+		anchor2 = 57,0
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
 	elem "ahelp"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 368,8
 		size = 92x20
 		anchor1 = 56,0
 		anchor2 = 70,0
 		is-flat = true
 		font-family = "Chakra Petch"
+=======
+		pos = 365,5
+		size = 90x20
+		anchor1 = 57,0
+		anchor2 = 71,0
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 		saved-params = "is-checked"
 		text = "AdminHelp"
 		command = "Adminhelp"
 	elem "report-issue"
 		type = BUTTON
+<<<<<<< HEAD
 		pos = 476,8
 		size = 160x20
 		anchor1 = 84,0
@@ -237,6 +281,24 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "Open Github"
 		command = "github"
+=======
+		pos = 455,5
+		size = 90x20
+		anchor1 = 71,0
+		anchor2 = 85,0
+		saved-params = "is-checked"
+		text = "Report Issue"
+		command = "report-issue"
+	elem "fullscreen-toggle"
+		type = BUTTON
+		pos = 545,5
+		size = 90x20
+		anchor1 = 85,0
+		anchor2 = 99,0
+		saved-params = "is-checked"
+		text = "Fullscreen"
+		command = "fullscreen"
+>>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
 
 window "outputwindow"
 	elem "outputwindow"
