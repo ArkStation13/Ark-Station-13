@@ -64,7 +64,7 @@ export const AirAlarm = (props) => {
   const { act, data } = useBackend<AirAlarmData>();
   const locked = data.locked && !data.siliconUser;
   return (
-    <Window width={475} height={650}>
+    <Window width={465} height={600}>
       <Window.Content scrollable>
         <InterfaceLockNoticeBox />
         <AirAlarmStatus />
