@@ -26,6 +26,7 @@
 		// HIGH FUNCTIONING UNIQUE
 		TRAIT_NOBLOOD,
 		TRAIT_SUCCUMB_OVERRIDE,
+		TRAIT_NOTHIRST, // ARK STATION EDIT
 	)
 	mutantstomach = null
 	mutantheart = null
