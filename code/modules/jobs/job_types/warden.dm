@@ -47,7 +47,7 @@
 
 	id_trim = /datum/id_trim/job/warden
 	uniform = /obj/item/clothing/under/rank/security/warden
-	suit = /obj/item/clothing/suit/armor/vest/warden //NOVA EDIT CHANGE - Original: /obj/item/clothing/suit/armor/vest/warden/alt
+	suit = /obj/item/clothing/suit/armor/vest/warden/alt //NOVA EDIT CHANGE - Original: /obj/item/clothing/suit/armor/vest/warden/alt // RETURNED TO ORIGINS | ARK STATION
 	suit_store = /obj/item/gun/energy/disabler
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
@@ -55,8 +55,8 @@
 	belt = /obj/item/modular_computer/pda/warden
 	ears = /obj/item/radio/headset/headset_sec/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black //NOVA EDIT CHANGE - Original: /obj/item/clothing/gloves/color/black // СУКА, ВЫ ЗАЕБАЛИ, ПИДОРЫ ЕБЛИВЫЕ
-	head = /obj/item/clothing/head/hats/warden //NOVA EDIT CHANGE - Original: /obj/item/clothing/head/hats/warden/red
+	gloves = /obj/item/clothing/gloves/color/black //NOVA EDIT CHANGE - Original: /obj/item/clothing/gloves/color/black // RETURNED TO ORIGINS | ARK STATION
+	head = /obj/item/clothing/head/hats/warden/red //NOVA EDIT CHANGE - Original: /obj/item/clothing/head/hats/warden/red // RETURNED TO ORIGINS | ARK STATION
 	shoes = /obj/item/clothing/shoes/jackboots/sec
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
