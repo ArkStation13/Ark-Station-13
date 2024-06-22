@@ -23,6 +23,7 @@
 		TRAIT_TOXIMMUNE,
 		TRAIT_UNHUSKABLE,
 		TRAIT_XENO_IMMUNE,
+		TRAIT_NOTHIRST, // ARK STATION EDIT
 	)
 	inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
 	mutanttongue = /obj/item/organ/internal/tongue/bone
