@@ -568,7 +568,7 @@ const CargoHelp = (props) => {
         <b>4.</b> Stick it on the conveyor and let the system handle it.
         <br />
       </Section>
-      <NoticeBox textAlign="center" info mb={0}>
+      <NoticeBox textAlign="center" mb={0}>
         Pondering something not included here? When in doubt, ask the QM!
       </NoticeBox>
     </>
