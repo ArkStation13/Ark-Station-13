@@ -16,4 +16,6 @@
 
 #define TRAIT_COFFIN_ENLARGED "coffin_enlarged"
 
+#define TRAIT_NOTHIRST "no_thirst"	 // not thirsty boys
+
 // END TRAIT DEFINES

@@ -268,6 +268,8 @@
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else
 			msg += "[t_He] [t_is] quite chubby.\n"
+	if(water_level < THIRST_LEVEL_PARCHED - 50) // ARK STATION ADDITION
+		msg += "[t_He] [t_is] parched.\n" // ARK STATION ADDITION
 	switch(disgust)
 		if(DISGUST_LEVEL_GROSS to DISGUST_LEVEL_VERYGROSS)
 			msg += "[t_He] look[p_s()] a bit grossed out.\n"
