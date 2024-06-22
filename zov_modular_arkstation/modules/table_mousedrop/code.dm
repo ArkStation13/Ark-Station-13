@@ -1,4 +1,4 @@
-/obj/structure/table/MouseDrop_T(obj/item/O, mob/living/user, params)
+/obj/structure/table/mouse_drop_receive(obj/item/O, mob/living/user, params)
 	var/list/modifiers = params2list(params)
 	if(ismob(O))
 		return ..()
