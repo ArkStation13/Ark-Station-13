@@ -37,7 +37,7 @@ export const Sleeper = (props) => {
     return 0;
   });
   return (
-    <Window width={310} height={465}>
+    <Window width={359} height={555}>
       <Window.Content>
         <Section
           title={occupant.name ? occupant.name : 'No Occupant'}
