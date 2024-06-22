@@ -485,7 +485,7 @@
 /*
 * SUITS
 */
-/obj/item/clothing/suit/armor/vest/alt/sec
+/obj/item/clothing/suit/armor/vest/alt/sec // OVERRIDED IN ARK STATION MODULARS
 	name = "armored security vest"
 	desc = "A Type-II-AD-P armored vest that provides decent protection against most types of damage."
 	// icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
@@ -546,7 +546,7 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 //Riot Armor
-/obj/item/clothing/suit/armor/riot
+/obj/item/clothing/suit/armor/riot // OVERRIDED IN ARK STATION MODULARS
 	icon_state = "riot_ad" //replaces the NT on the back
 	icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi'
@@ -591,72 +591,80 @@
 * UNDER
 */
 //Officer
-/obj/item/clothing/under/rank/security/officer
-	desc = "A tactical security uniform for officers, complete with a Lopland belt buckle."
-	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
-	icon_state = "rsecurity" // ARK STATION EDIT || REDSEC
-	alt_covers_chest = TRUE
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Black Variant" = list(
-			RESKIN_ICON_STATE = "security_black",
-			RESKIN_WORN_ICON_STATE = "security_black"
-		),
-		"Blue Variant" = list(
-			RESKIN_ICON_STATE = "security_blue",
-			RESKIN_WORN_ICON_STATE = "security_blue"
-		),
-		"White Variant" = list(
-			RESKIN_ICON_STATE = "security_white",
-			RESKIN_WORN_ICON_STATE = "security_white"
-		),
-	)
+// /obj/item/clothing/under/rank/security/officer // OVERRIDED IN ARK STATION MODULARS
+// 	desc = "A tactical security uniform for officers, complete with a Lopland belt buckle."
+// 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+// 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+// 	icon_state = "rsecurity" // ARK STATION EDIT || REDSEC
+// 	alt_covers_chest = TRUE
+// 	uses_advanced_reskins = TRUE
+// 	unique_reskin = list(
+// 		"Red Variant" = list(
+// 			RESKIN_ICON_STATE = "rsecurity",
+// 			RESKIN_WORN_ICON_STATE = "rsecurity"
+// 		),
+// 		"Black Variant" = list(
+// 			RESKIN_ICON_STATE = "security_black",
+// 			RESKIN_WORN_ICON_STATE = "security_black"
+// 		),
+// 		"Blue Variant" = list(
+// 			RESKIN_ICON_STATE = "security_blue",
+// 			RESKIN_WORN_ICON_STATE = "security_blue"
+// 		),
+// 		"White Variant" = list(
+// 			RESKIN_ICON_STATE = "security_white",
+// 			RESKIN_WORN_ICON_STATE = "security_white"
+// 		),
+// 	)
 
 // ARK STATION EDIT || REDSEC //
 
-/obj/item/clothing/under/rank/security/officer/skirt
-	name = "security jumpskirt"
-	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
-	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
-	icon_state = "secskirt" // ARK STATION EDIT || REDSEC
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Blue Variant" = list(
-			RESKIN_ICON_STATE = "jumpskirt_blue",
-			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
-        ),
-		"Black Variant" = list(
-			RESKIN_ICON_STATE = "jumpskirt_black",
-			RESKIN_WORN_ICON_STATE = "jumpskirt_black"
-		),
-	)
+// /obj/item/clothing/under/rank/security/officer/skirt // OVERRIDED IN ARK STATION MODULARS
+// 	name = "security jumpskirt"
+// 	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
+// 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+// 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+// 	icon_state = "secskirt" // ARK STATION EDIT || REDSEC
+// 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+// 	gets_cropped_on_taurs = FALSE
+// 	uses_advanced_reskins = TRUE
+// 	unique_reskin = list(
+// 		"Red Variant" = list(
+// 			RESKIN_ICON_STATE = "secskirt",
+// 			RESKIN_WORN_ICON_STATE = "secskirt"
+//         ),
+// 		"Blue Variant" = list(
+// 			RESKIN_ICON_STATE = "jumpskirt_blue",
+// 			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
+//         ),
+// 		"Black Variant" = list(
+// 			RESKIN_ICON_STATE = "jumpskirt_black",
+// 			RESKIN_WORN_ICON_STATE = "jumpskirt_black"
+// 		),
+// 	)
 
 // //Warden
-// /obj/item/clothing/under/rank/security/warden
+// /obj/item/clothing/under/rank/security/warden // UNOVERRIDED | ARK STATION
 // 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
 // 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
 // 	icon_state = "rwarden"
 
 // //HoS
-// /obj/item/clothing/under/rank/security/head_of_security
+// /obj/item/clothing/under/rank/security/head_of_security // UNOVERRIDED | ARK STATION
 // 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
 // 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
 // 	icon_state = "hos_black"
 
-// /obj/item/clothing/under/rank/security/head_of_security/parade
+// /obj/item/clothing/under/rank/security/head_of_security/parade // UNOVERRIDED | ARK STATION
 // 	icon_state = "hos_parade_male_blue"
 
-// /obj/item/clothing/under/rank/security/head_of_security/parade/female
+// /obj/item/clothing/under/rank/security/head_of_security/parade/female // UNOVERRIDED | ARK STATION
 // 	icon_state = "hos_parade_fem_blue"
 
-// /obj/item/clothing/under/rank/security/head_of_security/alt
+// /obj/item/clothing/under/rank/security/head_of_security/alt // UNOVERRIDED | ARK STATION
 // 	icon_state = "hosalt_blue"
 
-// /obj/item/clothing/under/rank/security/head_of_security/alt/skirt
+// /obj/item/clothing/under/rank/security/head_of_security/alt/skirt // UNOVERRIDED | ARK STATION
 // 	icon_state = "hosalt_skirt_blue"
 
 // ARK STATION EDIT || REDSEC //
@@ -665,28 +673,32 @@
 * FEET
 */
 //Adds reskins and special footstep noises
-/obj/item/clothing/shoes/jackboots/sec
-	name = "security jackboots"
-	desc = "Lopland's Peacekeeper-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
-	icon_state = "jackboots" // ARK STATION EDIT || REDSEC
-	icon = 'modular_nova/master_files/icons/obj/clothing/shoes.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/feet.dmi'
-	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS) // We have other footsteps.
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Blue-Trimmed Variant" = list(
-			RESKIN_ICON_STATE = "security_boots",
-			RESKIN_WORN_ICON_STATE = "security_boots"
-		),
-		"White-Trimmed Variant" = list(
-			RESKIN_ICON_STATE = "security_boots_white",
-			RESKIN_WORN_ICON_STATE = "security_boots_white"
-		),
-		"Full White Variant" = list(
-			RESKIN_ICON_STATE = "security_boots_fullwhite",
-			RESKIN_WORN_ICON_STATE = "security_boots_fullwhite"
-		),
-	)
+// /obj/item/clothing/shoes/jackboots/sec // OVERRIDED IN ARK STATION MODULARS
+// 	name = "security jackboots"
+// 	desc = "Lopland's Peacekeeper-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+// 	icon_state = "jackboots" // ARK STATION EDIT || REDSEC
+// 	icon = 'modular_nova/master_files/icons/obj/clothing/shoes.dmi'
+// 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/feet.dmi'
+// 	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS) // We have other footsteps.
+// 	uses_advanced_reskins = TRUE
+// 	unique_reskin = list(
+// 		"Red-Trimmed Variant" = list(
+// 			RESKIN_ICON_STATE = "jackboots_sec",
+// 			RESKIN_WORN_ICON_STATE = "jackboots_sec"
+// 		)
+// 		"Blue-Trimmed Variant" = list(
+// 			RESKIN_ICON_STATE = "security_boots",
+// 			RESKIN_WORN_ICON_STATE = "security_boots"
+// 		),
+// 		"White-Trimmed Variant" = list(
+// 			RESKIN_ICON_STATE = "security_boots_white",
+// 			RESKIN_WORN_ICON_STATE = "security_boots_white"
+// 		),
+// 		"Full White Variant" = list(
+// 			RESKIN_ICON_STATE = "security_boots_fullwhite",
+// 			RESKIN_WORN_ICON_STATE = "security_boots_fullwhite"
+// 		),
+// 	)
 
 /obj/item/clothing/shoes/jackboots/sec/Initialize(mapload)
 	. = ..()
@@ -709,16 +721,16 @@
 	. = ..()
 
 //PDA Greyscale Overrides // ARK STATION EDIT || REDSEC
-// /obj/item/modular_computer/pda/security
+// /obj/item/modular_computer/pda/security // UNOVERRIDED | ARK STATION
 // 	greyscale_colors = "#2B356D#1E1E1E"
 
-// /obj/item/modular_computer/pda/detective
+// /obj/item/modular_computer/pda/detective // UNOVERRIDED | ARK STATION
 // 	greyscale_colors = "#90714F#1E1E1E"
 
-// /obj/item/modular_computer/pda/warden
+// /obj/item/modular_computer/pda/warden // UNOVERRIDED | ARK STATION
 // 	greyscale_colors = "#2F416E#1E1E1E#ACACAC"
 
-// /obj/item/modular_computer/pda/heads/hos
+// /obj/item/modular_computer/pda/heads/hos // UNOVERRIDED | ARK STATION
 // 	greyscale_colors = "#2B356D#1E1E1E"
 
 /*
