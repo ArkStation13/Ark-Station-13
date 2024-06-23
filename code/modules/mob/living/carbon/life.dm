@@ -75,7 +75,12 @@
 // Second link in a breath chain, calls [carbon/proc/check_breath()]
 /mob/living/carbon/proc/breathe(seconds_per_tick, times_fired)
 	var/obj/item/organ/internal/lungs = get_organ_slot(ORGAN_SLOT_LUNGS)
+<<<<<<< HEAD
 	if(SEND_SIGNAL(src, COMSIG_CARBON_ATTEMPT_BREATHE) & COMSIG_CARBON_BLOCK_BREATH)
+=======
+
+	if(SEND_SIGNAL(src, COMSIG_CARBON_ATTEMPT_BREATHE, seconds_per_tick, times_fired) & COMSIG_CARBON_BLOCK_BREATH)
+>>>>>>> d520cb61ff4... [MIRROR] Internals ASMR [MDB IGNORE] (#3220)
 		return
 
 	SEND_SIGNAL(src, COMSIG_CARBON_PRE_BREATHE)
