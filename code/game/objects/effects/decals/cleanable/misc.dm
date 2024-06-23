@@ -453,6 +453,14 @@
 
 /obj/effect/decal/cleanable/fuel_pool/Initialize(mapload, burn_stacks)
 	. = ..()
+<<<<<<< HEAD
+=======
+	var/static/list/ignition_trigger_connections = list(
+		COMSIG_TURF_MOVABLE_THROW_LANDED = PROC_REF(ignition_trigger),
+	)
+	AddElement(/datum/element/connect_loc, ignition_trigger_connections)
+	RegisterSignal(src, COMSIG_ATOM_TOUCHED_SPARKS, PROC_REF(ignition_trigger))
+>>>>>>> 45d3e1b9056... [MIRROR] [no gbp] Reworked sparks to not be so immensely destructive in benign circumstances [MDB IGNORE] (#3212)
 	for(var/obj/effect/decal/cleanable/fuel_pool/pool in get_turf(src)) //Can't use locate because we also belong to that turf
 		if(pool == src)
 			continue
@@ -509,6 +517,31 @@
 		ignite()
 	return ..()
 
+<<<<<<< HEAD
+=======
+/obj/effect/decal/cleanable/fuel_pool/on_entered(datum/source, atom/movable/entered_atom)
+	. = ..()
+	if(entered_atom.throwing) // don't light from things being thrown over us, we handle that somewhere else
+		return
+	ignition_trigger(source = src, enflammable_atom = entered_atom)
+
+/obj/effect/decal/cleanable/fuel_pool/proc/ignition_trigger(datum/source, atom/movable/enflammable_atom)
+	SIGNAL_HANDLER
+
+	if(isitem(enflammable_atom))
+		var/obj/item/enflamed_item = enflammable_atom
+		if(enflamed_item.get_temperature() > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+			ignite()
+		return
+	else if(isliving(enflammable_atom))
+		var/mob/living/enflamed_liver = enflammable_atom
+		if(enflamed_liver.on_fire)
+			ignite()
+	else if(istype(enflammable_atom, /obj/effect/particle_effect/sparks))
+		ignite()
+
+
+>>>>>>> 45d3e1b9056... [MIRROR] [no gbp] Reworked sparks to not be so immensely destructive in benign circumstances [MDB IGNORE] (#3212)
 /obj/effect/decal/cleanable/fuel_pool/hivis
 	icon_state = "fuel_pool_hivis"
 
