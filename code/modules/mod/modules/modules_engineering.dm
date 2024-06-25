@@ -15,7 +15,12 @@
 /obj/item/mod/module/welding/on_suit_activation()
 	var/obj/item/clothing/head_cover = mod.get_part_from_slot(ITEM_SLOT_HEAD) || mod.get_part_from_slot(ITEM_SLOT_MASK) || mod.get_part_from_slot(ITEM_SLOT_EYES)
 	if(istype(head_cover))
+<<<<<<< HEAD
 		head_cover.flash_protect = FLASH_PROTECTION_WELDER
+=======
+		//this is a screen that displays an image, so flash sensitives can use this to protect against flashes.
+		head_cover.flash_protect = FLASH_PROTECTION_WELDER_HYPER_SENSITIVE
+>>>>>>> b35312a9a4b... [MIRROR] Fixes the Infiltrator Module not having the correct welder protection and not adding the correct traits, improves welding protection defines. [MDB IGNORE] (#3260)
 
 /obj/item/mod/module/welding/on_suit_deactivation(deleting = FALSE)
 	if(deleting)
