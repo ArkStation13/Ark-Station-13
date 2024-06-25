@@ -354,8 +354,13 @@
 	. = ..()
 	AddElement(/datum/element/openspace_item_click_handler)
 
+<<<<<<< HEAD
 /obj/item/trapdoor_kit/handle_openspace_click(turf/target, mob/user, proximity_flag, click_parameters)
 	afterattack(target, user, proximity_flag, click_parameters)
+=======
+/obj/item/trapdoor_kit/handle_openspace_click(turf/target, mob/user, list/modifiers)
+	interact_with_atom(target, user, modifiers)
+>>>>>>> 0e169a9afeb... [MIRROR] fix tile/rod/rcd multi-z hole repairs [MDB IGNORE] (#3283)
 
 /obj/item/trapdoor_kit/afterattack(atom/target, mob/user, proximity_flag)
 	. = ..()
