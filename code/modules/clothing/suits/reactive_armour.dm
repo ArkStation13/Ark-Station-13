@@ -5,13 +5,8 @@
 	icon = 'icons/obj/clothing/suits/armor.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 
-<<<<<<< HEAD
-/obj/item/reactive_armour_shell/attackby(obj/item/weapon, mob/user, params)
-	..()
-=======
 /obj/item/reactive_armor_shell/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	. = ..()
->>>>>>> f0707e13116... [MIRROR] Fixes reactive armour not recognising anomaly subtypes [MDB IGNORE] (#3093)
 	var/static/list/anomaly_armour_types = list(
 		/obj/effect/anomaly/grav = /obj/item/clothing/suit/armor/reactive/repulse,
 		/obj/effect/anomaly/flux = /obj/item/clothing/suit/armor/reactive/tesla,
