@@ -119,6 +119,8 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	var/atom/movable/screen/healthdoll
 	var/atom/movable/screen/spacesuit
 	var/atom/movable/screen/hunger
+
+	var/atom/movable/screen/thirst // ARK STATION EDIT
 	// subtypes can override this to force a specific UI style
 	var/ui_style
 	var/erp_ui_style //NOVA EDIT - ADDITION - ERP ICONS FIX
@@ -266,6 +268,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	healthdoll = null
 	spacesuit = null
 	hunger = null
+	thirst = null // ARK STATION ADDITION
 	blobpwrdisplay = null
 	alien_plasma_display = null
 	alien_queen_finder = null
