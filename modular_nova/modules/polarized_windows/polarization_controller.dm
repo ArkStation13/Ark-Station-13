@@ -81,19 +81,11 @@ GLOBAL_LIST_EMPTY(polarization_controllers)
  *
  * See: [/obj/item/proc/melee_attack_chain]
  */
-<<<<<<< HEAD
-/datum/component/polarization_controller/proc/on_window_attackby(datum/source, obj/item/attacking_item, mob/user, params)
-	SIGNAL_HANDLER
-
-	if(!istype(attacking_item, /obj/item/assembly/control/polarizer))
-		return
-=======
 /datum/component/polarization_controller/proc/window_item_interact(datum/source, mob/user, obj/item/thing, params)
 	SIGNAL_HANDLER
 
 	if(!istype(thing, /obj/item/assembly/control/polarizer))
 		return NONE
->>>>>>> e35ea49d830... Fix window polarizers (#3084)
 
 	var/obj/item/assembly/control/polarizer/polarizer = thing
 	var/atom/parent_atom = parent
