@@ -948,8 +948,6 @@
 /datum/greyscale_config/crop_jacket/worn
 	name = "Tailored Jacket (Worn)"
 	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket_worn.dmi'
-<<<<<<< HEAD
-=======
 
 // SLEEVELESS CROPPED JACKET
 
@@ -961,7 +959,6 @@
 /datum/greyscale_config/sleeveless_crop_jacket/worn
 	name = "Tailored Jacket (Worn)"
 	icon_file = 'modular_nova/modules/GAGS/icons/sleeveless_crop_jacket_worn.dmi'
->>>>>>> fc523d4c223... DRIPOCALYPSE NOW! adds some gags drip (#3165)
 
 
 // PARADE JACKET

@@ -261,9 +261,6 @@
 /obj/item/clothing/suit/crop_jacket/Initialize(mapload)
 	. = ..()
 	allowed += STUFF_WINTER_COATS_HOLD
-<<<<<<< HEAD
-	AddComponent(/datum/component/toggle_icon, "sleeves")
-=======
 	if(has_sleeves)
 		AddComponent(/datum/component/toggle_icon, "sleeves")
 
@@ -276,7 +273,6 @@
 	greyscale_colors = "#ebebeb#a52f29"
 	body_parts_covered = CHEST
 	has_sleeves = FALSE
->>>>>>> fc523d4c223... DRIPOCALYPSE NOW! adds some gags drip (#3165)
 
 /obj/item/clothing/suit/big_jacket
 	name = "\improper Alpha Atelier pilot jacket"
