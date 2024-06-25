@@ -74,4 +74,62 @@
 	bare_wound_bonus = 10
 	embedding = list(embed_chance=80, fall_chance=1, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=2, rip_time=14)
 	embed_falloff_tile = -3
+<<<<<<< HEAD
 	shrapnel_type = /obj/item/stack/rods
+=======
+	shrapnel_type = /obj/item/ammo_casing/rebar/healium
+
+/obj/projectile/bullet/rebar/healium/on_hit(atom/target, blocked = 0, pierce_hit)
+	. = ..()
+	if(!iscarbon(target))
+		return BULLET_ACT_HIT
+	var/mob/living/breather = target
+	breather.SetSleeping(3 SECONDS)
+	breather.adjustFireLoss(-30, updating_health = TRUE, required_bodytype = BODYTYPE_ORGANIC)
+	breather.adjustToxLoss(-30, updating_health = TRUE, required_biotype = BODYTYPE_ORGANIC)
+	breather.adjustBruteLoss(-30, updating_health = TRUE, required_bodytype = BODYTYPE_ORGANIC)
+	breather.adjustOxyLoss(-30, updating_health = TRUE, required_biotype = BODYTYPE_ORGANIC, required_respiration_type = ALL)
+
+	return BULLET_ACT_HIT
+
+
+/obj/projectile/bullet/rebar/supermatter
+	name = "supermatter bolt"
+	icon_state = "rebar_supermatter"
+	damage = 0
+	speed = 0.4
+	dismemberment = 0
+	damage_type = TOX
+	armour_penetration = 100
+	shrapnel_type = /obj/item/ammo_casing/rebar/supermatter
+
+/obj/projectile/bullet/rebar/supermatter/on_hit(atom/target, blocked = 0, pierce_hit)
+	. = ..()
+	if(isliving(target))
+		var/mob/living/victim = target
+		victim.investigate_log("has been dusted by [src].", INVESTIGATE_DEATHS)
+		dust_feedback(target)
+		victim.dust()
+
+	else if(!isturf(target)&& !isliving(target))
+		dust_feedback(target)
+		qdel(target)
+
+	return BULLET_ACT_HIT
+
+
+/obj/projectile/bullet/rebar/supermatter/proc/dust_feedback(atom/target)
+	playsound(get_turf(src), 'sound/effects/supermatter.ogg', 10, TRUE)
+	visible_message(span_danger("[target] is hit by [src], turning [target.p_them()] to dust in a brilliant flash of light!"))
+
+/obj/projectile/bullet/paperball
+	desc = "Doink!"
+	damage = 1 // It's a damn toy.
+	range = 10
+	shrapnel_type = null
+	embedding = null
+	name = "paper ball"
+	desc = "doink!"
+	damage_type = BRUTE
+	icon_state = "paperball"
+>>>>>>> ed18304e71a... [MIRROR] Fixes crossbow healium bolt sleeping silicons! Oops! [MDB IGNORE] (#3074)
