@@ -148,12 +148,6 @@
 					user.visible_message(span_warning("[user] shines [src] into [M.p_their()] eyes."), ignored_mobs = user)
 					render_list += span_info("You direct [src] to into your eyes:\n")
 
-<<<<<<< HEAD
-					if(M.is_blind())
-						render_list += "<span class='notice ml-1'>You're not entirely certain what you were expecting...</span>\n"
-					else
-						render_list += "<span class='notice ml-1'>Trippy!</span>\n"
-=======
 	var/list/mouth_organs = list()
 	for(var/obj/item/organ/organ as anything in M.organs)
 		if(organ.zone == BODY_ZONE_PRECISE_MOUTH)
@@ -210,7 +204,6 @@
 			. += "<span class='notice ml-1'>[M] doesn't have any organs in [ M.p_their()] mouth.</span>\n"
 		if(pill_count)
 			. += "<span class='notice ml-1'>[M] has [pill_count] pill[pill_count > 1 ? "s" : ""] implanted in [ M.p_their()] teeth.</span>\n"
->>>>>>> a0b5bcd98b6... [MIRROR] Crit Dental Pills! [MDB IGNORE] (#3079)
 
 				else
 					user.visible_message(span_warning("[user] directs [src] to [M]'s eyes."), ignored_mobs = user)
