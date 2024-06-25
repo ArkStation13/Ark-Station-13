@@ -15,6 +15,20 @@
 			null,
 			/* hud_owner = */ null,
 			src,
+<<<<<<< HEAD
+=======
+			"Character",
+			/* offset = */ 2,
+			CALLBACK(src, PROC_REF(home_open_character_settings)),
+		)
+	)
+
+	page_holder.give_screen_object(
+		new /atom/movable/screen/escape_menu/home_button(
+			null,
+			/* hud_owner = */ null,
+			src,
+>>>>>>> ff9fbf93f91... [MIRROR] Spellchecks charater->character [MDB IGNORE] (#3253)
 			"Settings",
 			/* offset = */ 2,
 			CALLBACK(src, PROC_REF(home_open_settings)),
@@ -48,7 +62,19 @@
 /datum/escape_menu/proc/home_resume()
 	qdel(src)
 
+<<<<<<< HEAD
 /datum/escape_menu/proc/home_open_settings()
+=======
+/datum/escape_menu/proc/home_open_character_settings()
+	client?.prefs.current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
+	client?.prefs.update_static_data(client?.mob)
+	client?.prefs.ui_interact(client?.mob)
+	qdel(src)
+
+/datum/escape_menu/proc/home_open_game_settings()
+	client?.prefs.current_window = PREFERENCE_TAB_GAME_PREFERENCES
+	client?.prefs.update_static_data(client?.mob)
+>>>>>>> ff9fbf93f91... [MIRROR] Spellchecks charater->character [MDB IGNORE] (#3253)
 	client?.prefs.ui_interact(client?.mob)
 	qdel(src)
 
