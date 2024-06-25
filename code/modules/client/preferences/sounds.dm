@@ -4,6 +4,12 @@
 	savefile_key = "sound_ambience"
 	savefile_identifier = PREFERENCE_PLAYER
 
+<<<<<<< HEAD
+=======
+/datum/preference/toggle/sound_ambience/apply_to_client(client/client, value)
+	client.update_ambience_pref(value)
+
+>>>>>>> 85d72c75aa5... [MIRROR] Fixes ambient sound preferences runtiming every time a client connects [MDB IGNORE] (#3204)
 /// Controls hearing announcement sounds
 /datum/preference/toggle/sound_announcements
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
