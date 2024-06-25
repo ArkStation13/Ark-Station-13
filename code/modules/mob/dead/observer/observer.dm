@@ -1005,17 +1005,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		game = create_mafia_game()
 	game.ui_interact(usr)
 
-<<<<<<< HEAD
-/mob/dead/observer/CtrlShiftClick(mob/user)
-	if(isobserver(user) && check_rights(R_SPAWN))
-		change_mob_type(/mob/living/carbon/human , null, null, TRUE) //always delmob, ghosts shouldn't be left lingering
-=======
 /mob/dead/observer/CtrlShiftClickOn(atom/target)
 	if(isobserver(target) && check_rights(R_SPAWN))
 		var/mob/dead/observer/target_ghost = target
 
 		target_ghost.change_mob_type(/mob/living/carbon/human , null, null, TRUE) //always delmob, ghosts shouldn't be left lingering
->>>>>>> 1ade9a84694... [MIRROR] [NO GBP] Admin ctrl+shift works only on the clicked ghost [MDB IGNORE] (#3090)
 
 /mob/dead/observer/examine(mob/user)
 	. = ..()
