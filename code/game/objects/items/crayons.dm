@@ -833,7 +833,21 @@
 			. += "It is empty."
 	. += span_notice("Alt-click [src] to [ is_capped ? "take the cap off" : "put the cap on"]. Right-click a colored object to match its existing color.")
 
+<<<<<<< HEAD
 /obj/item/toy/crayon/spraycan/use_on(atom/target, mob/user, params)
+=======
+
+/obj/item/toy/crayon/spraycan/can_use_on(atom/target, mob/user, list/modifiers)
+	if(iscarbon(target))
+		return TRUE
+	if(ismob(target) && (HAS_TRAIT(target, TRAIT_SPRAY_PAINTABLE)))
+		return TRUE
+	if(isobj(target) && !(target.flags_1 & UNPAINTABLE_1))
+		return TRUE
+	return ..()
+
+/obj/item/toy/crayon/spraycan/use_on(atom/target, mob/user, list/modifiers)
+>>>>>>> ee6dc06ff2d... [MIRROR] [NO GBP] Hotfixes spraycans [MDB IGNORE] (#3289)
 	if(is_capped)
 		balloon_alert(user, "take the cap off first!")
 		return
