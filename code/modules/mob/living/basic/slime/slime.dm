@@ -187,15 +187,10 @@
 
 /mob/living/basic/slime/regenerate_icons()
 	cut_overlays()
-<<<<<<< HEAD
-	var/icon_text = "[slime_type.colour] [life_stage] slime"
-	icon_dead = "[icon_text] dead"
-=======
 	if(slime_type.transparent)
 		alpha = SLIME_TRANSPARENCY_ALPHA
-	var/icon_text = "[slime_type.colour]-[life_stage]"
-	icon_dead = "[icon_text]-dead"
->>>>>>> 1fa2fc1c9a9... [MIRROR] Slime transparency fix [NO GBP] [MDB IGNORE] (#3097)
+	var/icon_text = "[slime_type.colour] [life_stage] slime" // ARK STATION EDIT
+	icon_dead = "[icon_text] dead" // ARK STATION EDIT
 	if(stat != DEAD)
 		icon_state = icon_text
 		if(current_mood && current_mood != SLIME_MOOD_NONE && !stat)
