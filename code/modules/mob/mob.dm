@@ -94,7 +94,7 @@
 		AA.onNewMob(src)
 	set_nutrition(rand(NUTRITION_LEVEL_START_MIN, NUTRITION_LEVEL_START_MAX))
 
-	set_thirst(rand(NUTRITION_LEVEL_START_MIN, NUTRITION_LEVEL_START_MAX)) // ARK STATION ADDITION
+	set_thirst(rand(THIRST_LEVEL_START_MIN, THIRST_LEVEL_START_MAX)) // ARK STATION ADDITION
 
 	. = ..()
 	update_config_movespeed()
