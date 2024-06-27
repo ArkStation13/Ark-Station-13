@@ -47,6 +47,38 @@
 	AddElement(/datum/element/tool_renaming)
 	RegisterSignal(src, COMSIG_DART_INSERT_ADDED, PROC_REF(on_inserted_into_dart))
 	RegisterSignal(src, COMSIG_DART_INSERT_REMOVED, PROC_REF(on_removed_from_dart))
+<<<<<<< HEAD
+=======
+	if (!can_click)
+		return
+	create_transform_component()
+	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, PROC_REF(on_transform))
+
+/// Proc that child classes can override to have custom transforms, like edaggers or pendrivers
+/obj/item/pen/proc/create_transform_component()
+	AddComponent( \
+		/datum/component/transforming, \
+		sharpness_on = NONE, \
+		inhand_icon_change = FALSE, \
+		w_class_on = w_class, \
+	)
+
+/*
+ * Signal proc for [COMSIG_TRANSFORMING_ON_TRANSFORM].
+ *
+ * Clicks the pen to make an annoying sound. Clickity clickery click!
+ */
+/obj/item/pen/proc/on_transform(obj/item/source, mob/user, active)
+	SIGNAL_HANDLER
+
+	if(user)
+		balloon_alert(user, "clicked")
+	playsound(src, 'sound/machines/click.ogg', 30, TRUE, -3)
+	icon_state = initial(icon_state) + (active ? "_retracted" : "")
+	update_appearance(UPDATE_ICON)
+
+	return COMPONENT_NO_DEFAULT_MESSAGE
+>>>>>>> 4edd6c24673... [MIRROR] [NO GBP] Pen size hotfix [MDB IGNORE] (#3311)
 
 /obj/item/pen/proc/on_inserted_into_dart(datum/source, obj/projectile/dart, mob/user, embedded = FALSE)
 	SIGNAL_HANDLER
