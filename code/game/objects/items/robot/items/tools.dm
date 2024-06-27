@@ -261,6 +261,12 @@
 	else
 		inhand_icon_state = initial(inhand_icon_state)
 
+<<<<<<< HEAD
+=======
+/obj/item/borg/cyborg_omnitool/melee_attack_chain(mob/user, atom/target, params)
+	if(selected)
+		return selected.melee_attack_chain(user, target, params)
+>>>>>>> 4e2640093c6... [MIRROR] Fix cyborg omnitool regression [MDB IGNORE] (#3310)
 	return ..()
 
 /**
