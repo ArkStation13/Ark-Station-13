@@ -139,6 +139,81 @@
 	REMOVE_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
 	owner.visible_message(span_danger("[owner] suddenly grows!"), span_notice("Everything around you seems to shrink.."))
 
+<<<<<<< HEAD
+=======
+/datum/mutation/human/acromegaly
+	name = "Acromegaly"
+	desc = "A mutation believed to be the cause of acromegaly, or 'being unusually tall'."
+	quality = MINOR_NEGATIVE
+	difficulty = 16
+	instability = NEGATIVE_STABILITY_MODERATE
+	synchronizer_coeff = 1
+	conflicts = list(/datum/mutation/human/dwarfism)
+
+/datum/mutation/human/acromegaly/on_acquiring(mob/living/carbon/human/owner)
+	if(..())
+		return
+	ADD_TRAIT(owner, TRAIT_TOO_TALL, GENETIC_MUTATION)
+	owner.visible_message(span_danger("[owner] suddenly grows tall!"), span_notice("You feel a small strange urge to fight small men with slingshots. Or maybe play some basketball."))
+	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(head_bonk))
+	owner.regenerate_icons()
+
+/datum/mutation/human/acromegaly/on_losing(mob/living/carbon/human/owner)
+	if(..())
+		return
+	REMOVE_TRAIT(owner, TRAIT_TOO_TALL, GENETIC_MUTATION)
+	owner.visible_message(span_danger("[owner] suddenly shrinks!"), span_notice("You return to your usual height."))
+	UnregisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(head_bonk))
+	owner.regenerate_icons()
+
+// This is specifically happening because they're not used to their new height and are stumbling around into machinery made for normal humans
+/datum/mutation/human/acromegaly/proc/head_bonk(mob/living/parent)
+	SIGNAL_HANDLER
+	var/turf/airlock_turf = get_turf(parent)
+	var/atom/movable/whacked_by = locate(/obj/machinery/door/airlock) in airlock_turf || locate(/obj/machinery/door/firedoor) in airlock_turf || locate(/obj/structure/mineral_door) in airlock_turf
+	if(!whacked_by || prob(100 - (8 *  GET_MUTATION_SYNCHRONIZER(src))))
+		return
+	to_chat(parent, span_danger("You hit your head on \the [whacked_by]'s header!"))
+	var/dmg = HAS_TRAIT(parent, TRAIT_HEAD_INJURY_BLOCKED) ? rand(1,4) : rand(2,9)
+	parent.apply_damage(dmg, BRUTE, BODY_ZONE_HEAD)
+	parent.do_attack_animation(whacked_by, ATTACK_EFFECT_PUNCH)
+	playsound(whacked_by, 'sound/effects/bang.ogg', 10, TRUE)
+	parent.adjust_staggered_up_to(STAGGERED_SLOWDOWN_LENGTH, 10 SECONDS)
+
+/datum/mutation/human/gigantism
+	name = "Gigantism" //negative version of dwarfism
+	desc = "The cells within the subject spread out to cover more area, making the subject appear larger."
+	quality = MINOR_NEGATIVE
+	difficulty = 12
+	conflicts = list(/datum/mutation/human/dwarfism)
+
+/datum/mutation/human/gigantism/on_acquiring(mob/living/carbon/human/owner)
+	if(..())
+		return
+	// NOVA EDIT ADDITION BEGIN
+	if(owner.dna.features["body_size"] > 1)
+		to_chat(owner, "You feel your body expanding even further, but it feels like your bones are expanding too much!")
+		owner.adjustBruteLoss(25) // take some DAMAGE
+		return
+	// NOVA EDIT ADDITION END
+	ADD_TRAIT(owner, TRAIT_GIANT, GENETIC_MUTATION)
+	owner.update_transform(1.25)
+	owner.visible_message(span_danger("[owner] suddenly grows!"), span_notice("Everything around you seems to shrink.."))
+
+/datum/mutation/human/gigantism/on_losing(mob/living/carbon/human/owner)
+	if(..())
+		return
+	// NOVA EDIT ADDITION BEGIN
+	if(owner.dna.features["body_size"] > 1)
+		to_chat(owner, "You feel relief as your bones cease their growth spurt.")
+	if(!HAS_TRAIT_FROM(owner, TRAIT_GIANT, GENETIC_MUTATION)) // Don't shrink if we didn't grow in the first place.
+		return
+	// NOVA EDIT ADDITION END
+	REMOVE_TRAIT(owner, TRAIT_GIANT, GENETIC_MUTATION)
+	owner.update_transform(0.8)
+	owner.visible_message(span_danger("[owner] suddenly shrinks!"), span_notice("Everything around you seems to grow.."))
+
+>>>>>>> d9a5411918e... Fixes a gigantism exploit (#3337)
 //Clumsiness has a very large amount of small drawbacks depending on item.
 /datum/mutation/human/clumsy
 	name = "Clumsiness"
