@@ -335,7 +335,6 @@
 /datum/surgery_step/proc/display_pain(mob/living/target, pain_message, mechanical_surgery = FALSE, datum/mood_event/mood_event_type)
 	if(target.stat < UNCONSCIOUS)
 		if(HAS_TRAIT(target, TRAIT_ANALGESIA))
-			target.add_mood_event("mild_surgery", /datum/mood_event/mild_surgery) // NOVA EDIT ADDITION - Adds mood effects to surgeries
 			if(!pain_message)
 				return
 			to_chat(target, span_notice("You feel a dull, numb sensation as your body is surgically operated on."))
@@ -344,7 +343,6 @@
 			target.add_mood_event("robot_surgery", /datum/mood_event/robot_surgery)
 		// NOVA EDIT ADDITION END
 		else
-			target.add_mood_event("severe_surgery", /datum/mood_event/severe_surgery) // NOVA EDIT ADDITION - Adds mood effects to surgeries
 			if(!pain_message)
 				return
 			to_chat(target, span_userdanger(pain_message))
