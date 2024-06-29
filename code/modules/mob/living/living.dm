@@ -1426,7 +1426,11 @@
 			to_chat(src, span_warning("You don't have the physical ability to do this!"))
 			return FALSE
 
+<<<<<<< HEAD
 	if(!(action_bitflags & BYPASS_ADJACENCY) && !Adjacent(target) && (target.loc != src) && !recursive_loc_check(src, target))
+=======
+	if(!(action_bitflags & BYPASS_ADJACENCY) && ((action_bitflags & NOT_INSIDE_TARGET) || !recursive_loc_check(src, target)) && !CanReach(target))
+>>>>>>> 5040a0dad88... [MIRROR] Some alt & ctrl click improvements [MDB IGNORE] (#3295)
 		if(HAS_SILICON_ACCESS(src) && !ispAI(src))
 			if(!(action_bitflags & ALLOW_SILICON_REACH)) // silicons can ignore range checks (except pAIs)
 				if(!(action_bitflags & SILENT_ADJACENCY))
