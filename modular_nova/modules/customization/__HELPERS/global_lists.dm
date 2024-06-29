@@ -1,5 +1,9 @@
 /proc/make_nova_datum_references()
+<<<<<<< HEAD
 	make_sprite_accessory_references()
+=======
+	init_prefs_emotes()
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 	make_default_mutant_bodypart_references()
 	make_body_marking_references()
 	make_body_marking_set_references()
@@ -8,6 +12,7 @@
 	populate_total_uf_len_by_block()
 	make_augment_references()
 
+<<<<<<< HEAD
 /proc/make_sprite_accessory_references()
 	// Here we build the global list for all accessories
 	for(var/path in subtypesof(/datum/sprite_accessory))
@@ -30,6 +35,20 @@
 			//TODO: Replace "generic" definitions with something better
 			if(P.generic && !GLOB.generic_accessories[P.key])
 				GLOB.generic_accessories[P.key] = P.generic
+=======
+/proc/init_prefs_emotes()
+	//Scream types
+	for(var/spath in subtypesof(/datum/scream_type))
+		var/datum/scream_type/S = new spath()
+		GLOB.scream_types[S.name] = spath
+	sort_list(GLOB.scream_types, GLOBAL_PROC_REF(cmp_typepaths_asc))
+
+	//Laugh types
+	for(var/spath in subtypesof(/datum/laugh_type))
+		var/datum/laugh_type/L = new spath()
+		GLOB.laugh_types[L.name] = spath
+	sort_list(GLOB.laugh_types, GLOBAL_PROC_REF(cmp_typepaths_asc))
+>>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /proc/make_default_mutant_bodypart_references()
 	// Build the global list for default species' mutant_bodyparts
@@ -68,11 +87,11 @@
 
 /proc/make_body_marking_dna_block_references()
 	for(var/marking_zone in GLOB.marking_zones)
-		GLOB.dna_body_marking_blocks[marking_zone] = GLOB.dna_total_feature_blocks+1
+		GLOB.dna_body_marking_blocks[marking_zone] = SSaccessories.dna_total_feature_blocks+1
 		for(var/feature_block_set in 1 to MAXIMUM_MARKINGS_PER_LIMB)
 			for(var/color_block in 1 to DNA_MARKING_COLOR_BLOCKS_PER_MARKING)
-				GLOB.features_block_lengths["[GLOB.dna_body_marking_blocks[marking_zone] + (feature_block_set - 1) * DNA_BLOCKS_PER_MARKING + color_block]"] = DNA_BLOCK_SIZE_COLOR
-		GLOB.dna_total_feature_blocks += DNA_BLOCKS_PER_MARKING_ZONE
+				SSaccessories.features_block_lengths["[GLOB.dna_body_marking_blocks[marking_zone] + (feature_block_set - 1) * DNA_BLOCKS_PER_MARKING + color_block]"] = DNA_BLOCK_SIZE_COLOR
+		SSaccessories.dna_total_feature_blocks += DNA_BLOCKS_PER_MARKING_ZONE
 
 /proc/init_nova_stack_recipes()
 	var/list/additional_stack_recipes = list(
@@ -164,62 +183,62 @@
 			loadout_list -= loadout_typepath
 
 	// Underwear
-	for(var/sprite_name in GLOB.underwear_list)
-		var/datum/sprite_accessory/sprite_datum = GLOB.underwear_list[sprite_name]
+	for(var/sprite_name in SSaccessories.underwear_list)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_list[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.underwear_list -= sprite_name
+		SSaccessories.underwear_list -= sprite_name
 
-	for(var/sprite_name in GLOB.underwear_f)
-		var/datum/sprite_accessory/sprite_datum = GLOB.underwear_f[sprite_name]
+	for(var/sprite_name in SSaccessories.underwear_f)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_f[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.underwear_f -= sprite_name
+		SSaccessories.underwear_f -= sprite_name
 
-	for(var/sprite_name in GLOB.underwear_m)
-		var/datum/sprite_accessory/sprite_datum = GLOB.underwear_m[sprite_name]
+	for(var/sprite_name in SSaccessories.underwear_m)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_m[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.underwear_m -= sprite_name
+		SSaccessories.underwear_m -= sprite_name
 
 	// Undershirts
-	for(var/sprite_name in GLOB.undershirt_list)
-		var/datum/sprite_accessory/sprite_datum = GLOB.undershirt_list[sprite_name]
+	for(var/sprite_name in SSaccessories.undershirt_list)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_list[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.undershirt_list -= sprite_name
+		SSaccessories.undershirt_list -= sprite_name
 
-	for(var/sprite_name in GLOB.undershirt_f)
-		var/datum/sprite_accessory/sprite_datum = GLOB.undershirt_f[sprite_name]
+	for(var/sprite_name in SSaccessories.undershirt_f)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_f[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.undershirt_f -= sprite_name
+		SSaccessories.undershirt_f -= sprite_name
 
-	for(var/sprite_name in GLOB.undershirt_m)
-		var/datum/sprite_accessory/sprite_datum = GLOB.undershirt_m[sprite_name]
+	for(var/sprite_name in SSaccessories.undershirt_m)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_m[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
-		GLOB.undershirt_m -= sprite_name
+		SSaccessories.undershirt_m -= sprite_name
 
 
 	// Bras
-	for(var/sprite_name in GLOB.bra_list)
-		var/datum/sprite_accessory/sprite_datum = GLOB.bra_list[sprite_name]
+	for(var/sprite_name in SSaccessories.bra_list)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_list[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
 
-		GLOB.bra_list -= sprite_name
+		SSaccessories.bra_list -= sprite_name
 
-	for(var/sprite_name in GLOB.bra_f)
-		var/datum/sprite_accessory/sprite_datum = GLOB.bra_f[sprite_name]
+	for(var/sprite_name in SSaccessories.bra_f)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_f[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
 
-		GLOB.bra_f -= sprite_name
+		SSaccessories.bra_f -= sprite_name
 
-	for(var/sprite_name in GLOB.bra_m)
-		var/datum/sprite_accessory/sprite_datum = GLOB.bra_m[sprite_name]
+	for(var/sprite_name in SSaccessories.bra_m)
+		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_m[sprite_name]
 		if(!sprite_datum?.erp_accessory)
 			continue
 
-		GLOB.bra_m -= sprite_name
+		SSaccessories.bra_m -= sprite_name
