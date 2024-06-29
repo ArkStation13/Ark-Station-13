@@ -1,6 +1,4 @@
 /world/proc/update_status()
-	var/list/features = list()
-
 	var/new_status = ""
 	var/hostedby
 	if(config)
@@ -18,7 +16,7 @@
 	var/players = GLOB.clients.len
 
 	if(SSmapping.config)
-		features += "[SSmapping.config.map_name]"
+		new_status += "[SSmapping.config.map_name]"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		new_status += "<br>Game Status: <b>IN LOBBY</b><br>"
@@ -34,6 +32,6 @@
 	new_status += "</a>"
 
 	if (!host && hostedby)
-		features += "hosted by <b>[hostedby]</b>"
+		new_status += "hosted by <b>[hostedby]</b>"
 
 	status = new_status
