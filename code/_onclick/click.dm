@@ -96,9 +96,13 @@
 		return
 	if(LAZYACCESS(modifiers, ALT_CLICK)) // alt and alt-gr (rightalt)
 		if(LAZYACCESS(modifiers, RIGHT_CLICK))
+<<<<<<< HEAD
 			alt_click_on_secondary(A)
+=======
+			AltClickSecondaryOn(A)
+>>>>>>> 5040a0dad88... [MIRROR] Some alt & ctrl click improvements [MDB IGNORE] (#3295)
 		else
-			base_click_alt(A)
+			AltClickOn(A)
 		return
 	if(LAZYACCESS(modifiers, CTRL_CLICK))
 		CtrlClickOn(A)

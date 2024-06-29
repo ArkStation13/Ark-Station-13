@@ -20,6 +20,7 @@
 	if(SEND_SIGNAL(target, COMSIG_CLICK_CTRL, src) & CLICK_ACTION_ANY)
 		return TRUE
 
+<<<<<<< HEAD
 	var/can_use_click_action = FALSE
 	if(isturf(target))
 		// Turfs are special because they can't be used with can_perform_action
@@ -29,8 +30,13 @@
 	if(!can_use_click_action)
 		return TRUE
 
+=======
+>>>>>>> 5040a0dad88... [MIRROR] Some alt & ctrl click improvements [MDB IGNORE] (#3295)
 	// If it has a custom click_alt that returns success/block, done.
-	return target.click_ctrl(src) & CLICK_ACTION_ANY
+	if(can_perform_action(target, target.interaction_flags_click | SILENT_ADJACENCY))
+		return target.click_ctrl(src) & CLICK_ACTION_ANY
+
+	return FALSE
 
 /**
  * Ctrl click
@@ -40,7 +46,7 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 
 	. = ..()
-	if(. || world.time < next_move || !CanReach(target))
+	if(. || world.time < next_move || !can_perform_action(target, NOT_INSIDE_TARGET | SILENT_ADJACENCY))
 		return
 
 	. = TRUE
