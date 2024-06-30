@@ -157,10 +157,14 @@
 	departmental_flags = DEPARTMENT_BITFLAG_CARGO
 
 /datum/techweb_node/conveyor_sorter
-	id = "conveyorsorter"
+	id = TECHWEB_NODE_CONVEYOR_SORTER
 	display_name = "Conveyor Sorter"
 	description = "Finally, the ability to automatically sort stuff."
+<<<<<<< HEAD
 	prereq_ids = list("bluespace_basic", "engineering")
+=======
+	prereq_ids = list(TECHWEB_NODE_BLUESPACE_THEORY)
+>>>>>>> ec9334aac85... [MIRROR] Techweb nodes DEFINED & bug fix [MDB IGNORE] (#3319)
 	design_ids = list(
 		"conveysorter",
 	)
@@ -197,10 +201,14 @@
 
 
 /datum/techweb_node/conveyor_sorter/improved
-	id = "conveyor_sorter_improved"
+	id = TECHWEB_NODE_CONVEYOR_SORTER_IMPROVED
 	display_name = "Improved Conveyor Sorter"
 	description = "An improved version of the conveyor sorter, this one allows for more control over sorting."
+<<<<<<< HEAD
 	prereq_ids = list("practical_bluespace", "conveyorsorter")
+=======
+	prereq_ids = list(TECHWEB_NODE_APPLIED_BLUESPACE)
+>>>>>>> ec9334aac85... [MIRROR] Techweb nodes DEFINED & bug fix [MDB IGNORE] (#3319)
 	design_ids = list(
 		"conveyor_sorter_improved",
 	)

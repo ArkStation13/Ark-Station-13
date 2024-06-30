@@ -86,10 +86,14 @@ GLOBAL_LIST_EMPTY(cargo_marks)
 	departmental_flags = DEPARTMENT_BITFLAG_CARGO
 
 /datum/techweb_node/cargo_teleporter
-	id = "cargoteleporter"
+	id = TECHWEB_NODE_CARGO_TELEPORTER
 	display_name = "Cargo Teleporter"
 	description = "We can teleport items across long distances, as long as they are not blocked."
+<<<<<<< HEAD
 	prereq_ids = list("bluespace_basic", "engineering")
+=======
+	prereq_ids = list(TECHWEB_NODE_BLUESPACE_THEORY)
+>>>>>>> ec9334aac85... [MIRROR] Techweb nodes DEFINED & bug fix [MDB IGNORE] (#3319)
 	design_ids = list(
 		"cargotele",
 	)
