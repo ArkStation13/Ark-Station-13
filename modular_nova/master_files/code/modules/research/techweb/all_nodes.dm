@@ -2,10 +2,14 @@
 // NEW NODES
 
 /datum/techweb_node/adv_vision
-	id = "adv_vision"
+	id = TECHWEB_NODE_ADVANCED_VISION
 	display_name = "Combat Cybernetic Eyes"
 	description = "Military grade combat implants to improve vision."
+<<<<<<< HEAD
 	prereq_ids = list("combat_cyber_implants", "alien_bio")
+=======
+	prereq_ids = list(TECHWEB_NODE_COMBAT_IMPLANTS, TECHWEB_NODE_ALIEN_SURGERY)
+>>>>>>> ec9334aac85... [MIRROR] Techweb nodes DEFINED & bug fix [MDB IGNORE] (#3319)
 	design_ids = list(
 		"ci-thermals",
 		"ci-xray",
@@ -15,10 +19,10 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4000)
 
 /datum/techweb_node/borg_shapeshifter
-	id = "borg_shapeshifter"
+	id = TECHWEB_NODE_BORG_SHAPESHIFTER
 	display_name = "Illegal Cyborg Addition"
 	description = "Some sort of experimental tool that was once used by an rival company."
-	prereq_ids = list("syndicate_basic")
+	prereq_ids = list(TECHWEB_NODE_SYNDICATE_BASIC)
 	design_ids = list("borg_shapeshifter_module")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 

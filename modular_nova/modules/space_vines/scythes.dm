@@ -83,10 +83,14 @@
 	build_path = /obj/item/scythe/tier2
 
 /datum/techweb_node/scythe_t1
-	id = "t1scythe"
+	id = TECHWEB_NODE_SCYTHE_1
 	display_name = "Scythe (Tier 1)"
 	description = "Culling tools"
+<<<<<<< HEAD
 	prereq_ids = list("adv_engi", "biotech", "botany")
+=======
+	prereq_ids = list(TECHWEB_NODE_EXP_TOOLS, TECHWEB_NODE_CHEM_SYNTHESIS, TECHWEB_NODE_BOTANY_EQUIP)
+>>>>>>> ec9334aac85... [MIRROR] Techweb nodes DEFINED & bug fix [MDB IGNORE] (#3319)
 	design_ids = list(
 		"scythet1",
 	)
@@ -94,10 +98,10 @@
 	discount_experiments = list(/datum/experiment/scanning/random/plants/wild = 500)
 
 /datum/techweb_node/scythe_t2
-	id = "t2scythe"
+	id = TECHWEB_NODE_SCYTHE_2
 	display_name = "Scythe (Tier 2)"
 	description = "Culling tools"
-	prereq_ids = list("t1scythe")
+	prereq_ids = list(TECHWEB_NODE_SCYTHE_1)
 	design_ids = list(
 		"scythet2",
 	)
