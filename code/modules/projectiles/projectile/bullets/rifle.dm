@@ -74,9 +74,6 @@
 	bare_wound_bonus = 10
 	embedding = list(embed_chance=80, fall_chance=1, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=2, rip_time=14)
 	embed_falloff_tile = -3
-<<<<<<< HEAD
-	shrapnel_type = /obj/item/stack/rods
-=======
 	shrapnel_type = /obj/item/ammo_casing/rebar/healium
 
 /obj/projectile/bullet/rebar/healium/on_hit(atom/target, blocked = 0, pierce_hit)
