@@ -285,6 +285,11 @@
 		if(istype(bait, /obj/item/food/bait))
 			var/obj/item/food/bait/real_bait = bait
 			bait_state = real_bait.rod_overlay_icon_state
+<<<<<<< HEAD
+=======
+		if(istype(bait, /obj/item/stock_parts/power_store/cell/lead))
+			bait_state = "battery_overlay"
+>>>>>>> 5064ac695a4... [MIRROR] Adds a new power storage type: The Megacell. Drastically reduces power cell consumption/storage. [MDB Ignore] [MDB IGNORE] (#3268)
 		. += bait_state
 
 /obj/item/fishing_rod/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
