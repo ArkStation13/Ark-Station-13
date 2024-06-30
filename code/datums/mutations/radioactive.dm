@@ -2,8 +2,13 @@
 	name = "Radioactivity"
 	desc = "A volatile mutation that causes the host to sent out deadly beta radiation. This affects both the hosts and their surroundings."
 	quality = NEGATIVE
+<<<<<<< HEAD
 	text_gain_indication = "<span class='warning'>You can feel it in your bones!</span>"
 	instability = 5
+=======
+	text_gain_indication = span_warning("You can feel it in your bones!")
+	instability = NEGATIVE_STABILITY_MAJOR
+>>>>>>> a358de187a1... [MIRROR] First Genetics Content in 5 Years (Adds new positive mutations!) [MDB IGNORE] (#3354)
 	difficulty = 8
 	power_coeff = 1
 	/// Weakref to our radiation emitter component

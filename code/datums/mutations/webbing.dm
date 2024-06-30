@@ -3,8 +3,13 @@
 	name = "Webbing Production"
 	desc = "Allows the user to lay webbing, and travel through it."
 	quality = POSITIVE
+<<<<<<< HEAD
 	text_gain_indication = "<span class='notice'>Your skin feels webby.</span>"
 	instability = 15
+=======
+	text_gain_indication = span_notice("Your skin feels webby.")
+	instability = POSITIVE_INSTABILITY_MODERATE // useful until you're lynched
+>>>>>>> a358de187a1... [MIRROR] First Genetics Content in 5 Years (Adds new positive mutations!) [MDB IGNORE] (#3354)
 	power_path = /datum/action/cooldown/mob_cooldown/lay_web/genetic
 	energy_coeff = 1
 
