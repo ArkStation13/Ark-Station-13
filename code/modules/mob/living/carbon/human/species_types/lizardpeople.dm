@@ -162,6 +162,10 @@ Lizard subspecies: ASHWALKERS
 		TRAIT_VIRUSIMMUNE,
 		TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION,
 	)
+<<<<<<< HEAD
+=======
+	// inherent_factions = list(FACTION_ASHWALKER) // NOVA EDIT REMOVAL: Moving to Ritual
+>>>>>>> dde1399085b... [NO GBP] Fixes failed mirror push (#3443)
 	species_language_holder = /datum/language_holder/lizard/ash
 	digitigrade_customization = DIGITIGRADE_FORCED
 	examine_limb_id = SPECIES_LIZARD
