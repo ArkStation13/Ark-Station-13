@@ -239,7 +239,11 @@
 /datum/techweb_node/cyborg_upg_engiminer/New()
 	design_ids += list(
 		"advanced_materials",
+<<<<<<< HEAD
 		"inducer_module",
+=======
+		"borg_upgrade_welding",
+>>>>>>> 5064ac695a4... [MIRROR] Adds a new power storage type: The Megacell. Drastically reduces power cell consumption/storage. [MDB Ignore] [MDB IGNORE] (#3268)
 	)
 	return ..()
 

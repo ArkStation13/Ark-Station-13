@@ -316,6 +316,10 @@
 	random_case_rarity = FISH_RARITY_GOOD_LUCK_FINDING_THIS
 	required_temperature_min = MIN_AQUARIUM_TEMP+10
 	required_temperature_max = MIN_AQUARIUM_TEMP+30
+<<<<<<< HEAD
+=======
+	favorite_bait = list(/obj/item/stock_parts/power_store/cell/lead)
+>>>>>>> 5064ac695a4... [MIRROR] Adds a new power storage type: The Megacell. Drastically reduces power cell consumption/storage. [MDB Ignore] [MDB IGNORE] (#3268)
 	fish_traits = list(
 		/datum/fish_trait/parthenogenesis,
 		/datum/fish_trait/mixotroph,
@@ -651,7 +655,11 @@
 	average_size = 30
 	average_weight = 500
 	random_case_rarity = FISH_RARITY_VERY_RARE
+<<<<<<< HEAD
 	favorite_bait = list(/obj/item/food/bait/doughball)
+=======
+	favorite_bait = list(/obj/item/stock_parts/power_store/cell/lead)
+>>>>>>> 5064ac695a4... [MIRROR] Adds a new power storage type: The Megacell. Drastically reduces power cell consumption/storage. [MDB Ignore] [MDB IGNORE] (#3268)
 	required_temperature_min = MIN_AQUARIUM_TEMP+18
 	required_temperature_max = MIN_AQUARIUM_TEMP+26
 	fish_traits = list(
