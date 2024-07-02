@@ -33,6 +33,103 @@
 
 	speech_args[SPEECH_SPANS] |= SPAN_SANS
 
+<<<<<<< HEAD
+=======
+/datum/mutation/human/heckacious
+	name = "heckacious larincks"
+	desc = "duge what is WISH your words man..........."
+	quality = MINOR_NEGATIVE
+	text_gain_indication = span_sans("aw SHIT man. your throat feels like FUCKASS.")
+	text_lose_indication = span_notice("The demonic entity possessing your larynx has finally released its grasp.")
+	locked = TRUE
+
+/datum/mutation/human/heckacious/on_acquiring(mob/living/carbon/human/owner)
+	if(..())
+		return
+	RegisterSignal(owner, COMSIG_LIVING_TREAT_MESSAGE, PROC_REF(handle_caps))
+	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech))
+
+/datum/mutation/human/heckacious/on_losing(mob/living/carbon/human/owner)
+	if(..())
+		return
+	UnregisterSignal(owner, list(COMSIG_LIVING_TREAT_MESSAGE, COMSIG_MOB_SAY))
+
+/datum/mutation/human/heckacious/proc/handle_caps(atom/movable/source, list/message_args)
+	SIGNAL_HANDLER
+	message_args[TREAT_CAPITALIZE_MESSAGE] = FALSE
+
+/datum/mutation/human/heckacious/proc/handle_speech(datum/source, list/speech_args)
+
+	var/message = speech_args[SPEECH_MESSAGE]
+	if(!message)
+		return
+	// Split for swapping purposes
+	message = " [message] "
+
+	// Splitting up each word in the text to manually apply our intended changes
+	var/list/message_words = splittext(message, " ")
+	// What we use in the end
+	var/list/edited_message_words
+
+	for(var/editing_word in message_words)
+		if(editing_word == " " || editing_word == "" )
+			continue
+		// Used to replace the original later
+		var/og_word = editing_word
+		// Iterating through each replaceable-string in the .json
+		var/list/static/super_wacky_words = strings("heckacious.json", "heckacious")
+
+		// If the word doesn't get replaced we might do something with it later
+		var/word_edited
+		for(var/key in super_wacky_words)
+			var/value = super_wacky_words[key]
+			// If list, pick one value from said list
+			if(islist(value))
+				value = pick(value)
+			editing_word = replacetextEx(editing_word, "[uppertext(key)]", "[uppertext(value)]")
+			editing_word = replacetextEx(editing_word, "[capitalize(key)]", "[capitalize(value)]")
+			editing_word = replacetextEx(editing_word, "[key]", "[value]")
+			// Enable if we actually found something to change
+			if(editing_word != og_word)
+				word_edited = TRUE
+
+		// Random caps
+		if(prob(10))
+			editing_word = prob(85) ? uppertext(editing_word) : LOWER_TEXT(editing_word)
+		// some times....... we add DOTS...
+		if(prob(10))
+			for(var/dotnum in 1 to rand(2, 8))
+				editing_word += "."
+		// change for bold/italics/underline as well!
+		if(prob(10))
+			var/extra_emphasis = pick("+", "_", "|")
+			editing_word = extra_emphasis + editing_word + extra_emphasis
+
+		// If no replacement we do it manually
+		if(!word_edited)
+			if(prob(65))
+				editing_word = replacetext(editing_word, pick(VOWELS), pick(VOWELS))
+			// Many more consonants, double it!
+			for(var/i in 1 to rand(1, 2))
+				editing_word = replacetext(editing_word, pick(CONSONANTS), pick(CONSONANTS))
+			// rarely, lettter is DOUBBLED...
+			var/patchword = ""
+			for(var/letter in 1 to length(editing_word))
+				if(prob(92))
+					patchword += editing_word[letter]
+					continue
+				patchword += replacetext(editing_word[letter], "", editing_word[letter] + editing_word[letter])
+			editing_word = patchword
+
+		LAZYADD(edited_message_words, editing_word)
+
+	var/edited_message = jointext(edited_message_words, " ")
+
+	message = trim(edited_message)
+
+	speech_args[SPEECH_MESSAGE] = message
+
+>>>>>>> 550a44e306c... [MIRROR] Fixed various issues with the genetics powers PR [MDB IGNORE] (#3462)
 /datum/mutation/human/mute
 	name = "Mute"
 	desc = "Completely inhibits the vocal section of the brain."
@@ -186,9 +283,14 @@
 	name = "Stoner"
 	desc = "A common mutation that severely decreases intelligence."
 	quality = NEGATIVE
+<<<<<<< HEAD
 	locked = TRUE
 	text_gain_indication = "<span class='notice'>You feel...totally chill, man!</span>"
 	text_lose_indication = "<span class='notice'>You feel like you have a better sense of time.</span>"
+=======
+	text_gain_indication = span_notice("You feel...totally chill, man!")
+	text_lose_indication = span_notice("You feel like you have a better sense of time.")
+>>>>>>> 550a44e306c... [MIRROR] Fixed various issues with the genetics powers PR [MDB IGNORE] (#3462)
 
 /datum/mutation/human/stoner/on_acquiring(mob/living/carbon/human/owner)
 	..()

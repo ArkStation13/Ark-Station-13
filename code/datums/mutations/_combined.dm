@@ -36,3 +36,10 @@
 /datum/generecipe/martyrdom
 	required = "/datum/mutation/human/strong; /datum/mutation/human/stimmed"
 	result = /datum/mutation/human/martyrdom
+<<<<<<< HEAD
+=======
+
+/datum/generecipe/heckacious
+	required = "/datum/mutation/human/wacky; /datum/mutation/human/stoner"
+	result = /datum/mutation/human/heckacious
+>>>>>>> 550a44e306c... [MIRROR] Fixed various issues with the genetics powers PR [MDB IGNORE] (#3462)
