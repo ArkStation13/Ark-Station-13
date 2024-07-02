@@ -40,7 +40,11 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 
 	. = ..()
+<<<<<<< HEAD
 	if(. || world.time < next_move || !CanReach(target))
+=======
+	if(. || world.time < next_move || !can_perform_action(target, NOT_INSIDE_TARGET | SILENT_ADJACENCY | FORBID_TELEKINESIS_REACH))
+>>>>>>> 5f8066870ae... [MIRROR] Fix telekinesis letting you grab people at a distance, and teleport them to you by strangling them [MDB IGNORE] (#3474)
 		return
 
 	. = TRUE
