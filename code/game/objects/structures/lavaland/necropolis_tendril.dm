@@ -6,7 +6,11 @@
 	icon = 'icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "tendril"
 
+<<<<<<< HEAD
 	faction = list(FACTION_MINING)
+=======
+	faction = list(FACTION_MINING, FACTION_MINING_FAUNA) // NOVA EDIT CHANGE - ORIGINAL: faction = list(FACTION_MINING, FACTION_ASHWALKER)
+>>>>>>> c580b54eaf3... Fixes Ashwalker factions and Lavaland Tendril Factions (#3533)
 	max_mobs = 3
 	max_integrity = 250
 	mob_types = list(/mob/living/basic/mining/watcher)
