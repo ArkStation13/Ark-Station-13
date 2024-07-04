@@ -426,5 +426,27 @@
 	var/obj/projectile/bullet/coin/new_coin = new(get_turf(user), target_turf, user)
 	new_coin.preparePixelProjectile(target_turf, user)
 	new_coin.fire()
+<<<<<<< HEAD
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+=======
+	return ITEM_INTERACT_SUCCESS
+
+/obj/item/gun/energy/photon
+	name = "photon cannon"
+	desc = "A competitive design to the tesla cannon, that instead of charging latent electrons, releases energy into photons. Eye protection is recommended."
+	icon_state = "photon"
+	inhand_icon_state = "tesla"
+	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/photon)
+	shaded_charge = TRUE
+	weapon_weight = WEAPON_HEAVY
+	light_color = LIGHT_COLOR_DEFAULT
+	light_system = OVERLAY_LIGHT
+	light_power = 2
+	light_range = 1
+
+/obj/item/gun/energy/photon/Initialize(mapload)
+	. = ..()
+	set_light_on(TRUE) // The gun quite literally shoots mini-suns.
+>>>>>>> e41863c20a2... [MIRROR] Adds a new anomaly core item to Illumination technology, the photon cannon. [MDB IGNORE] (#3532)
