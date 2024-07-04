@@ -52,6 +52,12 @@
 
 	///This is used to determine if the mob failed a breath. If they did fail a brath, they will attempt to breathe each tick, otherwise just once per 4 ticks.
 	var/failed_last_breath = FALSE
+<<<<<<< HEAD
+=======
+	///Sound loop for breathing when using internals
+	var/datum/looping_sound/breathing/breathing_loop
+
+>>>>>>> b7b774e1a4c... [MIRROR] Adds a breathing sound while using internals of any kind [MDB IGNORE] (#3531)
 	/// Used in [carbon/proc/check_breath] and [lungs/proc/check_breath]]
 	var/co2overloadtime = null
 

@@ -4,6 +4,17 @@
 	savefile_key = "sound_ambience"
 	savefile_identifier = PREFERENCE_PLAYER
 
+<<<<<<< HEAD
+=======
+/datum/preference/toggle/sound_ambience/apply_to_client(client/client, value)
+	client.update_ambience_pref(value)
+
+/datum/preference/toggle/sound_breathing
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "sound_breathing"
+	savefile_identifier = PREFERENCE_PLAYER
+
+>>>>>>> b7b774e1a4c... [MIRROR] Adds a breathing sound while using internals of any kind [MDB IGNORE] (#3531)
 /// Controls hearing announcement sounds
 /datum/preference/toggle/sound_announcements
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
