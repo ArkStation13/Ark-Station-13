@@ -133,3 +133,13 @@
 #define COMSIG_ATOM_PRE_CLEAN "atom_pre_clean"
 	///cancel clean
 	#define COMSIG_ATOM_CANCEL_CLEAN (1<<0)
+<<<<<<< HEAD
+=======
+
+/// From /obj/item/stack/make_item()
+#define COMSIG_ATOM_CONSTRUCTED "atom_constructed"
+
+/// From /obj/effect/particle_effect/sparks/proc/sparks_touched(datum/source, atom/movable/singed)
+#define COMSIG_ATOM_TOUCHED_SPARKS "atom_touched_sparks"
+#define COMSIG_ATOM_TOUCHED_HAZARDOUS_SPARKS "atom_touched_hazardous_sparks"
+>>>>>>> 0c4df344b8a... [MIRROR] Cult Vs. Heretic: 7 Months Later Edition [MDB IGNORE] (#3384)
