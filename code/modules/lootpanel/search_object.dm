@@ -26,6 +26,12 @@
 	if(isturf(item))
 		RegisterSignal(item, COMSIG_TURF_CHANGE, PROC_REF(on_turf_change))
 	else
+<<<<<<< HEAD
+=======
+		// Lest we find ourselves here again, this is intentionally stupid.
+		// It tracks items going out and user actions, otherwise they can refresh the lootpanel.
+		// If this is to be made to track everything, we'll need to make a new signal to specifically create/delete a search object
+>>>>>>> d5fb15fe3e0... [MIRROR] Reverts lootpanel change [MDB IGNORE] (#3499)
 		RegisterSignals(item, list(
 			COMSIG_ITEM_PICKUP,
 			COMSIG_MOVABLE_MOVED,
