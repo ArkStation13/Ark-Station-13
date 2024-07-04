@@ -40,7 +40,11 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 
 	. = ..()
+<<<<<<< HEAD
 	if(. || world.time < next_move || !CanReach(target))
+=======
+	if(. || world.time < next_move || !can_perform_action(target, NOT_INSIDE_TARGET | SILENT_ADJACENCY | ALLOW_RESTING | FORBID_TELEKINESIS_REACH))
+>>>>>>> 7b2ed6e06ef... [MIRROR] Allow mobs to ctrl click mobs while resting [MDB IGNORE] (#3500)
 		return
 
 	. = TRUE

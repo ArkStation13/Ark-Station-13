@@ -3,6 +3,11 @@
 	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD, DNR_HUD) // NOVA EDIT ADDITION - DNR_HUD
 	pressure_resistance = 10
 	hud_type = /datum/hud/living
+<<<<<<< HEAD
+=======
+	interaction_flags_click = ALLOW_RESTING
+	interaction_flags_mouse_drop = ALLOW_RESTING
+>>>>>>> 7b2ed6e06ef... [MIRROR] Allow mobs to ctrl click mobs while resting [MDB IGNORE] (#3500)
 
 	///Tracks the current size of the mob in relation to its original size. Use update_transform(resize) to change it.
 	var/current_size = RESIZE_DEFAULT_SIZE
