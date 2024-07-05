@@ -9,6 +9,10 @@
 
 /datum/mutation/human/temperature_adaptation/New(class_ = MUT_OTHER, timer, datum/mutation/human/copymut)
 	..()
+<<<<<<< HEAD
+=======
+	conflicts = typesof(/datum/mutation/human/adaptation)
+>>>>>>> 1e5652663cd... [MIRROR] Fixed adaptations not conflictnig [MDB IGNORE] (#3554)
 	if(!(type in visual_indicators))
 		visual_indicators[type] = list(mutable_appearance('icons/mob/effects/genetics.dmi', "fire", -MUTATIONS_LAYER))
 
