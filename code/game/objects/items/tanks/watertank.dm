@@ -294,8 +294,13 @@
 		return ..()
 	var/Adj = user.Adjacent(target)
 	if(nozzle_mode == RESIN_LAUNCHER)
+<<<<<<< HEAD
 		if(Adj)
 			return //Safety check so you don't blast yourself trying to refill your tank
+=======
+		if(Adj && user.combat_mode)
+			return ITEM_INTERACT_SKIP_TO_ATTACK
+>>>>>>> 6d6511f6c20... [MIRROR] Firefighting nozzle attack chain fixes [MDB IGNORE] (#3567)
 		var/datum/reagents/R = reagents
 		if(R.total_volume < 100)
 			balloon_alert(user, "not enough water!")
@@ -315,7 +320,13 @@
 		return
 
 	if(nozzle_mode == RESIN_FOAM)
+<<<<<<< HEAD
 		if(!Adj || !isturf(target))
+=======
+		if(!isturf(interacting_with))
+			return NONE
+		if(!Adj)
+>>>>>>> 6d6511f6c20... [MIRROR] Firefighting nozzle attack chain fixes [MDB IGNORE] (#3567)
 			balloon_alert(user, "too far!")
 			return
 		for(var/S in target)
