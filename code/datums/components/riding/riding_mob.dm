@@ -568,7 +568,37 @@
 //NOVA EDIT END
 /datum/component/riding/creature/raptor
 	require_minigame = TRUE
+<<<<<<< HEAD
 	ride_check_flags = RIDER_NEEDS_ARM
+=======
+	ride_check_flags = RIDER_NEEDS_ARM | UNBUCKLE_DISABLED_RIDER
+
+/datum/component/riding/creature/raptor/Initialize(mob/living/riding_mob, force, ride_check_flags, potion_boost)
+	. = ..()
+	RegisterSignal(parent, COMSIG_PROJECTILE_PREHIT, PROC_REF(on_bullet_hit))
+	RegisterSignal(parent, COMSIG_MOB_AFTER_APPLY_DAMAGE, PROC_REF(on_attacked))
+
+/datum/component/riding/creature/raptor/proc/on_bullet_hit(atom/target, list/bullet_args, obj/projectile/hit_projectile)
+	SIGNAL_HANDLER
+
+	if(hit_projectile.armor_flag == ENERGY)
+		freak_out()
+
+/datum/component/riding/creature/raptor/proc/on_attacked(mob/living/source, damage_dealt, damagetype, def_zone, blocked, wound_bonus, bare_wound_bonus, sharpness, attack_direction, obj/item/attacking_item)
+	SIGNAL_HANDLER
+
+	if(damagetype == STAMINA)
+		freak_out()
+
+/datum/component/riding/creature/raptor/proc/freak_out()
+	var/mob/living/living_parent = parent
+	if(lavaland_equipment_pressure_check(get_turf(living_parent)) || !length(living_parent.buckled_mobs))
+		return
+	living_parent.balloon_alert_to_viewers("freaks out!")
+	living_parent.spin(spintime = 2 SECONDS, speed = 1)
+	for(var/mob/living/buckled_mob in living_parent.buckled_mobs)
+		force_dismount(buckled_mob, throw_range = 2, gentle = TRUE)
+>>>>>>> 88a96996db5... [MIRROR] [no gbp] fixes watchers making raptors freak out [MDB IGNORE] (#3600)
 
 /datum/component/riding/creature/raptor/handle_specials()
 	. = ..()
