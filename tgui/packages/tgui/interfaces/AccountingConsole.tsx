@@ -1,4 +1,3 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
@@ -9,7 +8,14 @@ import {
   Section,
   Stack,
   Tabs,
+<<<<<<< HEAD
 } from '../components';
+=======
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend } from '../backend';
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 import { Window } from '../layouts';
 
 type Data = {

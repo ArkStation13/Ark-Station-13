@@ -1,9 +1,21 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
+import {
+  Box,
+  Button,
+  DmIcon,
+  Flex,
+  Section,
+  Stack,
+  Tabs,
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 import { useBackend } from '../backend';
+<<<<<<< HEAD
 import { BlockQuote, Box, Button, Section, Stack, Tabs } from '../components';
 import { CssColor } from '../constants';
+=======
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 import { Window } from '../layouts';
 import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
 import {

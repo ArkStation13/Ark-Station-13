@@ -1,6 +1,10 @@
-import { BooleanLike } from 'common/react';
-import { createSearch } from 'common/string';
 import { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { Box, Button, Icon, Input, Section, Table } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+import { createSearch } from 'tgui-core/string';
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 
 import { useBackend } from '../backend';
 import { Box, Button, Icon, Input, Section, Table } from '../components';

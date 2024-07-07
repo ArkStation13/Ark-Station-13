@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import { BooleanLike, classes } from 'common/react';
 import { capitalize } from 'common/string';
 
 import { useBackend } from '../backend';
+=======
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 import {
   Box,
   Button,
@@ -12,7 +15,15 @@ import {
   Section,
   Stack,
   Tooltip,
+<<<<<<< HEAD
 } from '../components';
+=======
+} from 'tgui-core/components';
+import { BooleanLike, classes } from 'tgui-core/react';
+import { capitalize } from 'tgui-core/string';
+
+import { useBackend } from '../backend';
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 import { Window } from '../layouts';
 import { DesignBrowser } from './Fabrication/DesignBrowser';
 import { MaterialCostSequence } from './Fabrication/MaterialCostSequence';

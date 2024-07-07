@@ -1,4 +1,3 @@
-import { BooleanLike } from 'common/react';
 import { Fragment } from 'react';
 
 import { useBackend, useLocalState } from '../backend';
@@ -11,7 +10,14 @@ import {
   Section,
   Table,
   VirtualList,
+<<<<<<< HEAD
 } from '../components';
+=======
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend, useLocalState } from '../backend';
+>>>>>>> dcacb53f5f8... [MIRROR] tgui: Swaps more UIs with tgui-core components [MDB IGNORE] (#3594)
 import { Window } from '../layouts';
 import {
   Scrubber,
