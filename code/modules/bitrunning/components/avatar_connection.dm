@@ -60,7 +60,17 @@
 		var/datum/action/avatar_domain_info/action = new(help_datum)
 		action.Grant(avatar)
 
+<<<<<<< HEAD
 	avatar.playsound_local(avatar, "sound/magic/blink.ogg", 25, TRUE)
+=======
+	var/client/our_client = avatar.client
+	var/alias = our_client?.prefs?.read_preference(/datum/preference/name/hacker_alias) || pick(GLOB.hacker_aliases)
+
+	if(alias && avatar.real_name != alias)
+		avatar.fully_replace_character_name(avatar.real_name, alias)
+
+	avatar.playsound_local(avatar, 'sound/magic/blink.ogg', 25, TRUE)
+>>>>>>> e0651b53256... [MIRROR] Fix hacker alias name preference not working [MDB IGNORE] (#3582)
 	avatar.set_static_vision(2 SECONDS)
 	avatar.set_temp_blindness(1 SECONDS)
 
