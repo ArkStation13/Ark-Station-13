@@ -147,11 +147,27 @@
 				var/obj/loc_as_obj = loc
 				loc_as_obj.handle_internal_lifeform(src,0)
 
+<<<<<<< HEAD
 	check_breath(breath)
+=======
+	if(check_breath(breath) && is_on_internals)
+		try_breathing_sound(breath)
+>>>>>>> 06cfe93daf2... [MIRROR] Hotfixes need to breathe [MDB IGNORE] (#3588)
 
 	if(breath)
 		loc.assume_air(breath)
 
+<<<<<<< HEAD
+=======
+//Tries to play the carbon a breathing sound when using internals, also invokes check_breath
+/mob/living/carbon/proc/try_breathing_sound(breath)
+	var/should_be_on =  canon_client?.prefs?.read_preference(/datum/preference/toggle/sound_breathing)
+	if(should_be_on && !breathing_loop.timer_id)
+		breathing_loop.start()
+	else if(!should_be_on && breathing_loop.timer_id)
+		breathing_loop.stop()
+
+>>>>>>> 06cfe93daf2... [MIRROR] Hotfixes need to breathe [MDB IGNORE] (#3588)
 /mob/living/carbon/proc/has_smoke_protection()
 	if(HAS_TRAIT(src, TRAIT_NOBREATH))
 		return TRUE
