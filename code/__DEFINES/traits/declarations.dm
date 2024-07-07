@@ -556,6 +556,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///Makes the player appear as their respective job in Binary Talk rather than being a 'Default Cyborg'.
 #define DISPLAYS_JOB_IN_BINARY "display_job_in_binary"
 
+/// Trait that determines vulnerability to being stunned from a shove
+#define TRAIT_STUN_ON_NEXT_SHOVE "stun on next shove"
+
 // METABOLISMS
 // Various jobs on the station have historically had better reactions
 // to various drinks and foodstuffs. Security liking donuts is a classic
