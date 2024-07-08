@@ -2,7 +2,11 @@
 #define HEATER_MODE_HEAT "heat"
 #define HEATER_MODE_COOL "cool"
 #define HEATER_MODE_AUTO "auto"
+<<<<<<< HEAD
 #define BASE_HEATING_ENERGY (40 KILO JOULES)
+=======
+#define BASE_HEATING_ENERGY (STANDARD_CELL_RATE * 4)
+>>>>>>> 011bcf8c275... [MIRROR] Fix power usage and heating power of space heaters [MDB IGNORE] (#3627)
 
 /obj/machinery/space_heater
 	anchored = FALSE
@@ -32,7 +36,7 @@
 	///How much heat/cold we can deliver
 	var/heating_energy = 40 KILO JOULES
 	///How efficiently we can deliver that heat/cold (higher indicates less cell consumption)
-	var/efficiency = 20
+	var/efficiency = 200
 	///The amount of degrees above and below the target temperature for us to change mode to heater or cooler
 	var/temperature_tolerance = 1
 	///What's the middle point of our settable temperature (30 °C)
@@ -178,8 +182,8 @@
 
 	heating_energy = laser * BASE_HEATING_ENERGY
 
-	settable_temperature_range = cap * 30
-	efficiency = (cap + 1) * 10
+	settable_temperature_range = cap * initial(settable_temperature_range)
+	efficiency = (cap + 1) * initial(efficiency) * 0.5
 
 	target_temperature = clamp(target_temperature,
 		max(settable_temperature_median - settable_temperature_range, TCMB),
