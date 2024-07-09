@@ -66,7 +66,11 @@
 	if(target.reagents?.total_volume)
 		for(var/datum/reagent/chem as anything in target.reagents.reagent_list)
 			if(!length(bloodfilter.whitelist) || (chem.type in bloodfilter.whitelist))
+<<<<<<< HEAD
 				target.reagents.remove_reagent(chem.type, min(chem.volume * 0.22, 10))
+=======
+				target.reagents.remove_reagent(chem.type, clamp(round(chem.volume * 0.22, 0.2), 0.4, 10))
+>>>>>>> a1b3abe16c5... [MIRROR] Changes blood filter min to clamp per Melbert's suggestion [MDB IGNORE] (#3650)
 	display_results(
 		user,
 		target,
