@@ -15,9 +15,16 @@
 		#include "ark_map_files\ark_maps\tramstation.dmm"
 		#include "map_files\wawastation\wawastation.dmm"
 		// NOVA EDIT ADDITON START - Compiling our modular maps too!
+<<<<<<< HEAD
 		#include "ark_map_files\ark_maps\VoidRaptor.dmm"
 		#include "ark_map_files\ark_maps\Blueshift.dmm"
 		#include "ark_map_files\ark_maps\Ouroboros.dmm"
+=======
+		#include "map_files\VoidRaptor\VoidRaptor.dmm"
+		#include "map_files\NSVBlueshift\Blueshift.dmm"
+		#include "map_files\Ouroboros\Ouroboros.dmm"
+		#include "map_files\SerenityStation\SerenityStation.dmm"
+>>>>>>> 8b6252c9951... SerenityStation - New Planetary Station Map (#3040)
 		// NOVA EDIT END
 
 		// ARK STATION ADDITION START
