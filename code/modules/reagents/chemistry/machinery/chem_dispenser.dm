@@ -331,7 +331,14 @@
 
 					var/datum/reagents/holder = beaker.reagents
 					var/to_dispense = max(0, min(amount, holder.maximum_volume - holder.total_volume))
+<<<<<<< HEAD
 					if(!cell.use(to_dispense / powerefficiency))
+=======
+					if(!to_dispense)
+						say("The container is full!")
+						return
+					if(!cell.use(to_dispense * power_cost))
+>>>>>>> 7c77c31dcbe... [MIRROR] Fix chem dispenser feedback [MDB IGNORE] (#3660)
 						say("Not enough energy to complete operation!")
 						return
 					holder.add_reagent(reagent, to_dispense, reagtemp = dispensed_temperature, added_purity = base_reagent_purity)
