@@ -29,6 +29,8 @@
 	var/spawn_scatter_radius = 0
 	/// Whether the items should have a random pixel_x/y offset (maxium offset distance is ±16 pixels for x/y)
 	var/spawn_random_offset = FALSE
+	/// Whether items that cannot be spawned will be removed from the loot list. Keep it TRUE unless you've a good reason.
+	var/remove_if_cant_spawn = TRUE
 
 /obj/effect/spawner/random/Initialize(mapload)
 	. = ..()
@@ -52,13 +54,20 @@
 	if(loot_subtype_path)
 		loot += subtypesof(loot_subtype_path)
 
+<<<<<<< HEAD
+=======
+	if(CONFIG_GET(number/random_loot_weight_modifier) != 1)
+		skew_loot_weights(loot, CONFIG_GET(number/random_loot_weight_modifier))
+
+>>>>>>> 395e7263017... [MIRROR] [NO GBP] Fixes the loot weight config + maintenance spawner nitpick [MDB IGNORE] (#3659)
 	if(loot?.len)
 		var/loot_spawned = 0
 		var/pixel_divider = FLOOR(16 / spawn_loot_split_pixel_offsets, 1) // 16 pixels offsets is max that should be allowed in any direction
 		while((spawn_loot_count-loot_spawned) && loot.len)
 			var/lootspawn = pick_weight_recursive(loot)
 			if(!can_spawn(lootspawn))
-				loot.Remove(lootspawn)
+				if(remove_if_cant_spawn)
+					loot.Remove(lootspawn)
 				continue
 			if(!spawn_loot_double)
 				loot.Remove(lootspawn)
