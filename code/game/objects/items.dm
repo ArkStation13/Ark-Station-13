@@ -1849,3 +1849,32 @@
 	if(!isnull(loc))
 		SEND_SIGNAL(loc, COMSIG_ATOM_CONTENTS_WEIGHT_CLASS_CHANGED, src, old_w_class, new_w_class)
 	return TRUE
+<<<<<<< HEAD
+=======
+
+/// Fetches embedding data
+/obj/item/proc/get_embed()
+	RETURN_TYPE(/datum/embed_data)
+	return embed_type ? (embed_data ||= get_embed_by_type(embed_type)) : embed_data
+
+/obj/item/proc/set_embed(datum/embed_data/embed)
+	if(embed_data == embed)
+		return
+	if(!GLOB.embed_by_type[embed_data?.type])
+		qdel(embed_data)
+	embed_data = ispath(embed) ? get_embed_by_type(armor) : embed
+	SEND_SIGNAL(src, COMSIG_ITEM_EMBEDDING_UPDATE)
+
+/**
+ * Returns the atom(either itself or an internal module) that will interact/attack the target on behalf of us
+ * For example an object can have different `tool_behaviours` (e.g borg omni tool) but will return an internal reference of that tool to attack for us
+ * You can use it for general purpose polymorphism if you need a proxy atom to interact in a specific way
+ * with a target on behalf on this atom
+ *
+ * Currently used only in the object melee attack chain but can be used anywhere else or even moved up to the atom level if required
+ */
+/obj/item/proc/get_proxy_attacker_for(atom/target, mob/user)
+	RETURN_TYPE(/obj/item)
+
+	return src
+>>>>>>> e73b4409ef9... [MIRROR] [NO GBP] Embedding hotfix [MDB IGNORE] (#3632)

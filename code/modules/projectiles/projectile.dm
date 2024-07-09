@@ -1229,3 +1229,20 @@
 	bullet.preparePixelProjectile(target, src)
 	bullet.fire()
 	return bullet
+<<<<<<< HEAD
+=======
+
+/// Fetches embedding data
+/obj/projectile/proc/get_embed()
+	RETURN_TYPE(/datum/embed_data)
+	return embed_type ? (embed_data ||= get_embed_by_type(embed_type)) : embed_data
+
+/obj/projectile/proc/set_embed(datum/embed_data/embed)
+	if(embed_data == embed)
+		return
+	// GLOB.embed_by_type stores shared "default" embedding values of datums
+	// Dynamically generated embeds use the base class and thus are not present in there, and should be qdeleted upon being discarded
+	if(!isnull(embed_data) && !GLOB.embed_by_type[embed_data.type])
+		qdel(embed_data)
+	embed_data = ispath(embed) ? get_embed_by_type(armor) : embed
+>>>>>>> e73b4409ef9... [MIRROR] [NO GBP] Embedding hotfix [MDB IGNORE] (#3632)
