@@ -94,7 +94,7 @@
 	process_request(dir = dir)
 
 ///check who can give us what we want, and how many each of them will give us
-/datum/component/plumbing/proc/process_request(amount = MACHINE_REAGENT_TRANSFER, reagent, dir)
+/datum/component/plumbing/proc/process_request(amount = MACHINE_REAGENT_TRANSFER, reagent, dir, round_robin = TRUE)
 	//find the duct to take from
 	var/datum/ductnet/net
 	if(!ducts.Find(num2text(dir)))
@@ -115,7 +115,7 @@
 	var/target_volume = reagents.total_volume + amount
 	for(var/datum/component/plumbing/give as anything in valid_suppliers)
 		currentRequest = (target_volume - reagents.total_volume) / suppliersLeft
-		give.transfer_to(src, currentRequest, reagent, net)
+		give.transfer_to(src, currentRequest, reagent, net, round_robin)
 		suppliersLeft--
 	return TRUE
 
@@ -134,11 +134,11 @@
 	return FALSE
 
 ///this is where the reagent is actually transferred and is thus the finish point of our process()
-/datum/component/plumbing/proc/transfer_to(datum/component/plumbing/target, amount, reagent, datum/ductnet/net)
+/datum/component/plumbing/proc/transfer_to(datum/component/plumbing/target, amount, reagent, datum/ductnet/net, round_robin = TRUE)
 	if(!reagents || !target || !target.reagents)
 		return FALSE
 
-	reagents.trans_to(target.recipient_reagents_holder, amount, target_id = reagent)
+	reagents.trans_to(target.recipient_reagents_holder, amount, target_id = reagent, methods = round_robin ? LINEAR : NONE)
 
 ///We create our luxurious piping overlays/underlays, to indicate where we do what. only called once if use_overlays = TRUE in Initialize()
 /datum/component/plumbing/proc/create_overlays(atom/movable/parent_movable, list/overlays)
@@ -376,6 +376,7 @@
 
 	// Defer to later frame because pixel_* is actually updated after all callbacks
 	addtimer(CALLBACK(parent_obj, TYPE_PROC_REF(/atom/, update_appearance)), 0.1 SECONDS)
+<<<<<<< HEAD
 
 ///has one pipe input that only takes, example is manual output pipe
 /datum/component/plumbing/simple_demand
@@ -423,3 +424,5 @@
 /datum/component/plumbing/aquarium
 	demand_connects = SOUTH|NORTH|EAST|WEST
 	use_overlays = FALSE
+=======
+>>>>>>> cb64893e742... [MIRROR] Hydroponic trays take in reagents proportionally from plumbing mech [MDB IGNORE] (#3640)
