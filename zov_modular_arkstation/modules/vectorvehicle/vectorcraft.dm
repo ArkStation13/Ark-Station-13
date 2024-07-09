@@ -90,7 +90,7 @@
 	check_boost()
 	calc_acceleration()
 	calc_vector(cached_direction)
-	. = try_step_multiz(cached_direction)
+	forceMove(get_step(src, cached_direction))
 	/*
 	var/direction = calc_angle()
 	if(!direction)
