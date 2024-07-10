@@ -286,4 +286,25 @@ GLOBAL_LIST(fishing_property_cache)
 
 		if(final_table[result] <= 0)
 			final_table -= result
+<<<<<<< HEAD
+=======
+
+	///here we even out the chances of fishie based on bait quality: better baits lead rarer fishes being more common.
+	if(leveling_exponent)
+		var/highest_fish_weight
+		var/list/collected_fish_weights = list()
+		for(var/fishable in final_table)
+			if(ispath(fishable, /obj/item/fish))
+				var/fish_weight = fish_table[fishable]
+				collected_fish_weights[fishable] = fish_weight
+				if(fish_weight > highest_fish_weight)
+					highest_fish_weight = fish_weight
+
+		for(var/fish in collected_fish_weights)
+			var/difference = highest_fish_weight - collected_fish_weights[fish]
+			if(!difference)
+				continue
+			final_table[fish] += round(difference**leveling_exponent, 1)
+
+>>>>>>> 70453027835... [MIRROR] [NO GBP] Fixing fishing bait-related calculations [MDB IGNORE] (#3666)
 	return final_table
