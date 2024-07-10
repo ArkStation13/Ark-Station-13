@@ -147,9 +147,13 @@ handles linking back and forth.
 /datum/component/remote_materials/proc/OnMultitool(datum/source, mob/user, obj/item/I)
 	SIGNAL_HANDLER
 
+<<<<<<< HEAD
 	if(!I.multitool_check_buffer(user, I))
 		return ITEM_INTERACT_BLOCKING
 	var/obj/item/multitool/M = I
+=======
+	. = NONE
+>>>>>>> c95c8131a65... [MIRROR] Remote materials don't block multitool on failure [MDB IGNORE] (#3671)
 	if (!QDELETED(M.buffer) && istype(M.buffer, /obj/machinery/ore_silo))
 		if (silo == M.buffer)
 			to_chat(user, span_warning("[parent] is already connected to [silo]!"))
