@@ -156,6 +156,40 @@
 
 	surgery.step_in_progress = FALSE
 	return advance
+<<<<<<< HEAD
+=======
+#undef SURGERY_SPEEDUP_AREA // NOVA EDIT ADDITION
+
+/**
+ * Handles updating the mob's mood depending on the surgery states.
+ * * surgery_state = SURGERY_STATE_STARTED, SURGERY_STATE_FAILURE, SURGERY_STATE_SUCCESS
+ * * To prevent typos, the event category is defined as SURGERY_MOOD_CATEGORY ("surgery")
+*/
+/datum/surgery_step/proc/update_surgery_mood(mob/living/target, surgery_state)
+	if(!target)
+		CRASH("Not passed a target, how did we get here?")
+	if(!surgery_effects_mood)
+		return
+	if(HAS_TRAIT(target, TRAIT_ANALGESIA))
+		target.clear_mood_event(SURGERY_MOOD_CATEGORY) //incase they gained the trait mid-surgery. has the added side effect that if someone has a bad surgical memory/mood and gets drunk & goes back to surgery, they'll forget they hated it, which is kinda funny imo.
+		target.add_mood_event("mild_surgery", /datum/mood_event/mild_surgery) // NOVA EDIT ADDITION - Adds additional mood effects to surgeries
+		return
+	if(target.stat >= UNCONSCIOUS)
+		var/datum/mood_event/surgery/target_mood_event = target.mob_mood.mood_events[SURGERY_MOOD_CATEGORY]
+		if(!target_mood_event || target_mood_event.surgery_completed) //don't give sleeping mobs trauma. that said, if they fell asleep mid-surgery after already getting the bad mood, lets make sure they wake up to a (hopefully) happy memory.
+			return
+	target.add_mood_event("severe_surgery", /datum/mood_event/severe_surgery) // NOVA EDIT ADDITION - Adds additional mood effects to surgeries
+	switch(surgery_state)
+		if(SURGERY_STATE_STARTED)
+			target.add_mood_event(SURGERY_MOOD_CATEGORY, surgery_started_mood_event)
+		if(SURGERY_STATE_SUCCESS)
+			target.add_mood_event(SURGERY_MOOD_CATEGORY, surgery_success_mood_event)
+		if(SURGERY_STATE_FAILURE)
+			target.add_mood_event(SURGERY_MOOD_CATEGORY, surgery_failure_mood_event)
+		else
+			CRASH("passed invalid surgery_state, \"[surgery_state]\".")
+
+>>>>>>> 0efbb678fab... [MIRROR] [no gbp] fixes sleeping mobs getting the surgery [MDB IGNORE] (#3680)
 
 #undef SURGERY_SPEEDUP_AREA // NOVA EDIT ADDITION
 /datum/surgery_step/proc/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
