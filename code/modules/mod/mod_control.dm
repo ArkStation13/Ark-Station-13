@@ -328,10 +328,37 @@
 	if(istype(attacking_item, /obj/item/pai_card))
 		if(!open)
 			balloon_alert(user, "open the cover first!")
+<<<<<<< HEAD
 			return FALSE
 		insert_pai(user, attacking_item)
 		return TRUE
 	if(istype(attacking_item, /obj/item/mod/module))
+=======
+			return ITEM_INTERACT_BLOCKING
+		insert_pai(user, tool)
+		return ITEM_INTERACT_SUCCESS
+	if(istype(tool, /obj/item/mod/paint))
+		var/obj/item/mod/paint/paint_kit = tool
+		if(active || activating)
+			balloon_alert(user, "suit is active!")
+			return ITEM_INTERACT_BLOCKING
+		if(LAZYACCESS(modifiers, RIGHT_CLICK)) // Right click
+			if(paint_kit.editing_mod == src)
+				return ITEM_INTERACT_BLOCKING
+			paint_kit.editing_mod = src
+			paint_kit.proxy_view = new()
+			paint_kit.proxy_view.generate_view("color_matrix_proxy_[REF(user.client)]")
+
+			paint_kit.proxy_view.appearance = paint_kit.editing_mod.appearance
+			paint_kit.proxy_view.color = null
+			paint_kit.proxy_view.display_to(user)
+			paint_kit.ui_interact(user)
+			return ITEM_INTERACT_SUCCESS
+		else // Left click
+			paint_kit.paint_skin(src, user)
+			return ITEM_INTERACT_SUCCESS
+	if(istype(tool, /obj/item/mod/module))
+>>>>>>> eb581197979... [MIRROR] Fixes mod paint kit [MDB IGNORE] (#3704)
 		if(!open)
 			balloon_alert(user, "open the cover first!")
 			playsound(src, 'sound/machines/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
