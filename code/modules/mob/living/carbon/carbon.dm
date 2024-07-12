@@ -6,6 +6,10 @@
 
 	GLOB.carbon_list += src
 	ADD_TRAIT(src, TRAIT_CAN_HOLD_ITEMS, INNATE_TRAIT) // Carbons are assumed to be innately capable of having arms, we check their arms count instead
+<<<<<<< HEAD
+=======
+	breathing_loop = new(src, _direct = TRUE)
+>>>>>>> f1c7bd0f2ee... [MIRROR] Other mobs no longer hear your breathing [MDB IGNORE] (#3730)
 
 /mob/living/carbon/Destroy()
 	//This must be done first, so the mob ghosts correctly before DNA etc is nulled
