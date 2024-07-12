@@ -427,7 +427,58 @@
 				flick("doorc1", src)
 		if("deny")
 			if(!machine_stat)
+<<<<<<< HEAD
 				flick("door_deny", src)
+=======
+				icon_state = "door_deny"
+		else
+			icon_state = "[base_icon_state]_[density ? "closed" : "open"]"
+
+/obj/machinery/door/update_overlays()
+	. = ..()
+	if(panel_open)
+		. += mutable_appearance(icon, "panel_open")
+
+/// Returns the delay to use for the passed in animation
+/// We'll do our cleanup once the delay runs out
+/obj/machinery/door/proc/animation_length(animation)
+	switch(animation)
+		if(DOOR_OPENING_ANIMATION)
+			return 0.6 SECONDS
+		if(DOOR_CLOSING_ANIMATION)
+			return 0.6 SECONDS
+		if(DOOR_DENY_ANIMATION)
+			return 0.3 SECONDS
+
+/// Returns the time required to hit particular points in an animation
+/// Used to manage delays for opening/closing and such
+/obj/machinery/door/proc/animation_segment_delay(animation)
+	switch(animation)
+		if(DOOR_OPENING_PASSABLE)
+			return 0.5 SECONDS
+		if(DOOR_OPENING_FINISHED)
+			return 0.6 SECONDS
+		if(DOOR_CLOSING_UNPASSABLE)
+			return 0.2 SECONDS
+		if(DOOR_CLOSING_FINISHED)
+			return 0.6 SECONDS
+
+/// Override this to do misc tasks on animation start
+/obj/machinery/door/proc/animation_effects(animation)
+	return
+
+/// Used to start a new animation
+/// Accepts the animation to start as an arg
+/obj/machinery/door/proc/run_animation(animation)
+	set_animation(animation)
+	addtimer(CALLBACK(src, PROC_REF(set_animation), null), animation_length(animation), TIMER_UNIQUE|TIMER_OVERRIDE)
+	animation_effects(animation)
+
+// React to our animation changing
+/obj/machinery/door/proc/set_animation(animation)
+	src.animation = animation
+	update_appearance()
+>>>>>>> 725463a7120... [MIRROR] Fixes password doors and shutters not playing their sound effects [MDB IGNORE] (#3729)
 
 /// Public proc that simply handles opening the door. Returns TRUE if the door was opened, FALSE otherwise.
 /// Use argument "forced" in conjunction with try_to_force_door_open if you want/need additional checks depending on how sorely you need the door opened.
