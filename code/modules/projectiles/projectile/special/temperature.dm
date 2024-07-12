@@ -24,6 +24,13 @@
 		// the new body temperature is adjusted by the bullet's effect temperature
 		L.adjust_bodytemperature((1 - blocked) * temperature)
 
+	if(isobj(target))
+		var/obj/objectification = target
+
+		if(objectification.reagents)
+			var/datum/reagents/reagents = objectification.reagents
+			reagents?.expose_temperature(temperature)
+
 /obj/projectile/temp/hot
 	name = "heat beam"
 	icon_state = "lava"
@@ -31,8 +38,20 @@
 
 /obj/projectile/temp/cryo
 	name = "cryo beam"
+<<<<<<< HEAD
 	range = 3
 	temperature = -240 // Single slow shot reduces temp greatly
+=======
+	range = 9
+	temperature = -350 // Single slow shot reduces temp greatly
+
+/obj/projectile/temp/cryo/on_hit(atom/target, blocked = 0, pierce_hit)
+	. = ..()
+
+	if(isliving(target))
+		var/mob/living/living_target = target
+		living_target.apply_status_effect(/datum/status_effect/freezing_blast)
+>>>>>>> a0ca43be019... [MIRROR] Pyro and cryo beams (the genetics powers) adjust temperature more severely, additional effects to make them more meaningfully interact with the world [MDB IGNORE] (#3722)
 
 /obj/projectile/temp/cryo/on_range()
 	var/turf/T = get_turf(src)
@@ -40,3 +59,38 @@
 		var/turf/open/O = T
 		O.freeze_turf()
 	return ..()
+<<<<<<< HEAD
+=======
+
+/obj/projectile/temp/pyro
+	name = "hot beam"
+	icon_state = "firebeam" // sets on fire, diff sprite!
+	range = 9
+	temperature = 350
+
+/obj/projectile/temp/pyro/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(!.)
+		return
+
+	if(isobj(target))
+		var/obj/objectification = target
+
+		if(objectification.resistance_flags & ON_FIRE) //Don't burn something already on fire
+			return
+
+		objectification.fire_act(temperature)
+
+		return
+
+	if(isliving(target))
+		var/mob/living/living_target = target
+		living_target.adjust_fire_stacks(2)
+		living_target.ignite_mob()
+
+/obj/projectile/temp/pyro/on_range()
+	var/turf/location = get_turf(src)
+	new /obj/effect/hotspot(location)
+	location.hotspot_expose(700, 50, 1)
+	return ..()
+>>>>>>> a0ca43be019... [MIRROR] Pyro and cryo beams (the genetics powers) adjust temperature more severely, additional effects to make them more meaningfully interact with the world [MDB IGNORE] (#3722)
