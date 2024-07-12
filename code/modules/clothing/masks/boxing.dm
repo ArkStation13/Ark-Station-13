@@ -36,6 +36,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	modifies_speech = TRUE
 
+<<<<<<< HEAD
 /obj/item/clothing/mask/luchador/handle_speech(datum/source, list/speech_args)
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
@@ -59,6 +60,11 @@
 		if(prob(25))
 			message += " OLE!"
 	speech_args[SPEECH_MESSAGE] = message
+=======
+/obj/item/clothing/mask/luchador/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/speechmod, replacements = strings("luchador_replacement.json", "luchador"), end_string = " OLE!", end_string_chance = 25, uppercase = TRUE, slots = ITEM_SLOT_MASK)
+>>>>>>> 6d7807370d0... [MIRROR] Fixes the french beret making you speak spanish [MDB IGNORE] (#3727)
 
 /obj/item/clothing/mask/luchador/tecnicos
 	name = "Tecnicos Mask"
