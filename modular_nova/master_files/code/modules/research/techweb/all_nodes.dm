@@ -207,7 +207,15 @@
 		"engine_goggles_prescription",
 		"mesons_prescription",
 		"multi_cell_charger",
+<<<<<<< HEAD
 		"tray_goggles_prescription",
+=======
+	)
+	return ..()
+
+/datum/techweb_node/chem_synthesis/New()
+	design_ids += list(
+>>>>>>> 507b8919781... [MIRROR] Medical research nodes adjustment [MDB IGNORE] (#3719)
 		"plumbing_eng",
 	)
 	return ..()
