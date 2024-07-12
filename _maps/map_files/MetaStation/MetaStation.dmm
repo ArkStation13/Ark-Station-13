@@ -5742,6 +5742,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
+<<<<<<< HEAD
+=======
+"caV" = (
+/obj/vehicle/sealed/mecha/ripley/cargo,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/iron/recharge_floor,
+/area/station/cargo/warehouse)
+>>>>>>> bffb3d19232... [MIRROR] Fixes the Metastation cargo ripley not being able to charge. [MDB IGNORE] (#3714)
 "cbg" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -13045,11 +13053,10 @@
 /area/station/commons/lounge)
 "eIc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/dim/directional/south,
-/obj/machinery/mech_bay_recharge_port{
+/obj/structure/sign/warning/directional/south,
+/obj/machinery/computer/mech_bay_power_console{
 	dir = 8
 	},
-/obj/structure/sign/warning/directional/south,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "eIy" = (
@@ -13292,6 +13299,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
+"eMK" = (
+/obj/machinery/mech_bay_recharge_port{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron,
+/area/station/cargo/warehouse)
 "eMW" = (
 /obj/structure/flora/bush/pale/style_random,
 /obj/structure/flora/bush/ferny/style_random,
@@ -15438,15 +15452,6 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/engineering)
-"fAk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random/structure/crate,
-/obj/effect/turf_decal/bot_white,
-/obj/effect/turf_decal/arrows/red{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/cargo/warehouse)
 "fAt" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -16153,6 +16158,19 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/security/brig)
+<<<<<<< HEAD
+=======
+"fNz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/maintenance,
+/obj/item/reagent_containers/cup/soda_cans/pwr_game,
+/obj/structure/sign/poster/contraband/random/directional/south,
+/turf/open/floor/iron,
+/area/station/cargo/warehouse)
+>>>>>>> bffb3d19232... [MIRROR] Fixes the Metastation cargo ripley not being able to charge. [MDB IGNORE] (#3714)
 "fNI" = (
 /obj/structure/sign/poster/contraband/random/directional/east,
 /turf/open/floor/wood,
@@ -22297,11 +22315,12 @@
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "hYl" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 14
 	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "hYr" = (
@@ -28961,6 +28980,11 @@
 	pixel_x = -9
 	},
 /obj/effect/decal/cleanable/dirt,
+<<<<<<< HEAD
+=======
+/obj/structure/sign/poster/contraband/random/directional/south,
+/obj/machinery/airalarm/directional/west,
+>>>>>>> bffb3d19232... [MIRROR] Fixes the Metastation cargo ripley not being able to charge. [MDB IGNORE] (#3714)
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "kir" = (
@@ -31851,9 +31875,15 @@
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "ljH" = (
-/obj/effect/decal/cleanable/generic,
-/obj/vehicle/sealed/mecha/ripley/cargo,
-/turf/open/floor/iron/recharge_floor,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/caution{
+	dir = 8
+	},
+/obj/machinery/light/small/dim/directional/south,
+/turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "ljL" = (
 /obj/structure/chair/comfy/black,
@@ -39030,10 +39060,10 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/command)
 "nNB" = (
-/obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "nNH" = (
@@ -40195,6 +40225,7 @@
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
 	},
+/obj/effect/spawner/random/structure/crate,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "okj" = (
@@ -46066,6 +46097,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "qph" = (
@@ -50581,9 +50613,13 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload_foyer)
 "rPp" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/caution{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/caution,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "rPA" = (
@@ -87391,7 +87427,7 @@ fqe
 vHa
 nNB
 qoY
-fAk
+rPp
 rPp
 ljH
 vQs
@@ -87648,8 +87684,13 @@ vQs
 vde
 tGU
 hYl
+<<<<<<< HEAD
 nJi
 rPp
+=======
+caV
+eMK
+>>>>>>> bffb3d19232... [MIRROR] Fixes the Metastation cargo ripley not being able to charge. [MDB IGNORE] (#3714)
 eIc
 vQs
 hyW
