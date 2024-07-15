@@ -242,6 +242,7 @@
 ///Makes sure that the hoverboard can move in zero-g in (open) space but only there's a ground turf on the z-level below.
 /datum/component/riding/vehicle/scooter/skateboard/hover/proc/hover_check(is_moving = FALSE)
 	var/atom/movable/movable = parent
+<<<<<<< HEAD
 	if(!isopenspaceturf(movable.loc))
 		override_allow_spacemove = TRUE
 		return
@@ -251,6 +252,56 @@
 		override_allow_spacemove = FALSE
 		if(turf_below)
 			our_turf.zFall(movable, falling_from_move = is_moving)
+=======
+	if(!is_space_or_openspace(movable.loc))
+		on_hover_enabled()
+		return
+	var/turf/open/our_turf = movable.loc
+	var/turf/below = GET_TURF_BELOW(our_turf)
+
+	if(!check_space_turf(our_turf))
+		on_hover_fail()
+		return
+	//it's open space without support and the turf below is null or space without lattice, or if it'd fall several z-levels.
+	if(isopenspaceturf(our_turf) && our_turf.zPassOut(DOWN) && (isnull(below) || !check_space_turf(below) || (below.zPassOut(DOWN) && below.zPassIn(DOWN))))
+		on_hover_fail(our_turf, below, is_moving)
+		return
+	on_hover_enabled()
+
+///Part of the hover_check proc that returns false if it's a space turf without lattice or such.
+/datum/component/riding/vehicle/scooter/skateboard/hover/proc/check_space_turf(turf/turf)
+	if(!isspaceturf(turf))
+		return TRUE
+	for(var/obj/object in turf.contents)
+		if(object.obj_flags & BLOCK_Z_OUT_DOWN)
+			return TRUE
+	return FALSE
+
+///Called by hover_check() when the hoverboard is on a valid turf.
+/datum/component/riding/vehicle/scooter/skateboard/hover/proc/on_hover_enabled()
+	override_allow_spacemove = TRUE
+
+///Called by hover_check() when the hoverboard is on space or open space turf without a support underneath it.
+/datum/component/riding/vehicle/scooter/skateboard/hover/proc/on_hover_fail(turf/open/our_turf, turf/turf_below, is_moving)
+	override_allow_spacemove = FALSE
+	if(turf_below)
+		our_turf.zFall(parent, falling_from_move = is_moving)
+
+/datum/component/riding/vehicle/scooter/skateboard/hover/holy
+	var/is_slown_down = FALSE
+
+/datum/component/riding/vehicle/scooter/skateboard/hover/holy/on_hover_enabled()
+	if(!is_slown_down)
+		return
+	is_slown_down = FALSE
+	vehicle_move_delay -= 1
+
+/datum/component/riding/vehicle/scooter/skateboard/hover/holy/on_hover_fail(turf/open/our_turf, turf/turf_below, is_moving)
+	if(is_slown_down)
+		return
+	is_slown_down = TRUE
+	vehicle_move_delay += 1
+>>>>>>> d25f5a1c5d3f... [MIRROR] Holy skateboard improvement + actually fixing space movement with hoverboards. [MDB IGNORE] (#3782)
 
 /datum/component/riding/vehicle/scooter/skateboard/wheelys
 	vehicle_move_delay = 1.75 // NOVA EDIT - ORIGINAL: 0
