@@ -43,6 +43,7 @@
 	modifies_speech = TRUE
 	languages_native = list(/datum/language/buzzwords)
 
+<<<<<<< HEAD
 /obj/item/organ/internal/tongue/fly/modify_speech(datum/source, list/speech_args)
 	var/static/regex/fly_buzz = new("z+", "g")
 	var/static/regex/fly_buZZ = new("Z+", "g")
@@ -62,6 +63,11 @@
 			message = replacetext(message, "С", "З")
 //NOVA EDIT END: Adding russian version to autohiss
 	speech_args[SPEECH_MESSAGE] = message
+=======
+/obj/item/organ/internal/tongue/fly/New(class, timer, datum/mutation/human/copymut)
+	. = ..()
+	AddComponent(/datum/component/speechmod, replacements = CONFIG_GET(flag/russian_text_formation) ? russian_speech_replacements : speech_replacements, should_modify_speech = CALLBACK(src, PROC_REF(should_modify_speech))) // NOVA EDIT CHANGE - ORIGINAL:AddComponent(/datum/component/speechmod, replacements = speech_replacements, should_modify_speech = CALLBACK(src, PROC_REF(should_modify_speech)))
+>>>>>>> c9dd836c92f0... [MIRROR] Fix Tongue Based Speech Modifiers Being Applied To Users Native Languages [MDB IGNORE] (#3777)
 
 /obj/item/organ/internal/tongue/fly/Initialize(mapload)
 	. = ..()
