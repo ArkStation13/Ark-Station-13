@@ -39,6 +39,8 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 	cost = HALF_SHEET_MATERIAL_AMOUNT
 	source = /datum/robot_energy_storage/material/iron
 	merge_type = /obj/item/stack/rods
+	pickup_sound = 'sound/items/iron_rod_pick_up.ogg'
+	drop_sound = 'sound/items/metal_drop.ogg'
 
 /obj/item/stack/rods/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins to stuff \the [src] down [user.p_their()] throat! It looks like [user.p_theyre()] trying to commit suicide!"))//it looks like theyre ur mum
