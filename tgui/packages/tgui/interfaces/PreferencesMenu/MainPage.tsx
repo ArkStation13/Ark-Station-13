@@ -46,8 +46,12 @@ const CLOTHING_SELECTION_MULTIPLIER = 5.2;
 const CharacterControls = (props: {
   handleRotate: () => void;
   handleOpenSpecies: () => void;
+<<<<<<< HEAD
   handleLoadout: () => void; // ARK STATION EDIT ADDITION
   handleFood: () => void; // ARK STATION EDIT ADDITION
+=======
+  handleFood: () => void; // NOVA EDIT ADDITION
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
   gender: Gender;
   setGender: (gender: Gender) => void;
   showGender: boolean;
@@ -82,6 +86,7 @@ const CharacterControls = (props: {
           />
         </Stack.Item>
       )}
+<<<<<<< HEAD
       {/* ARK STATION EDIT ADDITION START */ /* }
       {props.handleLoadout && (
         <Stack.Item>
@@ -94,6 +99,9 @@ const CharacterControls = (props: {
           />
         </Stack.Item>
       )}
+=======
+      {/* NOVA EDIT ADDITION START */}
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
       <Stack.Item>
         <Button
           onClick={props.handleFood}
@@ -635,10 +643,14 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                       handleRotate={() => {
                         act('rotate');
                       }}
+<<<<<<< HEAD
                       handleLoadout={() => {
                         act('open_loadout');
                       }}
                       // SKYRAT EDIT ADDITION - BEGIN
+=======
+                      // NOVA EDIT ADDITION - BEGIN
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
                       handleFood={() => {
                         act('open_food');
                       }}

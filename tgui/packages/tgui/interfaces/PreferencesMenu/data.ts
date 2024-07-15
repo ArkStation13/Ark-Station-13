@@ -1,6 +1,7 @@
 import { BooleanLike } from 'common/react'; // REPLACED WITH ARK STATION UI FILE
 
 import { sendAct } from '../../backend';
+import { LoadoutCategory, LoadoutList } from './loadout/base';
 import { Gender } from './preferences/gender';
 
 export enum Food {
@@ -193,6 +194,8 @@ export type PreferencesMenuData = {
       gender: Gender;
       joblessrole: JoblessRole;
       species: string;
+      loadout_list: LoadoutList;
+      job_clothes: BooleanLike;
     };
 
     randomization: Record<string, RandomSetting>;
@@ -226,7 +229,13 @@ export type PreferencesMenuData = {
   quirks_balance: number;
   positive_quirk_count: number;
   species_restricted_jobs?: string[];
+<<<<<<< HEAD
   // SKYRAT EDIT END
+=======
+  ckey: string;
+  is_donator: BooleanLike;
+  // NOVA EDIT END
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
   keybindings: Record<string, string[]>;
   overflow_role: string;
   selected_quirks: string[];
@@ -252,6 +261,9 @@ export type ServerData = {
   quirks: QuirkInfo;
   random: {
     randomizable: string[];
+  };
+  loadout: {
+    loadout_tabs: LoadoutCategory[];
   };
   species: Record<string, Species>;
   [otheyKey: string]: unknown;

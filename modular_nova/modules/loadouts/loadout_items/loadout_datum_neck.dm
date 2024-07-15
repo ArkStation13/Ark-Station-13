@@ -1,12 +1,6 @@
-/*
-*	LOADOUT ITEM DATUMS FOR THE NECK SLOT
-*/
-
-/// Neck Slot Items (Deletes overrided items)
-GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck))
-
-/datum/loadout_item/neck
-	category = LOADOUT_ITEM_NECK
+// LOADOUT ITEM DATUMS FOR THE NECK SLOT
+/datum/loadout_category/neck
+	tab_order = /datum/loadout_category/ears::tab_order + 1
 
 /datum/loadout_item/neck/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
 	if(initial(outfit_important_for_life.neck))
@@ -293,6 +287,7 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 	name = "Maid Neck Cover"
 	item_path = /obj/item/clothing/neck/maid
 
+<<<<<<< HEAD
 /datum/loadout_item/neck/link_scryer
 	name = "MODlink Scryer"
 	item_path = /obj/item/clothing/neck/link_scryer/loaded
@@ -306,6 +301,11 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 	name = "Holobadge with Lanyard"
 	item_path = /obj/item/clothing/accessory/badge/holo/cord
 	restricted_roles = list(JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_MEDIC)
+=======
+/datum/loadout_item/neck/imperial_police_cloak
+	name = "Imperial Police Cloak"
+	item_path = /obj/item/clothing/neck/cloak/colonial/nri_police
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
 
 /datum/loadout_item/neck/tarkon_gauntlet
 	name = "Tarkon Confidante Gauntlet"
@@ -317,7 +317,11 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 */
 
 /datum/loadout_item/neck/donator
+	abstract_type = /datum/loadout_item/neck/donator
 	donator_only = TRUE
+
+/datum/loadout_item/neck/donator/mantle
+	abstract_type = /datum/loadout_item/neck/donator/mantle
 
 /datum/loadout_item/neck/donator/mantle/regal
 	name = "Regal Mantle"

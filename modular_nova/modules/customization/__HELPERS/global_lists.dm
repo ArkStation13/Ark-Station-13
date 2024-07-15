@@ -131,13 +131,21 @@
 	// See Initialize() on SSReagents
 
 	// Loadouts
+	for(var/datum/loadout_category/category in GLOB.all_loadout_categories)
+		for(var/datum/loadout_item/loadout_item in category.associated_items)
+			if(!loadout_item.erp_item)
+				continue
+
+			category.associated_items -= loadout_item
+
 	for(var/loadout_path in GLOB.all_loadout_datums)
 		var/datum/loadout_item/loadout_datum = GLOB.all_loadout_datums[loadout_path]
 		if(!loadout_datum.erp_item)
 			continue
-		GLOB.all_loadout_datums -= loadout_path
+		qdel(loadout_datum) // This actually handles removing it from the list.
 		// Ensure this FULLY works later
 
+<<<<<<< HEAD
 	var/list/loadout_lists = list(
 		GLOB.loadout_belts,
 		GLOB.loadout_ears,
@@ -162,6 +170,8 @@
 			if(!initial(loadout_typepath.erp_item))
 				continue
 			loadout_list -= loadout_typepath
+=======
+>>>>>>> 7d6f60952d3f... [MIRROR] Adds Character Loadout Tab to preferences (with just a small handful of items to start) [MDB IGNORE] (#2984)
 
 	// Underwear
 	for(var/sprite_name in GLOB.underwear_list)
