@@ -71,6 +71,7 @@
 	. = ..()
 	if(currently_hooked)
 		context[SCREENTIP_CONTEXT_LMB] = "Reel in"
+		context[SCREENTIP_CONTEXT_RMB] = "Unhook"
 		return CONTEXTUAL_SCREENTIP_SET
 	return NONE
 
@@ -218,15 +219,28 @@
 
 	return .
 
+<<<<<<< HEAD
 ///Called by afterattack(). If the line to whatever that is is clear and we're not already busy, try fishing in it
 /obj/item/fishing_rod/proc/cast_line(atom/target, mob/user, proximity_flag)
 	if(casting || currently_hooked || proximity_flag)
+=======
+/obj/item/fishing_rod/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
+	return ranged_interact_with_atom_secondary(interacting_with, user, modifiers)
+
+/obj/item/fishing_rod/ranged_interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
+	//Stop reeling, delete the fishing line
+	if(currently_hooked)
+		QDEL_NULL(fishing_line)
+		return ITEM_INTERACT_BLOCKING
+	return ..()
+
+/// If the line to whatever that is is clear and we're not already busy, try fishing in it
+/obj/item/fishing_rod/proc/cast_line(atom/target, mob/user)
+	if(casting || currently_hooked)
+>>>>>>> 53f70b3e95a6... [MIRROR] Minor Fishing rod QoL [MDB IGNORE] (#3787)
 		return
 	if(!hook)
 		balloon_alert(user, "install a hook first!")
-		return
-	if(!CheckToolReach(user, target, cast_range))
-		balloon_alert(user, "cannot reach there!")
 		return
 	if(!COOLDOWN_FINISHED(src, casting_cd))
 		return
