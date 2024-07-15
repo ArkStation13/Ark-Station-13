@@ -8,8 +8,15 @@
 /// decals such as ashes will cause NeverShouldHaveComeHere() to fail on such turfs, which creates annoying rng based CI failures
 /obj/effect/spawner/random/maintenance/no_decals
 
+<<<<<<< HEAD
 /obj/effect/spawner/random/maintenance/no_decals/can_spawn(atom/loot)
 	return !ispath(loot, /obj/effect/decal)
+=======
+/obj/effect/spawner/random/maintenance/no_decals/can_spawn(loot)
+	if(ispath(loot, /obj/effect/decal))
+		return FALSE
+	return ..()
+>>>>>>> ba77b4214dcb... [MIRROR] [NO GBP] Fixes a regression with the no-decal maintenance loot spawner [MDB IGNORE] (#3776)
 
 /obj/effect/spawner/random/maintenance/examine(mob/user)
 	. = ..()
