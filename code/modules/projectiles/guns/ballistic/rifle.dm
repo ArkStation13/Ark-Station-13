@@ -279,7 +279,14 @@
 
 	SET_BASE_PIXEL(-8, 0)
 
+<<<<<<< HEAD
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber()
+=======
+/obj/item/gun/ballistic/rifle/boltaction/pipegun/add_bayonet_point()
+	AddComponent(/datum/component/bayonet_attachable, offset_x = 35, offset_y = 10)
+
+/obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE)
+>>>>>>> e92ea6861c9a... [MIRROR] If you can't shoot a gun, then... JUST TOSS IT AT THEM [MDB IGNORE] (#3783)
 	. = ..()
 	do_sparks(1, TRUE, src)
 
