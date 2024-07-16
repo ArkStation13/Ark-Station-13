@@ -316,7 +316,7 @@
 	description = "AHHHHHGH! THEY FILLETED ME ALIVE!"
 	timeout = 10 MINUTES
 	surgery_completed = TRUE
-  
+
 /datum/mood_event/bald
 	description = "I need something to cover my head..."
 	mood_change = -3
