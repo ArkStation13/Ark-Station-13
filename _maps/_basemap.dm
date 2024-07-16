@@ -4,7 +4,7 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		#include "map_files\Birdshot\birdshot.dmm"
+		//#include "map_files\Birdshot\birdshot.dmm" // ARK STATION DELETED || NAHUY NADO
 		#include "map_files\debug\multiz.dmm"
 		#include "map_files\debug\runtimestation.dmm"
 		#include "ark_map_files\ark_maps\DeltaStation2.dmm"
