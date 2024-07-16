@@ -127,13 +127,8 @@
 /datum/action/cooldown/spell/touch/proc/register_hand_signals()
 	SHOULD_CALL_PARENT(TRUE)
 
-<<<<<<< HEAD
-	RegisterSignal(attached_hand, COMSIG_ITEM_AFTERATTACK, PROC_REF(on_hand_hit))
-	RegisterSignal(attached_hand, COMSIG_ITEM_AFTERATTACK_SECONDARY, PROC_REF(on_secondary_hand_hit))
-=======
 	RegisterSignal(attached_hand, COMSIG_ITEM_INTERACTING_WITH_ATOM, PROC_REF(on_hand_hit))
 	RegisterSignal(attached_hand, COMSIG_ITEM_INTERACTING_WITH_ATOM_SECONDARY, PROC_REF(on_hand_hit_secondary))
->>>>>>> f663c496695... [MIRROR] Fix rust heretic not being able to rust walls/floors [MDB IGNORE] (#3161)
 	RegisterSignal(attached_hand, COMSIG_ITEM_DROPPED, PROC_REF(on_hand_dropped))
 	RegisterSignal(attached_hand, COMSIG_QDELETING, PROC_REF(on_hand_deleted))
 
@@ -146,13 +141,8 @@
 	SHOULD_CALL_PARENT(TRUE)
 
 	UnregisterSignal(attached_hand, list(
-<<<<<<< HEAD
-		COMSIG_ITEM_AFTERATTACK,
-		COMSIG_ITEM_AFTERATTACK_SECONDARY,
-=======
 		COMSIG_ITEM_INTERACTING_WITH_ATOM,
 		COMSIG_ITEM_INTERACTING_WITH_ATOM_SECONDARY,
->>>>>>> f663c496695... [MIRROR] Fix rust heretic not being able to rust walls/floors [MDB IGNORE] (#3161)
 		COMSIG_ITEM_DROPPED,
 		COMSIG_QDELETING,
 		COMSIG_ITEM_OFFER_TAKEN,
@@ -175,35 +165,6 @@
  *
  * When our hand hits an atom, we can cast do_hand_hit() on them.
  */
-<<<<<<< HEAD
-/datum/action/cooldown/spell/touch/proc/on_hand_hit(datum/source, atom/victim, mob/caster, proximity_flag, click_parameters)
-	SIGNAL_HANDLER
-	SHOULD_NOT_OVERRIDE(TRUE) // DEFINITELY don't put effects here, put them in cast_on_hand_hit
-
-	if(!proximity_flag)
-		return
-	if(!can_hit_with_hand(victim, caster))
-		return
-
-	INVOKE_ASYNC(src, PROC_REF(do_hand_hit), source, victim, caster)
-
-/**
- * Signal proc for [COMSIG_ITEM_AFTERATTACK_SECONDARY] from our attached hand.
- *
- * Same as on_hand_hit, but for if right-click was used on hit.
- */
-/datum/action/cooldown/spell/touch/proc/on_secondary_hand_hit(datum/source, atom/victim, mob/caster, proximity_flag, click_parameters)
-	SIGNAL_HANDLER
-	SHOULD_NOT_OVERRIDE(TRUE) // DEFINITELY don't put effects here, put them in cast_on_secondary_hand_hit
-
-	if(!proximity_flag)
-		return
-	if(!can_hit_with_hand(victim, caster))
-		return
-
-	INVOKE_ASYNC(src, PROC_REF(do_secondary_hand_hit), source, victim, caster)
-	return COMPONENT_SECONDARY_CANCEL_ATTACK_CHAIN
-=======
 /datum/action/cooldown/spell/touch/proc/on_hand_hit(datum/source, mob/living/caster, atom/target, click_parameters)
 	SIGNAL_HANDLER
 	SHOULD_NOT_OVERRIDE(TRUE) // DEFINITELY don't put effects here, put them in cast_on_hand_hit
@@ -228,7 +189,6 @@
 
 	INVOKE_ASYNC(src, PROC_REF(do_secondary_hand_hit), source, target, caster)
 	return ITEM_INTERACT_SUCCESS
->>>>>>> f663c496695... [MIRROR] Fix rust heretic not being able to rust walls/floors [MDB IGNORE] (#3161)
 
 /// Checks if the passed victim can be cast on by the caster.
 /datum/action/cooldown/spell/touch/proc/can_hit_with_hand(atom/victim, mob/caster)
