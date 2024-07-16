@@ -204,10 +204,6 @@
 	belt = /obj/item/modular_computer/pda/chaplain
 	ears = /obj/item/radio/headset/headset_church
 
-	backpack_contents = list(
-		/obj/item/clothing/head/chaplain/deacon = 1,
-	)
-
 // Trim
 
 /datum/id_trim/job/deacon
@@ -325,10 +321,6 @@
 
 	belt = /obj/item/claymore/cerberus
 	ears = /obj/item/radio/headset/headset_church
-
-	backpack_contents = list(
-		/obj/item/clothing/head/helmet/toggleable/inquisitor = 1,
-	)
 
 // Trim
 
