@@ -63,14 +63,8 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
-<<<<<<< HEAD
-/obj/item/stack/rods/handle_openspace_click(turf/target, mob/user, proximity_flag, click_parameters)
-	if(proximity_flag)
-		target.attackby(src, user, click_parameters)
-=======
 /obj/item/stack/rods/handle_openspace_click(turf/target, mob/user, list/modifiers)
 	target.attackby(src, user, list2params(modifiers))
->>>>>>> 0e169a9afeb... [MIRROR] fix tile/rod/rcd multi-z hole repairs [MDB IGNORE] (#3283)
 
 /obj/item/stack/rods/get_main_recipes()
 	. = ..()
