@@ -1152,8 +1152,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Does this item bypass ranged armor checks?
 #define TRAIT_BYPASS_RANGED_ARMOR "bypass_ranged_armor"
 
-<<<<<<< HEAD
-=======
 /// Traits given by settler, each with their own specific effects for cases where someone would have that trait, but not the other settler effects
 
 #define TRAIT_EXPERT_FISHER "expert_fisher" // fishing is easier
@@ -1167,5 +1165,4 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 ///Trait given to the birthday boy
 #define TRAIT_BIRTHDAY_BOY "birthday_boy"
->>>>>>> de98a7bc3f0... [MIRROR] basic vibebot (and small rework) [MDB IGNORE] (#3272)
 // END TRAIT DEFINES
