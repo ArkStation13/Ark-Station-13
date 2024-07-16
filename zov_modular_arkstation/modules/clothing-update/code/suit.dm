@@ -222,6 +222,7 @@
 		),
 	)
 
+// SECURITY OVERRIDES
 
 /obj/item/clothing/suit/armor/riot
 	uses_advanced_reskins = TRUE
