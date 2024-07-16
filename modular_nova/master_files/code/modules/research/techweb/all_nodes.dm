@@ -137,9 +137,6 @@
 	)
 	return ..()
 
-<<<<<<< HEAD
-/datum/techweb_node/cyber_organs/New()
-=======
 /datum/techweb_node/xenobiology/New()
 	// QOL - Makes cytology experiment a discount rather than required experiment
 	required_experiments -= list(/datum/experiment/scanning/random/cytology)
@@ -153,7 +150,6 @@
 	return ..()
 
 /datum/techweb_node/cyber/cyber_organs/New()
->>>>>>> d909fb147f3... Xenobiology will no longer require the cytology experiment (instead it's a discount) (#3236)
 	design_ids += list(
 		"cybernetic_tongue",
 		"cybernetic_tongue_lizard",
