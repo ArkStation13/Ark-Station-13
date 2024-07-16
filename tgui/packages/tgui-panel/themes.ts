@@ -49,7 +49,6 @@ export const setClientTheme = (name) => {
       'changelog.text-color': '#202020',
       'changelog.border': 0,
       'rules.background-color': 'none',
-<<<<<<< HEAD
       'rules.text-color': '#202020',
       'rules.border': 0,
       'wiki.background-color': '#2ccaff',
@@ -64,19 +63,6 @@ export const setClientTheme = (name) => {
       'report-issue.background-color': '#f0197d',
       'report-issue.text-color': '#eaeaea',
       'report-issue.border': 0,
-=======
-      'rules.text-color': '#000000',
-      'wiki.background-color': 'none',
-      'wiki.text-color': '#000000',
-      'forum.background-color': 'none',
-      'forum.text-color': '#000000',
-      'github.background-color': 'none',
-      'github.text-color': '#000000',
-      'report-issue.background-color': 'none',
-      'report-issue.text-color': '#000000',
-      'fullscreen-toggle.background-color': 'none',
-      'fullscreen-toggle.text-color': '#000000',
->>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
       // Status and verb tabs
       'output.background-color': 'none',
       'output.text-color': '#202020',
@@ -117,7 +103,6 @@ export const setClientTheme = (name) => {
       'mainwindow.background-color': COLOR_DARK_BG,
       'split.background-color': COLOR_DARK_BG,
       // Buttons
-<<<<<<< HEAD
       'changelog.background-color': '#e6f1ff',
       'changelog.text-color': '#333333',
       'changelog.border': 0,
@@ -139,22 +124,6 @@ export const setClientTheme = (name) => {
       'report-issue.background-color': '#f0197d',
       'report-issue.text-color': '#333333',
       'report-issue.border': 0,
-=======
-      'changelog.background-color': '#494949',
-      'changelog.text-color': COLOR_DARK_TEXT,
-      'rules.background-color': '#494949',
-      'rules.text-color': COLOR_DARK_TEXT,
-      'wiki.background-color': '#494949',
-      'wiki.text-color': COLOR_DARK_TEXT,
-      'forum.background-color': '#494949',
-      'forum.text-color': COLOR_DARK_TEXT,
-      'github.background-color': '#3a3a3a',
-      'github.text-color': COLOR_DARK_TEXT,
-      'report-issue.background-color': '#492020',
-      'report-issue.text-color': COLOR_DARK_TEXT,
-      'fullscreen-toggle.background-color': '#494949',
-      'fullscreen-toggle.text-color': COLOR_DARK_TEXT,
->>>>>>> 203fbba2e9c... [MIRROR] Fullscreen QoL [MDB IGNORE] (#3189)
       // Status and verb tabs
       'output.background-color': COLOR_DARK_BG_DARKER,
       'output.text-color': COLOR_DARK_TEXT,
