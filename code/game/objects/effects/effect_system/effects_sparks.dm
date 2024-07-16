@@ -41,11 +41,6 @@
 
 /obj/effect/particle_effect/sparks/Move()
 	..()
-<<<<<<< HEAD
-	var/turf/T = loc
-	if(isturf(T))
-		T.hotspot_expose(1000,100)
-=======
 	var/turf/location = loc
 	if(isturf(location))
 		affect_location(location)
@@ -104,7 +99,6 @@
 		if(singed_living.fire_stacks)
 			singed_living.ignite_mob(FALSE) //ignite the mob, silent = FALSE (You're set on fire!)
 		return
->>>>>>> 6b01590d9ae... [MIRROR] [no gbp] Sparks don't ignite furniture (unless you made it out of plasma you fucking lunatic), sparks have a decreasing chance to ignite bigger items, small fix to obj/fire_act() signal [MDB IGNORE] (#3152)
 
 /datum/effect_system/spark_spread
 	effect_type = /obj/effect/particle_effect/sparks
