@@ -1,9 +1,5 @@
 /proc/make_nova_datum_references()
-<<<<<<< HEAD
-	make_sprite_accessory_references()
-=======
 	init_prefs_emotes()
->>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 	make_default_mutant_bodypart_references()
 	make_body_marking_references()
 	make_body_marking_set_references()
@@ -12,30 +8,6 @@
 	populate_total_uf_len_by_block()
 	make_augment_references()
 
-<<<<<<< HEAD
-/proc/make_sprite_accessory_references()
-	// Here we build the global list for all accessories
-	for(var/path in subtypesof(/datum/sprite_accessory))
-		var/datum/sprite_accessory/P = path
-		if(initial(P.key) && initial(P.name))
-			P = new path()
-			if(!GLOB.sprite_accessories[P.key])
-				GLOB.sprite_accessories[P.key] = list()
-			GLOB.sprite_accessories[P.key][P.name] = P
-			if(P.genetic)
-				if(!GLOB.dna_mutant_bodypart_blocks[P.key])
-					GLOB.dna_mutant_bodypart_blocks[P.key] = GLOB.dna_total_feature_blocks+1
-				if(!GLOB.genetic_accessories[P.key])
-					GLOB.genetic_accessories[P.key] = list()
-					for(var/color_block in 1 to DNA_FEATURE_COLOR_BLOCKS_PER_FEATURE)
-						GLOB.features_block_lengths["[GLOB.dna_mutant_bodypart_blocks[P.key] + color_block]"] = DNA_BLOCK_SIZE_COLOR
-					GLOB.dna_total_feature_blocks += DNA_BLOCKS_PER_FEATURE
-
-				GLOB.genetic_accessories[P.key] += P.name
-			//TODO: Replace "generic" definitions with something better
-			if(P.generic && !GLOB.generic_accessories[P.key])
-				GLOB.generic_accessories[P.key] = P.generic
-=======
 /proc/init_prefs_emotes()
 	//Scream types
 	for(var/spath in subtypesof(/datum/scream_type))
@@ -48,7 +20,6 @@
 		var/datum/laugh_type/L = new spath()
 		GLOB.laugh_types[L.name] = spath
 	sort_list(GLOB.laugh_types, GLOBAL_PROC_REF(cmp_typepaths_asc))
->>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 
 /proc/make_default_mutant_bodypart_references()
 	// Build the global list for default species' mutant_bodyparts

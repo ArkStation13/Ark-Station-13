@@ -414,11 +414,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		if(DNA_MUSHROOM_CAPS_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.caps_list.Find(features["caps"]), GLOB.caps_list.len))
 		if(DNA_POD_HAIR_BLOCK)
-<<<<<<< HEAD
-			set_uni_feature_block(blocknumber, construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len))
-=======
 			set_uni_feature_block(blocknumber, construct_block(SSaccessories.pod_hair_list.Find(features["pod_hair"]), length(SSaccessories.pod_hair_list)))
->>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 */
 //NOVA EDIT REMOVAL END
 

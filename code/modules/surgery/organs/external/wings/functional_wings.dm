@@ -153,14 +153,8 @@
 	if(wings_open)
 		return SSaccessories.sprite_accessories["wings_open"]
 
-<<<<<<< HEAD
-	return GLOB.sprite_accessories["wings"]
-	// NOVA EDIT END
-
-=======
 	return SSaccessories.sprite_accessories["wings"]
 	// NOVA EDIT ADDITION END
->>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 ///Update our wingsprite to the open wings variant
 /datum/bodypart_overlay/mutant/wings/functional/proc/open_wings()
 	wings_open = TRUE

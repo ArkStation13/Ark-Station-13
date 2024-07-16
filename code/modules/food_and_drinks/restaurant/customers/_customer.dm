@@ -307,11 +307,7 @@
 /datum/customer_data/moth/proc/get_wings(mob/living/basic/robot_customer/customer)
 	var/customer_ref = WEAKREF(customer)
 	if (!LAZYACCESS(wings_chosen, customer_ref))
-<<<<<<< HEAD
-		LAZYSET(wings_chosen, customer_ref, pick(GLOB.sprite_accessories["wings"]))
-=======
 		LAZYSET(wings_chosen, customer_ref, pick(SSaccessories.sprite_accessories["wings"])) // NOVA EDIT CHANGE - ORIGINAL: LAZYSET(wings_chosen, customer_ref, SSaccessories.moth_wings_list[pick(SSaccessories.moth_wings_list)])
->>>>>>> aa41b967f80... Continuing merging 82847 to Novas codebase (#3136)
 	return wings_chosen[customer_ref]
 
 /datum/customer_data/moth/get_underlays(mob/living/basic/robot_customer/customer)
