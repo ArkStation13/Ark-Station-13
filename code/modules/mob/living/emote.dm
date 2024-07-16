@@ -175,9 +175,6 @@
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	stat_allowed = HARD_CRIT
 
-<<<<<<< HEAD
-/datum/emote/living/gasp_shock
-=======
 /datum/emote/living/gasp/get_sound(mob/living/user)
 	if(HAS_MIND_TRAIT(user, TRAIT_MIMING))
 		return
@@ -190,7 +187,6 @@
 	return pick('sound/voice/human/gasp_male1.ogg', 'sound/voice/human/gasp_male2.ogg')
 
 /datum/emote/living/gasp/shock
->>>>>>> 11796249a3b... [MIRROR] fixes gasp not making sound [MDB IGNORE] (#3135)
 	key = "gaspshock"
 	key_third_person = "gaspsshock"
 	name = "gasp (Shock)"
