@@ -30,48 +30,6 @@
 	if(!HAS_TRAIT(user, TRAIT_USER_SCOPED))
 		balloon_alert(user, "must be scoped!")
 		return
-<<<<<<< HEAD
-	INVOKE_ASYNC(src, PROC_REF(start_aiming), params)
-	RegisterSignal(source, COMSIG_CLIENT_MOUSEDRAG, PROC_REF(on_mouse_drag))
-	RegisterSignal(source, COMSIG_CLIENT_MOUSEUP, PROC_REF(on_mouse_up))
-
-///Stop aiming and fire the beam if charged enough
-/obj/item/gun/energy/beam_rifle/proc/on_mouse_up(client/source, atom/movable/object, location, control, params)
-	SIGNAL_HANDLER
-	if(!object.IsAutoclickable())
-		return
-	process_aim(params)
-	UnregisterSignal(source, list(COMSIG_CLIENT_MOUSEDRAG, COMSIG_CLIENT_MOUSEUP))
-	if(aiming_time_left <= aiming_time_fire_threshold && check_user())
-		sync_ammo()
-		var/atom/target = source.mouse_object_ref?.resolve()
-		if(target)
-			INVOKE_ASYNC(src, PROC_REF(afterattack), target, source.mob, FALSE, source.mouseParams, passthrough = TRUE)
-	stop_aiming()
-	QDEL_LIST(current_tracers)
-
-/obj/item/gun/energy/beam_rifle/afterattack(atom/target, mob/living/user, flag, params, passthrough = FALSE)
-	. |= AFTERATTACK_PROCESSED_ITEM
-	if(flag) //It's adjacent, is the user, or is on the user's person
-		if(target in user.contents) //can't shoot stuff inside us.
-			return
-		if(!ismob(target) || user.combat_mode) //melee attack
-			return
-		if(target == user && user.zone_selected != BODY_ZONE_PRECISE_MOUTH) //so we can't shoot ourselves (unless mouth selected)
-			return
-	if(!passthrough && (aiming_time > aiming_time_fire_threshold))
-		return
-	if(lastfire > world.time + delay)
-		return
-	lastfire = world.time
-	. = ..()
-	stop_aiming()
-
-/obj/item/gun/energy/beam_rifle/proc/sync_ammo()
-	for(var/obj/item/ammo_casing/energy/beam_rifle/AC in contents)
-		AC.sync_stats()
-=======
->>>>>>> 664d1720f62... [MIRROR] Event Horizon Anti-Existential Beam Rifle. The ultimate conclusion to the arms race and the sniper's art. [MDB IGNORE] (#3166)
 
 	. = ..()
 	message_admins("[ADMIN_LOOKUPFLW(user)] has fired an anti-existential beam at [ADMIN_VERBOSEJMP(user)].")

@@ -1,17 +1,7 @@
-<<<<<<< HEAD:code/modules/power/singularity/boh_tear.dm
-/// BoH tear
-/// The BoH tear is a stationary singularity with a really high gravitational pull, which collapses briefly after being created
-/// The BoH isn't deleted for 10 minutes (only moved to nullspace) so that admins may retrieve the things back in case of a grief
-#define BOH_TEAR_CONSUME_RANGE 1
-#define BOH_TEAR_GRAV_PULL 25
-
-/obj/boh_tear
-=======
 /// Tear in the Fabric of Reality ///
 // Typically spawned by placing two bags of holding into one another, collapsing into a wandering singularity after a brief period as a stationary singularity.
 
 /obj/reality_tear
->>>>>>> 664d1720f62... [MIRROR] Event Horizon Anti-Existential Beam Rifle. The ultimate conclusion to the arms race and the sniper's art. [MDB IGNORE] (#3166):code/modules/power/singularity/reality_tear.dm
 	name = "tear in the fabric of reality"
 	desc = "Your own comprehension of reality starts bending as you stare this."
 	anchored = TRUE
@@ -28,25 +18,6 @@
 	pixel_y = -32
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	flags_1 = SUPERMATTER_IGNORES_1
-<<<<<<< HEAD:code/modules/power/singularity/boh_tear.dm
-//NOVA EDIT START: Nicer RodStopper
-/obj/boh_tear/Initialize(mapload)
-	. = ..()
-	QDEL_IN(src, 10 SECONDS) // vanishes after 10 seconds
-	addtimer(CALLBACK(src, PROC_REF(add_singularity)), 5 SECONDS)
-
-/obj/boh_tear/proc/add_singularity()
-	// the grav_pull was BOH_TEAR_GRAV_PULL (25), but that is a whole lot
-	AddComponent(
-		/datum/component/singularity, \
-		consume_range = BOH_TEAR_CONSUME_RANGE, \
-		grav_pull = 4, \
-		roaming = FALSE, \
-		singularity_size = STAGE_SIX, \
-	)
-//NOVA EDIT STOP: Nicer RodStopper
-/obj/boh_tear/attack_tk(mob/user)
-=======
 	/// Range that our singularity component consumes objects
 	var/singularity_consume_range = 1
 	/// Ranges that the singularity pulls objects
@@ -83,7 +54,6 @@
 	qdel(src)
 
 /obj/reality_tear/attack_tk(mob/user)
->>>>>>> 664d1720f62... [MIRROR] Event Horizon Anti-Existential Beam Rifle. The ultimate conclusion to the arms race and the sniper's art. [MDB IGNORE] (#3166):code/modules/power/singularity/reality_tear.dm
 	if(!isliving(user))
 		return
 	var/mob/living/jedi = user
@@ -93,10 +63,6 @@
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, attack_hand), jedi), 0.5 SECONDS)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
-<<<<<<< HEAD:code/modules/power/singularity/boh_tear.dm
-#undef BOH_TEAR_CONSUME_RANGE
-#undef BOH_TEAR_GRAV_PULL
-=======
 //The temporary tears in reality. Collapses into nothing, and has a significantly lower gravity pull range, but consumes more widely.
 
 /obj/reality_tear/temporary
@@ -108,4 +74,3 @@
 
 /obj/reality_tear/temporary/reality_collapse()
 	qdel(src)
->>>>>>> 664d1720f62... [MIRROR] Event Horizon Anti-Existential Beam Rifle. The ultimate conclusion to the arms race and the sniper's art. [MDB IGNORE] (#3166):code/modules/power/singularity/reality_tear.dm
