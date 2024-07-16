@@ -60,9 +60,6 @@
 		var/datum/action/avatar_domain_info/action = new(help_datum)
 		action.Grant(avatar)
 
-<<<<<<< HEAD
-	avatar.playsound_local(avatar, "sound/magic/blink.ogg", 25, TRUE)
-=======
 	var/client/our_client = old_body.client
 	var/alias = our_client?.prefs?.read_preference(/datum/preference/name/hacker_alias) || pick(GLOB.hacker_aliases)
 
@@ -70,7 +67,6 @@
 		avatar.fully_replace_character_name(avatar.real_name, alias)
 
 	avatar.playsound_local(avatar, 'sound/magic/blink.ogg', 25, TRUE)
->>>>>>> c9cdcf74298... [MIRROR] Bitrunning: Avatars get silly hacker names [MDB IGNORE] (#3281)
 	avatar.set_static_vision(2 SECONDS)
 	avatar.set_temp_blindness(1 SECONDS) // I'm in
 
