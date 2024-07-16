@@ -26,15 +26,12 @@
 		receiver.clear_mood_event("tail_lost")
 		receiver.clear_mood_event("tail_balance_lost")
 
-<<<<<<< HEAD
-=======
 	if(!special) // if some admin wants to give someone tail moodles for tail shenanigans, they can spawn it and do it by hand
 		original_owner ||= WEAKREF(receiver)
 
 		// If it's your tail, an infinite debuff is replaced with a timed one
 		// If it's not your tail but of same species, I guess it works, but we are more sad
 		// If it's not your tail AND of different species, we are horrified
->>>>>>> 81308baf639... [MIRROR] Felinids no longer get negative moodlets roundstart about their tail [MDB IGNORE] (#3186)
 		if(IS_WEAKREF_OF(receiver, original_owner))
 			receiver.clear_mood_event("wrong_tail_regained")
 		else if(type in receiver.dna.species.external_organs)
