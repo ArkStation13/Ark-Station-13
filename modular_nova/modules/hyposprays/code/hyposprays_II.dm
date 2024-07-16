@@ -184,20 +184,6 @@
 	playsound(loc, 'sound/weapons/autoguninsert.ogg', 35, 1)
 	update_appearance()
 
-<<<<<<< HEAD
-/obj/item/hypospray/mkii/attackby(obj/item/used_item, mob/living/user)
-	if((istype(used_item, /obj/item/reagent_containers/cup/vial) && vial != null))
-		if(!quickload)
-			to_chat(user, span_warning("[src] can not hold more than one vial!"))
-			return FALSE
-		else
-			insert_vial(used_item, user, vial)
-			return TRUE
-
-	if((istype(used_item, /obj/item/reagent_containers/cup/vial)))
-		insert_vial(used_item, user)
-		return TRUE
-=======
 /obj/item/hypospray/mkii/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!istype(tool, /obj/item/reagent_containers/cup/vial))
 		return NONE
@@ -206,7 +192,6 @@
 		return ITEM_INTERACT_SUCCESS
 	to_chat(user, span_warning("[src] can not hold more than one vial!"))
 	return ITEM_INTERACT_BLOCKING
->>>>>>> cb90d73a284... Fix hypospray quickswitching (#3296)
 
 /obj/item/hypospray/mkii/attack_self(mob/user)
 	. = ..()
@@ -235,17 +220,11 @@
 	obj_flags |= EMAGGED
 	return TRUE
 
-<<<<<<< HEAD
-/obj/item/hypospray/mkii/attack(obj/item/hypo, mob/user, params)
-	mode = HYPO_INJECT
-	return
-=======
 /obj/item/hypospray/mkii/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(istype(interacting_with, /obj/item/reagent_containers/cup/vial))
 		insert_vial(interacting_with, user)
 		return ITEM_INTERACT_SUCCESS
 	return do_inject(interacting_with, user, mode=HYPO_INJECT)
->>>>>>> cb90d73a284... Fix hypospray quickswitching (#3296)
 
 /obj/item/hypospray/mkii/attack_secondary(obj/item/hypo, mob/user, params)
 	mode = HYPO_SPRAY
