@@ -1,12 +1,8 @@
 /* import { filterMap, sortBy } from 'common/collections'; // REPLACED WITH ARK STATION UI FILE
 import { exhaustiveCheck } from 'common/exhaustive';
 import { classes } from 'common/react';
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
 import { createSearch } from 'common/string';
 import { ReactNode, useState } from 'react';
->>>>>>> ff63f89326d... [MIRROR] Better delete character ux [MDB IGNORE] (#3184)
 
 import { filter } from '../../../common/collections';
 import { createSearch } from '../../../common/string';
@@ -744,32 +740,6 @@ export const MainPage = (props: { openSpecies: () => void }) => {
               </Stack.Item>
 
               <Stack.Item grow basis={0}>
-<<<<<<< HEAD
-                {/* SKYRAT EDIT BEGIN: Swappable pref menus */ /* }
-                <Stack>
-                  <Stack.Item grow>
-                    <PageButton
-                      currentPage={currentPrefPage}
-                      page={PrefPage.Visual}
-                      setPage={setCurrentPrefPage}
-                    >
-                      Character Visuals
-                    </PageButton>
-                  </Stack.Item>
-                  <Stack.Item grow>
-                    <PageButton
-                      currentPage={currentPrefPage}
-                      page={PrefPage.Lore}
-                      setPage={setCurrentPrefPage}
-                    >
-                      Character Lore
-                    </PageButton>
-                  </Stack.Item>
-                </Stack>
-                <Stack fill vertical>
-                  <Stack.Divider />
-                  {prefPageContents}
-=======
                 <Stack vertical fill>
                   <PreferenceList
                     act={act}
@@ -806,7 +776,6 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                       </Button>
                     </Box>
                   </PreferenceList>
->>>>>>> ff63f89326d... [MIRROR] Better delete character ux [MDB IGNORE] (#3184)
                 </Stack>
                 {/* SKYRAT EDIT END: Swappable pref menus */ /* }
               </Stack.Item>
