@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(polarization_controllers)
 		// But why make it a string here? Otherwise it won't be an associative list and it kind of explodes. Shitty, I know.
 		LAZYADDASSOC(GLOB.polarization_controllers, id, list(src))
 
-	RegisterSignal(parent, COMSIG_ATOM_ATTACKBY, PROC_REF(on_window_attackby))
+	RegisterSignal(parent, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(window_item_interact))
 	RegisterSignal(parent, COMSIG_ATOM_EXAMINE, PROC_REF(on_window_examine))
 	RegisterSignal(parent, COMSIG_ATOM_TOOL_ACT(TOOL_MULTITOOL), PROC_REF(on_window_multitool_act))
 
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(polarization_controllers)
 
 	if(!polarizer.id)
 		parent_atom.balloon_alert(user, "set id on controller first!")
-		return COMPONENT_NO_AFTERATTACK
+		return ITEM_INTERACT_BLOCKING
 
 	if(id)
 		LAZYREMOVEASSOC(GLOB.polarization_controllers, id, list(src))
@@ -102,7 +102,7 @@ GLOBAL_LIST_EMPTY(polarization_controllers)
 	LAZYADDASSOC(GLOB.polarization_controllers, id, list(src))
 	parent_atom.balloon_alert(user, "linked polarizer!")
 
-	return COMPONENT_NO_AFTERATTACK
+	return ITEM_INTERACT_SUCCESS
 
 
 /**
