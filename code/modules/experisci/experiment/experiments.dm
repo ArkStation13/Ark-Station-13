@@ -376,8 +376,6 @@
 				continue
 		return TRUE
 	return FALSE
-<<<<<<< HEAD
-=======
 
 /// Scan for cybernetic organs
 /datum/experiment/scanning/people/augmented_organs
@@ -460,4 +458,3 @@
 		/obj/machinery = 1
 	)
 	required_tier = 3
->>>>>>> aef808ad187... [MIRROR] Techweb tweaks [NO GBP] [MDB IGNORE] (#3177)
