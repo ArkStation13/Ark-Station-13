@@ -21,7 +21,9 @@
 					/obj/item/storage/backpack/duffelbag/sec = 5,
 					/obj/item/clothing/under/rank/security/officer = 10,
 					/obj/item/clothing/under/rank/security/officer/skirt = 10,
+					/obj/item/clothing/under/rank/security/peacekeeper/miniskirt = 10,
 					/obj/item/clothing/under/rank/security/peacekeeper = 10,
+					/obj/item/clothing/under/rank/security/peacekeeper/jumpsuit = 10,
 					/obj/item/clothing/under/rank/security/skyrat/utility = 3,
 					/obj/item/clothing/under/rank/security/officer/metropolice = 3,
 					/obj/item/clothing/under/rank/security/russobluecamo = 3,
@@ -171,54 +173,6 @@
 	refill_canister = /obj/item/vending_refill/wardrobe/det_wardrobe
 	extra_price = PAYCHECK_COMMAND * 1.75
 	payment_department = ACCOUNT_SEC
-
-
-/// DeusVend
-
-/obj/machinery/vending/wardrobe/chap_wardrobe
-	name = "DeusVend"
-	desc = "God wills your purchase."
-	icon_state = "chapdrobe"
-	product_ads = "Are you being bothered by cultists or pesky revenants? Then come and dress like the holy man!;Clothes for men of the cloth!"
-	vend_reply = "Thank you for using the DeusVend!"
-	products = list(
-		/obj/item/choice_beacon/holy = 1,
-		/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
-		/obj/item/clothing/under/rank/civilian/chaplain = 1,
-		/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
-		/obj/item/clothing/shoes/sneakers/black = 1,
-		/obj/item/clothing/suit/chaplainsuit/nun = 1,
-		/obj/item/clothing/head/chaplain/nun_hood = 1,
-		/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
-		/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
-		/obj/item/clothing/head/chaplain/kippah = 3,
-		/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
-		/obj/item/clothing/head/chaplain/taqiyah/white = 1,
-		/obj/item/clothing/head/chaplain/taqiyah/red = 3,
-		/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
-		/obj/item/clothing/head/rasta = 1,
-		/obj/item/clothing/suit/chaplainsuit/shrinehand = 1,
-		/obj/item/storage/backpack/cultpack = 1,
-		/obj/item/storage/fancy/candle_box = 2,
-		/obj/item/radio/headset/headset_srv = 2,
-		/obj/item/clothing/suit/chaplainsuit/habit = 1,
-		/obj/item/clothing/head/chaplain/habit_veil = 1,
-		/obj/item/clothing/neck/cross = 8,
-		/obj/item/clothing/neck/bandagewraps = 3,
-	)
-	contraband = list(
-		/obj/item/toy/plush/ratplush = 1,
-		/obj/item/toy/plush/narplush = 1,
-	)
-	premium = list(
-		/obj/item/clothing/head/chaplain/bishopmitre = 1,
-		/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
-		/obj/item/clothing/head/chaplain/medievaljewhat = 3,
-		/obj/item/clothing/head/chaplain/clownmitre = 1,
-		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
-	payment_department = ACCOUNT_SRV
 
 /// Medidrobe
 

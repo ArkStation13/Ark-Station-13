@@ -288,7 +288,7 @@
 	)
 
 /obj/item/modular_computer/pda/chaplain
-	name = "chaplain PDA"
+	name = "church PDA" // ARK STATION EDIT
 	greyscale_config = /datum/greyscale_config/tablet/chaplain
 	greyscale_colors = "#333333#D11818"
 
