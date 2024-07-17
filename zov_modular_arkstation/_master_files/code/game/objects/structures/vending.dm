@@ -3,8 +3,8 @@
 	desc = "Spend your hard earned credits!"
 	// icon = 'zov_modular_arkstation/_master_files/icons/obj/structures.dmi' // ПЕРЕЕХАЛИ ЧУТЬ НИЖЕ.
 	icon_state = "intedrobe"
-	product_slogans = "Почти не пачкается кровью!;Потрать свои тяжело заработанные кредиты!;Новые поставки от наших клиентов!"
-	vend_reply = "Удачных контрактов, наёмник!"
+	product_slogans = "Almost does not stain with blood!;Spend your hard-earned credits!;New deliveries from our customers!"
+	vend_reply = "Happy contracting, mercenary!"
 	products = list(
 		/obj/item/clothing/under/syndicate/inteq = 3,
 		/obj/item/clothing/under/syndicate/inteq_skirt = 3,

@@ -21,6 +21,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	"[FREQ_GUILD]" = "syndradio", //NOVA EDIT ADDITION - MAPPING
 	"[FREQ_TARKON]" = "engradio", //NOVA EDIT ADDITION - MAPPING
 	"[FREQ_SOLFED]" = "medradio", //NOVA EDIT ADDITION - SOLFED
+	"[FREQ_CHURCH]" = "churchradio", // ARK STATION ADDITION || CHURCH
 	"[FREQ_CTF_RED]" = "redteamradio",
 	"[FREQ_CTF_BLUE]" = "blueteamradio",
 	"[FREQ_CTF_GREEN]" = "greenteamradio",
