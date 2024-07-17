@@ -30,8 +30,8 @@ ADMIN_VERB(revokebunkerbypass, R_ADMIN, "Revoke PB Bypass", "Revoke's a ckey's p
 	message_admins("[key_name_admin(usr)] has removed [ckeytobypass] from the current round's bunker bypass list.")
 
 /datum/tgs_chat_command/addbunkerbypass
-	name = "whitelist"
-	help_text = "whitelist <ckey>"
+	name = "bypass_panic_bunker" // ARK STATION EDIT || BLUEMOON WHITELIST
+	help_text = "bypass_panic_bunker <ckey>" // ARK STATION EDIT || BLUEMOON WHITELIST
 	admin_only = TRUE
 
 /datum/tgs_chat_command/addbunkerbypass/Run(datum/tgs_chat_user/sender, params)
