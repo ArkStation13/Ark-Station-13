@@ -255,7 +255,11 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT|HIDEHAIR
 	inhand_icon_state = "gas_mask"
 	has_fov = FALSE
+<<<<<<< HEAD
 	flags_cover = MASKCOVERSEYES
+=======
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT|MASKINTERNALS
+>>>>>>> 86a9539f392f... [MIRROR] Fixes Plague Doctor Mask not being able to use internals [MDB IGNORE] (#3840)
 
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
