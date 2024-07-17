@@ -165,7 +165,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_SERVICE
 	department_head = /datum/job/head_of_personnel
 	department_experience_type = EXP_TYPE_SERVICE
-	display_order = 7
+	display_order = 8 // ARK STATION EDIT || CHURCH - 7
 	label_class = "service"
 	ui_color = "#7cc46a"
 	nation_prefixes = list("Honka", "Boozo", "Fatu", "Danka", "Mimi", "Libra", "Jani", "Religi")
@@ -179,7 +179,7 @@
 	department_bitflags = DEPARTMENT_BITFLAG_SILICON
 	department_head = /datum/job/ai
 	department_experience_type = EXP_TYPE_SILICON
-	display_order = 8
+	display_order = 9 // ARK STATION EDIT || CHURCH - 7
 	label_class = "silicon"
 	ui_color = "#5dbda0"
 
