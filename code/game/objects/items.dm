@@ -729,12 +729,15 @@
 	equipped(user, slot, initial)
 	if(SEND_SIGNAL(src, COMSIG_ITEM_POST_EQUIPPED, user, slot) && COMPONENT_EQUIPPED_FAILED)
 		return FALSE
+// ARK STATION ADDITION START
 	if(female_sprite == TRUE)
 		var/mob/living/carbon/human/owner = user
 		if(owner.physique == FEMALE)
-			icon_state = base_icon_state + "_female"
-		else if(owner.physique == MALE)
+			if(owner.has_breasts(required_state = REQUIRE_GENITAL_ANY))
+				icon_state = base_icon_state + "_female"
+		else
 			icon_state = base_icon_state
+// ARK STATION ADDITION END
 	return TRUE
 
 /**
