@@ -173,8 +173,6 @@
 #define HUMAN_MAX_OXYLOSS 3
 #define HUMAN_CRIT_MAX_OXYLOSS (SSMOBS_DT/3)
 
-#define STAMINA_REGEN_BLOCK_TIME (10 SECONDS)
-
 #define HEAT_DAMAGE_LEVEL_1 1 //Amount of damage applied when your body temperature just passes the 360.15k safety point
 #define HEAT_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 400K point
 #define HEAT_DAMAGE_LEVEL_3 4 //Amount of damage applied when your body temperature passes the 460K point and you are on fire
@@ -462,6 +460,8 @@
 #define FLASH_PROTECTION_NONE 0
 #define FLASH_PROTECTION_FLASH 1
 #define FLASH_PROTECTION_WELDER 2
+#define FLASH_PROTECTION_WELDER_PLUS 3
+#define FLASH_PROTECTION_MAXIMUM 4
 
 // AI Toggles
 #define AI_CAMERA_LUMINOSITY 5
@@ -651,6 +651,7 @@
 // Otherwise they are completely arbitrary
 #define MONKEY_HEIGHT_DWARF 2
 #define MONKEY_HEIGHT_MEDIUM 4
+#define MONKEY_HEIGHT_TALL HUMAN_HEIGHT_DWARF
 #define HUMAN_HEIGHT_DWARF 6
 #define HUMAN_HEIGHT_SHORTEST 8
 #define HUMAN_HEIGHT_SHORT 10
