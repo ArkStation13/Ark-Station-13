@@ -197,6 +197,7 @@
 		RADIO_CHANNEL_SUPPLY = 1,
 		RADIO_CHANNEL_SERVICE = 1,
 		RADIO_CHANNEL_AI_PRIVATE = 1,
+		RADIO_CHANNEL_CHURCH = 1, // ARK STATION ADDITION
 	)
 
 /obj/item/encryptionkey/ai_with_binary
@@ -210,6 +211,7 @@
 		RADIO_CHANNEL_SUPPLY = 1,
 		RADIO_CHANNEL_SERVICE = 1,
 		RADIO_CHANNEL_AI_PRIVATE = 1,
+		RADIO_CHANNEL_CHURCH = 1, // ARK STATION ADDITION
 	)
 	translate_binary = TRUE
 	translated_language = /datum/language/machine

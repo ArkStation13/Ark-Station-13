@@ -4881,13 +4881,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/directions/science/directional/north{
-	pixel_y = 8
+	pixel_y = 1;
+	pixel_x = -30
 	},
-/obj/structure/sign/directions/dorms/directional/north,
 /obj/structure/sign/directions/arrival/directional/north{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = -32
 	},
 /obj/machinery/light/directional/west,
+/obj/structure/sign/directions/dorms/directional/north{
+	pixel_y = 10;
+	pixel_x = -32
+	},
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -14559,11 +14564,16 @@
 	dir = 4
 	},
 /obj/structure/sign/directions/engineering/directional/south{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = -32
 	},
-/obj/structure/sign/directions/medical/directional/south,
+/obj/structure/sign/directions/medical/directional/south{
+	pixel_y = 1;
+	pixel_x = -32
+	},
 /obj/structure/sign/directions/dorms/directional/south{
-	pixel_y = 8
+	pixel_y = 10;
+	pixel_x = -33
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/edge{
@@ -17512,11 +17522,16 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/directions/command/directional/north{
-	pixel_y = 8
+	pixel_y = 8;
+	pixel_x = 32
 	},
-/obj/structure/sign/directions/security/directional/north,
-/obj/structure/sign/directions/evac/directional/west{
-	pixel_y = -8
+/obj/structure/sign/directions/security/directional/north{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/structure/sign/directions/evac/directional/north{
+	pixel_x = 32;
+	pixel_y = -9
 	},
 /turf/open/floor/iron/smooth_large,
 /area/station/hallway/primary/aft)
@@ -19819,9 +19834,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/directions/security/directional/north,
+/obj/structure/sign/directions/security/directional/north{
+	pixel_x = 32;
+	pixel_y = 9
+	},
 /obj/structure/sign/directions/command/directional/north{
-	pixel_y = 8
+	pixel_y = 0;
+	pixel_x = 32
 	},
 /obj/structure/sign/directions/evac/directional/east{
 	pixel_y = -8
@@ -31619,13 +31638,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/sign/directions/supply/directional/south{
-	pixel_y = -8
+	pixel_y = -1;
+	pixel_x = 34
 	},
-/obj/structure/sign/directions/lavaland/directional/south,
-/obj/structure/sign/directions/engineering/directional/south{
-	pixel_y = 8
+/obj/structure/sign/directions/lavaland/directional/south{
+	pixel_y = -10;
+	pixel_x = 33
 	},
 /obj/machinery/light/directional/east,
+/obj/structure/sign/directions/engineering/directional/south{
+	pixel_y = 8;
+	pixel_x = 34
+	},
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -41730,6 +41754,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/ordnance_maint)
+"lyP" = (
+/obj/effect/landmark/start/fiscal,
+/turf/open/floor/carpet/black,
+/area/station/service/chapel/office)
 "lyY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
@@ -43533,11 +43561,16 @@
 /area/station/science/ordnance)
 "lVW" = (
 /obj/structure/sign/directions/command/directional/north{
-	pixel_y = 8
+	pixel_y = 0;
+	pixel_x = -31
 	},
-/obj/structure/sign/directions/security/directional/north,
+/obj/structure/sign/directions/security/directional/north{
+	pixel_y = 9;
+	pixel_x = -31
+	},
 /obj/structure/sign/directions/science/directional/north{
-	pixel_y = -8
+	pixel_y = -9;
+	pixel_x = -31
 	},
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/box,
@@ -44116,10 +44149,12 @@
 	},
 /obj/structure/sign/directions/vault/directional/east,
 /obj/structure/sign/directions/command/directional/north{
-	pixel_y = 8
+	pixel_y = 9;
+	pixel_x = 32
 	},
 /obj/structure/sign/directions/security/directional/south{
-	pixel_y = -8
+	pixel_y = -9;
+	pixel_x = 32
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/hallway/secondary/command)
@@ -51809,6 +51844,7 @@
 /obj/machinery/light/small/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/status_display/ai/directional/south,
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/carpet/black,
 /area/station/service/chapel/office)
 "oky" = (
@@ -54133,11 +54169,15 @@
 	dir = 4
 	},
 /obj/structure/sign/directions/engineering/directional/south{
-	pixel_y = -40
+	pixel_y = -39
 	},
-/obj/structure/sign/directions/lavaland/directional/east,
+/obj/structure/sign/directions/lavaland/directional/east{
+	pixel_x = -1;
+	pixel_y = -21
+	},
 /obj/structure/sign/directions/supply/directional/east{
-	pixel_y = -24
+	pixel_y = -30;
+	pixel_x = 0
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/effect/turf_decal/box/white{
@@ -70657,10 +70697,12 @@
 	},
 /obj/structure/sign/directions/science/directional/west,
 /obj/structure/sign/directions/arrival/directional/south{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = -33
 	},
 /obj/structure/sign/directions/command/directional/north{
-	pixel_y = 8
+	pixel_y = 9;
+	pixel_x = -32
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/edge{
@@ -72198,11 +72240,16 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/directions/science/directional/north{
-	pixel_y = 8
+	pixel_y = 10;
+	pixel_x = -30
 	},
-/obj/structure/sign/directions/dorms/directional/north,
+/obj/structure/sign/directions/dorms/directional/north{
+	pixel_y = 1;
+	pixel_x = -30
+	},
 /obj/structure/sign/directions/medical/directional/north{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = -30
 	},
 /turf/open/floor/iron/smooth_large,
 /area/station/hallway/primary/aft)
@@ -75840,6 +75887,7 @@
 "uzo" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/status_display/evac/directional/north,
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/carpet/black,
 /area/station/service/chapel/office)
 "uzB" = (
@@ -78254,7 +78302,8 @@
 	},
 /obj/structure/sign/directions/dorms/directional/west,
 /obj/structure/sign/directions/evac/directional/south{
-	pixel_y = -8
+	pixel_y = -9;
+	pixel_x = -31
 	},
 /obj/effect/turf_decal/box/white{
 	color = "#9FED58"
@@ -83018,9 +83067,13 @@
 /obj/structure/sign/directions/upload/directional/west{
 	pixel_y = 8
 	},
-/obj/structure/sign/directions/science/directional/south,
+/obj/structure/sign/directions/science/directional/south{
+	pixel_x = -32;
+	pixel_y = -1
+	},
 /obj/structure/sign/directions/medical/directional/south{
-	pixel_y = -8
+	pixel_y = -10;
+	pixel_x = -32
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/hallway/secondary/command)
@@ -83374,9 +83427,13 @@
 /obj/structure/sign/directions/security/directional/east{
 	pixel_y = 8
 	},
-/obj/structure/sign/directions/evac/directional/south,
+/obj/structure/sign/directions/evac/directional/south{
+	pixel_x = 32;
+	pixel_y = 0
+	},
 /obj/structure/sign/directions/supply/directional/south{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = 32
 	},
 /obj/effect/landmark/start/hangover,
 /obj/machinery/light/directional/east,
@@ -87911,11 +87968,16 @@
 /area/station/hallway/secondary/command)
 "xQQ" = (
 /obj/structure/sign/directions/medical/directional/south{
-	pixel_y = 8
+	pixel_y = 8;
+	pixel_x = -31
 	},
-/obj/structure/sign/directions/engineering/directional/south,
+/obj/structure/sign/directions/engineering/directional/south{
+	pixel_x = -31;
+	pixel_y = 0
+	},
 /obj/structure/sign/directions/supply/directional/south{
-	pixel_y = -8
+	pixel_y = -8;
+	pixel_x = -31
 	},
 /obj/structure/tank_holder/extinguisher,
 /turf/open/floor/iron/dark/smooth_large,
@@ -141972,7 +142034,7 @@ npZ
 lqF
 pIJ
 dVc
-dVc
+lyP
 qTJ
 dVc
 eXg
