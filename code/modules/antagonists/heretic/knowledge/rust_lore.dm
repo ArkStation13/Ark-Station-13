@@ -250,7 +250,6 @@
 	/// A static list of traits we give to the heretic when on rust.
 	var/static/list/conditional_immunities = list(
 		TRAIT_BOMBIMMUNE,
-		TRAIT_IGNOREDAMAGESLOWDOWN,
 		TRAIT_IGNORESLOWDOWN,
 		TRAIT_NO_SLIP_ALL,
 		TRAIT_NOBREATH,
@@ -336,7 +335,7 @@
  *
  * Gives our heretic ([source]) buffs if they stand on rust.
  */
-/datum/heretic_knowledge/ultimate/rust_final/proc/on_move(mob/source, atom/old_loc, dir, forced, list/old_locs)
+/datum/heretic_knowledge/ultimate/rust_final/proc/on_move(mob/living/source, atom/old_loc, dir, forced, list/old_locs)
 	SIGNAL_HANDLER
 
 	// If we're on a rusty turf, and haven't given out our traits, buff our guy
@@ -344,12 +343,14 @@
 	if(HAS_TRAIT(our_turf, TRAIT_RUSTY))
 		if(!immunities_active)
 			source.add_traits(conditional_immunities, type)
+			source.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 			immunities_active = TRUE
 
 	// If we're not on a rust turf, and we have given out our traits, nerf our guy
 	else
 		if(immunities_active)
 			source.remove_traits(conditional_immunities, type)
+			source.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 			immunities_active = FALSE
 
 /**

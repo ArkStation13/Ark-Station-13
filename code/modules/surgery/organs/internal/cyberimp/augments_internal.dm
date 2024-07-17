@@ -119,7 +119,12 @@
 /obj/item/organ/internal/cyberimp/brain/anti_stun/on_mob_remove(mob/living/carbon/implant_owner)
 	. = ..()
 	UnregisterSignal(implant_owner, signalCache)
+<<<<<<< HEAD
 	UnregisterSignal(implant_owner, COMSIG_CARBON_ENTER_STAMCRIT)
+=======
+	UnregisterSignal(implant_owner, COMSIG_LIVING_ENTER_STAMCRIT)
+	remove_stun_buffs(implant_owner)
+>>>>>>> 3d29251022f1... [MIRROR] Small hulk cleanup / nukes `TRAIT_IGNOREDAMAGESLOWDOWN` [MDB IGNORE] (#3807)
 
 /obj/item/organ/internal/cyberimp/brain/anti_stun/on_mob_insert(mob/living/carbon/receiver)
 	. = ..()
@@ -151,17 +156,31 @@
 	sparks.set_up(5, 1, src)
 	sparks.start()
 
+<<<<<<< HEAD
 	owner.add_traits(list(TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_BATON_RESISTANCE, TRAIT_STUNIMMUNE), REF(src))
 	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_IGNOREDAMAGESLOWDOWN, REF(src)), stun_resistance_time)	
 	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_BATON_RESISTANCE, REF(src)), stun_resistance_time)
 	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_STUNIMMUNE, REF(src)), stun_resistance_time)
 	
+=======
+	give_stun_buffs(owner)
+	addtimer(CALLBACK(src, PROC_REF(remove_stun_buffs), owner), stun_resistance_time)
+
+>>>>>>> 3d29251022f1... [MIRROR] Small hulk cleanup / nukes `TRAIT_IGNOREDAMAGESLOWDOWN` [MDB IGNORE] (#3807)
 	COOLDOWN_START(src, implant_cooldown, 60 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(implant_ready)),60 SECONDS)
 
 /obj/item/organ/internal/cyberimp/brain/anti_stun/proc/implant_ready()
 	if(owner)
 		to_chat(owner, span_purple("Your rebooter implant is ready."))
+
+/obj/item/organ/internal/cyberimp/brain/anti_stun/proc/give_stun_buffs(mob/living/give_to = owner)
+	give_to.add_traits(list(TRAIT_STUNIMMUNE, TRAIT_BATON_RESISTANCE), REF(src))
+	give_to.add_movespeed_mod_immunities(REF(src), /datum/movespeed_modifier/damage_slowdown)
+
+/obj/item/organ/internal/cyberimp/brain/anti_stun/proc/remove_stun_buffs(mob/living/remove_from = owner)
+	remove_from.remove_traits(list(TRAIT_STUNIMMUNE, TRAIT_BATON_RESISTANCE), REF(src))
+	remove_from.remove_movespeed_mod_immunities(REF(src), /datum/movespeed_modifier/damage_slowdown)
 
 /obj/item/organ/internal/cyberimp/brain/anti_stun/emp_act(severity)
 	. = ..()
