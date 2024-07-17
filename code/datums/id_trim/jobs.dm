@@ -273,11 +273,12 @@
 		)
 	job = /datum/job/cargo_technician
 
+/* // ARK STATION TRANSFERED
 /datum/id_trim/job/chaplain
 	assignment = "Chaplain"
 	trim_state = "trim_chaplain"
-	department_color = COLOR_SERVICE_LIME
-	subdepartment_color = COLOR_SERVICE_LIME
+	department_color = COLOR_LIGHT_YELLOW // ARK STATION EDIT
+	subdepartment_color = COLOR_LIGHT_YELLOW // ARK STATION EDIT
 	sechud_icon_state = SECHUD_CHAPLAIN
 	minimal_access = list(
 		ACCESS_CHAPEL_OFFICE,
@@ -286,6 +287,12 @@
 		ACCESS_MORGUE,
 		ACCESS_SERVICE,
 		ACCESS_THEATRE,
+		ACCESS_CHURCH, // ARK STATION EDIT
+		ACCESS_COMMAND, // ARK STATION EDIT
+		ACCESS_KEYCARD_AUTH, // ARK STATION EDIT
+		ACCESS_EVA, // ARK STATION EDIT
+		ACCESS_BRIG_ENTRANCE, // ARK STATION EDIT
+		ACCESS_RC_ANNOUNCE, // ARK STATION EDIT
 		)
 	extra_access = list()
 	template_access = list(
@@ -294,6 +301,7 @@
 		ACCESS_HOP,
 		)
 	job = /datum/job/chaplain
+*/ // ARK STATION TRANSFERED
 
 /datum/id_trim/job/chemist
 	assignment = "Chemist"
