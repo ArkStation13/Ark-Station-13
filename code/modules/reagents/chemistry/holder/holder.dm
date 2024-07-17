@@ -246,16 +246,34 @@
 		remove_amount = min(cached_reagent.volume, amount)
 		cached_reagent.volume -= remove_amount
 
+<<<<<<< HEAD
 		update_total()
 		if(!safety)//So it does not handle reactions when it need not to
 			handle_reactions()
 		SEND_SIGNAL(src, COMSIG_REAGENTS_REM_REAGENT, QDELING(cached_reagent) ? reagent_type : cached_reagent, amount)
 
+=======
+		//record the changes
+		removed_reagents[cached_reagent] = remove_amount
+>>>>>>> a77899842fdb... [MIRROR] [NO GBP] Fixes some incorrect reagent operations [MDB IGNORE] (#3832)
 		total_removed_amount += remove_amount
 
 		//if we reached here means we have found our specific reagent type so break
 		if(!include_subtypes)
+<<<<<<< HEAD
 			return total_removed_amount
+=======
+			break
+
+	//inform others about our reagents being removed
+	for(var/datum/reagent/removed_reagent as anything in removed_reagents)
+		SEND_SIGNAL(src, COMSIG_REAGENTS_REM_REAGENT, removed_reagent, removed_reagents[removed_reagent])
+
+	//update the holder & handle reactions
+	update_total()
+	if(!safety)
+		handle_reactions()
+>>>>>>> a77899842fdb... [MIRROR] [NO GBP] Fixes some incorrect reagent operations [MDB IGNORE] (#3832)
 
 	return round(total_removed_amount, CHEMICAL_VOLUME_ROUNDING)
 
@@ -469,7 +487,13 @@
 
 		if(preserve_data)
 			trans_data = copy_data(reagent)
+<<<<<<< HEAD
 		if(reagent.intercept_reagents_transfer(target_holder, cached_amount))
+=======
+		if(reagent.intercept_reagents_transfer(target_holder, amount))
+			update_total()
+			target_holder.update_total()
+>>>>>>> a77899842fdb... [MIRROR] [NO GBP] Fixes some incorrect reagent operations [MDB IGNORE] (#3832)
 			continue
 		transfered_amount = target_holder.add_reagent(reagent.type, transfer_amount * multiplier, trans_data, chem_temp, reagent.purity, reagent.ph, no_react = TRUE, ignore_splitting = reagent.chemical_flags & REAGENT_DONOTSPLIT) //we only handle reaction after every reagent has been transferred.
 		if(!transfered_amount)
