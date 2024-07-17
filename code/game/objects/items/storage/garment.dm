@@ -74,7 +74,7 @@
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/item/storage/bag/garment/hos/PopulateContents()
-	//new /obj/item/clothing/under/rank/security/head_of_security/skirt(src) NOVA EDIT REMOVAL - Blue Sec
+	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src) // NOVA EDIT REMOVAL - Blue Sec // ARK STATION REVIVAL
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/grey(src)
@@ -94,13 +94,14 @@
 
 /obj/item/storage/bag/garment/warden/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/warden(src)
-	//new /obj/item/clothing/head/hats/warden(src) NOVA EDIT REMOVAL
-	//new /obj/item/clothing/head/hats/warden/drill(src) NOVA EDIT REMOVAL
+	new /obj/item/clothing/head/hats/warden(src) // NOVA EDIT REMOVAL // ARK STATION REVIVAL
+	new /obj/item/clothing/head/hats/warden/drill(src) // NOVA EDIT REMOVAL // ARK STATION REVIVAL
 	new /obj/item/clothing/head/beret/sec/navywarden(src)
-	//new /obj/item/clothing/suit/armor/vest/warden/alt(src) NOVA EDIT REMOVAL
+	new /obj/item/clothing/suit/armor/vest/warden/alt(src) // NOVA EDIT REMOVAL // ARK STATION REVIVAL
 	new /obj/item/clothing/under/rank/security/warden/formal(src)
-	new /obj/item/clothing/suit/jacket/warden/blue(src) //NOVA ADDITION - FORMAL COAT
-	//new /obj/item/clothing/under/rank/security/warden/skirt(src) NOVA EDIT REMOVAL
+	new /obj/item/clothing/under/rank/security/warden(src) // ARK STATION ADDITION
+	//new /obj/item/clothing/suit/jacket/warden/blue(src) // NOVA ADDITION - FORMAL COAT // ARK STATION REMOVE
+	new /obj/item/clothing/under/rank/security/warden/skirt(src) // NOVA EDIT REMOVAL  // ARK STATION REVIVAL
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
