@@ -1,3 +1,4 @@
+/* ARK STATION OVERRIDDEN
 /world/proc/update_status()
 
 	var/list/features = list()
@@ -31,4 +32,4 @@
 		new_status += "\[[jointext(features, ", ")]"
 
 	status = new_status
-
+*/
