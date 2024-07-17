@@ -16,7 +16,7 @@
 	var/players = GLOB.clients.len
 
 	if(SSmapping.config)
-		new_status += "[SSmapping.config.map_name]"
+		new_status += "<br>Map: <b>[SSmapping.config.map_name]</b>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		new_status += "<br>Game Status: <b>IN LOBBY</b><br>"
@@ -32,6 +32,6 @@
 	new_status += "</a>"
 
 	if (!host && hostedby)
-		new_status += "hosted by <b>[hostedby]</b>"
+		new_status += "<br>hosted by <b>[hostedby]</b>"
 
 	status = new_status

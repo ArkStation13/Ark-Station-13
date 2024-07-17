@@ -4,20 +4,20 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		//#include "map_files\Birdshot\birdshot.dmm" // ARK STATION DELETED || NAHUY NADO
+		#include "ark_map_files\ark_maps\birdshot.dmm" // ARK STATION EDIT
 		#include "map_files\debug\multiz.dmm"
 		#include "map_files\debug\runtimestation.dmm"
-		#include "ark_map_files\ark_maps\DeltaStation2.dmm"
-		#include "ark_map_files\ark_maps\IceBoxStation.dmm"
-		#include "ark_map_files\ark_maps\MetaStation.dmm"
+		#include "ark_map_files\ark_maps\DeltaStation2.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\IceBoxStation.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\MetaStation.dmm" // ARK STATION EDIT
 		#include "map_files\Mining\Lavaland.dmm"
-		#include "ark_map_files\ark_maps\north_star.dmm"
-		#include "ark_map_files\ark_maps\tramstation.dmm"
-		//#include "map_files\wawastation\wawastation.dmm" // ARK STATION DELETED || NAHUY NADO
+		#include "ark_map_files\ark_maps\north_star.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\tramstation.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\wawastation.dmm" // ARK STATION EDIT
 		// NOVA EDIT ADDITON START - Compiling our modular maps too!
-		#include "ark_map_files\ark_maps\VoidRaptor.dmm"
-		#include "ark_map_files\ark_maps\Blueshift.dmm"
-		#include "ark_map_files\ark_maps\Ouroboros.dmm"
+		#include "ark_map_files\ark_maps\VoidRaptor.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\Blueshift.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\Ouroboros.dmm" // ARK STATION EDIT
 		// NOVA EDIT END
 
 		// ARK STATION ADDITION START
