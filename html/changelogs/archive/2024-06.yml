@@ -559,3 +559,213 @@
 2024-06-19:
   ArkStation-Bot:
   - bugfix: Polishes up new Meta Cargo's decals and associated amenities.
+2024-06-20:
+  ArkStation-Bot:
+  - rscadd: adds the MOD shock-absorption module, into the game.
+  - rscadd: The MOD shock-absorption module into the the uplinks, costs 4 TC.
+  - balance: Nukie modsuits come with the shock_absorption module preinstalled.
+  Krashly:
+  - rscadd: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043E\u0442\
+      \u0440\u0435\u0431\u043D\u043E\u0441\u0442\u044C \u043F\u0438\u0442\u044C \u0436\
+      \u0438\u0434\u043A\u043E\u0441\u0442\u044C, \u0447\u0442\u043E\u0431\u044B \u043D\
+      \u0435 \u0443\u043C\u0435\u0440\u0435\u0442\u044C \u0441 \u0436\u0430\u0436\u0434\
+      \u044B."
+2024-06-21:
+  Krashly:
+  - rscadd: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043C\u043D\u043E\
+      \u0433\u043E \u0447\u0435\u0433\u043E \u043D\u043E\u0432\u043E\u0433\u043E \u0434\
+      \u043B\u044F \u041E\u043C\u0435\u0433\u0430 \u0421\u0442\u0430\u043D\u0446\u0438\
+      \u0438."
+2024-06-23:
+  ArkStation-Bot:
+  - qol: Changes description of steal objective to match the name
+  - qol: Cult pylons slowly close bleeding wounds
+  - refactor: allowed aura healing to clot wounds shut
+  - qol: You can now repair portable scrubbers and pumps.
+  - qol: Bots can now bind voice lines to an action slot. Lowers cooldown for all
+      bot voicelines to 5 seconds.
+  - bugfix: Fixed the patient information for the mech sleeper module not displaying
+      when the mech didn't also have a syringe gun.
+  - balance: Moon Smile only does a knockdown if the targets sanity is low enough
+      and the minimum duration of its abilities have been decreased
+  - balance: Stamina healing has been significantly increased for most reagents and
+      passive effects.
+  - qol: Baby plushies are now smaller than their parents
+  - rscadd: Added another ruin to Lavaland
+  - image: Rust Heretic's blade now has a new, slicker sprite.
+  - bugfix: Fixed thermal pistols sometimes not recognising an equipped holster when
+      trying to spin them to recharge.
+  - bugfix: EMPs on carbons no longer happen twice
+  - code_imp: Moves organ emps under bodyparts, changes how bodyparts handle emp effects
+  - balance: Juicing and distilling plants only consumes nutriment and vitamin
+  - balance: Lanternfruit and polypore mushrooms now contain nutriment
+  - balance: Increased the amount of nutriment in sugarcane and saltcane
+  - qol: you can now take pulled objects with you when going up and down in zero gravity
+  - bugfix: conga lines now work correctly when going up and down ladders, and in
+      zero gravity
+  - image: Updated slime sprites
+  - rscadd: 'added a new virtual domain
+
+      :cl:
+
+      ![image](https://github.com/tgstation/tgstation/assets/154919526/2d94fe21-bc45-40dc-9f84-4b69088b353c)'
+  - bugfix: Peter Jr. is capable of surviving in the environment they spawn in.
+  - bugfix: The reset button in the bluespace launchpad UI should work again.
+  - bugfix: ' RCD, RPLD & RTD cancels their build process if their design is changed
+      during build.'
+  - sound: Some ambience tracks are quieter now.
+  - bugfix: Neutralising an anomaly cannot produce more anomaly cores than are supposed
+      to exist in a single round
+  - balance: Now regaining a tail has three states. If you got your tail back - you'll
+      get a temporarily debuff in exchange of infinite "tail missing" debuff (new).
+      If it's NOT your tail and of same species - this temporarily debuff will be
+      a bit stronger (new). If it's NOT your tail and NOT of same species - it will
+      be a considerably stronger debuff (currently on live).
+  - balance: Pacifists can now use psychotic brawling, at major mood costs.
+  - qol: make the cart hold 2.5x more water
+  - bugfix: special networks are now displayed in the fax if it is the only one in
+      the world
+  - bugfix: The recyclers in the snow cabin gateway, the cyborg mothership, and the
+      deep storage space ruin are now rotated properly.
+  - balance: Corpses won't remain cultists when ghouled by a flesheretic
+  - bugfix: fixed synths persocom. Rejoice, synthlizards! (and ipcs too but i dont
+      believe in your existence)
+  - bugfix: Catwalk deconstruction yields iron rods as intended.
+  BurgerBB:
+  - bugfix: Tweaks some instances of get_safe_turf so things like the nuclear disk
+      doesn't accidentally teleport to the Icebox Syndicate Base
+  Goat:
+  - bugfix: Enviro suit lights no longer stay on when the welding visor is activated.
+  - qol: Mining's PKAs and PKCs are now fireproof.
+  Krashly:
+  - rscadd: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043A\u0440\u0430\
+      \u0441\u043D\u0430\u044F \u043C\u0438\u043D\u0438\u044E\u0431\u043A\u0430 \u0421\
+      \u0411."
+  - rscadd: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u0435\u043A\
+      \u043E\u0442\u043E\u0440\u044B\u0435 \u0440\u0435\u0441\u043A\u0438\u043D\u044B\
+      \ \u0441\u0438\u043D\u0435\u0439 \u0432\u0430\u0440\u0438\u0430\u0446\u0438\u0438\
+      \ \u043E\u0434\u0435\u0436\u0434\u044B \u0421\u0411."
+  LT3:
+  - sound: You can now experience tram crashes in higher fidelity than ever!
+  Melbert:
+  - bugfix: Humans can't cough on menthol again
+  - bugfix: Moth and lizard emotes decide what sound to play based on body type, not
+      gender.
+  - sound: '*gasp now makes a sound, it''s the same as *gaspshock.'
+  - sound: Xenos (or anything with hands) can clap
+  PowerfulAtom111:
+  - rscadd: after a quick galactic meeting, insane people around the universe can
+      now speak gibbering to express their ideas free from the prying ears of the
+      walls
+  - rscadd: as an insane person, taking your meds deafens your ears to the holy tongue
+      all the other insane people are speaking
+  - spellcheck: added a bit of text to the RDS quirk and the RDS medical record text
+      to highlight the insane's new abilities
+  Rhials:
+  - bugfix: The "mopper" gimmick assistant outfit spawns with one cart instead of
+      nine.
+  ShizCalev:
+  - bugfix: Fixed a bug with station traits being added to modify weights for events
+      that couldn't actually occur on the current map!
+  - bugfix: Autolathes now print the correct number of cable coils.
+  Thlumyn:
+  - bugfix: fixed duplicated camera tags on P-T and DS-2
+  grungussuss:
+  - bugfix: fixed getting a fake white dwarf report when the shift isn't extended
+      mode, which lead to meta knowledge being used.
+  sylvia-from-fulp-station:
+  - image: Adds a unique sprite for envyknife
+2024-06-25:
+  ArkStation-Bot:
+  - balance: most livestock crates, with some exception, have been made cheaper to
+      facilitate healthier mental states in the crew, go build a farm!
+2024-06-26:
+  ArkStation-Bot:
+  - sound: added compressed air sound for when air tanks are inserted into machinery
+  - bugfix: railings can be deconstructed
+  - bugfix: racks can be deconstructed
+  - rscadd: The Lizard's Gas ruin in Lavaland has been revamped, and now dispenses
+      plasma gas fuel.
+  - rscadd: 'a new hairstyle, the enigmatic mcsqueeb, has appeared in frontier stylist
+      catalogues.
+
+      :cl:'
+  - bugfix: build mode and space dragons dont harddel on destroy
+  GoldenAlpharex:
+  - bugfix: APCs have received another budget cut, and will no longer come with surge
+      protectors built-in. Be careful of those electricity arcs if there's too much
+      power in the grid!
+  Melbert:
+  - balance: Taking stamina damage in stamcrit has diminishing returns associated,
+      meaning you cannot be infinitely stamcrit.
+  Thlumyn:
+  - bugfix: fix active turf in virology disposal outlet on OB station
+  YohAnGREAT:
+  - rscadd: "Blueshift: \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043C\
+      \u043D\u043E\u0433\u043E \u043F\u043E\u043B\u043E\u0442\u0435\u043D\u0435\u0446\
+      \ \u0432 \u0434\u043E\u0440\u043C\u0438\u0442\u043E\u0440\u0438\u044F\u0445."
+  - rscadd: "NSS Journey: \u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043B\
+      \u0438\u0447\u043D\u044B\u0435 \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\
+      \u044F \u0434\u043B\u044F \u0433\u043B\u0430\u0432. (\u043F\u043E\u043C\u0435\
+      \u0449\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u043E\u0442\u0434\u044B\u0445\
+      \u0430 \u0432 \u043C\u0435\u0434\u0431\u0435\u0435 \u043F\u043E\u043C\u0435\u043D\
+      \u044F\u043B\u0438\u0441\u044C \u043C\u0435\u0441\u0442\u0430\u043C\u0438 \u0441\
+      \ \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u0435\u043C \u0421\u041C\u041E\
+      )"
+  - rscadd: "NSS Journey: \u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043F\
+      \u043E\u043C\u0435\u0449\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u043C\u0435\
+      \u0445\u0430 \u0432 \u0431\u0440\u0438\u0433\u0435."
+  - rscadd: "NSS Journey: \u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0440\
+      \u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440\u044B \u0434\u043B\u044F \u0432\
+      \u043E\u0434\u044B \u0434\u043B\u044F \u0420\u043D\u0414 \u0438 \u043C\u0435\
+      \u0434\u0431\u0435\u044F."
+  - bugfix: "Void Raptor: \u0438\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E\
+      \ \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u043D\
+      \u0430\u0432\u0438\u0433\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u0442\
+      \u0430\u0431\u043B\u0438\u0447\u0435\u043A."
+2024-06-27:
+  ArkStation-Bot:
+  - bugfix: Icebox's service hall now now has a regular hand labeler.
+  - rscadd: Added a gun beacon to the Blueshield Loadout, removing the locker spawn
+  - rscadd: Added a Hellfire Custom for the Blueshield to select as a weapon option
+  - qol: Gun beacons have descriptions for the NTC's
+  - qol: Blueshield now has acces to the ORM and NTC office
+  - rscadd: Added new keywords (%d, %date, %t, %time) for fields
+  WebcomicArtist:
+  - rscadd: Added zaukerite (high damage/embed, low AP) and metallic hydrogen (High
+      AP and piercing, but low embed) crossbow ammo for the rebar crossbows
+  - rscadd: Added healium crystal ammo for the crossbow as well, which heals whomever
+      you shoot it at.
+  - rscadd: Added admin-only supermatter crossbow bolts that dust you, because why
+      the hell not.
+  - rscadd: Added non-harmful paper balls. Can be shot from a crossbow, or thrown
+      at co-workers.
+  - rscadd: Added a quiver made from cutting an o2 tank in half, to hold it all.
+  - image: added sprites for all the above.
+  - balance: Traitor Engineer Crossbow ammo now does 55 damage instead of 45, to make
+      it compete with revolver.
+  - balance: Stressed Rebar Crossbow now has a shorter delay required to rack it,
+      but can shoot you in the face on misfire.
+  - bugfix: fixed rebar crossbow shots not dropping items on hitting walls
+  - bugfix: fixed traitor crossbow having worse wound chance than the base one
+  - sound: added new crossbow firing sound effect
+2024-06-30:
+  ArkStation-Bot:
+  - bugfix: Crayons now fit in pdas
+  - bugfix: Cosmos spells will no longer star mark your steed
+  - rscadd: the flatpacker, a machine unlocked at industrial engineering
+  - bugfix: Fixed revenant spawning next to brains and other unharvestable dead mobs.
+  - bugfix: the syndicate now imports warm air instead of cold air to their icemoon
+      listening post
+  - balance: Phazon mechs use ectoplasm cores now
+  - balance: You can now acquire ectoplasm cores from the science supply interface
+  Goat:
+  - bugfix: A wrecked shuttle on lavaland no longer has asteroid tiles containing
+      the danger of space.
+  - code_imp: Added volcanic versions of all mineral turfs for those that did not
+      have it.
+  Krashly:
+  - refactor: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u0441\u0442\u0430\
+      \u0442\u0443\u0441 \u043F\u0430\u043D\u0435\u043B\u044C \u0441\u0435\u0440\u0432\
+      \u0435\u0440\u0430 \u0432 \u0425\u0430\u0431\u0435 \u0411\u044C\u043E\u043D\u0434\
+      \u0430."
