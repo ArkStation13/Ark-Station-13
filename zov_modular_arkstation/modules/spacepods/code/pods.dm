@@ -296,7 +296,6 @@
 	for(var/ejectee in occupants)
 		mob_exit(ejectee, silent = TRUE)
 
-	stop_engine()
 	QDEL_NULL(ui_view)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/getMaxFuel()
@@ -306,58 +305,29 @@
 	return benzobak.reagents.get_reagent_amount(/datum/reagent/stable_plasma)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/mob_enter(mob/living/M)
-	if(!driver)
-		driver = M
+	. = ..()
 	if(get_fuel() >=1)
-		start_engine()
 		icon_state = base_icon_state + "-on"
 	else
-		stop_engine()
 		icon_state = base_icon_state + "-off"
 	return ..()
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/mob_exit(mob/living/M, silent = FALSE, randomstep = FALSE)
 	. = ..()
-	if(!driver)
-		stop_engine()
-		return
-	if(driver.client)
-		driver.client.pixel_x = 0
-		driver.client.pixel_y = 0
-	driver.pixel_x = 0
-	driver.pixel_y = 0
-	if(M == driver)
-		driver = null
-	stop_engine()
 	icon_state = base_icon_state + "-off"
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/vehicle_move(cached_direction)
-	if(!driver)
-		stop_engine()
-	if(driver.stat == DEAD)
-		mob_exit(driver)
+	. = ..()
 	if(get_fuel() >=1)
-		start_engine()
 		icon_state = base_icon_state + "-on"
 	else
-		stop_engine()
 		icon_state = base_icon_state + "-off"
 	dir = cached_direction
-	check_boost()
-	calc_acceleration()
-	calc_vector(cached_direction)
 	addtimer(CALLBACK(src, PROC_REF(toplivo_minus)), 1 SECONDS)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/toplivo_minus()
 	if(benzobak.reagents.has_reagent(/datum/reagent/fuel, 0.1))
 		benzobak.reagents.remove_reagent(/datum/reagent/fuel, 0.1)
-
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/start_engine()
-	if(dead_check())
-		return
-	START_PROCESSING(SSvectorcraft, src)
-	if(!driver)
-		stop_engine()
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/toggle_lights(forced_state = null, mob/user)
 
