@@ -33,12 +33,19 @@
 
 /datum/armament_entry/company_import/deforest/first_aid_kit/first_responder
 	item_type = /obj/item/storage/backpack/duffelbag/deforest_surgical/stocked
-	cost = PAYCHECK_COMMAND * 10
+	cost = PAYCHECK_COMMAND * 10.5
 
 /datum/armament_entry/company_import/deforest/first_aid_kit/orange_satchel
 	item_type = /obj/item/storage/backpack/duffelbag/deforest_medkit/stocked
-	cost = PAYCHECK_COMMAND * 10
+	cost = PAYCHECK_COMMAND * 9.5
 
+<<<<<<< HEAD
+=======
+/datum/armament_entry/company_import/deforest/first_aid_kit/technician_satchel
+	item_type = /obj/item/storage/backpack/duffelbag/deforest_paramedic/stocked
+	cost = PAYCHECK_COMMAND * 11.75
+
+>>>>>>> d78437d5b164... Heavy duty medical crate updates [NO GBP] (#3806)
 // Basic first aid supplies like gauze, sutures, mesh, so on
 
 /datum/armament_entry/company_import/deforest/first_aid
