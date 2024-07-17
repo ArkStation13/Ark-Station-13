@@ -151,3 +151,102 @@
 	lefthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/dress_left.dmi'
 	righthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/dress_right.dmi'
 	can_adjust = FALSE
+
+// SECURITY OVERRIDES
+
+/obj/item/clothing/under/rank/security/peacekeeper/miniskirt
+	name = "security miniskirt"
+	desc = "This miniskirt was originally featured in a gag calendar, but entered official use once they realized its potential for arid climates."
+	icon_state = "miniskirt_red"
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/obj/obj.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/sec_reskins/mob/mob.dmi'
+	body_parts_covered = GROIN
+	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	gets_cropped_on_taurs = FALSE
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Red Variant" = list(
+			RESKIN_ICON_STATE = "miniskirt_red",
+			RESKIN_WORN_ICON_STATE = "miniskirt_red"
+		),
+		"Black-Red Variant" = list(
+			RESKIN_ICON_STATE = "miniskirt_black_red",
+			RESKIN_WORN_ICON_STATE = "miniskirt_black_red"
+		),
+		"Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi',
+			RESKIN_ICON_STATE = "miniskirt_blue",
+			RESKIN_WORN_ICON_STATE = "miniskirt_blue"
+		),
+		"Black-Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi',
+			RESKIN_ICON_STATE = "miniskirt_black",
+			RESKIN_WORN_ICON_STATE = "miniskirt_black"
+		),
+	)
+
+/obj/item/clothing/under/rank/security/officer
+	desc = "A tactical security uniform for officers, complete with a Lopland belt buckle."
+	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+	icon_state = "rsecurity" // ARK STATION EDIT || REDSEC
+	alt_covers_chest = TRUE
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Red Variant" = list(
+			RESKIN_ICON_STATE = "rsecurity",
+			RESKIN_WORN_ICON_STATE = "rsecurity"
+		),
+		"Black Variant" = list(
+			RESKIN_ICON_STATE = "security_black",
+			RESKIN_WORN_ICON_STATE = "security_black"
+		),
+		"Blue Variant" = list(
+			RESKIN_ICON_STATE = "security_blue",
+			RESKIN_WORN_ICON_STATE = "security_blue"
+		),
+		"White Variant" = list(
+			RESKIN_ICON_STATE = "security_white",
+			RESKIN_WORN_ICON_STATE = "security_white"
+		),
+	)
+
+// ARK STATION EDIT || REDSEC //
+
+/obj/item/clothing/under/rank/security/officer/skirt
+	name = "security jumpskirt"
+	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
+	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+	icon_state = "secskirt" // ARK STATION EDIT || REDSEC
+	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	gets_cropped_on_taurs = FALSE
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Red Variant" = list(
+			RESKIN_ICON_STATE = "secskirt",
+			RESKIN_WORN_ICON_STATE = "secskirt"
+        ),
+		"Blue Variant" = list(
+			RESKIN_ICON_STATE = "jumpskirt_blue",
+			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
+        ),
+		"Black Variant" = list(
+			RESKIN_ICON_STATE = "jumpskirt_black",
+			RESKIN_WORN_ICON_STATE = "jumpskirt_black"
+		),
+		"Plain Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi',
+			RESKIN_ICON_STATE = "plain_skirt_blue",
+			RESKIN_WORN_ICON_STATE = "plain_skirt_blue"
+		),
+		"Plain Black Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi',
+			RESKIN_ICON_STATE = "plain_skirt_black",
+			RESKIN_WORN_ICON_STATE = "plain_skirt_black"
+		),
+	)
