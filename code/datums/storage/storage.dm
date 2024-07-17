@@ -1095,6 +1095,12 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		var/atom/movable/movable_loc = real_location
 		movable_loc.lose_active_storage(src)
 
+<<<<<<< HEAD
+=======
+	if (!length(storage_interfaces) || isnull(storage_interfaces[to_hide]))
+		return TRUE
+
+>>>>>>> a71aab534234... [MIRROR] Fixes runtime with storage datum & portable chem mixer beaker insertion [MDB IGNORE] (#3836)
 	is_using -= to_hide
 
 	to_hide.client.screen -= boxes
