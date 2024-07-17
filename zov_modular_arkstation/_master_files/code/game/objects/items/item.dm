@@ -4,7 +4,7 @@
 
 /obj/item/icona_madonna
 	name = "Madonna icon"
-	desc = "Икона великой Мадонны."
+	desc = "Icon of the great Madonna."
 	icon =  'zov_modular_arkstation/_master_files/icons/obj/structures.dmi'
 	icon_state = "madonna"
 
@@ -99,14 +99,14 @@
 
 /obj/structure/sign/flag/inteq
 	name = "flag of PMC InteQ"
-	desc = "Коричнево-Оранжевый флаг с щитом по центру. Флаг пахнет кровью."
+	desc = "Brown-Orange flag with a shield in the center. The flag smells of blood."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_flag.dmi'
 	icon_state = "full"
 	item_flag = /obj/item/sign/flag/inteq
 
 /obj/item/sign/flag/inteq
 	name = "folded flag of the PMC InteQ"
-	desc = "Сложенный флаг ЧВК 'InteQ'."
+	desc = "Folded flag of PMC 'InteQ'."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_flag.dmi'
 	icon_state = "mini"
 	sign_path = /obj/structure/sign/flag/inteq
@@ -124,43 +124,43 @@
 
 /obj/structure/sign/poster/contraband/inteq/inteq_recruitment
 	name = "InteQ Recruitment"
-	desc = "Увидь Галактику! Заработай денег! Вступай сегодня!"
+	desc = "See the Galaxy! Earn money! Join today!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_sign
 	name = "InteQ poster"
-	desc = "Частная Военная Компания, занимающаяся обороной частных предприятий и выполнением заказов."
+	desc = "Private Military Company engaged in the defense of private enterprises and fulfilling orders."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_baza"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_better_dead
 	name = "Better Dead!"
-	desc = "Сокрушим врагов!"
+	desc = "Let's crush our enemies!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_better_dead"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_no_peace
 	name = "No peace!"
-	desc = "Не имей сто друзей, а имей сто рублей, Вступай в ЧВК 'InteQ'!"
+	desc = "Don't have a hundred friends, but have a hundred rubles, Join the PMC 'InteQ'!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_no_love"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_no_sex
 	name = "No SEX"
-	desc = "Хватит дрочить, вступай в ЧВК 'InteQ'!"
+	desc = "Stop jerking off, join the PMC 'InteQ'!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_no_sex"
 
 /obj/structure/sign/poster/contraband/inteq/inteq_vulp
 	name = "InteQ Recruitment"
-	desc = "Коричневый постер. На нём написано: 'Даже если ты дрочишь на вульп, вступай в ЧВК 'InteQ'. Сокрушим врагов вместе!'."
+	desc = "Brown poster. It says: 'Even if you jerk off to the vulp, join the PMC 'InteQ'. Let's crush our enemies together!'."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/poster.dmi'
 	icon_state = "poster_inteq_vulp"
 
 /obj/item/storage/box/inteq_box
 	name = "brown box"
-	desc = "В неё определенно нет ничего опасного."
+	desc = "There's definitely nothing dangerous about it."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/box.dmi'
 	icon_state = "inteqbox"
 
@@ -179,7 +179,7 @@
 	new /obj/item/storage/backpack/security/inteq(src)
 
 /obj/item/soap/inteq
-	desc = "Жёлтое мыло с крайне мощными химическими агентами, которые отмывают кровь быстрее."
+	desc = "Yellow soap with extremely powerful chemical agents that wash away blood faster."
 	icon_state = "soapinteq"
 	cleanspeed = 10
 	// icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_soap.dmi' // ПЕРЕЕХАЛИ НИЖЕ
@@ -189,7 +189,7 @@
 
 /obj/item/food/chips/intecookies
 	name = "InteCookies"
-	desc = "Песочное печенье, каждое из которых в форме маленьких щитов."
+	desc = "Shortbread cookies, each shaped like little shields."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_snacks.dmi'
 	icon_state = "inteqcookies"
 	trash_type = /obj/item/trash/intecookies
