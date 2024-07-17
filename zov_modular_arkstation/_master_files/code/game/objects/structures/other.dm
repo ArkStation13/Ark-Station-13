@@ -1,6 +1,6 @@
 /obj/structure/dead_syndie
 	name = "syndicate synthetic"
-	desc = "Повешеный на своих же проводах прототип Боевых Машин Синдиката. Кажется с него стекает кровь."
+	desc = "A prototype of the Syndicate War Machines hanging from its own wires. It looks like he's dripping blood."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/32x64.dmi'
 	icon_state = "syndproto"
 	density = TRUE
@@ -12,9 +12,9 @@
 
 /obj/structure/dead_syndie/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_WIRECUTTER)
-		to_chat(user, "<span class='notice'>Вы начинаете срезать провода с потолка...</span>")
+		to_chat(user, "<span class='notice'>You start cutting wires from the ceiling...</span>")
 		if(W.use_tool(src, user, 40, volume=50))
-			to_chat(user, "<span class='notice'>Вы успешно срезали проводку.</span>")
+			to_chat(user, "<span class='notice'>You have successfully cut the wiring.</span>")
 			qdel(src)
 			new /obj/effect/decal/cleanable/blood/gibs/old(src)
 	else

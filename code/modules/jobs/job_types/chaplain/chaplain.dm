@@ -1,25 +1,37 @@
+/* // ARK STATION TRANSFERED
 /datum/job/chaplain
 	title = JOB_CHAPLAIN
 	description = "Hold services and funerals, cremate people, preach your \
 		religion, protect the crew against cults."
-	department_head = list(JOB_HEAD_OF_PERSONNEL)
+	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD // ARK STATION EDIT
+	department_head = list(JOB_CAPTAIN) // ARK STATION EDIT
+	head_announce = list(RADIO_CHANNEL_CHURCH) // ARK STATION EDIT
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_CAPTAIN // ARK STATION EDIT
+	req_admin_notify = 1 // ARK STATION EDIT
+	minimal_player_age = 10 // ARK STATION EDIT
+	exp_requirements = 180 // ARK STATION EDIT
+	exp_required_type = EXP_TYPE_CREW // ARK STATION EDIT
+	exp_required_type_department = EXP_TYPE_CHURCH // ARK STATION EDIT
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CHAPLAIN"
 
 	outfit = /datum/outfit/job/chaplain
 	plasmaman_outfit = /datum/outfit/plasmaman/chaplain
 
-	paycheck = PAYCHECK_CREW
-	paycheck_department = ACCOUNT_SRV
+	paycheck = PAYCHECK_COMMAND // ARK STATION EDIT
+	paycheck_department = ACCOUNT_CHR // ARK STATION EDIT
 
 	display_order = JOB_DISPLAY_ORDER_CHAPLAIN
 	departments_list = list(
-		/datum/job_department/service,
+		/datum/job_department/church, // ARK STATION EDIT
+		/datum/job_department/command, // ARK STATION EDIT
 		)
+
+	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS) // ARK STATION EDIT
+	liver_traits = list(TRAIT_ROYAL_METABOLISM) // ARK STATION EDIT
 
 	family_heirlooms = list(/obj/item/toy/windup_toolbox, /obj/item/reagent_containers/cup/glass/bottle/holywater)
 
@@ -35,7 +47,7 @@
 	voice_of_god_power = 2 //Chaplains are very good at speaking with the voice of god
 
 	job_tone = "holy"
-
+*/ // ARK STATION TRANSFERED
 
 /datum/job/chaplain/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
@@ -109,6 +121,7 @@
 	SSblackbox.record_feedback("text", "religion_deity", 1, "[new_deity]", 1)
 	SSblackbox.record_feedback("text", "religion_bible", 1, "[new_bible]", 1)
 
+/* // ARK STATION TRANSFERED
 /datum/outfit/job/chaplain
 	name = "Chaplain"
 	jobtype = /datum/job/chaplain
@@ -127,3 +140,4 @@
 
 	chameleon_extras = /obj/item/stamp/chap
 	skillchips = list(/obj/item/skillchip/entrails_reader)
+*/ // ARK STATION TRANSFERED
