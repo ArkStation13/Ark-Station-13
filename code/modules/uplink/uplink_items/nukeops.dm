@@ -384,8 +384,13 @@
 	desc = "A cylindrical magazine designed for the PP-95 SMG."
 	item = /obj/item/ammo_box/magazine/plastikov9mm
 	cost = 1
+<<<<<<< HEAD
 	purchasable_from = UPLINK_NUKE_OPS
 	illegal_tech = FALSE
+=======
+	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 
 // Explosives and Grenades
 // ~~ Grenades ~~

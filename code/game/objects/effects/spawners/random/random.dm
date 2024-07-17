@@ -85,6 +85,25 @@
 						spawned_loot.pixel_y = spawn_loot_split_pixel_offsets * (loot_spawned % pixel_divider)
 			loot_spawned++
 
+<<<<<<< HEAD
+=======
+///Levels out the weights of loot if lower than 1, or makes rarer spawns even more rare.
+/obj/effect/spawner/random/proc/skew_loot_weights(list/loot_list, exponent)
+	///This helps keeping the modified weights more or less correct, since pick_weight doesn't appreciate decimals.
+	var/precision = 1
+	if(exponent < 1)
+		precision = round((1 - exponent) * 10) + 1
+	for(var/loot_type in loot_list)
+		if(islist(loot_type))
+			skew_loot_weights(loot_type, exponent)
+		var/loot_weight = loot_list[loot_type]
+		if(loot_weight <= 1)
+			if(exponent < 1)
+				loot_list[loot_type] = precision
+			continue
+		loot_list[loot_type] = round(loot_weight ** exponent * precision, 1)
+
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 /**
  *  Makes the actual item related to our spawner.
  *

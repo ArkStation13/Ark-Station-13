@@ -12,16 +12,26 @@
 	item = /obj/item/ammo_box/foambox/riot
 	cost = 2
 	surplus = 0
+<<<<<<< HEAD
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_NUKE_OPS
+=======
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	purchasable_from = ~UPLINK_SERIOUS_OPS
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 
 /datum/uplink_item/ammo/pistol
 	name = "9mm Handgun Magazine"
 	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol."
 	item = /obj/item/ammo_box/magazine/m9mm
 	cost = 1
+<<<<<<< HEAD
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
+=======
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 
 /datum/uplink_item/ammo/pistolap
 	name = "9mm Armour Piercing Magazine"
@@ -53,5 +63,10 @@
 			For when you really need a lot of things dead."
 	item = /obj/item/ammo_box/a357
 	cost = 4
+<<<<<<< HEAD
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY) //nukies get their own version
 	illegal_tech = FALSE
+=======
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)

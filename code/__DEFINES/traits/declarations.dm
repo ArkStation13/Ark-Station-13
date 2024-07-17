@@ -755,6 +755,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_DANGEROUS_OBJECT "dangerous_object"
 /// determines whether or not objects are haunted and teleport/attack randomly
 #define TRAIT_HAUNTED "haunted"
+/// An item that, if it has contents, will ignore it's contents when scanning for contraband.
+#define TRAIT_CONTRABAND_BLOCKER "contraband_blocker"
 
 //quirk traits
 #define TRAIT_ALCOHOL_TOLERANCE "alcohol_tolerance"
@@ -1143,7 +1145,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Trait which means whatever has this is dancing by a dance machine
 #define TRAIT_DISCO_DANCER "disco_dancer"
 
-/// That which allows mobs to instantly break down boulders.
+/// Trait which allows mobs to instantly break down boulders.
 #define TRAIT_INSTANTLY_PROCESSES_BOULDERS "instantly_processes_boulders"
 
 /// Trait applied to objects and mobs that can attack a boulder and break it down. (See /obj/item/boulder/manual_process())
@@ -1154,4 +1156,30 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Does this item bypass ranged armor checks?
 #define TRAIT_BYPASS_RANGED_ARMOR "bypass_ranged_armor"
 
+<<<<<<< HEAD
+=======
+/// Trait which means that this item is considered illegal contraband, and valid for the contraband bounty or when scanned by an nspect scanner.
+#define TRAIT_CONTRABAND "illegal_contraband"
+
+/// Traits given by settler, each with their own specific effects for cases where someone would have that trait, but not the other settler effects
+
+#define TRAIT_EXPERT_FISHER "expert_fisher" // fishing is easier
+#define TRAIT_ROUGHRIDER "roughrider" // you can improve speed on mounted animals with a good mood
+#define TRAIT_STUBBY_BODY "stubby_body" // you have a stubby body that lessens your agility
+#define TRAIT_BEAST_EMPATHY "beast_empathy" // you're good with animals, such as with taming them
+#define TRAIT_STURDY_FRAME "sturdy_frame" // you suffer much lesser effects from equipment that slows you down
+
+/// This item cannot be selected for or used by a theft objective (Spies, Traitors, etc.)
+#define TRAIT_ITEM_OBJECTIVE_BLOCKED "item_objective_blocked"
+/// This trait lets you attach limbs to any player without surgery.
+#define TRAIT_EASY_ATTACH "easy_attach"
+
+///Trait given to the birthday boy
+#define TRAIT_BIRTHDAY_BOY "birthday_boy"
+
+///Trait given to a turf that should not be allowed to be terraformed, such as turfs holding ore vents.
+#define TRAIT_NO_TERRAFORM "no_terraform"
+
+
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 // END TRAIT DEFINES

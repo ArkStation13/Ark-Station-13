@@ -1,7 +1,7 @@
 /datum/techweb_node/mod_suit
 	id = "mod_suit"
 	starting_node = TRUE
-	display_name = "Modular Exosuit"
+	display_name = "Modular Suit"
 	description = "Specialized back mounted power suits with various different modules."
 	prereq_ids = list("robotics")
 	design_ids = list(
@@ -52,8 +52,13 @@
 /datum/techweb_node/mod_medical
 	id = "mod_medical"
 	display_name = "Medical Modular Suit"
+<<<<<<< HEAD
 	description = "Medical exosuits for quick rescue purposes."
 	prereq_ids = list("mod_suit", "chem_synthesis")
+=======
+	description = "Medical MODsuits for quick rescue purposes."
+	prereq_ids = list(TECHWEB_NODE_MOD_SUIT, TECHWEB_NODE_CHEM_SYNTHESIS)
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 	design_ids = list(
 		"mod_plating_medical",
 		"mod_quick_carry",
@@ -97,8 +102,13 @@
 /datum/techweb_node/mod_medical_adv
 	id = "mod_medical_adv"
 	display_name = "Field Surgery Modules"
+<<<<<<< HEAD
 	description = "Medical exosuit equipment designed for conducting surgical operations in field conditions."
 	prereq_ids = list("mod_medical", "surgery_adv")
+=======
+	description = "Medical MODsuit equipment designed for conducting surgical operations in field conditions."
+	prereq_ids = list(TECHWEB_NODE_MOD_MEDICAL, TECHWEB_NODE_SURGERY_ADV)
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 	design_ids = list(
 		"mod_defib",
 		"mod_threadripper",
@@ -129,8 +139,13 @@
 /datum/techweb_node/mod_anomaly
 	id = "mod_anomaly"
 	display_name = "Anomalock Modular Suit"
+<<<<<<< HEAD
 	description = "Modules for exosuits that require anomaly cores to function."
 	prereq_ids = list("mod_engi_adv", "anomaly_research")
+=======
+	description = "Modules for MODsuits that require anomaly cores to function."
+	prereq_ids = list(TECHWEB_NODE_MOD_ENGI_ADV, TECHWEB_NODE_ANOMALY_RESEARCH)
+>>>>>>> 5e9de4515ba3... Handful of missed mirrors (#3739)
 	design_ids = list(
 		"mod_antigrav",
 		"mod_teleporter",
