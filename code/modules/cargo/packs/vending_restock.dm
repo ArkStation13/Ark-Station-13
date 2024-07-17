@@ -166,7 +166,7 @@
 	contains = list(/obj/item/vending_refill/wardrobe/curator_wardrobe,
 					/obj/item/vending_refill/wardrobe/bar_wardrobe,
 					/obj/item/vending_refill/wardrobe/chef_wardrobe,
-					/obj/item/vending_refill/wardrobe/chap_wardrobe,
+					// /obj/item/vending_refill/wardrobe/chap_wardrobe, // ARK STATION DELETED
 				)
 	crate_name = "general wardrobes vendor refills"
 
