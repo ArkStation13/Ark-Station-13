@@ -275,6 +275,9 @@
 	hunger = new /atom/movable/screen/hunger(null, src)
 	infodisplay += hunger
 
+	thirst = new /atom/movable/screen/thirst(null, src) // ARK STATION EDIT
+	infodisplay += thirst // ARK STATION EDIT
+
 	healthdoll = new /atom/movable/screen/healthdoll(null, src)
 	infodisplay += healthdoll
 
