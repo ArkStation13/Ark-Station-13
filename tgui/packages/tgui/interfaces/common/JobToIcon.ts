@@ -76,6 +76,8 @@ const BASEICONS = {
   'Bridge Officer': 'paperclip',
   'Vanguard Operative': 'shopping-cart',
   Stowaway: 'question',
+  Deacon: 'hands-praying',
+  Fiscal: 'hand-fist',
   //
 } as const;
 
