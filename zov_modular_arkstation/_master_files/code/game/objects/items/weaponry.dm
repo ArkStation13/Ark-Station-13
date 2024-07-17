@@ -2,7 +2,7 @@
 
 /obj/item/claymore/cerberus
 	name = "claymore"
-	desc = "Чего ты пялишься? Руби врагов!"
+	desc = "What are you staring at? Slash your enemies!"
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "siegesword"
 	worn_icon_state = "claymore"
@@ -13,7 +13,7 @@
 
 /obj/item/claymore/censor
 	name = "silver sword"
-	desc = "Серебрянный меч с гравировкой на лезвии и рукояти. Подсохшая кровь на лезвии будоражит ваш рассудок."
+	desc = "Silver sword with engraving on the blade and hilt. The dried blood on the blade haunts your mind."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "silversword"
 	inhand_icon_state = "silversword"
@@ -24,7 +24,7 @@
 
 /obj/item/claymore/baron
 	name = "silver sabre"
-	desc = "Серебрянная сабля с гравировкой на лезвии и рукояти. Подсохшая кровь на лезвии будоражит ваш рассудок."
+	desc = "Silver saber with engraving on the blade and hilt. The dried blood on the blade haunts your mind."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "sabre"
 	inhand_icon_state = "sabre"
@@ -55,7 +55,7 @@
 
 /obj/item/shield/riot/cerberus
 	name = "wooden shield"
-	desc = "wooden shield with a small iron insert in the middle. Has a handle to make it easier to hold."
+	desc = "A wooden shield with a small iron insert in the middle. Has a handle to make it easier to hold."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "wbuckler"
 	inhand_icon_state = "wbuckler"
@@ -65,7 +65,7 @@
 
 /obj/item/shield/riot/paladin
 	name = "paladin shield"
-	desc = "steel shield with a with the cross of the Gray Post Christian Church in the middle."
+	desc = "A steel shield with a with the cross of the Gray Post Christian Church in the middle."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "paladin"
 	inhand_icon_state = "paladin"
@@ -101,9 +101,9 @@
 
 //Ballistic
 
-/obj/item/gun/ballistic/automatic/ak12
+/obj/item/gun/ballistic/automatic/ak12 // TO FIX
 	name = "\improper AK-12 rifle"
-	desc = "Простая в использовании Автоматическая Винтовка. Её придумали ещё столетия назад, а популярна она и по сей день."
+	desc = "Easy to use Automatic Rifle. It was invented centuries ago, and it is still popular to this day."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "ak12"
 	inhand_icon_state = "ak12"
@@ -128,7 +128,7 @@
 
 /obj/item/ammo_box/magazine/ak12
 	name = "\improper AK-12 magazine"
-	desc = "Магазин способный держать 30 патронов калибра 5.56мм."
+	desc = "The magazine is capable of holding 30 rounds of 5.56mm caliber."
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/weapons/weapons.dmi'
 	icon_state = "ak12_mag"
 	ammo_type = /obj/item/ammo_casing/a556
@@ -138,12 +138,12 @@
 
 /obj/item/ammo_box/magazine/ak12/ap
 	name = "\improper AK-12 armor-piercing magazine"
-	desc = "Магазин способный держать 30 бронепробивающих патронов калибра 5.56мм."
+	desc = "The magazine is capable of holding 30 5.56mm armor-piercing rounds."
 	ammo_type = /obj/item/ammo_casing/a556/ap
 
 /obj/item/ammo_box/magazine/ak12/hp
 	name = "\improper AK-12 hollow-point magazine"
-	desc = "Магазин способный держать 30 разрывных патронов калибра 5.56мм."
+	desc = "The magazine is capable of holding 30 expansive 5.56mm rounds."
 	ammo_type = /obj/item/ammo_casing/a556/hp
 
 /obj/item/gun/ballistic/automatic/ak12/pindicate
