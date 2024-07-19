@@ -115,10 +115,10 @@
 			to_chat(target, span_warning("You were unable to get a loadout item ([initial(item_path.name)]) due to not being a donator!"))
 		return FALSE
 
-	if(veteran_only && !SSplayer_ranks.is_veteran(client))
-		if(client && !silent)
-			to_chat(target, span_warning("You were unable to get a loadout item ([initial(item_path.name)]) due to not being a veteran!"))
-		return FALSE
+	// if(veteran_only && !SSplayer_ranks.is_veteran(client))  // ARK STATION REMOVED
+	// 	if(client && !silent) // ARK STATION REMOVED
+	// 		to_chat(target, span_warning("You were unable to get a loadout item ([initial(item_path.name)]) due to not being a veteran!")) // ARK STATION REMOVED
+	// 	return FALSE // ARK STATION REMOVED
 
 	if(LAZYLEN(ckeywhitelist) && !(client?.ckey in ckeywhitelist))
 		if(client && !silent)

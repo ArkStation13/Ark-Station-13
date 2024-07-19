@@ -100,7 +100,6 @@
 /datum/loadout_item/under/jumpsuit/leotard/color
 	name = "Colored Leotard"
 	item_path = /obj/item/clothing/under/arkstation/leotard/color
-	additional_tooltip_contents = list(TOOLTIP_GREYSCALE)
 
 /datum/loadout_item/under/jumpsuit/half_moon
 	name = "Half Moon Undersuit"

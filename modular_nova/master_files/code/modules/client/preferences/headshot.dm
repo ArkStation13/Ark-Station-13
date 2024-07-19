@@ -57,6 +57,6 @@
 /datum/preference/text/headshot/is_accessible(datum/preferences/preferences)
 	if(isnull(usr)) // Joining at roundstart
 		return ..()
-	//if(!SSplayer_ranks.is_veteran(usr?.client) && !GLOB.donator_list[usr?.ckey] && !is_admin(usr?.client))
-		//return FALSE // Ark Station 13 Edit - Fuck Vet's system
+	//if(!SSplayer_ranks.is_veteran(usr?.client) && !GLOB.donator_list[usr?.ckey] && !is_admin(usr?.client)) // ARK STATION REMOVED
+		//return FALSE // Ark Station 13 Edit - Fuck Vet's system // ARK STATION REMOVED
 	return ..()

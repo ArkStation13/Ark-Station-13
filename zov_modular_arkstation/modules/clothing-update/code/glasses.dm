@@ -45,8 +45,8 @@
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/hud/security/sunglasses = 1,
-				  /obj/item/clothing/glasses/ballistic = 1,
-				  /obj/item/stack/cable_coil = 5)
+				/obj/item/clothing/glasses/ballistic = 1,
+				/obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/ball_hudsunsec_removal
@@ -61,8 +61,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ball_hudsunsec_removal)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
@@ -107,8 +107,8 @@
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/meson = 1,
-				  /obj/item/clothing/glasses/ballistic = 1,
-				  /obj/item/stack/cable_coil = 5)
+				/obj/item/clothing/glasses/ballistic = 1,
+				/obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/ball_hudsunmes_removal
@@ -123,8 +123,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ball_hudsunmes_removal)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
@@ -143,8 +143,8 @@
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/science = 1,
-				  /obj/item/clothing/glasses/ballistic = 1,
-				  /obj/item/stack/cable_coil = 5)
+				/obj/item/clothing/glasses/ballistic = 1,
+				/obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/ball_hudsunsci_removal
@@ -159,8 +159,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ball_hudsunsci_removal)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
@@ -179,8 +179,8 @@
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/hud/health = 1,
-				  /obj/item/clothing/glasses/ballistic = 1,
-				  /obj/item/stack/cable_coil = 5)
+				/obj/item/clothing/glasses/ballistic = 1,
+				/obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/ball_hudsunmed_removal
@@ -195,8 +195,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ball_hudsunmed_removal)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
@@ -214,8 +214,8 @@
 	time = 2 SECONDS
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/hud/diagnostic = 1,
-				  /obj/item/clothing/glasses/ballistic = 1,
-				  /obj/item/stack/cable_coil = 5)
+				/obj/item/clothing/glasses/ballistic = 1,
+				/obj/item/stack/cable_coil = 5)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/ball_hudsundig_removal
@@ -230,8 +230,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/ball_hudsundig_removal)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
