@@ -43,15 +43,29 @@
 	if(!user.can_perform_action(source, FORBID_TELEKINESIS_REACH))
 		return
 
-	// Cyborgs buckle people by dragging them onto them, unless in combat mode.
+	// Snowflake for cyborgs buckling people by dragging them onto them, unless in combat mode.
 	if (iscyborg(user))
 		var/mob/living/silicon/robot/cyborg_user = user
 		if (!cyborg_user.combat_mode)
+			return
+	// Snowflake for xeno consumption code
+	if (isalienadult(user))
+		var/mob/living/carbon/alien/adult/alien = user
+		if (alien.grab_state == GRAB_AGGRESSIVE && alien.pulling == source)
 			return
 
 	if (!isnull(should_strip_proc_path) && !call(source, should_strip_proc_path)(user))
 		return
 
+<<<<<<< HEAD
+=======
+	// Snowflake for mob scooping
+	if (isliving(source))
+		var/mob/living/mob = source
+		if (mob.can_be_held && (user.grab_state == GRAB_AGGRESSIVE) && (user.pulling == source))
+			return
+
+>>>>>>> 5538d18bd7ca... [MIRROR] Fixes that one alien feature that uses mouse drag [MDB IGNORE] (#3864)
 	var/datum/strip_menu/strip_menu = LAZYACCESS(strip_menus, source)
 
 	if (isnull(strip_menu))
