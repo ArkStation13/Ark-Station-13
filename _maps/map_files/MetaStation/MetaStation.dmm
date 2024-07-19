@@ -7227,6 +7227,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/spawner/random/structure/crate,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0ab27a468a84... [MIRROR] Fixing a table in the mining office at the metastation [MDB IGNORE] (#3860)
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "cAm" = (
@@ -14675,6 +14681,8 @@
 /mob/living/simple_animal/bot/mulebot{
 	name = "Leaping Rabbit"
 	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "fhp" = (
@@ -27503,9 +27511,12 @@
 /area/station/cargo/miningoffice)
 "jBp" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted,
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining";
+/obj/effect/turf_decal/bot,
+/obj/structure/disposalpipe/trunk{
 	dir = 1
+	},
+/obj/machinery/disposal/bin{
+	name = "Jim Norton's Quebecois Coffee disposal unit"
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -40934,6 +40945,9 @@
 "omV" = (
 /obj/effect/spawner/random/structure/grille,
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "onf" = (
@@ -45725,6 +45739,7 @@
 /area/station/security/brig)
 "pVV" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted,
+<<<<<<< HEAD
 /obj/effect/spawner/random/entertainment/deck,
 /obj/structure/table,
 /obj/effect/spawner/random/entertainment/cigarette_pack{
@@ -45734,7 +45749,18 @@
 /obj/item/storage/box/bandages{
 	pixel_y = 6;
 	pixel_x = 4
+=======
+/obj/structure/table,
+/obj/item/storage/box/bandages{
+	pixel_y = 6;
+	pixel_x = 4
 	},
+/obj/effect/spawner/random/entertainment/cigarette_pack{
+	pixel_x = -6;
+	pixel_y = 8
+>>>>>>> 0ab27a468a84... [MIRROR] Fixing a table in the mining office at the metastation [MDB IGNORE] (#3860)
+	},
+/obj/effect/spawner/random/entertainment/deck,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "pVZ" = (
@@ -47668,6 +47694,13 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining";
+	dir = 1
+	},
+>>>>>>> 0ab27a468a84... [MIRROR] Fixing a table in the mining office at the metastation [MDB IGNORE] (#3860)
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "qHK" = (
@@ -48231,6 +48264,9 @@
 /obj/machinery/requests_console/directional/south{
 	department = "Mining";
 	name = "Mining Requests Console"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -88751,7 +88787,7 @@ hJO
 duG
 omV
 fhn
-jXu
+cuh
 jBp
 wsk
 qHt
