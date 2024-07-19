@@ -134,6 +134,16 @@
 	if(data["blood_DNA"])
 		bloodsplatter.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
 
+/datum/reagent/blood/get_taste_description(mob/living/taster)
+	if(isnull(taster))
+		return ..()
+	if(!HAS_TRAIT(taster, TRAIT_DETECTIVES_TASTE))
+		return ..()
+	var/blood_type = data?["blood_type"]
+	if(!blood_type)
+		return ..()
+	return list("[blood_type] type blood" = 1)
+
 /datum/reagent/consumable/liquidgibs
 	name = "Liquid Gibs"
 	color = "#CC4633"
@@ -892,7 +902,7 @@
 		return
 	to_chat(affected_mob, span_warning("<b>You grit your teeth in pain as your body rapidly mutates!</b>"))
 	affected_mob.visible_message("<b>[affected_mob]</b> suddenly transforms!")
-	randomize_human(affected_mob)
+	randomize_human_normie(affected_mob)
 
 /datum/reagent/aslimetoxin
 	name = "Advanced Mutation Toxin"
@@ -2222,10 +2232,10 @@
 
 	var/mob/living/carbon/human/exposed_human = exposed_mob
 	if(!HAS_TRAIT(exposed_human, TRAIT_SHAVED))
-		var/datum/sprite_accessory/facial_hair/picked_beard = pick(GLOB.facial_hairstyles_list)
+		var/datum/sprite_accessory/facial_hair/picked_beard = pick(SSaccessories.facial_hairstyles_list)
 		exposed_human.set_facial_hairstyle(picked_beard, update = FALSE)
 	if(!HAS_TRAIT(exposed_human, TRAIT_BALD))
-		var/datum/sprite_accessory/hair/picked_hair = pick(GLOB.hairstyles_list)
+		var/datum/sprite_accessory/hair/picked_hair = pick(SSaccessories.hairstyles_list)
 		exposed_human.set_hairstyle(picked_hair, update = TRUE)
 	to_chat(exposed_human, span_notice("Hair starts sprouting from your [HAS_TRAIT(exposed_human, TRAIT_BALD) ? "face" : "scalp"]."))
 

@@ -1,17 +1,15 @@
 
 // --- Loadout item datums for under suits ---
 
-/// Underslot - Jumpsuit Items (Deletes overrided items)
-GLOBAL_LIST_INIT(loadout_jumpsuits, generate_loadout_items(/datum/loadout_item/under/jumpsuit))
+/datum/loadout_category/undersuit
+	category_name = "Undersuit"
+	category_ui_icon = FA_ICON_SHIRT
+	type_to_generate = /datum/loadout_item/under
+	tab_order = /datum/loadout_category/suit::tab_order + 1
 
-/// Underslot - Formal Suit Items (Deletes overrided items)
-GLOBAL_LIST_INIT(loadout_undersuits, generate_loadout_items(/datum/loadout_item/under/formal))
-
-/// Underslot - Misc. Under Items (Deletes overrided items)
-GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/under/miscellaneous))
 
 /datum/loadout_item/under
-	category = LOADOUT_ITEM_UNIFORM
+	abstract_type = /datum/loadout_item/under
 
 /datum/loadout_item/under/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
 	if(initial(outfit_important_for_life.uniform))
@@ -32,6 +30,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
  */
 
 /datum/loadout_item/under/jumpsuit
+	abstract_type = /datum/loadout_item/under/jumpsuit
 
 /datum/loadout_item/under/jumpsuit/greyscale
 	name = "Greyscale Jumpsuit"
@@ -44,12 +43,12 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 /datum/loadout_item/under/jumpsuit/random
 	name = "Random Jumpsuit"
 	item_path = /obj/item/clothing/under/color/random
-	additional_tooltip_contents = list(TOOLTIP_RANDOM_COLOR)
+	additional_displayed_text = list(TOOLTIP_RANDOM_COLOR)
 
 /datum/loadout_item/under/jumpsuit/random_skirt
 	name = "Random Jumpskirt"
 	item_path = /obj/item/clothing/under/color/jumpskirt/random
-	additional_tooltip_contents = list(TOOLTIP_RANDOM_COLOR)
+	additional_displayed_text = list(TOOLTIP_RANDOM_COLOR)
 
 /datum/loadout_item/under/jumpsuit/frontier
 	name = "Frontier Jumpsuit"
@@ -161,7 +160,10 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 /datum/loadout_item/under/jumpsuit/imperial_police_uniform
 	name = "Imperial Police Uniform"
 	item_path = /obj/item/clothing/under/colonial/nri_police
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_DETECTIVE)
+
+/datum/loadout_item/under/jumpsuit/cin_surplus_uniform
+	name = "CIN Combat Uniform"
+	item_path = /obj/item/clothing/under/syndicate/rus_army/cin_surplus
 
 /datum/loadout_item/under/jumpsuit/disco
 	name = "Superstar Cop Uniform"
@@ -291,6 +293,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
  */
 
 /datum/loadout_item/under/miscellaneous
+	abstract_type = /datum/loadout_item/under/miscellaneous
 
 /datum/loadout_item/under/miscellaneous/christmas
 	name = "Christmas Suit"
@@ -335,6 +338,10 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 /datum/loadout_item/under/miscellaneous/jeansripped
 	name = "Recolorable Ripped Jeans"
 	item_path = /obj/item/clothing/under/pants/nova/jeans_ripped
+
+/datum/loadout_item/under/miscellaneous/big_pants
+	name = "'JUNCO' Megacargo Pants"
+	item_path = /obj/item/clothing/under/pants/nova/big_pants
 
 /datum/loadout_item/under/miscellaneous/yoga
 	name = "Recolorable Yoga Pants"
@@ -578,6 +585,10 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	name = "Fancy Kimono"
 	item_path =  /obj/item/clothing/under/costume/nova/kimono
 
+/datum/loadout_item/under/miscellaneous/shihakusho
+	name = "Shihakusho"
+	item_path = /obj/item/clothing/under/costume/nova/shihakusho
+
 /datum/loadout_item/under/miscellaneous/chaps
 	name = "Black Chaps"
 	item_path = /obj/item/clothing/under/pants/nova/chaps
@@ -645,6 +656,26 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 /datum/loadout_item/under/miscellaneous/blastwave_uniform
 	name = "Blastwave Uniform"
 	item_path = /obj/item/clothing/under/blastwave
+
+/datum/loadout_item/under/miscellaneous/black_bunnysuit
+	name = "Black Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/bunnylewd //contrary to the path, it's actually tame
+
+/datum/loadout_item/under/miscellaneous/white_bunnysuit
+	name = "White Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/bunnylewd/white //also tame
+
+/datum/loadout_item/under/miscellaneous/latex_catsuit
+	name = "Latex Catsuit"
+	item_path = /obj/item/clothing/under/misc/latex_catsuit
+
+/datum/loadout_item/under/miscellaneous/geisha_suit
+	name = "Geisha Suit"
+	item_path = /obj/item/clothing/under/costume/geisha
+
+/datum/loadout_item/under/miscellaneous/jabroni
+	name = "Jabroni Outfit"
+	item_path = /obj/item/clothing/under/costume/jabroni
 
 //HALLOWEEN
 /datum/loadout_item/under/miscellaneous/pj_blood
@@ -758,6 +789,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 */
 
 /datum/loadout_item/under/formal
+	abstract_type = /datum/loadout_item/under/formal
 
 /datum/loadout_item/under/formal/amish_suit
 	name = "White Buttondown Shirt with Black Slacks"
@@ -1066,6 +1098,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /// DONATOR
 /datum/loadout_item/under/donator
+	abstract_type = /datum/loadout_item/under/donator
 	donator_only = TRUE
 
 /datum/loadout_item/under/donator/captain_black

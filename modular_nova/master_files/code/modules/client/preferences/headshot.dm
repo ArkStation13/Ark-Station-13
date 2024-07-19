@@ -37,7 +37,7 @@
 
 	find_index = findtext(value, link_regex)
 	if(find_index != 9)
-		//to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo, Discord, Byond'"))
+		// to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo (i.gyazo.com), Byond (files.byondhome.com), Imgbox (images2.imgbox.com)'"))
 		to_chat(usr, span_warning("The image must be hosted on one of the following sites: 'Gyazo, postimg, ibb, Byond, Imgbox'")) // Ark Station Editing
 		return
 
