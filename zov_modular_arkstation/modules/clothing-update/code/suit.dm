@@ -142,12 +142,12 @@
 /obj/item/mod/control/pre_equipped/inteqe
 	theme = /datum/mod_theme/inteqe
 	starting_frequency = MODLINK_FREQ_SYNDICATE
-	applied_cell = /obj/item/stock_parts/cell/bluespace
+	applied_cell = /obj/item/stock_parts/power_store/cell/bluespace
 	applied_modules = list(
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/emp_shield,
 		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/jump_jet,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/dna_lock,
@@ -155,7 +155,7 @@
 	)
 	default_pins = list(
 		/obj/item/mod/module/armor_booster,
-		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/jump_jet,
 	)
 

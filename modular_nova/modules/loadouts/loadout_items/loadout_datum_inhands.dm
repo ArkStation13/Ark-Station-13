@@ -128,7 +128,7 @@
 	name = "riding saddle (peacekeeper)"
 	item_path = /obj/item/riding_saddle/leather/peacekeeper
 
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_CORRECTIONS_OFFICER, JOB_HEAD_OF_SECURITY)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC, JOB_HEAD_OF_SECURITY) // ARK STATION EDIT
 
 /datum/loadout_item/inhand/pet
 	abstract_type = /datum/loadout_item/inhand/pet
