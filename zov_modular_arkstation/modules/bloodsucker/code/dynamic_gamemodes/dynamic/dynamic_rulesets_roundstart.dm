@@ -1,3 +1,12 @@
+
+//////////////////////////////////////////////
+//                                          //
+//        ROUNDSTART BLOODSUCKER            //
+//                                          //
+//////////////////////////////////////////////
+
+
+
 /datum/dynamic_ruleset/roundstart/bloodsucker
 	name = "Bloodsuckers"
 	antag_flag = ROLE_BLOODSUCKER
