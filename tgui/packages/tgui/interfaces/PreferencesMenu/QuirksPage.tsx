@@ -351,7 +351,7 @@ export function QuirksPage(props) {
           }
 
           // // NOVA EDIT START - Veteran quirks
-          // if (quirk.veteran_only && !data.is_veteran) {
+          // if (quirk.veteran_only && !data.is_veteran) { ARK STATION REMOVED
           //   return 'You need to be a veteran to select this quirk, apply today!';
           // }
           // // NOVA EDIT END

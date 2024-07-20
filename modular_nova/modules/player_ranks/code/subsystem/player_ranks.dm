@@ -86,14 +86,14 @@ SUBSYSTEM_DEF(player_ranks)
  * * admin_bypass - Whether or not admins can succeed this check, even if they
  * do not actually possess the role. Defaults to `TRUE`.
  */
-// /datum/controller/subsystem/player_ranks/proc/is_veteran(client/user, admin_bypass = TRUE)
+// /datum/controller/subsystem/player_ranks/proc/is_veteran(client/user, admin_bypass = TRUE) ARK STATION REMOVED
 // 	if(!istype(user))
 // 		CRASH("Invalid user type provided to is_veteran(), expected 'client' and obtained '[user ? user.type : "null"]'.")
 
-// 	if(GLOB.veteran_list[user.ckey])
+// 	if(GLOB.veteran_list[user.ckey]) ARK STATION REMOVED
 // 		return TRUE
 
-// 	if(admin_bypass && is_admin(user))
+// 	if(admin_bypass && is_admin(user)) ARK STATION REMOVED
 // 		return TRUE
 
 // 	return FALSE
