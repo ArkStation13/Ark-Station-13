@@ -307,7 +307,7 @@
 		/datum/job/fiscal = /obj/item/organ/internal/cyberimp/brain/anti_drop,
 		// ARK STATION ADDITION END
 		// /datum/job/engineering_guard = /obj/item/organ/internal/cyberimp/arm/flash, // ARK STATION REMOVE
-		// /datum/job/telecomms_specialist = /obj/item/organ/internal/ears/cybernetic/xray, // ARK STATION REMOVE
+		/datum/job/telecomms_specialist = /obj/item/organ/internal/ears/cybernetic/xray,
 		// NOVA EDIT END
 	)
 
