@@ -86,20 +86,24 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_CARGO
 
-/datum/techweb_node/integrated_hud
-	id = "integrated_HUDs"
+/datum/techweb_node/hud
+	id = TECHWEB_NODE_HUD
 	display_name = "Integrated HUDs"
-	description = "The usefulness of computerized records, projected straight onto your eyepiece!"
-	prereq_ids = list("comp_recordkeeping", "emp_basic")
+	description = "Initially developed for assistants to learn the nuances of different professions through augmented reality."
+	prereq_ids = list(TECHWEB_NODE_HOLOGRAPHICS, TECHWEB_NODE_CYBER_IMPLANTS)
 	design_ids = list(
-		"diagnostic_hud",
 		"health_hud",
-		"scigoggles",
+		"diagnostic_hud",
 		"security_hud",
+		"mod_visor_medhud",
+		"mod_visor_diaghud",
+		"mod_visor_sechud",
+		"ci-medhud",
+		"ci-diaghud",
+		"ci-sechud",
 		"mesons_ballistic",
-
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1500)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 
 /datum/crafting_recipe/ball_hudsunmes
 	name = "Meson HUD Ballistic glasses"
