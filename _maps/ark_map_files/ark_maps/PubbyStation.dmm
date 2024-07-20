@@ -299,7 +299,8 @@
 /obj/machinery/light/directional/south,
 /obj/structure/tank_dispenser/oxygen,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "aby" = (
 /obj/structure/lattice,
@@ -852,7 +853,7 @@
 /obj/structure/closet/secure_closet/security/sec,
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "adV" = (
 /obj/machinery/camera/directional/north{
@@ -999,9 +1000,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "aeD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
@@ -1726,7 +1725,7 @@
 "ahd" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/effect/turf_decal/delivery,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ahh" = (
 /obj/structure/lattice/catwalk,
@@ -1900,14 +1899,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ahN" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ahP" = (
 /obj/machinery/newscaster/directional/north,
@@ -2025,20 +2028,23 @@
 /obj/structure/closet/l3closet/security,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light_switch/directional/south,
-/turf/open/floor/plastic,
+/obj/structure/window/reinforced/spawner/directional/west,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "aip" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/plastic,
+/obj/structure/closet/secure_closet/security/sec,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "aiq" = (
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "air" = (
 /obj/machinery/recharge_station,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ais" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -2046,7 +2052,10 @@
 	},
 /obj/structure/cable,
 /obj/machinery/firealarm/directional/west,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ait" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -2356,8 +2365,7 @@
 /area/station/security/office)
 "ajp" = (
 /obj/machinery/photocopier,
-/obj/machinery/computer/security/telescreen/entertainment{
-	},
+/obj/machinery/computer/security/telescreen/entertainment,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
 	},
@@ -3490,7 +3498,10 @@
 /area/station/security/office)
 "anf" = (
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ani" = (
 /obj/structure/chair/office{
@@ -3918,8 +3929,7 @@
 /area/station/security/warden)
 "aoS" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen/prison{
-	},
+/obj/machinery/computer/security/telescreen/prison,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "aoT" = (
@@ -4380,8 +4390,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "aqA" = (
-/obj/machinery/computer/security/telescreen/interrogation{
-	},
+/obj/machinery/computer/security/telescreen/interrogation,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 4
 	},
@@ -5779,7 +5788,7 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor";
+	name = "Monastery Monitor"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -6209,8 +6218,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Fitness Room"
 	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	},
+/obj/machinery/computer/security/telescreen/entertainment,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -7478,8 +7486,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "aBA" = (
-/obj/machinery/computer/security/telescreen/vault{
-	},
+/obj/machinery/computer/security/telescreen/vault,
 /obj/structure/table/wood,
 /obj/item/folder/blue{
 	pixel_x = -4;
@@ -7500,7 +7507,7 @@
 /obj/structure/closet/secure_closet/hop,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor";
+	name = "Monastery Monitor"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
@@ -11283,8 +11290,7 @@
 	c_tag = "Auxiliary Base Construction"
 	},
 /obj/machinery/light/directional/east,
-/obj/machinery/computer/security/telescreen/auxbase{
-	},
+/obj/machinery/computer/security/telescreen/auxbase,
 /turf/open/floor/iron,
 /area/station/construction/mining/aux_base)
 "aRH" = (
@@ -12083,8 +12089,7 @@
 /area/station/service/theater)
 "aVm" = (
 /obj/machinery/vending/autodrobe,
-/obj/machinery/computer/security/telescreen/entertainment{
-	},
+/obj/machinery/computer/security/telescreen/entertainment,
 /turf/open/floor/iron/dark,
 /area/station/service/theater)
 "aVn" = (
@@ -13087,8 +13092,7 @@
 	id = "kitchenshutters";
 	name = "Kitchen Shutters"
 	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	},
+/obj/machinery/computer/security/telescreen/entertainment,
 /obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -2;
 	pixel_y = 2
@@ -17804,7 +17808,7 @@
 "buk" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for monitoring medbay to ensure patient safety.";
-	name = "Medbay Monitor";
+	name = "Medbay Monitor"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -18784,8 +18788,7 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "byp" = (
-/obj/machinery/computer/security/telescreen/cmo{
-	},
+/obj/machinery/computer/security/telescreen/cmo,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/green/opposingcorners,
@@ -19179,7 +19182,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor";
+	name = "Monastery Monitor"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -22039,8 +22042,10 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /obj/structure/cable,
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "bNV" = (
 /obj/item/wrench/medical,
@@ -23686,8 +23691,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Chief Engineer's Office"
 	},
-/obj/machinery/computer/security/telescreen/ce{
-	},
+/obj/machinery/computer/security/telescreen/ce,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
@@ -23703,8 +23707,7 @@
 /area/station/command/heads_quarters/ce)
 "bUM" = (
 /obj/machinery/modular_computer/preset/id,
-/obj/machinery/computer/security/telescreen/entertainment{
-	},
+/obj/machinery/computer/security/telescreen/entertainment,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
 	},
@@ -23746,7 +23749,7 @@
 /obj/structure/cable,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the engine containment area.";
-	name = "Engine Monitor";
+	name = "Engine Monitor"
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
@@ -25686,7 +25689,7 @@
 "ceU" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching telecomms.";
-	name = "Telecomms Telescreen";
+	name = "Telecomms Telescreen"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27195,37 +27198,29 @@
 	},
 /obj/structure/cable,
 /obj/machinery/newscaster/directional/north,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "cnN" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/directional/north,
 /obj/machinery/airalarm/directional/north,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "cnP" = (
 /obj/machinery/vending/security,
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "cnQ" = (
 /obj/machinery/suit_storage_unit/security,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "cnT" = (
 /obj/structure/weightmachine/weightlifter,
-/turf/open/floor/plastic,
-/area/station/security/lockers)
-"cnV" = (
-/obj/structure/punching_bag,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "cnX" = (
 /obj/machinery/pdapainter/engineering,
@@ -29062,7 +29057,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "cAK" = (
 /turf/open/floor/iron/dark,
@@ -30189,8 +30184,7 @@
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/station/maintenance/department/security/brig)
 "dsP" = (
-/obj/machinery/computer/security/telescreen/prison{
-	},
+/obj/machinery/computer/security/telescreen/prison/directional/north,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "dsR" = (
@@ -30558,7 +30552,10 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "dJX" = (
 /obj/machinery/conveyor_switch{
@@ -30770,7 +30767,7 @@
 	name = "Brig Shutters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "dSx" = (
 /obj/machinery/conveyor{
@@ -31060,7 +31057,7 @@
 	req_access = list("security")
 	},
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "edl" = (
 /obj/structure/disposalpipe/segment{
@@ -31205,7 +31202,7 @@
 	pixel_x = 1;
 	pixel_y = 3
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "ekm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -31226,7 +31223,7 @@
 "ekt" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "ekU" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -32302,7 +32299,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "fcQ" = (
 /obj/machinery/door/firedoor,
@@ -33295,8 +33293,8 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "fRl" = (
 /obj/item/bedsheet,
@@ -34658,8 +34656,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos/office)
 "gWo" = (
-/obj/machinery/computer/security/telescreen/ordnance{
-	},
+/obj/machinery/computer/security/telescreen/ordnance,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -34942,7 +34939,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "hkF" = (
 /obj/structure/table/wood/fancy/green,
@@ -35018,7 +35015,7 @@
 "hnV" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the turbine vent.";
-	name = "turbine vent monitor";
+	name = "turbine vent monitor"
 	},
 /obj/structure/closet/radiation,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -35134,8 +35131,11 @@
 /turf/open/floor/grass,
 /area/station/hallway/primary/central/aft)
 "hvz" = (
-/turf/open/floor/plastic,
-/area/station/security/mechbay)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
+/area/station/security/lockers)
 "hvF" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot,
@@ -37303,7 +37303,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "jtf" = (
 /obj/effect/turf_decal/tile/green/anticorner/contrasted,
@@ -37428,7 +37428,7 @@
 	name = "Security Office Fax Machine"
 	},
 /obj/structure/table,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "jzX" = (
 /obj/machinery/door/airlock/maintenance,
@@ -38093,10 +38093,10 @@
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/ai_sat_ext_ap)
 "kcI" = (
-/obj/machinery/door/window/brigdoor/left/directional/east{
-	req_access = list("armory")
-	},
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/delivery,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/closet/bombcloset/security,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "kcS" = (
 /obj/structure/disposalpipe/segment,
@@ -39601,7 +39601,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "llS" = (
 /obj/structure/water_source/puddle,
@@ -39899,7 +39899,8 @@
 /obj/vehicle/ridden/secway,
 /obj/item/key/security,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "lwT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -41621,7 +41622,10 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "mWV" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -41710,7 +41714,7 @@
 /obj/machinery/door/airlock/multi_tile/metal{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "naX" = (
 /obj/structure/cable,
@@ -41765,7 +41769,7 @@
 "ndq" = (
 /obj/structure/rack,
 /obj/item/weldingtool,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "ndt" = (
 /obj/structure/chair{
@@ -42508,7 +42512,7 @@
 /area/station/maintenance/department/engine)
 "nIm" = (
 /obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor";
+	name = "Test Chamber Monitor"
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/iron,
@@ -43159,7 +43163,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "oko" = (
 /obj/machinery/atmospherics/components/binary/pump{
@@ -43719,8 +43723,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/lawyer,
-/obj/machinery/computer/security/telescreen/prison{
-	},
+/obj/machinery/computer/security/telescreen/prison,
 /turf/open/floor/carpet,
 /area/station/service/lawoffice)
 "oCP" = (
@@ -44296,7 +44299,7 @@
 "oWx" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/landmark/secequipment,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "oWL" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -50516,7 +50519,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "tCP" = (
 /obj/docking_port/stationary/public_mining_dock,
@@ -51024,7 +51027,7 @@
 /obj/structure/cable,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the engine containment area.";
-	name = "Engine Monitor";
+	name = "Engine Monitor"
 	},
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -51141,7 +51144,7 @@
 "uep" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "ueu" = (
 /obj/structure/table,
@@ -52719,8 +52722,7 @@
 /turf/open/floor/iron/freezer,
 /area/station/medical/virology)
 "vnA" = (
-/obj/structure/closet/secure_closet/security/sec,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "vnJ" = (
 /obj/machinery/airalarm/directional/north,
@@ -53096,7 +53098,7 @@
 /obj/item/stack/cable_coil,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "vFs" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -54200,7 +54202,7 @@
 	id = "Equipment Room";
 	name = "Space Shutters Control"
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "wtZ" = (
 /obj/structure/cable,
@@ -54628,7 +54630,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "wIX" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -55266,8 +55268,7 @@
 /area/station/science/xenobiology)
 "xdL" = (
 /obj/structure/table/glass,
-/obj/machinery/computer/security/telescreen/rd{
-	},
+/obj/machinery/computer/security/telescreen/rd,
 /obj/item/stamp/head/rd{
 	pixel_x = -8;
 	pixel_y = 14
@@ -55291,8 +55292,8 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "xdS" = (
-/obj/structure/closet/bombcloset/security,
-/turf/open/floor/plastic,
+/obj/structure/punching_bag,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "xdY" = (
 /obj/machinery/door/window/right/directional/east{
@@ -55525,7 +55526,7 @@
 "xjU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /obj/structure/cable,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "xjZ" = (
 /obj/effect/landmark/start/hangover,
@@ -55917,7 +55918,7 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "xxk" = (
 /obj/structure/extinguisher_cabinet/directional/north,
@@ -55965,7 +55966,7 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/west,
-/turf/open/floor/plastic,
+/turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "xxO" = (
 /obj/machinery/door/poddoor/preopen{
@@ -80900,7 +80901,7 @@ cnJ
 ais
 xxK
 ahM
-ahM
+aeB
 xwX
 ajk
 adK
@@ -81668,7 +81669,7 @@ aby
 aaa
 aKw
 ahd
-aeB
+bNU
 xdS
 aiq
 oWx
@@ -81925,7 +81926,7 @@ aby
 abI
 dAa
 cnN
-aeB
+bNU
 cnT
 aiq
 oWx
@@ -82183,9 +82184,9 @@ aaa
 aKw
 aip
 bNU
-kcI
+vnA
 fQN
-aip
+kcI
 kTl
 ajp
 ajY
@@ -82439,9 +82440,9 @@ aby
 aaa
 aKw
 cnP
-aeB
+bNU
 lkX
-xjU
+hvz
 xjU
 cTC
 ajq
@@ -82697,7 +82698,7 @@ aaa
 aKw
 cnQ
 ahN
-cnV
+tCJ
 aiq
 ekt
 kTl
@@ -84239,7 +84240,7 @@ aaa
 vRp
 sPh
 uep
-hvz
+ajy
 ejL
 vRp
 abI
