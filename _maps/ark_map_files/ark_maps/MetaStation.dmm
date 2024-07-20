@@ -4368,8 +4368,9 @@
 /area/station/medical/medbay/central)
 "bxr" = (
 /obj/structure/sign/warning/electric_shock/directional/east,
+/obj/structure/lattice,
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "bxE" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Chemistry South";
@@ -7981,7 +7982,7 @@
 	use_power = 0
 	},
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "cTl" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/syringe,
@@ -15808,9 +15809,13 @@
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server)
 "fIR" = (
-/obj/structure/sign/warning/secure_area/directional/north,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk,
+/obj/structure/sign/warning/electric_shock/directional/east,
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "fIS" = (
 /obj/machinery/airalarm/directional/south,
 /obj/structure/disposalpipe/segment{
@@ -16781,12 +16786,6 @@
 	},
 /turf/open/floor/grass,
 /area/station/science/research)
-"gda" = (
-/obj/structure/sign/nanotrasen{
-	pixel_x = 32
-	},
-/turf/open/space/basic,
-/area/space)
 "gdb" = (
 /turf/closed/wall/r_wall,
 /area/station/security/range)
@@ -18271,12 +18270,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/station/service/chapel/funeral)
-"gFb" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
 "gFd" = (
 /obj/machinery/power/terminal,
 /obj/machinery/light/small/directional/east,
@@ -25252,10 +25245,6 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
-"iYe" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "iYA" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -29508,10 +29497,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload_foyer)
-"ktw" = (
-/obj/structure/sign/warning/electric_shock/directional/north,
-/turf/open/space/basic,
-/area/space)
 "ktz" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -39061,7 +39046,7 @@
 "nLZ" = (
 /obj/item/toy/beach_ball/branded,
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "nMf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -39604,11 +39589,15 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "nWF" = (
-/obj/structure/railing{
-	dir = 8
+/obj/structure/lattice,
+/obj/machinery/camera/directional/west{
+	active_power_usage = 0;
+	c_tag = "Turbine Vent";
+	network = list("turbine");
+	use_power = 0
 	},
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "nWS" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/space,
@@ -46514,11 +46503,6 @@
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/command)
-"qwZ" = (
-/obj/effect/spawner/random/structure/grille,
-/obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
 "qxh" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
@@ -58461,14 +58445,11 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "uzl" = (
-/obj/machinery/camera/directional/west{
-	active_power_usage = 0;
-	c_tag = "Turbine Vent";
-	network = list("turbine");
-	use_power = 0
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "uzJ" = (
 /obj/effect/turf_decal/trimline/green/filled/warning{
 	dir = 4
@@ -67012,7 +66993,7 @@
 "xtw" = (
 /obj/item/stack/rods,
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "xtz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -79998,10 +79979,10 @@ lMJ
 aaa
 aaa
 aaa
-mWd
+uzl
 aaa
 aaa
-mWd
+uzl
 aaa
 aaa
 aaa
@@ -83157,10 +83138,10 @@ aaa
 aaa
 aaa
 aaa
-bxr
 aaa
 aaa
-lZV
+aaa
+fIR
 aaa
 aaa
 qWg
@@ -84193,7 +84174,7 @@ qPC
 rKQ
 xjH
 xjH
-fIR
+aaa
 aaa
 aaa
 lMJ
@@ -85221,7 +85202,7 @@ rKQ
 rKQ
 xjH
 xjH
-ktw
+aaa
 aaa
 aaa
 lMJ
@@ -85892,7 +85873,7 @@ aaa
 aaa
 aaa
 aaa
-mWd
+uzl
 aaa
 aaa
 lMJ
@@ -86249,7 +86230,7 @@ rKQ
 rKQ
 xjH
 xjH
-fIR
+aaa
 aaa
 aaa
 aaa
@@ -87278,7 +87259,7 @@ gAf
 tSw
 tSw
 aaa
-gda
+aaa
 aaa
 aaa
 sGL
@@ -88056,7 +88037,7 @@ gnL
 ckz
 dWA
 ecz
-fIR
+aaa
 aaa
 lMJ
 aaa
@@ -95640,7 +95621,7 @@ aaa
 aaa
 aaa
 aaa
-nWF
+sKY
 aaa
 sIe
 gkn
@@ -101946,7 +101927,7 @@ lMJ
 lMJ
 lMJ
 lMJ
-qwZ
+mxQ
 aaa
 aUn
 aaa
@@ -102202,8 +102183,8 @@ aaa
 aaa
 aaa
 aaa
-qwZ
-iYe
+mxQ
+aUn
 aaa
 aaa
 aaa
@@ -108329,8 +108310,8 @@ lMJ
 lMJ
 lMJ
 lMJ
-lMJ
-uzl
+nWF
+aaa
 aaa
 aaa
 aaa
@@ -116519,7 +116500,7 @@ twf
 lMJ
 lMJ
 blx
-gFb
+hHO
 aaa
 aaa
 fuu
@@ -117804,7 +117785,7 @@ oAQ
 lMJ
 lMJ
 blx
-gFb
+hHO
 aaa
 aaa
 fuu
@@ -118832,7 +118813,7 @@ oAQ
 lMJ
 lMJ
 blx
-gFb
+hHO
 aaa
 aaa
 aaa

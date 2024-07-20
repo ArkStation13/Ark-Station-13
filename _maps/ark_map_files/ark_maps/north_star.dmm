@@ -222,7 +222,7 @@
 	dir = 8
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "acq" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -3418,7 +3418,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "aTU" = (
 /obj/effect/turf_decal/trimline/purple/line,
 /obj/effect/turf_decal/trimline/purple/line{
@@ -7207,11 +7207,8 @@
 /turf/open/floor/engine/hull,
 /area/space/nearstation)
 "bOk" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 4
-	},
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "bOq" = (
 /obj/machinery/door/airlock/maintenance/external,
 /obj/effect/turf_decal/stripes/line{
@@ -12547,7 +12544,7 @@
 	dir = 4
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "djd" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -12650,7 +12647,7 @@
 	dir = 4
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "dks" = (
 /obj/structure/girder,
 /obj/item/stack/sheet/iron,
@@ -20983,8 +20980,11 @@
 /turf/open/floor/iron/white/small,
 /area/station/medical/chemistry)
 "fCp" = (
-/turf/open/floor/plating/airless,
-/area/space)
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/space/openspace,
+/area/space/nearstation)
 "fCq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/landmark/generic_maintenance_landmark,
@@ -45746,6 +45746,12 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/floor1/port)
+"lXa" = (
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/space/openspace,
+/area/space/nearstation)
 "lXb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/sign/gym/mirrored{
@@ -49184,6 +49190,9 @@
 /obj/structure/sink/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/commons/dorms/apartment2)
+"mPf" = (
+/turf/open/space/openspace,
+/area/space/nearstation)
 "mPs" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 5
@@ -60481,7 +60490,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "pNW" = (
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 1
@@ -64645,7 +64654,7 @@
 	dir = 8
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "qRW" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
@@ -71427,7 +71436,7 @@
 	c_tag = "Minisat - Aft"
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "sLe" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
@@ -73434,7 +73443,7 @@
 "tlJ" = (
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "tlK" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -77075,7 +77084,7 @@
 "ujI" = (
 /obj/structure/railing,
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "ujQ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -89143,7 +89152,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "xlu" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
@@ -91003,7 +91012,7 @@
 "xKt" = (
 /obj/structure/railing/corner,
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "xKy" = (
 /obj/machinery/modular_computer/preset/id{
 	dir = 8
@@ -141854,7 +141863,7 @@ mjv
 tZD
 oIy
 owI
-bOk
+jkM
 owI
 cHX
 owI
@@ -141864,7 +141873,7 @@ biH
 owI
 cHX
 owI
-bOk
+jkM
 owI
 dEc
 xMY
@@ -142369,7 +142378,7 @@ gxT
 fmg
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 caC
@@ -142377,7 +142386,7 @@ wqD
 mdr
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 oyh
@@ -142626,7 +142635,7 @@ teq
 teq
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 caC
@@ -142634,7 +142643,7 @@ wqD
 mdr
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 oyh
@@ -143397,7 +143406,7 @@ sKt
 teq
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 caC
@@ -143405,7 +143414,7 @@ wqD
 mdr
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 oyh
@@ -143654,7 +143663,7 @@ xqr
 gIz
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 caC
@@ -143662,7 +143671,7 @@ wqD
 mdr
 owI
 jkM
-bOk
+jkM
 jkM
 owI
 oyh
@@ -145685,15 +145694,15 @@ owI
 owI
 owI
 aTO
-fCp
+rcO
 pNV
 aTO
-fCp
-fCp
+rcO
+rcO
 xln
 aTO
-fCp
-fCp
+rcO
+rcO
 xln
 teq
 teq
@@ -145734,15 +145743,15 @@ iSU
 iSU
 iSU
 iSU
-fCp
-fCp
-xln
-aTO
-fCp
-fCp
+rcO
+rcO
 xln
 aTO
-fCp
+rcO
+rcO
+xln
+aTO
+rcO
 pNV
 aTO
 owI
@@ -145942,18 +145951,16 @@ owI
 owI
 owI
 owI
-fCp
-fCp
+rcO
+rcO
 owI
-fCp
-fCp
-fCp
+rcO
+rcO
+rcO
 owI
-fCp
-fCp
-fCp
-owI
-owI
+rcO
+rcO
+rcO
 owI
 owI
 owI
@@ -145991,16 +145998,18 @@ owI
 owI
 owI
 owI
-fCp
-fCp
-fCp
 owI
-fCp
-fCp
-fCp
 owI
-fCp
-fCp
+rcO
+rcO
+rcO
+owI
+rcO
+rcO
+rcO
+owI
+rcO
+rcO
 owI
 owI
 owI
@@ -146202,6 +146211,13 @@ owI
 owI
 owI
 owI
+bOk
+bOk
+bOk
+owI
+bOk
+bOk
+bOk
 owI
 owI
 owI
@@ -146241,20 +146257,13 @@ owI
 owI
 owI
 owI
+bOk
+bOk
+bOk
 owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
-owI
+bOk
+bOk
+bOk
 owI
 owI
 owI
@@ -243605,7 +243614,7 @@ ucA
 ucA
 ucA
 ucA
-ucA
+mPf
 cvD
 cXm
 pRs
@@ -274991,7 +275000,7 @@ ujI
 edA
 pRs
 pRs
-wbT
+fCp
 ucA
 ucA
 ucA
@@ -275248,7 +275257,7 @@ ujI
 pRs
 pRs
 pRs
-wbT
+fCp
 ucA
 ucA
 ucA
@@ -275505,7 +275514,7 @@ qRS
 acl
 pRs
 acl
-xUk
+lXa
 ucA
 ucA
 ucA
@@ -340527,7 +340536,7 @@ ujI
 edA
 pRs
 pRs
-wbT
+fCp
 ucA
 ucA
 ucA
@@ -340783,8 +340792,8 @@ ucA
 ujI
 pRs
 pRs
-ucA
-ucA
+mPf
+mPf
 ucA
 ucA
 ucA
@@ -341037,11 +341046,11 @@ ucA
 ucA
 ucA
 ucA
-ucA
-ucA
-ucA
-ucA
-ucA
+mPf
+mPf
+mPf
+mPf
+mPf
 ucA
 ucA
 ucA
