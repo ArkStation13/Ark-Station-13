@@ -289,6 +289,7 @@
 	var/original_name
 
 /datum/mutation/human/race/on_acquiring(mob/living/carbon/human/owner)
+<<<<<<< HEAD
 	if(..())
 		return
 	if(!ismonkey(owner))
@@ -301,6 +302,28 @@
 	if(!QDELETED(owner) && owner.stat != DEAD && (owner.dna.mutations.Remove(src)) && ismonkey(owner))
 		owner.fully_replace_character_name(null, original_name)
 		. = owner.humanize(original_species)
+=======
+	. = ..()
+	if(.)
+		return
+	if(ismonkey(owner))
+		return
+	original_species = owner.dna.species.type
+	original_name = owner.real_name
+	owner.monkeyize()
+
+/datum/mutation/human/race/on_losing(mob/living/carbon/human/owner)
+	if(owner.stat == DEAD)
+		return
+	. = ..()
+	if(.)
+		return
+	if(QDELETED(owner))
+		return
+
+	owner.fully_replace_character_name(null, original_name)
+	owner.humanize(original_species)
+>>>>>>> c4c283a1f782... [MIRROR] Monkification Fixes Fixes [MDB IGNORE] (#3893)
 
 /datum/mutation/human/glow
 	name = "Glowy"
