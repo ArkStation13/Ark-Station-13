@@ -32,6 +32,11 @@
 	human.dna.species.mutant_bodyparts = human.dna.mutant_bodyparts.Copy()
 	human.dna.species.body_markings = human.dna.body_markings.Copy()
 	// NOVA EDIT ADDITION END
+	// ARK STATION EDIT ADDITION START
+	human.set_blooper(pick(GLOB.blooper_random_list))
+	human.blooper_pitch = BLOOPER_PITCH_RAND(human.gender)
+	human.blooper_pitch_range = BLOOPER_VARIANCE_RAND
+	// ARK STATION EDIT ADDITION END
 	// Snowflake for Ethereals
 	human.updatehealth()
 	human.updateappearance(mutcolor_update = TRUE)
