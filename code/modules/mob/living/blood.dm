@@ -24,6 +24,7 @@
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR * seconds_per_tick)
 			blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
+
 			// ARK STATION ADDITION START
 			var/thirst_ratio = 0
 			if(!HAS_TRAIT(src, TRAIT_NOTHIRST))

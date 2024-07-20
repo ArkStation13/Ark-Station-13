@@ -1,10 +1,3 @@
-
-//////////////////////////////////////////////
-//                                          //
-//          LATEJOIN BLOODSUCKER            //
-//                                          //
-//////////////////////////////////////////////
-
 /datum/dynamic_ruleset/latejoin/bloodsucker
 	name = "Bloodsucker Breakout"
 	antag_datum = /datum/antagonist/bloodsucker

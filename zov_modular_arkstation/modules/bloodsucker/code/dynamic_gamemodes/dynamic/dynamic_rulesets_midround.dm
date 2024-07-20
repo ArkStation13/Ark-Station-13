@@ -1,10 +1,3 @@
-
-//////////////////////////////////////////////
-//                                          //
-//          MIDROUND BLOODSUCKER            //
-//                                          //
-//////////////////////////////////////////////
-
 /datum/dynamic_ruleset/midround/bloodsucker
 	name = "Vampiric Accident"
 	midround_ruleset_style = MIDROUND_RULESET_STYLE_HEAVY
