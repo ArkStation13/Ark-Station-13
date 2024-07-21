@@ -10,7 +10,7 @@
 /mob/living/simple_animal/bot
 	icon = 'zov_modular_arkstation/modules/new-ai-bots/ai-bots.dmi'
 
-/mob/living/simple_animal/bot/firebot
+/mob/living/basic/bot/firebot
 	icon = 'zov_modular_arkstation/modules/new-ai-bots/ai-bots.dmi'
 
 /mob/living/simple_animal/bot/floorbot

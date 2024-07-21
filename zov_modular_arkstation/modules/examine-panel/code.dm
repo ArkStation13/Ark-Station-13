@@ -141,8 +141,8 @@
 
 //
 
-GLOBAL_DATUM(character_directory, /datum/character_directory)
-#define READ_PREFS(target, pref) (target.client.prefs.read_preference(/datum/preference/pref) || "Unset")
+// GLOBAL_DATUM(character_directory, /datum/character_directory)
+// #define READ_PREFS(target, pref) (target.client.prefs.read_preference(/datum/preference/pref) || "Unset")
 
 //We want players to be able to decide whether they show up in the directory or not
 /datum/preference/toggle/show_in_directory
@@ -295,28 +295,27 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 //CHARACTER DIRECTORY CODE START
 //Add a cooldown for the character directory to the client, primarily to stop server lag from refresh spam
-/client
-	COOLDOWN_DECLARE(char_directory_cooldown)
+// /client
+// 	COOLDOWN_DECLARE(char_directory_cooldown)
 
-//Make a verb to open the character directory
-/client/verb/show_character_directory()
-	set name = "Character Directory"
-	set category = "OOC"
-	set desc = "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more."
+// //Make a verb to open the character directory
+// /client/verb/show_character_directory()
+// 	set name = "Character Directory"
+// 	set category = "OOC"
+// 	set desc = "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more."
 
 	// This is primarily to stop malicious users from trying to lag the server by spamming this verb
-	if(!COOLDOWN_FINISHED(src, char_directory_cooldown))
-		to_chat(src, span_alert("Hold your horses! It's still refreshing!"))
-		return
-	COOLDOWN_START(src, char_directory_cooldown, 10)
+// 	if(!COOLDOWN_FINISHED(src, char_directory_cooldown))
+// 		to_chat(src, span_alert("Hold your horses! It's still refreshing!"))
+// 		return
+// 	COOLDOWN_START(src, char_directory_cooldown, 10)
 
-//Check if there's not already a character directory open; open a new one if one is not present
-	if(!GLOB.character_directory)
-		GLOB.character_directory = new
-	GLOB.character_directory.ui_interact(mob)
+// //Check if there's not already a character directory open; open a new one if one is not present
+// 	if(!GLOB.character_directory)
+// 		GLOB.character_directory = new
+// 	GLOB.character_directory.ui_interact(mob)
 
 // This is a global singleton. Keep in mind that all operations should occur on user, not src.
-/datum/character_directory
 
 /datum/character_directory/ui_state(mob/user)
 	return GLOB.always_state
@@ -473,11 +472,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			var/mob/living/carbon/target = (locate(ref) in GLOB.mob_list)
 			if(issilicon(target))
 				var/mob/living/silicon/robot/typed_target = target
-				panel = typed_target.examine_panel
+				panel = typed_target.modularInterface
 				panel.holder = typed_target
 			else
 				var/mob/living/carbon/human/typed_target = target
-				panel = typed_target.tgui
+				panel = typed_target.mob_examine_panel
 				panel.holder = typed_target
 			panel.ui_interact(user)
 

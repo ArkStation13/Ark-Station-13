@@ -10,26 +10,22 @@
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 // ARK STATION EDIT END
 
-/datum/techweb_node/adv_biotech
-	id = "adv_biotech"
-	display_name = "Advanced Biotechnology"
-	description = "Advanced Biotechnology"
-	prereq_ids = list("biotech")
+/datum/techweb_node/medbay_equip_adv
+	id = TECHWEB_NODE_MEDBAY_EQUIP_ADV
+	display_name = "Advanced Medbay Equipment"
+	description = "State-of-the-art medical gear for keeping the crew in one piece — mostly."
+	prereq_ids = list(TECHWEB_NODE_CHEM_SYNTHESIS)
 	design_ids = list(
-		"autopsyscanner",
+		"smoke_machine",
+		"chem_mass_spec",
+		"healthanalyzer_advanced",
+		"mod_health_analyzer",
 		"crewpinpointer",
 		"defibrillator_compact",
-		"harvester",
-		"healthanalyzer_advanced",
-		"holobarrier_med",
-		"limbgrower",
-		"meta_beaker",
-		"ph_meter",
+		"defibmount",
+		"medicalbed_emergency",
 		"piercesyringe",
-		"plasmarefiller",
-		"smoke_machine",
-		"sleeper" // ARK STATION EDIT
+		"sleeper",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-	required_experiments = list(/datum/experiment/autopsy/nonhuman)
-	discount_experiments = list(/datum/experiment/scanning/random/material/meat = 4000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	required_experiments = list(/datum/experiment/scanning/reagent/haloperidol)
