@@ -948,6 +948,7 @@
 	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 	visor_flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 	clothing_flags = VOICEBOX_DISABLED | MASKINTERNALS | BLOCK_GAS_SMOKE_EFFECT | GAS_FILTERING
+	interaction_flags_click = NEED_DEXTERITY
 	/// Whether or not the mask is currently being layered over (or under!) hair. FALSE/null means the mask is layered over the hair (this is how it starts off).
 	var/wear_hair_over
 
@@ -971,12 +972,8 @@
 	if(wear_hair_over)
 		alternate_worn_layer = BACK_LAYER
 
-/obj/item/clothing/mask/gas/psycho_malice/alt_click_secondary(mob/user)
-	. = ..()
-	if(.)
-		return
-	if(user.can_perform_action(src, NEED_DEXTERITY))
-		adjust_mask(user)
+/obj/item/clothing/mask/gas/psycho_malice/click_alt_secondary(mob/user)
+	adjust_mask(user)
 
 //this moves the mask above or below the hair layer
 /obj/item/clothing/mask/gas/psycho_malice/proc/adjust_mask(mob/living/carbon/human/user)
@@ -1654,7 +1651,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	icon_state = "razurath_coat"
 
 // Donation reward for MaSvedish
-/obj/item/clothing/mask/holocigarette/masvedishcigar
+/obj/item/holocigarette/masvedishcigar
 	name = "holocigar"
 	desc = "A soft buzzing device that, using holodeck technology, replicates a slow burn cigar. Now with less-shock technology. It has a small inscription of 'MG' on the golden label."
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/masks.dmi'
@@ -2098,6 +2095,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/head.dmi'
 	worn_icon_muzzled = 'modular_nova/master_files/icons/donator/mob/clothing/head_muzzled.dmi'
 	icon_state = "seva_melon"
+
+/obj/item/clothing/suit/chokha
+	name = "\improper Iseurian chokha"
+	desc = "A ceremonial woolen coat sporting a high neck and decorative gunpowder cases on the breast. The label on this one bears the Iseurian Revolutionary flag."
+	icon_state = "chokha"
+	greyscale_config = /datum/greyscale_config/chokha
+	greyscale_config_worn = /datum/greyscale_config/chokha/worn
+	greyscale_colors = "#1c1c1c#491618#1c1c1c#491618"
+	flags_1 = IS_PLAYER_COLORABLE_1
 
 //donator reward for Desminus
 

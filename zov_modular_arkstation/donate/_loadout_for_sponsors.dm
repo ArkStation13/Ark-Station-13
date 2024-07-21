@@ -1,12 +1,11 @@
-/*
-*	LOADOUT ITEM DATUMS FOR WHITELISTED CKEYS
-*/
-
-/// Whitelisted items (Moves overrided items to backpack)
-GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item/whitelisted))
+/datum/loadout_category/whitelisted
+	category_name = "Whitelisted"
+	category_ui_icon = FA_ICON_DONATE
+	type_to_generate = /datum/loadout_item/whitelisted
+	tab_order = /datum/loadout_category/pocket::tab_order + 1
 
 /datum/loadout_item/whitelisted
-	category = LOADOUT_ITEM_WHITELIST
+	abstract_type = /datum/loadout_item/whitelisted
 
 /datum/loadout_item/whitelisted/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
 	if(initial(outfit_important_for_life.r_hand) && initial(outfit_important_for_life.l_hand))

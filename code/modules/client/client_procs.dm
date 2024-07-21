@@ -547,7 +547,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, span_warning("Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you."))
 
-	update_ambience_pref()
+	update_ambience_pref(prefs.read_preference(/datum/preference/toggle/sound_ambience))
 	check_ip_intel()
 
 	//This is down here because of the browse() calls in tooltip/New()
@@ -600,26 +600,10 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(credits)
 		QDEL_LIST(credits)
 	if(holder)
-		adminGreet(1)
 		holder.owner = null
 		GLOB.admins -= src
-		if (!GLOB.admins.len && SSticker.IsRoundInProgress()) //Only report this stuff if we are currently playing.
-			var/cheesy_message = pick(
-				"I have no admins online!",\
-				"I'm all alone :(",\
-				"I'm feeling lonely :(",\
-				"I'm so lonely :(",\
-				"Why does nobody love me? :(",\
-				"I want a man :(",\
-				"Where has everyone gone?",\
-				"I need a hug :(",\
-				"Someone come hold me :(",\
-				"I need someone on me :(",\
-				"What happened? Where has everyone gone?",\
-				"Forever alone :("\
-			)
+		handle_admin_logout()
 
-			send2adminchat("Server", "[cheesy_message] (No admins online)")
 	QDEL_LIST_ASSOC_VAL(char_render_holders)
 
 	SSambience.remove_ambience_client(src)
@@ -627,8 +611,10 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	SSping.currentrun -= src
 	QDEL_NULL(view_size)
 	QDEL_NULL(void)
-	QDEL_NULL(open_loadout_ui) //NOVA EDIT ADDITION
 	QDEL_NULL(loot_panel)
+	QDEL_NULL(parallax_rock)
+	QDEL_LIST(parallax_layers_cached)
+	parallax_layers = null
 	seen_messages = null
 	Master.UpdateTickRate()
 	..() //Even though we're going to be hard deleted there are still some things that want to know the destroy is happening
@@ -1174,8 +1160,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		winset(src, "default.Shift", "is-disabled=true")
 		winset(src, "default.ShiftUp", "is-disabled=true")
 
-/client/proc/update_ambience_pref()
-	if(prefs.read_preference(/datum/preference/toggle/sound_ambience))
+/client/proc/update_ambience_pref(value)
+	if(value)
 		if(SSambience.ambience_listening_clients[src] > world.time)
 			return // If already properly set we don't want to reset the timer.
 		SSambience.ambience_listening_clients[src] = world.time + 10 SECONDS //Just wait 10 seconds before the next one aight mate? cheers.
@@ -1273,6 +1259,36 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				continue
 
 		screen -= object
+
+/// Handles any "fluff" or supplementary procedures related to an admin logout event. Should not have anything critically related cleaning up an admin's logout.
+/client/proc/handle_admin_logout()
+	adminGreet(logout = TRUE)
+	if(length(GLOB.admins) > 0 || !SSticker.IsRoundInProgress()) // We only want to report this stuff if we are currently playing.
+		return
+
+	var/list/message_to_send = list()
+	var/static/list/cheesy_messages = null
+
+	if (isnull(cheesy_messages))
+		cheesy_messages = list(
+			"Forever alone :(",
+			"I have no admins online!",
+			"I need a hug :(",
+			"I need someone on me :(",
+			"I want a man :(",
+			"I'm all alone :(",
+			"I'm feeling lonely :(",
+			"I'm so lonely :(",
+			"Someone come hold me :(",
+			"What happened? Where has everyone gone?",
+			"Where has everyone gone?",
+			"Why does nobody love me? :(",
+		)
+
+	message_to_send += pick(cheesy_messages)
+	message_to_send += "(No admins online)"
+
+	send2adminchat("Server", jointext(message_to_send, " "))
 
 #undef ADMINSWARNED_AT
 #undef CURRENT_MINUTE

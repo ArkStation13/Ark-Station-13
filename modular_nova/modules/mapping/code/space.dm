@@ -89,7 +89,6 @@
 	suffix = "blackmarket.dmm"
 	name = "Space-Ruin Shady Market"
 	description = "Whaddya buyin'?"
-	always_place = TRUE
 
 /datum/map_template/ruin/space/nova/shuttle8532
 	id = "shuttle8532"
@@ -162,6 +161,12 @@
 	suffix = "shuttlescrap.dmm"
 	name = "Space-Ruin Broken Shuttle"
 	description = "A small shuttle that clearly got clipped by something."
+
+/datum/map_template/ruin/space/nova/turretfactory
+	id = "turretfactory"
+	suffix = "turretfactory.dmm"
+	name = "Turret Factory"
+	description = "A turret factory that was forgotten. Maybe abandoned. Idk. Goodluck."
 
 /datum/map_template/ruin/space/nova/escapefromtarkon
 	id = "escapefromtarkon"

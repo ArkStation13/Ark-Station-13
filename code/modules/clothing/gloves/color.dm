@@ -24,35 +24,44 @@
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
 			RESKIN_WORN_ICON_STATE = "peacekeeper"
 		),
-		"Black Variant" = list(
+		"Black Variant" = list( // ARK STATION ADDITION
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
 			RESKIN_ICON_STATE = "gloves_black",
 			RESKIN_WORN_ICON_STATE = "gloves_black"
 		),
-		"Blue Variant" = list(
+		"Blue Variant" = list( // ARK STATION ADDITION
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
 			RESKIN_ICON_STATE = "gloves_blue",
 			RESKIN_WORN_ICON_STATE = "gloves_blue"
 		),
-		"White Variant" = list(
+		"White Variant" = list( // ARK STATION ADDITION
 			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
 			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
 			RESKIN_ICON_STATE = "gloves_white",
 			RESKIN_WORN_ICON_STATE = "gloves_white"
 		)
 	)
-	clothing_traits = list(TRAIT_FAST_CUFFING)
+	// NOVA EDIT ADDITION END
 
 /obj/item/clothing/gloves/color/black/Initialize(mapload)
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/radiogloves)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
+
+/obj/item/clothing/gloves/color/black/security
+	name = "security gloves"
+	desc = "These security gloves come with microchips that help the user quickly restrain suspects."
+	icon_state = "sec"
+	clothing_traits = list(TRAIT_FAST_CUFFING)
+
+/obj/item/clothing/gloves/color/black/security/blu
+	icon_state = "sec_blu"
 
 /obj/item/clothing/gloves/fingerless
 	name = "fingerless gloves"
@@ -71,8 +80,8 @@
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/gripperoffbrand)
 
-	AddComponent(
-		/datum/component/slapcrafting,\
+	AddElement(
+		/datum/element/slapcrafting,\
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
