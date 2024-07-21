@@ -24,8 +24,6 @@
 	desc = "A new development from DeForest Medical, this hypospray takes 50-unit vials as the drug supply for easy swapping."
 	w_class = WEIGHT_CLASS_TINY
 	var/list/allowed_containers = list(/obj/item/reagent_containers/cup/vial/small)
-	/// Is the hypospray only able to use small vials. Relates to the loaded overlays
-	var/small_only = TRUE
 	/// The presently-inserted vial.
 	var/obj/item/reagent_containers/cup/vial/vial
 	/// If the Hypospray starts with a vial, which vial does it start with?
@@ -53,7 +51,20 @@
 	icon_state = "bighypo2"
 	gags_bodystate = "hypo2_deluxe"
 	desc = "The deluxe variant in the DeForest Hypospray Mk. II series, able to take both 100u and 50u vials."
-	small_only = FALSE
+
+/obj/item/hypospray/mkii/piercing
+	name = "hypospray Mk.II advanced"
+	icon_state = "piercinghypo2"
+	gags_bodystate = "hypo2_piercing"
+	desc = "The advanced variant in the DeForest Hypospray Mk. II series, able to pierce through thick armor and quickly inject the chemicals."
+	inject_wait = DELUXE_WAIT_INJECT
+	spray_wait = DELUXE_WAIT_SPRAY
+	spray_self = DELUXE_SELF_INJECT
+	inject_self = DELUXE_SELF_SPRAY
+	penetrates = INJECT_CHECK_PENETRATE_THICK
+
+/obj/item/hypospray/mkii/piercing/atropine
+	start_vial = /obj/item/reagent_containers/cup/vial/small/atropine
 
 /obj/item/hypospray/mkii/piercing
 	name = "hypospray Mk.II advanced"
@@ -126,7 +137,7 @@
 		return
 	if(vial.reagents.total_volume)
 		var/vial_spritetype = "chem-color"
-		if(!small_only)
+		if(istype(vial, /obj/item/reagent_containers/cup/vial/large))
 			vial_spritetype += "[vial.type_suffix]"
 		else
 			vial_spritetype += "-s"
