@@ -451,8 +451,6 @@
 			"products" = list(
 				/obj/item/clothing/under/syndicate/tacticool = 2,
 				/obj/item/clothing/under/syndicate/tacticool/skirt = 2,
-				/obj/item/clothing/under/syndicate/tacticool/black = 2,
-				/obj/item/clothing/suit/furcoat = 2,
 				/obj/item/clothing/mask/gas/nightlight = 2,
 				/obj/item/clothing/mask/gas/nightlight/fir22 = 1,
 				/obj/item/clothing/head/caligram_cap = 3,
@@ -483,7 +481,6 @@
 			"products" = list(
 				/obj/item/clothing/under/syndicate/tacticool = 2,
 				/obj/item/clothing/under/syndicate/tacticool/skirt = 2,
-				/obj/item/clothing/under/syndicate/tacticool/black = 2,
 				/obj/item/clothing/under/syndicate = 2,
 				/obj/item/clothing/under/syndicate/skirt = 2,
 				/obj/item/clothing/under/syndicate/inteq = 2,
