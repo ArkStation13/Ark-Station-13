@@ -72,7 +72,7 @@
 	else
 		cut_overlays()
 
-/obj/item/clothing/under/alt_click_secondary(mob/user)
+/obj/item/clothing/under/click_alt_secondary(mob/user)
 	. = ..()
 	if(!attached_crop)
 		return

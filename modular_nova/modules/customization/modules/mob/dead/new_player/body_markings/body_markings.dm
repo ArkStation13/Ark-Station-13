@@ -120,6 +120,12 @@
 	icon_state = "ears"
 	affected_bodyparts = HEAD
 
+/datum/body_marking/other/insect_antennae
+	name = "Insect Antennae"
+	icon_state = "insect_antennae"
+	default_color = "#CCCCCC"
+	affected_bodyparts = HEAD
+
 /datum/body_marking/other/eyeliner
 	name = "Eyeliner"
 	icon_state = "eyeliner"

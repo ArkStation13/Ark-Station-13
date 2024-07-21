@@ -134,6 +134,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		JOB_ATMOSPHERIC_TECHNICIAN = 42,
 		JOB_MECHANIC = 43, // ARK STATION ADDITION
 		// JOB_ENGINEERING_GUARD = 43, // NOVA EDIT ADDITION // ARK STATION DELETE
+		JOB_TELECOMMS_SPECIALIST = 44, // NOVA EDIT ADDITION
 		// 50-59: Cargo
 		JOB_QUARTERMASTER = 50,
 		JOB_SHAFT_MINER = 51,
@@ -184,7 +185,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 /datum/crewmonitor/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, "CrewConsoleNova")
+		ui = new(user, src, "CrewConsoleNova") // NOVA EDIT CHANGE - ORIGINAL: ui = new(user, src, "CrewConsole")
 		ui.open()
 
 /datum/crewmonitor/proc/show(mob/M, source)

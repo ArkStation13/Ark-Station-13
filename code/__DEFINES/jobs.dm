@@ -63,30 +63,31 @@
 #define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
 #define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
 #define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
-// #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION
+// #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
-// #define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION
+#define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // NOVA EDIT ADDITION
+// #define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Medical
 #define JOB_CORONER "Coroner"
 #define JOB_MEDICAL_DOCTOR "Medical Doctor"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist"
-// #define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION
+// #define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
 #define JOB_GENETICIST "Geneticist"
-//#define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION
+//#define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Shaft Miner"
 #define JOB_BITRUNNER "Bitrunner"
-// #define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION
+// #define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Service
 #define JOB_BARTENDER "Bartender"
 #define JOB_BOTANIST "Botanist"
@@ -197,6 +198,7 @@
 #define JOB_DISPLAY_ORDER_ENGINEER_GUARD 48 //NOVA EDIT ADDITION
 #define JOB_DISPLAY_ORDER_CUSTOMS_AGENT 49 //NOVA EDIT ADDITION
 #define JOB_DISPLAY_ORDER_EXP_CORPS 50 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_TELECOMMS_SPECIALIST 51 //NOVA EDIT ADDITION
 
 #define JOB_DISPLAY_ORDER_STOWAWAY 51 // ARK STATION EDIT ADDITION
 #define JOB_DISPLAY_ORDER_MECHANIC 52 // ARK STATION EDIT ADDITION

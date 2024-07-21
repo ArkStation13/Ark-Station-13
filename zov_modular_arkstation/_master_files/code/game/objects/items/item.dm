@@ -207,9 +207,9 @@
 // 	desc = "Пачка сигарет от известной ЧВК."
 // 	icon = 'zov_modular_arkstation/_master_files/icons/obj/inteq_cigarettes.dmi'
 // 	icon_state = "inteq"
-// 	spawn_type = /obj/item/clothing/mask/cigarette/inteq
+// 	spawn_type = /obj/item/cigarette/inteq
 
-// /obj/item/clothing/mask/cigarette/inteq
+// /obj/item/cigarette/inteq
 // 	desc = "Сигарета от известной ЧВК."
 // 	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/medicine/omnizine = 15)
 
