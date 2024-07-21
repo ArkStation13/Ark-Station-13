@@ -35,31 +35,15 @@
 		return
 	. += span_notice("It is currently maintaining <b>[signs.len]/[max_signs]</b> projections.")
 
-<<<<<<< HEAD
-/obj/item/holosign_creator/afterattack(atom/target, mob/user, proximity_flag)
-	. = ..()
-	if(!proximity_flag)
-		return
-	. |= AFTERATTACK_PROCESSED_ITEM
-	if(!check_allowed_items(target, not_inside = TRUE))
-		return .
-	var/turf/target_turf = get_turf(target)
-=======
 /obj/item/holosign_creator/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!check_allowed_items(interacting_with, not_inside = TRUE))
 		return NONE
 
 	var/turf/target_turf = get_turf(interacting_with)
->>>>>>> b88c25f8af59... [MIRROR] Holosignification [MDB IGNORE] (#3883)
 	var/obj/structure/holosign/target_holosign = locate(holosign_type) in target_turf
 
 	if(target_holosign)
-<<<<<<< HEAD
-		qdel(target_holosign)
-		return .
-=======
 		return ITEM_INTERACT_BLOCKING
->>>>>>> b88c25f8af59... [MIRROR] Holosignification [MDB IGNORE] (#3883)
 	if(target_turf.is_blocked_turf(TRUE)) //can't put holograms on a tile that has dense stuff
 		return .
 	if(holocreator_busy)
@@ -67,15 +51,10 @@
 		return .
 	if(LAZYLEN(signs) >= max_signs)
 		balloon_alert(user, "max capacity!")
-<<<<<<< HEAD
-		return .
-	playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
-=======
 		return ITEM_INTERACT_BLOCKING
 
 	playsound(src, 'sound/machines/click.ogg', 20, TRUE)
 
->>>>>>> b88c25f8af59... [MIRROR] Holosignification [MDB IGNORE] (#3883)
 	if(creation_time)
 		holocreator_busy = TRUE
 		if(!do_after(user, creation_time, target = target))
@@ -85,16 +64,10 @@
 		if(LAZYLEN(signs) >= max_signs)
 			return .
 		if(target_turf.is_blocked_turf(TRUE)) //don't try to sneak dense stuff on our tile during the wait.
-<<<<<<< HEAD
-			return .
-	target_holosign = create_holosign(target, user)
-	return .
-=======
 			return ITEM_INTERACT_BLOCKING
 
 	target_holosign = create_holosign(interacting_with, user)
 	return ITEM_INTERACT_SUCCESS
->>>>>>> b88c25f8af59... [MIRROR] Holosignification [MDB IGNORE] (#3883)
 
 /obj/item/holosign_creator/attack(mob/living/carbon/human/M, mob/user)
 	return
