@@ -204,7 +204,6 @@
 /datum/loadout_item/under/jumpsuit/cargo
 	name = "Cargo Technician's Jumpsuit"
 	item_path = /obj/item/clothing/under/rank/cargo/tech
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
 
 /datum/loadout_item/under/jumpsuit/cargo/skirt
 	name = "Cargo Technician's Skirt"
@@ -226,22 +225,18 @@
 /datum/loadout_item/under/jumpsuit/utility_eng
 	name = "Engineering Utility Uniform"
 	item_path = /obj/item/clothing/under/rank/engineering/engineer/nova/utility
-	restricted_roles = list(JOB_STATION_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER)
 
 /datum/loadout_item/under/jumpsuit/utility_med
 	name = "Medical Utility Uniform"
 	item_path = /obj/item/clothing/under/rank/medical/doctor/nova/utility
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_PARAMEDIC, JOB_CHEMIST, JOB_VIROLOGIST, JOB_GENETICIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_PSYCHOLOGIST)
 
 /datum/loadout_item/under/jumpsuit/utility_sci
 	name = "Science Utility Uniform"
 	item_path = /obj/item/clothing/under/rank/rnd/scientist/nova/utility
-	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/loadout_item/under/jumpsuit/utility_cargo
 	name = "Supply Utility Uniform"
 	item_path = /obj/item/clothing/under/rank/cargo/tech/nova/utility
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_QUARTERMASTER)
 
 /datum/loadout_item/under/jumpsuit/utility_sec
 	name = "Security Utility Uniform"
