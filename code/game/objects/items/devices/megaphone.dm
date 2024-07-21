@@ -26,9 +26,6 @@
 
 /obj/item/megaphone/dropped(mob/M)
 	. = ..()
-<<<<<<< HEAD
-	UnregisterSignal(M, COMSIG_MOB_SAY)
-=======
 	UnregisterSignal(dropper, list(COMSIG_MOB_SAY, COMSIG_LIVING_TREAT_MESSAGE))
 
 /obj/item/megaphone/proc/handle_speech(mob/living/user, list/speech_args)
@@ -40,19 +37,9 @@
 	else
 		playsound(loc, 'sound/items/megaphone.ogg', 100, FALSE, TRUE)
 		speech_args[SPEECH_SPANS] |= voicespan
->>>>>>> 1d6fb75ac8b4... [MIRROR] [NO GBP] megaphone tts actually works now. [MDB IGNORE] (#3881)
 
 /obj/item/megaphone/proc/handle_speech(mob/living/carbon/user, list/speech_args)
 	SIGNAL_HANDLER
-<<<<<<< HEAD
-	if (user.get_active_held_item() == src)
-		if(spamcheck > world.time)
-			to_chat(user, span_warning("\The [src] needs to recharge!"))
-		else
-			playsound(loc, 'sound/items/megaphone.ogg', 100, FALSE, TRUE)
-			spamcheck = world.time + 50
-			speech_args[SPEECH_SPANS] |= voicespan
-=======
 	if(HAS_TRAIT(user, TRAIT_SIGN_LANG) || user.get_active_held_item() != src)
 		return
 	if(spamcheck > world.time)
@@ -64,7 +51,6 @@
 	else
 		///A sharper and louder sound with a bit of echo
 		message_args[TREAT_TTS_FILTER_ARG] += "acrusher=samples=2:level_out=6,aecho=delays=90:decays=0.3,aemphasis=type=cd,acontrast=30,crystalizer=i=5"
->>>>>>> 1d6fb75ac8b4... [MIRROR] [NO GBP] megaphone tts actually works now. [MDB IGNORE] (#3881)
 
 /obj/item/megaphone/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
