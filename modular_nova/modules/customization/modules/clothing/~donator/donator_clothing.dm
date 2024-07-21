@@ -96,8 +96,9 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	supports_variations_flags = NONE
 
-// Donation reward for Thedragmeme
+// Donation reward
 // might make it have some flavour functionality in future, a'la rewritable piece of paper - JOKES ON YOU I'M MAKING IT DRAW
+// Note from thedragmeme- The fact this can actually draw is epic, Im making this an item accessable to all donors so if an actual coder could make it print out drawings or make it save the drawings to the library that would be epic
 /obj/item/canvas/drawingtablet
 	name = "drawing tablet"
 	desc = "A portable tablet that allows you to draw. Legends say these can earn the owner a fortune in some sectors of space."
@@ -191,34 +192,6 @@
 	desc = "Clear the canvas of your drawing tablet."
 	button_icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	button_icon_state = "drawingtablet"
-
-// Donation reward for Thedragmeme
-/obj/item/clothing/suit/furcoat
-	name = "leather coat"
-	desc = "A thick, comfy looking leather coat. It's got some fluffy fur at the collar and sleeves."
-	icon = 'modular_nova/master_files/icons/donator/obj/clothing/suits.dmi'
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/suit.dmi'
-	icon_state = "furcoat"
-	inhand_icon_state = "hostrench"
-	blood_overlay_type = "coat"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	cold_protection = CHEST|GROIN|LEGS|ARMS
-	supports_variations_flags = NONE
-
-// Donation reward for Thedragmeme
-/obj/item/clothing/under/syndicate/tacticool/black
-	name = "black turtleneck"
-	desc = "Tacticool as fug. Comfy too."
-	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
-	icon_state = "black_turtleneck"
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
-	supports_variations_flags = NONE
-	armor_type = /datum/armor/clothing_under/none
-	can_adjust = FALSE //There wasnt an adjustable sprite anyways
-	has_sensor = HAS_SENSORS	//Actually has sensors, to balance the new lack of armor
-
-	uses_advanced_reskins = FALSE // ARK STATION ADDITION
-	unique_reskin = NONE // ARK STATION ADDITION
 
 /datum/armor/clothing_under/none
 
@@ -948,6 +921,7 @@
 	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 	visor_flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 	clothing_flags = VOICEBOX_DISABLED | MASKINTERNALS | BLOCK_GAS_SMOKE_EFFECT | GAS_FILTERING
+	interaction_flags_click = NEED_DEXTERITY
 	/// Whether or not the mask is currently being layered over (or under!) hair. FALSE/null means the mask is layered over the hair (this is how it starts off).
 	var/wear_hair_over
 
@@ -971,12 +945,8 @@
 	if(wear_hair_over)
 		alternate_worn_layer = BACK_LAYER
 
-/obj/item/clothing/mask/gas/psycho_malice/alt_click_secondary(mob/user)
-	. = ..()
-	if(.)
-		return
-	if(user.can_perform_action(src, NEED_DEXTERITY))
-		adjust_mask(user)
+/obj/item/clothing/mask/gas/psycho_malice/click_alt_secondary(mob/user)
+	adjust_mask(user)
 
 //this moves the mask above or below the hair layer
 /obj/item/clothing/mask/gas/psycho_malice/proc/adjust_mask(mob/living/carbon/human/user)
@@ -1567,30 +1537,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/glasses.dmi'
 	icon_state = "goldaviator"
 
-// Donation reward for Thedragmeme
-/obj/item/clothing/under/caged_dress/skirt
-	name = "Caged Purple Dress"
-	desc = "A silky purple dress with a partially exposed crinoline underneath."
-	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
-	icon_state = "caged_dress"
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
-
-// Donation reward for Thedragmeme
-/obj/item/clothing/suit/short_coat
-	name = "Short Purple Coat"
-	desc = "A short black and purple coat, mostly used for asthetics then insulating the person wearing it."
-	icon_state = "short_coat"
-	icon = 'modular_nova/master_files/icons/donator/obj/clothing/suits.dmi'
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/suit.dmi'
-
-// Donation reward for Thedragmeme
-/obj/item/clothing/neck/flower_collar
-	name = "Flower Collar"
-	desc = "A purple collar with a dainty red flower attached to the right side of the item."
-	icon = 'modular_nova/master_files/icons/donator/obj/clothing/necklaces.dmi'
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/neck.dmi'
-	icon_state = "flower_collar"
-
 // Donation reward for Sigmar Alkahest
 /obj/item/clothing/under/costume/nova/kimono/sigmar
 	name = "short-sleeved kimono"
@@ -1654,7 +1600,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	icon_state = "razurath_coat"
 
 // Donation reward for MaSvedish
-/obj/item/clothing/mask/holocigarette/masvedishcigar
+/obj/item/holocigarette/masvedishcigar
 	name = "holocigar"
 	desc = "A soft buzzing device that, using holodeck technology, replicates a slow burn cigar. Now with less-shock technology. It has a small inscription of 'MG' on the golden label."
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/masks.dmi'
@@ -2098,6 +2044,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/head.dmi'
 	worn_icon_muzzled = 'modular_nova/master_files/icons/donator/mob/clothing/head_muzzled.dmi'
 	icon_state = "seva_melon"
+
+/obj/item/clothing/suit/chokha
+	name = "\improper Iseurian chokha"
+	desc = "A ceremonial woolen coat sporting a high neck and decorative gunpowder cases on the breast. The label on this one bears the Iseurian Revolutionary flag."
+	icon_state = "chokha"
+	greyscale_config = /datum/greyscale_config/chokha
+	greyscale_config_worn = /datum/greyscale_config/chokha/worn
+	greyscale_colors = "#1c1c1c#491618#1c1c1c#491618"
+	flags_1 = IS_PLAYER_COLORABLE_1
 
 //donator reward for Desminus
 

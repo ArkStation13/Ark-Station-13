@@ -9,7 +9,7 @@
 		return NONE
 
 	var/bodypart_name = taur_mutant_bodypart[MUTANT_INDEX_NAME]
-	var/datum/sprite_accessory/taur/taur = GLOB.sprite_accessories["taur"][bodypart_name]
+	var/datum/sprite_accessory/taur/taur = SSaccessories.sprite_accessories["taur"][bodypart_name]
 	if(!taur)
 		return NONE
 
@@ -32,6 +32,10 @@
 	var/alt_taur_mode = NONE
 
 /datum/sprite_accessory/taur/is_hidden(mob/living/carbon/human/target)
+	var/obj/item/organ/external/taur_body/taur_body = target.get_organ_slot(ORGAN_SLOT_EXTERNAL_TAUR)
+	if (taur_body?.hide_self)
+		return TRUE
+
 	var/obj/item/clothing/suit/worn_suit = target.wear_suit
 	if (istype(worn_suit))
 		if((worn_suit.flags_inv & HIDETAIL) && !worn_suit.gets_cropped_on_taurs)
@@ -53,6 +57,7 @@
 		var/list/used_in_turf = list("tail")
 		if(target.owned_turf.name in used_in_turf)
 			return TRUE
+
 	return FALSE
 
 
@@ -81,6 +86,7 @@
 	icon_state = "deer"
 	taur_mode = STYLE_TAUR_HOOF
 	alt_taur_mode = STYLE_TAUR_PAW
+	organ_type = /obj/item/organ/external/taur_body/horselike/deer
 
 /datum/sprite_accessory/taur/drake
 	name = "Drake"

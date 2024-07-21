@@ -18,6 +18,7 @@
 		#include "ark_map_files\ark_maps\VoidRaptor.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\Blueshift.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\Ouroboros.dmm" // ARK STATION EDIT
+		#include "ark_map_files\ark_maps\SerenityStation.dmm" // ARK STATION EDIT
 		// NOVA EDIT END
 
 		// ARK STATION ADDITION START

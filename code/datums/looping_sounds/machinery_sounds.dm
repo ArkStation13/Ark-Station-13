@@ -79,6 +79,15 @@
 	end_sound = 'sound/machines/microwave/microwave-end.ogg'
 	volume = 90
 
+/datum/looping_sound/lathe_print
+	mid_sounds = list('sound/machines/lathe/lathe_print.ogg' = 1)
+	mid_length = 20
+	volume = 50
+	vary = TRUE
+	ignore_walls = FALSE
+	falloff_distance = 1
+	mid_length_vary = 10
+
 /datum/looping_sound/jackpot
 	mid_length = 11
 	mid_sounds = list('sound/machines/roulettejackpot.ogg' = 1)
@@ -121,7 +130,7 @@
 	mid_length = 1.8 SECONDS
 	extra_range = -2 //ARK STATION EDIT ORIGINAL 10
 	volume = 20 //ARK STATION EDIT ORIGINAL 20
-	falloff_distance = 1
+	falloff_distance = 1 // ARK STATION EDIT ORIGINAL 5
 	falloff_exponent = 20
 
 /datum/looping_sound/firealarm

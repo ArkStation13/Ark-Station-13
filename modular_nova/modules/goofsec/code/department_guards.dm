@@ -222,390 +222,396 @@
 /*
 	SCIENCE GUARD DATUMS
 */
-// /datum/job/science_guard
-// 	title = JOB_SCIENCE_GUARD
-// 	description = "Figure out why the emails aren't working, keep an eye on the eggheads, protect them from their latest mistakes."
-// 	department_head = list(JOB_RESEARCH_DIRECTOR)
-// 	faction = FACTION_STATION
-// 	total_positions = 2
-// 	spawn_positions = 2
-// 	supervisors = SUPERVISOR_RD
-// 	exp_granted_type = EXP_TYPE_CREW
-// 	config_tag = "SCIENCE_GUARD"
+/* // ARK STATION REMOVED
+/datum/job/science_guard
+	title = JOB_SCIENCE_GUARD
+	description = "Figure out why the emails aren't working, keep an eye on the eggheads, protect them from their latest mistakes."
+	department_head = list(JOB_RESEARCH_DIRECTOR)
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = SUPERVISOR_RD
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "SCIENCE_GUARD"
 
-// 	outfit = /datum/outfit/job/science_guard
-// 	plasmaman_outfit = /datum/outfit/plasmaman/science
+	outfit = /datum/outfit/job/science_guard
+	plasmaman_outfit = /datum/outfit/plasmaman/science
 
-// 	paycheck = PAYCHECK_CREW
-// 	paycheck_department = ACCOUNT_SCI
+	paycheck = PAYCHECK_CREW
+	paycheck_department = ACCOUNT_SCI
 
-// 	display_order = JOB_DISPLAY_ORDER_SCIENCE_GUARD
-// 	bounty_types = CIV_JOB_SCI
-// 	departments_list = list(
-// 		/datum/job_department/science,
-// 		)
+	display_order = JOB_DISPLAY_ORDER_SCIENCE_GUARD
+	bounty_types = CIV_JOB_SCI
+	departments_list = list(
+		/datum/job_department/science,
+		)
 
-// 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/science)
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/science)
 
-// 	mail_goodies = list(
-// 		/obj/item/food/donut/caramel = 10,
-// 		/obj/item/food/donut/matcha = 10,
-// 		/obj/item/food/donut/blumpkin = 5,
-// 		/obj/item/clothing/mask/whistle = 5,
-// 		/obj/item/melee/baton/security/boomerang/loaded = 1
-// 	)
-// 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	mail_goodies = list(
+		/obj/item/food/donut/caramel = 10,
+		/obj/item/food/donut/matcha = 10,
+		/obj/item/food/donut/blumpkin = 5,
+		/obj/item/clothing/mask/whistle = 5,
+		/obj/item/melee/baton/security/boomerang/loaded = 1
+	)
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
-// /datum/outfit/job/science_guard
-// 	name = "Science Guard"
-// 	jobtype = /datum/job/science_guard
+/datum/outfit/job/science_guard
+	name = "Science Guard"
+	jobtype = /datum/job/science_guard
 
-	// belt = /obj/item/storage/belt/security/department_guard/science
-	// ears = /obj/item/radio/headset/headset_sci
-	// uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova
-	// shoes = /obj/item/clothing/shoes/jackboots
-	// head =  /obj/item/clothing/head/helmet/blueshirt/nova
-	// suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova
-	// r_pocket = /obj/item/flashlight
-	// l_pocket = /obj/item/modular_computer/pda/science
+	belt = /obj/item/storage/belt/security/department_guard/science
+	ears = /obj/item/radio/headset/headset_sci
+	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova
+	shoes = /obj/item/clothing/shoes/jackboots
+	head =  /obj/item/clothing/head/helmet/blueshirt/nova
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/modular_computer/pda/science
 
-// 	backpack = /obj/item/storage/backpack/science
-// 	satchel = /obj/item/storage/backpack/satchel/science
-// 	duffelbag = /obj/item/storage/backpack/duffelbag/science
-// 	messenger = /obj/item/storage/backpack/messenger/science
+	backpack = /obj/item/storage/backpack/science
+	satchel = /obj/item/storage/backpack/satchel/science
+	duffelbag = /obj/item/storage/backpack/duffelbag/science
+	messenger = /obj/item/storage/backpack/messenger/science
 
-// 	id_trim = /datum/id_trim/job/science_guard
+	id_trim = /datum/id_trim/job/science_guard
+	pda_slot = ITEM_SLOT_LPOCKET
 
-// /datum/id_trim/job/science_guard
-// 	assignment = "Science Guard"
-// 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
-// 	trim_state = "trim_calhoun"
-// 	department_color = COLOR_SCIENCE_PINK
-// 	subdepartment_color = COLOR_SCIENCE_PINK
-// 	sechud_icon_state = SECHUD_SCIENCE_GUARD
-// 	extra_access = list(
-// 		ACCESS_AUX_BASE,
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_GENETICS,
-// 		ACCESS_MECH_SCIENCE,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_ORDNANCE,
-// 		ACCESS_ORDNANCE_STORAGE,
-// 		ACCESS_RESEARCH,
-// 		ACCESS_ROBOTICS,
-// 		ACCESS_SCIENCE,
-// 		ACCESS_SECURITY,
-// 		ACCESS_TECH_STORAGE,
-// 		ACCESS_WEAPONS,
-// 		ACCESS_XENOBIOLOGY,
-// 	)
-// 	minimal_access = list(
-// 		ACCESS_AUX_BASE,
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_GENETICS,
-// 		ACCESS_MECH_SCIENCE,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_ORDNANCE,
-// 		ACCESS_ORDNANCE_STORAGE,
-// 		ACCESS_RESEARCH,
-// 		ACCESS_ROBOTICS,
-// 		ACCESS_SCIENCE,
-// 		ACCESS_SECURITY,
-// 		ACCESS_TECH_STORAGE,
-// 		ACCESS_WEAPONS,
-// 		ACCESS_XENOBIOLOGY,
-// 	)
-// 	template_access = list(ACCESS_CAPTAIN, ACCESS_RD, ACCESS_CHANGE_IDS)
-// 	job = /datum/job/science_guard
+/datum/id_trim/job/science_guard
+	assignment = "Science Guard"
+	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
+	trim_state = "trim_calhoun"
+	department_color = COLOR_SCIENCE_PINK
+	subdepartment_color = COLOR_SCIENCE_PINK
+	sechud_icon_state = SECHUD_SCIENCE_GUARD
+	extra_access = list(
+		ACCESS_AUX_BASE,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_GENETICS,
+		ACCESS_MECH_SCIENCE,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_ORDNANCE,
+		ACCESS_ORDNANCE_STORAGE,
+		ACCESS_RESEARCH,
+		ACCESS_ROBOTICS,
+		ACCESS_SCIENCE,
+		ACCESS_SECURITY,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+		ACCESS_XENOBIOLOGY,
+	)
+	minimal_access = list(
+		ACCESS_AUX_BASE,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_GENETICS,
+		ACCESS_MECH_SCIENCE,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_ORDNANCE,
+		ACCESS_ORDNANCE_STORAGE,
+		ACCESS_RESEARCH,
+		ACCESS_ROBOTICS,
+		ACCESS_SCIENCE,
+		ACCESS_SECURITY,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+		ACCESS_XENOBIOLOGY,
+	)
+	template_access = list(ACCESS_CAPTAIN, ACCESS_RD, ACCESS_CHANGE_IDS)
+	job = /datum/job/science_guard
 
-// /*
-// 	MEDICAL GUARD DATUMS
-// */
-// /datum/job/orderly
-// 	title = JOB_ORDERLY
-// 	description = "Defend the medical department, hold down idiots who refuse the vaccine, assist medical with prep and/or cleanup."
-// 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
-// 	faction = FACTION_STATION
-// 	total_positions = 2
-// 	spawn_positions = 2
-// 	supervisors = SUPERVISOR_CMO
-// 	exp_granted_type = EXP_TYPE_CREW
-// 	config_tag = "ORDERLY"
+/*
+	MEDICAL GUARD DATUMS
+*/
+/datum/job/orderly
+	title = JOB_ORDERLY
+	description = "Defend the medical department, hold down idiots who refuse the vaccine, assist medical with prep and/or cleanup."
+	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = SUPERVISOR_CMO
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "ORDERLY"
 
-// 	outfit = /datum/outfit/job/orderly
-// 	plasmaman_outfit = /datum/outfit/plasmaman/medical
+	outfit = /datum/outfit/job/orderly
+	plasmaman_outfit = /datum/outfit/plasmaman/medical
 
-// 	paycheck = PAYCHECK_CREW
-// 	paycheck_department = ACCOUNT_MED
+	paycheck = PAYCHECK_CREW
+	paycheck_department = ACCOUNT_MED
 
-// 	display_order = JOB_DISPLAY_ORDER_ORDERLY
-// 	bounty_types = CIV_JOB_MED
-// 	departments_list = list(
-// 		/datum/job_department/medical,
-// 		)
+	display_order = JOB_DISPLAY_ORDER_ORDERLY
+	bounty_types = CIV_JOB_MED
+	departments_list = list(
+		/datum/job_department/medical,
+		)
 
-// 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/medical)
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/medical)
 
-// 	mail_goodies = list(
-// 		/obj/item/food/donut/caramel = 10,
-// 		/obj/item/food/donut/matcha = 10,
-// 		/obj/item/food/donut/blumpkin = 5,
-// 		/obj/item/clothing/mask/whistle = 5,
-// 		/obj/item/melee/baton/security/boomerang/loaded = 1
-// 	)
+	mail_goodies = list(
+		/obj/item/food/donut/caramel = 10,
+		/obj/item/food/donut/matcha = 10,
+		/obj/item/food/donut/blumpkin = 5,
+		/obj/item/clothing/mask/whistle = 5,
+		/obj/item/melee/baton/security/boomerang/loaded = 1
+	)
 
-// 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
-// /datum/outfit/job/orderly
-// 	name = "Orderly"
-// 	jobtype = /datum/job/orderly
+/datum/outfit/job/orderly
+	name = "Orderly"
+	jobtype = /datum/job/orderly
 
-	// belt = /obj/item/storage/belt/security/department_guard/medical
-	// ears = /obj/item/radio/headset/headset_med
-	// uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/orderly
-	// shoes = /obj/item/clothing/shoes/sneakers/white
-	// head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
-	// suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/orderly
-	// r_pocket = /obj/item/flashlight
-	// l_pocket = /obj/item/modular_computer/pda/medical
+	belt = /obj/item/storage/belt/security/department_guard/medical
+	ears = /obj/item/radio/headset/headset_med
+	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/orderly
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/orderly
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/modular_computer/pda/medical
 
-// 	backpack = /obj/item/storage/backpack/medic
-// 	satchel = /obj/item/storage/backpack/satchel/med
-// 	duffelbag = /obj/item/storage/backpack/duffelbag/med
-// 	messenger = /obj/item/storage/backpack/messenger/med
-// 	box = /obj/item/storage/box/survival/medical
+	backpack = /obj/item/storage/backpack/medic
+	satchel = /obj/item/storage/backpack/satchel/med
+	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	messenger = /obj/item/storage/backpack/messenger/med
+	box = /obj/item/storage/box/survival/medical
 
-// 	id_trim = /datum/id_trim/job/orderly
+	id_trim = /datum/id_trim/job/orderly
+	pda_slot = ITEM_SLOT_LPOCKET
 
-// /datum/id_trim/job/orderly
-// 	assignment = "Orderly"
-// 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
-// 	trim_state = "trim_orderly"
-// 	department_color = COLOR_MEDICAL_BLUE
-// 	subdepartment_color = COLOR_MEDICAL_BLUE
-// 	sechud_icon_state = SECHUD_ORDERLY
-// 	extra_access = list(
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_MECH_MEDICAL,
-// 		ACCESS_MEDICAL,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MORGUE,
-// 		ACCESS_PHARMACY,
-// 		ACCESS_PLUMBING,
-// 		ACCESS_SECURITY,
-// 		ACCESS_SURGERY,
-// 		ACCESS_VIROLOGY,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	minimal_access = list(
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_MECH_MEDICAL,
-// 		ACCESS_MEDICAL,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MORGUE,
-// 		ACCESS_PHARMACY,
-// 		ACCESS_PLUMBING,
-// 		ACCESS_SECURITY,
-// 		ACCESS_SURGERY,
-// 		ACCESS_VIROLOGY,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	template_access = list(ACCESS_CAPTAIN, ACCESS_CMO, ACCESS_CHANGE_IDS)
-// 	job = /datum/job/orderly
+/datum/id_trim/job/orderly
+	assignment = "Orderly"
+	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
+	trim_state = "trim_orderly"
+	department_color = COLOR_MEDICAL_BLUE
+	subdepartment_color = COLOR_MEDICAL_BLUE
+	sechud_icon_state = SECHUD_ORDERLY
+	extra_access = list(
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_MECH_MEDICAL,
+		ACCESS_MEDICAL,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MORGUE,
+		ACCESS_PHARMACY,
+		ACCESS_PLUMBING,
+		ACCESS_SECURITY,
+		ACCESS_SURGERY,
+		ACCESS_VIROLOGY,
+		ACCESS_WEAPONS,
+	)
+	minimal_access = list(
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_MECH_MEDICAL,
+		ACCESS_MEDICAL,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MORGUE,
+		ACCESS_PHARMACY,
+		ACCESS_PLUMBING,
+		ACCESS_SECURITY,
+		ACCESS_SURGERY,
+		ACCESS_VIROLOGY,
+		ACCESS_WEAPONS,
+	)
+	template_access = list(ACCESS_CAPTAIN, ACCESS_CMO, ACCESS_CHANGE_IDS)
+	job = /datum/job/orderly
 
-// /*
-// 	ENGINEERING GUARD DATUMS
-// */
-// /datum/job/engineering_guard
-// 	title = JOB_ENGINEERING_GUARD
-// 	description = "Monitor the supermatter, keep an eye on atmospherics, make sure everyone is wearing Proper Protective Equipment."
-// 	department_head = list(JOB_CHIEF_ENGINEER)
-// 	faction = FACTION_STATION
-// 	total_positions = 2
-// 	spawn_positions = 2
-// 	supervisors = SUPERVISOR_CE
-// 	exp_granted_type = EXP_TYPE_CREW
-// 	config_tag = "ENGINEERING_GUARD"
+/*
+	ENGINEERING GUARD DATUMS
+*/
+/datum/job/engineering_guard
+	title = JOB_ENGINEERING_GUARD
+	description = "Monitor the supermatter, keep an eye on atmospherics, make sure everyone is wearing Proper Protective Equipment."
+	department_head = list(JOB_CHIEF_ENGINEER)
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = SUPERVISOR_CE
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "ENGINEERING_GUARD"
 
-// 	outfit = /datum/outfit/job/engineering_guard
-// 	plasmaman_outfit = /datum/outfit/plasmaman/engineering
+	outfit = /datum/outfit/job/engineering_guard
+	plasmaman_outfit = /datum/outfit/plasmaman/engineering
 
-// 	paycheck = PAYCHECK_CREW
-// 	paycheck_department = ACCOUNT_ENG
+	paycheck = PAYCHECK_CREW
+	paycheck_department = ACCOUNT_ENG
 
-// 	display_order = JOB_DISPLAY_ORDER_ENGINEER_GUARD
-// 	bounty_types = CIV_JOB_ENG
-// 	departments_list = list(
-// 		/datum/job_department/engineering,
-// 		)
+	display_order = JOB_DISPLAY_ORDER_ENGINEER_GUARD
+	bounty_types = CIV_JOB_ENG
+	departments_list = list(
+		/datum/job_department/engineering,
+		)
 
-// 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/engineering)
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/engineering)
 
-// 	mail_goodies = list(
-// 		/obj/item/food/donut/caramel = 10,
-// 		/obj/item/food/donut/matcha = 10,
-// 		/obj/item/food/donut/blumpkin = 5,
-// 		/obj/item/clothing/mask/whistle = 5,
-// 		/obj/item/melee/baton/security/boomerang/loaded = 1
-// 	)
-// 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	mail_goodies = list(
+		/obj/item/food/donut/caramel = 10,
+		/obj/item/food/donut/matcha = 10,
+		/obj/item/food/donut/blumpkin = 5,
+		/obj/item/clothing/mask/whistle = 5,
+		/obj/item/melee/baton/security/boomerang/loaded = 1
+	)
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
-// /datum/outfit/job/engineering_guard
-// 	name = "Engineering Guard"
-// 	jobtype = /datum/job/engineering_guard
+/datum/outfit/job/engineering_guard
+	name = "Engineering Guard"
+	jobtype = /datum/job/engineering_guard
 
-	// belt = /obj/item/storage/belt/security/department_guard/engineering
-	// ears = /obj/item/radio/headset/headset_eng
-	// shoes = /obj/item/clothing/shoes/workboots
-	// uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/engineering_guard
-	// head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
-	// suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/engineering_guard
-	// r_pocket = /obj/item/flashlight
-	// l_pocket = /obj/item/modular_computer/pda/engineering
+	belt = /obj/item/storage/belt/security/department_guard/engineering
+	ears = /obj/item/radio/headset/headset_eng
+	shoes = /obj/item/clothing/shoes/workboots
+	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/engineering_guard
+	head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/engineering_guard
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/modular_computer/pda/engineering
 
-// 	backpack = /obj/item/storage/backpack/industrial
-// 	satchel = /obj/item/storage/backpack/satchel/eng
-// 	duffelbag = /obj/item/storage/backpack/duffelbag/engineering
-// 	messenger = /obj/item/storage/backpack/messenger/eng
-// 	box = /obj/item/storage/box/survival/engineer
+	backpack = /obj/item/storage/backpack/industrial
+	satchel = /obj/item/storage/backpack/satchel/eng
+	duffelbag = /obj/item/storage/backpack/duffelbag/engineering
+	messenger = /obj/item/storage/backpack/messenger/eng
+	box = /obj/item/storage/box/survival/engineer
 
-// 	id_trim = /datum/id_trim/job/engineering_guard
+	id_trim = /datum/id_trim/job/engineering_guard
+	pda_slot = ITEM_SLOT_LPOCKET
 
-// /datum/id_trim/job/engineering_guard
-// 	assignment = "Engineering Guard"
-// 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
-// 	trim_state = "trim_engiguard"
-// 	department_color = COLOR_ENGINEERING_ORANGE
-// 	subdepartment_color = COLOR_ENGINEERING_ORANGE
-// 	sechud_icon_state = SECHUD_ENGINEERING_GUARD
-// 	extra_access = list(
-// 		ACCESS_ATMOSPHERICS,
-// 		ACCESS_AUX_BASE,
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_CONSTRUCTION,
-// 		ACCESS_ENGINEERING,
-// 		ACCESS_ENGINE_EQUIP,
-// 		ACCESS_EXTERNAL_AIRLOCKS,
-// 		ACCESS_MAINT_TUNNELS,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MECH_ENGINE,
-// 		ACCESS_SECURITY,
-// 		ACCESS_TCOMMS,
-// 		ACCESS_TECH_STORAGE,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	minimal_access = list(
-// 		ACCESS_ATMOSPHERICS,
-// 		ACCESS_AUX_BASE,
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_CONSTRUCTION,
-// 		ACCESS_ENGINEERING,
-// 		ACCESS_ENGINE_EQUIP,
-// 		ACCESS_EXTERNAL_AIRLOCKS,
-// 		ACCESS_MAINT_TUNNELS,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MECH_ENGINE,
-// 		ACCESS_SECURITY,
-// 		ACCESS_TCOMMS,
-// 		ACCESS_TECH_STORAGE,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	template_access = list(ACCESS_CAPTAIN, ACCESS_CE, ACCESS_CHANGE_IDS)
-// 	job = /datum/job/engineering_guard
+/datum/id_trim/job/engineering_guard
+	assignment = "Engineering Guard"
+	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
+	trim_state = "trim_engiguard"
+	department_color = COLOR_ENGINEERING_ORANGE
+	subdepartment_color = COLOR_ENGINEERING_ORANGE
+	sechud_icon_state = SECHUD_ENGINEERING_GUARD
+	extra_access = list(
+		ACCESS_ATMOSPHERICS,
+		ACCESS_AUX_BASE,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CONSTRUCTION,
+		ACCESS_ENGINEERING,
+		ACCESS_ENGINE_EQUIP,
+		ACCESS_EXTERNAL_AIRLOCKS,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MECH_ENGINE,
+		ACCESS_SECURITY,
+		ACCESS_TCOMMS,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+	)
+	minimal_access = list(
+		ACCESS_ATMOSPHERICS,
+		ACCESS_AUX_BASE,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CONSTRUCTION,
+		ACCESS_ENGINEERING,
+		ACCESS_ENGINE_EQUIP,
+		ACCESS_EXTERNAL_AIRLOCKS,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MECH_ENGINE,
+		ACCESS_SECURITY,
+		ACCESS_TCOMMS,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+	)
+	template_access = list(ACCESS_CAPTAIN, ACCESS_CE, ACCESS_CHANGE_IDS)
+	job = /datum/job/engineering_guard
 
-// /*
-// 	CARGO GUARD DATUMS
-// */
-// /datum/job/customs_agent
-// 	title = JOB_CUSTOMS_AGENT
-// 	description = "Inspect the packages coming to and from the station, protect the cargo department, beat the shit out of people trying to ship Cocaine to the Spinward Stellar Coalition."
-// 	department_head = list(JOB_QUARTERMASTER)
-// 	faction = FACTION_STATION
-// 	total_positions = 2
-// 	spawn_positions = 2
-// 	supervisors = SUPERVISOR_QM
-// 	exp_granted_type = EXP_TYPE_CREW
-// 	config_tag = "CUSTOMS_AGENT"
+/*
+	CARGO GUARD DATUMS
+*/
+/datum/job/customs_agent
+	title = JOB_CUSTOMS_AGENT
+	description = "Inspect the packages coming to and from the station, protect the cargo department, beat the shit out of people trying to ship Cocaine to the Spinward Stellar Coalition."
+	department_head = list(JOB_QUARTERMASTER)
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = SUPERVISOR_QM
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "CUSTOMS_AGENT"
 
-// 	outfit = /datum/outfit/job/customs_agent
-// 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
+	outfit = /datum/outfit/job/customs_agent
+	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
-// 	paycheck = PAYCHECK_CREW
-// 	paycheck_department = ACCOUNT_CAR
+	paycheck = PAYCHECK_CREW
+	paycheck_department = ACCOUNT_CAR
 
-// 	display_order = JOB_DISPLAY_ORDER_CUSTOMS_AGENT
-// 	bounty_types = CIV_JOB_RANDOM
-// 	departments_list = list(
-// 		/datum/job_department/cargo,
-// 		)
+	display_order = JOB_DISPLAY_ORDER_CUSTOMS_AGENT
+	bounty_types = CIV_JOB_RANDOM
+	departments_list = list(
+		/datum/job_department/cargo,
+		)
 
-// 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/cargo)
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law, /obj/item/clothing/head/beret/sec/cargo)
 
-// 	mail_goodies = list(
-// 		/obj/item/food/donut/caramel = 10,
-// 		/obj/item/food/donut/matcha = 10,
-// 		/obj/item/food/donut/blumpkin = 5,
-// 		/obj/item/clothing/mask/whistle = 5,
-// 		/obj/item/melee/baton/security/boomerang/loaded = 1
-// 	)
-// 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	mail_goodies = list(
+		/obj/item/food/donut/caramel = 10,
+		/obj/item/food/donut/matcha = 10,
+		/obj/item/food/donut/blumpkin = 5,
+		/obj/item/clothing/mask/whistle = 5,
+		/obj/item/melee/baton/security/boomerang/loaded = 1
+	)
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
-// /datum/outfit/job/customs_agent
-// 	name = "Customs Agent"
-// 	jobtype = /datum/job/customs_agent
+/datum/outfit/job/customs_agent
+	name = "Customs Agent"
+	jobtype = /datum/job/customs_agent
 
-	// belt = /obj/item/storage/belt/security/department_guard/cargo
-	// ears = /obj/item/radio/headset/headset_cargo
-	// shoes = /obj/item/clothing/shoes/sneakers/black
-	// uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/customs_agent
-	// head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
-	// suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/customs_agent
-	// glasses = /obj/item/clothing/glasses/hud/gun_permit
-	// r_pocket = /obj/item/flashlight
-	// l_pocket = /obj/item/modular_computer/pda/cargo
+	belt = /obj/item/storage/belt/security/department_guard/cargo
+	ears = /obj/item/radio/headset/headset_cargo
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt/nova/customs_agent
+	head =  /obj/item/clothing/head/helmet/blueshirt/nova/guard
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt/nova/customs_agent
+	glasses = /obj/item/clothing/glasses/hud/gun_permit
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/modular_computer/pda/cargo
 
-// 	backpack = /obj/item/storage/backpack
-// 	satchel = /obj/item/storage/backpack/satchel
-// 	duffelbag = /obj/item/storage/backpack/duffelbag
-// 	messenger = /obj/item/storage/backpack/messenger
+	backpack = /obj/item/storage/backpack
+	satchel = /obj/item/storage/backpack/satchel
+	duffelbag = /obj/item/storage/backpack/duffelbag
+	messenger = /obj/item/storage/backpack/messenger
 
-// 	id_trim = /datum/id_trim/job/customs_agent
+	id_trim = /datum/id_trim/job/customs_agent
+	pda_slot = ITEM_SLOT_LPOCKET
 
-// /datum/id_trim/job/customs_agent
-// 	assignment = "Customs Agent"
-// 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
-// 	trim_state = "trim_customs"
-// 	department_color = COLOR_CARGO_BROWN
-// 	subdepartment_color = COLOR_CARGO_BROWN
-// 	sechud_icon_state = SECHUD_CUSTOMS_AGENT
-// 	extra_access = list(
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_CARGO,
-// 		ACCESS_MAINT_TUNNELS,
-// 		ACCESS_MECH_MINING,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MINING,
-// 		ACCESS_MINING_STATION,
-// 		ACCESS_SECURITY,
-// 		ACCESS_SHIPPING,
-// 		ACCESS_QM,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	minimal_access = list(
-// 		ACCESS_BRIG_ENTRANCE,
-// 		ACCESS_CARGO,
-// 		ACCESS_MAINT_TUNNELS,
-// 		ACCESS_MECH_MINING,
-// 		ACCESS_MINERAL_STOREROOM,
-// 		ACCESS_MINING,
-// 		ACCESS_MINING_STATION,
-// 		ACCESS_SECURITY,
-// 		ACCESS_SHIPPING,
-// 		ACCESS_QM,
-// 		ACCESS_WEAPONS,
-// 	)
-// 	template_access = list(ACCESS_CAPTAIN, ACCESS_QM, ACCESS_CHANGE_IDS)
-// 	job = /datum/job/customs_agent
+/datum/id_trim/job/customs_agent
+	assignment = "Customs Agent"
+	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
+	trim_state = "trim_customs"
+	department_color = COLOR_CARGO_BROWN
+	subdepartment_color = COLOR_CARGO_BROWN
+	sechud_icon_state = SECHUD_CUSTOMS_AGENT
+	extra_access = list(
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CARGO,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_MINING,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MINING,
+		ACCESS_MINING_STATION,
+		ACCESS_SECURITY,
+		ACCESS_SHIPPING,
+		ACCESS_QM,
+		ACCESS_WEAPONS,
+	)
+	minimal_access = list(
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CARGO,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_MINING,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MINING,
+		ACCESS_MINING_STATION,
+		ACCESS_SECURITY,
+		ACCESS_SHIPPING,
+		ACCESS_QM,
+		ACCESS_WEAPONS,
+	)
+	template_access = list(ACCESS_CAPTAIN, ACCESS_QM, ACCESS_CHANGE_IDS)
+	job = /datum/job/customs_agent
+*/  // ARK STATION REMOVED
 
 /*
 	SERVICE GUARD DATUMS
@@ -664,6 +670,7 @@
 	messenger = /obj/item/storage/backpack/messenger
 
 	id_trim = /datum/id_trim/job/bouncer
+	pda_slot = ITEM_SLOT_LPOCKET
 
 /datum/id_trim/job/bouncer
 	assignment = "Bouncer"

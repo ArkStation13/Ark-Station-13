@@ -141,7 +141,7 @@
 		ACCESS_CHANGE_IDS,
 	)
 
-// /datum/id_trim/job/corrections_officer
+// /datum/id_trim/job/corrections_officer // ARK STATION REMOVED
 // 	assignment = "Corrections Officer"
 // 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
 // 	trim_state = "trim_corrections_officer"
@@ -162,7 +162,7 @@
 // 		ACCESS_CHANGE_IDS,
 // 		ACCESS_HOS,
 // 	)
-// 	job = /datum/job/corrections_officer
+// 	job = /datum/job/corrections_officer // ARK STATION REMOVED
 
 /datum/id_trim/job/barber
 	assignment = "Barber"

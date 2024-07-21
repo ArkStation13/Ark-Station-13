@@ -1,5 +1,5 @@
 /datum/loadout_item/toys/miafoxplush
-	name = "Mia’s fox plushie"
+	name = "Mia's fox plushie"
 	item_path = /obj/item/toy/plush/nova/fox/mia
 	// ARK STATION REMOVE: ckeywhitelist = list("fuzlet")
 
@@ -11,17 +11,7 @@
 /datum/loadout_item/pocket_items/drawingtablet
 	name = "Drawing Tablet"
 	item_path = /obj/item/canvas/drawingtablet
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/suit/furcoat
-	name = "Leather coat with fur"
-	item_path = /obj/item/clothing/suit/furcoat
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/under/jumpsuit/black_turtleneck
-	name = "Black turtleneck"
-	item_path = /obj/item/clothing/under/syndicate/tacticool/black
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
+	donator_only = TRUE
 
 /datum/loadout_item/under/jumpsuit/long_skirtleneck
 	name = "Tacticool Skirtleneck (Long)"
@@ -114,7 +104,10 @@
 /datum/loadout_item/mask/composite_filtration
 	name = "Composite Filtration Mask"
 	item_path = /obj/item/clothing/mask/gas/psycho_malice
-	// ARK STATION REMOVE: ckeywhitelist = list("snakebittenn", "chillylobster", "candlejax", "theooz")
+	// ARK STATION REMOVE: ckeywhitelist = list("snakebittenn", "chillylobster", "candlejax", "theooz", "alvcyktor")
+
+/datum/loadout_item/suit/jacket
+	abstract_type = /datum/loadout_item/suit/jacket
 
 /datum/loadout_item/suit/jacket/cherno
 	name = "Blue-Silvered Coat"
@@ -174,7 +167,7 @@
 /datum/loadout_item/suit/caligram_parka_vest_tan
 	name = "Caligram Armored Tan Parka"
 	item_path = /obj/item/clothing/suit/armor/vest/caligram_parka_vest
-	restricted_roles = list(JOB_BLUESHIELD, JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_BRIG_PILOT)
+	restricted_roles = list(JOB_BLUESHIELD, JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_BRIG_PILOT) // ARK STATION EDIT
 
 /datum/loadout_item/suit/brasspriest
 	name = "Brasspriest Coat"
@@ -280,7 +273,7 @@
 
 /datum/loadout_item/pocket_items/brightcosmos
 	name = "Bright Cosmos cigar"
-	item_path = /obj/item/clothing/mask/holocigarette/cigar
+	item_path = /obj/item/holocigarette/cigar
 	// ARK STATION REMOVE: ckeywhitelist = list("lyricalpaws")
 
 /datum/loadout_item/under/jumpsuit/lannese
@@ -633,21 +626,6 @@
 	item_path = /obj/item/clothing/glasses/gold_aviators
 	// ARK STATION REMOVE: ckeywhitelist = list("nikohyena")
 
-/datum/loadout_item/under/jumpsuit/caged_dress
-	name = "Caged Purple Dress"
-	item_path = /obj/item/clothing/under/caged_dress
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/suit/shortcoat
-	name = "Short Purple Coat"
-	item_path = /obj/item/clothing/suit/short_coat
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/neck/flowercollar
-	name = "Flower Collar"
-	item_path = /obj/item/clothing/neck/flower_collar
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
 /datum/loadout_item/under/jumpsuit/goldenkimono
 	name = "Short-Sleeved Kimono"
 	item_path = /obj/item/clothing/under/costume/nova/kimono/sigmar
@@ -685,7 +663,7 @@
 
 /datum/loadout_item/pocket_items/masvedishcigar
 	name = "Holocigar"
-	item_path = /obj/item/clothing/mask/holocigarette/masvedishcigar
+	item_path = /obj/item/holocigarette/masvedishcigar
 	// Asked it to be public, and as such has no whitelist.
 
 /datum/loadout_item/suit/lt3_armor
@@ -797,12 +775,12 @@
 /datum/loadout_item/under/jumpsuit/techpants
     name = "Techwear Pants"
     item_path = /obj/item/clothing/under/techpants
-    // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor")
+    // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor", "snakebittenn")
 
 /datum/loadout_item/inhand/drop_pouch
     name = "Drop Pouch"
     item_path = /obj/item/storage/backpack/satchel/drop_pouch
-    // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor")
+    // ARK STATION REMOVE: ckeywhitelist = list("alvcyktor", "snakebittenn")
 
 /datum/loadout_item/inhand/melonseva
 	name = "Sundowner SEVA"
@@ -810,12 +788,23 @@
 	// ARK STATION REMOVE: ckeywhitelist = list("deadmonwonderland")
 	restricted_roles = list(JOB_SHAFT_MINER)
 
+
 /datum/loadout_item/suit/desminus
 	name = "Jómsvíking Coat"
 	item_path = /obj/item/clothing/suit/toggle/desminus
-	//ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
+	// ARK STATION REMOVE: ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
 
 /datum/loadout_item/suit/desminus2
 	name = "Elderwood Garment"
 	item_path = /obj/item/clothing/suit/toggle/desminus2
-	//ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
+	// ARK STATION REMOVE: ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
+
+/datum/loadout_item/pocket_items/akarimod
+	name = "Akari's MOD Refitter"
+	item_path = /obj/item/mod/skin_applier/akari
+	// ARK STATION REMOVE: ckeywhitelist = list("samman166", "cainedclxvi")
+
+/datum/loadout_item/pocket_items/mrsanderp_cookbook
+	name = "Riva Family Cookbook"
+	item_path = /obj/item/book/granter/crafting_recipe/mrsanderp_donator_cookbook
+	// ARK STATION REMOVE: ckeywhitelist = list("mrsanderp")

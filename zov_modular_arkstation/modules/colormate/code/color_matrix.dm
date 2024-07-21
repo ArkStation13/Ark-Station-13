@@ -23,13 +23,13 @@ list(0.393,0.349,0.272,0, 0.769,0.686,0.534,0, 0.189,0.168,0.131,0, 0,0,0,1, 0,0
 
 //Changes distance hues have from grey while maintaining the overall lightness. Greys are unaffected.
 //1 is identity, 0 is greyscale, >1 oversaturates colors
-/color_matrix_saturation(value)
-	var/inv = 1 - value
-	var/R = round(LUMA_R * inv, 0.001)
-	var/G = round(LUMA_G * inv, 0.001)
-	var/B = round(LUMA_B * inv, 0.001)
+// /color_matrix_saturation(value)
+// 	var/inv = 1 - value
+// 	var/R = round(LUMA_R * inv, 0.001)
+// 	var/G = round(LUMA_G * inv, 0.001)
+// 	var/B = round(LUMA_B * inv, 0.001)
 
-	return list(R + value,R,R,0, G,G + value,G,0, B,B,B + value,0, 0,0,0,1, 0,0,0,0)
+// 	return list(R + value,R,R,0, G,G + value,G,0, B,B,B + value,0, 0,0,0,1, 0,0,0,0)
 
 /**
  * Exxagerates or removes colors
@@ -88,17 +88,17 @@ list(0.393,0.349,0.272,0, 0.769,0.686,0.534,0, 0.189,0.168,0.131,0, 0,0,0,1, 0,0
 
 //Moves all colors angle degrees around the color wheel while maintaining intensity of the color and not affecting greys
 //0 is identity, 120 moves reds to greens, 240 moves reds to blues
-/color_matrix_rotate_hue(angle)
-	var/sin = sin(angle)
-	var/cos = cos(angle)
-	var/cos_inv_third = 0.333*(1-cos)
-	var/sqrt3_sin = sqrt(3)*sin
-	return list(
-round(cos+cos_inv_third, 0.001), round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), 0,
-round(cos_inv_third-sqrt3_sin, 0.001), round(cos+cos_inv_third, 0.001), round(cos_inv_third+sqrt3_sin, 0.001), 0,
-round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), round(cos+cos_inv_third, 0.001), 0,
-0,0,0,1,
-0,0,0,0)
+// /color_matrix_rotate_hue(angle)
+// 	var/sin = sin(angle)
+// 	var/cos = cos(angle)
+// 	var/cos_inv_third = 0.333*(1-cos)
+// 	var/sqrt3_sin = sqrt(3)*sin
+// 	return list(
+// round(cos+cos_inv_third, 0.001), round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), 0,
+// round(cos_inv_third-sqrt3_sin, 0.001), round(cos+cos_inv_third, 0.001), round(cos_inv_third+sqrt3_sin, 0.001), 0,
+// round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), round(cos+cos_inv_third, 0.001), 0,
+// 0,0,0,1,
+// 0,0,0,0)
 
 /**
  * Moves all colors angle degrees around the color wheel while maintaining intensity of the color and not affecting whites
@@ -122,17 +122,17 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 
 //These next three rotate values about one axis only
 //x is the red axis, y is the green axis, z is the blue axis.
-/color_matrix_rotate_x(angle)
-	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
-	return list(1,0,0,0, 0,cosval,sinval,0, 0,-sinval,cosval,0, 0,0,0,1, 0,0,0,0)
+// /color_matrix_rotate_x(angle)
+// 	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
+// 	return list(1,0,0,0, 0,cosval,sinval,0, 0,-sinval,cosval,0, 0,0,0,1, 0,0,0,0)
 
-/color_matrix_rotate_y(angle)
-	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
-	return list(cosval,0,-sinval,0, 0,1,0,0, sinval,0,cosval,0, 0,0,0,1, 0,0,0,0)
+// /color_matrix_rotate_y(angle)
+// 	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
+// 	return list(cosval,0,-sinval,0, 0,1,0,0, sinval,0,cosval,0, 0,0,0,1, 0,0,0,0)
 
-/color_matrix_rotate_z(angle)
-	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
-	return list(cosval,sinval,0,0, -sinval,cosval,0,0, 0,0,1,0, 0,0,0,1, 0,0,0,0)
+// /color_matrix_rotate_z(angle)
+// 	var/sinval = round(sin(angle), 0.001); var/cosval = round(cos(angle), 0.001)
+// 	return list(cosval,sinval,0,0, -sinval,cosval,0,0, 0,0,1,0, 0,0,0,1, 0,0,0,0)
 
 /**
  * Builds a color matrix that transforms the hue, saturation, and value, all in one operation.
@@ -155,33 +155,33 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 	)
 
 //Returns a matrix addition of A with B
-/color_matrix_add(list/A, list/B)
-	if(!istype(A) || !istype(B))
-		return COLOR_MATRIX_IDENTITY
-	if(A.len != 20 || B.len != 20)
-		return COLOR_MATRIX_IDENTITY
-	var/list/output = list()
-	output.len = 20
-	for(var/value in 1 to 20)
-		output[value] = A[value] + B[value]
-	return output
+// /color_matrix_add(list/A, list/B)
+// 	if(!istype(A) || !istype(B))
+// 		return COLOR_MATRIX_IDENTITY
+// 	if(A.len != 20 || B.len != 20)
+// 		return COLOR_MATRIX_IDENTITY
+// 	var/list/output = list()
+// 	output.len = 20
+// 	for(var/value in 1 to 20)
+// 		output[value] = A[value] + B[value]
+// 	return output
 
-//Returns a matrix multiplication of A with B
-/color_matrix_multiply(list/A, list/B)
-	if(!istype(A) || !istype(B))
-		return COLOR_MATRIX_IDENTITY
-	if(A.len != 20 || B.len != 20)
-		return COLOR_MATRIX_IDENTITY
-	var/list/output = list()
-	output.len = 20
-	var/x = 1
-	var/y = 1
-	var/offset = 0
-	for(y in 1 to 5)
-		offset = (y-1)*4
-		for(x in 1 to 4)
-			output[offset+x] = round(A[offset+1]*B[x] + A[offset+2]*B[x+4] + A[offset+3]*B[x+8] + A[offset+4]*B[x+12]+(y==5?B[x+16]:0), 0.001)
-	return output
+// //Returns a matrix multiplication of A with B
+// /color_matrix_multiply(list/A, list/B)
+// 	if(!istype(A) || !istype(B))
+// 		return COLOR_MATRIX_IDENTITY
+// 	if(A.len != 20 || B.len != 20)
+// 		return COLOR_MATRIX_IDENTITY
+// 	var/list/output = list()
+// 	output.len = 20
+// 	var/x = 1
+// 	var/y = 1
+// 	var/offset = 0
+// 	for(y in 1 to 5)
+// 		offset = (y-1)*4
+// 		for(x in 1 to 4)
+// 			output[offset+x] = round(A[offset+1]*B[x] + A[offset+2]*B[x+4] + A[offset+3]*B[x+8] + A[offset+4]*B[x+12]+(y==5?B[x+16]:0), 0.001)
+// 	return output
 
 /**
  * Assembles a color matrix, defaulting to identity

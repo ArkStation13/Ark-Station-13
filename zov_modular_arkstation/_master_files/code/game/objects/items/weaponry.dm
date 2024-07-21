@@ -108,6 +108,7 @@
 	icon_state = "ak12"
 	inhand_icon_state = "ak12"
 	worn_icon_state = "gun"
+	worn_icon = 'icons/mob/clothing/belt.dmi'
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
