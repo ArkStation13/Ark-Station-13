@@ -462,7 +462,6 @@
 /obj/item/organ/internal/lungs/proc/too_much_miasma(mob/living/carbon/breather, datum/gas_mixture/breath, miasma_pp, old_miasma_pp)
 	// Inhale Miasma. Exhale nothing.
 	breathe_gas_volume(breath, /datum/gas/miasma)
-
 	// Miasma side effects
 	if (HAS_TRAIT(breather, TRAIT_ANOSMIA)) //Anosmia quirk holder cannot smell miasma, but can get diseases from it.
 		return
@@ -541,6 +540,10 @@
 // Breath in nitrium. It's helpful, but has nasty side effects
 /obj/item/organ/internal/lungs/proc/too_much_nitrium(mob/living/carbon/breather, datum/gas_mixture/breath, nitrium_pp, old_nitrium_pp)
 	breathe_gas_volume(breath, /datum/gas/nitrium)
+
+	if(prob(20))
+		breather.emote("burp")
+
 	// Random chance to inflict side effects increases with pressure.
 	if((prob(nitrium_pp) && (nitrium_pp > 15)))
 		// Nitrium side-effect.

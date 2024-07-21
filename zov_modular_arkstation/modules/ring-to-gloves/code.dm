@@ -28,7 +28,7 @@
 	else
 		cut_overlays()
 
-/obj/item/clothing/gloves/alt_click_secondary(mob/living/carbon/human/user)
+/obj/item/clothing/gloves/click_alt_secondary(mob/living/carbon/human/user)
 	. = ..()
 	if(!attached_ring)
 		return

@@ -35,8 +35,8 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(show_player_panel, R_ADMIN, "Show Player Panel", mo
 		if(SSplayer_ranks.is_mentor(player.client, admin_bypass = FALSE))
 			player_ranks += "Mentor"
 
-		// if(SSplayer_ranks.is_veteran(M.client, admin_bypass = FALSE))
-		// 	player_ranks += "Veteran"
+		// if(SSplayer_ranks.is_veteran(M.client, admin_bypass = FALSE)) // ARK STATION REMOVED
+		// 	player_ranks += "Veteran" // ARK STATION REMOVED
 
 		body += "<br><br><b>Player Ranks: </b>[length(player_ranks) ? player_ranks.Join(", ") : "None"]"
 		// NOVA EDIT ADDITION END

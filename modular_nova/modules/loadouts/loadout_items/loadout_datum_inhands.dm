@@ -1,27 +1,19 @@
-/*
-*	LOADOUT ITEM DATUMS FOR BOTH HAND SLOTS
-*/
-
-/// Inhand items (Moves overrided items to backpack)
-GLOBAL_LIST_INIT(loadout_inhand_items, generate_loadout_items(/datum/loadout_item/inhand))
-
-/datum/loadout_item/inhand
-	category = LOADOUT_ITEM_INHAND
+// LOADOUT ITEM DATUMS FOR BOTH HAND SLOTS
+/datum/loadout_category/inhands
+	tab_order = /datum/loadout_category/feet::tab_order + 1
 
 /datum/loadout_item/inhand/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
-	// if no hands are available then put in backpack
-	if(initial(outfit_important_for_life.r_hand) && initial(outfit_important_for_life.l_hand))
-		if(!visuals_only)
-			LAZYADD(outfit.backpack_contents, item_path)
+	if(initial(outfit_important_for_life.accessory))
+		.. ()
 		return TRUE
 
 /datum/loadout_item/inhand/insert_path_into_outfit(datum/outfit/outfit, mob/living/carbon/human/equipper, visuals_only = FALSE, override_items = LOADOUT_OVERRIDE_BACKPACK)
-	if(outfit.l_hand && !outfit.r_hand)
-		outfit.r_hand = item_path
+	if(override_items == LOADOUT_OVERRIDE_BACKPACK && !visuals_only)
+		if(outfit.accessory)
+			LAZYADD(outfit.backpack_contents, outfit.accessory)
+		outfit.accessory = item_path
 	else
-		if(outfit.l_hand)
-			LAZYADD(outfit.backpack_contents, outfit.l_hand)
-		outfit.l_hand = item_path
+		outfit.accessory = item_path
 
 /datum/loadout_item/inhand/cane
 	name = "Cane"
@@ -84,9 +76,11 @@ GLOBAL_LIST_INIT(loadout_inhand_items, generate_loadout_items(/datum/loadout_ite
 	name = "Rose Bouquet"
 	item_path = /obj/item/bouquet/rose
 
+/*
 /datum/loadout_item/inhand/smokingpipe
 	name = "Smoking Pipe"
-	item_path = /obj/item/clothing/mask/cigarette/pipe
+	item_path = /obj/item/cigarette/pipe
+*/
 
 /datum/loadout_item/inhand/flag_nt
 	name = "Folded Nanotrasen Flag"
@@ -119,6 +113,23 @@ GLOBAL_LIST_INIT(loadout_inhand_items, generate_loadout_items(/datum/loadout_ite
 /datum/loadout_item/inhand/flag_azulea
 	name = "Folded Azulea Flag"
 	item_path = /obj/item/sign/flag/azulea
+
+/datum/loadout_item/inhand/saddlebags
+	name = "saddlebags"
+	item_path = /obj/item/storage/backpack/saddlebags
+
+/datum/loadout_item/inhand/saddle // these should be in the other category but apparantly those are "pocket" loadout items so idk?
+	name = "riding saddle (leather)"
+	item_path = /obj/item/riding_saddle/leather
+
+/datum/loadout_item/inhand/saddle_peacekeeper
+	name = "riding saddle (peacekeeper)"
+	item_path = /obj/item/riding_saddle/leather/peacekeeper
+
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC, JOB_HEAD_OF_SECURITY) // ARK STATION EDIT
+
+/datum/loadout_item/inhand/pet
+	abstract_type = /datum/loadout_item/inhand/pet
 
 /datum/loadout_item/inhand/pet/post_equip_item(datum/preferences/preference_source, mob/living/carbon/human/equipper)
 	var/obj/item/clothing/head/mob_holder/pet/equipped_pet = locate(item_path) in equipper.get_all_gear()

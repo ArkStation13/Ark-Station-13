@@ -22,6 +22,10 @@
 		lgroup.remove_from_group(src)
 	SSliquids.add_active_turf(src)
 
+/// Called when liquids flow or otherwise update - intercept COMSIG_TURF_LIQUIDS_CHANGE to react.
+/turf/proc/liquids_change(new_state)
+	SEND_SIGNAL(src, COMSIG_TURF_LIQUIDS_CHANGE, new_state)
+
 /obj/effect/abstract/liquid_turf/proc/liquid_simple_delete_flat(flat_amount)
 	if(flat_amount >= total_reagents)
 		qdel(src, TRUE)
@@ -167,8 +171,8 @@
 		liquids.total_reagents += reagent_list[reagent]
 
 	if(liquids.total_reagents)
-		var/recieved_thermal_energy = (liquids.total_reagents - prev_total_reagents) * chem_temp
-		liquids.temp = (recieved_thermal_energy + prev_thermal_energy) / liquids.total_reagents
+		var/received_thermal_energy = (liquids.total_reagents - prev_total_reagents) * chem_temp
+		liquids.temp = (received_thermal_energy + prev_thermal_energy) / liquids.total_reagents
 
 	if(!no_react)
 		//We do react so, make a simulation

@@ -452,10 +452,7 @@
 	pixel_y = 34;
 	req_access = list("rd")
 	},
-/obj/machinery/computer/security/telescreen/rd{
-	pixel_x = 31;
-	pixel_y = 30
-	},
+/obj/machinery/computer/security/telescreen/rd,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
@@ -1011,7 +1008,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/power_store/cell/high/empty,
 /turf/open/floor/iron/smooth_edge,
 /area/station/engineering)
 "bDd" = (
@@ -1558,9 +1555,7 @@
 /turf/open/floor/iron/small,
 /area/station/hallway)
 "cxd" = (
-/obj/machinery/chem_dispenser{
-	layer = 2.7
-	},
+/obj/machinery/chem_dispenser,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /turf/open/floor/iron/white,
 /area/omega/surface/outdoors/nospawn)
@@ -2555,10 +2550,7 @@
 "emz" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for monitoring the engine.";
-	dir = 8;
-	name = "Engine Monitor";
-	network = list("engine");
-	pixel_x = 32
+	name = "Engine Monitor"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -3104,7 +3096,7 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 1
 	},
-/obj/item/clothing/mask/cigarette/pipe,
+/obj/item/cigarette/pipe,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "fhz" = (
@@ -3765,7 +3757,7 @@
 	pixel_y = 4
 	},
 /obj/structure/table/glass,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
@@ -3829,14 +3821,12 @@
 	},
 /obj/machinery/button/door/directional/west{
 	id = "QMLoaddoor2";
-	layer = 4;
 	name = "Loading Doors";
 	pixel_y = 8;
 	req_access = list("cargo")
 	},
 /obj/machinery/button/door/directional/west{
 	id = "QMLoaddoor";
-	layer = 4;
 	name = "Loading Doors";
 	pixel_y = -8;
 	req_access = list("cargo")
@@ -5163,7 +5153,7 @@
 "jas" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/item/rcl/pre_loaded,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -5861,7 +5851,7 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/electronics/airlock,
 /obj/item/electronics/airlock,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 30
 	},
@@ -6517,7 +6507,7 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/clothing/mask/cigarette/cigar,
+/obj/item/cigarette/cigar,
 /obj/item/reagent_containers/cup/glass/flask/gold,
 /turf/open/floor/carpet,
 /area/station/command/bridge)
@@ -7279,15 +7269,15 @@
 /area/station/hallway)
 "nPr" = (
 /obj/structure/table/reinforced,
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = 4;
 	pixel_y = 5
 	},
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = -8;
 	pixel_y = 9
 	},
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/machinery/cell_charger,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -8101,10 +8091,7 @@
 /area/station/engineering)
 "pFq" = (
 /obj/machinery/computer/security/telescreen{
-	dir = 8;
-	name = "Telecomms Camera Monitor";
-	network = list("tcomms");
-	pixel_x = 26
+	name = "Telecomms Camera Monitor"
 	},
 /obj/machinery/computer/telecomms/monitor{
 	dir = 8;
@@ -9054,7 +9041,7 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell,
+/obj/item/stock_parts/power_store/cell,
 /turf/open/floor/iron/small,
 /area/station/science)
 "ruZ" = (
@@ -9604,7 +9591,7 @@
 /obj/machinery/cell_charger{
 	pixel_y = 3
 	},
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/iron/smooth_edge{
 	dir = 1
 	},
@@ -10042,10 +10029,7 @@
 /turf/open/floor/carpet/black,
 /area/station/commons/dorms)
 "umC" = (
-/obj/machinery/computer/security/telescreen/ce{
-	dir = 1;
-	pixel_y = -30
-	},
+/obj/machinery/computer/security/telescreen/ce,
 /obj/machinery/pdapainter/engineering,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -10700,7 +10684,7 @@
 	name = "Poppy's bed"
 	},
 /obj/machinery/firealarm/directional/south,
-/mob/living/simple_animal/pet/poppy,
+/mob/living/basic/pet/poppy,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/smooth,
 /area/station/engineering)
