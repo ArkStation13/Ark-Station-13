@@ -1988,7 +1988,7 @@
 /area/station/commons/vacant_room)
 "agG" = (
 /obj/structure/dresser,
-/obj/item/clothing/mask/cigarette/cigar/havana,
+/obj/item/cigarette/cigar/havana,
 /turf/open/floor/iron/grimy,
 /area/station/commons/vacant_room)
 "agH" = (
@@ -2989,7 +2989,6 @@
 /area/station/security/checkpoint/engineering)
 "aoN" = (
 /obj/machinery/elevator_control_panel{
-	layer = 3.1;
 	linked_elevator_id = "tram_xeno_lift";
 	pixel_y = 2;
 	preset_destination_names = list("2"="Lower                                                                Deck","3"="Upper                                                                Deck")
@@ -3216,10 +3215,7 @@
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},
-/obj/machinery/computer/security/telescreen/engine{
-	dir = 1;
-	pixel_y = -32
-	},
+/obj/machinery/computer/security/telescreen/engine,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "arV" = (
@@ -3766,7 +3762,7 @@
 	},
 /obj/item/lighter,
 /obj/item/reagent_containers/pill/patch/aiuri,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
 	},
@@ -4132,10 +4128,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/minisat{
-	dir = 1;
-	pixel_y = -29
-	},
+/obj/machinery/computer/security/telescreen/minisat,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "aCa" = (
@@ -6961,15 +6954,15 @@
 /area/station/command/bridge)
 "bpa" = (
 /obj/structure/table/reinforced,
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = -5;
 	pixel_y = 8
 	},
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = 7;
 	pixel_y = 8
 	},
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/machinery/cell_charger,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -10841,15 +10834,15 @@
 	pixel_x = -2;
 	pixel_y = 3
 	},
-/obj/item/clothing/mask/cigarette/cigar{
+/obj/item/cigarette/cigar{
 	pixel_x = -4;
 	pixel_y = 1
 	},
-/obj/item/clothing/mask/cigarette/cigar{
+/obj/item/cigarette/cigar{
 	pixel_x = 4;
 	pixel_y = 1
 	},
-/obj/item/clothing/mask/cigarette/cigar/cohiba,
+/obj/item/cigarette/cigar/cohiba,
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "cFP" = (
@@ -15892,7 +15885,7 @@
 /obj/structure/table,
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva)
 "exr" = (
@@ -19636,9 +19629,7 @@
 "fSY" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/security/telescreen{
-	dir = 4;
-	name = "Cargo Camera Monitor";
-	network = list("ss13","cargo")
+	name = "Cargo Camera Monitor"
 	},
 /obj/item/radio/intercom/directional/west,
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -19684,7 +19675,7 @@
 	},
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva)
 "fUf" = (
@@ -20444,19 +20435,19 @@
 "gjl" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stock_parts/cell/crap/empty{
+/obj/item/stock_parts/power_store/cell/crap/empty{
 	pixel_y = 10;
 	pixel_x = 6
 	},
-/obj/item/stock_parts/cell/crap/empty{
+/obj/item/stock_parts/power_store/cell/crap/empty{
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/obj/item/stock_parts/cell/crap/empty{
+/obj/item/stock_parts/power_store/cell/crap/empty{
 	pixel_y = 7;
 	pixel_x = -7
 	},
-/obj/item/stock_parts/cell/crap/empty{
+/obj/item/stock_parts/power_store/cell/crap/empty{
 	pixel_y = -2;
 	pixel_x = -2
 	},
@@ -21433,8 +21424,7 @@
 /area/station/commons/dorms)
 "gBr" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	dir = 8;
-	piping_layer = 2
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
@@ -22326,10 +22316,7 @@
 	},
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching Prison Wing holding areas.";
-	dir = 8;
-	name = "Prison Monitor";
-	network = list("prison");
-	pixel_x = 30
+	name = "Prison Monitor"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -23609,10 +23596,7 @@
 	},
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the ai_upload.";
-	dir = 4;
-	name = "AI Upload Monitor";
-	network = list("aiupload");
-	pixel_x = -28
+	name = "AI Upload Monitor"
 	},
 /obj/item/kirbyplants/photosynthetic,
 /obj/machinery/camera/directional/west{
@@ -23905,7 +23889,7 @@
 /area/station/hallway/secondary/service)
 "hwQ" = (
 /obj/effect/turf_decal/box/red,
-/obj/machinery/plumbing/growing_vat{
+/obj/machinery/vatgrower{
 	dir = 4
 	},
 /turf/open/floor/engine,
@@ -24096,10 +24080,7 @@
 "hBY" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the turbine vent.";
-	dir = 8;
-	name = "turbine vent monitor";
-	network = list("turbine");
-	pixel_x = 29
+	name = "turbine vent monitor"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -24649,7 +24630,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/crate/preopen,
-/obj/item/stock_parts/cell/empty,
+/obj/item/stock_parts/power_store/cell/empty,
 /obj/effect/spawner/random/engineering/flashlight,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
@@ -25791,7 +25772,7 @@
 	pixel_x = 4;
 	pixel_y = 9
 	},
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "iij" = (
@@ -26154,11 +26135,11 @@
 	pixel_x = -4
 	},
 /obj/item/multitool/circuit,
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = 8;
 	pixel_y = 9
 	},
-/obj/item/stock_parts/cell/high{
+/obj/item/stock_parts/power_store/cell/high{
 	pixel_x = 8;
 	pixel_y = -2
 	},
@@ -26587,7 +26568,7 @@
 	dir = 8
 	},
 /turf/open/space/openspace,
-/area/space)
+/area/space/nearstation)
 "ixO" = (
 /obj/structure/chair/comfy/brown{
 	buildstackamount = 0;
@@ -27400,7 +27381,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/incident_display/dual/directional/south,
+/obj/machinery/incident_display/delam/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/tram/center)
 "iOC" = (
@@ -27711,7 +27692,7 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/electronics/airlock,
 /obj/item/electronics/airlock,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 30
 	},
@@ -29180,7 +29161,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Command - Bridge North"
 	},
-/obj/machinery/incident_display/dual/directional/north,
+/obj/machinery/incident_display/delam/directional/north,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "jsW" = (
@@ -29788,7 +29769,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/potato{
+/obj/item/stock_parts/power_store/cell/potato{
 	pixel_x = 6;
 	pixel_y = 10
 	},
@@ -31845,7 +31826,7 @@
 	pixel_y = 3
 	},
 /obj/item/stack/cable_coil,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/effect/turf_decal/trimline/white/filled/corner{
 	dir = 4
 	},
@@ -34029,9 +34010,7 @@
 /obj/structure/rack,
 /obj/structure/table,
 /obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor";
-	network = list("test");
-	pixel_y = 28
+	name = "Test Chamber Monitor"
 	},
 /obj/item/storage/box/beakers{
 	pixel_x = 5;
@@ -37281,7 +37260,7 @@
 	network = list("ss13","minisat")
 	},
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "mbk" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -38459,7 +38438,7 @@
 "myN" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/effect/turf_decal/trimline/neutral/filled/line,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
@@ -40989,7 +40968,7 @@
 /obj/machinery/cell_charger{
 	pixel_y = 4
 	},
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "nuj" = (
@@ -41124,10 +41103,7 @@
 /area/station/medical/chemistry)
 "nwE" = (
 /obj/machinery/pdapainter/research,
-/obj/machinery/computer/security/telescreen/rd{
-	dir = 1;
-	pixel_y = -32
-	},
+/obj/machinery/computer/security/telescreen/rd,
 /turf/open/floor/iron/cafeteria,
 /area/station/command/heads_quarters/rd)
 "nwI" = (
@@ -41968,10 +41944,7 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/ordnance{
-	dir = 8;
-	pixel_x = 30
-	},
+/obj/machinery/computer/security/telescreen/ordnance,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -48002,10 +47975,7 @@
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/supplies,
-/obj/machinery/computer/security/telescreen/engine{
-	dir = 4;
-	pixel_x = -24
-	},
+/obj/machinery/computer/security/telescreen/engine,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "pYZ" = (
@@ -49104,7 +49074,7 @@
 /obj/structure/table/wood,
 /obj/structure/sign/flag/nanotrasen/directional/north,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/crap,
+/obj/item/stock_parts/power_store/cell/crap,
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "qsJ" = (
@@ -52340,7 +52310,7 @@
 	},
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "rAS" = (
@@ -53800,7 +53770,7 @@
 "scn" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 1
 	},
@@ -56687,7 +56657,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/power_store/cell/high,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -56942,9 +56912,7 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "tgw" = (
-/obj/machinery/computer/security/telescreen/cmo{
-	pixel_y = 32
-	},
+/obj/machinery/computer/security/telescreen/cmo,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
 	},
@@ -58230,7 +58198,7 @@
 /area/station/cargo/storage)
 "tCf" = (
 /turf/open/misc/asteroid/airless,
-/area/space)
+/area/space/nearstation)
 "tCi" = (
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
@@ -59018,7 +58986,7 @@
 	c_tag = "Civilian - Recreational Area North-West"
 	},
 /obj/item/toy/plush/lizard_plushie/space/green,
-/obj/machinery/incident_display/dual/directional/north,
+/obj/machinery/incident_display/delam/directional/north,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "tRo" = (
@@ -59457,10 +59425,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/keycard_auth/directional/south,
 /obj/item/rcl/pre_loaded,
-/obj/machinery/computer/security/telescreen/ce{
-	dir = 4;
-	pixel_x = -24
-	},
+/obj/machinery/computer/security/telescreen/ce,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
 	},
@@ -61472,8 +61437,8 @@
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/storage/box/lights/mixed,
 /obj/item/stack/cable_coil,
-/obj/item/stock_parts/cell/emproof,
-/obj/item/stock_parts/cell/emproof,
+/obj/item/stock_parts/power_store/cell/emproof,
+/obj/item/stock_parts/power_store/cell/emproof,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - SMES Misc";
 	dir = 10;
@@ -61636,9 +61601,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
 /obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor";
-	network = list("xeno");
-	pixel_y = 2
+	name = "Test Chamber Monitor"
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
@@ -65355,9 +65318,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 1
 	},
-/obj/machinery/computer/security/telescreen/vault{
-	pixel_y = 30
-	},
+/obj/machinery/computer/security/telescreen/vault,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
@@ -65586,10 +65547,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"vZa" = (
-/obj/item/surgical_drapes,
-/turf/closed/mineral/random/stationside/asteroid/porus,
-/area/station/asteroid)
 "vZB" = (
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/wood/large,
@@ -66480,7 +66437,6 @@
 /area/station/hallway/secondary/service)
 "wrJ" = (
 /obj/structure/railing{
-	layer = 3.1;
 	dir = 4
 	},
 /obj/machinery/netpod,
@@ -67412,10 +67368,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
-"wIP" = (
-/obj/structure/lattice,
-/turf/open/space/openspace,
-/area/space)
 "wIT" = (
 /obj/structure/chair/wood,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -69492,7 +69444,6 @@
 /area/station/cargo/storage)
 "xAM" = (
 /obj/machinery/elevator_control_panel{
-	layer = 3.1;
 	linked_elevator_id = "tram_xeno_lift";
 	pixel_y = 2;
 	preset_destination_names = list("2"="Lower                                                                Deck","3"="Upper                                                                Deck")
@@ -71268,7 +71219,7 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/effect/spawner/random/maintenance/two,
-/obj/item/stock_parts/cell/high/empty,
+/obj/item/stock_parts/power_store/cell/high/empty,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "yjf" = (
@@ -98041,7 +97992,7 @@ abM
 abM
 abM
 aaa
-vZa
+aaa
 aaa
 aaa
 aaa
@@ -161345,7 +161296,7 @@ pMW
 pMW
 pMW
 sdb
-wIP
+avE
 pMW
 pMW
 pMW

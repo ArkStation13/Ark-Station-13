@@ -49,11 +49,11 @@
 			addtimer(CALLBACK(src, PROC_REF(blooper), listeners, range, blooper_volume, BLOOPER_DO_VARY(blooper_pitch, blooper_pitch_range), blooper_current_blooper), total_delay)
 			total_delay += rand(DS2TICKS(blooper_speed / BLOOPER_SPEED_BASELINE), DS2TICKS(blooper_speed / BLOOPER_SPEED_BASELINE) + DS2TICKS(blooper_speed / BLOOPER_SPEED_BASELINE)) TICKS
 
-/randomize_human(mob/living/carbon/human/human)
-	. = ..()
-	human.set_blooper(pick(GLOB.blooper_random_list))
-	human.blooper_pitch = BLOOPER_PITCH_RAND(human.gender)
-	human.blooper_pitch_range = BLOOPER_VARIANCE_RAND
+// /randomize_human(mob/living/carbon/human/human)
+// 	. = ..()
+// 	human.set_blooper(pick(GLOB.blooper_random_list))
+// 	human.blooper_pitch = BLOOPER_PITCH_RAND(human.gender)
+// 	human.blooper_pitch_range = BLOOPER_VARIANCE_RAND
 
 /mob/living/send_speech(message_raw, message_range = 6, obj/source = src, bubble_type = bubble_icon, list/spans, datum/language/message_language = null, list/message_mods = list(), forced = null, tts_message, list/tts_filter)
 	. = ..()

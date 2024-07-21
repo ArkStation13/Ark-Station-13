@@ -276,7 +276,7 @@ const SpeciesPageInner = (props: {
                   <Button
                     key={speciesKey}
                     onClick={() => {
-                      // if (species.veteran_only && !data.is_veteran) {
+                      // if (species.veteran_only && !data.is_veteran) { ARK STATION REMOVED
                       //   return;
                       // }
                       setSpecies(speciesKey);
@@ -297,7 +297,7 @@ const SpeciesPageInner = (props: {
                     />
                   </Button>
                 );
-                // if (species.veteran_only && !data.is_veteran) {
+                // if (species.veteran_only && !data.is_veteran) { ARK STATION REMOVED
                 //   let tooltipContent =
                 //     species.name +
                 //     ' - You need to be a veteran to select this race, apply today!';

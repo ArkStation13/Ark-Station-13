@@ -1,10 +1,10 @@
-/obj/item/stock_parts/cell/crystal_cell/Initialize(mapload, override_maxcharge)
+/obj/item/stock_parts/power_store/cell/crystal_cell/Initialize(mapload, override_maxcharge)
 	. = ..()
 	desc += "You can charge this battery if you blow into it."
 
-/obj/item/stock_parts/cell/crystal_cell/attack_self(mob/living/carbon/human/user, list/modifiers)
+/obj/item/stock_parts/power_store/cell/crystal_cell/attack_self(mob/living/carbon/human/user, list/modifiers)
 	. = ..()
-	if(user.is_muzzled() || user.is_mouth_covered(ITEM_SLOT_MASK))
+	if(user.is_mouth_covered(ITEM_SLOT_MASK))
 		to_chat(user, span_danger("Your mouth is closed!"))
 		return
 	if(charge == maxcharge)

@@ -101,8 +101,8 @@
 /datum/preference_middleware/jobs/get_ui_static_data(mob/user)
 	var/list/data = list()
 	// NOVA EDIT
-	// if(SSplayer_ranks.is_veteran(user.client))
-	// 	data["is_veteran"] = TRUE
+	// if(SSplayer_ranks.is_veteran(user.client)) // ARK STATION REMOVED
+	// 	data["is_veteran"] = TRUE // ARK STATION REMOVED
 	// NOVA EDIT END
 	var/list/required_job_playtime = get_required_job_playtime(user)
 	if (!isnull(required_job_playtime))

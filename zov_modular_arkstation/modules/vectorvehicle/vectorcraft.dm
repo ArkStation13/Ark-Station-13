@@ -74,7 +74,7 @@
 
 /obj/vehicle/sealed/vectorcraft/proc/apply_damage(damage)
     atom_integrity -= damage
-    var/healthratio = ((atom_integrity/max_integrity)/4) + 0.75
+    // var/healthratio = ((atom_integrity/max_integrity)/4) + 0.75
 
     if(atom_integrity <= 0)
         mob_exit(driver)
