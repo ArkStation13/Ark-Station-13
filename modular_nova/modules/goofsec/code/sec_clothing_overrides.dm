@@ -38,8 +38,8 @@
 	// worn_icon = 'modular_nova/master_files/icons/mob/clothing/accessories.dmi'
 	// icon_state = "armband_lopland"
 
-/obj/item/clothing/accessory/armband/deputy/lopland
-	desc = "A Peacekeeper-blue armband, showing the wearer to be certified by Lopland as a top-of-their-class Security Officer."
+/obj/item/clothing/accessory/armband/deputy/lopland // ARK STATION EDIT || REDSEC
+	// desc = "A Peacekeeper-blue armband, showing the wearer to be certified by Lopland as a top-of-their-class Security Officer."
 
 /*
 * BACKPACKS

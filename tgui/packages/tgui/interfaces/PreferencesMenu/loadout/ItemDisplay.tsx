@@ -125,19 +125,19 @@ const ItemListDisplay = (props: { items: LoadoutItem[] }) => {
 // NOVA EDIT ADDITION START - Expanded loadout framework
 const FilterItemList = (items: LoadoutItem[]) => {
   const { data } = useBackend<LoadoutManagerData>();
-  const { is_donator, is_veteran } = data;
+  /*  const { is_donator, is_veteran } = data; ARK STATION REMOVED */
   const ckey = data.ckey;
 
   return items.filter((item: LoadoutItem) => {
     if (item.ckey_whitelist && item.ckey_whitelist.indexOf(ckey) === -1) {
       return false;
     }
-    if (item.donator_only && !is_donator) {
+    /*  if (item.donator_only && !is_donator) {
       return false;
-    }
-    if (item.veteran_only && !is_veteran) {
+    } ARK STATION REMOVED */
+    /*  if (item.veteran_only && !is_veteran) {
       return false;
-    }
+    } ARK STATION REMOVED */
 
     return true;
   });

@@ -1638,15 +1638,11 @@
 	pixel_y = -3
 	},
 /obj/item/clothing/head/helmet/alt{
-	layer = 3.00001;
 	pixel_x = -3;
 	pixel_y = 3
 	},
+/obj/item/clothing/head/helmet/alt,
 /obj/item/clothing/head/helmet/alt{
-	layer = 3.00001
-	},
-/obj/item/clothing/head/helmet/alt{
-	layer = 3.00001;
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1786,7 +1782,7 @@
 /obj/structure/grille,
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/space)
+/area/space/nearstation)
 "aCp" = (
 /obj/effect/turf_decal/box,
 /obj/structure/toilet{
@@ -1839,10 +1835,7 @@
 "aDF" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/security/telescreen/auxbase{
-	dir = 4;
-	pixel_x = -28
-	},
+/obj/machinery/computer/security/telescreen/auxbase,
 /obj/item/radio{
 	pixel_x = 6;
 	pixel_y = 6
@@ -3397,9 +3390,7 @@
 /obj/structure/table,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for monitoring medbay to ensure patient safety.";
-	dir = 1;
-	name = "Medbay Monitor";
-	network = list("medical")
+	name = "Medbay Monitor"
 	},
 /obj/structure/reagent_dispensers/wall/peppertank/directional/south,
 /obj/effect/turf_decal/tile/neutral{
@@ -4538,10 +4529,7 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "bzc" = (
-/obj/machinery/computer/security/telescreen/prison{
-	dir = 4;
-	pixel_x = -24
-	},
+/obj/machinery/computer/security/telescreen/prison,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
@@ -7587,9 +7575,7 @@
 "cwj" = (
 /obj/machinery/modular_computer/preset/id,
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/security/telescreen/ce{
-	pixel_y = 28
-	},
+/obj/machinery/computer/security/telescreen/ce,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "cwl" = (
@@ -10612,10 +10598,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/minisat{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/computer/security/telescreen/minisat,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
@@ -11602,9 +11585,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "dNL" = (
 /obj/machinery/computer/security/telescreen/interrogation{
-	name = "isolation room monitor";
-	network = list("isolation");
-	pixel_y = 31
+	name = "isolation room monitor"
 	},
 /obj/machinery/button/flasher{
 	id = "IsolationFlash";
@@ -14237,10 +14218,7 @@
 /turf/closed/wall,
 /area/station/security/checkpoint/customs)
 "eIb" = (
-/obj/machinery/computer/security/telescreen/ordnance{
-	dir = 8;
-	pixel_x = 32
-	},
+/obj/machinery/computer/security/telescreen/ordnance,
 /obj/machinery/light/directional/east,
 /obj/structure/chair/office/light{
 	dir = 4
@@ -14281,10 +14259,7 @@
 "eIP" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the ai_upload.";
-	dir = 4;
-	name = "AI Upload Monitor";
-	network = list("aiupload");
-	pixel_x = -28
+	name = "AI Upload Monitor"
 	},
 /obj/effect/landmark/start/cyborg,
 /obj/machinery/airalarm/directional/north,
@@ -15484,9 +15459,7 @@
 /area/station/command/heads_quarters/rd)
 "ffa" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/warning/deathsposal{
-	layer = 4
-	},
+/obj/structure/sign/warning/deathsposal,
 /turf/open/floor/plating,
 /area/station/medical/virology)
 "ffi" = (
@@ -17113,14 +17086,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/door/directional/east{
 	id = "QMLoaddoor";
-	layer = 4;
 	name = "Off Ramp Toggle";
 	pixel_y = 6;
 	req_access = list("cargo")
 	},
 /obj/machinery/button/door/directional/east{
 	id = "QMLoaddoor2";
-	layer = 4;
 	name = "On Ramp Toggle";
 	pixel_y = -6;
 	req_access = list("cargo")
@@ -18868,9 +18839,7 @@
 /area/station/hallway/primary/fore)
 "gcy" = (
 /obj/structure/table,
-/obj/machinery/computer/security/telescreen/turbine{
-	dir = 4
-	},
+/obj/machinery/computer/security/telescreen/turbine,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
@@ -21229,11 +21198,6 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/medbay/central)
-"gPh" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "gPo" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -27433,9 +27397,7 @@
 /area/station/maintenance/department/chapel)
 "iGD" = (
 /obj/structure/table,
-/obj/machinery/computer/security/telescreen/minisat{
-	dir = 4
-	},
+/obj/machinery/computer/security/telescreen/minisat,
 /obj/machinery/light/directional/west,
 /obj/machinery/status_display/ai/directional/west,
 /obj/effect/decal/cleanable/dirt,
@@ -27856,9 +27818,7 @@
 /obj/structure/table,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons from the safety of his office.";
-	dir = 1;
-	name = "Research Monitor";
-	network = list("rd")
+	name = "Research Monitor"
 	},
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/dark,
@@ -42180,10 +42140,7 @@
 /area/station/science/lab)
 "nvK" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/security/telescreen/prison{
-	dir = 4;
-	pixel_x = -24
-	},
+/obj/machinery/computer/security/telescreen/prison,
 /obj/machinery/computer/security{
 	dir = 4
 	},
@@ -44911,9 +44868,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
 "ouK" = (
-/obj/machinery/chem_dispenser{
-	layer = 2.7
-	},
+/obj/machinery/chem_dispenser,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/directional/east,
 /obj/machinery/requests_console/directional/east{
@@ -46010,8 +45965,7 @@
 /area/station/engineering/atmos)
 "oPX" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	dir = 8;
-	piping_layer = 2
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
@@ -48929,9 +48883,7 @@
 "pJM" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor";
-	network = list("xeno");
-	pixel_y = 2
+	name = "Test Chamber Monitor"
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
@@ -51481,9 +51433,7 @@
 /turf/open/floor/plating,
 /area/station/security/execution/education)
 "qCj" = (
-/obj/machinery/chem_dispenser{
-	layer = 2.7
-	},
+/obj/machinery/chem_dispenser,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
@@ -52958,10 +52908,7 @@
 /area/station/security/brig)
 "rbH" = (
 /obj/machinery/computer/security/telescreen{
-	dir = 8;
-	name = "Station Monitor";
-	network = list("ss13");
-	pixel_x = 24
+	name = "Station Monitor"
 	},
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -57060,7 +57007,6 @@
 "soZ" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/condiment/saltshaker{
-	layer = 3.1;
 	pixel_x = -2;
 	pixel_y = 2
 	},
@@ -57627,9 +57573,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/storage)
 "syu" = (
-/obj/structure/sign/warning/deathsposal{
-	layer = 4
-	},
+/obj/structure/sign/warning/deathsposal,
 /turf/closed/wall,
 /area/station/science/xenobiology)
 "syF" = (
@@ -60083,10 +60027,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/security/telescreen/rd{
-	dir = 8;
-	pixel_x = 28
-	},
+/obj/machinery/computer/security/telescreen/rd,
 /obj/machinery/keycard_auth/directional/east{
 	pixel_y = 26
 	},
@@ -63867,10 +63808,7 @@
 "usp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/computer/security/telescreen/minisat{
-	dir = 8;
-	pixel_x = 28
-	},
+/obj/machinery/computer/security/telescreen/minisat,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/red{
 	dir = 8
@@ -64807,10 +64745,7 @@
 /area/station/security/prison/mess)
 "uJs" = (
 /obj/machinery/computer/security/telescreen/cmo{
-	dir = 1;
-	name = "Chief Medical Officer's telescreen";
-	network = list("medical");
-	pixel_y = 2
+	name = "Chief Medical Officer's telescreen"
 	},
 /obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/showroomfloor,
@@ -66531,9 +66466,7 @@
 /area/station/service/chapel)
 "vna" = (
 /obj/structure/table,
-/obj/structure/window/reinforced/spawner/directional/north{
-	layer = 2.9
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/light/directional/south,
 /obj/machinery/reagentgrinder{
 	pixel_y = 5
@@ -74255,7 +74188,6 @@
 	pixel_x = -8
 	},
 /obj/machinery/door/window/brigdoor/left/directional/east{
-	layer = 4.1;
 	name = "Secondary AI Core Access";
 	pixel_x = 4;
 	req_access = list("ai_upload")
@@ -75562,9 +75494,7 @@
 /obj/machinery/status_display/shuttle{
 	pixel_x = 32
 	},
-/obj/machinery/computer/security/telescreen/minisat{
-	pixel_y = 28
-	},
+/obj/machinery/computer/security/telescreen/minisat,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -93509,12 +93439,12 @@ aeU
 aeU
 aeU
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
 aaa
-vNT
+acm
 acm
 acm
 cev
@@ -93760,18 +93690,18 @@ aeu
 aeu
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
@@ -94017,18 +93947,18 @@ aeu
 aaa
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
 aaa
-vNT
+acm
 aaa
 aaa
 aaa
@@ -94270,22 +94200,22 @@ aeu
 aeu
 aeu
 aeu
-vNT
-vNT
-vNT
-vNT
-vNT
-vNT
-vNT
-vNT
-vNT
-vNT
-oRy
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+acK
 aaa
 aaa
 aaa
 aaa
-oRy
+acK
 aaa
 aaa
 aaa
@@ -94531,7 +94461,7 @@ aaa
 aaa
 aaa
 aaa
-oRy
+acK
 iND
 iND
 iND
@@ -96070,10 +96000,10 @@ aeu
 aeu
 jLq
 jLq
-vNT
-vNT
-vNT
-oRy
+acm
+acm
+acm
+acK
 xYU
 jzj
 fHy
@@ -98123,7 +98053,7 @@ aeu
 aeu
 aeu
 jLq
-gPh
+aeo
 aaa
 aaa
 aaa
@@ -98766,7 +98696,7 @@ aeu
 gUR
 gUR
 cke
-aaa
+acm
 aaa
 aaa
 aaa
@@ -99023,7 +98953,7 @@ aeu
 aUz
 aeU
 acm
-aaa
+acm
 aaa
 aaa
 aaa
