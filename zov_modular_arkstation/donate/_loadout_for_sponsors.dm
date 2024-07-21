@@ -2,7 +2,7 @@
 	category_name = "Whitelisted"
 	category_ui_icon = FA_ICON_DONATE
 	type_to_generate = /datum/loadout_item/whitelisted
-	tab_order = /datum/loadout_category/inhands::tab_order + 1
+	tab_order = /datum/loadout_category/pocket::tab_order + 1
 
 /datum/loadout_item/whitelisted
 	abstract_type = /datum/loadout_item/whitelisted
