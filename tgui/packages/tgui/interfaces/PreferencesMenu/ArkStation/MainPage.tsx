@@ -50,7 +50,6 @@ const CLOTHING_SELECTION_MULTIPLIER = 5.2;
 const CharacterControls = (props: {
   handleRotate: () => void;
   handleOpenSpecies: () => void;
-  handleLoadout: () => void; // ARK STATION EDIT ADDITION
   handleFood: () => void; // ARK STATION EDIT ADDITION
   gender: Gender;
   setGender: (gender: Gender) => void;
@@ -711,9 +710,6 @@ export const MainPage = (props: { openSpecies: () => void }) => {
                       handleOpenSpecies={props.openSpecies}
                       handleRotate={() => {
                         act('rotate');
-                      }}
-                      handleLoadout={() => {
-                        act('open_loadout');
                       }}
                       // SKYRAT EDIT ADDITION - BEGIN
                       handleFood={() => {
