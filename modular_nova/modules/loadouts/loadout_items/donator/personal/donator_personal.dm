@@ -11,21 +11,7 @@
 /datum/loadout_item/pocket_items/drawingtablet
 	name = "Drawing Tablet"
 	item_path = /obj/item/canvas/drawingtablet
-<<<<<<< HEAD
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/suit/furcoat
-	name = "Leather coat with fur"
-	item_path = /obj/item/clothing/suit/furcoat
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/under/jumpsuit/black_turtleneck
-	name = "Black turtleneck"
-	item_path = /obj/item/clothing/under/syndicate/tacticool/black
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-=======
 	donator_only = TRUE
->>>>>>> a49f34960294... Clears out my old donor items + makes the drawing tablet available to all donors (#3753)
 
 /datum/loadout_item/under/jumpsuit/long_skirtleneck
 	name = "Tacticool Skirtleneck (Long)"
@@ -636,24 +622,6 @@
 	name = "Purple and Gold Aviators"
 	item_path = /obj/item/clothing/glasses/gold_aviators
 	// ARK STATION REMOVE: ckeywhitelist = list("nikohyena")
-
-<<<<<<< HEAD
-/datum/loadout_item/under/jumpsuit/caged_dress
-	name = "Caged Purple Dress"
-	item_path = /obj/item/clothing/under/caged_dress
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/suit/shortcoat
-	name = "Short Purple Coat"
-	item_path = /obj/item/clothing/suit/short_coat
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/neck/flowercollar
-	name = "Flower Collar"
-	item_path = /obj/item/clothing/neck/flower_collar
-	// ARK STATION REMOVE: ckeywhitelist = list("thedragmeme")
-=======
->>>>>>> a49f34960294... Clears out my old donor items + makes the drawing tablet available to all donors (#3753)
 
 /datum/loadout_item/under/jumpsuit/goldenkimono
 	name = "Short-Sleeved Kimono"
