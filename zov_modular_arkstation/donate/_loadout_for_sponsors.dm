@@ -1,10 +1,3 @@
-/*
-*	LOADOUT ITEM DATUMS FOR WHITELISTED CKEYS
-*/
-
-/// Whitelisted items (Moves overrided items to backpack)
-// GLOBAL_LIST_INIT(loadout_whitelisted, generate_loadout_items(/datum/loadout_item/whitelisted))
-
 /datum/loadout_category/whitelisted
 	category_name = "Whitelisted"
 	category_ui_icon = FA_ICON_DONATE
