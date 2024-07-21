@@ -86,18 +86,6 @@ const CharacterControls = (props: {
           />
         </Stack.Item>
       )}
-      {/* ARK STATION EDIT ADDITION START */}
-      {props.handleLoadout && (
-        <Stack.Item>
-          <Button
-            onClick={props.handleLoadout}
-            fontSize="22px"
-            icon="suitcase"
-            tooltip="Show Loadout Menu"
-            tooltipPosition="top"
-          />
-        </Stack.Item>
-      )}
       <Stack.Item>
         <Button
           onClick={props.handleFood}
