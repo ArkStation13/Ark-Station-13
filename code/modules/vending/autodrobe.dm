@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 GLOBAL_LIST_INIT(autodrobe_costumes_items, list(
 	/obj/item/clothing/under/costume/gladiator = 3,
 	/obj/item/clothing/head/helmet/gladiator = 3,
@@ -223,7 +220,6 @@ GLOBAL_VAR_INIT(all_autodrobe_items, (autodrobe_costumes_items +\
 	autodrobe_contraband_items \
 ))
 
->>>>>>> 8f91399c5344... [MIRROR] Increases the quantity of available stocked items in the clothesvend and autodrobe [MDB IGNORE] (#3907)
 /obj/machinery/vending/autodrobe
 	name = "\improper AutoDrobe"
 	desc = "A vending machine for costumes."
