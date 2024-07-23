@@ -236,11 +236,6 @@
 		if(ishuman(src))
 			available_emotes += human_emotes
 			var/mob/living/carbon/human/current_mob = src
-<<<<<<< HEAD
-			if(current_mob.dna.species.type in allowed_species_synth)
-				available_emotes += synth_emotes
-=======
->>>>>>> 124a070795bc... Fix synth/silicon emotes being missing from the emote panels for synths, bots, robotic voicebox users (#3924)
 			// Checking if can wag tail
 			var/obj/item/organ/external/tail/tail = current_mob.get_organ_slot(ORGAN_SLOT_EXTERNAL_TAIL)
 			if(!(tail?.wag_flags & WAG_ABLE))
