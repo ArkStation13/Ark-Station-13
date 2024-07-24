@@ -151,6 +151,6 @@
 	name = "Snufkin's Hat"
 	item_path = /obj/item/clothing/head/hats/snufkin_hat
 
-/datum/loadout_item/under/head/gwen_bow
+/datum/loadout_item/head/gwen_bow
 	name = "Doll bow"
 	item_path = /obj/item/clothing/head/hats/gwen_bow
