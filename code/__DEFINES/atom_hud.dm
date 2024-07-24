@@ -68,15 +68,19 @@
 #define DATA_HUD_SECURITY_ADVANCED 2
 #define DATA_HUD_MEDICAL_BASIC 3
 #define DATA_HUD_MEDICAL_ADVANCED 4
-#define DATA_HUD_DIAGNOSTIC_BASIC 5
-#define DATA_HUD_DIAGNOSTIC_ADVANCED 6
+#define DATA_HUD_DIAGNOSTIC 5
+#define DATA_HUD_BOT_PATH 6
 #define DATA_HUD_ABDUCTOR 7
 #define DATA_HUD_SENTIENT_DISEASE 8
 #define DATA_HUD_AI_DETECT 9
 #define DATA_HUD_FAN 10
 #define DATA_HUD_MALF_APC 11
+<<<<<<< HEAD
 // #define DATA_HUD_PERMIT 12 //NOVA EDIT
 #define DATA_HUD_DNR 12 // NOVA EDIT
+=======
+#define DATA_HUD_PERMIT 12 //NOVA EDIT
+>>>>>>> b90eb8bda2b... [MIRROR] HUD traits now apply their corresponding hud automatically. Most clothing/item/etc sources of HUDs now only use traits [MDB IGNORE] (#3861)
 
 /// cooldown for being shown the images for any particular data hud
 #define ADD_HUD_TO_COOLDOWN 20
