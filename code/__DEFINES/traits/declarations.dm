@@ -233,6 +233,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_EXAMINE_FITNESS "reveal_power_level"
 /// These mobs have particularly hygienic tongues
 #define TRAIT_WOUND_LICKER "wound_licker"
+/// Mobs with this trait are allowed to use silicon emotes
+#define TRAIT_SILICON_EMOTES_ALLOWED "silicon_emotes_allowed"
 
 /// This trait designate that the mob was originally a monkey
 #define TRAIT_BORN_MONKEY "born_as_a_monkey"
@@ -699,6 +701,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_HONKSPAMMING "trait_honkspamming"
 /// Required by the waddling element since there are multiple sources of it.
 #define TRAIT_WADDLING "trait_waddling"
+/// Required by the on_hit_effect element, which is in turn added by other elements.
+#define TRAIT_ON_HIT_EFFECT "trait_on_hit_effect"
 
 ///Used for managing KEEP_TOGETHER in [/atom/var/appearance_flags]
 #define TRAIT_KEEP_TOGETHER "keep-together"

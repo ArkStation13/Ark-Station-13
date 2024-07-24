@@ -44,6 +44,8 @@
 	var/list/mob_type_blacklist_typecache
 	/// Types that can use this emote regardless of their state.
 	var/list/mob_type_ignore_stat_typecache
+	/// Trait that is required to use this emote.
+	var/trait_required
 	/// In which state can you use this emote? (Check stat.dm for a full list of them)
 	var/stat_allowed = CONSCIOUS
 	/// Sound to play when emote is called.
