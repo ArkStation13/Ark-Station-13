@@ -60,11 +60,11 @@
 	tool_paths = list(/obj/item/toy/crayon/spraycan)
 	time = 3 SECONDS
 	category = CAT_CLOTHING
-
-// /datum/crafting_recipe/armband/blue // ARK STATION DELETED
+ 
+// /datum/crafting_recipe/armband/blue // ARK STATION REMOVED
 // 	name = "Blue Armband"
 // 	reqs = list(/obj/item/stack/sheet/cloth = 1)
 // 	result = /obj/item/clothing/accessory/armband/deputy/lopland/nonsec
 // 	tool_paths = list(/obj/item/toy/crayon/spraycan)
 // 	time = 3 SECONDS
-// 	category = CAT_CLOTHING // ARK STATION DELETED
+// 	category = CAT_CLOTHING // ARK STATION REMOVED
