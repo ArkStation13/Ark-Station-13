@@ -426,13 +426,8 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	name = "Lubed"
 	inheritability = 90
 	diff_traits_inheritability = 45
-<<<<<<< HEAD
-	guaranteed_inheritance_types = list(/obj/item/fish/clownfish/lube)
-	catalog_description = "This fish exudes a viscous, slippery lubrificant. It's reccomended not to step on it."
-=======
 	spontaneous_manifest_types = list(/obj/item/fish/clownfish/lube = 100)
 	catalog_description = "This fish exudes a viscous, slippery lubrificant. It's recommended not to step on it."
->>>>>>> 9d57e7eba8c... [MIRROR] You can now raise lobstrosities from chasms chrabs. [MDB IGNORE] (#3957)
 	added_difficulty = 5
 
 /datum/fish_trait/lubed/apply_to_fish(obj/item/fish/fish)
