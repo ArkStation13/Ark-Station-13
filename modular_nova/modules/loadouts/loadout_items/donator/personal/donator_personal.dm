@@ -13,6 +13,39 @@
 	item_path = /obj/item/canvas/drawingtablet
 	donator_only = TRUE
 
+<<<<<<< HEAD
+=======
+/datum/loadout_item/under/jumpsuit/paddedunder
+	name = "Feathered Serenity Suit"
+	item_path = /obj/item/clothing/under/padded
+	ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/under/jumpsuit/paddedunder/alt
+	name = "Feathered Serenity Dress"
+	item_path = /obj/item/clothing/under/padded/alt
+	ckeywhitelist = list("snailomi")
+
+/datum/loadout_item/neck/padded
+	name = "Feathered Serenity Cloak"
+	item_path = /obj/item/clothing/neck/padded
+	ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/neck/padded/alt
+	name = "Feathered Serenity Cloak"
+	item_path = /obj/item/clothing/neck/padded/alt
+	ckeywhitelist = list("snailomi")
+
+/datum/loadout_item/gloves/padded
+	name = "Serenity Gloves"
+	item_path = /obj/item/clothing/gloves/padded
+	ckeywhitelist = list("thedragmeme", "snailomi")
+
+/datum/loadout_item/shoes/padded
+	name = "Serenity Boots"
+	item_path = /obj/item/clothing/shoes/jackboots/padded
+	ckeywhitelist = list("thedragmeme")
+
+>>>>>>> 2a6f545e946... [NO GBP] Fixes a stray extra item left by my donor PR and fixes the name of the feathered serenity dress in the loadout menu (#3998)
 /datum/loadout_item/under/jumpsuit/long_skirtleneck
 	name = "Tacticool Skirtleneck (Long)"
 	item_path = /obj/item/clothing/under/syndicate/tacticool/skirt/long
