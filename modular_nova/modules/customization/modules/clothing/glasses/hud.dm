@@ -20,10 +20,6 @@
 /obj/item/clothing/glasses/hud/eyepatch/sec
 	name = "security HUD eyepatch"
 	desc = "Lost your eye beating an innocent clown? Thankfully your corporate overlords have made something to make up for this. May not do well against flashes."
-<<<<<<< HEAD
-	hud_type = DATA_HUD_SECURITY_ADVANCED
-=======
->>>>>>> b90eb8bda2b... [MIRROR] HUD traits now apply their corresponding hud automatically. Most clothing/item/etc sources of HUDs now only use traits [MDB IGNORE] (#3861)
 	clothing_traits = list(TRAIT_SECURITY_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/blue
 
@@ -42,10 +38,6 @@
 	desc = "Do no harm, maybe harm has befell to you, or your poor eyeball, thankfully there's a way to continue your oath, thankfully it didn't mention sleepdarts or monkey men."
 	icon_state = "medpatch"
 	base_icon_state = "medpatch"
-<<<<<<< HEAD
-	hud_type = DATA_HUD_MEDICAL_ADVANCED
-=======
->>>>>>> b90eb8bda2b... [MIRROR] HUD traits now apply their corresponding hud automatically. Most clothing/item/etc sources of HUDs now only use traits [MDB IGNORE] (#3861)
 	clothing_traits = list(TRAIT_MEDICAL_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
 
@@ -87,10 +79,6 @@
 	desc = "Lost your eyeball to a rogue borg? Dare to tell a Dogborg to do it's job? Got bored? Whatever the reason, this bit of tech will help you still repair borgs, they'll never need it since they usually do it themselves, but its the thought that counts."
 	icon_state = "robopatch"
 	base_icon_state = "robopatch"
-<<<<<<< HEAD
-	hud_type = DATA_HUD_DIAGNOSTIC_BASIC
-=======
->>>>>>> b90eb8bda2b... [MIRROR] HUD traits now apply their corresponding hud automatically. Most clothing/item/etc sources of HUDs now only use traits [MDB IGNORE] (#3861)
 	clothing_traits = list(TRAIT_DIAGNOSTIC_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
