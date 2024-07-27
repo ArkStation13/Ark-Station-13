@@ -295,7 +295,23 @@
 		AfterPutItemOnTable(tool, user)
 		return ITEM_INTERACT_SUCCESS
 
+<<<<<<< HEAD
 	return NONE
+=======
+// Where putting things on tables is handled.
+/obj/structure/table/proc/table_place_act(mob/living/user, obj/item/tool, list/modifiers)
+	if(tool.item_flags & ABSTRACT)
+		return NONE
+	if(!user.transferItemToLoc(tool, drop_location(), silent = FALSE))
+		return ITEM_INTERACT_BLOCKING
+	// Items are centered by default, but we move them if click ICON_X and ICON_Y are available
+	if(LAZYACCESS(modifiers, ICON_X) && LAZYACCESS(modifiers, ICON_Y))
+		// Clamp it so that the icon never moves more than 16 pixels in either direction (thus leaving the table turf)
+		tool.pixel_x = clamp(text2num(LAZYACCESS(modifiers, ICON_X)) - 16, -(world.icon_size*0.5), world.icon_size*0.5)
+		tool.pixel_y = clamp(text2num(LAZYACCESS(modifiers, ICON_Y)) - 16, -(world.icon_size*0.5), world.icon_size*0.5)
+	AfterPutItemOnTable(tool, user)
+	return ITEM_INTERACT_SUCCESS
+>>>>>>> c823fd69335... [MIRROR] Fix clicking on a table through the lootpanel with an item forcing it to be placed in the very corner [MDB IGNORE] (#4024)
 
 /obj/structure/table/proc/AfterPutItemOnTable(obj/item/thing, mob/living/user)
 	return
