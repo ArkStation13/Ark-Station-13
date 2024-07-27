@@ -20,8 +20,6 @@
 	var/mode
 	/// Defines messages that will be shown to the user upon switching modes (e.g. turning it on)
 	var/list/modes_msg = list(MODE_ON = "optical matrix enabled", MODE_OFF = "optical matrix disabled")
-	/// Because initial() will not work on subtypes from within the parent we need to store a reference to the type of the glasses calling the procs
-	var/obj/item/clothing/glasses/hud/ar/glasses_type
 
 /// Reuse logic from engine_goggles.dm
 /obj/item/clothing/glasses/hud/ar/Initialize(mapload)
@@ -30,7 +28,6 @@
 
 	// Set our initial values
 	mode = MODE_ON
-	glasses_type = type
 
 /obj/item/clothing/glasses/hud/ar/Destroy()
 	. = ..()
@@ -54,7 +51,7 @@
 		return // If there is only really one mode to cycle through, early return
 
 	if(mode == MODE_FREEZE_ANIMATION)
-		icon = initial(glasses_type.icon) /// Resets icon to initial value after MODE_FREEZE_ANIMATION, since MODE_FREEZE_ANIMATION replaces it with non-animated version of initial
+		icon = initial(icon) /// Resets icon to initial value after MODE_FREEZE_ANIMATION, since MODE_FREEZE_ANIMATION replaces it with non-animated version of initial
 
 	mode = get_next_mode(mode)
 
@@ -108,23 +105,16 @@
 		REMOVE_CLOTHING_TRAIT(human, trait)
 
 /obj/item/clothing/glasses/hud/ar/proc/reset_vars()
-	worn_icon = initial(glasses_type.worn_icon)
-	icon_state = initial(glasses_type.icon_state)
-	flash_protect = initial(glasses_type.flash_protect)
-	tint = initial(glasses_type.tint)
-	color_cutoffs = initial(glasses_type.color_cutoffs)
-	vision_flags = initial(glasses_type.vision_flags)
-	hud_type = initial(glasses_type.hud_type)
-	//initial does not currently work on lists so we must do this
-	var/obj/item/clothing/glasses/hud/ar/glasses_object = new glasses_type // make a temporary glasses obj
-	clothing_traits = glasses_object.clothing_traits // pull the list from the created obj
-	qdel(glasses_object) // delete the object
+	worn_icon = initial(worn_icon)
+	icon_state = initial(icon_state)
+	flash_protect = initial(flash_protect)
+	tint = initial(tint)
+	color_cutoffs = initial(color_cutoffs)
+	vision_flags = initial(vision_flags)
 
 /obj/item/clothing/glasses/hud/ar/proc/disable_vars(mob/user)
 	vision_flags = 0 /// Sets vision_flags to 0 to disable meson view mainly
 	color_cutoffs = null // Resets lighting_alpha to user's default one
-	clothing_traits = null /// also disables the options for Science functionality
-	hud_type = null
 
 /// Create new icon and worn_icon, with only the first frame of every state and setting that as icon.
 /// this practically freezes the animation :)
