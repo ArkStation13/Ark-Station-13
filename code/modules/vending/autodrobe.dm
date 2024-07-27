@@ -225,8 +225,6 @@ GLOBAL_VAR_INIT(all_autodrobe_items, (autodrobe_costumes_items +\
 	req_access = list(ACCESS_THEATRE)
 	product_slogans = "Dress for success!;Suited and booted!;It's show time!;Why leave style up to fate? Use AutoDrobe!"
 	vend_reply = "Thank you for using AutoDrobe!"
-<<<<<<< HEAD
-=======
 
 	/**
 	 * Categories are filled in Initialize!
@@ -239,7 +237,6 @@ GLOBAL_VAR_INIT(all_autodrobe_items, (autodrobe_costumes_items +\
 	light_mask="theater-light-mask"
 
 /obj/machinery/vending/autodrobe/Initialize(mapload)
->>>>>>> 08995f9bd56... [MIRROR] {NO GBP} Restores some lost items in the autodrobe [MDB IGNORE] (#3981)
 	product_categories = list(
 		list(
 			"name" = "Costumes",
