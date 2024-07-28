@@ -16,38 +16,38 @@
 /datum/loadout_item/under/jumpsuit/paddedunder
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/paddedunder/alt
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded/alt
-	ckeywhitelist = list("snailomi")
+	// ARK STATION REMOVED: ckeywhitelist = list("snailomi")
 
 /datum/loadout_item/neck/padded
 	name = "Feathered Serenity Cloak"
 	item_path = /obj/item/clothing/neck/padded
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/neck/padded/alt
 	name = "Feathered Serenity Cloak"
 	item_path = /obj/item/clothing/neck/padded/alt
-	ckeywhitelist = list("snailomi")
+	// ARK STATION REMOVED: ckeywhitelist = list("snailomi")
 
 /datum/loadout_item/neck/padded/alt
 	name = "Feathered Serenity Cloak"
 	item_path = /obj/item/clothing/neck/padded/alt
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 
 /datum/loadout_item/gloves/padded
 	name = "Serenity Gloves"
 	item_path = /obj/item/clothing/gloves/padded
-	ckeywhitelist = list("thedragmeme", "snailomi")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme", "snailomi")
 
 /datum/loadout_item/shoes/padded
 	name = "Serenity Boots"
 	item_path = /obj/item/clothing/shoes/jackboots/padded
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/long_skirtleneck
 	name = "Tacticool Skirtleneck (Long)"
@@ -595,7 +595,7 @@
 /datum/loadout_item/toys/plushie_jeanne
 	name = "Masked Roboticist Plushie"
 	item_path = /obj/item/toy/plush/nova/fox/plushie_jeanne
-//	// ARK STATION REMOVED: ckeywhitelist = list("klb100") // Asked it to be public.
+	// ARK STATION REMOVED: ckeywhitelist = list("klb100") // Asked it to be public.
 
 /datum/loadout_item/under/jumpsuit/tactichill
 	name = "Tactichill Jacket"
@@ -620,11 +620,7 @@
 /datum/loadout_item/shoes/dragheels
 	name = "Fancy Heels (dragmeme)"
 	item_path = /obj/item/clothing/shoes/fancy_heels/drag
-<<<<<<< HEAD
-	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
-=======
-	ckeywhitelist = list("thedragmeme", "snailomi")
->>>>>>> 43778b9edf9... Adds donor items for Thedragmeme and Snailomi (#3887)
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme", "snailomi")
 
 /datum/loadout_item/under/jumpsuit/bimpcap
 	name = "Formal Matte Black Captain Uniform"
@@ -645,7 +641,7 @@
 /datum/loadout_item/toys/plushie_elofy
 	name = "Bumbling Wolfgirl Plushie"
 	item_path = /obj/item/toy/plush/nova/plushie_elofy
-	//// ARK STATION REMOVED: ckeywhitelist = list("october23") // Asked it to be public.
+	// ARK STATION REMOVED: ckeywhitelist = list("october23") // Asked it to be public.
 
 /datum/loadout_item/suit/elofy
 	name = "Solar Admiral Coat"
