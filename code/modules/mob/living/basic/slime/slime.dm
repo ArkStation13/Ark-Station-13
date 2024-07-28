@@ -192,7 +192,7 @@
 	var/icon_text = "[slime_type.colour] [life_stage] slime" // ARK STATION EDIT
 	icon_dead = "[icon_text] dead" // ARK STATION EDIT
 	if(stat != DEAD)
-		icon_state = "[slime_type.colour]-[life_stage]"
+		icon_state = "[slime_type.colour] [life_stage]" // ARK STATION EDIT
 		if(current_mood && current_mood != SLIME_MOOD_NONE && !stat)
 			add_overlay("aslime-[current_mood]")
 	else
