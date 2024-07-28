@@ -47,8 +47,9 @@
 	processing_speed = STATUS_EFFECT_NORMAL_PROCESS
 	alert_type = /atom/movable/screen/alert/status_effect/blood_regen_active
 	/// Current multiplier for how much blood they spend healing themselves for every point of damage healed.
-	var/blood_to_health_multiplier = 1
 	var/cost_blood = 1 /// ARK STATION CHANGE, allows scaling of hemophage healing blood cost.
+	var/blood_to_health_multiplier = 0.25
+
 
 /datum/status_effect/blood_regen_active/on_apply()
 	// This status effect should not exist on its own, or on a non-human.
@@ -133,8 +134,8 @@
 
 /datum/movespeed_modifier/hemophage_dormant_state
 	id = "hemophage_dormant_state"
-	multiplicative_slowdown = 3 // Yeah, they'll be quite significantly slower when in their dormant state.
-	blacklisted_movetypes = FLOATING
+	multiplicative_slowdown = 2 // Yeah, they'll be quite significantly slower when in their dormant state.
+	blacklisted_movetypes = FLOATING|FLYING
 
 /atom/movable/screen/alert/status_effect/blood_thirst_satiated
 	name = "Thirst Satiated"
