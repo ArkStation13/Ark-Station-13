@@ -125,11 +125,7 @@
 	var/chosen_name = sanitize_name(tgui_input_text(bound_spirit, "What are you named?", "Spectral Nomenclature", max_length = MAX_NAME_LEN))
 	if(!chosen_name) // with the way that sanitize_name works, it'll actually send the error message to the awakener as well.
 		to_chat(awakener, span_warning("Your blade did not select a valid name! Please wait as they try again.")) // more verbose than what sanitize_name might pass in it's error message
-<<<<<<< HEAD
-		return custom_name(awakener)
-=======
 		return custom_name(awakener, iteration++)
->>>>>>> cdb1821cba7... [MIRROR] Fixed possessed blades being broken [MDB IGNORE] (#4017)
 	return chosen_name
 
 ///signal fired from a mob moving inside the parent
