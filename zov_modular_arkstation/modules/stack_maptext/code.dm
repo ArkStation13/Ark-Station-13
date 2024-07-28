@@ -42,6 +42,6 @@
 	. = ..()
 	update_icon()
 
-/obj/item/stack/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
-	. = ..()
-	update_icon()
+// /obj/item/stack/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
+// 	. = ..()
+// 	update_icon()
