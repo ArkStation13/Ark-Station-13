@@ -47,13 +47,9 @@
 	processing_speed = STATUS_EFFECT_NORMAL_PROCESS
 	alert_type = /atom/movable/screen/alert/status_effect/blood_regen_active
 	/// Current multiplier for how much blood they spend healing themselves for every point of damage healed.
-<<<<<<< HEAD
-	var/blood_to_health_multiplier = 1
 	var/cost_blood = 1 /// ARK STATION CHANGE, allows scaling of hemophage healing blood cost.
-=======
 	var/blood_to_health_multiplier = 0.25
 
->>>>>>> 03048905894... Hemophage Balance Pass - Hemophages Suck Less Edition (#3706)
 
 /datum/status_effect/blood_regen_active/on_apply()
 	// This status effect should not exist on its own, or on a non-human.
