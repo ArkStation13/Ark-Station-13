@@ -1,5 +1,5 @@
-#define MILLSTONE_STAMINA_MINIMUM 50 //What is the amount of stam damage that we prevent mill use at
-#define MILLSTONE_STAMINA_USE 100 //How much stam damage is given to people when the mill is used
+#define MILLSTONE_STAMINA_MINIMUM 25 //What is the amount of stam damage that we prevent mill use at // ARK STATION EDIT
+#define MILLSTONE_STAMINA_USE 65 //How much stam damage is given to people when the mill is used // ARK STATION EDIT
 
 /obj/structure/millstone
 	name = "millstone"
