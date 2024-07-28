@@ -589,7 +589,7 @@
 /datum/loadout_item/toys/plushie_jeanne
 	name = "Masked Roboticist Plushie"
 	item_path = /obj/item/toy/plush/nova/fox/plushie_jeanne
-//	// ARK STATION REMOVED: ckeywhitelist = list("klb100") // Asked it to be public.
+	// ARK STATION REMOVED: ckeywhitelist = list("klb100") // Asked it to be public.
 
 /datum/loadout_item/under/jumpsuit/tactichill
 	name = "Tactichill Jacket"
@@ -614,7 +614,7 @@
 /datum/loadout_item/shoes/dragheels
 	name = "Fancy Heels (dragmeme)"
 	item_path = /obj/item/clothing/shoes/fancy_heels/drag
-	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme", "snailomi")
 
 /datum/loadout_item/under/jumpsuit/bimpcap
 	name = "Formal Matte Black Captain Uniform"
@@ -635,7 +635,7 @@
 /datum/loadout_item/toys/plushie_elofy
 	name = "Bumbling Wolfgirl Plushie"
 	item_path = /obj/item/toy/plush/nova/plushie_elofy
-	//// ARK STATION REMOVED: ckeywhitelist = list("october23") // Asked it to be public.
+	// ARK STATION REMOVED: ckeywhitelist = list("october23") // Asked it to be public.
 
 /datum/loadout_item/suit/elofy
 	name = "Solar Admiral Coat"

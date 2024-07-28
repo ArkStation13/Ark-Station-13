@@ -6,13 +6,13 @@
 /mob/living/basic/slime
 	name = "grey baby slime (123)"
 	icon = 'icons/mob/simple/slimes.dmi'
-	icon_state = "grey-baby"
+	icon_state = "grey baby" // ARK STATION EDIT
 	pass_flags = PASSTABLE | PASSGRILLE
 	gender = NEUTER
 	faction = list(FACTION_SLIME, FACTION_NEUTRAL)
 
-	icon_living = "grey-baby"
-	icon_dead = "grey-baby-dead"
+	icon_living = "grey baby" // ARK STATION EDIT
+	icon_dead = "grey baby dead" // ARK STATION EDIT
 
 	attack_sound = 'sound/weapons/bite.ogg'
 
@@ -192,7 +192,7 @@
 	var/icon_text = "[slime_type.colour] [life_stage] slime" // ARK STATION EDIT
 	icon_dead = "[icon_text] dead" // ARK STATION EDIT
 	if(stat != DEAD)
-		icon_state = "[slime_type.colour]-[life_stage]"
+		icon_state = "[slime_type.colour] [life_stage] slime" // ARK STATION EDIT
 		if(current_mood && current_mood != SLIME_MOOD_NONE && !stat)
 			add_overlay("aslime-[current_mood]")
 	else
