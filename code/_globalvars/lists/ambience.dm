@@ -204,10 +204,7 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_RUINS = GLOB.ruins_ambience,
 	AMBIENCE_SPACE = GLOB.space_ambience,
 	AMBIENCE_SPOOKY = GLOB.spooky_ambience,
-<<<<<<< HEAD
 	AMBIENCE_OMEGA = GLOB.omega_ambience, // ARK STATION ADDITION
-=======
 	AMBIENCE_MUSHROOM = GLOB.mushroom_ambience, // NOVA EDIT - Mushroom caves!
 	AMBIENCE_FOREST = GLOB.forest_ambience, // NOVA EDIT - Forest ambience
->>>>>>> f1458f3378c... Serenity Ambience DLC - Mushroom theme, several more ambience tracks for the mushroom caves and even some for the forest! (#3668)
 ))
