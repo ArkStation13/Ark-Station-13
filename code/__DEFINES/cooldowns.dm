@@ -62,9 +62,6 @@
 // admin verb cooldowns
 #define COOLDOWN_INTERNET_SOUND "internet_sound"
 
-// ARK STATION DEFINES BELOW
-#define COOLDOWN_GAS_BREATH "cooldown_gas_breath"
-
 //Shared cooldowns for actions
 #define MOB_SHARED_COOLDOWN_1 (1<<0)
 #define MOB_SHARED_COOLDOWN_2 (1<<1)
