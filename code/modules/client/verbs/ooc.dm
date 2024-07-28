@@ -82,9 +82,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	if(CONFIG_GET(flag/enable_cross_server_ooc)) //NOVA EDIT ADDITION
 		send_ooc_to_other_server(ckey, msg) //NOVA EDIT ADDITION
 
-	if(prefs.unlock_content)
-		if(prefs.toggles & MEMBER_PUBLIC)
-			keyname = "<font color='[prefs.read_preference(/datum/preference/color/ooc_color) || GLOB.normal_ooc_colour]'>[icon2html('icons/ui/chat/member_content.dmi', world, "blag")][keyname]</font>"
+	// if(prefs.unlock_content) // ARK STATION REMOVED
+	// 	if(prefs.toggles & MEMBER_PUBLIC) // ARK STATION REMOVED
+	// 		keyname = "<font color='[prefs.read_preference(/datum/preference/color/ooc_color) || GLOB.normal_ooc_colour]'>[icon2html('icons/ui/chat/member_content.dmi', world, "blag")][keyname]</font>" // ARK STATION REMOVED
 	// NOVA EDIT ADDITION START - Donator icons in OOC
 	if(SSplayer_ranks.is_donator(src))
 		if(prefs.read_preference(/datum/preference/toggle/display_donator_status))
