@@ -8,7 +8,7 @@
 	label_class = "church"
 	ui_color = "#b8b8b8"
 	nation_prefixes = list("Religi", "Godoni", "Orhtodoxi", "Pravoslavni")
-	department_delivery_areas = list(/area/station/hallway/secondary/service, /area/station/service/bar/atrium)
+	department_delivery_areas = list(/area/station/service/chapel)
 	associated_cargo_groups = list("Church")
 	head_of_staff_access = ACCESS_CHAPEL_OFFICE
 	department_access = list(ACCESS_CHURCH)

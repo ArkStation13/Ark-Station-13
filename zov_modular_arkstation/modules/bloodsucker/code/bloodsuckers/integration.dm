@@ -8,14 +8,19 @@
 	var/datum/antagonist/bloodsucker/bloodsuckerdatum = IS_BLOODSUCKER(exposed_mob)
 	if(!bloodsuckerdatum)
 		return ..()
-
-	if(istype(bloodsuckerdatum.my_clan, /datum/bloodsucker_clan/ventrue) && bloodsuckerdatum.GetBloodVolume() >= BLOOD_VOLUME_SAFE)
+	if(!(methods & (INJECT|INGEST)))
 		return ..()
-	if(bloodsuckerdatum.GetBloodVolume() >= BLOOD_VOLUME_MAXIMUM)
+
+	if(bloodsuckerdatum.my_clan && istype(bloodsuckerdatum.my_clan, /datum/bloodsucker_clan/ventrue) && bloodsuckerdatum.GetBloodVolume() >= BLOOD_VOLUME_SAFE)
+		return ..()
+	if(bloodsuckerdatum.GetRank() >= BLOODSUCKER_HIGH_LEVEL)
+		exposed_mob.adjust_disgust(5 SECONDS, DISGUST_LEVEL_GROSS)
+		reac_volume = reac_volume * 0.3
+	if(bloodsuckerdatum.GetBloodVolume() >= BLOOD_VOLUME_NORMAL)
 		return ..()
 	bloodsuckerdatum.AdjustBloodVolume(round(reac_volume, 0.1))
 
-/mob/living/carbon/transfer_blood_to(atom/movable/AM, amount, forced, ignore_incompatibility)
+/mob/living/carbon/transfer_blood_to(atom/movable/AM, amount, forced)
 	. = ..()
 	if(!mind)
 		return

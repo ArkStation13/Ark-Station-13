@@ -53,7 +53,7 @@
 	var/madness_chance = clamp(interpolated_chance, min_madness_chance, max_madness_chance)
 	if(!prob(madness_chance) || source.owner.current.stat != CONSCIOUS || HAS_TRAIT(source.owner.current, TRAIT_MASQUERADE))
 		return
-	var/message = pick(strings("malkavian_revelations.json", "revelations", "zov_modular_arkstation/modules/bloodsucker/iconsstrings/bloodsuckers"))
+	var/message = pick(strings("malkavian_revelations.json", "revelations", "zov_modular_arkstation/modules/bloodsucker/strings/bloodsuckers"))
 	INVOKE_ASYNC(source.owner.current, TYPE_PROC_REF(/atom/movable, say), message, forced = CLAN_MALKAVIAN)
 
 /datum/bloodsucker_clan/malkavian/favorite_vassal_gain(datum/antagonist/bloodsucker/source, datum/antagonist/vassal/vassaldatum)

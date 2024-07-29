@@ -126,7 +126,7 @@
 	attack_verb_continuous = list("staked", "stabbed", "tore into")
 	attack_verb_simple = list("staked", "stabbed", "tore into")
 	sharpness = SHARP_EDGED
-	embed_type = /datum/embed_data/stake
+	embedding = list("embed_chance" = 20)
 	force = 6
 	throwforce = 10
 	max_integrity = 30
@@ -135,10 +135,6 @@
 	///Time it takes to embed the stake into someone's chest.
 	var/staketime = 5 SECONDS
 	var/kills_blodsuckers = FALSE
-
-/datum/embed_data/stake
-	embed_chance = 20
-	fall_chance = 0
 
 /obj/item/stake/examine_more(mob/user)
 	. = ..()
@@ -204,12 +200,8 @@
 	force = 8
 	throwforce = 12
 	armour_penetration = 10
-	embed_type = /datum/embed_data/hardened_stake
+	embedding = list("embed_chance" = 35, "fall_chance" = 0)
 	staketime = 12 SECONDS
-
-/datum/embed_data/hardened_stake
-	embed_chance = 35
-	fall_chance = 0
 
 /obj/item/stake/hardened/examine_more(mob/user)
 	. = ..()
@@ -224,13 +216,9 @@
 	force = 9
 	armour_penetration = 25
 	custom_materials = list(/datum/material/silver = SHEET_MATERIAL_AMOUNT)
-	embed_type = /datum/embed_data/silver_stake
+	embedding = list("embed_chance" = 65, "fall_chance" = 0)
 	staketime = 15 SECONDS
 	kills_blodsuckers = TRUE
-
-/datum/embed_data/silver_stake
-	embed_chance = 65
-	fall_chance = 0
 
 /obj/item/stake/hardened/silver/examine_more(mob/user)
 	. = ..()
@@ -268,10 +256,6 @@
 	///Boolean on whether the book is currently being used, so you can only use it on one person at a time.
 	COOLDOWN_DECLARE(bloodsucker_check_cooldown)
 	var/cooldown_time = 1 MINUTES
-
-/obj/item/book/kindred/Initialize(mapload)
-	. = ..()
-	SSpoints_of_interest.make_point_of_interest(src)
 
 /obj/item/book/kindred/try_carve(obj/item/carving_item, mob/living/user, params)
 	to_chat(user, span_notice("You feel the gentle whispers of a Librarian telling you not to cut [starting_title]."))

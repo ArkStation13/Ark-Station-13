@@ -20,4 +20,3 @@
 	for(var/mob/shades in contents)
 		var/datum/antagonist/shaded_bloodsucker/shaded_datum = shades.mind.has_antag_datum(/datum/antagonist/shaded_bloodsucker)
 		shaded_datum.objectives = bloodsuckerdatum.objectives
-

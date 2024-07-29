@@ -181,9 +181,9 @@
 		if(bloodsucker_structure.owner == resident)
 			bloodsucker_structure.unbolt()
 	if(manual)
-		to_chat(resident, span_cult_italic("You have unclaimed your coffin! This also unclaims all your other Bloodsucker structures!"))
+		to_chat(resident, span_cultitalic("You have unclaimed your coffin! This also unclaims all your other Bloodsucker structures!"))
 	else
-		to_chat(resident, span_cult_italic("You sense that the link with your coffin and your sacred lair has been broken! You will need to seek another."))
+		to_chat(resident, span_cultitalic("You sense that the link with your coffin and your sacred lair has been broken! You will need to seek another."))
 	// Remove resident. Because this object isnt removed from the game immediately (GC?) we need to give them a way to see they don't have a home anymore.
 	resident = null
 
@@ -221,11 +221,10 @@
 		if(!bloodsuckerdatum.my_clan)
 			user.balloon_alert("enter a clan!")
 			to_chat(user, span_notice("You must enter a Clan to rank up. Do it in the antag menu, which you can see by pressing the action button in the top left."))
-		else if(!bloodsuckerdatum.frenzied)
-			if(bloodsuckerdatum.GetUnspentRank() < 1)
-				bloodsuckerdatum.blood_level_gain()
+		else
 			// Level ups cost 30% of your max blood volume, which scales with your rank.
-			bloodsuckerdatum.SpendRank(blood_cost = bloodsuckerdatum.max_blood_volume * BLOODSUCKER_LEVELUP_PERCENTAGE)
+			if(!bloodsuckerdatum.frenzied)
+				bloodsuckerdatum.SpendRank(blood_cost = bloodsuckerdatum.max_blood_volume * BLOODSUCKER_LEVELUP_PERCENTAGE)
 		bloodsuckerdatum.check_begin_torpor(TORPOR_SKIP_CHECK_DAMAGE)
 	return TRUE
 
@@ -246,7 +245,7 @@
 	ADD_TRAIT(src, TRAIT_COFFIN_ENLARGED, "bloodsucker_coffin")
 	max_mob_size = user.mob_size
 	to_chat(user, span_warning("The coffin creaks and squeaks as you try to squeeze into it. It's a tight fit but you manage it make it fit you."))
-	playsound(src, 'modular_nova/modules/aesthetics/airlock/sound/creaking.ogg')
+	playsound(src, 'modular_skyrat/modules/aesthetics/airlock/sound/creaking.ogg')
 	animate(src, 1 SECONDS, FALSE, BOUNCE_EASING, transform = transform.Scale(user.mob_size * COFFIN_ENLARGE_MULT))
 
 /obj/structure/closet/crate/proc/un_enlarge(mob/living/user)
@@ -303,7 +302,7 @@
 	return inserted
 
 /// Distance Check (Inside Of)
-/obj/structure/closet/crate/coffin/click_alt(mob/user)
+/obj/structure/closet/crate/coffin/AltClick(mob/user)
 	. = ..()
 	if(user in src)
 		LockMe(user, !locked)
