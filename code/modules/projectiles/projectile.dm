@@ -74,7 +74,7 @@
 	/// During each fire of SSprojectiles, the number of deciseconds since the last fire of SSprojectiles
 	/// is divided by this var, and the result truncated to the next lowest integer is
 	/// the number of times the projectile's `pixel_move` proc will be called.
-	var/speed = 0.3 // 0.8 ARK STATION EDIT
+	var/speed = 0.45 // 0.8 ARK STATION EDIT // 0.3 for Faster
 
 	/// This var is multiplied by SSprojectiles.global_pixel_speed to get how many pixels
 	/// the projectile moves during each iteration of the movement loop

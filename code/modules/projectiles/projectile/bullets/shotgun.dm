@@ -85,7 +85,7 @@
 	stamina = 11
 	sharpness = NONE
 	embed_type = null
-	speed = 0.5 // 1.2 У Skyrat было.
+	speed = 0.6 // ARK STATION EDIT // 1.2 Original // 0.5 for Faster
 	stamina_falloff_tile = -0.25
 	ricochets_max = 4
 	ricochet_chance = 120

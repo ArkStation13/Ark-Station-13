@@ -50,7 +50,7 @@
 	to_chat(owner, span_warning("You mystify the air around your person. Your identity is now altered."))
 
 	// Store Prev Appearance
-	disguise_name = user.generate_random_mob_name(user.gender)
+	disguise_name = generate_random_name(user.gender, TRUE)
 	prev_gender = user.gender
 	prev_skin_tone = user.skin_tone
 	prev_hair_style = user.hairstyle

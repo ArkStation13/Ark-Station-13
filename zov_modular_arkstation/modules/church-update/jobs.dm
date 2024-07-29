@@ -8,10 +8,10 @@
 	label_class = "church"
 	ui_color = "#b8b8b8"
 	nation_prefixes = list("Religi", "Godoni", "Orhtodoxi", "Pravoslavni")
-	department_delivery_areas = list(/area/station/hallway/secondary/service, /area/station/service/bar/atrium)
+	department_delivery_areas = list(/area/station/service/chapel)
 	associated_cargo_groups = list("Church")
 	head_of_staff_access = ACCESS_CHAPEL_OFFICE
-	department_access = list(ACCESS_CHURCH)
+	department_access = list(ACCESS_CHURCH_GENERAL)
 
 
 // THE PRIEST /////////////////////////////////////////////////////////////////////////////////////
@@ -106,7 +106,9 @@
 		ACCESS_MORGUE,
 		ACCESS_SERVICE,
 		ACCESS_THEATRE,
-		ACCESS_CHURCH, // ARK STATION EDIT
+		ACCESS_CHURCH_GENERAL, // ARK STATION EDIT
+		ACCESS_CHURCH_DEACON, // ARK STATION EDIT
+		ACCESS_CHURCH_FISCAL, // ARK STATION EDIT
 		ACCESS_COMMAND, // ARK STATION EDIT
 		ACCESS_KEYCARD_AUTH, // ARK STATION EDIT
 		ACCESS_EVA, // ARK STATION EDIT
@@ -218,8 +220,8 @@
 		ACCESS_MORGUE,
 		ACCESS_SERVICE,
 		ACCESS_THEATRE,
-		ACCESS_CHURCH,
-		ACCESS_DEACON,
+		ACCESS_CHURCH_GENERAL,
+		ACCESS_CHURCH_DEACON,
 		)
 	extra_access = list()
 	template_access = list(
@@ -336,8 +338,8 @@
 		ACCESS_MORGUE,
 		ACCESS_SERVICE,
 		ACCESS_THEATRE,
-		ACCESS_CHURCH,
-		ACCESS_FISCAL,
+		ACCESS_CHURCH_GENERAL,
+		ACCESS_CHURCH_FISCAL,
 		)
 	extra_access = list()
 	template_access = list(

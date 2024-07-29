@@ -54,9 +54,9 @@
 	var/list/datum/antagonist/vassal/special_vassals = list()
 
 	///How many ranks we have, don't modify this directly, use AdjustRank() and use GetRank() to get the current value.
-	var/bloodsucker_level = 0
+	VAR_PRIVATE/bloodsucker_level = 0
 	/// Unspent ranks, don't modify this directly, use AdjustUnspentRanks() and use GetUnspentRanks() to get the current value.
-	var/bloodsucker_level_unspent = 1
+	VAR_PRIVATE/bloodsucker_level_unspent = 1
 	var/additional_regen
 	var/blood_over_cap = 0
 	var/bloodsucker_regen_rate = 0.3
@@ -116,101 +116,6 @@
  * When a body is tranferred, this is called on the new mob
  * while on_gain is called ONCE per ANTAG, this is called ONCE per BODY.
  */
-
-/datum/species/proc/on_bloodsucker_gain(mob/living/carbon/human/target)
-	return null
-
-/datum/species/proc/on_bloodsucker_loss(mob/living/carbon/human/target)
-	return null
-
-/// Replaces a couple organs to normal variants to not cause issues. Not super happy with this, alternative is disallowing vampiric races from being bloodsuckers
-/datum/species/proc/humanize_organs(mob/living/carbon/human/target, organs = list())
-	if(!organs || !length(organs))
-		organs = list(
-			ORGAN_SLOT_HEART = /obj/item/organ/internal/heart,
-			ORGAN_SLOT_LIVER = /obj/item/organ/internal/liver,
-			ORGAN_SLOT_STOMACH = /obj/item/organ/internal/stomach,
-			ORGAN_SLOT_TONGUE = /obj/item/organ/internal/tongue,
-		)
-	mutantheart = organs[ORGAN_SLOT_HEART]
-	mutantliver = organs[ORGAN_SLOT_LIVER]
-	mutantstomach = organs[ORGAN_SLOT_STOMACH]
-	mutanttongue = organs[ORGAN_SLOT_TONGUE]
-	for(var/organ_slot in organs)
-		var/obj/item/organ/old_organ = target.get_organ_slot(organ_slot)
-		var/organ_path = organs[organ_slot]
-		if(old_organ?.type == organ_path)
-			continue
-		var/obj/item/organ/new_organ = SSwardrobe.provide_type(organ_path)
-		new_organ.Insert(target, FALSE, DELETE_IF_REPLACED)
-
-/datum/species/proc/normalize_organs(mob/living/carbon/human/target)
-	mutantheart = initial(mutantheart)
-	mutantliver = initial(mutantliver)
-	mutantstomach = initial(mutantstomach)
-	mutanttongue = initial(mutanttongue)
-	regenerate_organs(target, replace_current = TRUE)
-
-/datum/species/jelly/on_bloodsucker_gain(mob/living/carbon/human/target)
-	humanize_organs(target)
-
-/datum/species/jelly/on_bloodsucker_loss(mob/living/carbon/human/target)
-	// regenerate_organs with replace doesn't seem to automatically remove invalid organs unfortunately
-	normalize_organs()
-
-/datum/species/lizard/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
-	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT
-	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT
-
-/datum/species/lizard/on_bloodsucker_loss(mob/living/carbon/human/target)
-	bodytemp_heat_damage_limit = initial(bodytemp_heat_damage_limit)
-	bodytemp_cold_damage_limit = initial(bodytemp_cold_damage_limit)
-
-/datum/species/vampire
-	inherent_biotypes = MOB_VAMPIRIC|MOB_UNDEAD|MOB_HUMANOID
-
-/datum/species/vampire/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
-	to_chat(target, span_warning("Your vampire features have been removed, your nature as a bloodsucker abates the lesser vampirism curse."))
-	humanize_organs(target, current_species)
-
-/datum/species/vampire/on_bloodsucker_loss(mob/living/carbon/human/target)
-	normalize_organs(target)
-
-// handled by bane on null rod whip
-/datum/species/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
-	return
-
-/datum/species/hemophage
-	inherent_biotypes = MOB_HUMANOID | MOB_ORGANIC | MOB_VAMPIRIC
-	bodypart_overrides = list(
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/mhuman,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mhuman,
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mhuman,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mhuman,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mhuman,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mhuman,
-	)
-
-// MUTANT COLOR OVERRIDE
-
-/datum/species/hemophage/New()
-	inherent_traits |= list(
-		TRAIT_MUTANT_COLORS,
-	)
-	. = ..()
-
-// BLOODSUCKER SPECIFIC FIXES
-/datum/species/hemophage/on_bloodsucker_gain(mob/living/carbon/human/target)
-	to_chat(target, span_warning("Your hemophage features have been removed, your nature as a bloodsucker abates the hemophage virus."))
-	// Without this any new organs would get corrupted again.
-	target.RemoveElement(/datum/element/tumor_corruption)
-	for(var/obj/item/organ/internal/organ in target.organs)
-		organ.RemoveElement(/datum/element/tumor_corruption)
-	humanize_organs(target)
-
-/datum/species/hemophage/on_bloodsucker_loss(mob/living/carbon/human/target)
-	normalize_organs(target)
-
 /datum/antagonist/bloodsucker/apply_innate_effects(mob/living/mob_override)
 	. = ..()
 	var/mob/living/carbon/current_mob = mob_override || owner.current
@@ -239,65 +144,6 @@
 	new /obj/structure/closet/crate/coffin(user_loc)
 	new /obj/structure/bloodsucker/vassalrack(user_loc)
 #endif
-
-/datum/material/silver/on_applied(atom/source, amount, material_flags)
-	. = ..()
-	source.AddElement(/datum/element/bane, mob_biotypes = MOB_VAMPIRIC, damage_multiplier = 0.5)
-
-/datum/material/silver/on_removed(atom/source, amount, material_flags)
-	. = ..()
-	source.RemoveElement(/datum/element/bane)
-
-/obj/item/nullrod/whip/Initialize(mapload)
-	. = ..()
-	// 1.3 * 18 = 23.4 per hit
-	AddElement(/datum/element/bane, mob_biotypes = MOB_VAMPIRIC, damage_multiplier = 0.3)
-
-/datum/species/vampire
-	inherent_biotypes = MOB_VAMPIRIC|MOB_UNDEAD|MOB_HUMANOID
-
-/datum/species/vampire/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
-	to_chat(target, span_warning("Your vampire features have been removed, your nature as a bloodsucker abates the lesser vampirism curse."))
-	humanize_organs(target, current_species)
-
-/datum/species/vampire/on_bloodsucker_loss(mob/living/carbon/human/target)
-	normalize_organs(target)
-
-// handled by bane on null rod whip
-/datum/species/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
-	return
-
-/datum/species/hemophage
-	inherent_biotypes = MOB_HUMANOID | MOB_ORGANIC | MOB_VAMPIRIC
-	bodypart_overrides = list(
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/mhuman,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mhuman,
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mhuman,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mhuman,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mhuman,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mhuman,
-	)
-
-// MUTANT COLOR OVERRIDE
-
-/datum/species/hemophage/New()
-	inherent_traits |= list(
-		TRAIT_MUTANT_COLORS,
-	)
-	. = ..()
-
-// BLOODSUCKER SPECIFIC FIXES
-/datum/species/hemophage/on_bloodsucker_gain(mob/living/carbon/human/target)
-	to_chat(target, span_warning("Your hemophage features have been removed, your nature as a bloodsucker abates the hemophage virus."))
-	// Without this any new organs would get corrupted again.
-	target.RemoveElement(/datum/element/tumor_corruption)
-	for(var/obj/item/organ/internal/organ in target.organs)
-		organ.RemoveElement(/datum/element/tumor_corruption)
-	humanize_organs(target)
-
-/datum/species/hemophage/on_bloodsucker_loss(mob/living/carbon/human/target)
-	normalize_organs(target)
-
 
 /**
  * Remove innate effects is everything given to the mob
@@ -595,30 +441,6 @@
 	/// Clear Disabilities & Organs
 	heal_vampire_organs()
 
-/datum/language/vampiric
-	name = "Blah-Sucker"
-	desc = "The native language of the Bloodsucker elders, learned intuitively by Fledglings as they pass from death into immortality."
-	key = "L"//Capital L, lowercase l is for ashies.
-	space_chance = 40
-	default_priority = 90
-
-	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
-	syllables = list(
-		"luk","cha","no","kra","pru","chi","busi","tam","pol","spu","och",
-		"umf","ora","stu","si","ri","li","ka","red","ani","lup","ala","pro",
-		"to","siz","nu","pra","ga","ump","ort","a","ya","yach","tu","lit",
-		"wa","mabo","mati","anta","tat","tana","prol",
-		"tsa","si","tra","te","ele","fa","inz",
-		"nza","est","sti","ra","pral","tsu","ago","esch","chi","kys","praz",
-		"froz","etz","tzil",
-		"t'","k'","t'","k'","th'","tz'"
-		)
-
-	icon_state = "bloodsucker"
-	icon = 'zov_modular_arkstation/modules/bloodsucker/icons/misc/language.dmi'
-	secret = TRUE
-
-
 /**
  * ##clear_power_and_stats()
  *
@@ -716,8 +538,151 @@
 			gourmand_objective.objective_name = "Optional Objective"
 			objectives += gourmand_objective
 
-// Brain Damage //
+// ARK
 
+/datum/language/vampiric
+	name = "Blah-Sucker"
+	desc = "The native language of the Bloodsucker elders, learned intuitively by Fledglings as they pass from death into immortality."
+	key = "L"//Capital L, lowercase l is for ashies.
+	space_chance = 40
+	default_priority = 90
+
+	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
+	syllables = list(
+		"luk","cha","no","kra","pru","chi","busi","tam","pol","spu","och",
+		"umf","ora","stu","si","ri","li","ka","red","ani","lup","ala","pro",
+		"to","siz","nu","pra","ga","ump","ort","a","ya","yach","tu","lit",
+		"wa","mabo","mati","anta","tat","tana","prol",
+		"tsa","si","tra","te","ele","fa","inz",
+		"nza","est","sti","ra","pral","tsu","ago","esch","chi","kys","praz",
+		"froz","etz","tzil",
+		"t'","k'","t'","k'","th'","tz'"
+		)
+
+	icon_state = "bloodsucker"
+	icon = 'zov_modular_arkstation/modules/bloodsucker/icons/misc/language.dmi'
+	secret = TRUE
+
+//
+
+#define COFFIN_HEALING_COST 0.5
+
+/datum/quirk/sol_weakness
+	name = "Sol Weakness"
+	icon = FA_ICON_SUN
+	desc = "Your sub-species of the Hemophage virus renders you weak to Solar radiation, \
+		you will have to hide in a coffin or a closet during the day, or risk burning to a crisp. \
+		Thankfully, you will also heal your wounds at half cost in a coffin."
+	gain_text = span_warning("You feel a sudden weakness in your body, and a burning sensation on your skin. \
+		You should find a coffin to hide in during the day.")
+	lose_text = span_notice("You feel safe in Sol's embrace once more.")
+	medical_record_text = "Patient's strain of the hemophage virus is weak to sunlight. \
+		They will have to hide in a coffin or a closet during the day, or risk burning to a crisp."
+	value = -4
+	hardcore_value = 6
+	species_whitelist = list(SPECIES_HEMOPHAGE)
+	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_HUMAN_ONLY
+	COOLDOWN_DECLARE(sun_burn)
+
+/datum/quirk/sol_weakness/add()
+	if(!quirk_holder.hud_used)
+		RegisterSignal(quirk_holder, COMSIG_MOB_HUD_CREATED, PROC_REF(add_sun_timer_hud))
+		return
+	add_sun_timer_hud()
+
+/datum/quirk/sol_weakness/remove()
+	SSsunlight.remove_sun_sufferer(quirk_holder)
+	UnregisterSignal(SSsunlight, list(COMSIG_SOL_RISE_TICK, COMSIG_SOL_WARNING_GIVEN))
+
+/datum/quirk
+	/// List of species that this quirk is valid for, or empty if it's valid for all species. Only use species ids here.
+	var/list/species_whitelist = list()
+
+/datum/quirk/add_to_holder(mob/living/new_holder, quirk_transfer, client/client_source)
+	if(!can_add(new_holder))
+		CRASH("Attempted to add quirk to holder that can't have it.")
+	. = ..()
+
+/// Returns true if the quirk is valid for the target, call parent so qurk_species_whitelist can be checked.
+/datum/quirk/proc/can_add(mob/target)
+	SHOULD_CALL_PARENT(TRUE)
+	if(length(species_whitelist))
+		if(!ishuman(target))
+			return FALSE
+		var/mob/living/carbon/human = target
+		if(!(human?.dna.species.id in species_whitelist))
+			return FALSE
+	return TRUE
+
+
+/datum/quirk/sol_weakness/can_add(mob/target)
+	. = ..()
+	if(!.)
+		return
+	return !IS_BLOODSUCKER(target)
+
+/datum/quirk/sol_weakness/process(seconds_per_tick)
+	var/datum/status_effect/blood_regen_active/regen = quirk_holder?.has_status_effect(/datum/status_effect/blood_regen_active)
+	if(in_coffin() && ishemophage(quirk_holder))
+		if(!regen)
+			return
+		// cheaper healing as long as you're in a coffin
+		regen.cost_blood = COFFIN_HEALING_COST
+	else if(regen?.blood_to_health_multiplier == COFFIN_HEALING_COST)
+		regen.cost_blood = initial(regen.blood_to_health_multiplier)
+
+/datum/quirk/sol_weakness/proc/add_sun_timer_hud()
+	if(!quirk_holder.hud_used)
+		CRASH("Sol Weakness quirk holder has no HUD")
+	SSsunlight.add_sun_sufferer(quirk_holder)
+	UnregisterSignal(quirk_holder, COMSIG_MOB_HUD_CREATED)
+	RegisterSignal(SSsunlight, COMSIG_SOL_RISE_TICK, PROC_REF(sun_risen))
+	RegisterSignal(SSsunlight, COMSIG_SOL_WARNING_GIVEN, PROC_REF(sun_warning))
+
+/datum/quirk/sol_weakness/proc/sun_risen()
+	SIGNAL_HANDLER
+	if(!istype(quirk_holder.loc, /obj/structure))
+		sun_burn()
+	else
+		if(in_coffin())
+			quirk_holder.add_mood_event("vampsleep", /datum/mood_event/coffinsleep/quirk)
+			sun_burn_message(span_warning("The sun is up, but you safely rest in your [quirk_holder.loc]."))
+		else
+			quirk_holder.add_mood_event("vampsleep", /datum/mood_event/daylight_bad_sleep)
+			quirk_holder.adjustFireLoss(1)
+			sun_burn_message(span_warning("[quirk_holder.loc] is not a coffin, but it keeps you safe enough."))
+
+/datum/quirk/sol_weakness/proc/sun_burn()
+	quirk_holder.add_mood_event("vampsleep", /datum/mood_event/daylight_sun_scorched)
+	if(quirk_holder.blood_volume > BLOOD_VOLUME_MAXIMUM * 0.4)
+		quirk_holder.blood_volume -= 5
+		sun_burn_message(span_warning("The sun burns your skin, but your blood protects you from the worst of it..."))
+		quirk_holder.adjustFireLoss(1)
+		return
+	sun_burn_message(span_userdanger("THE SUN, IT BURNS!"))
+	quirk_holder.adjustFireLoss(2)
+	quirk_holder.adjust_fire_stacks(1)
+	quirk_holder.ignite_mob()
+
+/datum/quirk/sol_weakness/proc/sun_burn_message(text)
+	SIGNAL_HANDLER
+	if(!COOLDOWN_FINISHED(src, sun_burn))
+		return
+	to_chat(quirk_holder, text)
+	COOLDOWN_START(src, sun_burn, 30 SECONDS)
+
+/datum/quirk/sol_weakness/proc/sun_warning(atom/source, danger_level, vampire_warning_message, vassal_warning_message)
+	SIGNAL_HANDLER
+	if(danger_level == DANGER_LEVEL_SOL_ROSE)
+		vampire_warning_message = span_userdanger("Solar flares bombard the station with deadly UV light! Stay in cover for the next [TIME_BLOODSUCKER_DAY / 60] minutes or risk death!")
+	SSsunlight.warn_notify(quirk_holder, danger_level, vampire_warning_message)
+
+/datum/quirk/sol_weakness/proc/in_coffin()
+	return istype(quirk_holder.loc, /obj/structure/closet/crate/coffin)
+
+#undef COFFIN_HEALING_COST
+
+//
 /**
  * # Phobetor Brain Trauma
  *
@@ -888,3 +853,105 @@
 	to_chat(user, span_notice("You slip unseen through [src]."))
 	user.playsound_local(null, 'sound/magic/wand_teleport.ogg', 30, FALSE, pressure_affected = FALSE)
 	user.forceMove(get_turf(linked_to))
+
+//
+/// Called once the target is made into a bloodsucker. Used for removing conflicting species organs mostly
+/datum/species/proc/on_bloodsucker_gain(mob/living/carbon/human/target)
+	return null
+
+/datum/species/proc/on_bloodsucker_loss(mob/living/carbon/human/target)
+	return null
+
+/// Replaces a couple organs to normal variants to not cause issues. Not super happy with this, alternative is disallowing vampiric races from being bloodsuckers
+/datum/species/proc/humanize_organs(mob/living/carbon/human/target, organs = list())
+	if(!organs || !length(organs))
+		organs = list(
+			ORGAN_SLOT_HEART = /obj/item/organ/internal/heart,
+			ORGAN_SLOT_LIVER = /obj/item/organ/internal/liver,
+			ORGAN_SLOT_STOMACH = /obj/item/organ/internal/stomach,
+			ORGAN_SLOT_TONGUE = /obj/item/organ/internal/tongue,
+		)
+	mutantheart = organs[ORGAN_SLOT_HEART]
+	mutantliver = organs[ORGAN_SLOT_LIVER]
+	mutantstomach = organs[ORGAN_SLOT_STOMACH]
+	mutanttongue = organs[ORGAN_SLOT_TONGUE]
+	for(var/organ_slot in organs)
+		var/obj/item/organ/old_organ = target.get_organ_slot(organ_slot)
+		var/organ_path = organs[organ_slot]
+		if(old_organ?.type == organ_path)
+			continue
+		var/obj/item/organ/new_organ = SSwardrobe.provide_type(organ_path)
+		new_organ.Insert(target, FALSE, DELETE_IF_REPLACED)
+
+/datum/species/proc/normalize_organs(mob/living/carbon/human/target)
+	mutantheart = initial(mutantheart)
+	mutantliver = initial(mutantliver)
+	mutantstomach = initial(mutantstomach)
+	mutanttongue = initial(mutanttongue)
+	regenerate_organs(target, replace_current = TRUE)
+
+//
+
+/datum/species/jelly/on_bloodsucker_gain(mob/living/carbon/human/target)
+	humanize_organs(target)
+
+/datum/species/jelly/on_bloodsucker_loss(mob/living/carbon/human/target)
+	// regenerate_organs with replace doesn't seem to automatically remove invalid organs unfortunately
+	normalize_organs()
+
+//
+
+/datum/species/lizard/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
+	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT
+	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT
+
+/datum/species/lizard/on_bloodsucker_loss(mob/living/carbon/human/target)
+	bodytemp_heat_damage_limit = initial(bodytemp_heat_damage_limit)
+	bodytemp_cold_damage_limit = initial(bodytemp_cold_damage_limit)
+
+//
+/datum/species/vampire
+	inherent_biotypes = MOB_VAMPIRIC|MOB_UNDEAD|MOB_HUMANOID
+
+/datum/species/vampire/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
+	to_chat(target, span_warning("Your vampire features have been removed, your nature as a bloodsucker abates the lesser vampirism curse."))
+	humanize_organs(target, current_species)
+
+/datum/species/vampire/on_bloodsucker_loss(mob/living/carbon/human/target)
+	normalize_organs(target)
+
+// handled by bane on null rod whip
+/datum/species/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
+	return
+
+//
+/datum/species/hemophage
+	inherent_biotypes = MOB_HUMANOID | MOB_ORGANIC | MOB_VAMPIRIC
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/mhuman,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mhuman,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mhuman,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mhuman,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mhuman,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mhuman,
+	)
+
+// MUTANT COLOR OVERRIDE
+
+/datum/species/hemophage/New()
+	inherent_traits |= list(
+		TRAIT_MUTANT_COLORS,
+	)
+	. = ..()
+
+// BLOODSUCKER SPECIFIC FIXES
+/datum/species/hemophage/on_bloodsucker_gain(mob/living/carbon/human/target)
+	to_chat(target, span_warning("Your hemophage features have been removed, your nature as a bloodsucker abates the hemophage virus."))
+	// Without this any new organs would get corrupted again.
+	target.RemoveElement(/datum/element/tumor_corruption)
+	for(var/obj/item/organ/internal/organ in target.organs)
+		organ.RemoveElement(/datum/element/tumor_corruption)
+	humanize_organs(target)
+
+/datum/species/hemophage/on_bloodsucker_loss(mob/living/carbon/human/target)
+	normalize_organs(target)
