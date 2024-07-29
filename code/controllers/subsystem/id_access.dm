@@ -331,6 +331,9 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_CENT_BAR]"] = "Code Scotch"
 	desc_by_access["[ACCESS_BIT_DEN]"] = "Bitrunner Den"
 	desc_by_access["[ACCESS_BARBER]"] = "Barber" // NOVA EDIT ADD - BARBER UPDATE
+	desc_by_access["[ACCESS_CHURCH_DEACON]"] = "Deacon's Room" // ARK STATION ADDITION
+	desc_by_access["[ACCESS_CHURCH_FISCAL]"] = "Fiscal's Office" // ARK STATION ADDITION
+	desc_by_access["[ACCESS_CHURCH_GENERAL]"] = "Church Corridors" // ARK STATION ADDITION
 
 /**
  * Returns the access bitflags associated with any given access level.

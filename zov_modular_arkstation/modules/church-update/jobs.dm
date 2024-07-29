@@ -11,7 +11,7 @@
 	department_delivery_areas = list(/area/station/service/chapel)
 	associated_cargo_groups = list("Church")
 	head_of_staff_access = ACCESS_CHAPEL_OFFICE
-	department_access = list(ACCESS_CHURCH)
+	department_access = list(ACCESS_CHURCH_GENERAL)
 
 
 // THE PRIEST /////////////////////////////////////////////////////////////////////////////////////

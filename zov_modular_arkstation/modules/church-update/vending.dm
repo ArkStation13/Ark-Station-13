@@ -2,7 +2,7 @@
 	name = "Church Vending Refill Crate"
 	desc = "Deo volente!"
 	cost = CARGO_CRATE_VALUE * 9
-	access = ACCESS_CHURCH
+	access = ACCESS_CHURCH_GENERAL
 	contains = list(/obj/item/vending_refill/wardrobe/chap_wardrobe,
 					/obj/item/vending_refill/wardrobe/chap_wardrobe_deacon,
 					/obj/item/vending_refill/wardrobe/chap_wardrobe_fiscal,

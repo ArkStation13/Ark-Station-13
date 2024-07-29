@@ -3,7 +3,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/church/chapel_general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CHAPEL_GENERAL
+	access_list += ACCESS_CHURCH_GENERAL
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/church/chapel_office/get_access()
@@ -18,10 +18,10 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/church/deacon/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CHAPEL_DEACON
+	access_list += ACCESS_CHURCH_DEACON
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/church/fiscal/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CHAPEL_FISCAL
+	access_list += ACCESS_CHURCH_FISCAL
 	return access_list
