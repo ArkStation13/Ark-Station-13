@@ -560,7 +560,7 @@
 		)
 
 	icon_state = "bloodsucker"
-	icon = 'modular_zubbers/icons/misc/language.dmi'
+	icon = 'zov_modular_arkstation/modules/bloodsucker/icons/misc/language.dmi'
 	secret = TRUE
 
 //
