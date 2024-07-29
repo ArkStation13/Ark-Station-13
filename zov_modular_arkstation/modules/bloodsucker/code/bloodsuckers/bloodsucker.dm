@@ -306,7 +306,7 @@
 	owner.announce_objectives()
 	if(bloodsucker_level_unspent >= 2)
 		to_chat(owner, span_announce("As a latejoiner, you have [bloodsucker_level_unspent] bonus Ranks, entering your claimed coffin allows you to spend a Rank."))
-	owner.current.playsound_local(null, 'zov_modular_arkstation/modules/bloodsucker/sound/bloodsucker/BloodsuckerAlert.ogg', 100, FALSE, pressure_affected = FALSE)
+	owner.current.playsound_local(null, 'zov_modular_arkstation/modules/bloodsucker/sound/BloodsuckerAlert.ogg', 100, FALSE, pressure_affected = FALSE)
 	antag_memory += "Although you were born a mortal, in undeath you earned the name <b>[fullname]</b>.<br>"
 
 /datum/antagonist/bloodsucker/farewell()
@@ -537,3 +537,400 @@
 			gourmand_objective.owner = owner
 			gourmand_objective.objective_name = "Optional Objective"
 			objectives += gourmand_objective
+
+// ARK
+
+/datum/language/vampiric
+	name = "Blah-Sucker"
+	desc = "The native language of the Bloodsucker elders, learned intuitively by Fledglings as they pass from death into immortality."
+	key = "L"//Capital L, lowercase l is for ashies.
+	space_chance = 40
+	default_priority = 90
+
+	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
+	syllables = list(
+		"luk","cha","no","kra","pru","chi","busi","tam","pol","spu","och",
+		"umf","ora","stu","si","ri","li","ka","red","ani","lup","ala","pro",
+		"to","siz","nu","pra","ga","ump","ort","a","ya","yach","tu","lit",
+		"wa","mabo","mati","anta","tat","tana","prol",
+		"tsa","si","tra","te","ele","fa","inz",
+		"nza","est","sti","ra","pral","tsu","ago","esch","chi","kys","praz",
+		"froz","etz","tzil",
+		"t'","k'","t'","k'","th'","tz'"
+		)
+
+	icon_state = "bloodsucker"
+	icon = 'modular_zubbers/icons/misc/language.dmi'
+	secret = TRUE
+
+//
+
+#define COFFIN_HEALING_COST 0.5
+
+/datum/quirk/sol_weakness
+	name = "Sol Weakness"
+	icon = FA_ICON_SUN
+	desc = "Your sub-species of the Hemophage virus renders you weak to Solar radiation, \
+		you will have to hide in a coffin or a closet during the day, or risk burning to a crisp. \
+		Thankfully, you will also heal your wounds at half cost in a coffin."
+	gain_text = span_warning("You feel a sudden weakness in your body, and a burning sensation on your skin. \
+		You should find a coffin to hide in during the day.")
+	lose_text = span_notice("You feel safe in Sol's embrace once more.")
+	medical_record_text = "Patient's strain of the hemophage virus is weak to sunlight. \
+		They will have to hide in a coffin or a closet during the day, or risk burning to a crisp."
+	value = -4
+	hardcore_value = 6
+	species_whitelist = list(SPECIES_HEMOPHAGE)
+	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_HUMAN_ONLY
+	COOLDOWN_DECLARE(sun_burn)
+
+/datum/quirk/sol_weakness/add()
+	if(!quirk_holder.hud_used)
+		RegisterSignal(quirk_holder, COMSIG_MOB_HUD_CREATED, PROC_REF(add_sun_timer_hud))
+		return
+	add_sun_timer_hud()
+
+/datum/quirk/sol_weakness/remove()
+	SSsunlight.remove_sun_sufferer(quirk_holder)
+	UnregisterSignal(SSsunlight, list(COMSIG_SOL_RISE_TICK, COMSIG_SOL_WARNING_GIVEN))
+
+/datum/quirk/sol_weakness/can_add(mob/target)
+	. = ..()
+	if(!.)
+		return
+	return !IS_BLOODSUCKER(target)
+
+/datum/quirk/sol_weakness/process(seconds_per_tick)
+	var/datum/status_effect/blood_regen_active/regen = quirk_holder?.has_status_effect(/datum/status_effect/blood_regen_active)
+	if(in_coffin() && ishemophage(quirk_holder))
+		if(!regen)
+			return
+		// cheaper healing as long as you're in a coffin
+		regen.cost_blood = COFFIN_HEALING_COST
+	else if(regen?.blood_to_health_multiplier == COFFIN_HEALING_COST)
+		regen.cost_blood = initial(regen.blood_to_health_multiplier)
+
+/datum/quirk/sol_weakness/proc/add_sun_timer_hud()
+	if(!quirk_holder.hud_used)
+		CRASH("Sol Weakness quirk holder has no HUD")
+	SSsunlight.add_sun_sufferer(quirk_holder)
+	UnregisterSignal(quirk_holder, COMSIG_MOB_HUD_CREATED)
+	RegisterSignal(SSsunlight, COMSIG_SOL_RISE_TICK, PROC_REF(sun_risen))
+	RegisterSignal(SSsunlight, COMSIG_SOL_WARNING_GIVEN, PROC_REF(sun_warning))
+
+/datum/quirk/sol_weakness/proc/sun_risen()
+	SIGNAL_HANDLER
+	if(!istype(quirk_holder.loc, /obj/structure))
+		sun_burn()
+	else
+		if(in_coffin())
+			quirk_holder.add_mood_event("vampsleep", /datum/mood_event/coffinsleep/quirk)
+			sun_burn_message(span_warning("The sun is up, but you safely rest in your [quirk_holder.loc]."))
+		else
+			quirk_holder.add_mood_event("vampsleep", /datum/mood_event/daylight_bad_sleep)
+			quirk_holder.adjustFireLoss(1)
+			sun_burn_message(span_warning("[quirk_holder.loc] is not a coffin, but it keeps you safe enough."))
+
+/datum/quirk/sol_weakness/proc/sun_burn()
+	quirk_holder.add_mood_event("vampsleep", /datum/mood_event/daylight_sun_scorched)
+	if(quirk_holder.blood_volume > BLOOD_VOLUME_MAXIMUM * 0.4)
+		quirk_holder.blood_volume -= 5
+		sun_burn_message(span_warning("The sun burns your skin, but your blood protects you from the worst of it..."))
+		quirk_holder.adjustFireLoss(1)
+		return
+	sun_burn_message(span_userdanger("THE SUN, IT BURNS!"))
+	quirk_holder.adjustFireLoss(2)
+	quirk_holder.adjust_fire_stacks(1)
+	quirk_holder.ignite_mob()
+
+/datum/quirk/sol_weakness/proc/sun_burn_message(text)
+	SIGNAL_HANDLER
+	if(!COOLDOWN_FINISHED(src, sun_burn))
+		return
+	to_chat(quirk_holder, text)
+	COOLDOWN_START(src, sun_burn, 30 SECONDS)
+
+/datum/quirk/sol_weakness/proc/sun_warning(atom/source, danger_level, vampire_warning_message, vassal_warning_message)
+	SIGNAL_HANDLER
+	if(danger_level == DANGER_LEVEL_SOL_ROSE)
+		vampire_warning_message = span_userdanger("Solar flares bombard the station with deadly UV light! Stay in cover for the next [TIME_BLOODSUCKER_DAY / 60] minutes or risk death!")
+	SSsunlight.warn_notify(quirk_holder, danger_level, vampire_warning_message)
+
+/datum/quirk/sol_weakness/proc/in_coffin()
+	return istype(quirk_holder.loc, /obj/structure/closet/crate/coffin)
+
+#undef COFFIN_HEALING_COST
+
+//
+/**
+ * # Phobetor Brain Trauma
+ *
+ * Beefmen's Brain trauma, causing phobetor tears to traverse through.
+ */
+
+/datum/brain_trauma/special/bluespace_prophet/phobetor
+	name = "Sleepless Dreamer"
+	desc = "The patient, after undergoing untold psychological hardship, believes they can travel between the dreamscapes of this dimension."
+	scan_desc = "awoken sleeper"
+	gain_text = "<span class='notice'>Your mind snaps, and you wake up. You <i>really</i> wake up."
+	lose_text = "<span class='warning'>You succumb once more to the sleepless dream of the unwoken."
+
+	///Created tears, only checking the FIRST one, not the one it's created to link to.
+	var/list/created_firsts = list()
+
+///When the trauma is removed from a mob.
+/datum/brain_trauma/special/bluespace_prophet/phobetor/on_lose(silent)
+	. = ..()
+	for(var/obj/effect/client_image_holder/phobetor/phobetor_tears as anything in created_firsts)
+		qdel(phobetor_tears)
+
+/datum/brain_trauma/special/bluespace_prophet/phobetor/on_life(seconds_per_tick, times_fired)
+	if(!COOLDOWN_FINISHED(src, portal_cooldown))
+		return
+	COOLDOWN_START(src, portal_cooldown, 10 SECONDS)
+	var/list/turf/possible_tears = list()
+	for(var/turf/nearby_turfs as anything in RANGE_TURFS(8, owner))
+		if(nearby_turfs.density)
+			continue
+		possible_tears += nearby_turfs
+	if(!LAZYLEN(possible_tears))
+		return
+
+	var/turf/first_tear
+	var/turf/second_tear
+	first_tear = return_valid_floor_in_range(owner, 6, 0, TRUE)
+	if(!first_tear)
+		return
+	second_tear = return_valid_floor_in_range(first_tear, 20, 6, TRUE)
+	if(!second_tear)
+		return
+
+	var/obj/effect/client_image_holder/phobetor/first = new(first_tear, owner)
+	var/obj/effect/client_image_holder/phobetor/second = new(second_tear, owner)
+
+	first.linked_to = second
+	first.seer = owner
+	first.desc += " This one leads to [get_area(second)]."
+	first.name += " ([get_area(second)])"
+	created_firsts += first
+
+	second.linked_to = first
+	second.seer = owner
+	second.desc += " This one leads to [get_area(first)]."
+	second.name += " ([get_area(first)])"
+
+	// Delete Next Portal if it's time (it will remove its partner)
+	var/obj/effect/client_image_holder/phobetor/first_on_the_stack = created_firsts[1]
+	if(created_firsts.len && world.time >= first_on_the_stack.created_on + first_on_the_stack.exist_length)
+		var/targetGate = first_on_the_stack
+		created_firsts -= targetGate
+		qdel(targetGate)
+
+/datum/brain_trauma/special/bluespace_prophet/phobetor/proc/return_valid_floor_in_range(atom/targeted_atom, checkRange = 8, minRange = 0, check_floor = TRUE)
+	// FAIL: Atom doesn't exist. Aren't you real?
+	if(!istype(targeted_atom))
+		return FALSE
+	var/delta_x = rand(minRange,checkRange)*pick(-1,1)
+	var/delta_y = rand(minRange,checkRange)*pick(-1,1)
+	var/turf/center = get_turf(targeted_atom)
+
+	var/target = locate((center.x + delta_x),(center.y + delta_y), center.z)
+	if(check_turf_is_valid(target, check_floor))
+		return target
+	return FALSE
+
+/**
+ * Used as a helper that checks if you can successfully teleport to a turf.
+ * Returns a boolean, and checks for if the turf has density, if the turf's area has the NOTELEPORT flag,
+ * and if the objects in the turf have density.
+ * If check_floor is TRUE in the argument, it will return FALSE if it's not a type of [/turf/open/floor].
+ * Arguments:
+ * * turf/open_turf - The turf being checked for validity.
+ * * check_floor - Checks if it's a type of [/turf/open/floor]. If this is FALSE, lava/chasms will be able to be selected.
+ */
+/datum/brain_trauma/special/bluespace_prophet/phobetor/proc/check_turf_is_valid(turf/open_turf, check_floor = TRUE)
+	if(check_floor && !istype(open_turf, /turf/open/floor))
+		return FALSE
+	if(open_turf.density)
+		return FALSE
+	var/area/turf_area = get_area(open_turf)
+	if(turf_area.area_flags & NOTELEPORT)
+		return FALSE
+	// Checking for Objects...
+	for(var/obj/object in open_turf)
+		if(object.density)
+			return FALSE
+	return TRUE
+
+/**
+ * # Phobetor Tears
+ *
+ * The phobetor tears created by the Brain trauma.
+ */
+
+/obj/effect/client_image_holder/phobetor
+	name = "phobetor tear"
+	desc = "A subdimensional rip in reality, which gives extra-spacial passage to those who have woken from the sleepless dream."
+	image_icon = 'modular_zubbers/icons/effects/phobetor_tear.dmi'
+	image_state = "phobetor_tear"
+	// Place this above shadows so it always glows.
+	image_layer = ABOVE_MOB_LAYER
+
+	/// How long this will exist for
+	var/exist_length = 50 SECONDS
+	/// The time of this tear's creation
+	var/created_on
+	/// The phobetor tear this is linked to
+	var/obj/effect/client_image_holder/phobetor/linked_to
+	/// The person able to see this tear.
+	var/mob/living/carbon/seer
+
+/obj/effect/client_image_holder/phobetor/Initialize()
+	. = ..()
+	created_on = world.time
+
+/obj/effect/client_image_holder/phobetor/Destroy()
+	if(linked_to)
+		linked_to.linked_to = null
+		QDEL_NULL(linked_to)
+	return ..()
+
+/obj/effect/client_image_holder/phobetor/proc/check_location_seen(atom/subject, turf/target_turf)
+	if(!target_turf)
+		return FALSE
+	if(!isturf(target_turf))
+		return FALSE
+	if(!target_turf.lighting_object || !target_turf.get_lumcount() >= 0.1)
+		return FALSE
+	for(var/mob/living/nearby_viewers in viewers(target_turf))
+		if(nearby_viewers == subject)
+			continue
+		if(!isliving(nearby_viewers) || !nearby_viewers.mind)
+			continue
+		if(nearby_viewers.has_unlimited_silicon_privilege || nearby_viewers.is_blind())
+			continue
+		return TRUE
+	return FALSE
+
+/obj/effect/client_image_holder/phobetor/attack_hand(mob/living/user, list/modifiers)
+	if(user != seer || !linked_to)
+		return
+	if(user.loc != src.loc)
+		to_chat(user, "Step into the Tear before using it.")
+		return
+	for(var/obj/item/implant/tracking/imp in user.implants)
+		if(imp)
+			to_chat(user, span_warning("[imp] gives you the sense that you're being watched."))
+			return
+	// Is this, or linked, stream being watched?
+	if(check_location_seen(user, get_turf(user)))
+		to_chat(user, span_warning("Not while you're being watched."))
+		return
+	if(check_location_seen(user, get_turf(linked_to)))
+		to_chat(user, span_warning("Your destination is being watched."))
+		return
+	to_chat(user, span_notice("You slip unseen through [src]."))
+	user.playsound_local(null, 'sound/magic/wand_teleport.ogg', 30, FALSE, pressure_affected = FALSE)
+	user.forceMove(get_turf(linked_to))
+
+//
+/// Called once the target is made into a bloodsucker. Used for removing conflicting species organs mostly
+/datum/species/proc/on_bloodsucker_gain(mob/living/carbon/human/target)
+	return null
+
+/datum/species/proc/on_bloodsucker_loss(mob/living/carbon/human/target)
+	return null
+
+/// Replaces a couple organs to normal variants to not cause issues. Not super happy with this, alternative is disallowing vampiric races from being bloodsuckers
+/datum/species/proc/humanize_organs(mob/living/carbon/human/target, organs = list())
+	if(!organs || !length(organs))
+		organs = list(
+			ORGAN_SLOT_HEART = /obj/item/organ/internal/heart,
+			ORGAN_SLOT_LIVER = /obj/item/organ/internal/liver,
+			ORGAN_SLOT_STOMACH = /obj/item/organ/internal/stomach,
+			ORGAN_SLOT_TONGUE = /obj/item/organ/internal/tongue,
+		)
+	mutantheart = organs[ORGAN_SLOT_HEART]
+	mutantliver = organs[ORGAN_SLOT_LIVER]
+	mutantstomach = organs[ORGAN_SLOT_STOMACH]
+	mutanttongue = organs[ORGAN_SLOT_TONGUE]
+	for(var/organ_slot in organs)
+		var/obj/item/organ/old_organ = target.get_organ_slot(organ_slot)
+		var/organ_path = organs[organ_slot]
+		if(old_organ?.type == organ_path)
+			continue
+		var/obj/item/organ/new_organ = SSwardrobe.provide_type(organ_path)
+		new_organ.Insert(target, FALSE, DELETE_IF_REPLACED)
+
+/datum/species/proc/normalize_organs(mob/living/carbon/human/target)
+	mutantheart = initial(mutantheart)
+	mutantliver = initial(mutantliver)
+	mutantstomach = initial(mutantstomach)
+	mutanttongue = initial(mutanttongue)
+	regenerate_organs(target, replace_current = TRUE)
+
+//
+
+/datum/species/jelly/on_bloodsucker_gain(mob/living/carbon/human/target)
+	humanize_organs(target)
+
+/datum/species/jelly/on_bloodsucker_loss(mob/living/carbon/human/target)
+	// regenerate_organs with replace doesn't seem to automatically remove invalid organs unfortunately
+	normalize_organs()
+
+//
+
+/datum/species/lizard/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
+	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT
+	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT
+
+/datum/species/lizard/on_bloodsucker_loss(mob/living/carbon/human/target)
+	bodytemp_heat_damage_limit = initial(bodytemp_heat_damage_limit)
+	bodytemp_cold_damage_limit = initial(bodytemp_cold_damage_limit)
+
+//
+/datum/species/vampire
+	inherent_biotypes = MOB_VAMPIRIC|MOB_UNDEAD|MOB_HUMANOID
+
+/datum/species/vampire/on_bloodsucker_gain(mob/living/carbon/human/target, datum/species/current_species)
+	to_chat(target, span_warning("Your vampire features have been removed, your nature as a bloodsucker abates the lesser vampirism curse."))
+	humanize_organs(target, current_species)
+
+/datum/species/vampire/on_bloodsucker_loss(mob/living/carbon/human/target)
+	normalize_organs(target)
+
+// handled by bane on null rod whip
+/datum/species/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
+	return
+
+//
+/datum/species/hemophage
+	inherent_biotypes = MOB_HUMANOID | MOB_ORGANIC | MOB_VAMPIRIC
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/mhuman,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mhuman,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mhuman,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mhuman,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mhuman,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mhuman,
+	)
+
+// MUTANT COLOR OVERRIDE
+
+/datum/species/hemophage/New()
+	inherent_traits |= list(
+		TRAIT_MUTANT_COLORS,
+	)
+	. = ..()
+
+// BLOODSUCKER SPECIFIC FIXES
+/datum/species/hemophage/on_bloodsucker_gain(mob/living/carbon/human/target)
+	to_chat(target, span_warning("Your hemophage features have been removed, your nature as a bloodsucker abates the hemophage virus."))
+	// Without this any new organs would get corrupted again.
+	target.RemoveElement(/datum/element/tumor_corruption)
+	for(var/obj/item/organ/internal/organ in target.organs)
+		organ.RemoveElement(/datum/element/tumor_corruption)
+	humanize_organs(target)
+
+/datum/species/hemophage/on_bloodsucker_loss(mob/living/carbon/human/target)
+	normalize_organs(target)

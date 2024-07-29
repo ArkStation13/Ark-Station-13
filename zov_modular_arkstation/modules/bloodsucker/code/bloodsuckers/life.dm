@@ -121,9 +121,6 @@
 	var/actual_regen = bloodsucker_regen_rate + additional_regen
 	if(owner.current.am_staked() || (HAS_TRAIT(owner.current, TRAIT_MASQUERADE) && !HAS_TRAIT_FROM_ONLY(owner.current, TRAIT_NODEATH, BLOODSUCKER_TRAIT)))
 		return FALSE
-	// Garlic in you? No healing for you!
-	if(HAS_TRAIT(owner.current, TRAIT_GARLIC_REAGENT))
-		return FALSE
 	owner.current.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1 * actual_regen * mult) //adjustBrainLoss(-1 * (actual_regen * 4) * mult, 0)
 	if(!iscarbon(owner.current)) // Damage Heal: Do I have damage to ANY bodypart?
 		return FALSE

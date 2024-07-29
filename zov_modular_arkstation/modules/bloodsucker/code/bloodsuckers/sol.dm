@@ -111,7 +111,7 @@
 		return FALSE
 	if(SSsunlight.sunlight_active)
 		return FALSE
-	if(bloodsucker_blood_volume == 0 || owner.current.am_staked() || HAS_TRAIT(owner.current, TRAIT_GARLIC_REAGENT))
+	if(bloodsucker_blood_volume == 0 || owner.current.am_staked())
 		// If you're frenzying, you need a bit more health to actually have a chance to do something
 		if(frenzied && total_damage >= user.maxHealth)
 			return FALSE
@@ -125,7 +125,7 @@
 			torpor_end()
 	return TRUE
 
-/datum/antagonist/bloodsucker/proc/torpor_begin(silent = FALSE)		
+/datum/antagonist/bloodsucker/proc/torpor_begin(silent = FALSE)
 	// slow down bucko
 	if(!COOLDOWN_FINISHED(src, bloodsucker_spam_torpor))
 		return
