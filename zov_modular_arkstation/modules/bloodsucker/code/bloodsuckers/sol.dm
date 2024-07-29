@@ -125,7 +125,7 @@
 			torpor_end()
 	return TRUE
 
-/datum/antagonist/bloodsucker/proc/torpor_begin(silent = FALSE)
+/datum/antagonist/bloodsucker/proc/torpor_begin(silent = FALSE)		
 	// slow down bucko
 	if(!COOLDOWN_FINISHED(src, bloodsucker_spam_torpor))
 		return
