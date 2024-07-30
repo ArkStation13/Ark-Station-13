@@ -25306,9 +25306,10 @@
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
 "hmi" = (
-/obj/effect/landmark/start/deacon,
-/turf/open/floor/iron/dark,
-/area/station/service/chapel)
+/obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/smartfridge/drying/rack,
+/turf/open/floor/plating,
+/area/station/maintenance/central/greater)
 "hml" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
 	dir = 1
@@ -28039,6 +28040,9 @@
 	pixel_y = -11;
 	req_access = list("cmo")
 	},
+/obj/machinery/keycard_auth/wall_mounted/directional/south{
+	pixel_x = -5
+	},
 /obj/machinery/modular_computer/preset/id{
 	dir = 4
 	},
@@ -29127,6 +29131,9 @@
 	name = "Shutters Control";
 	pixel_x = -22;
 	pixel_y = -8
+	},
+/obj/machinery/keycard_auth/wall_mounted/directional/west{
+	pixel_y = 5
 	},
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
@@ -33249,6 +33256,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "jzj" = (
@@ -33269,6 +33277,7 @@
 	},
 /obj/effect/landmark/start/hangover,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "jzF" = (
@@ -34999,6 +35008,10 @@
 "jWf" = (
 /turf/closed/wall,
 /area/station/command/heads_quarters/qm)
+"jWt" = (
+/obj/effect/landmark/start/fiscal,
+/turf/open/floor/iron/dark,
+/area/station/service/chapel)
 "jWv" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -37161,6 +37174,7 @@
 /area/station/command/heads_quarters/rd)
 "kDR" = (
 /obj/machinery/light/directional/south,
+/obj/machinery/keycard_auth/wall_mounted/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
@@ -38776,7 +38790,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/effect/landmark/start/fiscal,
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "lds" = (
@@ -46376,6 +46390,9 @@
 /area/station/science/cytology)
 "nqR" = (
 /obj/machinery/computer/cargo,
+/obj/machinery/keycard_auth/wall_mounted/directional/north{
+	pixel_x = -27
+	},
 /obj/machinery/computer/security/telescreen/vault/directional/west,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/qm)
@@ -61248,7 +61265,7 @@
 /obj/machinery/computer/med_data{
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/med_sec/directional/north
+/obj/machinery/computer/security/telescreen/med_sec/directional/north,
 /turf/open/floor/iron/white,
 /area/station/security/checkpoint/medical)
 "rRR" = (
@@ -61469,6 +61486,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/effect/landmark/start/deacon,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "rVh" = (
@@ -71881,6 +71899,7 @@
 	name = "Captain's Desk Door";
 	req_access = list("captain")
 	},
+/obj/machinery/keycard_auth/wall_mounted/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
@@ -73108,6 +73127,7 @@
 /turf/open/floor/iron,
 /area/station/science/lab)
 "vjS" = (
+/obj/machinery/smartfridge/drying,
 /turf/open/floor/iron,
 /area/station/service/kitchen)
 "vjV" = (
@@ -76823,6 +76843,10 @@
 "wpu" = (
 /obj/machinery/firealarm/directional/east{
 	pixel_y = -5
+	},
+/obj/machinery/keycard_auth/wall_mounted/directional/east{
+	pixel_y = 7;
+	pixel_x = 30
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -112736,7 +112760,7 @@ ogf
 vOy
 fpu
 iJB
-abn
+hmi
 swr
 hrh
 dzw
@@ -113839,7 +113863,7 @@ kQo
 vCQ
 imY
 kGn
-hmi
+jWt
 kMP
 cND
 tQg
@@ -114867,7 +114891,7 @@ jGa
 qMn
 eZy
 uoK
-hmi
+jWt
 jJV
 cND
 uRP
