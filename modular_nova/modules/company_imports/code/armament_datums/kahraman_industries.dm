@@ -38,8 +38,6 @@
 		equipment just can't quite handle. Compressed enough to fit in your backpack when not in use."
 	cost = PAYCHECK_COMMAND * 6.5
 
-<<<<<<< HEAD
-=======
 /datum/armament_entry/company_import/kahraman/ppe/civilian_mod
 	name = "Civilian Miniaturized Belt Modsuit"
 	item_type = /obj/item/mod/control/pre_equipped/civilian
@@ -49,7 +47,6 @@
 		average user."
 	cost = PAYCHECK_COMMAND * 5
 
->>>>>>> 183d2cfdf00... Added more info to the Modsuits offered by cargo (#4100)
 /datum/armament_entry/company_import/kahraman/ppe/gas_mask
 	item_type = /obj/item/clothing/mask/gas/atmos/frontier_colonist
 	cost = PAYCHECK_COMMAND
