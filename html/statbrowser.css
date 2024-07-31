@@ -12,24 +12,12 @@
 
 body {
 	font-family: "Chakra Petch", Tahoma, sans-serif; /* ARK STATION EDIT */
-	font-size: 14px !important; /* ARK STATION EDIT */
+	font-size: 13px !important; /* ARK STATION EDIT */
 	color: #1C1D22; /* ARK STATION EDIT */
 	margin: 0 !important;
 	padding: 0 !important;
 	overflow-x: hidden;
 	overflow-y: scroll;
-}
-
-body.dark {
-	background-color: #1c1d22; /* ARK STATION EDIT */
-	color: #e6f1ff; /* ARK STATION EDIT */
-	scrollbar-base-color: #1c1d22; /* ARK STATION EDIT */
-	scrollbar-face-color: #2e3138; /* ARK STATION EDIT */
-	scrollbar-3dlight-color: #25272d; /* ARK STATION EDIT */
-	scrollbar-highlight-color: #25272d; /* ARK STATION EDIT */
-	scrollbar-track-color: #1c1d22; /* ARK STATION EDIT */
-	scrollbar-arrow-color: #535765; /* ARK STATION EDIT */
-	scrollbar-shadow-color: #2e3138; /* ARK STATION EDIT */
 }
 
 #menu {
@@ -39,10 +27,6 @@ body.dark {
 	z-index: 100;
 }
 
-.dark #menu {
-	background-color: #1C1D22; /* ARK STATION EDIT */
-}
-
 #statcontent {
 	padding: 7px 7px 7px 7px;
 }
@@ -50,10 +34,6 @@ body.dark {
 a {
 	color: black;
 	text-decoration: none
-}
-
-.dark a {
-	color: #e6f1ff; /* ARK STATION EDIT */
 }
 
 a:hover {
@@ -93,7 +73,7 @@ img {
 	padding: 6px 4px 4px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px; /* ARK STATION EDIT */
+	font-size: 13px; /* ARK STATION EDIT */
 	margin: 0;
 	cursor: pointer;
 	transition-duration: 100ms;
@@ -101,23 +81,23 @@ img {
 	min-width: 40px;
 }
 
-.dark button {
+.dark .button {
 	background-color: #1C1D22; /* ARK STATION EDIT */
 	border-color: #1C1D22; /* ARK STATION EDIT */
 	color: rgba(255, 255, 255, 0.5);
 }
 
 .button:hover {
-	background-color: #ececec;
+	background-color: rgba(255, 255, 255, 0.5);
 	transition-duration: 0;
 }
 
-.dark button:hover {
-	background-color: #494C5A; /* ARK STATION EDIT */
+.dark .button:hover {
+	background-color: #ececec; /* ARK STATION EDIT */
 }
 
 .button.active {
-	background-color: #dfdfdf;
+	background-color: #acacac;
 	color: black;
 	border-bottom-color: #000000;
 }
@@ -154,7 +134,7 @@ img {
 }
 
 .grid-item:hover {
-	color: #003399;
+	color: #184d1d;
 	z-index: 1;
 }
 
@@ -215,24 +195,28 @@ img {
 
 /* Dark theme colors */
 body.dark {
-	background-color: #131313;
-	color: #b2c4dd;
-	scrollbar-base-color: #1c1c1c;
-	scrollbar-face-color: #3b3b3b;
-	scrollbar-3dlight-color: #252525;
-	scrollbar-highlight-color: #252525;
-	scrollbar-track-color: #1c1c1c;
-	scrollbar-arrow-color: #929292;
-	scrollbar-shadow-color: #3b3b3b;
+	background-color: #1c1d22; /* ARK STATION EDIT */
+	color: #e6f1ff; /* ARK STATION EDIT */
+	scrollbar-base-color: #1c1d22; /* ARK STATION EDIT */
+	scrollbar-face-color: #2e3138; /* ARK STATION EDIT */
+	scrollbar-3dlight-color: #25272d; /* ARK STATION EDIT */
+	scrollbar-highlight-color: #25272d; /* ARK STATION EDIT */
+	scrollbar-track-color: #1c1d22; /* ARK STATION EDIT */
+	scrollbar-arrow-color: #535765; /* ARK STATION EDIT */
+	scrollbar-shadow-color: #2e3138; /* ARK STATION EDIT */
 }
 
 .dark a {
-	color: #6699ff;
+	color: #e6f1ff; /* ARK STATION EDIT */
+}
+
+.dark #menu {
+	background-color: #1C1D22; /* ARK STATION EDIT */
 }
 
 .dark a:hover,
 .dark .grid-item:hover {
-	color: #80bfff;
+	color: #83db83;
 }
 
 .dark .grid-item-text {
@@ -247,7 +231,7 @@ body.dark {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
-	font-size: 14px; /* ARK STATION EDIT */
+	font-size: 13px; /* ARK STATION EDIT */
 	margin: 2px 2px;
 }
 
