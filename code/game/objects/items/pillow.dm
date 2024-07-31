@@ -172,6 +172,8 @@
 	armor_type = /datum/armor/suit_pillow_suit
 	var/obj/item/pillow/unstoppably_plushed
 
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON // ARK STATION EDIT
+
 /datum/armor/suit_pillow_suit
 	melee = 5
 	acid = 75
