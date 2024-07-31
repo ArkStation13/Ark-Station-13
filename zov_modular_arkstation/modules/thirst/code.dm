@@ -52,9 +52,9 @@
 
 	switch(thirst.water_level)
 		if(THIRST_LEVEL_THRESHOLD to INFINITY)
-			state = THIRST_STATE_FULL
+			state = THIRST_STATE_FAT
 		if(THIRST_LEVEL_QUENCHED to THIRST_LEVEL_VERY_QUENCHED)
-			state = THIRST_STATE_FINE
+			state = THIRST_STATE_FULL
 		if(THIRST_LEVEL_THIRSTY to THIRST_LEVEL_BIT_THIRSTY)
 			state = THIRST_STATE_HUNGRY
 		if(0 to THIRST_LEVEL_PARCHED)
@@ -265,28 +265,28 @@
 /datum/reagent/water
 	hydration = 5 * REAGENTS_METABOLISM
 
-/datum/reagent/water/on_mob_life(mob/living/carbon/M)
-	M.adjust_thirst(hydration)
+/datum/reagent/water/metabolize_reagent(mob/living/carbon/M)
 	. = ..()
+	M.adjust_thirst(hydration)
 
 /obj/item/organ/internal/stomach/proc/handle_thirst(mob/living/carbon/human/H, seconds_per_tick, times_fired)
 	if(HAS_TRAIT(H, TRAIT_NOTHIRST))
 		return
 	H.adjust_thirst(-THIRST_FACTOR)
 
-/datum/reagent/consumable/on_mob_life(mob/living/carbon/M)
-	M.adjust_thirst(hydration)
+/datum/reagent/consumable/metabolize_reagent(mob/living/carbon/M)
 	. = ..()
+	M.adjust_thirst(hydration)
 
 /// Don't blame me if they have negative thirst, admeme.
-/proc/get_thirst(mob/living/user)
-	if(!istype(user))
-		return
-	. = user.water_level
-	for(var/datum/reagent/water in LAZYCOPY(user?.reagents.reagent_list))
-		. += water.hydration
+// /proc/get_thirst(mob/living/user)
+// 	if(!istype(user))
+// 		return
+// 	. = user.water_level
+// 	for(var/datum/reagent/water in LAZYCOPY(user?.reagents.reagent_list))
+// 		. += water.hydration
 
-	. = min(., THIRST_LEVEL_THRESHOLD)
+// 	. = min(., THIRST_LEVEL_THRESHOLD)
 
 //nutrition
 /datum/mood_event/quenched
@@ -306,6 +306,7 @@
 		return FALSE //no mood events for thirst
 	if(mob_parent.water_level >= THIRST_LEVEL_THRESHOLD)
 		mob_parent.set_thirst(clamp(mob_parent.water_level, 0, THIRST_LEVEL_THRESHOLD))
+		mob_parent.water_level = 380
 	switch(mob_parent.water_level)
 		if(THIRST_LEVEL_QUENCHED to INFINITY)
 			add_mood_event(MOOD_CATEGORY_WATER, /datum/mood_event/quenched)
