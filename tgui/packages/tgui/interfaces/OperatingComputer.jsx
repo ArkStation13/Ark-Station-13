@@ -34,8 +34,7 @@ export const OperatingComputer = (props) => {
   const [tab, setTab] = useSharedState('tab', 1);
 
   return (
-    <Window width={430} height={480}>
-      {/* Ark Station Edit */}
+    <Window width={350} height={470}>
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab selected={tab === 1} onClick={() => setTab(1)}>
@@ -104,28 +103,24 @@ const PatientStateView = (props) => {
           <LabeledList>
             <LabeledList.Item label="Next Step">
               {procedure.next_step}
-              {procedure.chems_needed && (
-                <>
-                  <br />
-                  <br />
-                  <b>Required Chemicals:</b>
-                  <br />
-                  {procedure.chems_needed}
-                </>
-              )}
             </LabeledList.Item>
+            {procedure.chems_needed && (
+              <LabeledList.Item label="Required Chems">
+                <NoticeBox success={procedure.chems_present ? true : false}>
+                  {procedure.chems_needed}
+                </NoticeBox>
+              </LabeledList.Item>
+            )}
             {procedure.alternative_step && (
               <LabeledList.Item label="Alternative Step">
                 {procedure.alternative_step}
-                {procedure.alt_chems_needed && (
-                  <>
-                    <br />
-                    <br />
-                    <b>Required Chemicals:</b>
-                    <br />
-                    {procedure.alt_chems_needed}
-                  </>
-                )}
+              </LabeledList.Item>
+            )}
+            {procedure.alt_chems_needed && (
+              <LabeledList.Item label="Required Chems">
+                <NoticeBox success={procedure.alt_chems_present ? true : false}>
+                  {procedure.alt_chems_needed}
+                </NoticeBox>
               </LabeledList.Item>
             )}
           </LabeledList>
