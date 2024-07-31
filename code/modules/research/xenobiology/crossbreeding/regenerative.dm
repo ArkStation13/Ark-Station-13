@@ -138,7 +138,7 @@ Regenerative extracts:
 
 /obj/item/slimecross/regenerative/silver/core_effect(mob/living/target, mob/user)
 	target.set_nutrition(NUTRITION_LEVEL_FULL - 1)
-	target.set_thirst(THIRST_LEVEL_THRESHOLD) // ARK STATION ADDITION
+	target.set_thirst(THIRST_LEVEL_THRESHOLD - 1) // ARK STATION ADDITION
 	to_chat(target, span_notice("You feel satiated."))
 
 /obj/item/slimecross/regenerative/bluespace
