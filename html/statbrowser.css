@@ -12,7 +12,7 @@
 
 body {
 	font-family: "Chakra Petch", Tahoma, sans-serif; /* ARK STATION EDIT */
-	font-size: 13px !important; /* ARK STATION EDIT */
+	font-size: 14px !important; /* ARK STATION EDIT */
 	color: #1C1D22; /* ARK STATION EDIT */
 	margin: 0 !important;
 	padding: 0 !important;
@@ -73,12 +73,22 @@ img {
 	padding: 6px 4px 4px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 13px; /* ARK STATION EDIT */
+	font-size: 14px; /* ARK STATION EDIT */
 	margin: 0;
 	cursor: pointer;
 	transition-duration: 100ms;
 	order: 3;
 	min-width: 40px;
+}
+
+.button-container {
+	display: inline-flex;
+	flex-wrap: wrap-reverse;
+	flex-direction: row;
+	align-items: flex-start;
+	overflow-x: hidden;
+	white-space: pre-wrap;
+	padding: 0 4px;
 }
 
 .dark .button {
@@ -152,6 +162,29 @@ img {
 	width: 100%;
 	padding: 0.33em 0.5em;
 	border-radius: 0.25em;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #111;
 }
 
 .grid-item-text:hover {
