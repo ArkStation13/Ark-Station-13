@@ -87,6 +87,10 @@ img {
 	color: rgba(255, 255, 255, 0.5);
 }
 
+.dark .link {
+	color: #abc6ec;
+}
+
 .button:hover {
 	background-color: rgba(255, 255, 255, 0.5);
 	transition-duration: 0;
@@ -118,7 +122,8 @@ img {
 }
 
 .grid-container {
-	margin: 0;
+	margin: -2px;
+	margin-right: -15px;
 }
 
 .grid-item {
@@ -188,9 +193,9 @@ img {
 	margin: 0 0.33em 0.25em;
 }
 
-.interview_panel_stats,
-.interview_panel_controls {
-	margin-bottom: 1em;
+.interview_panel_controls,
+.interview_panel_stats {
+	margin-bottom: 10px;
 }
 
 /* Dark theme colors */
