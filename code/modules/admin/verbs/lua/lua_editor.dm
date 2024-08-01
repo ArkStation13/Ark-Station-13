@@ -59,11 +59,6 @@
 		data["tasks"] = current_state.get_tasks()
 		if(show_global_table)
 			current_state.get_globals()
-<<<<<<< HEAD
-			data["globals"] = kvpify_list(refify_list(current_state.globals))
-	data["states"] = SSlua.states
-	data["callArguments"] = kvpify_list(refify_list(arguments))
-=======
 			var/list/values = current_state.globals["values"]
 			values = deep_copy_without_cycles(values)
 			values = prepare_lua_editor_list(values)
@@ -78,7 +73,6 @@
 	for(var/datum/lua_state/state as anything in SSlua.states)
 		data["states"] += state.display_name
 	data["callArguments"] = kvpify_list(prepare_lua_editor_list(deep_copy_without_cycles(arguments)))
->>>>>>> d03992f8d3f... [MIRROR] Fixes/improves the Lua UI Slightly [MDB IGNORE] (#4171)
 	if(force_modal)
 		data["forceModal"] = force_modal
 		force_modal = null
