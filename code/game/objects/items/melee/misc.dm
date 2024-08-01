@@ -164,8 +164,6 @@
 		user.death(FALSE)
 	REMOVE_TRAIT(src, TRAIT_NODROP, SABRE_SUICIDE_TRAIT)
 
-<<<<<<< HEAD
-=======
 
 /obj/item/melee/parsnip_sabre
 	name = "parsnip sabre"
@@ -207,7 +205,6 @@
 	. = ..()
 	playsound(container.parent, 'sound/items/sheath.ogg', 25, TRUE)
 
->>>>>>> 2fe6f002b95... [MIRROR] Grass sheath now holds parsnip sabres, fixed grammar for the latter [MDB IGNORE] (#4062)
 /obj/item/melee/beesword
 	name = "The Stinger"
 	desc = "Taken from a giant bee and folded over one thousand times in pure honey. Can sting through anything."
