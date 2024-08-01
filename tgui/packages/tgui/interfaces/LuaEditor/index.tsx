@@ -100,7 +100,6 @@ export const LuaEditor = () => {
     window.addEventListener('resize', handleSectionScroll);
     return () => window.removeEventListener('resize', handleSectionScroll);
   }, [handleSectionScroll]);
-
   let tabContent: ReactNode;
   switch (activeTab) {
     case 'globals': {
