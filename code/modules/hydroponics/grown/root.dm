@@ -62,8 +62,6 @@
 	juice_typepath = /datum/reagent/consumable/parsnipjuice
 	wine_power = 35
 
-<<<<<<< HEAD
-=======
 /obj/item/food/grown/parsnip/attackby(obj/item/I, mob/user, params)
 	if(!I.get_sharpness())
 		return ..()
@@ -127,7 +125,6 @@
 	remove_item_from_storage(user)
 	qdel(src)
 	user.put_in_hands(root_blade)
->>>>>>> 5d8e56db3a4... [MIRROR] Renamed "Pack of *** seeds" to "*** seed pack" [MDB IGNORE] (#4139)
 
 // White-Beet
 /obj/item/seeds/whitebeet
