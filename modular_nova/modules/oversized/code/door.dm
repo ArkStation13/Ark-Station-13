@@ -19,4 +19,4 @@
 				span_userdanger("You slam your head against [src]!")
 			)
 			playsound(crossed_atom, 'sound/effects/bang.ogg', 50, TRUE)
-/* ARK - oversize_changes - END
+/ ARK - oversize_changes - END*/
