@@ -1,4 +1,4 @@
-/datum/round_event_control/grey_tide
+/* /datum/round_event_control/grey_tide // ARK STATION REMOVED
 	name = "Grey Tide"
 	typepath = /datum/round_event/grey_tide
 	max_occurrences = 2
@@ -55,4 +55,4 @@
 // /obj/machinery/power/apc -- Signal turns the lighting channel off
 
 /datum/round_event/grey_tide/end()
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_GREY_TIDE, grey_tide_areas)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_GREY_TIDE, grey_tide_areas) */
