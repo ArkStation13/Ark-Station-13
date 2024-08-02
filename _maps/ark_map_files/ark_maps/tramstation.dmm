@@ -9986,7 +9986,6 @@
 "ciR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/service/chapel/funeral)
@@ -10740,9 +10739,8 @@
 /turf/open/floor/iron/checker,
 /area/station/commons/lounge)
 "cyl" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
@@ -15150,7 +15148,6 @@
 /turf/closed/wall,
 /area/station/science/lower)
 "dVd" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15385,11 +15382,6 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
-"dZF" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/turf/open/space/openspace,
-/area/space)
 "dZM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet,
@@ -22424,6 +22416,8 @@
 "gCZ" = (
 /obj/machinery/firealarm/directional/south,
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
 "gDe" = (
@@ -32901,13 +32895,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
-"kjS" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron/dark,
-/area/station/security/brig_pilot)
 "kjY" = (
 /obj/structure/disposalpipe/sorting/mail/flip{
 	dir = 4
@@ -49217,6 +49204,8 @@
 	name = "Chapel Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
 "pKu" = (
@@ -64954,12 +64943,11 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/tram/left)
 "uUp" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 8
-	},
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/sec{
 	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig_pilot)
@@ -66575,8 +66563,6 @@
 "vua" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/station/service/chapel/monastery)
 "vuh" = (
@@ -67220,9 +67206,10 @@
 /turf/open/floor/engine/vacuum,
 /area/station/engineering/atmos)
 "vEY" = (
-/obj/structure/lattice,
-/turf/open/space/openspace,
-/area/space)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/station/security/brig_pilot)
 "vFb" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table,
@@ -68655,11 +68642,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
-"wfJ" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "wfQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -142656,7 +142638,7 @@ pMW
 pMW
 pMW
 pMW
-vEY
+pMW
 pMW
 pMW
 pMW
@@ -142913,7 +142895,7 @@ pMW
 pMW
 pMW
 pMW
-dZF
+pMW
 pMW
 pMW
 pMW
@@ -143170,7 +143152,7 @@ pMW
 pMW
 pMW
 pMW
-wfJ
+vXM
 pMW
 pMW
 pMW
@@ -143427,7 +143409,7 @@ pMW
 pMW
 pMW
 pMW
-dZF
+pMW
 pMW
 pMW
 pMW
@@ -143684,7 +143666,7 @@ pMW
 pMW
 pMW
 pMW
-vEY
+pMW
 pMW
 pMW
 pMW
@@ -143941,7 +143923,7 @@ pMW
 pMW
 pMW
 pMW
-dZF
+pMW
 pMW
 pMW
 pMW
@@ -144198,7 +144180,7 @@ pMW
 pMW
 pMW
 pMW
-dZF
+pMW
 pMW
 pMW
 pMW
@@ -144455,7 +144437,7 @@ pMW
 pMW
 pMW
 pMW
-vEY
+pMW
 pMW
 pMW
 pMW
@@ -144707,12 +144689,12 @@ pMW
 pMW
 pMW
 pMW
-dZF
-dZF
-dZF
-dZF
-dZF
-vEY
+pMW
+pMW
+pMW
+pMW
+pMW
+pMW
 pMW
 pMW
 pMW
@@ -144964,7 +144946,7 @@ pMW
 pMW
 pMW
 pMW
-vEY
+pMW
 pMW
 pMW
 pMW
@@ -145221,7 +145203,7 @@ pMW
 pMW
 pMW
 pMW
-vEY
+pMW
 pMW
 pMW
 pMW
@@ -150611,8 +150593,8 @@ pMW
 pMW
 vHV
 nco
-cDn
-pwz
+jor
+jor
 bOj
 vHV
 pMW
@@ -150867,7 +150849,7 @@ pMW
 pMW
 pMW
 vHV
-kjS
+vMZ
 cyl
 uUp
 cLB
@@ -151125,8 +151107,8 @@ pMW
 pMW
 vHV
 vMZ
-jor
-jor
+cDn
+vEY
 cLB
 vHV
 aac
@@ -151383,7 +151365,7 @@ pMW
 vHV
 hhz
 jor
-jor
+vEY
 lef
 vHV
 aac
@@ -152154,7 +152136,7 @@ pMW
 pMW
 vHV
 vhp
-jor
+vEY
 vHV
 aac
 aac
