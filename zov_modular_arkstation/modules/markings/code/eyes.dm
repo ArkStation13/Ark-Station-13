@@ -4,6 +4,7 @@
 	recommended_species = null
 	affected_bodyparts = HEAD
 	default_color = "#CCCCCC"
+	relevant_layer = BODY_LAYER // Чтобы глаза были над мордой и другими маркингами
 
 /datum/body_marking/ark_eyes/wide
 	name = "Eyes - Wide"
