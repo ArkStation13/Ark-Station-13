@@ -72,64 +72,106 @@
 
 // Skrell Hairs
 
-/datum/sprite_accessory/skrell_hair
+/datum/sprite_accessory/skrell_hair/ark
 	icon = 'zov_modular_arkstation/modules/markings/icons/skrell_hair.dmi'
 	color_src = USE_MATRIXED_COLORS
 
-/datum/sprite_accessory/skrell_hair/long
+/datum/sprite_accessory/skrell_hair/ark/long
 	name = "Female (Long)"
 
-/datum/sprite_accessory/skrell_hair/short
+/datum/sprite_accessory/skrell_hair/ark/short
 	name = "Male (Short)"
 
-/datum/sprite_accessory/skrell_hair/verylong
+/datum/sprite_accessory/skrell_hair/ark/verylong
 	name = "Very Long"
 	icon_state = "verylong"
 
-/datum/sprite_accessory/skrell_hair/veryshort
+/datum/sprite_accessory/skrell_hair/ark/veryshort
 	name = "Very Short"
 	icon_state = "veryshort"
 
-/datum/sprite_accessory/skrell_hair/shortmidbun
+/datum/sprite_accessory/skrell_hair/ark/shortmidbun
 	name = "Mid Bun Short"
 	icon_state = "shortbun"
 
-/datum/sprite_accessory/skrell_hair/midbun
+/datum/sprite_accessory/skrell_hair/ark/midbun
 	name = "Mid Bun Normal"
 	icon_state = "midbun"
 
-/datum/sprite_accessory/skrell_hair/longmidbun
+/datum/sprite_accessory/skrell_hair/ark/longmidbun
 	name = "Mid Bun Long"
 	icon_state = "longbun"
 
-/datum/sprite_accessory/skrell_hair/lowbun
+/datum/sprite_accessory/skrell_hair/ark/lowbun
 	name = "Mid Bun Very Short"
 	icon_state = "lowbun"
 
-/datum/sprite_accessory/skrell_hair/mullet
+/datum/sprite_accessory/skrell_hair/ark/mullet
 	name = "Mullet"
 	icon_state = "mullet"
 
-/datum/sprite_accessory/skrell_hair/insulated
+/datum/sprite_accessory/skrell_hair/ark/insulated
 	name = "Insulated"
 	icon_state = "insulated"
 
-/datum/sprite_accessory/skrell_hair/excited
+/datum/sprite_accessory/skrell_hair/ark/excited
 	name = "Excited"
 	icon_state = "excited"
 
-/datum/sprite_accessory/skrell_hair/reserved
+/datum/sprite_accessory/skrell_hair/ark/reserved
 	name = "Reserved"
 	icon_state = "reserved"
 
-/datum/sprite_accessory/skrell_hair/tuux
+/datum/sprite_accessory/skrell_hair/ark/tuux
 	name = "Tuux"
 	icon_state = "tuux"
 
-/datum/sprite_accessory/skrell_hair/longtuux
+/datum/sprite_accessory/skrell_hair/ark/longtuux
 	name = "Long Tuux"
 	icon_state = "longtuux"
 
-/datum/sprite_accessory/skrell_hair/loose
+/datum/sprite_accessory/skrell_hair/ark/loose
 	name = "Loose Braid"
 	icon_state = "loose"
+
+// Flowers
+
+/datum/sprite_accessory/hair/ark/ivy
+	name = "Ivy"
+	icon_state = "pod_hair_ivy"
+
+/datum/sprite_accessory/hair/ark/cabbage
+	name = "Cabbage"
+	icon_state = "pod_hair_cabbage"
+
+/datum/sprite_accessory/hair/ark/spinach
+	name = "Spinach"
+	icon_state = "pod_hair_spinach"
+
+/datum/sprite_accessory/hair/ark/prayer
+	name = "Prayer"
+	icon_state = "pod_hair_prayer"
+
+/datum/sprite_accessory/hair/ark/vine
+	name = "Vine"
+	icon_state = "pod_hair_vine"
+
+/datum/sprite_accessory/hair/ark/shrub
+	name = "Shrub"
+	icon_state = "pod_hair_shrub"
+
+/datum/sprite_accessory/hair/ark/rose
+	name = "Rose"
+	icon_state = "pod_hair_rose"
+
+/datum/sprite_accessory/hair/ark/orchid
+	name = "Orchid"
+	icon_state = "pod_hair_orchid"
+
+/datum/sprite_accessory/hair/ark/fig
+	name = "Fig"
+	icon_state = "pod_hair_fig"
+
+/datum/sprite_accessory/hair/ark/hibiscus
+	name = "Hibiscus"
+	icon_state = "pod_hair_hibiscus"
