@@ -360,7 +360,7 @@
 
 /obj/item/clothing/suit/hooded/wintercoat/security
 	name = "security winter jacket"
-	desc = "A red, armour-padded winter coat. It glitters with a mild ablative coating and a robust air of authority.  The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
+	desc = "A red, armour-padded winter coat. It glitters with a mild ablative coating and a robust air of authority. The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
 	icon_state = "coatsecurity"
 	inhand_icon_state = "coatsecurity"
 	icon = 'icons/obj/clothing/suits/wintercoat.dmi'

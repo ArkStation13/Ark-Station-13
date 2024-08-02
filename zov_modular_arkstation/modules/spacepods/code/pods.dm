@@ -460,15 +460,15 @@
 	var/list/data = list()
 	data["ui_theme"] = ui_theme
 	//same thresholds as in air alarm
-	data["cabin_pressure_warning_min"]  = WARNING_LOW_PRESSURE
-	data["cabin_pressure_hazard_min"]  = HAZARD_LOW_PRESSURE
-	data["cabin_pressure_warning_max"]  = WARNING_HIGH_PRESSURE
-	data["cabin_pressure_hazard_max"]  = HAZARD_HIGH_PRESSURE
-	data["cabin_temp_warning_min"]  = BODYTEMP_COLD_WARNING_1 + 10 - T0C
-	data["cabin_temp_hazard_min"]  = BODYTEMP_COLD_WARNING_1 - T0C
-	data["cabin_temp_warning_max"]  = BODYTEMP_HEAT_WARNING_1 - 27 - T0C
-	data["cabin_temp_hazard_max"]  = BODYTEMP_HEAT_WARNING_1 - T0C
-	data["one_atmosphere"]  = ONE_ATMOSPHERE
+	data["cabin_pressure_warning_min"] = WARNING_LOW_PRESSURE
+	data["cabin_pressure_hazard_min"] = HAZARD_LOW_PRESSURE
+	data["cabin_pressure_warning_max"] = WARNING_HIGH_PRESSURE
+	data["cabin_pressure_hazard_max"] = HAZARD_HIGH_PRESSURE
+	data["cabin_temp_warning_min"] = BODYTEMP_COLD_WARNING_1 + 10 - T0C
+	data["cabin_temp_hazard_min"] = BODYTEMP_COLD_WARNING_1 - T0C
+	data["cabin_temp_warning_max"] = BODYTEMP_HEAT_WARNING_1 - 27 - T0C
+	data["cabin_temp_hazard_max"] = BODYTEMP_HEAT_WARNING_1 - T0C
+	data["one_atmosphere"] = ONE_ATMOSPHERE
 
 	data["sheet_material_amount"] = SHEET_MATERIAL_AMOUNT
 	//map of relevant flags to check tgui side, not every flag needs to be here

@@ -5,7 +5,7 @@
 /obj/item/icona_madonna
 	name = "Madonna icon"
 	desc = "Icon of the great Madonna."
-	icon =  'zov_modular_arkstation/_master_files/icons/obj/structures.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/structures.dmi'
 	icon_state = "madonna"
 
 /obj/structure/desk_bell

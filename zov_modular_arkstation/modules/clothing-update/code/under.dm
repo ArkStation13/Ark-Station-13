@@ -230,11 +230,11 @@
 		"Red Variant" = list(
 			RESKIN_ICON_STATE = "secskirt",
 			RESKIN_WORN_ICON_STATE = "secskirt"
-        ),
+		),
 		"Blue Variant" = list(
 			RESKIN_ICON_STATE = "jumpskirt_blue",
 			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
-        ),
+		),
 		"Black Variant" = list(
 			RESKIN_ICON_STATE = "jumpskirt_black",
 			RESKIN_WORN_ICON_STATE = "jumpskirt_black"

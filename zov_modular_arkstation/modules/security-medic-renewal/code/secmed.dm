@@ -135,8 +135,8 @@
 /obj/structure/closet/secure_closet/security_medic
 	name = "security medics's locker"
 	req_access = list(ACCESS_SECURITY)
-	// icon = 'zov_modular_arkstation/modules/security-medic-renewal/icons/misc.dmi'  // ПЕРЕЗАПИСАЛ ТУТ zov_modular_arkstation\modules\new-closets\code.dm
-	// icon_state = "brigdoc"														  // ПЕРЕЗАПИСАЛ ТУТ zov_modular_arkstation\modules\new-closets\code.dm
+	// icon = 'zov_modular_arkstation/modules/security-medic-renewal/icons/misc.dmi' // ПЕРЕЗАПИСАЛ ТУТ zov_modular_arkstation\modules\new-closets\code.dm
+	// icon_state = "brigdoc"														 // ПЕРЕЗАПИСАЛ ТУТ zov_modular_arkstation\modules\new-closets\code.dm
 
 /obj/structure/closet/secure_closet/security_medic/PopulateContents()
 	..()

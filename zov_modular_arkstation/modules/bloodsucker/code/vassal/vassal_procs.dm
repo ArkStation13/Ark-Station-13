@@ -36,7 +36,7 @@
 		returnString += "[p_they(TRUE)] bears the mark of another Bloodsucker"
 		returnIcon = "[icon2html('zov_modular_arkstation/modules/bloodsucker/icons/misc/language.dmi', world, "vassal_grey")]"
 
-	returnString += "</span>\]" // \n"  Don't need spacers. Using . += "" in examine.dm does this on its own.
+	returnString += "</span>\]" // \n" Don't need spacers. Using . += "" in examine.dm does this on its own.
 	return returnIcon + returnString
 
 /// Used when your Master teaches you a new Power.

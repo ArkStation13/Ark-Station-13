@@ -271,7 +271,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	..()
 
 /datum/antagonist/ert/request_911/greet()
-	var/missiondesc =  ""
+	var/missiondesc = ""
 	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for PMC InteQ as a [role].</font></B>"
 	missiondesc += "<BR>You are responding to emergency calls from the station for immediate PMC InteQ [department] assistance!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow first responders!\n"
@@ -355,7 +355,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	outfit = /datum/outfit/request_911/condom_destroyer
 
 /datum/antagonist/ert/request_911/condom_destroyer/greet()
-	var/missiondesc =  ""
+	var/missiondesc = ""
 	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for PMC InteQ as a [role].</font></B>"
 	missiondesc += "<BR>You are here to backup the first responders, as they have reported for your assistance..\n"
 	missiondesc += "<BR><B>Your Mission</B>:"
@@ -377,7 +377,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	outfit = /datum/outfit/request_911/treason_destroyer
 
 /datum/antagonist/ert/request_911/treason_destroyer/greet()
-	var/missiondesc =  ""
+	var/missiondesc = ""
 	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for PMC InteQ as a [role].</font></B>"
 	missiondesc += "<BR>You are here to assume control of [station_name()] due to the occupants engaging in Treason as reported by our heavy team.\n"
 	missiondesc += "<BR><B>Your Mission</B>:"
@@ -588,7 +588,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	outfit = /datum/outfit/centcom/ert/pizza/false_call
 
 /datum/antagonist/ert/pizza/false_call/greet()
-	var/missiondesc =  ""
+	var/missiondesc = ""
 	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for Dogginos as a delivery person.</font></B>"
 	missiondesc += "<BR>You are here to deliver some pizzas from Dogginos!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow Dogginos employees!\n"
@@ -599,7 +599,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	to_chat(owner, missiondesc)
 
 /datum/antagonist/ert/pizza/leader/false_call/greet()
-	var/missiondesc =  ""
+	var/missiondesc = ""
 	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for Dogginos as a Regional Manager.</font></B>"
 	missiondesc += "<BR>You are here to resolve a dispute with some customers who refuse to pay their bill!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow Dogginos employees!\n"
@@ -610,7 +610,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /obj/item/beamout_tool
 	name = "beam-out tool" // TODO, find a way to make this into drop pods cuz that's cooler visually
-	desc = "Use this to begin the lengthy beam-out  process to return to PMC InteQ quarters. It will bring anyone you are pulling with you."
+	desc = "Use this to begin the lengthy beam-out process to return to PMC InteQ quarters. It will bring anyone you are pulling with you."
 	icon = 'modular_nova/modules/goofsec/icons/reporter.dmi'
 	icon_state = "beam_me_up_scotty"
 	w_class = WEIGHT_CLASS_SMALL

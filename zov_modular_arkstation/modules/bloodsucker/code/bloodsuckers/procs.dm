@@ -170,7 +170,7 @@
 /datum/antagonist/bloodsucker/proc/blood_level_gain()
 	var/level_cost = get_level_cost()
 	if(blood_level_gain >= level_cost && bloodsucker_blood_volume >= level_cost) // Checks if we have drunk enough blood from the living to allow us to gain a level up as well as checking if we have enough blood to actually use on the level up
-		switch(tgui_alert(owner.current, "You have drunk enough blood from the living to thicken your blood, this will cost you [level_cost] blood and give you another level",  "Thicken your blood?.", list("Yes", "No"))) //asks user if they want to spend their blood on a level
+		switch(tgui_alert(owner.current, "You have drunk enough blood from the living to thicken your blood, this will cost you [level_cost] blood and give you another level", "Thicken your blood?.", list("Yes", "No"))) //asks user if they want to spend their blood on a level
 			if("Yes")
 				AdjustUnspentRank(1) // gives level
 				blood_level_gain -= level_cost // Subtracts the cost from the pool of drunk blood

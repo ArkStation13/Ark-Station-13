@@ -40,7 +40,7 @@
 /area/omega/surface/outdoors/noruins // when you want random generation without the chance of getting ruins
 	icon_state = "noruins"
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED | MOB_SPAWN_ALLOWED | CAVES_ALLOWED
-	map_generator =  /datum/map_generator/cave_generator/omega/surface/noruins
+	map_generator = /datum/map_generator/cave_generator/omega/surface/noruins
 
 /area/omega/surface/outdoors/labor_camp
 	name = "Forest Labor Camp"

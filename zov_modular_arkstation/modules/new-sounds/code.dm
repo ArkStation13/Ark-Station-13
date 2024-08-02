@@ -49,7 +49,7 @@
 	drop_sound = 'zov_modular_arkstation/modules/new-sounds/sound/metal_drop.ogg'
 
 /obj/item/surgical_drapes
-	pickup_sound =  'zov_modular_arkstation/modules/new-sounds/sound/surgery2_pickup.ogg'
+	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/surgery2_pickup.ogg'
 
 /obj/item/reagent_containers/cup
 	pickup_sound = 'zov_modular_arkstation/modules/new-sounds/sound/bottle_pickup.ogg'
