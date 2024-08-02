@@ -1,6 +1,10 @@
-/obj/item/clothing/glasses/hud/security/sunglasses
+/obj/item/clothing/glasses/hud/security
 	icon = 'icons/obj/clothing/glasses.dmi'
 	worn_icon = 'icons/mob/clothing/eyes.dmi'
+	icon_state = "securityhud"
+	glass_colour_type = /datum/client_colour/glass_colour/lightred
+
+/obj/item/clothing/glasses/hud/security/sunglasses
 	icon_state = "sunhudsec"
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	uses_advanced_reskins = TRUE
@@ -18,10 +22,6 @@
 			RESKIN_WORN_ICON_STATE = "security_hud_blue"
 		),
 	)
-
-/obj/item/clothing/glasses/hud/security
-	icon_state = "securityhud"
-	glass_colour_type = /datum/client_colour/glass_colour/lightred
 
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
 	icon_state = "hudpatch"
