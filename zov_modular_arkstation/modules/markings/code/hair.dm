@@ -1,71 +1,77 @@
-//////////// Generic hairs
+// Generic hairs
 
-/datum/sprite_accessory/hair/bun_alt
+/datum/sprite_accessory/hair/ark
+	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+
+/datum/sprite_accessory/hair/ark/bun_alt
 	name = "Bun Head (Alt)"
 	icon_state = "hair_bun_alt"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
 
-// /datum/sprite_accessory/hair/kajam // Иуда залил на Нова Секторы.
-// 	name = "Kajam"
-// 	icon_state = "kajam_s"
-// 	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
-
-/datum/sprite_accessory/hair/kajam2
+/datum/sprite_accessory/hair/ark/kajam_alt
 	name = "Kajam (Alt)"
 	icon_state = "kajam2_s"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
 
-/datum/sprite_accessory/hair/ivy
-	name = "Ivy"
-	icon_state = "pod_hair_ivy"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/ponytail_80
+	name = "Ponytail 80s"
+	icon_state = "hair_80s_ponytail_alt_2"
 
-/datum/sprite_accessory/hair/cabbage
-	name = "Cabbage"
-	icon_state = "pod_hair_cabbage"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/longemo
+	name = "Longemo"
+	icon_state = "hair_longemo_alt_2"
 
-/datum/sprite_accessory/hair/spinach
-	name = "Spinach"
-	icon_state = "pod_hair_spinach"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/halfshaved
+	name = "Half Shaved"
+	icon_state = "hair_halfshaved_s"
 
-/datum/sprite_accessory/hair/prayer
-	name = "Prayer"
-	icon_state = "pod_hair_prayer"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/halfshavedemo
+	name = "Half Shaved Demo"
+	icon_state = "hair_halfshavedemo_s"
 
-/datum/sprite_accessory/hair/vine
-	name = "Vine"
-	icon_state = "pod_hair_vine"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/shavedbun
+	name = "Shaved Bun"
+	icon_state = "hair_shavedbun_s"
 
-/datum/sprite_accessory/hair/shrub
-	name = "Shrub"
-	icon_state = "pod_hair_shrub"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/undercut
+	name = "Undercut Alt"
+	icon_state = "hair_undercut_s"
 
-/datum/sprite_accessory/hair/rose
-	name = "Rose"
-	icon_state = "pod_hair_rose"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/undercut_fem
+	name = "Undercut Fem"
+	icon_state = "hair_undercut_fem_s"
 
-/datum/sprite_accessory/hair/orchid
-	name = "Orchid"
-	icon_state = "pod_hair_orchid"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/angel
+	name = "Angel"
+	icon_state = "hair_angel_s"
 
-/datum/sprite_accessory/hair/fig
-	name = "Fig"
-	icon_state = "pod_hair_fig"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/chub
+	name = "Chub"
+	icon_state = "hair_chub_s"
 
-/datum/sprite_accessory/hair/hibiscus
-	name = "Hibiscus"
-	icon_state = "pod_hair_hibiscus"
-	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
+/datum/sprite_accessory/hair/ark/katara
+	name = "Katara"
+	icon_state = "hair_katara_s"
 
-////////////////////////////// Skrell Hairs
+// VULPCANIN HAIRS
+
+/datum/sprite_accessory/hair/ark/jagged_s
+	name = "Vulp Jagged"
+	icon_state = "jagged_s"
+	recommended_species = list("mammal", "undead_mammal")
+
+/datum/sprite_accessory/hair/ark/jagged_s/keid
+	name = "Vulp Keid"
+	icon_state = "keid_s"
+
+/datum/sprite_accessory/hair/ark/jagged_s/mizar
+	name = "Vulp Mizar"
+	icon_state = "mizar_s"
+
+/datum/sprite_accessory/hair/ark/jagged_s/raine
+	name = "Vulp Raine"
+	icon_state = "raine_s"
+
+// Skrell Hairs
+
 /datum/sprite_accessory/skrell_hair
 	icon = 'zov_modular_arkstation/modules/markings/icons/skrell_hair.dmi'
 	color_src = USE_MATRIXED_COLORS
