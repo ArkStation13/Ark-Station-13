@@ -3,7 +3,7 @@
 /obj/structure/reagent_dispensers/beerkeg/kvasstank
 	name = "KBAC"
 	desc = "A cool refreshing drink with a taste of socialism."
-	icon = 'zov_modular_arkstation/modules/kvass/objects.dmi'
+	icon = 'zov_modular_arkstation/modules/kvass-and-kefir/objects.dmi'
 	icon_state = "kvasstank"
 	reagent_id = /datum/reagent/consumable/ethanol/kvass
 
