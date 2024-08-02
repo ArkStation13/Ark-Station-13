@@ -1,4 +1,4 @@
-/obj/machinery/vending/clothing
+/*/obj/machinery/vending/clothing // ARK STATION REMOVED
 	product_categories_nova = list(
 		list(
 			"name" = "Head",
@@ -173,4 +173,4 @@
 		/obj/item/clothing/suit/brownbattlecoat = 1,
 		/obj/item/clothing/suit/blackfurrich = 1,
 		/obj/item/clothing/suit/frenchtrench = 1,
-	)
+	)*/
