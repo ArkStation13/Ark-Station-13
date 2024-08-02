@@ -1,4 +1,4 @@
-/obj/item/clothing/under/rank/security/officer/saare
+/obj/item/clothing/under/rank/security/saare
 	name = "SAARE utility uniform"
 	desc = "<Placeholder>"
 	icon = 'zov_modular_arkstation/modules/SAARE-Update/icons/obj.dmi'
@@ -8,11 +8,10 @@
 	righthand_file = 'zov_modular_arkstation/modules/SAARE-Update/icons/obj.dmi'
 	icon_state = "saare"
 	inhand_icon_state = "saare"
-	uses_advanced_reskins = FALSE
 
 /datum/loadout_item/under/jumpsuit/saare_suit
 	name = "SAARE Utility Uniform"
-	item_path = /obj/item/clothing/under/rank/security/officer/saare
+	item_path = /obj/item/clothing/under/rank/security/saare
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/inhand/flag_saare

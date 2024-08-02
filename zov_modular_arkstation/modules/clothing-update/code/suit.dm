@@ -242,8 +242,19 @@
 			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
 			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
 			RESKIN_WORN_ICON_STATE = "riot-wm"
+		),
+		"Old" = list(
+			RESKIN_ICON_STATE = "riot",
+			RESKIN_ICON	= 'icons/obj/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'icons/mob/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON_STATE = "riot"
 		)
 	)
+
+/obj/item/clothing/suit/armor/vest/warden
+	icon = 'icons/obj/clothing/suits/armor.dmi'
+	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon_state = "warden_alt"
 
 /obj/item/clothing/suit/armor/bulletproof
 	uses_advanced_reskins = TRUE
@@ -275,6 +286,9 @@
 	)
 
 /obj/item/clothing/suit/armor/vest/alt/sec
+	icon = 'icons/obj/clothing/suits/armor.dmi'
+	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon_state = "armor_sec"
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Black Variant" = list(
@@ -286,24 +300,39 @@
 			RESKIN_WORN_ICON_STATE = "armoralt"
 		),
 		"Black-Blue Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi',
 			RESKIN_ICON_STATE = "vest_black",
 			RESKIN_WORN_ICON_STATE = "vest_black"
 		),
 		"Blue Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi',
 			RESKIN_ICON_STATE = "vest_blue",
 			RESKIN_WORN_ICON_STATE = "vest_blue"
 		),
 		"White Variant" = list(
-			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi', // Ark Station 13 Edit
-			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi', // Ark Station 13 Edit
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi',
 			RESKIN_ICON_STATE = "vest_white",
 			RESKIN_WORN_ICON_STATE = "vest_white"
 		),
 	)
+
+/obj/item/clothing/suit/armor/hos/hos_formal
+	icon = 'icons/obj/clothing/suits/armor.dmi'
+	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon_state = "hosformal"
+	inhand_icon_state = "hostrench"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+
+/obj/item/clothing/suit/armor/hos/hos_formal/nova
+	icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi'
+	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/suits/armor_digi.dmi'
+	icon_state = "hosformal_blue"
+	current_skin = "hosformal_blue"	//prevents reskinning (but not toggling!)
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/toggle/labcoat/paramedic/red
 	name = "red EMT coat"
@@ -320,3 +349,37 @@
 /obj/item/clothing/suit/toggle/labcoat/paramedic/red/paramedic_vest
 	name = "paramedic vest"
 	icon_state = "paramedic-vest"
+
+// Standart TG Winter Jacket with Hood
+
+/obj/item/clothing/head/hooded/winterhood/security
+	desc = "A red, armour-padded winter hood. Definitely not bulletproof, especially not the part where your face goes."
+	icon_state = "hood_security"
+	icon = 'icons/obj/clothing/head/winterhood.dmi'
+	worn_icon = 'icons/mob/clothing/head/winterhood.dmi'
+
+/obj/item/clothing/suit/hooded/wintercoat/security
+	name = "security winter jacket"
+	desc = "A red, armour-padded winter coat. It glitters with a mild ablative coating and a robust air of authority.  The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
+	icon_state = "coatsecurity"
+	inhand_icon_state = "coatsecurity"
+	icon = 'icons/obj/clothing/suits/wintercoat.dmi'
+	worn_icon = 'icons/mob/clothing/suits/wintercoat.dmi'
+
+// NOVA BLUE variant of TG Security Winter Jacket
+
+/obj/item/clothing/head/hooded/winterhood/security/nova
+	desc = "A blue, armour-padded winter hood. Definitely not bulletproof, especially not the part where your face goes." //God dammit TG stop putting color in the desc of items like this
+	icon = 'modular_nova/master_files/icons/obj/clothing/head/winterhood.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/head/winterhood.dmi'
+	icon_state = "winterhood_security"
+
+/obj/item/clothing/suit/hooded/wintercoat/security/nova
+	name = "security winter coat" //TG has this as a Jacket now, so unless we update ours, this needs to be re-named as Coat
+	desc = "A blue, armour-padded winter coat. It glitters with a mild ablative coating and a robust air of authority. The zipper tab is a small <b>\"Lopland\"</b> logo."
+	icon = 'modular_nova/master_files/icons/obj/clothing/suits/wintercoat.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/wintercoat.dmi'
+	icon_state = "coatsecurity_winter"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/security/nova
+
+//

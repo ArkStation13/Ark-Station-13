@@ -1,4 +1,8 @@
 /obj/item/clothing/glasses/hud/security/sunglasses
+	icon = 'icons/obj/clothing/glasses.dmi'
+	worn_icon = 'icons/mob/clothing/eyes.dmi'
+	icon_state = "sunhudsec"
+	glass_colour_type = /datum/client_colour/glass_colour/red
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Dark-Tint Variant" = list(
@@ -14,6 +18,17 @@
 			RESKIN_WORN_ICON_STATE = "security_hud_blue"
 		),
 	)
+
+/obj/item/clothing/glasses/hud/security
+	icon_state = "securityhud"
+	glass_colour_type = /datum/client_colour/glass_colour/lightred
+
+/obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
+	icon_state = "hudpatch"
+	base_icon_state = "hudpatch"
+
+/obj/item/clothing/glasses/hud/security/night
+	icon_state = "securityhudnight"
 
 // BALLISTIC GLASSES FOR EVERYONE //
 // SECURITY

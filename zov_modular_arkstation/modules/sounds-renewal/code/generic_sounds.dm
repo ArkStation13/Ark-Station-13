@@ -54,6 +54,7 @@
 
 // Код для добавления/изменения аннонсов и их звучания
 
+/* У Новы так же.
 /datum/centcom_announcer/default
 	welcome_sounds = list('sound/ai/default/welcome.ogg')
 	alert_sounds = list('modular_nova/modules/alerts/sound/alerts/alert2.ogg')
@@ -102,7 +103,7 @@
 		ANNOUNCER_DEPARTMENTAL = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',
 		ANNOUNCER_SHUTTLE = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',
 		)
-
+*/
 
 //////// Шлюзы и прочее
 
