@@ -95,7 +95,7 @@
 		/obj/item/clothing/under/rank/security/officer/blueshirt = 10,
 		/obj/item/clothing/under/rank/security/constable = 10,
 		/obj/item/clothing/under/rank/security/skyrat/utility = 3,
-		/obj/item/clothing/under/rank/security/officer/metropolice = 3,
+		/obj/item/clothing/under/rank/security/metropolice = 3,
 		/obj/item/clothing/under/rank/security/russobluecamo = 3,
 		/obj/item/clothing/under/rank/security/tacticool = 3,
 		/obj/item/clothing/under/rank/security/saare = 5,
