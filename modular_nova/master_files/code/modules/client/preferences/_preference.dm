@@ -159,14 +159,14 @@
 
 /datum/preference/choiced/mutant_choice/init_possible_values()
 	if(!initial(generate_icons))
-		return sort_list(assoc_to_keys_features(SSaccessories.sprite_accessories[relevant_mutant_bodypart])) // ARK - LISTS_SORTING
+		return sort_list(assoc_to_keys_features(SSaccessories.sprite_accessories[relevant_mutant_bodypart])) // ARK STATION EDIT - LISTS_SORTING
 
 	var/list/list_of_accessories = list()
 	for(var/sprite_accessory_name as anything in SSaccessories.sprite_accessories[relevant_mutant_bodypart])
 		var/datum/sprite_accessory/sprite_accessory = SSaccessories.sprite_accessories[relevant_mutant_bodypart][sprite_accessory_name]
 		list_of_accessories += list("[sprite_accessory.name]" = generate_icon(sprite_accessory))
 
-	return sort_list(list_of_accessories) // ARK - LISTS_SORTING
+	return sort_list(list_of_accessories) // ARK STATION EDIT - LISTS_SORTING
 
 /datum/preference/choiced/mutant_choice/create_default_value()
 	return initial(default_accessory_type.name)

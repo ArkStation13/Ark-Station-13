@@ -19,7 +19,7 @@
 	///Whether the body marking sprite is the same for both sexes or not. Only relevant for chest right now.
 	var/gendered = TRUE
 
-	var/relevant_layer = BODYPARTS_LAYER // ARC - MARKINGS - ADD - позволяет некоторым маркингам быть выше мутантских частей тела (морд например)
+	var/relevant_layer = BODYPARTS_LAYER // ARK STATION EDIT - MARKINGS - ADD - позволяет некоторым маркингам быть выше мутантских частей тела (морд например)
 
 /datum/body_marking/New()
 	if(!default_color)

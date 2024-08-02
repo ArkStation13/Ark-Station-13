@@ -91,31 +91,31 @@ SUBSYSTEM_DEF(accessories) // just 'accessories' for brevity
 /// where this subsystem will initialize BEFORE statics, it's just not feasible since this all needs to be ready for actual subsystems to use.
 /// Sorry.
 /datum/controller/subsystem/accessories/proc/setup_lists()
-	var/hair_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/hair)) // ARK - LISTS_SORTING
-	hairstyles_list = sort_list(hair_lists[DEFAULT_SPRITE_LIST]) // ARK - LISTS_SORTING
-	hairstyles_male_list = sort_list(hair_lists[MALE_SPRITE_LIST]) // ARK - LISTS_SORTING
-	hairstyles_female_list = sort_list(hair_lists[FEMALE_SPRITE_LIST]) // ARK - LISTS_SORTING
+	var/hair_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/hair)) // ARK STATION EDIT - LISTS_SORTING
+	hairstyles_list = sort_list(hair_lists[DEFAULT_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	hairstyles_male_list = sort_list(hair_lists[MALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	hairstyles_female_list = sort_list(hair_lists[FEMALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
 
-	var/facial_hair_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_hair))// ARK - LISTS_SORTING
-	facial_hairstyles_list = sort_list(facial_hair_lists[DEFAULT_SPRITE_LIST]) // ARK - LISTS_SORTING
-	facial_hairstyles_male_list = sort_list(facial_hair_lists[MALE_SPRITE_LIST]) // ARK - LISTS_SORTING
-	facial_hairstyles_female_list = sort_list(facial_hair_lists[FEMALE_SPRITE_LIST]) // ARK - LISTS_SORTING
+	var/facial_hair_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_hair))// ARK STATION EDIT - LISTS_SORTING
+	facial_hairstyles_list = sort_list(facial_hair_lists[DEFAULT_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	facial_hairstyles_male_list = sort_list(facial_hair_lists[MALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	facial_hairstyles_female_list = sort_list(facial_hair_lists[FEMALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
 
-	var/underwear_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear)) // ARK - LISTS_SORTING
-	underwear_list = sort_list(underwear_lists[DEFAULT_SPRITE_LIST]) // ARK - LISTS_SORTING
-	underwear_m = sort_list(underwear_lists[MALE_SPRITE_LIST]) // ARK - LISTS_SORTING
-	underwear_f = sort_list(underwear_lists[FEMALE_SPRITE_LIST]) // ARK - LISTS_SORTING
+	var/underwear_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear)) // ARK STATION EDIT - LISTS_SORTING
+	underwear_list = sort_list(underwear_lists[DEFAULT_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	underwear_m = sort_list(underwear_lists[MALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	underwear_f = sort_list(underwear_lists[FEMALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
 
-	var/undershirt_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/undershirt)) // ARK - LISTS_SORTING
-	undershirt_list = sort_list(undershirt_lists[DEFAULT_SPRITE_LIST]) // ARK - LISTS_SORTING
-	undershirt_m = sort_list(undershirt_lists[MALE_SPRITE_LIST]) // ARK - LISTS_SORTING
-	undershirt_f = sort_list(undershirt_lists[FEMALE_SPRITE_LIST]) // ARK - LISTS_SORTING
+	var/undershirt_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/undershirt)) // ARK STATION EDIT - LISTS_SORTING
+	undershirt_list = sort_list(undershirt_lists[DEFAULT_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	undershirt_m = sort_list(undershirt_lists[MALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	undershirt_f = sort_list(undershirt_lists[FEMALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
 
 	// NOVA EDIT ADDITION START - Underwear/bra split
-	var/bra_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/bra)) // ARK - LISTS_SORTING
-	bra_list = sort_list(bra_lists[DEFAULT_SPRITE_LIST]) // ARK - LISTS_SORTING
-	bra_m = sort_list(bra_lists[MALE_SPRITE_LIST]) // ARK - LISTS_SORTING
-	bra_f = sort_list(bra_lists[FEMALE_SPRITE_LIST]) // ARK - LISTS_SORTING
+	var/bra_lists = sort_list(init_sprite_accessory_subtypes(/datum/sprite_accessory/bra)) // ARK STATION EDIT - LISTS_SORTING
+	bra_list = sort_list(bra_lists[DEFAULT_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	bra_m = sort_list(bra_lists[MALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
+	bra_f = sort_list(bra_lists[FEMALE_SPRITE_LIST]) // ARK STATION EDIT - LISTS_SORTING
 	// NOVA EDIT ADDITION END
 
 	socks_list = init_sprite_accessory_subtypes(/datum/sprite_accessory/socks)[DEFAULT_SPRITE_LIST]
