@@ -19,6 +19,9 @@
 /turf/open/floor/catwalk_floor
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/catwalks.dmi'
 
+// /obj/structure/lattice/catwalk
+// 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/catwalks.dmi'
+
 /atom/movable/screen/fullscreen/cult_teleportation
 	name = "cult teleportation"
 	icon = 'zov_modular_arkstation/modules/big-sprites-pack/cultTP.dmi'
