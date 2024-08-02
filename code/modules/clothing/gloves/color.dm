@@ -9,7 +9,7 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/fingerless
-	// SKYRAT EDIT ADDITION START
+	// NOVA EDIT ADDITION START
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Basic Gloves" = list(

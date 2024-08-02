@@ -108,5 +108,29 @@
 /obj/item/clothing/accessory/armband
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/acs.dmi'
 
+/obj/item/clothing/accessory/armband/deputy
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/acs.dmi'
+	worn_icon = 'icons/mob/clothing/accessories.dmi'
+	icon_state = "redband"
+
+/obj/item/clothing/accessory/armband/deputy/lopland
+	icon = 'modular_nova/master_files/icons/obj/clothing/accessories.dmi'
+	worn_icon = 'modular_nova/master_files/icons/mob/clothing/accessories.dmi'
+	icon_state = "armband_lopland"
+
 /obj/item/assembly/flash
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/flash.dmi'
+
+// PDA's
+
+/obj/item/modular_computer/pda/security
+	greyscale_colors = "#EA3232#0000cc"
+
+/obj/item/modular_computer/pda/detective
+	greyscale_colors = "#805A2F#990202"
+
+/obj/item/modular_computer/pda/warden
+	greyscale_colors = "#EA3232#0000CC#363636"
+
+/obj/item/modular_computer/pda/heads/hos
+	greyscale_colors = "#EA3232#0000CC"

@@ -8,7 +8,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses // Edit
 	ears = /obj/item/radio/headset/heads/nanotrasen_consultant
 	gloves = /obj/item/clothing/gloves/color/black // Edit
-	uniform =  /obj/item/clothing/under/rank/nanotrasen_consultant
+	uniform = /obj/item/clothing/under/rank/nanotrasen_consultant
 	suit = /obj/item/clothing/suit/armor/vest/nanotrasen_consultant
 	shoes = /obj/item/clothing/shoes/laceup/noslip // Edit
 	head = /obj/item/clothing/head/nanotrasen_consultant

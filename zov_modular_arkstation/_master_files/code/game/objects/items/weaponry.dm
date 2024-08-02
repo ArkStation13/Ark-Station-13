@@ -31,7 +31,7 @@
 	worn_icon_state = "claymore"
 	lefthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/lefthand.dmi'
 	righthand_file = 'zov_modular_arkstation/_master_files/icons/mob/inhands/weapons/righthand.dmi'
-	force = 40
+	force = 15 // 40
 
 /obj/item/spear/cerberus
 	icon_state = "tribal_spear0"

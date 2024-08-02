@@ -38,11 +38,11 @@
 
 /obj/item/clothing/shoes/jackboots/sec
 	name = "security jackboots"
-	desc = "Lopland's Peacekeeper-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
-	icon_state = "jackboots" // ARK STATION EDIT || REDSEC
+	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+	icon_state = "jackboots"
 	icon = 'modular_nova/master_files/icons/obj/clothing/shoes.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/feet.dmi'
-	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS) // We have other footsteps.
+	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS)
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Red-Trimmed Variant" = list(
