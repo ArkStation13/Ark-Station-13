@@ -1,3 +1,4 @@
+/* ARK - oversize_changes - START - убираем шлепанье головой о шлюзы
 /obj/machinery/door/airlock/Initialize(mapload)
 	. = ..()
 	var/static/list/loc_connections = list(
@@ -18,3 +19,4 @@
 				span_userdanger("You slam your head against [src]!")
 			)
 			playsound(crossed_atom, 'sound/effects/bang.ogg', 50, TRUE)
+/ ARK - oversize_changes - END*/
