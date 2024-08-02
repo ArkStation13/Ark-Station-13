@@ -213,6 +213,10 @@
 		),
 	)
 
+/obj/item/clothing/under/rank/security/officer/grey
+	uses_advanced_reskins = FALSE
+	unique_reskin = null
+
 /obj/item/clothing/under/rank/security/officer/skirt
 	name = "security jumpskirt"
 	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
