@@ -71,6 +71,31 @@
 		)
 	)
 
+/obj/item/clothing/head/helmet/alt
+	name = "bulletproof helmet"
+	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
+	icon_state = "helmetalt"
+	base_icon_state = "helmetalt"
+	icon = 'icons/obj/clothing/head/helmet.dmi'
+	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Default" = list(
+			RESKIN_ICON_STATE = "helmetalt_blue",
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi',
+			RESKIN_WORN_ICON_STATE = "helmetalt_blue",
+			RESKIN_BASE_ICON_STATE = "helmetalt_blue"
+		),
+		"Blue" = list(
+			RESKIN_ICON_STATE = "helmetalt_blue",
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi',
+			RESKIN_WORN_ICON_STATE = "helmetalt_blue",
+			RESKIN_BASE_ICON_STATE = "helmetalt_blue"
+		),
+	)
+
 /obj/item/clothing/head/helmet/sec/nova
 	name = "Helmet with visor"
 	desc = "A unique helmet with a transparent visor that protects you from various impacts. For example, a blow from stones or pepper."

@@ -9,9 +9,9 @@
 | Website                   | Link                                           |
 |---------------------------|------------------------------------------------|
 | Вебсайт                   | [https://www.spacestation13.space/](https://www.spacestation13.space/)      							   |
-| Код	                      | [https://github.com/ArkStation13y/Ark-Station-13](https://github.com/ArkStation13/Ark-Station-13) 		   |
+| Код	                    | [https://github.com/ArkStation13y/Ark-Station-13](https://github.com/ArkStation13/Ark-Station-13) 		   |
 | Вики                      | [https://wiki.spacestation13.space/](https://wiki.spacestation13.space/)  									 |
-| Дискорд Сервер			      | [https://discord.gg/novasector](https://discord.gg/novasector)															 |
+| Дискорд Сервер			| [https://discord.gg/novasector](https://discord.gg/novasector)															 |
 | Coderbus Discord          | [https://discord.com/invite/eAvpD6a7av](https://discord.com/invite/eAvpD6a7av)               |
 
 
