@@ -47,7 +47,6 @@ export const setClientTheme = (name) => {
       // Buttons
       'changelog.background-color': 'none',
       'changelog.text-color': '#202020',
-      'changelog.border': 0,
       'rules.background-color': 'none',
       'rules.text-color': '#202020',
       'rules.border': 0,

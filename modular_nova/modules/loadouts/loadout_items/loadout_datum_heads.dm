@@ -512,6 +512,22 @@
 	item_path = /obj/item/clothing/head/hats/caphat/parade/fedcap/sec
 	restricted_roles = list(JOB_CHIEF_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_STATION_ENGINEER, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_QUARTERMASTER)
 
+/datum/loadout_item/head/trekcapcustom
+	name = "Officer's Cap (Custom)"
+	item_path = /obj/item/clothing/head/hats/caphat/parade/fedcap/custom
+
+/datum/loadout_item/head/trekcapcustom_gold
+	name = "Officer's Cap (Custom, Gold Badge)"
+	item_path = /obj/item/clothing/head/hats/caphat/parade/fedcap/custom/gold
+
+/datum/loadout_item/head/navalcap
+	name = "Custom Naval Cap"
+	item_path = /obj/item/clothing/head/hats/caphat/naval/custom
+
+/datum/loadout_item/head/navalcap_gold
+	name = "Custom Naval Cap (Gold Badge)"
+	item_path = /obj/item/clothing/head/hats/caphat/naval/custom/gold
+
 /*
 *	JOB-LOCKED
 */

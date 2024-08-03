@@ -43,6 +43,7 @@
 		return
 	if(spamcheck > world.time)
 		return
+	spamcheck = world.time + 5 SECONDS
 	if(obj_flags & EMAGGED)
 		///somewhat compressed and ear-grating, crusty and noisy with a bit of echo.
 		message_args[TREAT_TTS_FILTER_ARG] += "acrusher=samples=9:level_out=7,aecho=delays=100:decays=0.4,aemphasis=type=emi,crystalizer=i=6,acontrast=60,rubberband=pitch=0.9"

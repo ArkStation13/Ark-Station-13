@@ -11,8 +11,6 @@
 /datum/loadout_item/pocket_items/drawingtablet
 	name = "Drawing Tablet"
 	item_path = /obj/item/canvas/drawingtablet
-	donator_only = TRUE
-
 /datum/loadout_item/under/jumpsuit/paddedunder
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded
@@ -465,6 +463,7 @@
 /datum/loadout_item/toys/zappplush
 	name = "Lil' Zapp Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/zapp
+	item_path = /obj/item/toy/plush/nova/donator/zapp
 	donator_only = TRUE
 
 /datum/loadout_item/pocket_items/tacticalbrush
@@ -512,9 +511,11 @@
 /datum/loadout_item/toys/plushe_winrow
 	name = "Dark and Brooding Lizard Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_winrow
+	item_path = /obj/item/toy/plush/nova/donator/plushie_winrow
 
 /datum/loadout_item/toys/plushie_star
 	name = "Star Angel Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/plushie_star
 	item_path = /obj/item/toy/plush/nova/donator/plushie_star
 
 /datum/loadout_item/suit/rainbowcoat
@@ -553,15 +554,18 @@
 /datum/loadout_item/toys/CFBonnie
 	name = "Chunko Fop: Blue Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/bonnie
+	item_path = /obj/item/toy/plush/nova/donator/chunko/bonnie
 	donator_only = TRUE
 
 /datum/loadout_item/toys/CFAndrew
 	name = "Chunko Fop: Green Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/andrew
+	item_path = /obj/item/toy/plush/nova/donator/chunko/andrew
 	donator_only = TRUE
 
 /datum/loadout_item/toys/CFInessa
 	name = "Chunko Fop: Medical Bear Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/chunko/inessa
 	item_path = /obj/item/toy/plush/nova/donator/chunko/inessa
 	donator_only = TRUE
 
@@ -634,6 +638,7 @@
 
 /datum/loadout_item/toys/plushie_elofy
 	name = "Bumbling Wolfgirl Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/plushie_elofy
 	item_path = /obj/item/toy/plush/nova/donator/plushie_elofy
 	//ckeywhitelist = list("october23") // Asked it to be public.
 

@@ -38,6 +38,7 @@
 /obj/item/holosign_creator/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!check_allowed_items(interacting_with, not_inside = TRUE))
 		return NONE
+
 	var/turf/target_turf = get_turf(interacting_with)
 	var/obj/structure/holosign/target_holosign = locate(holosign_type) in target_turf
 
@@ -64,6 +65,7 @@
 			return ITEM_INTERACT_BLOCKING
 		if(target_turf.is_blocked_turf(TRUE)) //don't try to sneak dense stuff on our tile during the wait.
 			return ITEM_INTERACT_BLOCKING
+
 	target_holosign = create_holosign(interacting_with, user)
 	return ITEM_INTERACT_SUCCESS
 
