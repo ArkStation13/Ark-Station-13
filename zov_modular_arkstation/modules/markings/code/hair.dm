@@ -51,22 +51,140 @@
 	name = "Katara"
 	icon_state = "hair_katara_s"
 
+//
+
+/datum/sprite_accessory/hair/ark/hair_curtains
+	name = "Curtains"
+	icon_state = "hair_curtains"
+
+/datum/sprite_accessory/hair/ark/hair_tailhair2
+	name = "Tail Hair"
+	icon_state = "hair_tailhair2"
+
+/datum/sprite_accessory/hair/ark/hair_aviancrest
+	name = "Avian Crest"
+	icon_state = "hair_aviancrest"
+
+/datum/sprite_accessory/hair/ark/hair_glamourh
+	name = "Glamourh"
+	icon_state = "hair_glamourh"
+
+/datum/sprite_accessory/hair/ark/hair_immovable
+	name = "Immovable"
+	icon_state = "hair_immovable"
+
+/datum/sprite_accessory/hair/ark/hair_emma
+	name = "Emma"
+	icon_state = "hair_emma"
+
+/datum/sprite_accessory/hair/ark/hair_damsel
+	name = "Damsel"
+	icon_state = "hair_damsel"
+
+/datum/sprite_accessory/hair/ark/hair_wavylong
+	name = "Wavy Long"
+	icon_state = "hair_wavylong"
+
+/datum/sprite_accessory/hair/ark/hair_wavyovereye
+	name = "Wavy Over Eye"
+	icon_state = "hair_wavyovereye"
+
+/datum/sprite_accessory/hair/ark/hair_straightovereye
+	name = "Straight Over Eye"
+	icon_state = "hair_straightovereye"
+
+/datum/sprite_accessory/hair/ark/hair_straightside
+	name = "Straight Side"
+	icon_state = "hair_straightside"
+
+/datum/sprite_accessory/hair/ark/hair_straightshort
+	name = "Straight Short"
+	icon_state = "hair_straightshort"
+
+/datum/sprite_accessory/hair/ark/hair_straightlong
+	name = "Straight Long"
+	icon_state = "hair_straightlong"
+
+/datum/sprite_accessory/hair/ark/hair_straightfloorlength
+	name = "Straight Floorlength"
+	icon_state = "hair_straightfloorlength"
+
+/datum/sprite_accessory/hair/ark/hair_deathhawk
+	name = "Deathhawk"
+	icon_state = "hair_deathhawk"
+
+/datum/sprite_accessory/hair/ark/hair_fluffball
+	name = "Fluffball"
+	icon_state = "hair_fluffball"
+
+/datum/sprite_accessory/hair/ark/hair_phoebe
+	name = "Phoebe"
+	icon_state = "hair_phoebe"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_long_alt
+	name = "Halfshaved Long (Alt)"
+	icon_state = "hair_halfshave_long_alt"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_long
+	name = "Halfshaved Long"
+	icon_state = "hair_halfshave_long"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_messy_alt
+	name = "Halfshaved Messy (Alt)"
+	icon_state = "hair_halfshave_messy_alt"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_messy
+	name = "Halfshaved Messy"
+	icon_state = "hair_halfshave_messy"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_messylong_alt
+	name = "Halfshaved Messy Long (Alt)"
+	icon_state = "hair_halfshave_messylong_alt"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_messylong
+	name = "Halfshaved Messy Long"
+	icon_state = "hair_halfshave_messylong"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_glamorous_alt
+	name = "Halfshaved Glamorous (Alt)"
+	icon_state = "hair_halfshave_glamorous_alt"
+
+/datum/sprite_accessory/hair/ark/hair_halfshave_glamorous
+	name = "Halfshaved Glamorous"
+	icon_state = "hair_halfshave_glamorous"
+
+/datum/sprite_accessory/hair/ark/hair_thick_long
+	name = "Thick (Long)"
+	icon_state = "hair_thick_(long)"
+
+/datum/sprite_accessory/hair/ark/hair_thick_short
+	name = "Thick (Short)"
+	icon_state = "hair_thick_(short)"
+
+/datum/sprite_accessory/hair/ark/hair_thick_curly
+	name = "Thick (Curly)"
+	icon_state = "hair_thick_(curly)"
+
+/datum/sprite_accessory/hair/ark/hair_thick_long_alt
+	name = "Thick (Long Alt)"
+	icon_state = "hair_thick_(long alt)"
+
 // VULPCANIN HAIRS
 
-/datum/sprite_accessory/hair/ark/jagged_s
+/datum/sprite_accessory/hair/ark/mammal
 	name = "Vulp Jagged"
 	icon_state = "jagged_s"
 	recommended_species = list("mammal", "undead_mammal")
 
-/datum/sprite_accessory/hair/ark/jagged_s/keid
+/datum/sprite_accessory/hair/ark/mammal/keid
 	name = "Vulp Keid"
 	icon_state = "keid_s"
 
-/datum/sprite_accessory/hair/ark/jagged_s/mizar
+/datum/sprite_accessory/hair/ark/mammal/mizar
 	name = "Vulp Mizar"
 	icon_state = "mizar_s"
 
-/datum/sprite_accessory/hair/ark/jagged_s/raine
+/datum/sprite_accessory/hair/ark/mammal/raine
 	name = "Vulp Raine"
 	icon_state = "raine_s"
 
