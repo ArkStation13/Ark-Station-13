@@ -11,6 +11,7 @@
 /datum/loadout_item/pocket_items/drawingtablet
 	name = "Drawing Tablet"
 	item_path = /obj/item/canvas/drawingtablet
+
 /datum/loadout_item/under/jumpsuit/paddedunder
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded
