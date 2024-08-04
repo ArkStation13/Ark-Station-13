@@ -13,7 +13,7 @@ type IconSettings = {
 };
 
 const normalIcon: IconSettings = {
-  dmi: 'modular_nova/master_files/icons/mob/huds/hud.dmi', // NOVA CHANGE - ORIGINAL 'icons/mob/huds/hud.dmi'
+  dmi: 'zov_modular_arkstation/_master_files/icons/mob/hud.dmi', // NOVA CHANGE - ORIGINAL 'icons/mob/huds/hud.dmi' // ARK STATION CHANGED
   transform: 'scale(2.3) translateX(9px) translateY(1px)',
 };
 
