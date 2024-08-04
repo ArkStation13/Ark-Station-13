@@ -5,6 +5,7 @@
 		TRAIT_CAN_STRIP,
 		TRAIT_PLANT_SAFE,
 		TRAIT_LITERATE,
+		TRAIT_NOTHIRST, // ARK STATION ADDITION
 	)
 	mutant_bodyparts = list()
 	payday_modifier = 1.0
@@ -24,6 +25,7 @@
 		TRAIT_CAN_STRIP,
 		TRAIT_LITERATE,
 		TRAIT_MUTANT_COLORS,
+		TRAIT_NOTHIRST, // ARK STATION ADDITION
 	)
 
 	always_customizable = FALSE
