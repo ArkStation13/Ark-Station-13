@@ -77,8 +77,6 @@
 	if(user)
 		balloon_alert(user, "clicked")
 	playsound(src, 'sound/items/pen_click.ogg', 30, TRUE, -3)
-	icon_state = initial(icon_state) + "_retract" // ARK STATION ADDITION
-	sleep(0.3 SECONDS)  // ARK STATION ADDITION
 	icon_state = initial(icon_state) + (active ? "_retracted" : "")
 	update_appearance(UPDATE_ICON)
 
