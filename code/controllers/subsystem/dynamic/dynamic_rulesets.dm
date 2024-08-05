@@ -148,12 +148,12 @@
 
 	var/antag_fraction = 0
 	for(var/datum/dynamic_ruleset/ruleset as anything in (SSdynamic.executed_rules + list(src))) // we care about the antags we *will* assign, too
-		antag_fraction += ruleset.get_antag_cap_scaling_included(population) / SSticker.totalPlayers
+		antag_fraction += ruleset.get_antag_cap_scaling_included(population) / SSticker.totalPlayers // ARK STATION EDIT || antag_fraction += ruleset.get_antag_cap_scaling_included(population) / SSdynamic.roundstart_pop_ready
 
 	for(var/i in 1 to max_scale)
 		if(antag_fraction < 0.25)
 			scaled_times += 1
-			antag_fraction += get_scaling_antag_cap(population) / SSticker.totalPlayers // we added new antags, gotta update the %
+			antag_fraction += get_scaling_antag_cap(population) / SSticker.totalPlayers // we added new antags, gotta update the % // ARK STATION EDIT || antag_fraction += get_scaling_antag_cap(population) / SSdynamic.roundstart_pop_ready // we added new antags, gotta update the %
 
 	return scaled_times * scaling_cost
 
