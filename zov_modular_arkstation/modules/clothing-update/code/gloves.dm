@@ -68,6 +68,41 @@
 		),
 	)
 
+/obj/item/clothing/gloves/color/black/security
+	name = "security gloves"
+	desc = "A pair of security gloves."
+	icon = 'icons/obj/clothing/gloves.dmi'
+	worn_icon = 'icons/mob/clothing/hands.dmi'
+	icon_state = "sec"
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Black-Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
+			RESKIN_ICON_STATE = "gloves_black",
+			RESKIN_WORN_ICON_STATE = "gloves_black"
+		),
+		"White-Blue Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
+			RESKIN_ICON_STATE = "gloves_blue",
+			RESKIN_WORN_ICON_STATE = "gloves_blue"
+		),
+		"White Variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/gloves.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/hands.dmi',
+			RESKIN_ICON_STATE = "gloves_white",
+			RESKIN_WORN_ICON_STATE = "gloves_white"
+		),
+	)
+
+/obj/item/clothing/gloves/color/black/security/blu // Wait why these a subtype of black?!? Who did this
+	icon = 'icons/obj/clothing/gloves.dmi'
+	worn_icon = 'icons/mob/clothing/hands.dmi'
+	icon_state = "sec_blu"
+	uses_advanced_reskins = FALSE
+	unique_reskin = null
+
 /obj/item/clothing/gloves/krav_maga/sec
 	icon = 'icons/obj/clothing/gloves.dmi'
 	worn_icon = 'icons/mob/clothing/hands.dmi'
