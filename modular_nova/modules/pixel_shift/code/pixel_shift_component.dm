@@ -14,10 +14,11 @@
 	//the maximum amount we/an item can move
 	var/maximum_pixel_shift = 16
 	//If we are shifted
-	//ARK STATION EDIT: S
+	//ARK STATION EDIT: END
 	var/is_shifted = FALSE
 	//Allows atoms entering Parent's turf to pass through freely from given directions
 	var/passthroughable = NONE
+	//ARK STATION EDIT: START
 	//Amount of shifting necessary to make the parent passthroughable
 	var/passthrough_threshold = 8
 	//ARK STATION EDIT: END
