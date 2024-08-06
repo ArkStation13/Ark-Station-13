@@ -1,3 +1,4 @@
+//ARK STATION EDIT: START
 /datum/keybinding/mob/item_pixel_shift
 	hotkey_keys = list("V")
 	name = "item_pixel_shift"
@@ -16,6 +17,7 @@
 /datum/keybinding/mob/item_pixel_shift/up(client/user)
 	. = ..()
 	SEND_SIGNAL(user.mob, COMSIG_KB_MOB_ITEM_PIXEL_SHIFT_UP)
+//ARK STATION EDIT: END
 
 /datum/keybinding/mob/pixel_shift
 	hotkey_keys = list("B")
@@ -29,13 +31,17 @@
 	. = ..()
 	if(.)
 		return
+	//ARK STATION EDIT: START
+	//user.mob.add_pixel_shift_component()
 	user.mob.AddComponent(/datum/component/pixel_shift)
 	SEND_SIGNAL(user.mob, COMSIG_KB_MOB_PIXEL_SHIFT_DOWN)
+	//ARK STATION EDIT: END
 
 /datum/keybinding/mob/pixel_shift/up(client/user)
 	. = ..()
 	SEND_SIGNAL(user.mob, COMSIG_KB_MOB_PIXEL_SHIFT_UP)
 
+//ARK STATION EDIT: START
 /datum/keybinding/mob/pixel_tilting
 	hotkey_keys = list("N")
 	name = "Pixel Tilting"
@@ -54,3 +60,4 @@
 /datum/keybinding/mob/pixel_tilting/up(client/user)
 	. = ..()
 	SEND_SIGNAL(user.mob, COMSIG_KB_MOB_PIXEL_TILT_UP)
+//ARK STATION EDIT: END
