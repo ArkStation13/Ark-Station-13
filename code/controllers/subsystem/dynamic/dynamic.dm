@@ -573,10 +573,12 @@ SUBSYSTEM_DEF(dynamic)
 		addtimer(CALLBACK(src, PROC_REF(send_intercept)), rand(waittime_l, waittime_h))
 
 		addtimer(CALLBACK(src, PROC_REF(display_roundstart_logout_report)), ROUNDSTART_LOGOUT_REPORT_TIME)
-	//NOVA EDIT START - DIVERGENCY/GOALS REPORT
-	else
-		addtimer(CALLBACK(src, PROC_REF(send_trait_report)), rand(waittime_l, waittime_h))
-	//NOVA EDIT END
+// ARK STATION EDIT START
+	// // 	//NOVA EDIT START - DIVERGENCY/GOALS REPORT
+	// else
+	// 	addtimer(CALLBACK(src, PROC_REF(send_trait_report)), rand(waittime_l, waittime_h))
+	// //NOVA EDIT END
+// // ARK STATION EDIT END
 
 	if(CONFIG_GET(flag/reopen_roundstart_suicide_roles))
 		var/delay = CONFIG_GET(number/reopen_roundstart_suicide_roles_delay)
