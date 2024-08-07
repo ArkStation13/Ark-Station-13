@@ -716,7 +716,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_CYBORG,
 	)
 	required_candidates = 3 // lives or dies by there being a few spies
-	weight = 5
+	weight = 3 // ARK STATION EDIT || weight = 5 - Снижаем количество шпионов в раунде
 	cost = 8
 	scaling_cost = 4
 	minimum_players = 10
