@@ -85,11 +85,11 @@
 	if(points)
 		/// Waiter! Waiter! More boomer-shooter sound effect references please!!
 		if(prob(1))
-			playsound(pad, 'modular_zubbers/sound/machines/syndiepad_alt1.ogg', 70, FALSE) /// HL1
+			playsound(pad, 'sound/machines/mining/auto_teleport.ogg', 70, FALSE) /// HL1
 		else if(prob(1))
-			playsound(pad, 'modular_zubbers/sound/machines/syndiepad_alt2.ogg', 70, FALSE) /// TF2
+			playsound(pad, 'sound/machines/mining/manual_teleport.ogg', 70, FALSE) /// TF2
 		else
-			playsound(pad, 'modular_zubbers/sound/machines/syndiepad.ogg', 70, FALSE) /// Quake
+			playsound(pad, 'sound/machines/mining/wooping_teleport.ogg', 70, FALSE) /// Quake
 		synced_bank_account.adjust_money(points)
 	points = synced_bank_account.account_balance
 /obj/machinery/computer/piratepad_control/syndiepad/start_sending()

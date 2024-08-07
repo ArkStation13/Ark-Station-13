@@ -1,4 +1,4 @@
-/datum/techweb_node/tarkon/Initialize()
+/datum/techweb_node/tarkon/New()
     . = ..()
     design_ids += list(
         "powerator_tarkon",
@@ -6,8 +6,6 @@
         "bountypad_tarkon",
         "bountyconsole_tarkon"
     )
-
-//Begin bubber edits
 
 /datum/design/tarkonpowerator
 	name = "Tarkon Powerator"
@@ -46,7 +44,7 @@
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design/bountypadconsole
-	name = "Tarkon Express Cargo Console"
+	name = "Tarkon Express Bounty Pad Console"
 	desc = "The circuit board for the Ta used to sell goods."
 	id = "bountyconsole_tarkon"
 	build_type = PROTOLATHE | AWAY_LATHE

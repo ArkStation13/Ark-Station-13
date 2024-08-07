@@ -2,6 +2,7 @@
 	name = "Interdyne Express Supply Console"
 	build_path = /obj/machinery/computer/cargo/express/interdyne
 	contraband = TRUE
+
 /obj/machinery/computer/cargo/express/interdyne
 	name = "interdyne express supply console"
 	desc = "A standard NT express console, hacked by Gorlex Industries to use \
@@ -78,7 +79,7 @@
 	contraband = TRUE
 
 /obj/machinery/computer/cargo/express/interdyne/tarkon
-	name = "interdyne express supply console"
+	name = "Tarkon express supply console"
 	desc = "A standard Tarkon express console."
 	circuit = /obj/item/circuitboard/computer/cargo/express/interdyne/tarkon
 	req_access = list(ACCESS_TARKON)
