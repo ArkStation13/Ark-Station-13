@@ -63,13 +63,29 @@
 //GLOVES //
 
 /datum/loadout_item/gloves/gwen_gloves
-	name = "Doll's gloves"
+	name = "Doll's Gloves"
 	item_path = /obj/item/clothing/gloves/color/gwens_gloves
 
 // BOOTS //
 /datum/loadout_item/shoes/gwen_shoes
-	name = "Doll's shoes"
+	name = "Doll's Shoes"
 	item_path = /obj/item/clothing/shoes/laceup/gwen_shoes
+
+/datum/loadout_item/shoes/jackboots/tall
+	name = "Tall Jackboots"
+	item_path = /obj/item/clothing/shoes/jackboots/tall
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
+
+/datum/loadout_item/shoes/jackboots/toeless
+	name = "Toeless Jackboots"
+	item_path = /obj/item/clothing/shoes/jackboots/toeless
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
+
+/datum/loadout_item/shoes/workboots_toeless
+	name = "Toeless Workboots"
+	item_path = /obj/item/clothing/shoes/workboots/toeless
+	restricted_roles = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_MECHANIC, JOB_TELECOMMS_SPECIALIST, JOB_ATMOSPHERIC_TECHNICIAN)
+
 
 // UNDER //
 
@@ -78,7 +94,7 @@
 	item_path = /obj/item/clothing/under/arkstation/female/skinsuit
 
 /datum/loadout_item/under/jumpsuit/gwen_dress
-	name = "Doll dress"
+	name = "Doll Dress"
 	item_path = /obj/item/clothing/under/arkstation/gwen_dress
 
 /datum/loadout_item/under/jumpsuit/skinsuit_grey
@@ -152,5 +168,5 @@
 	item_path = /obj/item/clothing/head/hats/snufkin_hat
 
 /datum/loadout_item/head/gwen_bow
-	name = "Doll bow"
+	name = "Doll Bow"
 	item_path = /obj/item/clothing/head/hats/gwen_bow
