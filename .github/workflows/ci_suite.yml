@@ -67,13 +67,13 @@ jobs:
         with:
           path: tools/icon_cutter/cache
           key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
-      - name: Install OpenDream
-        uses: robinraju/release-downloader@v1.9
-        with:
-          repository: "OpenDreamProject/OpenDream"
-          tag: "latest"
-          fileName: "DMCompiler_linux-x64.tar.gz"
-          extract: true
+#      - name: Install OpenDream # ARK STATION REMOVED
+#        uses: robinraju/release-downloader@v1.9 # ARK STATION REMOVED
+#        with: # ARK STATION REMOVED
+#          repository: "OpenDreamProject/OpenDream" # ARK STATION REMOVED
+#          tag: "latest" # ARK STATION REMOVED
+#          fileName: "DMCompiler_linux-x64.tar.gz" # ARK STATION REMOVED
+#          extract: true # ARK STATION REMOVED
       - name: Install Tools
         run: |
           pip3 install setuptools
@@ -105,9 +105,9 @@ jobs:
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
-      - name: Run OpenDream
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: ./DMCompiler_linux-x64/DMCompiler tgstation.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh
+#      - name: Run OpenDream # ARK STATION REMOVED
+#        if: steps.linter-setup.conclusion == 'success' && !cancelled() # ARK STATION REMOVED
+#        run: ./DMCompiler_linux-x64/DMCompiler tgstation.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh # ARK STATION REMOVED
       - name: Run Map Checks
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
