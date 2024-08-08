@@ -1,6 +1,6 @@
 /world/proc/update_status()
 	var/new_status = ""
-	var/hostedby
+	//var/hostedby
 	if(config)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
