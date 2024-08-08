@@ -204,6 +204,7 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isspider(A) (istype(A, /mob/living/basic/spider))
 
+
 //Misc mobs
 #define isobserver(A) (istype(A, /mob/dead/observer))
 
