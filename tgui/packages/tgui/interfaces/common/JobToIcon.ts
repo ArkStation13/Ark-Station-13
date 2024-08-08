@@ -318,6 +318,12 @@ const ALTTITLES = {
   'Expeditionary Combat Technician': BASEICONS['Vanguard Operative'],
   // Stowaway - question
   Interloper: BASEICONS['Stowaway'],
+  Hobo: BASEICONS['Stowaway'],
+  Migrant: BASEICONS['Stowaway'],
+  'Tunnel Warrior': BASEICONS['Stowaway'],
+  Escapist: BASEICONS['Stowaway'],
+  Savage: BASEICONS['Stowaway'],
+  Outcast: BASEICONS['Stowaway'],
 } as const;
 
 // Combine the Base icons and ALt titles

@@ -67,13 +67,13 @@ jobs:
         with:
           path: tools/icon_cutter/cache
           key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
-      # - name: Install OpenDream # ARK STATION REMOVED
-      #   uses: robinraju/release-downloader@v1.9 # ARK STATION REMOVED
-      #   with: # ARK STATION REMOVED
-      #     repository: "OpenDreamProject/OpenDream" # ARK STATION REMOVED
-      #     tag: "latest" # ARK STATION REMOVED
-      #     fileName: "DMCompiler_linux-x64.tar.gz" # ARK STATION REMOVED
-      #     extract: true # ARK STATION REMOVED
+#      - name: Install OpenDream # ARK STATION REMOVED
+#        uses: robinraju/release-downloader@v1.9 # ARK STATION REMOVED
+#        with: # ARK STATION REMOVED
+#          repository: "OpenDreamProject/OpenDream" # ARK STATION REMOVED
+#          tag: "latest" # ARK STATION REMOVED
+#          fileName: "DMCompiler_linux-x64.tar.gz" # ARK STATION REMOVED
+#          extract: true # ARK STATION REMOVED
       - name: Install Tools
         run: |
           pip3 install setuptools
@@ -105,9 +105,9 @@ jobs:
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
-      # - name: Run OpenDream # ARK STATION REMOVED
-      #   if: steps.linter-setup.conclusion == 'success' && !cancelled() # ARK STATION REMOVED
-      #   run: ./DMCompiler_linux-x64/DMCompiler tgstation.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh # ARK STATION REMOVED
+#      - name: Run OpenDream # ARK STATION REMOVED
+#        if: steps.linter-setup.conclusion == 'success' && !cancelled() # ARK STATION REMOVED
+#        run: ./DMCompiler_linux-x64/DMCompiler tgstation.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh # ARK STATION REMOVED
       - name: Run Map Checks
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
@@ -131,26 +131,7 @@ jobs:
       - name: Run TGUI Checks
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: tools/build/build --ci lint tgui-test
-# ARK STATION EDIT START
-#  odlint:
-#    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
-#    name: "Lint with OpenDream"
-#    runs-on: ubuntu-22.04
-#    concurrency:
-#      group: odlint-${{ github.head_ref || github.run_id }}
-#      cancel-in-progress: true
-#    steps:
-#      - uses: actions/checkout@v4
-#      - uses: robinraju/release-downloader@v1.9
-#        with:
-#          repository: "OpenDreamProject/OpenDream"
-#          tag: "latest"
-#          fileName: "DMCompiler_linux-x64.tar.gz"
-#          extract: true
-#      - name: Run OpenDream
-#        run: |
-#          ./DMCompiler_linux-x64/DMCompiler tgstation.dme --suppress-unimplemented --define=CIBUILDING
-# ARK STATION EDIT END
+
   compile_all_maps:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Compile Maps
@@ -245,6 +226,44 @@ jobs:
     timeout-minutes: 5
     steps:
       - run: echo Alternate tests passed.
+
+  compare_screenshots:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') && (always() && (!failure() && !cancelled())) )
+    needs: [run_all_tests, run_alternate_tests]
+    name: Compare Screenshot Tests
+    timeout-minutes: 15
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup directory
+        run: mkdir -p artifacts
+      # If we ever add more artifacts, this is going to break, but it'll be obvious.
+      - name: Download screenshot tests
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: ls -R
+        run: ls -R artifacts
+      - name: Setup screenshot comparison
+        run: npm i
+        working-directory: tools/screenshot-test-comparison
+      - name: Run screenshot comparison
+        run: node tools/screenshot-test-comparison/index.js artifacts code/modules/unit_tests/screenshots artifacts/screenshot_comparisons
+      # workflow_run does not give you the PR it ran on,
+      # even through the thing literally named "matching pull requests".
+      # However, in GraphQL, you can check if the check suite was ran
+      # by a specific PR, so trusting the (user controlled) action here is okay,
+      # as long as we check it later in show_screenshot_test_results
+      - name: Save PR ID
+        if: failure() && github.event.pull_request
+        run: |
+          echo ${{ github.event.pull_request.number }} > artifacts/screenshot_comparisons/pull_request_number.txt
+      - name: Upload bad screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bad-screenshots
+          path: artifacts/screenshot_comparisons
 
   test_windows:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )

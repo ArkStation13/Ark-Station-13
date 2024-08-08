@@ -1,4 +1,4 @@
-/datum/quirk/fastrun
+/*/datum/quirk/fastrun
 	name = "Fast Runner"
 	desc = "You've dedicated your life to running, or you've been lucky enough to be born fast and agile. Your running speed increases slightly."
 	icon = FA_ICON_FAST_FORWARD
@@ -37,4 +37,4 @@
 
 /datum/status_effect/fast_runner/on_remove()
 	var/mob/living/carbon/owner_mob = owner
-	owner_mob.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/fast_runner)
+	owner_mob.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/fast_runner) */ // Временно вырезано.
