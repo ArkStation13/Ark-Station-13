@@ -31,7 +31,7 @@
 	new_status += "<br>Player[players == 1 ? "": "s"]: <b>[players]</b>"
 	new_status += "</a>"
 
-	if (!host && hostedby)
-		new_status += "<br>hosted by <b>[hostedby]</b>"
+	// if (!host && hostedby)
+	// 	new_status += "<br>hosted by <b>[hostedby]</b>"
 
 	status = new_status

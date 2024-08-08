@@ -26,7 +26,16 @@
 
 	required_languages = null
 
-	alt_titles = list("Interloper")
+	alt_titles = list(
+		"Stowaway",
+		"Interloper",
+		"Hobo",
+		"Migrant",
+		"Tunnel Warrior",
+		"Escapist",
+		"Savage",
+		"Outcast",
+	)
 
 /datum/outfit/job/stowaway
 	name = "Stowaway"
