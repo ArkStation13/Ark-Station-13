@@ -31,9 +31,7 @@
 
 /obj/item/assembly/igniter/activate()
 	. = ..()
-	icon_state = "[base_icon_state]_light"
-	sleep(next_activate)
-	icon_state = base_icon_state
+	flick("igniter_light", src)
 
 /obj/item/assembly/signaler
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-devices.dmi'

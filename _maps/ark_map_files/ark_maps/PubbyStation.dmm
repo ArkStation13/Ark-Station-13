@@ -5786,10 +5786,6 @@
 	c_tag = "Dormitories Fore"
 	},
 /obj/machinery/light/directional/north,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor"
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -7486,7 +7482,6 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "aBA" = (
-/obj/machinery/computer/security/telescreen/vault,
 /obj/structure/table/wood,
 /obj/item/folder/blue{
 	pixel_x = -4;
@@ -7505,10 +7500,6 @@
 /area/station/command/heads_quarters/hop)
 "aBC" = (
 /obj/structure/closet/secure_closet/hop,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor"
-	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "aBD" = (
@@ -17802,14 +17793,11 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
 "buk" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring medbay to ensure patient safety.";
-	name = "Medbay Monitor"
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/machinery/computer/security/telescreen/med_sec/directional/south,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "bun" = (
@@ -19176,10 +19164,6 @@
 /area/station/hallway/secondary/entry)
 "bzB" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the monastery.";
-	name = "Monastery Monitor"
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
@@ -23743,13 +23727,10 @@
 /obj/machinery/light/directional/west,
 /obj/item/paper_bin,
 /obj/structure/cable,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the engine containment area.";
-	name = "Engine Monitor"
-	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/engine/directional/west,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/engineering)
 "bUW" = (
@@ -25683,10 +25664,6 @@
 /turf/open/floor/plating,
 /area/station/engineering/transit_tube)
 "ceU" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching telecomms.";
-	name = "Telecomms Telescreen"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -25694,6 +25671,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/tcomms/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/engineering/transit_tube)
 "ceV" = (
@@ -34945,6 +34923,11 @@
 /obj/structure/railing,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/nt_rep)
+"hkP" = (
+/obj/machinery/atmospherics/components/binary/pump,
+/obj/machinery/computer/security/telescreen/xeno/directional/east,
+/turf/open/floor/iron/dark,
+/area/station/science/xenobiology)
 "hkQ" = (
 /obj/machinery/light/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -35009,10 +34992,6 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/engine_smes)
 "hnV" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the turbine vent.";
-	name = "turbine vent monitor"
-	},
 /obj/structure/closet/radiation,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 8
@@ -42507,9 +42486,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "nIm" = (
-/obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor"
-	},
 /obj/structure/table/reinforced,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
@@ -51009,10 +50985,7 @@
 "uco" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the engine containment area.";
-	name = "Engine Monitor"
-	},
+/obj/machinery/computer/security/telescreen/engine/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "ucy" = (
@@ -51075,6 +51048,7 @@
 	pixel_y = -7
 	},
 /obj/structure/cable,
+/obj/machinery/computer/security/telescreen/turbine/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "udJ" = (
@@ -107675,7 +107649,7 @@ ezn
 aaa
 bnd
 uPA
-xxw
+hkP
 nqV
 qDU
 bsu

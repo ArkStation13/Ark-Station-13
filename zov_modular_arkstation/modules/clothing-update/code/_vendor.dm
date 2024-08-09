@@ -151,8 +151,8 @@
 	//icon = 'modular_nova/modules/sec_haul/icons/vending/vending.dmi'
 	products_ark = list(
 		/obj/item/clothing/mask/gas/sechailer = 5,
-		/obj/item/armorkit/security = 2,
-		/obj/item/armorkit/security/helmet =2,
+		/obj/item/armorkit/suit/security = 4,
+		/obj/item/armorkit/helmet/security =4,
 	)
 	premium_ark = list(
 		/obj/item/storage/belt/security/webbing/peacekeeper = 4,

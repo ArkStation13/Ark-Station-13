@@ -21364,13 +21364,11 @@
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/obj/machinery/computer/security/telescreen{
-	name = "Prisoner Telescreen"
-	},
 /obj/machinery/recharger{
 	pixel_x = -7;
 	pixel_y = 3
 	},
+/obj/machinery/computer/security/telescreen/prison/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "gep" = (
@@ -26882,9 +26880,9 @@
 /area/station/medical/virology)
 "hBZ" = (
 /obj/machinery/pdapainter/research,
-/obj/machinery/computer/security/telescreen/rd,
 /obj/machinery/airalarm/directional/west,
 /obj/effect/turf_decal/bot,
+/obj/machinery/computer/security/telescreen/rd/directional/north,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/command/heads_quarters/rd)
 "hCh" = (
@@ -50932,10 +50930,7 @@
 	dir = 4
 	},
 /obj/structure/chair/office,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring medbay to ensure patient safety.";
-	name = "Science Monitor"
-	},
+/obj/machinery/computer/security/telescreen/research/directional/east,
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 8
 	},
@@ -54526,8 +54521,8 @@
 	pixel_y = 4
 	},
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/computer/security/telescreen/minisat,
 /obj/machinery/light/directional/north,
+/obj/machinery/computer/security/telescreen/minisat/directional/west,
 /turf/open/floor/iron/smooth,
 /area/station/security/checkpoint/engineering)
 "oWD" = (
@@ -59899,10 +59894,7 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring the engine.";
-	name = "Engine Monitor"
-	},
+/obj/machinery/computer/security/telescreen/engine/directional/west,
 /turf/open/floor/iron/smooth_edge{
 	dir = 4
 	},
@@ -68753,10 +68745,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/light/small/directional/east,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the AI Upload.";
-	name = "AI Upload Monitor"
-	},
+/obj/machinery/computer/security/telescreen/aiupload/directional/west,
 /turf/open/floor/vault,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "sLs" = (
@@ -76270,10 +76259,7 @@
 /obj/effect/turf_decal/tile/green/fourcorners,
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/crew,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring medbay to ensure patient safety.";
-	name = "Medbay Monitor"
-	},
+/obj/machinery/computer/security/telescreen/med_sec/directional/north,
 /turf/open/floor/iron/freezer,
 /area/station/security/checkpoint/medical)
 "uHq" = (
