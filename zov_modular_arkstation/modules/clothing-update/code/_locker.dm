@@ -5,7 +5,7 @@
 	new /obj/item/clothing/mask/gas/sechailer/swat/hos(src)
 
 // Warden's locker
-/obj/structure/closet/secure_closet/warden/PopulateContents()
+/obj/structure/closet/secure_closet/warden/populate_contents_immediate()
 	..()
 	new	/obj/item/gun/ballistic/shotgun/automatic/combat/compact(src)
 
