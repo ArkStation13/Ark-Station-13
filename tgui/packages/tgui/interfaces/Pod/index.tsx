@@ -86,7 +86,7 @@ const PowerBar = (props) => {
         }}
       >
         {power_max === null
-          ? 'Benzobak is missing'
+          ? 'Pods fueltank is missing'
           : power_level === 1e31
             ? 'Infinite'
             : `${formatSiUnit(power_level * 1000, 0, 'L')} of ${formatSiUnit(
