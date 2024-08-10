@@ -108,13 +108,13 @@ export const ExaminePanel = (props) => {
                 selected={tabIndex === 1}
                 onClick={() => setTabIndex(1)}
               >
-                <Section fitted title={'Flavor Text'} />
+                <Section fitted title={'Описание Персонажа'} />
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 2}
                 onClick={() => setTabIndex(2)}
               >
-                <Section fitted title={'NSFW (Warning)'} />
+                <Section fitted title={'NSFW Описание'} />
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 3}
@@ -122,7 +122,7 @@ export const ExaminePanel = (props) => {
               >
                 <Section
                   fitted
-                  title={custom_species ? custom_species : 'Unnamed Species'}
+                  title={custom_species ? custom_species : 'Безымянная Раса'}
                 />
               </Tabs.Tab>
             </Tabs>
@@ -167,7 +167,7 @@ export const ExaminePanel = (props) => {
               >
                 {custom_species
                   ? formatURLs(custom_species_lore)
-                  : 'Just a normal space dweller.'}
+                  : 'Просто космонавтик.'}
               </Section>
             )}
             <Tabs fluid>
@@ -175,13 +175,13 @@ export const ExaminePanel = (props) => {
                 selected={lowerTabIndex === 1}
                 onClick={() => setLowerTabIndex(1)}
               >
-                <Section fitted title={'OOC Notes'} />
+                <Section fitted title={'OOC Заметки'} />
               </Tabs.Tab>
               <Tabs.Tab
                 selected={lowerTabIndex === 2}
                 onClick={() => setLowerTabIndex(2)}
               >
-                <Section fitted title={'Character Advert'} />
+                <Section fitted title={'Вкусы Персонажа'} />
               </Tabs.Tab>
             </Tabs>
             {lowerTabIndex === 1 && (
