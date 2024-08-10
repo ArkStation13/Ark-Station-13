@@ -66,7 +66,7 @@
 
 // EXPLANATION
 /datum/objective/bloodsucker/lair/update_explanation_text()
-	explanation_text = "Create a lair by claiming a coffin, and protect it until the end of the shift."//  Make sure to keep it safe!"
+	explanation_text = "Создайте логово, создав гроб, и защищайте его до конца смены."//  Make sure to keep it safe!"
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/lair/check_completion()
@@ -81,7 +81,7 @@
 
 /datum/objective/survive/bloodsucker
 	name = "bloodsuckersurvive"
-	explanation_text = "Survive the entire shift without succumbing to Final Death."
+	explanation_text = "Переживите всю смену, не поддавшись Окончательной Смерти."
 
 // WIN CONDITIONS?
 // Handled by parent
@@ -102,7 +102,7 @@
 
 // EXPLANATION
 /datum/objective/bloodsucker/conversion/command/update_explanation_text()
-	explanation_text = "Guarantee a Vassal ends up as a Department Head or in a Leadership role."
+	explanation_text = "Убедитесь, что ваш Вассал станет главой департамента или займет руководящую должность."
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/conversion/command/check_completion()
@@ -139,7 +139,7 @@
 
 // EXPLANATION
 /datum/objective/bloodsucker/conversion/department/update_explanation_text()
-	explanation_text = "Have [target_amount] Vassal[target_amount == 1 ? "" : "s"] in the [target_department.department_name] department."
+	explanation_text = "Заполучите [target_amount] Вассал[target_amount == 1 ? "а" : "ов"] в [target_department.department_name] отделе."
 	return ..()
 
 // WIN CONDITIONS?
@@ -173,7 +173,7 @@
 // GENERATE!
 /datum/objective/steal_n_of_type/hearts/New()
 	amount = rand(2, 3)
-	explanation_text = "Steal and keep [amount] organic hearts. Must be obtained from non-monkeys. Examine hearts thoroughly to see if they are valid."
+	explanation_text = "Украсть и сохранить [amount] органических сердец. Должны быть получены от не-обезьян. Тщательно осмотрите сердца, чтобы убедиться, что они действительны."
 	update_explanation_text()
 	..()
 
@@ -196,7 +196,7 @@
 // EXPLANATION
 /datum/objective/bloodsucker/gourmand/update_explanation_text()
 	. = ..()
-	explanation_text = "Using your Feed ability, drink [target_amount] units of Blood."
+	explanation_text = "Используя свою способность кормления, выпейте [target_amount] юнитов Крови."
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/gourmand/check_completion()
@@ -223,7 +223,7 @@
 // EXPLANATION
 /datum/objective/bloodsucker/kindred/update_explanation_text()
 	. = ..()
-	explanation_text = "Ensure Nosferatu steals and keeps control over the Archive of the Kindred."
+	explanation_text = "Убедитесь, что Носферату украл и сохранил контроль над Архивом Сородичей."
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/kindred/check_completion()
@@ -247,7 +247,7 @@
 
 // EXPLANATION
 /datum/objective/bloodsucker/tremere_power/update_explanation_text()
-	explanation_text = "Upgrade a Blood Magic power to the maximum level, remember that Vassalizing gives more Ranks!"
+	explanation_text = "Улучшайте силу Магии Крови до максимального уровня, помните, что вассалитет дает больше рангов!"
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/tremere_power/check_completion()
@@ -266,7 +266,7 @@
 // EXPLANATION
 /datum/objective/bloodsucker/embrace/update_explanation_text()
 	. = ..()
-	explanation_text = "Use the vassal rack to Rank your Favorite Vassal up enough to become a Bloodsucker."
+	explanation_text = "Используйте стойку вассалов, чтобы повысить рейтинг вашего любимого вассала до уровня, позволяющего ему стать Вампиром."
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/embrace/check_completion()
@@ -290,7 +290,7 @@
 // EXPLANATION
 /datum/objective/bloodsucker/monsterhunter/update_explanation_text()
 	. = ..()
-	explanation_text = "Destroy all monsters on [station_name()]."
+	explanation_text = "Уничтожь всех монстров на станции [station_name()]."
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/monsterhunter/check_completion()
@@ -319,7 +319,7 @@
 // EXPLANATION
 /datum/objective/bloodsucker/vassal/update_explanation_text()
 	. = ..()
-	explanation_text = "Guarantee the success of your Master's mission!"
+	explanation_text = "Гарантируйте успех миссии вашего Мастера!"
 
 // WIN CONDITIONS?
 /datum/objective/bloodsucker/vassal/check_completion()
@@ -348,9 +348,9 @@
 /datum/objective/bloodsucker/vassalhim/update_explanation_text()
 	. = ..()
 	if(target?.current)
-		explanation_text = "Ensure [target.name], the [!target_department_type ? target.assigned_role.title : target.special_role], is Vassalized via the Persuasion Rack."
+		explanation_text = "Убедитесь, что [target.name], [!target_department_type ? target.assigned_role.title : target.special_role] вассализованы с помощью стойки убеждения."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Свободное задание"
 
 /datum/objective/bloodsucker/vassalhim/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)

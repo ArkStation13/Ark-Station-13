@@ -74,7 +74,7 @@
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/item/storage/bag/garment/hos/PopulateContents()
-	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src) // NOVA EDIT REMOVAL - Blue Sec // ARK STATION REVIVAL
+	//new /obj/item/clothing/under/rank/security/head_of_security/skirt(src) // NOVA EDIT REMOVAL - Blue Sec
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/grey(src)
@@ -83,7 +83,6 @@
 	new /obj/item/clothing/gloves/tackler/combat(src)
 	new /obj/item/clothing/suit/armor/hos(src)
 	new /obj/item/clothing/suit/armor/hos/hos_formal(src)
-	new /obj/item/clothing/suit/armor/hos/hos_formal/nova(src) // ARK STATION ADDITION
 	new /obj/item/clothing/suit/armor/hos/trenchcoat/winter(src)
 	new /obj/item/clothing/suit/armor/vest/leather(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch(src)
