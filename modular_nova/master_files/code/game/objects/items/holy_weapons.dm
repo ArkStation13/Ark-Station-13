@@ -72,7 +72,7 @@
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	special_desc_requirement = EXAMINE_CHECK_JOB
-	special_desc_jobs = list(JOB_CHAPLAIN)
+	special_desc_jobs = list(JOB_CHAPLAIN, JOB_FISCAL, JOB_DEACON) // ARK STATION EDIT
 	special_desc = "Activate it to receive the language of a forgotten cult."
 	var/narsian = FALSE
 
@@ -85,7 +85,7 @@
 
 /obj/item/nullrod/claymore/darkblade
 	special_desc_requirement = EXAMINE_CHECK_JOB
-	special_desc_jobs = list(JOB_CHAPLAIN)
+	special_desc_jobs = list(JOB_CHAPLAIN, JOB_FISCAL, JOB_DEACON) // ARK STATION EDIT
 	special_desc = "Activate it to receive the language of a forgotten cult."
 	var/narsian = FALSE
 
@@ -98,7 +98,7 @@
 
 /obj/item/nullrod/spear
 	special_desc_requirement = EXAMINE_CHECK_JOB
-	special_desc_jobs = list(JOB_CHAPLAIN)
+	special_desc_jobs = list(JOB_CHAPLAIN, JOB_FISCAL, JOB_DEACON) // ARK STATION EDIT
 	special_desc = "Activate it to receive the language of a forgotten cult."
 	var/ratvarian = FALSE
 
