@@ -95,7 +95,7 @@
 	if(is_directional)
 		directional = TRUE
 		directional_atom = new()
-		cone = image('zov_modular_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light")
+		cone = image('zov_modular_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light") // ARK STATION EDIT
 		SET_PLANE_EXPLICIT(cone, O_LIGHTING_VISUAL_PLANE, movable_parent)
 		cone.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 		cone.alpha = 110
@@ -499,12 +499,15 @@
 	if(final_distance > SHORT_CAST && !(ALL_CARDINALS & current_direction))
 		final_distance -= 1
 	var/turf/scanning = get_turf(current_holder)
+// ARK STATION EDIT START
+	. = 0
 	for(var/i in 1 to final_distance)
 		var/turf/next_turf = get_step(scanning, current_direction)
-		if(isnull(next_turf) || IS_OPAQUE_TURF(next_turf))
-			// final_distance = i // ARK STATION EDIT
+		if(isnull(next_turf) || IS_OPAQUE_TURF_DIR(next_turf, REVERSE_DIR(current_direction)))
 			break
 		scanning = next_turf
+		.++
+// ARK STATION EDIT END
 
 	current_holder.underlays -= visible_mask
 
@@ -597,6 +600,7 @@
 		final_distance -= 1
 	var/turf/scanning = get_turf(GET_PARENT)
 
+// ARK STATION EDIT START
 	. = 0
 	for(var/i in 1 to final_distance)
 		var/next_dir = get_dir(scanning, target)
@@ -605,6 +609,7 @@
 			break
 		scanning = next_turf
 		.++
+// ARK STATION EDIT END
 
 	directional_atom.forceMove(scanning)
 	var/turf/Ts = get_turf(GET_PARENT)
