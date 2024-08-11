@@ -75,7 +75,7 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
-	var/obj/effect/abstract/directional_lighting/directional_atom
+	var/obj/effect/abstract/directional_lighting/directional_atom // ARK STATION ADDITION
 
 /datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional, is_beam)
 	if(!ismovable(parent))
@@ -94,7 +94,7 @@
 	visible_mask.alpha = 0
 	if(is_directional)
 		directional = TRUE
-		directional_atom = new()
+		directional_atom = new() // ARK STATION ADDITION
 		cone = image('zov_modular_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light") // ARK STATION EDIT
 		SET_PLANE_EXPLICIT(cone, O_LIGHTING_VISUAL_PLANE, movable_parent)
 		cone.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
@@ -168,8 +168,8 @@
 	visible_mask = null
 	cone = null
 	parent_attached_to = null
-	qdel(directional_atom, TRUE)
-	directional_atom = null
+	qdel(directional_atom, TRUE) // ARK STATION ADDITION
+	directional_atom = null // ARK STATION ADDITION
 	return ..()
 
 
@@ -217,7 +217,7 @@
 	current_holder.update_dynamic_luminosity()
 	if(directional)
 		current_holder.underlays -= cone
-		directional_atom.moveToNullspace()
+		directional_atom.moveToNullspace() // ARK STATION ADDITION
 
 ///Called to change the value of parent_attached_to.
 /datum/component/overlay_lighting/proc/set_parent_attached_to(atom/movable/new_parent_attached_to)
