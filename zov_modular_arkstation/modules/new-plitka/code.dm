@@ -55,16 +55,16 @@
 		/obj/item/stack/tile/iron/old/white, // ARK STATION ADDITION
 	)
 
-/turf/open/indestructible/floor_old
-	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
-	icon_state = "floor"
+// /turf/open/indestructible/floor_old
+// 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+// 	icon_state = "floor"
 
-/turf/open/floor
-	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
-	icon_state = "floor"
+// /turf/open/floor
+// 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+// 	icon_state = "floor"
 
-/turf/open/floor/stone
-	icon = 'icons/turf/floors.dmi'
+// /turf/open/floor/stone
+// 	icon = 'icons/turf/floors.dmi'
 
 // STANDART
 /turf/open/floor/iron/old
