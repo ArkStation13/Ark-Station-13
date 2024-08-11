@@ -74,17 +74,14 @@
 /datum/loadout_item/shoes/jackboots/tall
 	name = "Tall Jackboots"
 	item_path = /obj/item/clothing/shoes/jackboots/tall
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/shoes/jackboots/toeless
 	name = "Toeless Jackboots"
 	item_path = /obj/item/clothing/shoes/jackboots/toeless
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/shoes/workboots_toeless
 	name = "Toeless Workboots"
 	item_path = /obj/item/clothing/shoes/workboots/toeless
-	restricted_roles = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_MECHANIC, JOB_TELECOMMS_SPECIALIST, JOB_ATMOSPHERIC_TECHNICIAN)
 
 
 // UNDER //
