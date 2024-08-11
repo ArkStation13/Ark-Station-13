@@ -38,7 +38,7 @@
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/reinforced/fulltile/old)
 
 /obj/effect/spawner/structure/window/reinforced/tinted/old
-	spawn_list = list(/obj/structure/grille, /obj/structure/window/reinforced/tinted/old)
+	spawn_list = list(/obj/structure/grille, /obj/structure/window/reinforced/tinted/fulltile/old)
 
 /obj/effect/spawner/structure/window/plasma/old
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma/fulltile/old)
