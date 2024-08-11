@@ -251,13 +251,13 @@
 			"Always show" = GENITAL_ALWAYS_SHOW
 		)
 		if(params["genital"] && params["visibility"])
-			genital.visibility_preference = gen_vis_trans[params["visibility"][1]]
+			genital?.visibility_preference = gen_vis_trans[params["visibility"][1]]
 			user.update_body()
 			return TRUE
 
 		if(params["set_arousal"])
-			genital.aroused = params["set_arousal"]
-			genital.update_sprite_suffix()
+			genital?.aroused = params["set_arousal"]
+			genital?.update_sprite_suffix()
 			user.update_body()
 			return TRUE
 		return FALSE

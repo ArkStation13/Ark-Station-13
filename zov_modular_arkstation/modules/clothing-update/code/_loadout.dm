@@ -1,5 +1,4 @@
 // MASK //
-
 /datum/loadout_item/mask/redscarf
 	name = "Red Facescarf"
 	item_path = /obj/item/clothing/mask/balaclava/breath/redscarf
@@ -21,7 +20,6 @@
 	item_path = /obj/item/clothing/mask/balaclava/breath/redscarf/purplescarf
 
 // NECK //
-
 /datum/loadout_item/neck/bandagewraps
 	name = "Bandage Wraps"
 	item_path = /obj/item/clothing/neck/bandagewraps
@@ -31,7 +29,6 @@
 	item_path = /obj/item/clothing/neck/windy_scarf
 
 // SUIT //
-
 /datum/loadout_item/suit/flannel_white
 	name = "White Flannel"
 	item_path = /obj/item/clothing/suit/toggle/jacket/flannel/white
@@ -61,7 +58,6 @@
 	item_path = /obj/item/clothing/suit/jacket/snufkin_dress
 
 //GLOVES //
-
 /datum/loadout_item/gloves/gwen_gloves
 	name = "Doll's Gloves"
 	item_path = /obj/item/clothing/gloves/color/gwens_gloves
@@ -74,21 +70,16 @@
 /datum/loadout_item/shoes/jackboots/tall
 	name = "Tall Jackboots"
 	item_path = /obj/item/clothing/shoes/jackboots/tall
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/shoes/jackboots/toeless
 	name = "Toeless Jackboots"
 	item_path = /obj/item/clothing/shoes/jackboots/toeless
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BRIG_PILOT, JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/shoes/workboots_toeless
 	name = "Toeless Workboots"
 	item_path = /obj/item/clothing/shoes/workboots/toeless
-	restricted_roles = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_MECHANIC, JOB_TELECOMMS_SPECIALIST, JOB_ATMOSPHERIC_TECHNICIAN)
-
 
 // UNDER //
-
 /datum/loadout_item/under/jumpsuit/skinsuit
 	name = "Skinsuit"
 	item_path = /obj/item/clothing/under/arkstation/female/skinsuit
@@ -162,7 +153,6 @@
 	item_path = /obj/item/clothing/under/arkstation/croptops/grey_civ
 
 // HEAD|HATS //
-
 /datum/loadout_item/head/snufkin_hat
 	name = "Snufkin's Hat"
 	item_path = /obj/item/clothing/head/hats/snufkin_hat

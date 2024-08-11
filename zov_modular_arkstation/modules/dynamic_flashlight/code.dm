@@ -16,6 +16,7 @@
 	icon_state = "medium"
 	pixel_x = -16
 	pixel_y = -16
+	layer = FLY_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/abstract/directional_lighting
