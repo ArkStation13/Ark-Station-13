@@ -494,3 +494,8 @@
 	var/datum/objective/survive/dont_die = new()
 	dont_die.owner = owner
 	objectives += dont_die
+
+/// Blood Brothers
+/datum/objective/convert_brother
+	name = "convert brother"
+	explanation_text = "Переманите на свою сторону человека, поддающегося промыванию мозгов, используя ваш Флешер на нём. Любой подручный Флешер будет работать, если вы потеряете или сломаете свой стартовый Флешер."
