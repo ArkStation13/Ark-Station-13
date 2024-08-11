@@ -90,7 +90,7 @@
 
 // WHITE
 /turf/open/floor/iron/old/white
-	icon_state = "floor_white"
+	icon_state = "white"
 	floor_tile = /obj/item/stack/tile/iron/old/white
 
 /obj/item/stack/tile/iron/old/white
