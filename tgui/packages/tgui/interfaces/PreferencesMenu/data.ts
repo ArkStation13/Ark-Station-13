@@ -174,8 +174,12 @@ export type PreferencesMenuData = {
   character_preview_view: string;
   character_profiles: (string | null)[];
 
-  preview_options: string[]; // SKYRAT EDIT ADDITION
-  preview_selection: string; // SKYRAT EDIT ADDITION
+  preview_options: string[]; // NOVA EDIT ADDITION
+  preview_selection: string; // NOVA EDIT ADDITION
+
+  // is_veteran: BooleanLike; // NOVA EDIT - Veteran status // ARK STATION REMOVED
+  erp_pref: BooleanLike; // NOVA EDIT ADDITION
+
   character_preferences: {
     clothing: Record<string, string>;
     features: Record<string, string>;

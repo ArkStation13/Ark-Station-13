@@ -353,6 +353,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_PRISONER,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_FISCAL, // ARK STATION ADDITION
 	)
 	required_candidates = 2
 	weight = 3
