@@ -1,5 +1,4 @@
 // MASK //
-
 /datum/loadout_item/mask/redscarf
 	name = "Red Facescarf"
 	item_path = /obj/item/clothing/mask/balaclava/breath/redscarf
@@ -21,7 +20,6 @@
 	item_path = /obj/item/clothing/mask/balaclava/breath/redscarf/purplescarf
 
 // NECK //
-
 /datum/loadout_item/neck/bandagewraps
 	name = "Bandage Wraps"
 	item_path = /obj/item/clothing/neck/bandagewraps
@@ -31,7 +29,6 @@
 	item_path = /obj/item/clothing/neck/windy_scarf
 
 // SUIT //
-
 /datum/loadout_item/suit/flannel_white
 	name = "White Flannel"
 	item_path = /obj/item/clothing/suit/toggle/jacket/flannel/white
@@ -61,24 +58,34 @@
 	item_path = /obj/item/clothing/suit/jacket/snufkin_dress
 
 //GLOVES //
-
 /datum/loadout_item/gloves/gwen_gloves
-	name = "Doll's gloves"
+	name = "Doll's Gloves"
 	item_path = /obj/item/clothing/gloves/color/gwens_gloves
 
 // BOOTS //
 /datum/loadout_item/shoes/gwen_shoes
-	name = "Doll's shoes"
+	name = "Doll's Shoes"
 	item_path = /obj/item/clothing/shoes/laceup/gwen_shoes
 
-// UNDER //
+/datum/loadout_item/shoes/jackboots/tall
+	name = "Tall Jackboots"
+	item_path = /obj/item/clothing/shoes/jackboots/tall
 
+/datum/loadout_item/shoes/jackboots/toeless
+	name = "Toeless Jackboots"
+	item_path = /obj/item/clothing/shoes/jackboots/toeless
+
+/datum/loadout_item/shoes/workboots_toeless
+	name = "Toeless Workboots"
+	item_path = /obj/item/clothing/shoes/workboots/toeless
+
+// UNDER //
 /datum/loadout_item/under/jumpsuit/skinsuit
 	name = "Skinsuit"
 	item_path = /obj/item/clothing/under/arkstation/female/skinsuit
 
 /datum/loadout_item/under/jumpsuit/gwen_dress
-	name = "Doll dress"
+	name = "Doll Dress"
 	item_path = /obj/item/clothing/under/arkstation/gwen_dress
 
 /datum/loadout_item/under/jumpsuit/skinsuit_grey
@@ -146,11 +153,10 @@
 	item_path = /obj/item/clothing/under/arkstation/croptops/grey_civ
 
 // HEAD|HATS //
-
 /datum/loadout_item/head/snufkin_hat
 	name = "Snufkin's Hat"
 	item_path = /obj/item/clothing/head/hats/snufkin_hat
 
 /datum/loadout_item/head/gwen_bow
-	name = "Doll bow"
+	name = "Doll Bow"
 	item_path = /obj/item/clothing/head/hats/gwen_bow
