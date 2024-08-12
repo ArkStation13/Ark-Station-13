@@ -11828,7 +11828,6 @@
 /area/station/science/xenobiology)
 "cQT" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
@@ -17231,10 +17230,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "ejX" = (
-/obj/machinery/computer/security/telescreen/vault,
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/vault/directional/north,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "eke" = (
@@ -26390,14 +26389,11 @@
 /area/station/service/lawoffice)
 "guI" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/hidden,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Engine.";
-	name = "Engine Monitor"
-	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/atmos_control/nocontrol/master{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/engine/directional/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/atmos/storage/gas)
 "guK" = (
@@ -30997,11 +30993,7 @@
 /area/station/maintenance/port/fore)
 "hFx" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the RD's goons and the AI's satellite from the safety of his office.";
-	name = "Research Monitor"
-	},
-/obj/item/radio/intercom/directional/north,
+/obj/machinery/computer/security/telescreen/research/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "hFP" = (
@@ -36661,9 +36653,7 @@
 /area/station/medical/chemistry)
 "jbn" = (
 /obj/structure/cable,
-/obj/machinery/computer/security/telescreen{
-	name = "Prisoner Telescreen"
-	},
+/obj/machinery/computer/security/telescreen/prison/directional/east,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "jbr" = (
@@ -42116,6 +42106,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
+"kra" = (
+/obj/item/kirbyplants/random,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/iron/dark,
+/area/station/command/bridge)
 "kri" = (
 /obj/structure/plasticflaps/opaque,
 /obj/machinery/navbeacon{
@@ -42725,6 +42723,10 @@
 "kzp" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	id = "bsprivacy";
+	name = "Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/blueshield)
 "kzI" = (
@@ -55757,6 +55759,10 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/preopen{
+	id = "bsprivacy";
+	name = "Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/blueshield)
 "nQG" = (
@@ -58771,6 +58777,12 @@
 	},
 /obj/item/radio/intercom/command/directional/west,
 /obj/machinery/light/directional/west,
+/obj/machinery/button/door/directional/west{
+	id = "bsprivacy";
+	name = "Privacy Shutters Control";
+	pixel_y = -12;
+	pixel_x = -22
+	},
 /turf/open/floor/carpet/executive,
 /area/station/command/heads_quarters/blueshield)
 "oGq" = (
@@ -63023,14 +63035,12 @@
 /area/station/maintenance/port/aft)
 "pJo" = (
 /obj/structure/cable,
-/obj/machinery/computer/security/telescreen{
-	name = "Prisoner Telescreen"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/prison/directional/east,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "pJp" = (
@@ -64447,19 +64457,6 @@
 /obj/machinery/coffeemaker/impressa,
 /turf/open/floor/wood,
 /area/station/engineering/break_room)
-"pXI" = (
-/obj/machinery/computer/security/telescreen{
-	name = "Prisoner Telescreen"
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/obj/machinery/light/directional/east,
-/turf/open/floor/iron,
-/area/station/security/execution/transfer)
 "pXK" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -75250,11 +75247,11 @@
 /obj/machinery/computer/mecha{
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/rd,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/purple,
+/obj/machinery/computer/security/telescreen/rd/directional/east,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/rd)
 "sHw" = (
@@ -90294,8 +90291,8 @@
 	},
 /obj/item/folder/white,
 /obj/item/pen,
-/obj/machinery/computer/security/telescreen/cmo,
 /obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/machinery/computer/security/telescreen/cmo/directional/south,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "wqF" = (
@@ -91627,15 +91624,13 @@
 /area/station/engineering/atmos/storage/gas)
 "wGQ" = (
 /obj/structure/cable,
-/obj/machinery/computer/security/telescreen{
-	name = "Prisoner Telescreen"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/computer/security/telescreen/prison/directional/east,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "wGS" = (
@@ -139770,7 +139765,7 @@ aaa
 aad
 aaa
 diL
-cmE
+kra
 drj
 bog
 iMg
@@ -148992,7 +148987,7 @@ vXr
 jbn
 xIl
 obL
-pXI
+wGQ
 xIl
 gjc
 pJo

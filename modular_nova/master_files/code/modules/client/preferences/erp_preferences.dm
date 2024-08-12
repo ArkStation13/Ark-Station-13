@@ -128,7 +128,27 @@
 	savefile_key = "erp_status_pref"
 
 /datum/preference/choiced/erp_status/init_possible_values()
-	return GLOB.based_erp_status // ARK STATION EDIT
+	return list(
+		"Top - Dom",
+		"Top - Switch",
+		"Top - Sub",
+		"Verse-Top - Dom",
+		"Verse-Top - Switch",
+		"Verse-Top - Sub",
+		"Verse - Dom",
+		"Verse - Switch",
+		"Verse - Sub",
+		"Verse-Bottom - Dom",
+		"Verse-Bottom - Switch",
+		"Verse-Bottom - Sub",
+		"Bottom - Dom",
+		"Bottom - Switch",
+		"Bottom - Sub",
+		"Check OOC Notes",
+		"Ask (L)OOC",
+		"No",
+		"Yes",
+	)
 
 /datum/preference/choiced/erp_status/create_default_value()
 	return "Ask (L)OOC"
@@ -158,7 +178,7 @@
 	savefile_key = "erp_status_pref_nc"
 
 /datum/preference/choiced/erp_status_nc/init_possible_values()
-	return GLOB.noncon_erp_status // ARK STATION EDIT
+	return list("Yes - Switch", "Yes - Dom", "Yes - Sub", "Yes", "Ask (L)OOC", "Check OOC Notes", "No")
 
 /datum/preference/choiced/erp_status_nc/create_default_value()
 	return "No"
@@ -188,7 +208,7 @@
 	savefile_key = "erp_status_pref_v"
 
 /datum/preference/choiced/erp_status_v/init_possible_values()
-	return GLOB.vore_erp_status // ARK STATION EDIT
+	return list("Yes - Switch", "Yes - Prey", "Yes - Pred", "Check OOC Notes", "Ask (L)OOC", "No", "Yes")
 
 /datum/preference/choiced/erp_status_v/create_default_value()
 	return "No"
@@ -218,7 +238,7 @@
 	savefile_key = "erp_status_pref_mechanics"
 
 /datum/preference/choiced/erp_status_mechanics/init_possible_values()
-	return GLOB.mechanics_erp_status // ARK STATION EDIT
+	return list("Roleplay only", "Mechanical only", "Mechanical and Roleplay", "None")
 
 /datum/preference/choiced/erp_status_mechanics/create_default_value()
 	return "None"
@@ -248,7 +268,7 @@
 	savefile_key = "erp_sexuality_pref"
 
 /datum/preference/choiced/erp_sexuality/init_possible_values()
-	return GLOB.sexuality_erp_status // For simplicity's sake we only have 3 options. // ARK STATION EDIT
+	return list("Gay", "Straight", "None") // For simplicity's sake we only have 3 options.
 
 /datum/preference/choiced/erp_sexuality/create_default_value()
 	return "None"
@@ -278,7 +298,7 @@
 	savefile_key = "erp_status_pref_hypnosis"
 
 /datum/preference/choiced/erp_status_hypno/init_possible_values()
-	return GLOB.hypno_erp_status // ARK STATION EDIT
+	return list("Always/Whenever", "Gameplay Only", "Ask (L)OOC", "Check OOC Notes", "No")
 
 /datum/preference/choiced/erp_status_hypno/create_default_value()
 	return "No"

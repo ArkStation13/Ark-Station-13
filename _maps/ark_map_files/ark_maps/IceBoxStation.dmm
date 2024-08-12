@@ -1202,6 +1202,7 @@
 	},
 /obj/machinery/holopad,
 /obj/effect/landmark/start/depsec/medical,
+/obj/machinery/computer/security/telescreen/med_sec/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/checkpoint/medical)
 "atM" = (
@@ -3829,10 +3830,6 @@
 /area/station/engineering/supermatter/room)
 "bjm" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring medbay to ensure patient safety.";
-	name = "Medbay Monitor"
-	},
 /obj/structure/reagent_dispensers/wall/peppertank/directional/east,
 /obj/effect/turf_decal/tile/red/full,
 /turf/open/floor/iron/dark/smooth_large,
@@ -9460,13 +9457,10 @@
 /obj/item/folder/white,
 /obj/item/folder/white,
 /obj/item/pen,
-/obj/item/taperecorder,
-/obj/item/paper_bin{
-	pixel_y = 6
-	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
+/obj/item/taperecorder,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "cMA" = (
@@ -11158,6 +11152,7 @@
 /obj/machinery/light/directional/west,
 /obj/item/kirbyplants/random/dead/research_director,
 /obj/machinery/computer/security/telescreen/rd,
+/obj/machinery/computer/security/telescreen/rd/directional/west,
 /turf/open/floor/iron/smooth_half,
 /area/station/command/heads_quarters/rd)
 "dnX" = (
@@ -20143,12 +20138,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
 "geg" = (
-/obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4
 	},
-/obj/item/radio/intercom/directional/north,
+/obj/machinery/computer/security/telescreen/test_chamber/directional/north,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "gel" = (
@@ -47920,6 +47914,7 @@
 	},
 /obj/effect/turf_decal/box/red,
 /obj/machinery/light/directional/south,
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
 "oAD" = (
@@ -48652,10 +48647,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
 "oLW" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used to access the various cameras on the station.";
-	name = "Security Camera Monitor"
-	},
 /obj/structure/table,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
@@ -54894,15 +54885,6 @@
 /obj/item/gps/mining,
 /turf/open/floor/iron/smooth,
 /area/mine/eva)
-"qGi" = (
-/obj/effect/turf_decal/trimline/purple/filled/warning{
-	dir = 8
-	},
-/obj/machinery/computer/security/telescreen{
-	name = "Xenobio Monitor"
-	},
-/turf/open/floor/iron/white,
-/area/station/science/xenobiology)
 "qGJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -61994,10 +61976,8 @@
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "sKV" = (
-/obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor"
-	},
 /obj/machinery/light/small/directional/north,
+/obj/machinery/computer/security/telescreen/test_chamber/directional/north,
 /turf/open/floor/iron/white/side{
 	dir = 1
 	},
@@ -63735,10 +63715,10 @@
 /area/station/hallway/secondary/service)
 "trb" = (
 /obj/structure/table,
-/obj/machinery/computer/security/telescreen{
-	name = "Test Chamber Monitor"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/paper_bin{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "trc" = (
@@ -66457,6 +66437,7 @@
 /area/station/maintenance/port/lesser)
 "ukf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "uko" = (
@@ -254237,7 +254218,7 @@ mfV
 xpA
 uHc
 cpg
-qGi
+cpg
 cpg
 cdl
 pMF

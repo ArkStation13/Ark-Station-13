@@ -4966,8 +4966,8 @@
 /obj/machinery/computer/security{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/prison,
 /obj/machinery/light/directional/west,
+/obj/machinery/computer/security/telescreen/prison/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/security/corrections_officer)
 "azw" = (
@@ -33644,12 +33644,12 @@
 /obj/machinery/computer/records/security{
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/engine,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/computer/security/telescreen/engine/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/engineering)
 "dnc" = (
@@ -37876,7 +37876,6 @@
 	id = "experilab";
 	name = "Chamber Shutters"
 	},
-/obj/machinery/computer/security/telescreen,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "gwD" = (
@@ -40273,7 +40272,7 @@
 /area/station/hallway/primary/fore)
 "iiD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
-/obj/machinery/computer/security/telescreen/research,
+/obj/machinery/computer/security/telescreen/research/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "iiZ" = (
@@ -42533,7 +42532,6 @@
 /area/station/security/prison/safe)
 "jMI" = (
 /obj/structure/table,
-/obj/machinery/computer/security/telescreen/research,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -54247,10 +54245,6 @@
 	name = "Brig Desk";
 	req_access = list("brig")
 	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used to access the various cameras on the station.";
-	name = "Security Camera Monitor"
-	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "sqp" = (
@@ -56664,6 +56658,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/depsec/science,
+/obj/machinery/computer/security/telescreen/research/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/science)
 "uhB" = (
@@ -61841,6 +61836,7 @@
 	pixel_y = 16;
 	req_access = list("cmo")
 	},
+/obj/machinery/computer/security/telescreen/med_sec/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "xSH" = (
