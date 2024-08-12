@@ -41,6 +41,7 @@
 		"bluespacebeaker",
 		"adv_watering_can",
 		"bluespace_coffeepot",
+		"bluespace_souppot", // ARK STATION ADDITION
 		"bluespacesyringe",
 		"blutrash",
 		"light_replacer_blue",

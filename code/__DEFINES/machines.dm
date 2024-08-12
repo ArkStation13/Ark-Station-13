@@ -76,9 +76,6 @@
 #define POD_FABRICATOR (1<<12)
 // ARK STATION EDIT END
 
-#define FIREDOOR_OPEN 1
-#define FIREDOOR_CLOSED 2
-
 #define HYPERTORUS_INACTIVE 0 // No or minimal energy
 #define HYPERTORUS_NOMINAL 1 // Normal operation
 #define HYPERTORUS_WARNING 2 // Integrity damaged

@@ -1,230 +1,136 @@
 /obj/item/armorkit
-	name = "durathread armor kit"
+	name = "don't use armor kit"
 	desc = "A glorified sewing kit with durathread sheets, thread, and a titanium needle, for reinforcing jumpsuits and uniforms."
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "blueshield_armor_kit" // shoutout to my guy Toriate for being good at sprites tho
+	icon_state = "blueshield_armor_kit"
+	var/armor_kit_type = /datum/armor/clothing_under/rank_security
+	var/altername = "durathread" // Like "durathread science uniform"
+	var/syndicate_armor_kit = FALSE
 
-/obj/item/armorkit/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	// yeah have fun making subtypes and modifying the afterattack if you want to make variants
-	// idiot
-	var/used = FALSE
-
-	if(isobj(target) && istype(target, /obj/item/clothing/under))
-		var/obj/item/clothing/under/C = target
-		if(C.damaged_clothes)
-			to_chat(user,"<span class='warning'>You should repair the damage done to [C] first.</span>")
-			return
-		if(C.attached_accessories.len)
-			to_chat(user,"<span class='warning'>Kind of hard to sew around [C.attached_accessories.Join(", ")].</span>")
-			return
-		if(C.armor_type != /datum/armor/clothing_under/rank_security)
-			C.set_armor(/datum/armor/clothing_under/rank_security)
-			used = TRUE
-
-		if(used)
-			user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-			"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a durathread jumpsuit.</span>")
-			C.name = "durathread [C.name]"
-			qdel(src)
-			return
-		else
-			to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-			return
-	else
-		return
-
-/obj/item/armorkit/blueshield
-	name = "aegis armor kit"
-	desc = "A nanotrasen armoring kit with armored plates and some nanoglue, for reinforcing outerwear."
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "blueshield_armor_kit" // I'm so sorry I butchered the sprite, Toriate.
-
-/obj/item/armorkit/blueshield/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	// yeah have fun making subtypes and modifying the afterattack if you want to make variants
-	// idiot
-	// I have no idea what you are talking about.
-	var/used = FALSE
-
-	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_OCLOTHING))
-		return
-
+/obj/item/armorkit/interact_with_atom(obj/item/target, mob/user, proximity_flag, click_parameters)
 	var/obj/item/clothing/C = target
 
-	if(C.armor_type != /datum/armor/suit_armor)
-		C.set_armor(/datum/armor/suit_armor)
-		used = TRUE
-
-	if(used)
-		C.allowed = GLOB.security_vest_allowed
+	if(C.armored_with_kit == FALSE)
+		C.set_armor(armor_kit_type)
 		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a blueshield armored vest.</span>")
-		C.name = "aegis [C.name]"
+		"<span class = 'notice'>You reinforce [C] with [src], making it's more protective.</span>")
+		if(!syndicate_armor_kit)
+			C.name = "[altername] [C.name]"
+		C.armored_with_kit = TRUE
 		qdel(src)
-		return
+		return TRUE
 	else
 		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
 		return
 
-/obj/item/armorkit/blueshield/helmet
+/obj/item/clothing
+	var/armored_with_kit = FALSE
+
+/// PRESETS
+// SUITS
+/obj/item/armorkit/suit
+	armor_kit_type = /datum/armor/suit_armor
+	altername = "aegis"
+
+/obj/item/armorkit/suit/interact_with_atom(obj/item/target, mob/user, proximity_flag, click_parameters)
+	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_OCLOTHING))
+		return
+	..()
+
+// HELMETS
+/obj/item/armorkit/helmet
 	name = "aegis headgear kit"
 	desc = "A nanotrasen armoring kit with armored plates and some nanoglue, for reinforcing hats or other headgear."
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "blueshield_helmet_kit" // I'm so sorry I butchered the sprite, Toriate. (x2)
+	icon_state = "blueshield_helmet_kit"
+	armor_kit_type = /datum/armor/head_helmet
+	altername = "aegis"
 
-/obj/item/armorkit/blueshield/helmet/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	var/used = FALSE
-
+/obj/item/armorkit/helmet/interact_with_atom(obj/item/target, mob/user, proximity_flag, click_parameters)
 	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_HEAD))
 		return
+	..()
 
-	var/obj/item/clothing/C = target
+//
+// BLUESHIELD //
 
-	if(C.armor_type != /datum/armor/head_helmet)
-		C.set_armor(/datum/armor/head_helmet)
-		used = TRUE
+/obj/item/armorkit/suit/blueshield
+	name = "aegis armor kit"
+	desc = "A nanotrasen armoring kit with armored plates and some nanoglue, for reinforcing outerwear."
+	icon_state = "blueshield_armor_kit"
+	armor_kit_type = /datum/armor/suit_armor
+	altername = "aegis"
 
-	if(used)
-		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a blueshield helmet.</span>")
-		C.name = "aegis [C.name]"
-		qdel(src)
-		return
-	else
-		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-		return
+/obj/item/armorkit/helmet/blueshield
+	name = "aegis headgear kit"
+	desc = "A nanotrasen armoring kit with armored plates and some nanoglue, for reinforcing hats or other headgear."
+	icon_state = "blueshield_helmet_kit"
+	armor_kit_type = /datum/armor/head_helmet
+	altername = "aegis"
 
-/obj/item/armorkit/security
+// SECURITY //
+
+/obj/item/armorkit/suit/security
 	name = "rampart armor kit"
 	desc = "A security armoring kit with flexible armored sheets and some nanoglue, for reinforcing outerwear."
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "sec_armor_kit" // I'm so sorry I butchered the sprite, Toriate. (x3)
+	icon_state = "sec_armor_kit"
+	armor_kit_type = /datum/armor/suit_armor
+	altername = "rampart"
 
-/obj/item/armorkit/security/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	var/used = FALSE
-
-	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_OCLOTHING))
-		return
-
-	var/obj/item/clothing/C = target
-
-	if(C.armor_type != /datum/armor/suit_armor)
-		C.set_armor(/datum/armor/suit_armor)
-		used = TRUE
-
-	if(used)
-		C.allowed = GLOB.security_vest_allowed
-		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a security armored vest.</span>")
-		C.name = "rampart [C.name]"
-		qdel(src)
-		return
-	else
-		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-		return
-
-/obj/item/armorkit/security/helmet
+/obj/item/armorkit/helmet/security
 	name = "rampart headgear kit"
 	desc = "A security armoring kit with flexible armored sheets and some nanoglue, for reinforcing hats or other headgear."
-	//icon = 'modular_splurt/icons/obj/clothing/reinforcekits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "sec_helmet_kit" // I'm so sorry I butchered the sprite, Toriate. (x4)
-
-/obj/item/armorkit/security/helmet/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	var/used = FALSE
-
-	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_HEAD))
-		return
-
-	var/obj/item/clothing/C = target
-
-	if(C.armor_type != /datum/armor/head_helmet)
-		C.set_armor(/datum/armor/head_helmet)
-		used = TRUE
-
-	if(used)
-		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a security helmet.</span>")
-		C.name = "rampart [C.name]"
-		qdel(src)
-		return
-	else
-		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-		return
+	icon_state = "sec_helmet_kit"
+	armor_kit_type = /datum/armor/head_helmet
+	altername = "rampart"
 
 // SYNDICATE //
+/datum/armor/suit_armor_syndicate
+	melee = 45
+	bullet = 40
+	laser = 40
+	energy = 50
+	bomb = 35
+	fire = 60
+	acid = 60
+	wound = 20
 
-/obj/item/armorkit/syndicate
+/datum/armor/head_helmet_syndicate
+	melee = 45
+	bullet = 40
+	laser = 40
+	energy = 50
+	bomb = 35
+	fire = 60
+	acid = 60
+	wound = 20
+
+/obj/item/armorkit/suit/syndicate
 	name = "syndicate armor kit"
 	desc = "A syndicate armoring kit with flexible armored sheets and some nanoglue, for reinforcing outerwear. Has no mark!"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/armor_kits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "sec_armor_kit"
+	armor_kit_type = /datum/armor/suit_armor_syndicate
+	altername = ""
+	syndicate_armor_kit = TRUE
 
-/obj/item/armorkit/syndicate/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	var/used = FALSE
-
-	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_OCLOTHING))
-		return
-
-	var/obj/item/clothing/C = target
-
-	if(C.armor_type != /datum/armor/suit_armor)
-		C.set_armor(/datum/armor/suit_armor)
-		used = TRUE
-
-	if(used)
-		C.allowed = GLOB.security_vest_allowed
-		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a security armored vest.</span>")
-		qdel(src)
-		return
-	else
-		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-		return
-
-/obj/item/armorkit/syndicate/helmet
-	name = "rampart headgear kit"
+/obj/item/armorkit/helmet/syndicate
+	name = "syndicate headgear kit"
 	desc = "A syndicate armoring kit with flexible armored sheets and some nanoglue, for reinforcing hats or other headgear. Has no mark!"
-	//icon = 'modular_splurt/icons/obj/clothing/reinforcekits.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "sec_helmet_kit" // I'm so sorry I butchered the sprite, Toriate. (x4)
-
-/obj/item/armorkit/syndicate/helmet/afterattack(obj/item/target, mob/user, proximity_flag, click_parameters)
-	var/used = FALSE
-
-	if(!(isobj(target) && target.slot_flags & ITEM_SLOT_HEAD))
-		return
-
-	var/obj/item/clothing/C = target
-
-	if(C.armor_type != /datum/armor/head_helmet)
-		C.set_armor(/datum/armor/head_helmet)
-		used = TRUE
-
-	if(used)
-		user.visible_message("<span class = 'notice'>[user] reinforces [C] with [src].</span>", \
-		"<span class = 'notice'>You reinforce [C] with [src], making it as protective as a security helmet.</span>")
-		qdel(src)
-		return
-	else
-		to_chat(user, "<span class = 'notice'>You don't need to reinforce [C] any further.")
-		return
+	icon_state = "sec_helmet_kit"
+	armor_kit_type = /datum/armor/head_helmet_syndicate
+	altername = ""
+	syndicate_armor_kit = TRUE
 
 // In uplink below -
 
 /datum/uplink_item/suits/armor_kit
 	name = "Syndicate Suit Armor Kit"
 	desc = "With this set you can strengthen any suit, and it is completely invisible."
-	item = /obj/item/armorkit/syndicate
-	cost = 1
+	item = /obj/item/armorkit/suit/syndicate
+	cost = 2
 
 /datum/uplink_item/suits/armor_kit_head
 	name = "Syndicate Head Armor Kit"
 	desc = "With this set you can strengthen any hat or helmet, and it is completely invisible."
-	item = /obj/item/armorkit/syndicate/helmet
-	cost = 1
-
+	item = /obj/item/armorkit/helmet/syndicate
+	cost = 2
