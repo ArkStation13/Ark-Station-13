@@ -133,7 +133,7 @@
 /datum/objective_item/steal/traitor/nullrod
 	name = "the chaplain's null rod"
 	targetitem = /obj/item/nullrod
-	excludefromjob = list(JOB_CHAPLAIN)
+	excludefromjob = list(JOB_CHAPLAIN, JOB_FISCAL) // ARK STATION EDIT
 	item_owner = list(JOB_CHAPLAIN)
 	exists_on_map = TRUE
 	difficulty = 2

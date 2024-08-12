@@ -304,7 +304,7 @@
 	item = /obj/item/his_grace
 	cost = 20
 	surplus = 0
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_FISCAL, JOB_DEACON) // ARK STATION EDIT
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/concealed_weapon_bay
