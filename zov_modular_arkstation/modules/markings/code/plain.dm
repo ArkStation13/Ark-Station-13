@@ -5,7 +5,6 @@
 
 /datum/body_marking/ark/plain
 	icon = 'zov_modular_arkstation/modules/markings/icons/plain.dmi'
-	color_src = USE_ONE_COLOR
 
 /*
  * HEAD
