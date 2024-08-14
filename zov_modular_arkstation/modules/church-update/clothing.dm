@@ -6,6 +6,8 @@
 	worn_icon = 'zov_modular_arkstation/modules/church-update/icons/mob/mob_dress_rot.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	can_adjust = FALSE
+	greyscale_config = null
+	greyscale_config_worn = null
 
 /obj/item/clothing/shoes/jackboots/black/medieval
 	name = "medieval jackboots"
