@@ -25,11 +25,7 @@
 /datum/loadout_item/neck/padded
 	name = "Feathered Serenity Cloak"
 	item_path = /obj/item/clothing/neck/padded
-<<<<<<< HEAD
-	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
-=======
-	ckeywhitelist = list("thedragmeme", "SomeNetwork")
->>>>>>> e496b8295d2... Expands the ckey whitelist of the feathered serenity cloak to SomeNetwork (#4232)
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme", "SomeNetwork")
 
 /datum/loadout_item/neck/padded/alt
 	name = "Feathered Serenity Cloak"
