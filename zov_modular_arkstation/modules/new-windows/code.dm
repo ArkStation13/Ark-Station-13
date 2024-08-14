@@ -1,13 +1,3 @@
-// Smooth Change
-/obj/structure/window/fulltile
-	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
-
-/obj/structure/window/reinforced
-	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
-
-/obj/structure/window/plasma
-	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
-
 // New-Old Icons (Ark Style)
 /obj/structure/window/fulltile/old
 	icon = 'zov_modular_arkstation/modules/new-windows/window.dmi'
