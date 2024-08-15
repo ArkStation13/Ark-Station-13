@@ -122,7 +122,9 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	msg = replacetext(replacetext(msg, "%TARGET_PRONOUN_THEY%", target.p_they()), "%USER_PRONOUN_THEY%", user.p_they())
 
 	if(lewd)
-		user.emote("subtler", null, msg, TRUE)
+		// user.emote("subtler", null, msg, TRUE)
+		var/message_lewd = "<span class='lewd'>[user] [msg]</span>"
+		user.visible_message(message_lewd)
 	else
 		user.manual_emote(msg)
 

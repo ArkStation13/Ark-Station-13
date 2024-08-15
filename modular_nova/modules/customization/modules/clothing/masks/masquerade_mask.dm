@@ -2,7 +2,7 @@
 /obj/item/clothing/mask/masquerade
 	name = "masquerade mask"
 	desc = "You'll never guess who's under that mask, it's the perfect disguise!"
-	icon_state = "maskerade"
+	icon_state = "mask" // ARK STATION FIX
 	icon = 'modular_nova/modules/GAGS/icons/mask/masquerade_mask.dmi'
 	worn_icon = 'modular_nova/modules/GAGS/icons/mask/masquerade_mask_worn.dmi'
 	flags_1 = IS_PLAYER_COLORABLE_1
@@ -30,14 +30,14 @@
 /obj/item/clothing/mask/masquerade/feathered
 	name = "feathered masquerade mask"
 	desc = "You'll never guess who's under that mask, it's the perfect disguise! This one even has a feather, to make it fancier!"
-	icon_state = "maskerade_feather"
+	icon_state = "mask_feather" // ARK STATION FIX
 
 /obj/item/clothing/mask/masquerade/two_colors
 	name = "split masquerade mask"
 	desc = "You'll never guess who's under that mask, it's the perfect disguise! There's even two colors, to add to the confusion!"
-	icon_state = "maskerade_two_colors"
+	icon_state = "mask_two_colors" // ARK STATION FIX
 
 /obj/item/clothing/mask/masquerade/two_colors/feathered
 	name = "feathered split masquerade mask"
 	desc = "You'll never guess who's under that mask, it's the perfect disguise! There's even two colors AND a feather, making it the most fancy masquerade mask yet!"
-	icon_state = "maskerade_two_colors_feather"
+	icon_state = "mask_two_colors_feather" // ARK STATION FIX
