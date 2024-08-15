@@ -101,7 +101,7 @@
 
 /obj/machinery/telecomms/server/presets/service
 	id = "Service Server"
-	freq_listening = list(FREQ_SERVICE)
+	freq_listening = list(FREQ_SERVICE, FREQ_CHURCH) // ARK STATION EDIT
 	autolinkers = list("service")
 
 /obj/machinery/telecomms/server/presets/common

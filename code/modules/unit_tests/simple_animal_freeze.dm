@@ -77,6 +77,7 @@
 		// MODULAR NOVA ENTRIES
 		// PLEASE REFACTOR THESE AS YOU CAN
 		/mob/living/simple_animal/hostile/bigcrab,
+		// ARK STATION ADDITION START
 		/mob/living/simple_animal/hostile/blackmesa,
 		/mob/living/simple_animal/hostile/blackmesa/blackops,
 		/mob/living/simple_animal/hostile/blackmesa/blackops/ranged,
@@ -99,6 +100,7 @@
 		/mob/living/simple_animal/hostile/blackmesa/xen/nihilanth,
 		/mob/living/simple_animal/hostile/blackmesa/xen/vortigaunt,
 		/mob/living/simple_animal/hostile/blackmesa/xen/vortigaunt/slave,
+		// ARK STATION ADDITION END
 		/mob/living/simple_animal/hostile/cazador,
 		/mob/living/simple_animal/hostile/cult,
 		/mob/living/simple_animal/hostile/cult/assassin,

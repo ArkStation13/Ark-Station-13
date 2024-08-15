@@ -35,6 +35,28 @@
 	greyscale_config = /datum/greyscale_config/encryptionkey_service
 	greyscale_colors = "#3758c4#3bca5a"
 
+// Priest - Command
+/obj/item/radio/headset/heads/priest
+	name = "command church radio headset"
+	desc = "Headset used by the Priest. God bless our Station."
+	icon_state = "srv_headset"
+	worn_icon_state = "srv_headset"
+	keyslot = /obj/item/encryptionkey/heads/headset_priest
+
+/obj/item/encryptionkey/heads/headset_priest
+	name = "\proper the priests's encryption key"
+	icon_state = "cypherkey_cube"
+	channels = list(RADIO_CHANNEL_CHURCH = 1, RADIO_CHANNEL_COMMAND = 1)
+	greyscale_config = /datum/greyscale_config/encryptionkey_security
+	greyscale_colors = "#280b1a#820a16"
+
+
+// DEPARTMENTAL BUDGET //
+/obj/item/card/id/departmental_budget/church
+	department_ID = ACCOUNT_CHR
+	department_name = ACCOUNT_CHR_NAME
+	icon = 'zov_modular_arkstation/modules/church-update/icons/misc/card.dmi'
+	icon_state = "church_budget"
 
 // CLOSETS //
 //Priest
@@ -59,6 +81,7 @@
 	new /obj/item/clothing/neck/cross(src)
 	new /obj/item/storage/fancy/candle_box(src)
 	new /obj/item/storage/fancy/candle_box(src)
+	new /obj/item/card/id/departmental_budget/church(src)
 	return
 
 //Deacon
