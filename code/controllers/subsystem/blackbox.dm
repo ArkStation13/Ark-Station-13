@@ -166,6 +166,8 @@ SUBSYSTEM_DEF(blackbox)
 			record_feedback("tally", "radio_usage", 1, "CTF green team")
 		if(FREQ_CTF_YELLOW)
 			record_feedback("tally", "radio_usage", 1, "CTF yellow team")
+		if(FREQ_CHURCH)
+			record_feedback("tally", "radio_usage", 1, "church") // ARK STATION ADDITION
 		else
 			record_feedback("tally", "radio_usage", 1, "other")
 
