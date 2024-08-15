@@ -84,7 +84,7 @@
 		/obj/item/stamp/chap = 1,
 		)
 	belt = /obj/item/modular_computer/pda/chaplain
-	ears = /obj/item/radio/headset/headset_church
+	ears = /obj/item/radio/headset/heads/priest
 
 	backpack = /obj/item/storage/backpack/medieval
 	satchel = /obj/item/storage/backpack/satchel/medieval

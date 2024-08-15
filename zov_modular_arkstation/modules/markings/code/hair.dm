@@ -3,6 +3,10 @@
 /datum/sprite_accessory/hair/ark
 	icon = 'zov_modular_arkstation/modules/markings/icons/hair.dmi'
 
+/*
+ * HAIRS
+ */
+
 /datum/sprite_accessory/hair/ark/bun_alt
 	name = "Bun Head (Alt)"
 	icon_state = "hair_bun_alt"

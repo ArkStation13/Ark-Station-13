@@ -11,6 +11,10 @@
 	name = "Vulp (Alt)"
 	icon_state = "vulpalt"
 
+/datum/sprite_accessory/snouts/mammal/ark/mouse_cool
+	name = "Mouse (Alt)"
+	icon_state = "mouse"
+
 /*
  * ACRADORS
  */

@@ -149,6 +149,11 @@ export const RADIO_CHANNELS = [
     freq: 1459,
     color: '#1ecc43',
   },
+  {
+    name: 'Church', // ARK STATION ADDITION
+    freq: 1352,
+    color: '#b6b6b6',
+  },
 ] as const;
 
 const GASES = [
