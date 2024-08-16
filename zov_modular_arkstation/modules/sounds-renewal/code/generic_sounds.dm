@@ -110,34 +110,66 @@
 /obj/machinery/door/airlock
 	doorDeni = 'zov_modular_arkstation/modules/sounds-renewal/sound/machines/deniedbeep.ogg'
 
-
 //////////////////// Зоны, эмбиенты
 
-/area
-	min_ambience_cooldown = 35 SECONDS
-	max_ambience_cooldown = 65 SECONDS
-	forced_ambience = TRUE
-	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/shipambience.ogg'
-	ambient_buzz_vol = 10
+// /area
+// 	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/shipambience.ogg'
 
 /area/station/maintenance
-	forced_ambience = TRUE
 	ambient_buzz = 'sound/ambience/maintambience.ogg'
 	ambient_buzz_vol = 20
 
-/area/station/command/heads_quarters/rd
-	forced_ambience = TRUE
-	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/sci.ogg'
-	ambient_buzz_vol = 20
-
-
+// SCI
 /area/station/science
-	forced_ambience = TRUE
 	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/sci.ogg'
 	ambient_buzz_vol = 20
 
+/area/station/command/heads_quarters/rd
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/sci.ogg'
+	ambient_buzz_vol = 20
+
+// MED
+/area/station/medical
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/med.ogg'
+	ambient_buzz_vol = 20
+
+/area/station/command/heads_quarters/cmo
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/med.ogg'
+	ambient_buzz_vol = 20
+
+/area/station/medical/surgery
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/med_sur.ogg'
+	ambient_buzz_vol = 20
+
+// CHAPEL
+/area/station/service/chapel
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church.ogg'
+	ambient_buzz_vol = 25
+	ambientsounds = list('zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church-bell1.ogg',
+						'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church-bell2.ogg',
+						'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church-cross1.ogg',
+						'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church-cross2.ogg',
+						'sound/ambience/ambicha1.ogg',
+						'sound/ambience/ambicha2.ogg',
+						'sound/ambience/ambicha3.ogg',
+						'sound/ambience/ambicha4.ogg',
+						'sound/ambience/ambiholy.ogg',
+						'sound/ambience/ambiholy2.ogg',
+						'sound/ambience/ambiholy3.ogg')
+	min_ambience_cooldown = 35 SECONDS
+	max_ambience_cooldown = 65 SECONDS
+
+// SEC
+/area/station/security
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/ambidanger6.ogg'
+	ambient_buzz_vol = 15
+
+/area/station/command/heads_quarters/hos
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/ambidanger6.ogg'
+	ambient_buzz_vol = 15
+
+// MISC
 /area/shuttle
-	forced_ambience = TRUE
 	ambient_buzz = 'modular_nova/modules/encounters/sounds/amb_ship_01.ogg'
 	ambient_buzz_vol = 15
 	ambientsounds = list('modular_nova/modules/encounters/sounds/alarm_radio.ogg',
