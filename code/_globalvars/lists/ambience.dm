@@ -1,4 +1,4 @@
-/* NOVA EDIT REMOVAL BEGIN
+//NOVA EDIT REMOVAL BEGIN // ARK STATION RETURNED
 GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/ambigen1.ogg',
 	'sound/ambience/ambigen2.ogg',
@@ -14,7 +14,7 @@ GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/ambigen13.ogg',
 	'sound/ambience/ambigen14.ogg',
 ))
-*/ //NOVA EDIT REMOVAL END
+//NOVA EDIT REMOVAL END // ARK STATION RETURNED
 
 GLOBAL_LIST_INIT(holy_ambience,list(
 	'sound/ambience/ambicha1.ogg',
