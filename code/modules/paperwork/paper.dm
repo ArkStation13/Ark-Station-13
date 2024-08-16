@@ -656,7 +656,7 @@
 			log_paper("[key_name(user)] wrote to [name]: \"[paper_input]\"")
 			to_chat(user, "You have added to your paper masterpiece!");
 
-			playsound(src, 'zov_modular_arkstation/modules/new-sounds/sound/pen_write.ogg', 50, vary = TRUE) // ARK STATION ADDITION
+			playsound(src, 'zov_modular_arkstation/modules/sounds-renewal/sound/items/pen_write.ogg', 50, vary = TRUE) // ARK STATION ADDITION
 
 			update_static_data_for_all_viewers()
 			update_appearance()

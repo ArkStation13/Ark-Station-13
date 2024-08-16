@@ -38,7 +38,9 @@ GLOBAL_LIST_INIT(pizza_names, list(
 	"Amanda Peon",
 	"Tara Newhole",
 	"Penny Tration",
-	"Joe Mama"
+	"Joe Mama",
+	"Nikolay Belinsky",
+	"Lazar Kovac"
 ))
 GLOBAL_LIST_INIT(emergency_responders, list())
 GLOBAL_LIST_INIT(solfed_responder_info, list(
@@ -91,7 +93,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 /// Internal. Polls ghosts and sends in a team of space cops according to the alert level, accompanied by an announcement.
 /obj/machinery/computer/communications/proc/call_911(ordered_team)
 	var/team_size
-	var/cops_to_send
+	var/datum/antagonist/ert/cops_to_send
 	var/announcement_message = "sussus amogus"
 	var/announcer = "PMC InteQ"
 	var/poll_question = "fuck you leatherman"
@@ -107,7 +109,6 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				сумма 20 000 кредитов.\n\n\
 				Стенограмма запроса:\n\
 				[GLOB.call_911_msg]"
-			//announcer = "PMC InteQ"
 			poll_question = "The station has called for the InteQ Mercenaries. Will you respond?"
 		if(EMERGENCY_RESPONSE_ATMOS)
 			team_size = tgui_input_number(usr, "Сколько инженеров требуется для устранения проблемы?", "Каков уровень повреждений?", 3, 3, 1)
@@ -116,7 +117,6 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				Отряд обученных инженеров из отряда 'Gamma-8' для помощи станции.\n\n\
 				Стенограмма запроса:\n\
 				[GLOB.call_911_msg]"
-			//announcer = "PMC InteQ"
 			poll_question = "The station has called for an InteQ Advanced Engineering Team. Will you respond?"
 			cell_phone_number = "911"	//This needs to stay so they can communicate with SWAT
 		if(EMERGENCY_RESPONSE_EMT)
@@ -124,11 +124,10 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 			cops_to_send = /datum/antagonist/ert/request_911/emt
 			announcement_message = "Экипаж станции [station_name()]. На проводе ЧВК 'InteQ'. Мы получили запрос Экстренной Медицинской Помощи. Мы высылаем \
 				Наших лучших Полевых Медиков из отряда 'White Bandages' для помощи станции.\n\n\
-				If the first responders request that they need heavier support to do their job, or to report a faulty call, we will send them in at additional cost to your station to the \
-				tune of $20,000.\n\n\
+				Если наши наёмники потребуют более серьезной поддержки для выполнения своей работы или для сообщения о ложном вызове, мы за дополнительную плату отправим ещё один отряд на вашу станцию в \
+				сумма 20 000 кредитов.\n\n\
 				Стенограмма запроса:\n\
 				[GLOB.call_911_msg]"
-			//announcer = "PMC InteQ"
 			poll_question = "The station has called for InteQ Medical Support. Will you respond?"
 		if(EMERGENCY_RESPONSE_EMAG)
 			team_size = 8
@@ -143,9 +142,14 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 			cell_phone_number = "Dogginos"
 			list_to_use = "dogginos"
 	priority_announce(announcement_message, announcer, 'zov_modular_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message=TRUE, color_override = "orange")
-	var/list/candidates = SSpolling.poll_ghost_candidates(poll_question, "deathsquad")
+	var/list/candidates = SSpolling.poll_ghost_candidates(
+		poll_question,
+		check_jobban = ROLE_DEATHSQUAD,
+		alert_pic = /obj/item/solfed_reporter,
+		role_name_text = cops_to_send::name,
+	)
 
-	if(candidates.len)
+	if(length(candidates))
 		//Pick the (un)lucky players
 		var/agents_number = min(team_size, candidates.len)
 
@@ -171,7 +175,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 			cop.mind.add_antag_datum(ert_antag)
 			cop.mind.set_assigned_role(SSjob.GetJobType(ert_antag.ert_job_path))
-			SSjob.SendToLateJoin(cop)
+			// SSjob.SendToLateJoin(cop)
 			cop.grant_language(/datum/language/common, source = LANGUAGE_SPAWNER)
 
 			if(cops_to_send == /datum/antagonist/ert/request_911/atmos) // charge for atmos techs
@@ -250,25 +254,6 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	antag_hud_name = "hud_spacecop"
 	suicide_cry = "FOR ADMIRAL BROWN!!"
 	var/department = "Some stupid shit"
-
-/datum/antagonist/ert/request_911/apply_innate_effects(mob/living/mob_override)
-	..()
-	var/mob/living/M = mob_override || owner.current
-	if(M.hud_used)
-		var/datum/hud/H = M.hud_used
-		var/atom/movable/screen/wanted/giving_wanted_lvl = new /atom/movable/screen/wanted(null, H)
-		H.wanted_lvl = giving_wanted_lvl
-		H.infodisplay += giving_wanted_lvl
-		H.mymob.client.screen += giving_wanted_lvl
-
-
-/datum/antagonist/ert/request_911/remove_innate_effects(mob/living/mob_override)
-	var/mob/living/M = mob_override || owner.current
-	if(M.hud_used)
-		var/datum/hud/H = M.hud_used
-		H.infodisplay -= H.wanted_lvl
-		QDEL_NULL(H.wanted_lvl)
-	..()
 
 /datum/antagonist/ert/request_911/greet()
 	var/missiondesc = ""
@@ -454,7 +439,12 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				station_balance?.adjust_money(SOLFED_FINE_AMOUNT) // paying for the gas to drive all the fuckin' way out to the frontier
 
 			priority_announce(announcement_message, announcement_source, 'zov_modular_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message = TRUE, color_override = "orange")
-			var/list/candidates = SSpolling.poll_ghost_candidates(ghost_poll_msg, jobban_to_check)
+			var/list/candidates = SSpolling.poll_ghost_candidates(
+				ghost_poll_msg,
+				jobban_to_check,
+				alert_pic = /obj/item/solfed_reporter,
+				role_name_text = summoned_type,
+			)
 
 			if(candidates.len)
 				//Pick the (un)lucky players
@@ -482,7 +472,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 					cop.mind.add_antag_datum(ert_antag)
 					cop.mind.set_assigned_role(SSjob.GetJobType(ert_antag.ert_job_path))
-					SSjob.SendToLateJoin(cop)
+					// SSjob.SendToLateJoin(cop)
 					cop.grant_language(/datum/language/common, source = LANGUAGE_SPAWNER)
 
 					var/obj/item/gangster_cellphone/phone = new() // biggest gang in the city
