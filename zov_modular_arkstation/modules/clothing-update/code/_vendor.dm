@@ -517,7 +517,7 @@
 				/obj/item/clothing/head/soft/inteq_med = 2,
 				/obj/item/clothing/gloves/combat/maid/inteq = 2,
 				/obj/item/storage/backpack/security/inteq = 2,
-				/obj/item/storage/backpack/satchel/inteq = 2,
+				/obj/item/storage/backpack/satchel/sec/inteq = 2,
 				/obj/item/clothing/mask/balaclava/breath/inteq = 2,
 				/obj/item/clothing/glasses/ballistic = 2,
 				/obj/item/clothing/head/costume/ushanka = 5,
