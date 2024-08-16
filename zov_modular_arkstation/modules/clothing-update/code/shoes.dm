@@ -34,6 +34,9 @@
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/laceup.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/mob/clothes_on.dmi'
 
+/obj/item/clothing/shoes/wraps
+	body_parts_covered = FEET
+
 // SECURITY OVERRIDES //
 
 /obj/item/clothing/shoes/jackboots/sec
