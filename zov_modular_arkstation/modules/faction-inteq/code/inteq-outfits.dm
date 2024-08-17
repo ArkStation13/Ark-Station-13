@@ -36,8 +36,7 @@
 		/obj/item/melee/baton/security/loaded = 1,
 		/obj/item/solfed_reporter/swat_caller = 1,
 		/obj/item/ammo_box/magazine/m9mm = 4,
-		/obj/item/beamout_tool = 1,
-		/obj/item/melee/baton/security = 1
+		/obj/item/beamout_tool = 1
 	)
 
 // PMC engineer
