@@ -127,10 +127,12 @@
 	cost = PAYCHECK_COMMAND * 14
 	contraband = TRUE
 
+/* // ARK STATION REMOVE START - EBANAYA IMBA
 /datum/armament_entry/company_import/sol_defense/longarm/outomaties
 	item_type = /obj/item/gun/ballistic/automatic/sol_rifle/machinegun
 	cost = PAYCHECK_COMMAND * 23
 	contraband = TRUE
+*/ // ARK STATION REMOVE END - EBANAYA IMBA
 
 /datum/armament_entry/company_import/sol_defense/longarm/kiboko
 	item_type = /obj/item/gun/ballistic/automatic/sol_grenade_launcher
