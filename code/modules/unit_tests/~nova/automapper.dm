@@ -1,6 +1,6 @@
 /// Checks that all automapper TOML entries actually link to a map and that the config exists.
 /datum/unit_test/automapper
-	var/config_path = "_maps/nova/automapper/automapper_config.toml"
+	var/config_path = "_maps/ark_map_files/automapper/automapper_config.toml" // ARK STATION EDIT
 
 /datum/unit_test/automapper/Run()
 	var/test_config = rustg_read_toml_file(config_path)
