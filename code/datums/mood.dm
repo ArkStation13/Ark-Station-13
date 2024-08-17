@@ -418,11 +418,11 @@
 				msg += "[span_boldnicegreen("I love life!")]\n"
 	else
 		msg += "[span_notice("No clue.")]\n"
-	
+
 	msg += "[span_notice("Moodlets:")]\n"//All moodlets
 	msg += get_alcohol_processing(user)
 	msg += get_drunk_mood(user)
-	if(mood_events.len && !HAS_TRAIT(user, TRAIT_MOOD_NOEXAMINE)) //ORIGINAL: if(mood_events.len) 
+	if(mood_events.len && !HAS_TRAIT(user, TRAIT_MOOD_NOEXAMINE)) //ORIGINAL: if(mood_events.len)
 	//NOVA EDIT CHANGE END
 		for(var/category in mood_events)
 			var/datum/mood_event/event = mood_events[category]
