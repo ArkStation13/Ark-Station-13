@@ -1,4 +1,4 @@
-//				 BASED ON VECTORCRAFTS FROM SPLURT 					//
+//				 BASED ON VECTORCRAFTS FROM ARK STATION 					//
 // CHECK zov_modular_arkstation\modules\vectorvehicle FOR ALL CODE //
 
 

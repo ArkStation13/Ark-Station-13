@@ -124,7 +124,7 @@ ADMIN_VERB(toggleblooper, R_SERVER, "Toggle Blooper", "Toggles the global Bloope
 	savefile_identifier = PREFERENCE_PLAYER
 	default_value = TRUE
 
-/// It's was stoolen from Splurt build >:3
+/// It's was stoolen from ARK STATION build >:3
 /datum/blooper
 	var/name = "None"
 	var/id = "Default"
