@@ -83,7 +83,7 @@
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
 	balloon_alert(user, "analyzing vitals")
-	playsound(user.loc, 'zov_modular_arkstation/modules/new-sounds/sound/healthanalyzer.ogg', 50)
+	playsound(user.loc, 'zov_modular_arkstation/modules/sounds-renewal/sound/items/healthanalyzer.ogg', 50) // ARK STATION EDIT
 
 	switch (scanmode)
 		if (SCANMODE_HEALTH)
