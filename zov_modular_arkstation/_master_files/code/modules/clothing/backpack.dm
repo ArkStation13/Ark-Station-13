@@ -22,7 +22,7 @@
 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/backpack.dmi'
 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/backpack.dmi'
 
-/obj/item/storage/backpack/satchel/inteq
+/obj/item/storage/backpack/satchel/sec/inteq
 	name = "combat satchel"
 	desc = "The bag looks like a mail bag and has brown-yellow inserts."
 	icon_state = "satchel_inteq"

@@ -5,6 +5,10 @@
 /datum/sprite_accessory/wings/ark // sarcoph @ hyperstation, march 2022
 	icon = 'zov_modular_arkstation/modules/markings/icons/wings.dmi'
 
+/*
+ * WINGS
+ */
+
 /datum/sprite_accessory/wings/ark/beetle // sarcoph @ hyperstation, march 2022
 	name = "Beetle (Hyper)"
 	icon_state = "beetle"

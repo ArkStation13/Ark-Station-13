@@ -126,6 +126,7 @@ const ItemListDisplay = (props: { items: LoadoutItem[] }) => {
 const FilterItemList = (items: LoadoutItem[]) => {
   const { data } = useBackend<LoadoutManagerData>();
   /*  const { is_donator, is_veteran } = data; ARK STATION REMOVED */
+  const { erp_pref } = data;
   const ckey = data.ckey;
 
   return items.filter((item: LoadoutItem) => {
@@ -138,6 +139,10 @@ const FilterItemList = (items: LoadoutItem[]) => {
     /*  if (item.veteran_only && !is_veteran) {
       return false;
     } ARK STATION REMOVED */
+
+    if (item.erp_item && !erp_pref) {
+      return false;
+    }
 
     return true;
   });
@@ -213,6 +218,8 @@ export const SearchDisplay = (props: {
   currentSearch: string;
 }) => {
   const { loadout_tabs, currentSearch } = props;
+  const { data } = useBackend<LoadoutManagerData>(); // NOVA EDIT ADDITION
+  const { erp_pref } = data; // NOVA EDIT ADDITION
 
   const search = createSearch(
     currentSearch,
@@ -220,6 +227,10 @@ export const SearchDisplay = (props: {
   );
 
   const validLoadoutItems = loadout_tabs
+    // NOVA EDIT ADDITION START - Prefslocked tabs
+    .filter(
+      (curTab) => !curTab.erp_category || (curTab.erp_category && erp_pref),
+    ) // NOVA EDIT ADDITION END
     .flatMap((tab) => tab.contents)
     .filter(search)
     .sort((a, b) => (a.name > b.name ? 1 : -1));

@@ -14,7 +14,8 @@ SUBSYSTEM_DEF(economy)
 										ACCOUNT_SRV = ACCOUNT_SRV_NAME,
 										ACCOUNT_CAR = ACCOUNT_CAR_NAME,
 										ACCOUNT_CMD = ACCOUNT_CMD_NAME, // NOVA EDIT
-										ACCOUNT_SEC = ACCOUNT_SEC_NAME)
+										ACCOUNT_SEC = ACCOUNT_SEC_NAME,
+										ACCOUNT_CHR = ACCOUNT_CHR_NAME) // ARK STATION ADDITION
 	var/list/departmental_accounts = list()
 	/**
 	 * Enables extra money charges for things that normally would be free, such as sleepers/cryo/beepsky.

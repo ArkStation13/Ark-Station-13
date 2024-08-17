@@ -21,7 +21,7 @@
 	var/font_color = "purple"
 	var/prayer_type = "PRAYER"
 	var/deity
-	if(usr.job == JOB_CHAPLAIN)
+	if(usr.job == JOB_CHAPLAIN || usr.job == JOB_FISCAL) // ARK STATION EDIT
 		cross.icon_state = "kingyellow"
 		font_color = "blue"
 		prayer_type = "CHAPLAIN PRAYER"

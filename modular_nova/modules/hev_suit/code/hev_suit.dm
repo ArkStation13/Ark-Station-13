@@ -218,6 +218,7 @@
 	background_icon_state = "bg_hl"
 	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
 	button_icon_state = "system_off"
+	background_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi' // ARK STATION FIX
 
 /datum/action/item_action/hev_toggle_notifs
 	name = "Toggle HEV Suit Notifications"
@@ -225,6 +226,7 @@
 	background_icon_state = "bg_hl"
 	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
 	button_icon_state = "sound_VOICE_AND_TEXT"
+	background_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi' // ARK STATION FIX
 
 /datum/action/item_action/hev_toggle_notifs/Trigger(trigger_flags)
 	var/obj/item/clothing/suit/space/hev_suit/my_suit = target

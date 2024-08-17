@@ -60,7 +60,7 @@
 /obj/machinery/telecomms/bus/preset_two
 	id = "Bus 2"
 	network = "tcommsat"
-	freq_listening = list(FREQ_SUPPLY, FREQ_SERVICE)
+	freq_listening = list(FREQ_SUPPLY, FREQ_SERVICE, FREQ_CHURCH) // ARK STATION EDIT
 	autolinkers = list("processor2", "supply", "service")
 
 /obj/machinery/telecomms/bus/preset_three

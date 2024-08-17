@@ -8,7 +8,7 @@
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED
 	ambience_index = AMBIENCE_OMEGA
 	sound_environment = SOUND_AREA_OMEGA
-	ambient_buzz = 'sound/ambience/magma.ogg'
+	ambient_buzz = 'zov_modular_arkstation/modules/sounds-renewal/sound/ambience/church.ogg'
 
 /area/omega/surface
 	name = "Forest"

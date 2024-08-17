@@ -246,7 +246,7 @@
 	ADD_TRAIT(src, TRAIT_COFFIN_ENLARGED, "bloodsucker_coffin")
 	max_mob_size = user.mob_size
 	to_chat(user, span_warning("The coffin creaks and squeaks as you try to squeeze into it. It's a tight fit but you manage it make it fit you."))
-	playsound(src, 'zov_modular_arkstation/modules/new-sounds/sound/blastdooropen.ogg')
+	playsound(src, 'zov_modular_arkstation/modules/sounds-renewal/sound/items/blastdooropen.ogg')
 	animate(src, 1 SECONDS, FALSE, BOUNCE_EASING, transform = transform.Scale(user.mob_size * COFFIN_ENLARGE_MULT))
 
 /obj/structure/closet/crate/proc/un_enlarge(mob/living/user)
