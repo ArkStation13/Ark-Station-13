@@ -1,5 +1,5 @@
 /*
- * PORTED FROM ARK STATION
+ * PORTED FROM SPLURT
  */
 
 /datum/sprite_accessory/wings/ark // sarcoph @ hyperstation, march 2022
