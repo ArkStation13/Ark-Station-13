@@ -6,7 +6,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/inteq
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset/headset_cent
-	back = /obj/item/storage/backpack/satchel/inteq
+	back = /obj/item/storage/backpack/satchel/sec/inteq
 	l_pocket = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/helmet/sec/inteq
 	suit = /obj/item/clothing/suit/armor/inteq

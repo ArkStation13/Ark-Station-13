@@ -56,11 +56,11 @@
 	)
 
 // /turf/open/indestructible/floor_old
-// 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+// 	icon = 'zov_modular_arkstation/modules/new-floors/floors.dmi'
 // 	icon_state = "floor"
 
 // /turf/open/floor
-// 	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+// 	icon = 'zov_modular_arkstation/modules/new-floors/floors.dmi'
 // 	icon_state = "floor"
 
 // /turf/open/floor/stone
@@ -68,12 +68,12 @@
 
 // STANDART
 /turf/open/floor/iron/old
-	icon = 'zov_modular_arkstation/modules/new-plitka/floors.dmi'
+	icon = 'zov_modular_arkstation/modules/new-floors/floors.dmi'
 	icon_state = "floor"
 	floor_tile = /obj/item/stack/tile/iron/old
 
 /obj/item/stack/tile/iron/old
-	icon = 'zov_modular_arkstation/modules/new-plitka/tiles.dmi'
+	icon = 'zov_modular_arkstation/modules/new-floors/tiles.dmi'
 	icon_state = "tile_old"
 	merge_type = /obj/item/stack/tile/iron/old
 	turf_type = /turf/open/floor/iron/old
