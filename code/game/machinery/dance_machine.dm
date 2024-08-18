@@ -12,6 +12,7 @@
 	COOLDOWN_DECLARE(jukebox_error_cd)
 	/// Cooldown between being allowed to play another song
 	COOLDOWN_DECLARE(jukebox_song_cd)
+	COOLDOWN_DECLARE(add_to_queue_cd)
 	/// TimerID to when the current song ends
 	var/song_timerid
 	/// The actual music player datum that handles the music
@@ -106,8 +107,15 @@
 			return TRUE
 
 		if("add_to_queue")
+			// Проверяем, если кулдаун еще не закончился, блокируем действие
+			if(!COOLDOWN_FINISHED(src, add_to_queue_cd))
+				to_chat(usr, span_warning("Пожалуйста, подождите перед добавлением следующего трека."))
+				return TRUE
+
 			var/selected = params["track"]
 			music_player.queuedplaylist_songnames += selected
+			say("[selected] has been added to the queue.")
+			COOLDOWN_START(src, add_to_queue_cd, 10 DECISECONDS)
 			return TRUE
 
 		if ("random_song")
@@ -129,7 +137,7 @@
 		if("set_volume")
 			var/new_volume = params["volume"]
 			if(new_volume == "reset")
-				music_player.set_new_volume(initial(music_player.volume))
+				music_player.set_volume_to_max()
 			if(new_volume == "max")
 				music_player.set_volume_to_max()
 			else if(new_volume == "min")
@@ -142,18 +150,34 @@
 			music_player.sound_loops = !music_player.sound_loops
 			return TRUE
 
-/obj/machinery/jukebox/proc/activate_music(track)
+/obj/machinery/jukebox/proc/activate_music(track = null)
+	// Проверяем, если уже есть активная музыка, ничего не делаем
 	if(!isnull(music_player.active_song_sound))
 		return FALSE
-	if(music_player.selection || !music_player.queuedplaylist_songnames.len)
-		return FALSE
-	music_player.selection = track || music_player.songs[music_player.queuedplaylist_songnames[1]]
+
+	// Если передан трек, устанавливаем его, иначе берем первый из очереди
+	if(track)
+		music_player.selection = track
+	else if(music_player.queuedplaylist_songnames.len)
+		music_player.selection = music_player.songs[music_player.queuedplaylist_songnames[1]]
+	else
+		return FALSE// Если нет трека для воспроизведения, ничего не делаем
+
+	// Рассчитываем время остановки на основе длительности текущего трека
 	music_player.stop_time = world.time + music_player.selection.song_length
-	music_player.queuedplaylist_songnames.Cut(1, 2)
+	say("Сейчас играет: [music_player.selection.song_name]")
+	// Если трек взят из очереди, удаляем его из списка
+	if(!track)
+		music_player.queuedplaylist_songnames.Cut(1, 2)
+
+	// Запускаем музыку
 	music_player.start_music()
+
+	// Обновляем состояние и запускаем процессинг
 	update_use_power(ACTIVE_POWER_USE)
 	update_appearance(UPDATE_ICON_STATE)
 	START_PROCESSING(SSobj, src)
+
 	return TRUE
 
 /obj/machinery/jukebox/proc/stop_music()
@@ -163,6 +187,7 @@
 	STOP_PROCESSING(SSobj, src)
 	music_player.unlisten_all()
 	music_player.selection = null
+	music_player.sound_loops = FALSE
 
 	if(!QDELING(src))
 		COOLDOWN_START(src, jukebox_song_cd, 10 SECONDS)

@@ -14,24 +14,61 @@ import { Window } from '../layouts';
 
 export const Jukebox = (props, context) => {
   const { act, data } = useBackend(context);
-  const { active, track_selected, track_length, volume, repeat, songs } = data;
+  const {
+    active,
+    track_selected,
+    track_length,
+    volume,
+    repeat,
+    songs,
+    queued_tracks = [],
+  } = data;
   const cost_for_play = 0;
   const is_emagged = false;
   const has_access = true;
 
-  const SONGS_PER_PAGE = 25;
+  const SONGS_PER_PAGE = 10;
 
-  const queued_tracks = data.queued_tracks || [];
+  // Состояния для вкладки треков
   const [tab, setTab] = useSharedState('tab', 1);
-  const [current_page, setPage] = useSharedState('current_page', 1);
-  const [filteredSongs, setFilteredSongs] = useSharedState(
-    'filteredSongs',
-    songs,
-  );
-  const [filteredPages, setFilteredPages] = useSharedState(
-    'filteredPages',
-    Math.ceil(filteredSongs.length / SONGS_PER_PAGE),
-  );
+  const [currentPage, setCurrentPage] = useSharedState('currentPage', 1);
+  const [searchQuery, setSearchQuery] = useSharedState('searchQuery', '');
+
+  // Состояния для вкладки очереди
+  const [queuePage, setQueuePage] = useSharedState('queuePage', 1);
+
+  // Фильтруем песни на основе поискового запроса
+  const filteredSongs = searchQuery
+    ? songs.filter((track) =>
+        track.name.toLowerCase().includes(searchQuery.toLowerCase().trim()),
+      )
+    : songs;
+
+  // Вычисляем количество страниц для треков
+  const filteredPages = Math.ceil(filteredSongs.length / SONGS_PER_PAGE);
+
+  // Обновляем текущую страницу, если она превышает количество доступных страниц
+  if (currentPage > filteredPages) {
+    setCurrentPage(1);
+  }
+
+  // Обновляем отображение треков при смене страницы или фильтрации
+  const paginatedSongs = paginate(filteredSongs, SONGS_PER_PAGE, currentPage);
+
+  // Вычисляем количество страниц для очереди
+  const filteredQueuePages = Math.ceil(queued_tracks.length / SONGS_PER_PAGE);
+
+  // Функция для обработки ввода в поле поиска
+  const handleSearchInput = (query) => {
+    setSearchQuery(query);
+    setCurrentPage(1); // Сбрасываем на первую страницу при новом поиске
+  };
+
+  // Очистка поиска
+  const clearSearch = () => {
+    setSearchQuery('');
+    setCurrentPage(1); // Сбрасываем на первую страницу при очистке
+  };
 
   return (
     <Window width={520} height={680}>
@@ -40,7 +77,6 @@ export const Jukebox = (props, context) => {
           fluid
           title="Настройки"
           buttons={
-            // BLUEMOON EDIT
             <Box>
               <Button
                 content={repeat ? 'Повтор' : '1 Раз'}
@@ -55,7 +91,7 @@ export const Jukebox = (props, context) => {
                 disabled={!has_access}
                 onClick={() => act('toggle')}
               />
-            </Box> // BLUEMOON EDIT END
+            </Box>
           }
         >
           <Stack>
@@ -170,51 +206,40 @@ export const Jukebox = (props, context) => {
                   fluid
                   autoFocus
                   placeholder="Найти треки..."
-                  onChange={(e, query) => {
-                    setPage(1);
-                    if (query) {
-                      setFilteredSongs(
-                        songs.filter((track) =>
-                          track.name
-                            .toLowerCase()
-                            .trim()
-                            .includes(query.toLowerCase().trim()),
-                        ),
-                      );
-                    } else {
-                      setFilteredSongs(songs);
-                    }
-                    setFilteredPages(
-                      Math.ceil(filteredSongs.length / SONGS_PER_PAGE),
-                    );
-                  }}
+                  value={searchQuery}
+                  onInput={(e) => handleSearchInput(e.target.value)}
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  icon="times"
+                  color="transparent"
+                  tooltip="Очистить"
+                  onClick={clearSearch}
                 />
               </Stack.Item>
             </Stack>
 
             <Section fluid>
-              {filteredSongs && filteredSongs.length ? (
+              {paginatedSongs && paginatedSongs.length ? (
                 <Tabs vertical style={{ 'pointer-events': 'none' }}>
-                  {paginate(filteredSongs, SONGS_PER_PAGE, current_page).map(
-                    (track) => (
-                      <Tabs.Tab key={track}>
-                        <Stack>
-                          <Stack.Item grow>{track.name}</Stack.Item>
-                          <Stack.Item grow>{track.length}</Stack.Item>
-                          <Stack.Item>
-                            <Button
-                              icon="play"
-                              content="В очередь"
-                              style={{ 'pointer-events': 'auto' }}
-                              onClick={() => {
-                                act('add_to_queue', { track: track.name });
-                              }}
-                            />
-                          </Stack.Item>
-                        </Stack>
-                      </Tabs.Tab>
-                    ),
-                  )}
+                  {paginatedSongs.map((track) => (
+                    <Tabs.Tab key={track.name}>
+                      <Stack>
+                        <Stack.Item grow>{track.name}</Stack.Item>
+                        <Stack.Item>
+                          <Button
+                            icon="play"
+                            content="В очередь"
+                            style={{ 'pointer-events': 'auto' }}
+                            onClick={() => {
+                              act('add_to_queue', { track: track.name });
+                            }}
+                          />
+                        </Stack.Item>
+                      </Stack>
+                    </Tabs.Tab>
+                  ))}
                 </Tabs>
               ) : (
                 <Box textColor="gray" textAlign="center" mt={2}>
@@ -222,44 +247,71 @@ export const Jukebox = (props, context) => {
                 </Box>
               )}
             </Section>
-            {filteredPages > 1 ? (
+            {filteredPages > 1 && (
               <Stack align="center" justify="center">
                 <Stack.Item>
                   <Button
                     icon="chevron-left"
                     onClick={() =>
-                      setPage(current_page - 1 < 1 ? 1 : current_page - 1)
+                      setCurrentPage(currentPage - 1 < 1 ? 1 : currentPage - 1)
                     }
                   />
                 </Stack.Item>
                 <Stack.Item>
-                  Страница {current_page}/{filteredPages}
+                  Страница {currentPage}/{filteredPages}
                 </Stack.Item>
                 <Stack.Item>
                   <Button
                     icon="chevron-right"
                     onClick={() =>
-                      setPage(
-                        current_page + 1 > filteredPages
+                      setCurrentPage(
+                        currentPage + 1 > filteredPages
                           ? filteredPages
-                          : current_page + 1,
+                          : currentPage + 1,
                       )
                     }
                   />
                 </Stack.Item>
               </Stack>
-            ) : (
-              <Box />
             )}
           </Section>
         )}
         {tab === 2 && (
           <Section fluid>
             <Tabs vertical style={{ 'pointer-events': 'none' }}>
-              {queued_tracks.map((song) => (
-                <Tabs.Tab key={song}>{song}</Tabs.Tab>
-              ))}
+              {paginate(queued_tracks, SONGS_PER_PAGE, queuePage).map(
+                (song) => (
+                  <Tabs.Tab key={song}>{song}</Tabs.Tab>
+                ),
+              )}
             </Tabs>
+            {filteredQueuePages > 1 && (
+              <Stack align="center" justify="center">
+                <Stack.Item>
+                  <Button
+                    icon="chevron-left"
+                    onClick={() =>
+                      setQueuePage(queuePage - 1 < 1 ? 1 : queuePage - 1)
+                    }
+                  />
+                </Stack.Item>
+                <Stack.Item>
+                  Страница {queuePage}/{filteredQueuePages}
+                </Stack.Item>
+                <Stack.Item>
+                  <Button
+                    icon="chevron-right"
+                    onClick={() =>
+                      setQueuePage(
+                        queuePage + 1 > filteredQueuePages
+                          ? filteredQueuePages
+                          : queuePage + 1,
+                      )
+                    }
+                  />
+                </Stack.Item>
+              </Stack>
+            )}
           </Section>
         )}
       </Window.Content>

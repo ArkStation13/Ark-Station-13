@@ -66,8 +66,10 @@
 		AddComponent(/datum/component/connect_range, parent, connections, max(x_cutoff, z_cutoff))
 
 	songs = init_songs()
-	if(length(songs))
-		queuedplaylist_songnames += songs[pick(songs)].name
+	/* if(length(songs)) //Добавляем по умолчанию один рандомный трек в очередь.
+		var/datum/track/t = songs[pick(songs)]
+		queuedplaylist_songnames += t.song_name */
+
 
 	RegisterSignal(parent, COMSIG_ENTER_AREA, PROC_REF(on_enter_area))
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
