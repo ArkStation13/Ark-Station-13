@@ -289,6 +289,9 @@
 #include "weird_food.dm"
 #include "wizard_loadout.dm"
 #include "worn_icons.dm"
+// ARK STATION EDIT START
+#include "~arkstation\underwear_items.dm"
+// ARK STATION EDIT END
 // NOVA EDIT START
 #include "~nova\automapper.dm"
 #include "~nova\opposing_force.dm"
