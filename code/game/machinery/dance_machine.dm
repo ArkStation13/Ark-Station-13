@@ -21,6 +21,22 @@
 	. = ..()
 	music_player = new(src)
 
+/obj/machinery/jukebox/process()
+	if(music_player?.active_song_sound)
+		if(world.time >= music_player.stop_time)
+			var/datum/track/last_track = music_player.selection
+			music_player.active_song_sound = null
+			music_player.selection = null
+			if(last_track && music_player.sound_loops)
+				activate_music(last_track)
+			else if(music_player.queuedplaylist_songnames.len)
+				activate_music()
+			else
+				playsound(src,'sound/machines/terminal_off.ogg',50,1)
+				update_icon()
+				music_player.stop_time = 0
+				stop_music()
+
 /obj/machinery/jukebox/Destroy()
 	stop_music()
 	QDEL_NULL(music_player)
@@ -67,7 +83,7 @@
 /obj/machinery/jukebox/ui_data(mob/user)
 	return music_player.get_ui_data()
 
-/obj/machinery/jukebox/ui_act(action, list/params)
+/obj/machinery/jukebox/ui_act(action, list/params,  datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
@@ -89,6 +105,15 @@
 
 			return TRUE
 
+		if("add_to_queue")
+			var/selected = params["track"]
+			music_player.queuedplaylist_songnames += selected
+			return TRUE
+
+		if ("random_song")
+			music_player.queuedplaylist_songnames += pick(music_player.songs)
+			return TRUE
+
 		if("select_track")
 			if(!isnull(music_player.active_song_sound))
 				to_chat(usr, span_warning("Error: You cannot change the song until the current one is over."))
@@ -103,7 +128,9 @@
 
 		if("set_volume")
 			var/new_volume = params["volume"]
-			if(new_volume == "reset" || new_volume == "max")
+			if(new_volume == "reset")
+				music_player.set_new_volume(initial(music_player.volume))
+			if(new_volume == "max")
 				music_player.set_volume_to_max()
 			else if(new_volume == "min")
 				music_player.set_new_volume(0)
@@ -111,26 +138,31 @@
 				music_player.set_new_volume(text2num(new_volume))
 			return TRUE
 
-		if("loop")
-			music_player.sound_loops = !!params["looping"]
+		if("repeat")
+			music_player.sound_loops = !music_player.sound_loops
 			return TRUE
 
-/obj/machinery/jukebox/proc/activate_music()
+/obj/machinery/jukebox/proc/activate_music(track)
 	if(!isnull(music_player.active_song_sound))
 		return FALSE
-
+	if(music_player.selection || !music_player.queuedplaylist_songnames.len)
+		return FALSE
+	music_player.selection = track || music_player.songs[music_player.queuedplaylist_songnames[1]]
+	music_player.stop_time = world.time + music_player.selection.song_length
+	music_player.queuedplaylist_songnames.Cut(1, 2)
 	music_player.start_music()
 	update_use_power(ACTIVE_POWER_USE)
 	update_appearance(UPDATE_ICON_STATE)
-	if(!music_player.sound_loops)
-		song_timerid = addtimer(CALLBACK(src, PROC_REF(stop_music)), music_player.selection.song_length, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_DELETE_ME)
+	START_PROCESSING(SSobj, src)
 	return TRUE
 
 /obj/machinery/jukebox/proc/stop_music()
 	if(!isnull(song_timerid))
 		deltimer(song_timerid)
 
+	STOP_PROCESSING(SSobj, src)
 	music_player.unlisten_all()
+	music_player.selection = null
 
 	if(!QDELING(src))
 		COOLDOWN_START(src, jukebox_song_cd, 10 SECONDS)
