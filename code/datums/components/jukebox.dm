@@ -1,3 +1,5 @@
+//ARK STATION EDIT - перенесено в modular_arkstation\_master_files\code\datums\components\jukebox.dm
+/*
 /// Checks if the mob has jukebox muted in their preferences
 #define IS_PREF_MUTED(mob) (!isnull(mob.client) && !mob.client.prefs.read_preference(/datum/preference/toggle/sound_jukebox))
 
@@ -424,3 +426,4 @@
 	song_name = "Tintin on the Moon"
 	song_length = 3 MINUTES + 52 SECONDS
 	song_beat = 1 SECONDS
+*/

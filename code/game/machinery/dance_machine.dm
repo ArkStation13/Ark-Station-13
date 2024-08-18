@@ -1,3 +1,5 @@
+//ARK STATION EDIT - перенесено в modular_arkstation\_master_files\code\game\machinery\dance_machine.dm
+/*
 /obj/machinery/jukebox
 	name = "jukebox"
 	desc = "A classic music player."
@@ -440,3 +442,4 @@
 /obj/machinery/jukebox/disco/proc/dance4_revert(mob/living/dancer, matrix/starting_matrix)
 	animate(dancer, transform = starting_matrix, time = 5, loop = 0)
 	REMOVE_TRAIT(dancer, TRAIT_DISCO_DANCER, REF(src))
+*/

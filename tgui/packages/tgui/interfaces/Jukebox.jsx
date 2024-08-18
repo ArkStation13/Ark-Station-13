@@ -64,12 +64,6 @@ export const Jukebox = (props, context) => {
     setCurrentPage(1); // Сбрасываем на первую страницу при новом поиске
   };
 
-  // Очистка поиска
-  const clearSearch = () => {
-    setSearchQuery('');
-    setCurrentPage(1); // Сбрасываем на первую страницу при очистке
-  };
-
   return (
     <Window width={520} height={680}>
       <Window.Content overflowY="scroll">
@@ -208,14 +202,6 @@ export const Jukebox = (props, context) => {
                   placeholder="Найти треки..."
                   value={searchQuery}
                   onInput={(e) => handleSearchInput(e.target.value)}
-                />
-              </Stack.Item>
-              <Stack.Item>
-                <Button
-                  icon="times"
-                  color="transparent"
-                  tooltip="Очистить"
-                  onClick={clearSearch}
                 />
               </Stack.Item>
             </Stack>
