@@ -68,7 +68,7 @@
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
-	qdel(tank.current_beam)
+	qdel(tank?.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
@@ -137,7 +137,7 @@
 		return
 	forceMove(tank)
 	tank.shlang_na_meste = TRUE
-	qdel(tank.current_beam)
+	qdel(tank?.current_beam)
 
 /obj/item/shlang/proc/check_range()
 	SIGNAL_HANDLER
