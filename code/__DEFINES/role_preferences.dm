@@ -138,6 +138,14 @@
 #define ROLE_CYBER_TAC "Cyber Tac"
 #define ROLE_NETGUARDIAN "NetGuardian Prime"
 
+// ARK STATION EDIT START
+#define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_VAMPIRICACCIDENT "Bloodsucker (Midround)"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker (Latejoin)"
+#define ROLE_MONSTERHUNTER "Monster Hunter"
+#define ROLE_VASSAL "Vassal"
+// ARK STATION EDIT END
+
 /// This defines the antagonists you can operate with in the settings.
 /// Keys are the antagonist, values are the number of days since the player's
 /// first connection in order to play.
@@ -195,10 +203,10 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SENTIENCE = 0,
 
 	// ARK STATION EDIT START
-	ROLE_BLOODSUCKER = 14,
-	ROLE_VAMPIRICACCIDENT = 14,
-	ROLE_BLOODSUCKERBREAKOUT = 14,
-	ROLE_MONSTERHUNTER = 14,
+	ROLE_BLOODSUCKER = 0,
+	ROLE_VAMPIRICACCIDENT = 0,
+	ROLE_BLOODSUCKERBREAKOUT = 0,
+	ROLE_MONSTERHUNTER = 0,
 	// ARK STATION EDIT END
 ))
 
