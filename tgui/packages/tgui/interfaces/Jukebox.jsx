@@ -27,41 +27,33 @@ export const Jukebox = (props, context) => {
   const is_emagged = false;
   const has_access = true;
 
-  const SONGS_PER_PAGE = 10;
+  const SONGS_PER_PAGE = 15;
 
-  // Состояния для вкладки треков
   const [tab, setTab] = useSharedState('tab', 1);
   const [currentPage, setCurrentPage] = useSharedState('currentPage', 1);
   const [searchQuery, setSearchQuery] = useSharedState('searchQuery', '');
 
-  // Состояния для вкладки очереди
   const [queuePage, setQueuePage] = useSharedState('queuePage', 1);
 
-  // Фильтруем песни на основе поискового запроса
   const filteredSongs = searchQuery
     ? songs.filter((track) =>
         track.name.toLowerCase().includes(searchQuery.toLowerCase().trim()),
       )
     : songs;
 
-  // Вычисляем количество страниц для треков
   const filteredPages = Math.ceil(filteredSongs.length / SONGS_PER_PAGE);
 
-  // Обновляем текущую страницу, если она превышает количество доступных страниц
   if (currentPage > filteredPages) {
     setCurrentPage(1);
   }
 
-  // Обновляем отображение треков при смене страницы или фильтрации
   const paginatedSongs = paginate(filteredSongs, SONGS_PER_PAGE, currentPage);
 
-  // Вычисляем количество страниц для очереди
   const filteredQueuePages = Math.ceil(queued_tracks.length / SONGS_PER_PAGE);
 
-  // Функция для обработки ввода в поле поиска
   const handleSearchInput = (query) => {
     setSearchQuery(query);
-    setCurrentPage(1); // Сбрасываем на первую страницу при новом поиске
+    setCurrentPage(1);
   };
 
   return (
@@ -210,14 +202,25 @@ export const Jukebox = (props, context) => {
               {paginatedSongs && paginatedSongs.length ? (
                 <Tabs vertical style={{ 'pointer-events': 'none' }}>
                   {paginatedSongs.map((track) => (
-                    <Tabs.Tab key={track.name}>
+                    <Tabs.Tab
+                      key={track.name}
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.2)', // Черный фон с прозрачностью 0.8
+                        transition: 'background-color 0.3s ease',
+                        marginBottom: '4px',
+                        borderRadius: '4px',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                      }}
+                    >
                       <Stack>
                         <Stack.Item grow>{track.name}</Stack.Item>
                         <Stack.Item>
                           <Button
                             icon="play"
                             content="В очередь"
-                            style={{ 'pointer-events': 'auto' }}
+                            style={{
+                              'pointer-events': 'auto',
+                            }}
                             onClick={() => {
                               act('add_to_queue', { track: track.name });
                             }}
@@ -267,7 +270,18 @@ export const Jukebox = (props, context) => {
             <Tabs vertical style={{ 'pointer-events': 'none' }}>
               {paginate(queued_tracks, SONGS_PER_PAGE, queuePage).map(
                 (song) => (
-                  <Tabs.Tab key={song}>{song}</Tabs.Tab>
+                  <Tabs.Tab
+                    key={song}
+                    style={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                      transition: 'background-color 0.3s ease',
+                      marginBottom: '4px',
+                      borderRadius: '4px',
+                      border: '1px solid rgba(0, 0, 0, 0.1)',
+                    }}
+                  >
+                    {song}
+                  </Tabs.Tab>
                 ),
               )}
             </Tabs>
