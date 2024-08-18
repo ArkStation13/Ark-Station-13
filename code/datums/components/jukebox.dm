@@ -22,7 +22,6 @@
 	/// List of /datum/tracks we can play. Set via get_songs().
 	VAR_FINAL/list/songs = list()
 	/// Current song track selected
-	VAR_FINAL/list/queuedplaylist_songnames = list()
 	VAR_FINAL/datum/track/selection
 	/// Current song datum playing
 	VAR_FINAL/sound/active_song_sound
@@ -35,7 +34,6 @@
 	/// Volume of the songs played. Also serves as the max volume.
 	/// Do not set directly, use set_new_volume() instead.
 	VAR_PROTECTED/volume = 50
-	VAR_PROTECTED/max_volume = 100
 
 	/// Range at which the sound plays to players, can also be a view "XxY" string
 	VAR_PROTECTED/sound_range
@@ -46,8 +44,6 @@
 	/// Whether the music loops when done.
 	/// If FALSE, you must handle ending music yourself.
 	var/sound_loops = FALSE
-	var/stop_time = 0
-	var/active = FALSE
 
 /datum/jukebox/New(atom/new_parent)
 	if(!ismovable(new_parent) && !isturf(new_parent))
@@ -68,10 +64,8 @@
 		AddComponent(/datum/component/connect_range, parent, connections, max(x_cutoff, z_cutoff))
 
 	songs = init_songs()
-	/* if(length(songs)) //Добавляем по умолчанию один рандомный трек в очередь.
-		var/datum/track/t = songs[pick(songs)]
-		queuedplaylist_songnames += t.song_name */
-
+	if(length(songs))
+		selection = songs[pick(songs)]
 
 	RegisterSignal(parent, COMSIG_ENTER_AREA, PROC_REF(on_enter_area))
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
@@ -111,13 +105,11 @@
 			var/datum/track/new_track = new()
 			new_track.song_path = file("[global.config.directory]/jukebox_music/sounds/[track_file]")
 			var/list/track_data = splittext(track_file, "+")
-			if(length(track_data) != 4)
+			if(length(track_data) != 3)
 				continue
 			new_track.song_name = track_data[1]
 			new_track.song_length = text2num(track_data[2])
 			new_track.song_beat = text2num(track_data[3])
-			new_track.song_track_id = text2num(track_data[4])
-			new_track.song_modified_date = time2text(ftime(new_track.song_path), "DD.MM.YYYY")
 			config_songs[new_track.song_name] = new_track
 
 		if(!length(config_songs))
@@ -127,20 +119,6 @@
 	// returns a copy so it can mutate if desired.
 	return config_songs.Copy()
 
-/datum/jukebox/proc/get_songs()
-	var/list/songs_data = list()
-	for(var/song_name in songs)
-		var/datum/track/one_song = songs[song_name]
-		UNTYPED_LIST_ADD(songs_data, list( \
-			"name" = song_name, \
-			"length" = DisplayTimeText(one_song.song_length), \
-			"beat" = one_song.song_beat, \
-			"modified_date" = one_song.song_modified_date, \
-			"track_id" = one_song.song_track_id
-		))
-
-	return songs_data
-
 /**
  * Returns a set of general data relating to the jukebox for use in TGUI.
  *
@@ -149,17 +127,20 @@
  */
 /datum/jukebox/proc/get_ui_data()
 	var/list/data = list()
+	var/list/songs_data = list()
+	for(var/song_name in songs)
+		var/datum/track/one_song = songs[song_name]
+		UNTYPED_LIST_ADD(songs_data, list( \
+			"name" = song_name, \
+			"length" = DisplayTimeText(one_song.song_length), \
+			"beat" = one_song.song_beat, \
+		))
+
 	data["active"] = !!active_song_sound
-	data["songs"] = get_songs()
-	// TODO
-	data["queued_tracks"] = queuedplaylist_songnames
-	data["track_selected"] = null
-	data["track_length"] = null
-	if(selection)
-		data["track_selected"] = selection.song_name
-		data["track_length"] = DisplayTimeText(selection.song_length)
+	data["songs"] = songs_data
+	data["track_selected"] = selection?.song_name
+	data["looping"] = sound_loops
 	data["volume"] = volume
-	data["repeat"] = sound_loops
 	return data
 
 /**
@@ -180,7 +161,7 @@
  * Then updates any mobs listening to it.
  */
 /datum/jukebox/proc/set_new_volume(new_vol)
-	new_vol = clamp(new_vol, 0, max_volume)
+	new_vol = clamp(new_vol, 0, initial(volume))
 	if(volume == new_vol)
 		return
 	volume = new_vol
@@ -191,7 +172,7 @@
 
 /// Sets volume to the maximum possible value, the initial volume value.
 /datum/jukebox/proc/set_volume_to_max()
-	set_new_volume(max_volume)
+	set_new_volume(initial(volume))
 
 /**
  * Sets the sound's environment to a new value.
@@ -254,6 +235,7 @@
 		active_song_sound.volume = volume
 		active_song_sound.y = 1
 		active_song_sound.environment = juke_area.sound_environment || SOUND_ENVIRONMENT_NONE
+		active_song_sound.repeat = sound_loops
 
 	update_listener(new_listener)
 	// if you have a sound with status SOUND_UPDATE,
@@ -417,8 +399,6 @@
 	/// How long is a beat of the song in decisconds
 	/// Used to determine time between effects when played
 	var/song_beat = 0
-	var/song_track_id = null
-	var/song_modified_date = null
 
 // Default track supplied for testing and also because it's a banger
 /datum/track/default
