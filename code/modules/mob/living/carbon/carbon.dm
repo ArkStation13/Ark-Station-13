@@ -1260,7 +1260,7 @@
 		update_worn_mask()
 		. = TRUE
 
-	if(!(obscured & ITEM_SLOT_EARS) && ears?.wash(clean_types))
+	if(!(obscured & ITEM_SLOT_EARS_LEFT) && ears?.wash(clean_types)) // ARK STATION EDIT - Extra inventory
 		update_worn_ears()
 		. = TRUE
 

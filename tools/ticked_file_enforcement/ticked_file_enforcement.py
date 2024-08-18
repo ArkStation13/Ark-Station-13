@@ -61,6 +61,10 @@ with open(file_reference, 'r') as file:
         elif line == "// NOVA EDIT END":
             continue
         # NOVA EDIT END
+        # ARK STATION EDIT START - Modular unit tests
+        elif line == "// ARK STATION EDIT START" or line == "// ARK STATION EDIT END":
+            continue
+        # ARK STATION EDIT END
 
         lines.append(line)
 
@@ -88,6 +92,10 @@ for code_file in scannable_files:
         if("~nova/" in code_file):
             dm_path = "~nova\\" + dm_path
         # NOVA EDIT END
+        # ARK STATION EDIT START - Modular unit tests - guess
+        if("~arkstation/" in code_file):
+            dm_path = "~arkstation\\" + dm_path
+        # ARK STATION EDIT END
 
     included = f"#include \"{dm_path}\"" in lines
 
