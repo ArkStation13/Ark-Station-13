@@ -3,8 +3,8 @@
 	description = "Explore gateways, watch your friends die, find all the loot."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = SUPERVISOR_RD
 	config_tag = "VANGUARD_OPERATIVE"
 
