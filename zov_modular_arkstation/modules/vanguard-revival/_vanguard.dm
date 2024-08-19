@@ -170,3 +170,90 @@
 	req_access = list(ACCESS_GATEWAY, ACCESS_CENT_GENERAL)
 	icon = 'zov_modular_arkstation/modules/vanguard-revival/icons/obj/closet.dmi'
 	icon_state = "exp"
+
+//expeditionary MOD suit
+
+/obj/item/mod/construction/plating/exp
+	icon = 'zov_modular_arkstation/modules/vanguard-revival/icons/obj/clothing/mod_construction.dmi'
+	icon_state = "exp-plating"
+	theme = /datum/mod_theme/exp
+
+/datum/mod_theme/exp
+	name = "expeditionary"
+	desc = "An Expeditionary Corps armored suit, offering quicker speed at the cost of modules capacity."
+	extended_desc = "An Expeditionary Corps classic, this model of MODsuit has been designed for safe moving in \
+		dangerous gateways or space."
+	default_skin = "exp"
+	armor_type = /datum/armor/mod_theme_exp
+	complexity_max = DEFAULT_MAX_COMPLEXITY - 5
+	slowdown_inactive = 1
+	slowdown_active = 0.2
+	allowed_suit_storage = list(
+		/obj/item/restraints/handcuffs,
+		/obj/item/assembly/flash,
+		/obj/item/melee/baton,
+		/obj/item/melee/energy/sword,
+		/obj/item/shield/energy,
+	)
+	variants = list(
+		"exp" = list(
+		MOD_ICON_OVERRIDE = 'zov_modular_arkstation/modules/vanguard-revival/icons/obj/clothing/mod_clothing.dmi', // Ark Station 13 Edit
+		MOD_WORN_ICON_OVERRIDE = 'zov_modular_arkstation/modules/vanguard-revival/icons/mob/clothing/mod_clothing.dmi', // Ark Station 13 Edit
+			/obj/item/clothing/head/mod = list(
+				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
+				SEALED_CLOTHING = STOPSPRESSUREDAMAGE|HEADINTERNALS,
+				UNSEALED_INVISIBILITY = HIDEFACIALHAIR|HIDEEARS|HIDEHAIR|HIDESNOUT,
+				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE,
+				UNSEALED_COVER = HEADCOVERSMOUTH,
+				SEALED_COVER = HEADCOVERSEYES|PEPPERPROOF,
+				UNSEALED_MESSAGE = HELMET_UNSEAL_MESSAGE,
+				SEALED_MESSAGE = HELMET_SEAL_MESSAGE,
+			),
+			/obj/item/clothing/suit/mod = list(
+				UNSEALED_CLOTHING = THICKMATERIAL,
+				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
+				SEALED_INVISIBILITY = HIDEJUMPSUIT,
+				UNSEALED_MESSAGE = CHESTPLATE_UNSEAL_MESSAGE,
+				SEALED_MESSAGE = CHESTPLATE_SEAL_MESSAGE,
+			),
+			/obj/item/clothing/gloves/mod = list(
+				UNSEALED_CLOTHING = THICKMATERIAL,
+				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
+				CAN_OVERSLOT = TRUE,
+				UNSEALED_MESSAGE = GAUNTLET_UNSEAL_MESSAGE,
+				SEALED_MESSAGE = GAUNTLET_SEAL_MESSAGE,
+			),
+			/obj/item/clothing/shoes/mod = list(
+				UNSEALED_CLOTHING = THICKMATERIAL,
+				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
+				CAN_OVERSLOT = TRUE,
+				UNSEALED_MESSAGE = BOOT_UNSEAL_MESSAGE,
+				SEALED_MESSAGE = BOOT_SEAL_MESSAGE,
+			),
+		),
+	)
+
+/datum/armor/mod_theme_exp
+	melee = 20
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 20
+	bio = 100
+	fire = 75
+	acid = 75
+	wound = 20
+
+/obj/item/mod/control/pre_equipped/exp
+	theme = /datum/mod_theme/exp
+	applied_cell = /obj/item/stock_parts/power_store/cell/hyper
+	applied_modules = list(
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/headprotector,
+	)
+	default_pins = list(
+		/obj/item/mod/module/jetpack,
+	)
