@@ -108,6 +108,7 @@
 	new /obj/item/clothing/suit/armor/vest/expeditionary_corps(src)
 	new /obj/item/storage/belt/military/expeditionary_corps(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
+	new /obj/item/mod/control/pre_equipped/exp(src)
 
 //marksman (has a gun)
 /obj/structure/closet/crate/secure/exp_corps/marksman/PopulateContents()
@@ -122,6 +123,7 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/marksman(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
 	new /obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/skild(src)
+	new /obj/item/mod/control/pre_equipped/exp(src)
 
 //shield guy
 /obj/structure/closet/crate/secure/exp_corps/pointman/PopulateContents()
@@ -135,6 +137,7 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/pointman(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
 	new /obj/item/shield/riot/pointman(src)
+	new /obj/item/mod/control/pre_equipped/exp(src)
 
 //medic
 /obj/structure/closet/crate/secure/exp_corps/field_medic/PopulateContents()
@@ -148,6 +151,7 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/field_medic(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
 	new /obj/item/healthanalyzer(src)
+	new /obj/item/mod/control/pre_equipped/exp(src)
 
 //engineer gaming
 /obj/structure/closet/crate/secure/exp_corps/combat_tech/PopulateContents()
@@ -161,6 +165,7 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/combat_tech(src)
 	new /obj/item/storage/backpack/expeditionary_corps(src)
 	new /obj/item/skillchip/job/engineer(src)
+	new /obj/item/mod/control/pre_equipped/exp(src)
 
 /obj/item/clothing/head/helmet/expeditionary_corps
 	flags_inv = NONE // ШОБ ВОЛОСИКИ БЫЛО ВИДНО
