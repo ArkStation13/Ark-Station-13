@@ -1,5 +1,4 @@
-//ARK STATION EDIT - перенесено в modular_arkstation\_master_files\code\game\machinery\dance_machine.dm
-/*
+
 /obj/machinery/jukebox
 	name = "jukebox"
 	desc = "A classic music player."
@@ -8,12 +7,13 @@
 	base_icon_state = "jukebox"
 	verb_say = "states"
 	density = TRUE
-	req_access = list(ACCESS_BAR)
+	req_access = null // ARK STATION EDIT - ORIGINAL: req_access = list(ACCESS_BAR)
 	processing_flags = START_PROCESSING_MANUALLY
 	/// Cooldown between "Error" sound effects being played
 	COOLDOWN_DECLARE(jukebox_error_cd)
 	/// Cooldown between being allowed to play another song
 	COOLDOWN_DECLARE(jukebox_song_cd)
+	COOLDOWN_DECLARE(add_to_queue_cd)
 	/// TimerID to when the current song ends
 	var/song_timerid
 	/// The actual music player datum that handles the music
@@ -22,6 +22,22 @@
 /obj/machinery/jukebox/Initialize(mapload)
 	. = ..()
 	music_player = new(src)
+
+/obj/machinery/jukebox/process()
+	if(music_player?.active_song_sound)
+		if(world.time >= music_player.stop_time)
+			var/datum/track/last_track = music_player.selection
+			music_player.active_song_sound = null
+			music_player.selection = null
+			if(last_track && music_player.sound_loops)
+				activate_music(last_track)
+			else if(music_player.queuedplaylist_songnames.len)
+				activate_music()
+			else
+				playsound(src,'sound/machines/terminal_off.ogg',50,1)
+				update_icon()
+				music_player.stop_time = 0
+				stop_music()
 
 /obj/machinery/jukebox/Destroy()
 	stop_music()
@@ -69,7 +85,7 @@
 /obj/machinery/jukebox/ui_data(mob/user)
 	return music_player.get_ui_data()
 
-/obj/machinery/jukebox/ui_act(action, list/params)
+/obj/machinery/jukebox/ui_act(action, list/params,  datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
@@ -91,6 +107,22 @@
 
 			return TRUE
 
+		if("add_to_queue")
+			// Проверяем, если кулдаун еще не закончился, блокируем действие
+			if(!COOLDOWN_FINISHED(src, add_to_queue_cd))
+				to_chat(usr, span_warning("Пожалуйста, подождите перед добавлением следующего трека."))
+				return TRUE
+
+			var/selected = params["track"]
+			music_player.queuedplaylist_songnames += selected
+			say("[selected] has been added to the queue.")
+			COOLDOWN_START(src, add_to_queue_cd, 10 DECISECONDS)
+			return TRUE
+
+		if ("random_song")
+			music_player.queuedplaylist_songnames += pick(music_player.songs)
+			return TRUE
+
 		if("select_track")
 			if(!isnull(music_player.active_song_sound))
 				to_chat(usr, span_warning("Error: You cannot change the song until the current one is over."))
@@ -105,7 +137,9 @@
 
 		if("set_volume")
 			var/new_volume = params["volume"]
-			if(new_volume == "reset" || new_volume == "max")
+			if(new_volume == "reset")
+				music_player.set_volume_to_max()
+			if(new_volume == "max")
 				music_player.set_volume_to_max()
 			else if(new_volume == "min")
 				music_player.set_new_volume(0)
@@ -113,26 +147,48 @@
 				music_player.set_new_volume(text2num(new_volume))
 			return TRUE
 
-		if("loop")
-			music_player.sound_loops = !!params["looping"]
+		if("repeat")
+			music_player.sound_loops = !music_player.sound_loops
 			return TRUE
 
-/obj/machinery/jukebox/proc/activate_music()
+/obj/machinery/jukebox/proc/activate_music(track = null)
+	// Проверяем, если уже есть активная музыка, ничего не делаем
 	if(!isnull(music_player.active_song_sound))
 		return FALSE
 
+	// Если передан трек, устанавливаем его, иначе берем первый из очереди
+	if(track)
+		music_player.selection = track
+	else if(music_player.queuedplaylist_songnames.len)
+		music_player.selection = music_player.songs[music_player.queuedplaylist_songnames[1]]
+	else
+		return FALSE// Если нет трека для воспроизведения, ничего не делаем
+
+	// Рассчитываем время остановки на основе длительности текущего трека
+	music_player.stop_time = world.time + music_player.selection.song_length
+	say("Сейчас играет: [music_player.selection.song_name]")
+	// Если трек взят из очереди, удаляем его из списка
+	if(!track)
+		music_player.queuedplaylist_songnames.Cut(1, 2)
+
+	// Запускаем музыку
 	music_player.start_music()
+
+	// Обновляем состояние и запускаем процессинг
 	update_use_power(ACTIVE_POWER_USE)
 	update_appearance(UPDATE_ICON_STATE)
-	if(!music_player.sound_loops)
-		song_timerid = addtimer(CALLBACK(src, PROC_REF(stop_music)), music_player.selection.song_length, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_DELETE_ME)
+	START_PROCESSING(SSobj, src)
+
 	return TRUE
 
 /obj/machinery/jukebox/proc/stop_music()
 	if(!isnull(song_timerid))
 		deltimer(song_timerid)
 
+	STOP_PROCESSING(SSobj, src)
 	music_player.unlisten_all()
+	music_player.selection = null
+	music_player.sound_loops = FALSE
 
 	if(!QDELING(src))
 		COOLDOWN_START(src, jukebox_song_cd, 10 SECONDS)
@@ -385,4 +441,3 @@
 /obj/machinery/jukebox/disco/proc/dance4_revert(mob/living/dancer, matrix/starting_matrix)
 	animate(dancer, transform = starting_matrix, time = 5, loop = 0)
 	REMOVE_TRAIT(dancer, TRAIT_DISCO_DANCER, REF(src))
-*/
