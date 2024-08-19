@@ -115,7 +115,7 @@ SUBSYSTEM_DEF(dynamic)
 	/// A number between -5 and +5.
 	/// A negative value will give a more peaceful round and
 	/// a positive value will give a round with higher threat.
-	var/threat_curve_centre = 1.5 // ARK STATION EDIT || 0
+	var/threat_curve_centre = 1.3 // ARK STATION EDIT || 0
 
 	/// A number between 0.5 and 4.
 	/// Higher value will favour extreme rounds and
