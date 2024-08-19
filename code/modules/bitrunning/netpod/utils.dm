@@ -87,6 +87,15 @@
 		if(isnull(current_avatar))
 			balloon_alert(neo, "out of bandwidth!")
 			return
+		// ARK STATION EDIT BEGIN - PREFS!
+		var/datum/preferences/pref
+		var/load_loadout = FALSE
+		var/obj/item/bitrunning_disk/prefs/prefdisk = locate() in neo.get_contents()
+		if(prefdisk)
+			load_loadout = prefdisk.include_loadout
+			pref = prefdisk.loaded_preference
+		current_avatar = server.generate_avatar(wayout, netsuit, pref, include_loadout = load_loadout)  // Added the prefs argument
+		// ARK STATION EDIT END
 
 	neo.set_static_vision(2 SECONDS)
 	add_healing(occupant)
