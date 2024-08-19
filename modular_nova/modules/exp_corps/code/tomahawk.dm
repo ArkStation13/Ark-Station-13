@@ -8,9 +8,9 @@
 	righthand_file = 'modular_nova/modules/exp_corps/icons/tomahawk_r.dmi'
 	worn_icon = 'modular_nova/modules/exp_corps/icons/tomahawk_worn.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 15 //Equivalent to a survival knife
+	force = 25 // ARK EDIT
 	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 18
+	throwforce = 25
 	throw_speed = 4
 	throw_range = 8
 	embed_type = /datum/embed_data/tomahawk
