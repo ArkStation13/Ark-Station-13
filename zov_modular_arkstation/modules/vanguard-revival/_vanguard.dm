@@ -3,8 +3,8 @@
 	description = "Explore gateways, watch your friends die, find all the loot."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = SUPERVISOR_RD
 	config_tag = "VANGUARD_OPERATIVE"
 
@@ -29,7 +29,8 @@
 	name = "Vanguard Operative"
 	jobtype = /datum/job/expeditionary_trooper
 
-	shoes = /obj/item/clothing/shoes/combat
+	glasses = /obj/item/clothing/glasses/sunglasses
+	shoes = /obj/item/clothing/shoes/combat/expeditionary_corps
 	ears = /obj/item/radio/headset/headset_sci
 	uniform = /obj/item/clothing/under/rank/expeditionary_corps
 
@@ -65,7 +66,9 @@
 /obj/structure/closet/crate/secure/exp_corps
 	name = "Expedition Crate"
 	desc = "A secure crate, for Expeditionary Corps only!"
-	icon_state = "centcom_secure"
+	icon = 'zov_modular_arkstation/modules/vanguard-revival/icons/obj/crates.dmi'
+	icon_state = "exp_secure"
+	base_icon_state = "exp_secure"
 	req_access = list(ACCESS_GATEWAY, ACCESS_CENT_GENERAL)
 	max_integrity = 5000
 	var/loadout_desc = "Whoever picks this is an incredibly boring generalist."
@@ -161,3 +164,9 @@
 
 /obj/item/clothing/head/helmet/expeditionary_corps
 	flags_inv = NONE // ШОБ ВОЛОСИКИ БЫЛО ВИДНО
+
+/obj/structure/closet/secure_closet/vanguard
+	name = "Vanguard locker"
+	req_access = list(ACCESS_GATEWAY, ACCESS_CENT_GENERAL)
+	icon = 'zov_modular_arkstation/modules/vanguard-revival/icons/obj/closet.dmi'
+	icon_state = "exp"
