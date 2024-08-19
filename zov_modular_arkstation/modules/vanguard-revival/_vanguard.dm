@@ -29,7 +29,8 @@
 	name = "Vanguard Operative"
 	jobtype = /datum/job/expeditionary_trooper
 
-	shoes = /obj/item/clothing/shoes/combat
+	glasses = /obj/item/clothing/glasses/sunglasses
+	shoes = /obj/item/clothing/shoes/combat/expeditionary_corps
 	ears = /obj/item/radio/headset/headset_sci
 	uniform = /obj/item/clothing/under/rank/expeditionary_corps
 
