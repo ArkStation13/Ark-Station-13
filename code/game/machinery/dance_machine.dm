@@ -1,3 +1,5 @@
+//ARK STATION EDIT - перенесено в modular_arkstation\_master_files\code\game\machinery\dance_machine.dm
+/*
 /obj/machinery/jukebox
 	name = "jukebox"
 	desc = "A classic music player."
@@ -6,7 +8,7 @@
 	base_icon_state = "jukebox"
 	verb_say = "states"
 	density = TRUE
-	req_access = null // ARK STATION EDIT - ORIGINAL: req_access = list(ACCESS_BAR)
+	req_access = list(ACCESS_BAR)
 	processing_flags = START_PROCESSING_MANUALLY
 	/// Cooldown between "Error" sound effects being played
 	COOLDOWN_DECLARE(jukebox_error_cd)
@@ -383,3 +385,4 @@
 /obj/machinery/jukebox/disco/proc/dance4_revert(mob/living/dancer, matrix/starting_matrix)
 	animate(dancer, transform = starting_matrix, time = 5, loop = 0)
 	REMOVE_TRAIT(dancer, TRAIT_DISCO_DANCER, REF(src))
+*/

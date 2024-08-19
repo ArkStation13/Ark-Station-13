@@ -82,6 +82,15 @@
 				accessory_message = " with [english_list(accessories)] attached"
 
 		. += "[t_He] [t_is] wearing [w_uniform.get_examine_string(user)][accessory_message]."
+	//ARK STATION EDIT - shirt
+	if(w_shirt && !undershirt_hidden() && !(w_shirt.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_is] wearing [w_shirt.get_examine_string(user)]."
+	//ARK STATION EDIT - bra
+	if(w_bra && !bra_hidden() && !(w_bra.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_is] wearing [w_bra.get_examine_string(user)]."
+	//ARK STATION EDIT - underwear
+	if(w_underwear && !underwear_hidden() && !(w_underwear.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_is] wearing [w_underwear.get_examine_string(user)]."
 	//head
 	if(head && !(obscured & ITEM_SLOT_HEAD) && !(head.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_is] wearing [head.get_examine_string(user)] on [t_his] head."
@@ -108,6 +117,10 @@
 		if(num_hands)
 			. += span_warning("[t_He] [t_has] [num_hands > 1 ? "" : "a "]blood-stained hand[num_hands > 1 ? "s" : ""]!")
 
+	//ARK STATION EDIT - wrists
+	if(wrists && !wrists_hidden() && !(wrists.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_is] wearing [wrists.get_examine_string(user)]."
+
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/restraints/handcuffs/cable))
@@ -122,6 +135,10 @@
 	//shoes
 	if(shoes && !(obscured & ITEM_SLOT_FEET)  && !(shoes.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_is] wearing [shoes.get_examine_string(user)] on [t_his] feet."
+
+	//ARK STATION EDIT - socks
+	if(w_socks && !socks_hidden() && !(w_socks.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_is] wearing [w_socks.get_examine_string(user)] on [t_his] feet."
 
 	//mask
 	if(wear_mask && !(obscured & ITEM_SLOT_MASK)  && !(wear_mask.item_flags & EXAMINE_SKIP))
@@ -140,8 +157,19 @@
 			. += "<span class='warning'><B>[t_His] eyes are bloodshot!</B></span>"
 
 	//ears
-	if(ears && !(obscured & ITEM_SLOT_EARS) && !(ears.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [ears.get_examine_string(user)] on [t_his] ears."
+	if(ears && !(obscured & ITEM_SLOT_EARS_LEFT) && !(ears.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_has] [ears.get_examine_string(user)] on [t_his] left ear." // extra inventory
+
+	//ARK STATION EDIT - ears extra
+	if(ears_extra && !(obscured & ITEM_SLOT_EARS_RIGHT) && !(ears_extra.item_flags & EXAMINE_SKIP))
+		. += "[t_He] [t_has] [ears_extra.get_examine_string(user)] on [t_his] right ear."
+
+	//ARK STATION EDIT - ears extra
+	//wearing two ear items makes you look like an idiot
+	if((istype(ears, /obj/item/radio/headset) && !(obscured & ITEM_SLOT_EARS_LEFT) && !(ears.item_flags & EXAMINE_SKIP)) && (istype(ears_extra, /obj/item/radio/headset) && !(obscured & ITEM_SLOT_EARS_RIGHT) && !(ears_extra.item_flags & EXAMINE_SKIP)))
+		. += span_warning("[t_He] looks quite tacky wearing both \an [ears.name] and \an [ears_extra.name] on [t_his] head.")
+
+	//
 
 	//ID
 	if(wear_id && !(wear_id.item_flags & EXAMINE_SKIP))
