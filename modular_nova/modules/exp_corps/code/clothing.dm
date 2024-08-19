@@ -172,10 +172,10 @@
 
 
 /datum/armor/vest_expeditionary_corps
-	melee = 30
-	bullet = 30
-	laser = 30
-	energy = 30
+	melee = 40
+	bullet = 40
+	laser = 40
+	energy = 40
 	bomb = 40
 	fire = 80
 	acid = 100
@@ -194,10 +194,10 @@
 	actions_types = list(/datum/action/item_action/toggle_nv_helmet)
 
 /datum/armor/helmet_expeditionary_corps
-	melee = 20
-	bullet = 20
-	laser = 20
-	energy = 20
+	melee = 40
+	bullet = 40
+	laser = 40
+	energy = 40
 	bomb = 30
 	fire = 80
 	acid = 100
