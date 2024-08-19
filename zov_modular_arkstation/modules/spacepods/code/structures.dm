@@ -64,7 +64,7 @@
 	shlang = new(src)
 
 /obj/item/shlang/examine(mob/user)
-	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
+	. += span_notice("Has [tank?.target_fuel] liters of the fuel in.")
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
@@ -136,7 +136,7 @@
 	if(!tank)
 		return
 	forceMove(tank)
-	tank.shlang_na_meste = TRUE
+	tank?.shlang_na_meste = TRUE
 	qdel(tank?.current_beam)
 
 /obj/item/shlang/proc/check_range()
@@ -153,9 +153,11 @@
 
 /obj/item/shlang/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(src, TRAIT_NO_STORAGE_INSERT, TRAIT_GENERIC) //stops shockpaddles from being inserted in BoH
-	if (!loc || !istype(loc, /obj/machinery/walltank)) //To avoid weird issues from admin spawns
+	ADD_TRAIT(src, TRAIT_NO_STORAGE_INSERT, TRAIT_GENERIC)
+	if (!loc || !istype(loc, /obj/machinery/walltank))
 		return INITIALIZE_HINT_QDEL
+	if(!tank)
+		return
 	tank = loc
 	update_appearance()
 
