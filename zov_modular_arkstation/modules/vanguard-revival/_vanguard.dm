@@ -225,11 +225,11 @@
 	)
 
 /datum/armor/mod_theme_exp
-	melee = 30
-	bullet = 30
-	laser = 30
-	energy = 30
-	bomb = 30
+	melee = 20
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 20
 	bio = 100
 	fire = 75
 	acid = 75
