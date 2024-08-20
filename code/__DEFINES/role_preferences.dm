@@ -138,6 +138,14 @@
 #define ROLE_CYBER_TAC "Cyber Tac"
 #define ROLE_NETGUARDIAN "NetGuardian Prime"
 
+// ARK EDIT ADDITION START
+#define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_VAMPIRICACCIDENT "Bloodsucker (Midround)"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker (Latejoin)"
+#define ROLE_MONSTERHUNTER "Monster Hunter"
+#define ROLE_VASSAL "Vassal"
+// ARK EDIT ADDITION END
+
 /// This defines the antagonists you can operate with in the settings.
 /// Keys are the antagonist, values are the number of days since the player's
 /// first connection in order to play.
