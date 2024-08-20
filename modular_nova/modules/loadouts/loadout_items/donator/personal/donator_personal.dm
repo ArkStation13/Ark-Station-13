@@ -555,20 +555,17 @@
 /datum/loadout_item/toys/CFBonnie
 	name = "Chunko Fop: Blue Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/bonnie
-	item_path = /obj/item/toy/plush/nova/donator/chunko/bonnie
-	donator_only = TRUE
+	// ARK STATION REMOVED: donator_only = TRUE
 
 /datum/loadout_item/toys/CFAndrew
 	name = "Chunko Fop: Green Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/andrew
-	item_path = /obj/item/toy/plush/nova/donator/chunko/andrew
-	donator_only = TRUE
+	// ARK STATION REMOVED: donator_only = TRUE
 
 /datum/loadout_item/toys/CFInessa
 	name = "Chunko Fop: Medical Bear Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/inessa
-	item_path = /obj/item/toy/plush/nova/donator/chunko/inessa
-	donator_only = TRUE
+	// ARK STATION REMOVED: donator_only = TRUE
 
 /datum/loadout_item/toys/plushie_chiara
 	name = "Commanding Fox Plushie"

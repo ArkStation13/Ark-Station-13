@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/ordinarylife_emma
+/obj/item/clothing/suit/ordinarylife_emma // ordinarylife
 	name = "\improper T-shirt with fox"
 	desc = "White T-shirt with Emma the fox on the chest."
 	icon_state = "emma_shirt"

@@ -175,11 +175,9 @@
 	icon_state = "raptor"
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sci
-	icon = 'zov_modular_arkstation/modules/spacepods/icons/pods/preview.dmi'
 	icon_state = "raptor_sci"
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sec
-	icon = 'zov_modular_arkstation/modules/spacepods/icons/pods/preview.dmi'
 	icon_state = "raptor_sec"
 
 // Standart //
@@ -195,17 +193,11 @@
 	var/preview_tip = /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview
 	// Fuel //
 	// Мнимая емкость с топливом // ЭТО ЕСЛИ ЧТО ЖИДКАЯ ПЛАЗМА
-	var/obj/item/reagent_containers/cup/beaker/large/benzobak/benzobak
+	var/obj/item/reagent_containers/cup/beaker/large/pod_fueltank/pod_fueltank
 	// Будет ли полным бак при спавне?
 	var/starting_fuel = FALSE
 	// Максимум топлива. МЕНЯТЬ НЕ ЭТУ ПЕРЕМЕННУЮ, А volume у бензобака. Но эту тоже меняйте. Чтобы она была равна Volume
 	var/max_fuel = 1200
-
-	// Math funcs //
-	// Разница
-	var/razn
-	// Сумма
-	var/plus
 
 	// Flags //
 	var/pod_flags = HAS_LIGHTS
@@ -265,18 +257,18 @@
 			return
 		// if(B.tank.target_fuel < B.tank.balance*10)
 		// 	return
-		if(benzobak.reagents.has_reagent(/datum/reagent/stable_plasma, max_fuel))
+		if(pod_fueltank.reagents.has_reagent(/datum/reagent/stable_plasma, max_fuel))
 			to_chat(user, span_warning("Your [name] is already full!"))
 			return
 		if(B.use_tool(src, user, 60))
 			B.tank.balance -= B.tank.target_fuel
-			benzobak.reagents.add_reagent(/datum/reagent/stable_plasma, B.tank.target_fuel)
+			pod_fueltank.reagents.add_reagent(/datum/reagent/stable_plasma, B.tank.target_fuel)
 			user.visible_message(span_notice("[user] refills [user.p_their()] [name]."), span_notice("You refill [src]."))
 			playsound(src, 'sound/effects/refill.ogg', 40, TRUE)
 			return
 	return ..()
 
-/obj/item/reagent_containers/cup/beaker/large/benzobak
+/obj/item/reagent_containers/cup/beaker/large/pod_fueltank
 	name = "Fuel Tank"
 	desc = "A tank designed for vehicles that can hold 1200 units of liquid."
 	volume = 1200
@@ -284,12 +276,12 @@
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/Initialize(mapload)
 	. = ..()
 	transform = transform.Translate(-32, -32)
-	benzobak = new(src)
-	benzobak.create_reagents(max_fuel)
+	pod_fueltank = new(src)
+	pod_fueltank.create_reagents(max_fuel)
 	pod_flags &= ~LIGHTS_ON
 	set_light_on(pod_flags & LIGHTS_ON)
 	if(starting_fuel)
-		benzobak.reagents.add_reagent(/datum/reagent/stable_plasma, max_fuel)
+		pod_fueltank.reagents.add_reagent(/datum/reagent/stable_plasma, max_fuel)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/Destroy()
 	. = ..()
@@ -303,7 +295,7 @@
 	return max_fuel
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/get_fuel()
-	return benzobak.reagents.get_reagent_amount(/datum/reagent/stable_plasma)
+	return pod_fueltank.reagents.get_reagent_amount(/datum/reagent/stable_plasma)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/mob_enter(mob/living/M)
 	if(!driver)
@@ -343,14 +335,15 @@
 		stop_engine()
 		icon_state = base_icon_state + "-off"
 	dir = cached_direction
-	check_boost()
 	calc_acceleration()
 	calc_vector(cached_direction)
-	addtimer(CALLBACK(src, PROC_REF(toplivo_minus)), 1 SECONDS)
+	// . = try_step_multiz(cached_direction)
+	if(pod_fueltank.reagents.has_reagent(/datum/reagent/stable_plasma, 0.1))
+		fuel_waste()
 
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/toplivo_minus()
-	if(benzobak.reagents.has_reagent(/datum/reagent/fuel, 0.1))
-		benzobak.reagents.remove_reagent(/datum/reagent/fuel, 0.1)
+/obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/fuel_waste()
+	if(prob(50))
+		pod_fueltank.reagents.remove_reagent(/datum/reagent/stable_plasma, 0.1)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/start_engine()
 	if(dead_check())
@@ -431,8 +424,8 @@
 		ui_view.display_to(user)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/create_pod_preview_view(mob/user)
-	ui_view = new(null, preview_tip)
-	ui_view.generate_view("space_pod_preview_[REF(ui_view)]")
+	ui_view = new(src, preview_tip)
+	ui_view.generate_view("space_pod_preview_[REF(src)]")
 	ui_view.display_to(user)
 
 	return ui_view
@@ -485,7 +478,7 @@
 	data["name"] = name
 	data["integrity"] = atom_integrity
 	data["integrity_max"] = max_integrity
-	data["power_level"] = benzobak.reagents.total_volume
+	data["power_level"] = pod_fueltank.reagents.total_volume
 	data["power_max"] = max_fuel
 	data["mecha_flags"] = pod_flags
 
