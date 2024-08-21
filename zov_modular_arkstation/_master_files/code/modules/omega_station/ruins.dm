@@ -1,3 +1,9 @@
+// Budget
+/datum/config_entry/number/omega_budget
+	default = 90
+	integer = FALSE
+	min_val = 0
+
 // Spawn System
 /datum/controller/subsystem/mapping/setup_ruins()
 	..()
