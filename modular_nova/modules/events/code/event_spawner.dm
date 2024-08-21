@@ -99,12 +99,12 @@
 
 	//Override headset here
 	if(headset_override)
-		var/obj/item/headset_slot = H.get_item_by_slot(ITEM_SLOT_EARS_LEFT) || H.get_item_by_slot(ITEM_SLOT_EARS_RIGHT) // ARK STATION EDIT - Extra Inventory
+		var/obj/item/headset_slot = H.get_item_by_slot(ITEM_SLOT_EARS)
 		if(headset_slot)
 			qdel(headset_slot)
 		var/obj/item/new_headset = new headset_override()
 		if(new_headset)
-			if(!H.equip_to_slot_if_possible(new_headset, ITEM_SLOT_EARS_LEFT, disable_warning = TRUE, bypass_equip_delay_self = TRUE)) // ARK STATION EDIT - Extra Inventory
+			if(!H.equip_to_slot_if_possible(new_headset, ITEM_SLOT_EARS, disable_warning = TRUE, bypass_equip_delay_self = TRUE))
 				new_headset.forceMove(get_turf(H))
 
 	var/obj/item/back_item

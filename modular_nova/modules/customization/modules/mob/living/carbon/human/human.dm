@@ -116,7 +116,6 @@
 			underwear_visibility = UNDERWEAR_HIDE_ALL
 
 	update_body()
-	regenerate_icons() // ARK STATION EDIT - Extra Inventory
 
 /mob/living/carbon/human/revive(full_heal_flags = NONE, excess_healing = 0, force_grab_ghost = FALSE)
 	. = ..()
