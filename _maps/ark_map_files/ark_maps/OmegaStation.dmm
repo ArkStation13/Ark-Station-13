@@ -484,10 +484,6 @@
 	pixel_y = 34;
 	req_access = list("rd")
 	},
-/obj/machinery/computer/security/telescreen/rd{
-	pixel_x = 31;
-	pixel_y = 30
-	},
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
@@ -1109,7 +1105,6 @@
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high/empty,
 /turf/open/floor/iron/smooth_edge,
 /area/station/engineering)
 "bCq" = (
@@ -1766,10 +1761,8 @@
 /turf/open/floor/iron/half,
 /area/station/hallway)
 "cxd" = (
-/obj/machinery/chem_dispenser{
-	layer = 2.7
-	},
 /obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/chem_dispenser,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "cxl" = (
@@ -2594,9 +2587,7 @@
 	dir = 6
 	},
 /obj/structure/table/wood/fancy/green,
-/obj/item/paper_bin/carbon{
-	layer = 2.9
-	},
+/obj/item/paper_bin/carbon,
 /turf/open/floor/carpet/green,
 /area/station/command/heads_quarters/nt_rep)
 "dIZ" = (
@@ -2799,12 +2790,9 @@
 /turf/open/floor/iron/dark,
 /area/station/science)
 "dVM" = (
-/obj/machinery/computer/security/telescreen/prison{
-	dir = 1;
-	pixel_y = -27
-	},
 /obj/structure/rack,
 /obj/item/storage/briefcase,
+/obj/machinery/computer/security/telescreen/prison/directional/south,
 /turf/open/floor/wood,
 /area/station/service/lawoffice)
 "dWl" = (
@@ -2998,15 +2986,9 @@
 /turf/open/floor/grass,
 /area/station/engineering)
 "emz" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring the engine.";
-	dir = 8;
-	name = "Engine Monitor";
-	network = list("engine");
-	pixel_x = 32
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/security/telescreen/engine/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "enR" = (
@@ -3604,7 +3586,6 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 1
 	},
-/obj/item/clothing/mask/cigarette/pipe,
 /turf/open/floor/iron,
 /area/station/hallway)
 "fhz" = (
@@ -4444,7 +4425,6 @@
 	pixel_y = 4
 	},
 /obj/structure/table/glass,
-/obj/item/stock_parts/cell/high,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted{
 	dir = 8
@@ -4513,17 +4493,15 @@
 	dir = 8
 	},
 /obj/machinery/button/door/directional/west{
-	id = "QMLoaddoor2";
-	layer = 4;
+	id = "QMLoaddoor";
 	name = "Loading Doors";
-	pixel_y = 8;
+	pixel_y = -8;
 	req_access = list("cargo")
 	},
 /obj/machinery/button/door/directional/west{
-	id = "QMLoaddoor";
-	layer = 4;
+	id = "QMLoaddoor2";
 	name = "Loading Doors";
-	pixel_y = -8;
+	pixel_y = 8;
 	req_access = list("cargo")
 	},
 /turf/open/floor/iron/smooth_edge{
@@ -6131,7 +6109,6 @@
 "jas" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
 /obj/item/rcl/pre_loaded,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -6975,7 +6952,6 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/electronics/airlock,
 /obj/item/electronics/airlock,
-/obj/item/stock_parts/cell/high,
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 30
 	},
@@ -7801,7 +7777,6 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/clothing/mask/cigarette/cigar,
 /obj/item/reagent_containers/cup/glass/flask/gold,
 /turf/open/floor/carpet,
 /area/station/command/bridge)
@@ -8787,15 +8762,6 @@
 /area/station/hallway)
 "nPr" = (
 /obj/structure/table/reinforced,
-/obj/item/stock_parts/cell/high{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/item/stock_parts/cell/high{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/stock_parts/cell/high,
 /obj/machinery/cell_charger,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -9777,16 +9743,11 @@
 /turf/open/floor/engine,
 /area/station/engineering)
 "pFq" = (
-/obj/machinery/computer/security/telescreen{
-	dir = 8;
-	name = "Telecomms Camera Monitor";
-	network = list("tcomms");
-	pixel_x = 26
-	},
 /obj/machinery/computer/telecomms/monitor{
 	dir = 8;
 	network = "tcommsat"
 	},
+/obj/machinery/computer/security/telescreen/tcomms/directional/east,
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "pFs" = (
@@ -10684,9 +10645,6 @@
 /obj/item/aicard,
 /obj/item/pai_card,
 /obj/item/circuitboard/aicore,
-/obj/machinery/keycard_auth/directional/north{
-	pixel_x = -5
-	},
 /obj/machinery/button/door/directional/north{
 	id = "xeno_blastdoor";
 	name = "Xenobiology Containment Control";
@@ -10948,7 +10906,6 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell,
 /turf/open/floor/iron/small,
 /area/station/science)
 "ruZ" = (
@@ -11681,7 +11638,6 @@
 /obj/machinery/cell_charger{
 	pixel_y = 3
 	},
-/obj/item/stock_parts/cell/high,
 /turf/open/floor/iron/smooth_edge{
 	dir = 1
 	},
@@ -12210,6 +12166,7 @@
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/machinery/computer/security/telescreen/rd/directional/north,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
 "uhq" = (
@@ -12266,12 +12223,9 @@
 /turf/open/floor/carpet/black,
 /area/station/commons/dorms)
 "umC" = (
-/obj/machinery/computer/security/telescreen/ce{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/machinery/pdapainter/engineering,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/security/telescreen/ce/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "unU" = (
@@ -13091,7 +13045,6 @@
 	name = "Poppy's bed"
 	},
 /obj/machinery/firealarm/directional/south,
-/mob/living/simple_animal/pet/poppy,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/smooth,
 /area/station/engineering)
@@ -14146,11 +14099,6 @@
 	},
 /turf/open/floor/iron/smooth,
 /area/station/cargo)
-"yeN" = (
-/obj/machinery/keycard_auth/directional/west,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/station/command/heads_quarters/ce)
 "yfT" = (
 /obj/structure/sign/warning/secure_area/directional/east,
 /turf/open/floor/plating,
@@ -185259,7 +185207,7 @@ wNO
 wNO
 vIg
 vWd
-yeN
+tlF
 iua
 keS
 vtm
@@ -188058,7 +188006,7 @@ gkT
 gkT
 gHD
 mry
-gkT
+sCa
 mry
 ocY
 gkT
@@ -192408,7 +192356,7 @@ lyg
 lyg
 lyg
 lyg
-wUj
+lyg
 otK
 kSE
 wdI
@@ -192665,7 +192613,7 @@ lyg
 hac
 oNa
 ceE
-wUj
+lyg
 dWl
 kSE
 qAV
@@ -192922,7 +192870,7 @@ lyg
 cPq
 plu
 ygw
-wUj
+lyg
 jbU
 kSE
 qAV
@@ -193179,7 +193127,7 @@ lyg
 cPq
 plu
 elr
-wUj
+lyg
 hgK
 kSE
 qAV
@@ -193436,7 +193384,7 @@ lyg
 ong
 eZz
 iAn
-wUj
+lyg
 sra
 kSE
 qAV
@@ -193693,7 +193641,7 @@ lyg
 sJH
 eZz
 cmZ
-wUj
+lyg
 cEi
 kSE
 qAV
@@ -193950,7 +193898,7 @@ lyg
 tRd
 hDr
 tRd
-wUj
+lyg
 pxQ
 kSE
 qAV
@@ -194207,7 +194155,7 @@ mLO
 mLO
 eZz
 bUW
-wUj
+lyg
 dWl
 kSE
 qAV
@@ -194464,7 +194412,7 @@ nia
 sIO
 ljL
 beQ
-wUj
+lyg
 sry
 rya
 pIO
@@ -194721,7 +194669,7 @@ irQ
 lyg
 cxY
 lyg
-wUj
+lyg
 hcg
 nuI
 cWX
