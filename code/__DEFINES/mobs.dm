@@ -689,58 +689,48 @@ GLOBAL_LIST_INIT(human_heights_to_offsets, list(
 /// Total number of layers for mob overlays
 /// KEEP THIS UP-TO-DATE OR SHIT WILL BREAK
 /// Also consider updating layers_to_offset
-#define TOTAL_LAYERS 47 // NOVA EDIT CHANGE - ORIGINAL: 35 // ARK STATION EDIT - ORIGINAL: 41
+#define TOTAL_LAYERS 41 // NOVA EDIT CHANGE - ORIGINAL: 35
 /// Mutations layer - Tk headglows, cold resistance glow, etc
-#define MUTATIONS_LAYER 47 // NOVA EDIT CHANGE - ORIGINAL: 35 // ARK STATION EDIT - ORIGINAL: 41
+#define MUTATIONS_LAYER 41 // NOVA EDIT CHANGE - ORIGINAL: 35
 /// Mutantrace features (tail when looking south) that must appear behind the body parts
-#define BODY_BEHIND_LAYER 46 // NOVA EDIT CHANGE - ORIGINAL: 34 // ARK STATION EDIT - ORIGINAL: 40
+#define BODY_BEHIND_LAYER 40 // NOVA EDIT CHANGE - ORIGINAL: 34
 /// Layer for bodyparts that should appear behind every other bodypart - Mostly, legs when facing WEST or EAST
-#define BODYPARTS_LOW_LAYER 45 // NOVA EDIT CHANGE - ORIGINAL: 33 // ARK STATION EDIT - ORIGINAL: 39
+#define BODYPARTS_LOW_LAYER 39 // NOVA EDIT CHANGE - ORIGINAL: 33
 /// Layer for most bodyparts, appears above BODYPARTS_LOW_LAYER and below BODYPARTS_HIGH_LAYER
-#define BODYPARTS_LAYER 44 // NOVA EDIT CHANGE - ORIGINAL: 32 // ARK STATION EDIT - ORIGINAL: 38
+#define BODYPARTS_LAYER 38 // NOVA EDIT CHANGE - ORIGINAL: 32
 /// Mutantrace features (snout, body markings) that must appear above the body parts
-#define BODY_ADJ_LAYER 43 // NOVA EDIT CHANGE - ORIGINAL: 31 // ARK STATION EDIT - ORIGINAL: 37
+#define BODY_ADJ_LAYER 37 // NOVA EDIT CHANGE - ORIGINAL: 31
 /// Underwear, undershirts, socks, eyes, lips(makeup)
-#define BODY_LAYER 42 // NOVA EDIT CHANGE - ORIGINAL: 30 // ARK STATION EDIT - ORIGINAL: 36
+#define BODY_LAYER 36 // NOVA EDIT CHANGE - ORIGINAL: 30
 /// Mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
-#define FRONT_MUTATIONS_LAYER 41 // NOVA EDIT CHANGE - ORIGINAL: 29  // ARK STATION EDIT - ORIGINAL: 35
+#define FRONT_MUTATIONS_LAYER 35 // NOVA EDIT CHANGE - ORIGINAL: 29
 /// Damage indicators (cuts and burns)
-#define DAMAGE_LAYER 40 // NOVA EDIT CHANGE - ORIGINAL: 28 // ARK STATION EDIT - ORIGINAL: 34
+#define DAMAGE_LAYER 34 // NOVA EDIT CHANGE - ORIGINAL: 28
 // NOVA EDIT ADDITION START
 /// This layer is used for things that shouldn't be over clothes, but should be over mutations
-#define BODY_FRONT_UNDER_CLOTHES 39 // ARK STATION EDIT - ORIGINAL: 33
+#define BODY_FRONT_UNDER_CLOTHES 33
 // NOVA EDIT ADDITION END
-// ARK STATION EDIT undies
-#define UNDERWEAR_LAYER			38
-#define SOCKS_LAYER				37
-#define BRA_LAYER				36
-#define SHIRT_LAYER				35
-// ARK STATION EDIT END
 /// Jumpsuit clothing layer
-#define UNIFORM_LAYER 34 // NOVA EDIT CHANGE - ORIGINAL: 27 // ARK STATION EDIT - ORIGINAL: 32
+#define UNIFORM_LAYER 32 // NOVA EDIT CHANGE - ORIGINAL: 27
 // NOVA EDIT ADDITION BEGIN - cursed layers under clothing
-#define ANUS_LAYER 33 // ARK STATION EDIT - ORIGINAL: 31
-#define VAGINA_LAYER 32 // ARK STATION EDIT - ORIGINAL: 30
-#define PENIS_LAYER 31 // ARK STATION EDIT - ORIGINAL: 29
-#define NIPPLES_LAYER 30 // ARK STATION EDIT - ORIGINAL: 28
-#define BANDAGE_LAYER 29 // ARK STATION EDIT - ORIGINAL: 27
+#define ANUS_LAYER 31
+#define VAGINA_LAYER 30
+#define PENIS_LAYER 29
+#define NIPPLES_LAYER 28
+#define BANDAGE_LAYER 27
 //NOVA EDIT ADDITION END
 /// ID card layer
-#define ID_LAYER 28 // ARK STATION EDIT - ORIGINAL: 26
+#define ID_LAYER 26
 /// ID card layer (might be deprecated)
-#define ID_CARD_LAYER 27 // ARK STATION EDIT - ORIGINAL: 25
+#define ID_CARD_LAYER 25
 /// Layer for bodyparts that should appear above every other bodypart - Currently only used for hands
-#define BODYPARTS_HIGH_LAYER 26  // ARK STATION EDIT - ORIGINAL: 24
+#define BODYPARTS_HIGH_LAYER 24
 /// Gloves layer
-#define GLOVES_LAYER 25 // ARK STATION EDIT  - ORIGINAL: 23
-/// Wrists layer
-#define WRISTS_LAYER 24 // ARK STATION EDIT: wrists layer
+#define GLOVES_LAYER 23
 /// Shoes layer
-#define SHOES_LAYER 23 // ARK STATION EDIT - ORIGINAL: 22
+#define SHOES_LAYER 22
 /// Layer for masks that are worn below ears and eyes (like Balaclavas) (layers below hair, use flagsinv=HIDEHAIR as needed)
-#define LOW_FACEMASK_LAYER 22 // ARK STATION EDIT - ORIGINAL: 21
-/// ARK STATION EDIT - Extra ears layer
-#define EARS_EXTRA_LAYER 21
+#define LOW_FACEMASK_LAYER 21
 /// Ears layer (Spessmen have ears? Wow)
 #define EARS_LAYER 20
 /// Layer for neck apperal that should appear below the suit slot (like neckties)

@@ -1,4 +1,4 @@
-/obj/item/clothing/under/syndicate/bloodred/no_armor // Повелитель Мух
+/obj/item/clothing/under/syndicate/bloodred/no_armor // lordoftheflie
 	name = "blood-red sneaksuit"
 	desc = "It still counts as stealth if there are no witnesses."
 	icon_state = "bloodred_pajamas"

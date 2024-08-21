@@ -15,7 +15,7 @@
 	var/shlang_na_meste = TRUE
 	var/obj/item/shlang/shlang
 	var/light_mask = "spacegas-light-mask"
-	//var/datum/beam/current_beam
+	var/datum/beam/current_beam
 
 /obj/effect/ebeam/fuel_hose
 	name = "fuel hose"
@@ -44,8 +44,8 @@
 
 /obj/machinery/walltank/Destroy()
 	. = ..()
-	//qdel(shlang)
-	//qdel(current_beam)
+	qdel(shlang)
+	qdel(current_beam)
 
 /obj/item/shlang
 	name = "fuel hose"
@@ -59,16 +59,16 @@
 	w_class = WEIGHT_CLASS_BULKY
 	var/obj/machinery/walltank/tank
 
-/obj/machinery/walltank/Initialize(mapload) //starts without a cell for rnd
+/obj/machinery/walltank/Initialize(mapload)
 	. = ..()
-	//shlang = new(src)
+	shlang = new(src)
 
 /obj/item/shlang/examine(mob/user)
-	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
+	. += span_notice("Has [tank?.target_fuel] liters of the fuel in.")
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
-	//qdel(tank.current_beam)
+	qdel(tank?.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
@@ -129,15 +129,15 @@
 		return
 	user.put_in_hands(shlang)
 	shlang_na_meste = FALSE
-	//current_beam = new(user, src, icon = 'zov_modular_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
-	//INVOKE_ASYNC(current_beam, TYPE_PROC_REF(/datum/beam, Start))
+	current_beam = new(user, src, icon = 'zov_modular_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
+	INVOKE_ASYNC(current_beam, TYPE_PROC_REF(/datum/beam, Start))
 
 /obj/item/shlang/proc/snap_back()
 	if(!tank)
 		return
 	forceMove(tank)
-	tank.shlang_na_meste = TRUE
-	//qdel(tank.current_beam)
+	tank?.shlang_na_meste = TRUE
+	qdel(tank?.current_beam)
 
 /obj/item/shlang/proc/check_range()
 	SIGNAL_HANDLER
@@ -153,9 +153,11 @@
 
 /obj/item/shlang/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(src, TRAIT_NO_STORAGE_INSERT, TRAIT_GENERIC) //stops shockpaddles from being inserted in BoH
-	if (!loc || !istype(loc, /obj/machinery/walltank)) //To avoid weird issues from admin spawns
+	ADD_TRAIT(src, TRAIT_NO_STORAGE_INSERT, TRAIT_GENERIC)
+	if (!loc || !istype(loc, /obj/machinery/walltank))
 		return INITIALIZE_HINT_QDEL
+	if(!tank)
+		return
 	tank = loc
 	update_appearance()
 

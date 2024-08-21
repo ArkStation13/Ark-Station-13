@@ -17,21 +17,11 @@
 	if(usr.hud_used.inventory_shown && targetmob.hud_used)
 		usr.hud_used.inventory_shown = FALSE
 		usr.client.screen -= targetmob.hud_used.toggleable_inventory
-		// ARK STATION EDIT - Extra inventory
-		usr.client.screen -= targetmob.hud_used.extra_inventory
-		//
 	else
 		usr.hud_used.inventory_shown = TRUE
 		usr.client.screen += targetmob.hud_used.toggleable_inventory
-		// ARK STATION EDIT - Extra inventory
-		if(usr.hud_used.extra_shown)
-			usr.client.screen += targetmob.hud_used.extra_inventory
-		//
 
 	targetmob.hud_used.hidden_inventory_update(usr)
-	// ARK STATION EDIT - Extra inventory
-	targetmob.hud_used.extra_inventory_update(usr)
-	//
 
 /atom/movable/screen/human/equip
 	name = "equip"
@@ -230,12 +220,12 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "left ear" // ARK STATION EDIT - Extra inventory
+	inv_box.name = "ears"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "ears"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_ears
-	inv_box.slot_id = ITEM_SLOT_EARS_LEFT // ARK STATION EDIT - Extra inventory
+	inv_box.slot_id = ITEM_SLOT_EARS
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
@@ -325,8 +315,7 @@
 	if(!istype(H) || !H.dna.species)
 		return
 	var/datum/species/S = H.dna.species
-	// ARK STATION EDIT - Extra inventory
-	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory + extra_inventory))
+	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory))
 		if(inv.slot_id)
 			if(S.no_equip_flags & inv.slot_id)
 				inv.alpha = 128

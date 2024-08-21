@@ -93,12 +93,6 @@ const SLOTS: Record<
     additionalComponent?: JSX.Element;
   }
 > = {
-  socks: {
-    displayName: 'socks',
-    gridSpot: getGridSpotKey([0, 0]),
-    image: 'inventory-socks.png',
-  },
-
   eyes: {
     displayName: 'eyewear',
     gridSpot: getGridSpotKey([0, 1]),
@@ -109,30 +103,6 @@ const SLOTS: Record<
     displayName: 'headwear',
     gridSpot: getGridSpotKey([0, 2]),
     image: 'inventory-head.png',
-  },
-
-  ears_extra: {
-    displayName: 'right ear',
-    gridSpot: getGridSpotKey([0, 3]),
-    image: 'inventory-ears_extra.png',
-  },
-
-  undershirt: {
-    displayName: 'shirt',
-    gridSpot: getGridSpotKey([0, 4]),
-    image: 'inventory-undershirt.png',
-  },
-
-  underwear: {
-    displayName: 'underwear',
-    gridSpot: getGridSpotKey([0, 5]),
-    image: 'inventory-underwear.png',
-  },
-
-  bra: {
-    displayName: 'bra',
-    gridSpot: getGridSpotKey([1, 0]),
-    image: 'inventory-bra.png',
   },
 
   neck: {
@@ -154,7 +124,7 @@ const SLOTS: Record<
   },
 
   ears: {
-    displayName: 'left ear',
+    displayName: 'earwear',
     gridSpot: getGridSpotKey([1, 3]),
     image: 'inventory-ears.png',
   },
@@ -211,12 +181,6 @@ const SLOTS: Record<
     displayName: 'shoes',
     gridSpot: getGridSpotKey([3, 2]),
     image: 'inventory-shoes.png',
-  },
-
-  wrists: {
-    displayName: 'wrists',
-    gridSpot: getGridSpotKey([3, 3]),
-    image: 'inventory-wrists.png',
   },
 
   suit_storage: {

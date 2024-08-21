@@ -187,9 +187,9 @@
 		if(REQUIRE_GENITAL_ANY)
 			return TRUE
 		if(REQUIRE_GENITAL_EXPOSED)
-			return !get_item_by_slot(ITEM_SLOT_EARS_LEFT) // ARK STATION EDIT - Extra Inventory
+			return !get_item_by_slot(ITEM_SLOT_EARS)
 		if(REQUIRE_GENITAL_UNEXPOSED)
-			return get_item_by_slot(ITEM_SLOT_EARS_LEFT) // ARK STATION EDIT - Extra Inventory
+			return get_item_by_slot(ITEM_SLOT_EARS)
 		else
 			return TRUE
 
