@@ -368,6 +368,16 @@ const GeneralActions = () => {
           >
             Send To Lobby
           </Button.Confirm>
+          <Button.Confirm
+            width="100%"
+            height="100%"
+            color="violet"
+            icon="skull"
+            disabled={!mob_type.includes('/mob/living/carbon')}
+            onClick={() => act('sendtovoid')}
+          >
+            SEND TO VOID
+          </Button.Confirm>
         </Flex>
       </Section>
       <Section title="Control">
