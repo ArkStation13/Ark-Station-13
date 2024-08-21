@@ -100,15 +100,12 @@ GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
 		triggerer.clear_fullscreen("screamers", rand(15, 60))
 
 // Area
-/area/misc/void
+/area/centcom/void
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
-	// static_lighting = FALSE
-	// base_lighting_alpha = 255
 	name = "void"
-	icon_state = "test_room"
 	ambient_buzz = 'zov_modular_arkstation/modules/void/void.ogg'
-	ambient_buzz_vol = 120
+	ambient_buzz_vol = 30
 
 // Void Light
 /obj/effect/light_emitter/void
@@ -262,3 +259,20 @@ GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
 		return FALSE
 
 	return can_see(source, dinner, radius)
+
+// Cameras
+/obj/machinery/computer/camera_advanced/void_cam
+	name = "Strange Camera Control Console"
+	networks = list("void")
+	circuit = /obj/item/circuitboard/computer/void_cam
+
+/obj/item/circuitboard/computer/void_cam
+	name = "Strange Camera Control Console"
+	build_path = /obj/machinery/computer/camera_advanced/void_cam
+
+/obj/machinery/camera/xray/void
+	name = "strange camera"
+	desc = "Why is it here?"
+	network = list("void")
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray/void, 0)
