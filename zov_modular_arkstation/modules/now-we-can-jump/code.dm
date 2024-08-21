@@ -17,6 +17,7 @@
 			return
 
 	if(prob(0.01))
+		user.send_to_void()
 		user.emote("agony")
 		user.overlay_fullscreen("flash_void", /atom/movable/screen/fullscreen/flash/black)
 		sleep(6 SECONDS)
