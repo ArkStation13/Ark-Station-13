@@ -1,5 +1,3 @@
-
-
 /datum/emote/living/ruffle
 	key = "ruffle"
 	key_third_person = "ruffles"

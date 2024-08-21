@@ -738,18 +738,3 @@
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/science_wardrobe
 	payment_department = ACCOUNT_SCI
-
-/obj/machinery/vending/clothing/Initialize(mapload)
-	var/list/underwears = list()
-	for(var/obj/item/clothing/underwear/briefs/briefs in typesof(/obj/item/clothing/underwear/briefs))
-		underwears[briefs] = 5
-
-	product_categories += list(
-		list(
-			"name" = "Underwear",
-			"icon" = "socks",
-			"products" = underwears
-		),
-	)
-
-	return ..()

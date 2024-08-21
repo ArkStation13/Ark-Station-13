@@ -32,7 +32,7 @@
 /// Glasses slot
 #define ITEM_SLOT_EYES (1<<3)
 /// Ear slot (radios, earmuffs)
-#define ITEM_SLOT_EARS_LEFT (1<<4)  // ARK STATION EDIT: EXTRA INVENTORY PORT
+#define ITEM_SLOT_EARS (1<<4)
 /// Mask slot
 #define ITEM_SLOT_MASK (1<<5)
 /// Head slot (helmets, hats, etc.)
@@ -65,7 +65,7 @@
 #define ITEM_SLOT_LEGCUFFED (1<<19)
 
 /// Total amount of slots
-#define SLOTS_AMT 26 // Keep this up to date!  // ARK STATION EDIT: EXTRA INVENTORY PORT
+#define SLOTS_AMT 20 // Keep this up to date!
 
 ///Inventory slots that can be blacklisted by a species from being equipped into
 DEFINE_BITFIELD(no_equip_flags, list(
@@ -73,7 +73,7 @@ DEFINE_BITFIELD(no_equip_flags, list(
 	"JUMPSUIT" = ITEM_SLOT_ICLOTHING,
 	"GLOVES" = ITEM_SLOT_GLOVES,
 	"GLASSES" = ITEM_SLOT_EYES,
-	"EARPIECES" = ITEM_SLOT_EARS_LEFT,
+	"EARPIECES" = ITEM_SLOT_EARS,
 	"MASKS" = ITEM_SLOT_MASK,
 	"HATS" = ITEM_SLOT_HEAD,
 	"SHOES" = ITEM_SLOT_FEET,
@@ -82,8 +82,7 @@ DEFINE_BITFIELD(no_equip_flags, list(
 ))
 
 //SLOT GROUP HELPERS
-#define ITEM_SLOT_POCKETS (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET) // ARK STATION EDIT: EXTRA INVENTORY PORT
-#define ITEM_SLOT_EARS (ITEM_SLOT_EARS_LEFT|ITEM_SLOT_EARS_RIGHT)
+#define ITEM_SLOT_POCKETS (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET)
 /// Slots that are physically on you
 #define ITEM_SLOT_ON_BODY (ITEM_SLOT_ICLOTHING | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_EYES | ITEM_SLOT_EARS | \
 	ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_BACK | ITEM_SLOT_NECK )
@@ -122,13 +121,6 @@ DEFINE_BITFIELD(no_equip_flags, list(
 /// If this has our taur variant, do we hide our taur part?
 #define HIDETAUR (1<<19)
 //NOVA EDIT ADDITION END
-
-//ARK STATION EDIT START
-/// hides underwear, socks and shirt
-#define HIDEUNDERWEAR	(1<<19)
-/// hides wrists
-#define HIDEWRISTS		(1<<20)
-// ARK STATION EDIT END
 
 //bitflags for clothing coverage - also used for limbs
 #define HEAD (1<<0)

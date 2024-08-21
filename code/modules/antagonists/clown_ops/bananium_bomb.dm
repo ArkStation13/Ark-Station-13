@@ -55,12 +55,6 @@
 		var/obj/item/clothing/clown_mask = new /obj/item/clothing/mask/gas/clown_hat(clowned_on)
 		ADD_TRAIT(clown_mask, TRAIT_NODROP, CLOWN_NUKE_TRAIT)
 		clowned_on.equip_to_slot_or_del(clown_mask, ITEM_SLOT_MASK)
-	// ARK STATION EDIT - Extra inventory
-	if(!clowned_on.w_shirt || clowned_on.dropItemToGround(clowned_on.w_shirt))
-		var/obj/item/clothing/clown_undershirt = new /obj/item/clothing/underwear/shirt/clownshirt(clowned_on)
-		ADD_TRAIT(clown_undershirt, TRAIT_NODROP, CLOWN_NUKE_TRAIT)
-		clowned_on.equip_to_slot_or_del(clown_undershirt, ITEM_SLOT_SHIRT)
-	//
 
 	clowned_on.dna.add_mutation(/datum/mutation/human/clumsy)
 	clowned_on.gain_trauma(/datum/brain_trauma/mild/phobia/clowns, TRAUMA_RESILIENCE_LOBOTOMY) //MWA HA HA
