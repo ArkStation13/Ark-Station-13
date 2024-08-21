@@ -350,7 +350,7 @@
 	var/datum/antagonist/obsessed/creeper = owner.has_antag_datum(/datum/antagonist/obsessed)
 	if(target?.current && creeper)
 		creeper.trauma.attachedobsessedobj = src
-		explanation_text = "Проверил [DisplayTimeText(timer)] вокруг [target.name], пока он жив."
+		explanation_text = "Проведи [DisplayTimeText(timer)] вокруг [target.name], пока он жив."
 	else
 		explanation_text = "Свободное задание"
 
