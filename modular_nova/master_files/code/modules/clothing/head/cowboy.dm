@@ -52,7 +52,7 @@
 /obj/item/clothing/head/cowboy/nova/cattleman
 	name = "cattleman hat"
 	desc = "A hat with a creased brim and a tall crown, intended to be pushed down further on the head to stay on in harsh weather. Not as relevant in space but still comes in handy."
-	icon_state = "cattleman_base" // ARK STATION FIX
+	icon_state = "cattleman"
 	greyscale_colors = "#725443#B2977C"
 	greyscale_config = /datum/greyscale_config/cowboy_cattleman
 	greyscale_config_worn = /datum/greyscale_config/cowboy_cattleman/worn
