@@ -299,7 +299,7 @@ There are several things that need to be remembered:
 		return
 
 	if(client && hud_used)
-		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_EARS_LEFT) + 1] // ARK STATION EDIT - Extra inventory
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_EARS) + 1]
 		inv.update_icon()
 
 	if(ears)
@@ -309,7 +309,7 @@ There are several things that need to be remembered:
 		if(update_obscured)
 			update_obscured_slots(worn_item.flags_inv)
 
-		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_EARS_LEFT) // ARK STATION EDIT - Extra inventory
+		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_EARS)
 			return
 
 		var/icon_file = 'icons/mob/clothing/ears.dmi'

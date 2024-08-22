@@ -269,6 +269,11 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 		if ("cryo")
 			targetMob.vv_send_cryo()
 
+		if ("sendtovoid")
+			if(iscarbon(targetMob))
+				var/mob/living/carbon/newmob = targetMob
+				newmob.send_to_void()
+
 		if ("force_say")
 			targetMob.say(params["to_say"], forced="admin")
 

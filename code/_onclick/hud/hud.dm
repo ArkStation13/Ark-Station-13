@@ -258,9 +258,6 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	hand_slots.Cut()
 
 	QDEL_LIST(toggleable_inventory)
-	// ARK STATION EDIT - Extra inventory
-	QDEL_LIST(extra_inventory)
-	//
 	QDEL_LIST(hotkeybuttons)
 	throw_icon = null
 	QDEL_LIST(infodisplay)
@@ -366,10 +363,6 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen += static_inventory
 			if(toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.inventory_shown)
 				screenmob.client.screen += toggleable_inventory
-			// ARK STATION EDIT - Extra inventory
-			if(extra_inventory.len && screenmob.hud_used && screenmob.hud_used.extra_shown)
-				screenmob.client.screen += extra_inventory
-			//
 			if(hotkeybuttons.len && !hotkey_ui_hidden)
 				screenmob.client.screen += hotkeybuttons
 			if(infodisplay.len)
@@ -388,10 +381,6 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
 				screenmob.client.screen -= toggleable_inventory
-			// ARK STATION EDIT - Extra inventory
-			if(extra_inventory.len)
-				screenmob.client.screen -= extra_inventory
-			//
 			if(hotkeybuttons.len)
 				screenmob.client.screen -= hotkeybuttons
 			if(infodisplay.len)
@@ -414,10 +403,6 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
 				screenmob.client.screen -= toggleable_inventory
-			// ARK STATION EDIT - Extra inventory
-			if(extra_inventory.len)
-				screenmob.client.screen -= extra_inventory
-			//
 			if(hotkeybuttons.len)
 				screenmob.client.screen -= hotkeybuttons
 			if(infodisplay.len)
@@ -478,8 +463,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	if (initial(ui_style) || ui_style == new_ui_style)
 		return
 
-// ARK STATION EDIT - Extra inventory added
-	for(var/atom/item in static_inventory + toggleable_inventory + extra_inventory + hotkeybuttons + infodisplay + always_visible_inventory + inv_slots)
+	for(var/atom/item in static_inventory + toggleable_inventory + hotkeybuttons + infodisplay + always_visible_inventory + inv_slots)
 		if (item.icon == ui_style)
 			item.icon = new_ui_style
 

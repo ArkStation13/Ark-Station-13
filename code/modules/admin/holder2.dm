@@ -48,8 +48,6 @@ GLOBAL_PROTECT(href_token)
 
 	var/given_profiling = FALSE
 
-	var/is_already_spawned = FALSE // ARK STATION ADDITION // Очень важно.
-
 /datum/admins/New(list/datum/admin_rank/ranks, ckey, force_active = FALSE, protected)
 	if(IsAdminAdvancedProcCall())
 		alert_to_permissions_elevation_attempt(usr)
