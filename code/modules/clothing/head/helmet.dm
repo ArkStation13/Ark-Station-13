@@ -62,7 +62,7 @@
 
 	return ..()
 
-/obj/item/clothing/head/helmet/sec/click_alt(mob/user)
+/obj/item/clothing/head/helmet/sec/nova/click_alt(mob/user) // ARK STATION EDIT
 	flipped_visor = !flipped_visor
 	balloon_alert(user, "visor flipped")
 	// base_icon_state is modified for seclight attachment component
