@@ -176,6 +176,15 @@ GLOBAL_LIST_EMPTY(total_uf_len_by_block)
 	holder.maptext_height = 32 * features["body_size"] // Adjust runechat height
 	current_body_size = features["body_size"]
 
+	//Handle the small icon
+	var/HSize = get_size(holder) //переменная для взятого размера holder
+	if(!holder.small_sprite)
+		holder.small_sprite = new(holder)
+	if(HSize >= (RESIZE_A_BIGNORMAL + RESIZE_NORMAL) / 2)
+		holder.small_sprite.Grant(holder)
+	else
+		holder.small_sprite.Remove(holder)
+
 /mob/living/carbon/proc/apply_customizable_dna_features_to_species()
 	if(!has_dna())
 		CRASH("[src] does not have DNA")
