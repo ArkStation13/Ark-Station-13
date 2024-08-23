@@ -65,3 +65,6 @@
 /obj/structure/closet/secure_closet/security/black_mesa
 	req_access = list(ACCESS_AWAY_SEC)
 
+/area/awaymission/black_mesa
+	requires_power = FALSE
+	always_unpowered = FALSE
