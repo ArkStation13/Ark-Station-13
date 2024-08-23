@@ -21,12 +21,14 @@
 
 /obj/machinery/power/supermatter_crystal/Destroy()
 	. = ..()
-	// distort.icon = 'zov_modular_arkstation/modules/supermatter_distortion/32x32.dmi'
-	// distort.icon_state = "SM_remnant"
-	// distort.pixel_x = 0
-	// distort.pixel_y = 0
-	// distort.forceMove(get_turf(src))
+	distort.icon = 'zov_modular_arkstation/modules/supermatter_distortion/32x32.dmi'
+	distort.icon_state = "SM_remnant"
+	distort.pixel_x = 0
+	distort.pixel_y = 0
+	distort.forceMove(get_turf(src))
+	distort = null
 	qdel(distort)
+	..()
 
 /obj/machinery/power/supermatter_crystal/process_atmos()
 	var/current_status = get_status()
