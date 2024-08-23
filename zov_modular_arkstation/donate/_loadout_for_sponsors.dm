@@ -42,3 +42,8 @@
 	name = "Tailor-Made Suit (Booba Suit)"
 	item_path = /obj/item/clothing/under/suit/booba_suit
 	ckeywhitelist = list("Kasalerza")
+
+/datum/loadout_item/whitelisted/flaming_haori // romontesque
+	name = "Flaming Haori"
+	item_path = /obj/item/clothing/neck/flaming_haori
+	ckeywhitelist = list("romontesque")

@@ -12,7 +12,7 @@
 	icon_state = "helmet"
 	base_icon_state = "helmet"
 	inhand_icon_state = "helmet"
-	actions_types = null
+	actions_types = list()
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON
 	clothing_flags = SNUG_FIT | STACKABLE_HELMET_EXEMPT
 	flags_cover = HEADCOVERSEYES|EARS_COVERED

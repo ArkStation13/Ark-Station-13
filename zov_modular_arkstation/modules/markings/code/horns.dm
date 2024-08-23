@@ -9,3 +9,7 @@
 /datum/sprite_accessory/horns/ark_horns/hopefulhorns
 	name = "Hopeful Horns (Alt)"
 	icon_state = "hopefulhorns_alt"
+
+/datum/sprite_accessory/horns/ark_horns/hopefulhorns_alt
+	name = "Hopeful Horns (Alt 2)"
+	icon_state = "hopefulhorns_alt2"

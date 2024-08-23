@@ -246,7 +246,7 @@
 	var/can_toggle = TRUE
 
 /// Duplication of toggleable logic - only way to make it toggleable without worse hacks due to being in base maps.
-/obj/item/clothing/head/helmet/sec/attack_self(mob/user)
+/obj/item/clothing/head/helmet/sec/nova/attack_self(mob/user) // ARK STATION EDIT
 	. = ..()
 	if(.)
 		return

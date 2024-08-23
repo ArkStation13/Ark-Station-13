@@ -1,4 +1,4 @@
-import { BooleanLike } from 'common/react'; // REPLACED WITH ARK STATION UI FILE
+import { BooleanLike } from 'common/react';
 
 import { sendAct } from '../../backend';
 import { LoadoutCategory, LoadoutList } from './loadout/base';
