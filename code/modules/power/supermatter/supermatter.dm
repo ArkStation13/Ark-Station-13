@@ -242,6 +242,16 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		SSpersistence.reset_delam_counter() // NOVA EDIT ADDITION BEGIN - DELAM SCRAM
 		GLOB.main_supermatter_engine = null
 	QDEL_NULL(soundloop)
+
+// ARK STATION ADDITION START
+	distort.icon = 'zov_modular_arkstation/modules/supermatter_distortion/32x32.dmi'
+	distort.icon_state = "SM_remnant"
+	distort.pixel_x = 0
+	distort.pixel_y = 0
+	distort.forceMove(get_turf(src))
+	distort = null
+// ARK STATION ADDITION END
+
 	return ..()
 
 /obj/machinery/power/supermatter_crystal/on_changed_z_level(turf/old_turf, turf/new_turf, same_z_layer, notify_contents)
