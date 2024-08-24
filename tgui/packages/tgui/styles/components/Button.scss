@@ -7,9 +7,9 @@
 @use '../colors.scss';
 @use '../functions.scss' as *;
 
-$color-default: #424651 !default; // ARK STATION EDIT
-$color-disabled: #9ba0ae !default; // ARK STATION EDIT
-$color-selected: #289231 !default; // ARK STATION EDIT
+$color-default: #425142 !default; // ARK STATION EDIT
+$color-disabled: #9bae9f !default; // ARK STATION EDIT
+$color-selected: #447c49 !default; // ARK STATION EDIT
 $color-caution: colors.bg(colors.$yellow) !default;
 $color-danger: colors.bg(colors.$red) !default;
 $color-transparent-text: rgba(230, 231, 235, 0.7) !default; // ARK STATION EDIT
@@ -22,7 +22,7 @@ $bg-map: colors.$bg-map !default;
   $text-color: if(
     $luminance > 0.4,
     rgb(33, 33, 33),
-    rgba(230, 231, 235, 1)
+    rgb(230, 235, 230)
   ); // ARK STATION EDIT
 
   transition:

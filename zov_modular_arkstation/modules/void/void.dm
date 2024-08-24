@@ -1,23 +1,39 @@
+GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
+
+/mob/living/carbon/proc/send_to_void()
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(!iscarbon(src))
+		to_chat(usr, "This can only be used on instances of type /mob/living/carbon.", confidential = TRUE)
+		return
+
+	if(isAI(src))
+		to_chat(usr, "This cannot be used on instances of type /mob/living/silicon/ai.", confidential = TRUE)
+		return
+
+	if(tgui_alert(usr, "Send [key_name(src)] to Void?", "Message", list("Yes", "No")) != "Yes")
+		return
+
+	if(GLOB.is_void_already_spawned == FALSE)
+		new /obj/structure/void_safe_door(pick(GLOB.void_door_or_monster_spawn))
+		new /mob/living/basic/void_monster(pick(GLOB.void_door_or_monster_spawn))
+		GLOB.is_void_already_spawned = TRUE
+
+	forceMove(pick(GLOB.void))
+	to_chat(src, span_narsiesmall("WHAT'S WRONG WITH YOU, MATE?"), confidential = TRUE)
+	log_admin("[key_name(src)] has sent [key_name(src)] to Void!")
+	message_admins("[key_name_admin(usr)] has sent [key_name_admin(src)] to Void!")
+
 /// Landmarks ///
 // Teleport to Void
 /obj/effect/landmark/voidspawn
 	name = "voidteleport"
 	icon_state = "x"
-/* ВСЕ ПИЗДЕЦ СЛОМАНО
+
 /obj/effect/landmark/voidspawn/Initialize(mapload)
 	..()
 	GLOB.void += loc
-	return INITIALIZE_HINT_QDEL
-
-// Walls spawn in Void
-/obj/effect/landmark/voidspawn_wall
-	name = "void_wall_spawn"
-	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
-	icon_state = "void-wall-spawner"
-
-/obj/effect/landmark/voidspawn_wall/Initialize(mapload)
-	..()
-	new /turf/closed/indestructible/void(get_turf(src))
 	return INITIALIZE_HINT_QDEL
 
 // Void Floor
@@ -30,6 +46,7 @@
 /turf/open/indestructible/void/Initialize(mapload)
 	. = ..()
 	GLOB.void_door_or_monster_spawn += src
+	new /obj/effect/step_trigger/void(src)
 
 // Void Wall
 /turf/closed/indestructible/void
@@ -58,12 +75,11 @@
 
 /obj/effect/step_trigger/void/Initialize(mapload)
 	. = ..()
-	// Вернешь как починишь чтобы не было рантаймов на тестах
-	//var/static/list/loc_connections = list(
-	//	COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
-	//	COMSIG_ATOM_EXITED = PROC_REF(on_exited),
-	//)
-	//AddElement(/datum/element/connect_loc, loc_connections)
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+		COMSIG_ATOM_EXITED = PROC_REF(on_exited),
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
 
 /obj/effect/step_trigger/void/proc/on_exited(datum/source, H as mob|obj)
 	if(ismob(H))
@@ -84,24 +100,23 @@
 		triggerer.clear_fullscreen("screamers", rand(15, 60))
 
 // Area
-/area/misc/void
+/area/centcom/void
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
-	// static_lighting = FALSE
-	// base_lighting_alpha = 255
 	name = "void"
-	icon_state = "test_room"
 	ambient_buzz = 'zov_modular_arkstation/modules/void/void.ogg'
+	ambient_buzz_vol = 30
 
 // Void Light
 /obj/effect/light_emitter/void
 	light_color = LIGHT_COLOR_LAVENDER
 	set_cap = 1
+	set_luminosity = 5
 
 // Safe Door for Escape
 /obj/structure/void_safe_door
 	name = "ESCAPE TO REALITY"
-	desc = "∎∎∎∎∎"
+	desc = "7733995462"
 	icon = 'zov_modular_arkstation/modules/goon-icons-port/goon-void.dmi'
 	icon_state = "door"
 	light_color = LIGHT_COLOR_FIRE
@@ -121,19 +136,21 @@
 			to_chat(user, span_narsiesmall("Lucky one. For first time. WAKE UP NOW."))
 			user.forceMove(pick(GLOB.station_turfs))
 			if(istype(user, /mob/living/carbon))
-				var/mob/living/carbon/M = user
-				M.AdjustParalyzed(60)
-				M.adjustBruteLoss(30)
-				var/sound/sound = sound('zov_modular_arkstation/modules/void/trip_blast.wav')
-				sound.environment = 23
-				sound.volume = 200
-				SEND_SOUND(M.client, sound)
-				INVOKE_ASYNC(M, TYPE_PROC_REF(/mob, emote), "agony")
-				M.overlay_fullscreen("flash_void", /atom/movable/screen/fullscreen/flash/black)
-				sleep(5 SECONDS)
-				M.clear_fullscreen("flash_void", rand(15, 60))
+				after_interact(user)
 
-
+/obj/structure/void_safe_door/proc/after_interact(mob/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/M = user
+		M.AdjustParalyzed(60)
+		M.adjustBruteLoss(30)
+		var/sound/sound = sound('zov_modular_arkstation/modules/void/trip_blast.wav')
+		sound.environment = 23
+		sound.volume = 200
+		SEND_SOUND(M.client, sound)
+		INVOKE_ASYNC(M, TYPE_PROC_REF(/mob, emote), "agony")
+		M.overlay_fullscreen("flash_void", /atom/movable/screen/fullscreen/flash/black)
+		sleep(5 SECONDS)
+		M.clear_fullscreen("flash_void", rand(15, 60))
 
 // Warning // Screamers and Monster //
 
@@ -146,14 +163,14 @@
 
 // Monster
 /mob/living/basic/void_monster
-	name = "The fuck?"
+	name = "\improper The fuck?"
 	desc = "Their eyes follow you."
 	icon = 'zov_modular_arkstation/modules/void/babaika.dmi'
 	icon_state = "babaika"
 	health = 200000
 	maxHealth = 200000
 	ai_controller = /datum/ai_controller/basic_controller/void_monster
-	var/pizdec
+	var/user_name
 
 	hud_possible = list(ANTAG_HUD)
 
@@ -194,13 +211,12 @@
 
 /mob/living/basic/void_monster/examine(mob/user)
 	. = ..()
-	if(user.client.ckey)
-		pizdec = user.client.ckey
+	if(user.client?.ckey)
+		user_name = user.client.ckey
 	else
-		pizdec = user.name
-	name = pizdec
-	desc = "It's me? [pizdec]???"
-	death_message = "I will find you in the REALITY, [pizdec]!"
+		user_name = user.name
+	desc = "It's me? [user_name]???"
+	death_message = "I will find you in the REALITY, [user_name]!"
 
 /mob/living/basic/void_monster/Initialize(mapload)
 	. = ..()
@@ -213,15 +229,50 @@
 		BB_AGGRO_RANGE = 14,
 	)
 
-	ai_movement = /datum/ai_movement/jps //threat
+	ai_movement = /datum/ai_movement/jps
 	idle_behavior = /datum/idle_behavior/walk_near_target/void
 	planning_subtrees = list(
-		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/run_emote,
+		/datum/ai_planning_subtree/find_and_hunt_target/void_monster,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
 	)
 
 /datum/idle_behavior/walk_near_target/void
-	walk_chance = 50
-	minimum_distance = 20
-*/
+	walk_chance = 25
+	minimum_distance = 5
+
+//
+/datum/ai_planning_subtree/find_and_hunt_target/void_monster
+	target_key = BB_LOW_PRIORITY_HUNTING_TARGET
+	finding_behavior = /datum/ai_behavior/find_hunt_target/void_monster
+	hunting_behavior = /datum/ai_behavior/hunt_target/unarmed_attack_target/void_monster
+	hunt_targets = list(/mob/living/carbon)
+	hunt_range = 30
+
+/datum/ai_behavior/hunt_target/unarmed_attack_target/void_monster
+	hunt_cooldown = 1 SECONDS
+	always_reset_target = TRUE
+
+/datum/ai_behavior/find_hunt_target/void_monster
+
+/datum/ai_behavior/find_hunt_target/void_monster/valid_dinner(mob/living/source, mob/living/carbon/dinner, radius)
+	if(dinner.stat == DEAD)
+		return FALSE
+
+	return can_see(source, dinner, radius)
+
+// Cameras
+/obj/machinery/computer/camera_advanced/void_cam
+	name = "Strange Camera Control Console"
+	networks = list("void")
+	circuit = /obj/item/circuitboard/computer/void_cam
+
+/obj/item/circuitboard/computer/void_cam
+	name = "Strange Camera Control Console"
+	build_path = /obj/machinery/computer/camera_advanced/void_cam
+
+/obj/machinery/camera/xray/void
+	name = "strange camera"
+	desc = "Why is it here?"
+	network = list("void")
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray/void, 0)

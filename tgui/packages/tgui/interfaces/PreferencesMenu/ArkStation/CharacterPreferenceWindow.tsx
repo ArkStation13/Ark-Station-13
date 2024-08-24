@@ -2,7 +2,7 @@ import { exhaustiveCheck } from 'common/exhaustive';
 import { useState } from 'react';
 
 import { useBackend } from '../../../backend';
-import { Flex, SideDropdown, Stack } from '../../../components';
+import { Button, Flex, SideDropdown, Stack } from '../../../components';
 import { Window } from '../../../layouts';
 import { AntagsPage } from '../AntagsPage';
 import { PreferencesMenuData } from '../data';
@@ -95,7 +95,23 @@ export const CharacterPreferenceWindow = (props) => {
   }
 
   return (
-    <Window title="Character Preferences" width={1200} height={820}>
+    <Window
+      title="Character Preferences"
+      width={1200}
+      height={770}
+      buttons={
+        <>
+          <Button
+            icon="cog"
+            tooltip="Open Game Preferences"
+            tooltipPosition="bottom"
+            style={{ borderRadius: '20px' }}
+            onClick={() => act('open_game_preferences')}
+          />
+          Settings are saved automatically
+        </>
+      }
+    >
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>

@@ -48,7 +48,7 @@ const CLOTHING_SELECTION_WIDTH = 5.4;
 const CLOTHING_SELECTION_MULTIPLIER = 5.2;
 
 const CharacterControls = (props: {
-  handleRotate: () => void;
+  handleRotate: (direction: boolean) => void;
   handleOpenSpecies: () => void;
   handleFood: () => void; // ARK STATION EDIT ADDITION
   gender: Gender;
@@ -59,13 +59,24 @@ const CharacterControls = (props: {
     <Stack>
       <Stack.Item>
         <Button
-          onClick={props.handleRotate}
+          onClick={() => props.handleRotate(true)}
           fontSize="22px"
           icon="undo"
-          tooltip="Rotate"
+          tooltip="Rotate -90°"
           tooltipPosition="top"
         />
       </Stack.Item>
+      <Stack.Item>
+        <Button
+          onClick={() => props.handleRotate(false)}
+          fontSize="22px"
+          icon="redo"
+          tooltip="Rotate 90°"
+          tooltipPosition="top"
+        />
+      </Stack.Item>
+
+      <Stack.Item grow />
 
       <Stack.Item>
         <Button
@@ -701,15 +712,15 @@ export const MainPage = (props: { openSpecies: () => void }) => {
               />
             )}
 
-            <Stack height={`${9.5 * 64}px`}>
+            <Stack height={`${CLOTHING_SIDEBAR_ROWS * CLOTHING_CELL_SIZE}px`}>
               <Stack.Item>
                 <Stack vertical fill>
                   <Stack.Item>
                     <CharacterControls
                       gender={data.character_preferences.misc.gender}
                       handleOpenSpecies={props.openSpecies}
-                      handleRotate={() => {
-                        act('rotate');
+                      handleRotate={(direction) => {
+                        act('rotate', { direction: direction });
                       }}
                       // SKYRAT EDIT ADDITION - BEGIN
                       handleFood={() => {
