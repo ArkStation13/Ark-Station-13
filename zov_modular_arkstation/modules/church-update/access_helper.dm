@@ -25,3 +25,8 @@
 	var/list/access_list = ..()
 	access_list += ACCESS_CHURCH_FISCAL
 	return access_list
+
+/obj/effect/mapping_helpers/airlock/access/any/church/maintenance/get_access()
+	var/list/access_list = ..()
+	access_list += list(ACCESS_CHURCH_GENERAL, ACCESS_MAINT_TUNNELS)
+	return access_list
