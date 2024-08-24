@@ -81,6 +81,12 @@
 			ADD_TRAIT(human_user, TRAIT_NOBREATH, ROUNDSTART_TRAIT)
 			ADD_TRAIT(human_user, TRAIT_RESISTCOLD, ROUNDSTART_TRAIT)
 
+// ARK STATION ADDITION START
+		if(SSmapping.level_trait(human_user.z, ZTRAIT_OMEGA_RUINS) || SSmapping.level_trait(human_user.z, ZTRAIT_OMEGA_RUINS_UNDERGROUND))
+			ADD_TRAIT(human_user, TRAIT_NOBREATH, ROUNDSTART_TRAIT)
+			ADD_TRAIT(human_user, TRAIT_RESISTCOLD, ROUNDSTART_TRAIT)
+// ARK STATION ADDITION END
+
 		ADD_TRAIT(human_user, TRAIT_PRIMITIVE, ROUNDSTART_TRAIT)
 		playsound(src, 'sound/magic/demon_dies.ogg', 50, TRUE)
 		meat_counter++

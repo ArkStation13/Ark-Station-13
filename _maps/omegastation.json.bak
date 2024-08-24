@@ -1,0 +1,60 @@
+{
+	"version": 1,
+	"map_name": "Omega Station",
+	"map_path": "ark_map_files/ark_maps",
+	"map_file": "OmegaStation.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"ignored_unit_tests": [
+		"/datum/unit_test/cargo_dep_order_locations"
+	],
+	"shuttles": {
+		"cargo": "cargo_nova",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_box",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Up": true,
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Omega Ruins Underground": true,
+			"Baseturf": "/turf/open/misc/grass/jungle/planet",
+			"No Parallax": true
+		},
+		{
+			"Down": true,
+			"Up": true,
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Omega Ruins Underground": true,
+			"Baseturf": "/turf/open/misc/grass/jungle/planet",
+			"No Parallax": true
+		},
+		{
+			"Down": true,
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Weather_Rainstorm": true,
+			"Omega Ruins": true,
+			"Baseturf": "/turf/open/misc/grass/jungle/planet",
+			"No Parallax": true
+		}
+	],
+	"minetype": "none",
+	"blacklist_file": "omegaruinblacklist.txt",
+	"job_changes": {
+		"Captain": {
+			"special_charter": "moon"
+		},
+		"Mechanic": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		}
+	}
+}

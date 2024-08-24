@@ -559,7 +559,7 @@ SUBSYSTEM_DEF(air)
 			// If it's already been processed, then it's already talked to us
 			if(enemy_tile.current_cycle == -INFINITE)
 				continue
-			// .air instead of .return_air() because we can guarentee that the proc won't do anything
+			// .air instead of .return_air() because we can guarantee that the proc won't do anything
 			if(potential_diff.air.compare(enemy_tile.air))
 				//testing("Active turf found. Return value of compare(): [T.air.compare(enemy_tile.air)]")
 				if(!potential_diff.excited)
@@ -630,6 +630,8 @@ SUBSYSTEM_DEF(air)
 		ZTRAIT_RESERVED = 0,
 		ZTRAIT_SPACE_RUINS = 0,
 		ZTRAIT_STATION = 0,
+		ZTRAIT_OMEGA_RUINS = 0, // ARK STATION ADDITION
+		ZTRAIT_OMEGA_RUINS_UNDERGROUND  = 0, // ARK STATION ADDITION
 	)
 
 	var/list/message_to_log = list()
@@ -707,7 +709,7 @@ SUBSYSTEM_DEF(air)
 		CHECK_TICK
 
 //this can't be done with setup_atmos_machinery() because
-// all atmos machinery has to initalize before the first
+// all atmos machinery has to initialize before the first
 // pipenet can be built.
 /datum/controller/subsystem/air/proc/setup_pipenets()
 	for (var/obj/machinery/atmospherics/AM in atmos_machinery)

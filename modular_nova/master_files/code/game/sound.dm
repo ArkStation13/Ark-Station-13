@@ -105,6 +105,17 @@
 					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode6.ogg', // ARK STATION EDIT
 					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode7.ogg', // ARK STATION EDIT
 				)
+			if(SFX_BRICK_DROP)
+				soundin = pick(
+					'modular_nova/master_files/sound/items/bricks/brick_drop_1.ogg',
+					'modular_nova/master_files/sound/items/bricks/brick_drop_2.ogg',
+					'modular_nova/master_files/sound/items/bricks/brick_drop_3.ogg',
+				)
+			if(SFX_BRICK_PICKUP)
+				soundin = pick(
+					'modular_nova/master_files/sound/items/bricks/brick_pick_up_1.ogg',
+					'modular_nova/master_files/sound/items/bricks/brick_pick_up_2.ogg',
+				)
 	return soundin
 
 // This is an atom level variable to prevent extensive typechecking for impacts.
