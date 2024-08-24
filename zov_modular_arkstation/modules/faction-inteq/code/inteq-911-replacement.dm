@@ -308,20 +308,20 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	outfit = /datum/outfit/request_911/atmos
 
 
-/obj/item/radio/headset/headset_solfed/atmos
-	name = "\improper SolFed adv. atmos headset"
-	desc = "A headset used by the Solar Federation response teams."
-	icon_state = "med_headset"
-	keyslot = /obj/item/encryptionkey/headset_solfed/atmos
-	radiosound = 'modular_nova/modules/radiosound/sound/radio/security.ogg'
+// /obj/item/radio/headset/headset_solfed/atmos
+// 	name = "\improper SolFed adv. atmos headset"
+// 	desc = "A headset used by the Solar Federation response teams."
+// 	icon_state = "med_headset"
+// 	keyslot = /obj/item/encryptionkey/headset_solfed/atmos
+// 	radiosound = 'modular_nova/modules/radiosound/sound/radio/security.ogg'
 
-/obj/item/encryptionkey/headset_solfed/atmos
-	name = "\improper SolFed adv. atmos encryption key"
-	icon_state = "cypherkey_medical"
-	independent = TRUE
-	channels = list(RADIO_CHANNEL_SOLFED = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_COMMAND = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_medical
-	greyscale_colors = "#ebebeb#2b2793"
+// /obj/item/encryptionkey/headset_solfed/atmos
+// 	name = "\improper SolFed adv. atmos encryption key"
+// 	icon_state = "cypherkey_medical"
+// 	special_channels = RADIO_SPECIAL_CENTCOM
+// 	channels = list(RADIO_CHANNEL_SOLFED = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_COMMAND = 1)
+// 	greyscale_config = /datum/greyscale_config/encryptionkey_medical
+// 	greyscale_colors = "#ebebeb#2b2793"
 
 /*
 *	EMT

@@ -122,8 +122,6 @@
 	for(var/mob/living/watchers in oviewers(FEED_NOTICE_RANGE) - feed_target)
 		if(!watchers.client)
 			continue
-		if(watchers.has_unlimited_silicon_privilege)
-			continue
 		if(watchers.stat >= DEAD)
 			continue
 		if(watchers.is_blind() || watchers.is_nearsighted_currently())

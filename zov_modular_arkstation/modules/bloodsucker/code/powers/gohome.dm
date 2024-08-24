@@ -89,8 +89,6 @@
 		for(var/mob/living/watchers in viewers(world.view, get_turf(user)) - user)
 			if(!watchers.client)
 				continue
-			if(watchers.has_unlimited_silicon_privilege)
-				continue
 			if(watchers.is_blind())
 				continue
 			if(!IS_BLOODSUCKER(watchers) && !IS_VASSAL(watchers))
