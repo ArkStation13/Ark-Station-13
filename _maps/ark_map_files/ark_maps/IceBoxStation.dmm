@@ -11150,7 +11150,6 @@
 	},
 /obj/machinery/light/directional/west,
 /obj/item/kirbyplants/random/dead/research_director,
-/obj/machinery/computer/security/telescreen/rd,
 /obj/machinery/computer/security/telescreen/rd/directional/west,
 /turf/open/floor/iron/smooth_half,
 /area/station/command/heads_quarters/rd)
@@ -14856,15 +14855,15 @@
 	name = "chemistry lab access"
 	},
 /obj/effect/turf_decal/stripes/end,
-/obj/machinery/door/window/right/directional/north{
-	name = "Chemistry Lab Access Hatch";
-	req_access = list("plumbing")
-	},
 /obj/structure/sign/departments/chemistry/directional/north,
 /obj/structure/sign/warning/no_smoking{
 	pixel_x = -28
 	},
 /obj/effect/turf_decal/tile/yellow/full,
+/obj/machinery/door/window/right/directional/south{
+	req_access = list("plumbing");
+	name = "Chemistry Lab Access Hatch"
+	},
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/treatment_center)
 "euZ" = (
@@ -24071,7 +24070,9 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/right/directional/north,
-/obj/machinery/door/window/right/directional/south,
+/obj/machinery/door/window/right/directional/south{
+	req_access = list("plumbing")
+	},
 /turf/open/floor/iron,
 /area/station/security/prison/visit)
 "hpI" = (
@@ -24332,6 +24333,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/depsec/science,
+/obj/machinery/computer/security/telescreen/research/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/science)
 "hue" = (
@@ -24880,7 +24882,7 @@
 "hCx" = (
 /obj/structure/table,
 /obj/item/binoculars,
-/obj/machinery/computer/security/telescreen/ordnance,
+/obj/machinery/computer/security/telescreen/ordnance/directional/north,
 /turf/open/floor/iron,
 /area/station/science/ordnance/testlab)
 "hCC" = (
@@ -40850,7 +40852,6 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/cmo,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "mwh" = (
@@ -41992,6 +41993,7 @@
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/tile/green/full,
+/obj/machinery/computer/security/telescreen/cmo/directional/north,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/cmo)
 "mQG" = (
@@ -44062,14 +44064,14 @@
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "ntq" = (
-/obj/machinery/door/window/brigdoor{
-	req_access = list("brig")
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/right/directional/north{
+	req_access = list("brig")
 	},
 /turf/open/floor/iron,
 /area/station/security/processing)
@@ -66413,7 +66415,6 @@
 /area/station/engineering/lobby)
 "ujP" = (
 /obj/structure/table,
-/obj/machinery/computer/security/telescreen/research,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
 	},
@@ -76214,9 +76215,14 @@
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/underground/explored)
 "xiw" = (
-/obj/docking_port/stationary/escape_pod,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors/noruins)
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/junction/flip{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/port)
 "xiC" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/snack,
@@ -76697,7 +76703,9 @@
 "xrf" = (
 /obj/structure/railing,
 /obj/structure/cable,
-/obj/machinery/door/window/right/directional/south,
+/obj/machinery/door/window/right/directional/south{
+	req_access = list("plumbing")
+	},
 /turf/open/floor/plating/icemoon,
 /area/station/security/execution/education)
 "xrg" = (
@@ -227956,7 +227964,7 @@ eMH
 dTD
 ljT
 pBk
-lzO
+xiw
 tJu
 qnj
 hul
@@ -243070,7 +243078,7 @@ wNO
 aBR
 aBR
 aBR
-xiw
+bfy
 mBh
 oot
 oot
