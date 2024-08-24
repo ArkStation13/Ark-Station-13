@@ -313,8 +313,6 @@
 		get_sfx()
 	playsound(src, get_sfx_nova(impact_sound), vol_by_damage(), TRUE, -1)
 	// NOVA EDIT ADDITION END
-	/* NOVA EDIT REMOVAL START - We use our own sounds above
-	NOVA EDIT REMOVAL END */
 
 	if(damage > 0 && (damage_type == BRUTE || damage_type == BURN) && iswallturf(target_turf) && prob(75))
 		var/turf/closed/wall/target_wall = target_turf
@@ -587,6 +585,9 @@
 	if((target.pass_flags_self & pass_flags) && !direct_target)
 		return FALSE
 	if(HAS_TRAIT(target, TRAIT_UNHITTABLE_BY_PROJECTILES))
+		if(!HAS_TRAIT(target, TRAIT_BLOCKING_PROJECTILES) && isliving(target))
+			var/mob/living/living_target = target
+			living_target.block_projectile_effects()
 		return FALSE
 	if(!ignore_source_check && firer)
 		var/mob/M = firer

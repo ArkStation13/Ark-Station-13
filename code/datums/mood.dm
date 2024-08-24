@@ -288,7 +288,7 @@
 		if (SANITY_LEVEL_INSANE)
 			mood_screen_object.color = "#f15d36"
 
-	if (!conflicting_moodies.len) // theres no special icons, use the normal icon states
+	if (!conflicting_moodies.len) // there's no special icons, use the normal icon states
 		//NOVA EDIT ADDITION BEGIN - ALEXITHYMIA
 		if(HAS_TRAIT(mob_parent, TRAIT_MOOD_NOEXAMINE))
 			mood_screen_object.icon_state = "mood5"
