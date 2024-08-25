@@ -81,13 +81,17 @@ SUBSYSTEM_DEF(cargo_companies)
 	light_color = COLOR_SOFT_RED
 	sec_cargo = TRUE
 
-	var/datum/component/armament/company_imports/used_guncargo_component
+	var/datum/component/armament/company_imports/used_guncargo_component = null
 
 /obj/machinery/computer/cargo/request/sec/Initialize(mapload)
 	. = ..()
 	used_guncargo_component = GetComponent(/datum/component/armament/company_imports)
 	used_guncargo_component.budget_name = "Security Budget"
 	used_guncargo_component.buyer = SSeconomy.get_dep_account(ACCOUNT_SEC)
+
+/obj/machinery/computer/cargo/request/sec/Destroy()
+	used_guncargo_component = null
+	return ..()
 
 /obj/item/circuitboard/computer/security/cargo
 	name = "Security Imports"
