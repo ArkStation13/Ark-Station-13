@@ -86,6 +86,12 @@
 
 /obj/machinery/computer/cargo/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()
+// ARK STATION ADDITION START
+	if(sec_cargo)
+		var/datum/component/armament/company_imports/company_import_component = GetComponent(/datum/component/armament/company_imports)
+		company_import_component.ui_interact(usr)
+		return TRUE
+// ARK STATION ADDITION END
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, interface_type, name)

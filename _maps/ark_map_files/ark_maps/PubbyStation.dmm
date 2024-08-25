@@ -3929,7 +3929,7 @@
 /area/station/security/warden)
 "aoS" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen/prison,
+/obj/machinery/computer/security/telescreen/prison/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "aoT" = (
@@ -3950,7 +3950,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "aoU" = (
-/obj/machinery/computer/crew{
+/obj/machinery/computer/cargo/request/sec{
 	dir = 8
 	},
 /turf/open/floor/iron/showroomfloor,
@@ -4390,10 +4390,10 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "aqA" = (
-/obj/machinery/computer/security/telescreen/interrogation,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/interrogation/directional/east,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "aqD" = (
@@ -44749,6 +44749,10 @@
 	},
 /turf/open/floor/circuit/telecomms,
 /area/station/science/xenobiology)
+"pog" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/iron/showroomfloor,
+/area/station/security/warden)
 "ppf" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -79839,7 +79843,7 @@ ajR
 ulV
 tck
 amh
-anI
+pog
 usu
 qfI
 aoW
