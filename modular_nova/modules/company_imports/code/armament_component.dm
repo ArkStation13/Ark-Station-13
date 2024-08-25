@@ -366,8 +366,8 @@
 					return
 
 			else if(console_state == SEC_CARGO_CONSOLE)
-					to_chat(usr, span_warning("You cannot purchase companies on a department import cargo computer!"))
-					return
+				to_chat(usr, span_warning("You cannot purchase companies on a department import cargo computer!"))
+				return
 
 			else if(console_state == IRN_CONSOLE)
 				if(!self_paid)
