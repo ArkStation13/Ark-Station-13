@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @copyright 2023 itsmeow
+ * @license MIT
+ */
+
 import {
   colorList,
   hexToHsva,
@@ -501,6 +507,7 @@ const SaturationValue = ({ hsva, onChange }) => {
       >
         {[
           <Pointer
+            key="saturation-pointer"
             className="react-colorful__saturation_value-pointer"
             top={1 - hsva.v / 100}
             left={hsva.s / 100}
@@ -543,6 +550,7 @@ const Hue = ({
       >
         {[
           <Pointer
+            key="hue-pointer"
             className="react-colorful__hue-pointer"
             left={hue / 360}
             color={hsvaToHslString({ h: hue, s: 100, v: 100, a: 1 })}
@@ -592,6 +600,7 @@ const Saturation = ({
       >
         {[
           <Pointer
+            key="corolful-saturation-pointer"
             className="react-colorful__saturation-pointer"
             left={color.s / 100}
             color={hsvaToHslString({
@@ -648,6 +657,7 @@ const Value = ({
       >
         {[
           <Pointer
+            key="colorful_value-pointer"
             className="react-colorful__value-pointer"
             left={color.v / 100}
             color={hsvaToHslString({
@@ -709,6 +719,7 @@ const RGBSlider = ({
       >
         {[
           <Pointer
+            key="react-colorful-pointer"
             className={`react-colorful__${target}-pointer`}
             left={rgb[target] / 255}
             color={selected}
