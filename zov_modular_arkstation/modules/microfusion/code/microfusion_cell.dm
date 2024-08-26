@@ -158,7 +158,7 @@ Essentially, power cells that malfunction if not used in an MCR, and should only
 
 /obj/item/stock_parts/power_store/cell/microfusion/proc/cell_removal_discharge()
 	chargerate = 0
-	charge = 0
+	// charge = 0
 	do_sparks(4, FALSE, src)
 	update_appearance()
 
