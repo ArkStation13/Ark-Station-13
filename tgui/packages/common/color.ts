@@ -1,3 +1,4 @@
+// ARK STATION EDIT START: TGUI COLOR PICKER
 /**
  * @file
  * @copyright 2020 Aleksej Komarov
@@ -394,3 +395,4 @@ export const contrast = (
     ? (background_luminance + 0.05) / (foreground_luminance + 0.05)
     : (foreground_luminance + 0.05) / (background_luminance + 0.05);
 };
+// ARK STATION EDIT END: TGUI COLOR PICKER
