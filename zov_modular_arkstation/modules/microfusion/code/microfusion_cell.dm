@@ -14,9 +14,9 @@ Essentially, power cells that malfunction if not used in an MCR, and should only
 	icon_state = "microfusion"
 	w_class = WEIGHT_CLASS_NORMAL
 	maxcharge = 12000 //12 shots
-	chargerate = 0 //MF cells should be unable to recharge if they are not currently inside of an MCR
+	chargerate = 300 //MF cells should be unable to recharge if they are not currently inside of an MCR
 	microfusion_readout = TRUE
-	empty = TRUE //MF cells should start empty
+	empty = FALSE //MF cells should start empty
 
 	/// A hard referenced list of upgrades currently attached to the weapon.
 	var/list/attachments = list()
@@ -154,10 +154,10 @@ Essentially, power cells that malfunction if not used in an MCR, and should only
 	update_appearance()
 
 /obj/item/stock_parts/power_store/cell/microfusion/proc/inserted_into_weapon()
-	chargerate = 300
+	chargerate = 450
 
 /obj/item/stock_parts/power_store/cell/microfusion/proc/cell_removal_discharge()
-	chargerate = 0
+	chargerate = 300
 	// charge = 0
 	do_sparks(4, FALSE, src)
 	update_appearance()
