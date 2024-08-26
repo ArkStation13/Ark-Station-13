@@ -76,7 +76,7 @@
 		/obj/item/wrench,
 		/obj/item/spess_knife,
 		/obj/item/melee/sickly_blade/lock,
-		/obj/item/construction/plumbing, // NOVA EDIT ADDITION 
+		/obj/item/construction/plumbing, // NOVA EDIT ADDITION
 	))
 
 /obj/item/storage/belt/utility/chief
@@ -380,6 +380,7 @@
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
+		/obj/item/stock_parts/power_store/cell/microfusion, // ARK STATION ADDITION
 	))
 	atom_storage.open_sound = 'sound/items/holster.ogg'
 	atom_storage.open_sound_vary = TRUE

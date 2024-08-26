@@ -237,6 +237,7 @@ GLOBAL_LIST_INIT(detective_vest_allowed, list(
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
 	/obj/item/gun/ballistic/shotgun/automatic/combat/compact,
+	/obj/item/gun/microfusion, // ARK STATION ADDITION
 ))
 
 GLOBAL_LIST_INIT(security_vest_allowed, list(
@@ -254,6 +255,7 @@ GLOBAL_LIST_INIT(security_vest_allowed, list(
 	/obj/item/storage/belt/holster/energy,
 	/obj/item/gun/ballistic/shotgun/automatic/combat/compact,
 	/obj/item/pen/red/security,
+	/obj/item/gun/microfusion, // ARK STATION ADDITION
 ))
 
 GLOBAL_LIST_INIT(security_wintercoat_allowed, list(
@@ -266,6 +268,7 @@ GLOBAL_LIST_INIT(security_wintercoat_allowed, list(
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
 	/obj/item/gun/ballistic/shotgun/automatic/combat/compact,
+	/obj/item/gun/microfusion, // ARK STATION ADDITION
 ))
 
 //Allowed list for all chaplain suits (except the honkmother robe)
