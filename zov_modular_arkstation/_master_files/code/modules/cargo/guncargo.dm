@@ -1,7 +1,7 @@
 #define MAX_HANDOUT_CHOICES 3
 
-#define BASE_COST_MINIMUM 3000
-#define BASE_COST_MAXIMUM 75000
+#define BASE_COST_MINIMUM 1000
+#define BASE_COST_MAXIMUM 10000
 
 SUBSYSTEM_DEF(cargo_companies)
 	name = "Cargo Companies"
@@ -56,7 +56,7 @@ SUBSYSTEM_DEF(cargo_companies)
 	for(var/company in companies)
 		var/datum/cargo_company/company_datum = companies[company]
 		if(purchased_companies)
-			company_datum.cost_mult = max((LAZYLEN(purchased_companies) * 0.2), 1)
+			company_datum.cost_mult = (LAZYLEN(purchased_companies) * 0.1) + company_datum.cost_mult
 
 		// Set the prices of the companies, is intended to slowly scale up over time
 		company_datum.base_cost += max(rand(company_datum.cost_change_lower, company_datum.cost_change_upper), 0)
