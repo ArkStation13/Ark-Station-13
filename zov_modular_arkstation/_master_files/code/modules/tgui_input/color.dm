@@ -18,8 +18,8 @@
 		else
 			return
 	// Client does NOT have tgui_input on: Returns regular input
-	//if(!(user.client?.prefs?. & PREFTOGGLE_2_TGUI_INPUT))
-	//	return input(user, message, title, default) as color|null
+	if(!user.client.prefs.read_preference(/datum/preference/toggle/tgui_input))
+		return input(user, message, title, default) as color|null
 	var/datum/tgui_color_picker/picker = new(user, message, title, default, timeout, autofocus)
 	picker.ui_interact(user)
 	picker.wait()
@@ -48,8 +48,8 @@
 		else
 			return
 	// Client does NOT have tgui_input on: Returns regular input
-	//if(!(user.client?.prefs?.toggles2 & PREFTOGGLE_2_TGUI_INPUT))
-	//	return input(user, message, title, default) as color|null
+	if(!user.client.prefs.read_preference(/datum/preference/toggle/tgui_input))
+		return input(user, message, title, default) as color|null
 	var/datum/tgui_color_picker/async/picker = new(user, message, title, default, callback, timeout, autofocus)
 	picker.ui_interact(user)
 
@@ -115,8 +115,8 @@
 /datum/tgui_color_picker/ui_static_data(mob/user)
 	. = list()
 	.["autofocus"] = autofocus
-	.["large_buttons"] = !user.client?.prefs //|| (user.client.prefs.toggles2 & PREFTOGGLE_2_BIG_BUTTONS)
-	.["swapped_buttons"] = !user.client?.prefs //|| (user.client.prefs.toggles2 & PREFTOGGLE_2_SWITCHED_BUTTONS)
+	.["large_buttons"] = !user.client?.prefs || user.client.prefs.read_preference(/datum/preference/toggle/tgui_input_large)
+	.["swapped_buttons"] = !user.client?.prefs || user.client.prefs.read_preference(/datum/preference/toggle/tgui_input_swapped)
 	.["title"] = title
 	.["default_color"] = default
 	.["message"] = message

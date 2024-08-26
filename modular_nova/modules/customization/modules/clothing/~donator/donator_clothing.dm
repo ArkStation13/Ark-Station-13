@@ -120,7 +120,7 @@
 
 /obj/item/canvas/drawingtablet/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/dtselectcolor))
-		currentcolor = tgui_color_picker(usr,"","Choose Color",currentcolor)
+		currentcolor = tgui_color_picker(usr, "", "Choose Color", currentcolor) //ARK STATION EDIT: TGUI COLOR PICKER
 	else if(istype(action, /datum/action/item_action/dtcolormenu))
 		var/list/selects = colors.Copy()
 		selects["Save"] = "Save"

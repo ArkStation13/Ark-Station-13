@@ -168,7 +168,7 @@
 			return TRUE
 
 		if("change_room_color")
-			var/new_room_color = tgui_color_picker(usr, "Pick new color", "[src]", SOULCATCHER_DEFAULT_COLOR)
+			var/new_room_color = tgui_color_picker(usr, "Pick new color", "[src]", SOULCATCHER_DEFAULT_COLOR) //ARK STATION EDIT: TGUI COLOR PICKER
 			if(!new_room_color)
 				return FALSE
 

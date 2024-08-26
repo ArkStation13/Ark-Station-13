@@ -45,12 +45,13 @@
 		to_chat(user, span_danger("A red light blinks!"))
 		return
 
-	var/selected_color = input(
+		// ARK STATION EDIT START: TGUI COLOR PICKER
+	var/selected_color = tgui_color_picker(
 			user,
 			"Select marking color",
 			null,
 			COLOR_WHITE,
-		) as color | null
+		) // ARK STATION EDIT END: TGUI COLOR PICKER
 
 	if(!selected_color)
 		return
@@ -99,12 +100,13 @@
 	if(!selected_marking_id)
 		return
 
-	var/selected_color = input(
+		// ARK STATION EDIT START: TGUI COLOR PICKER
+	var/selected_color = tgui_color_picker(
 			user,
 			"Select marking color",
 			null,
 			COLOR_WHITE,
-		) as color | null
+		) // ARK STATION EDIT END: TGUI COLOR PICKER
 
 	if(!selected_color)
 		return
