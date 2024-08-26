@@ -1,11 +1,11 @@
 #define MAX_HANDOUT_CHOICES 3
 
 #define BASE_COST_MINIMUM 1000
-#define BASE_COST_MAXIMUM 10000
+#define BASE_COST_MAXIMUM 5000
 
 SUBSYSTEM_DEF(cargo_companies)
 	name = "Cargo Companies"
-	wait = 10 MINUTES
+	wait = 30 MINUTES
 	runlevels = RUNLEVEL_GAME
 	/// Assoc list of companies that the subsystem has initialized, `"NAME" = datum_reference`
 	var/list/companies = list()
