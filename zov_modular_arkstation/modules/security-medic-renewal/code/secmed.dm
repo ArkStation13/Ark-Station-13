@@ -163,9 +163,9 @@
 // 	target_areas = list(/area/station/security/medical)
 // 	desired_atom = /obj/structure/closet/secure_closet/security_medic
 
-/datum/area_spawn/secmed_landmark
-	target_areas = list(/area/station/security/medical)
-	desired_atom = /obj/effect/landmark/start/security_medic
+// /datum/area_spawn/secmed_landmark // Убрал, ибо у нас итак на каждой карте вручную проставлена хуйня.
+// 	target_areas = list(/area/station/security/medical)
+// 	desired_atom = /obj/effect/landmark/start/security_medic
 
 ////////////////
 

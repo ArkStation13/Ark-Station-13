@@ -254,9 +254,9 @@
 	name = "CIA"
 	icon_state = "hair_cia"
 
-/datum/sprite_accessory/hair/coffeehouse
-	name = "Coffee House"
-	icon_state = "hair_coffeehouse"
+// /datum/sprite_accessory/hair/coffeehouse
+// 	name = "Coffee House"
+// 	icon_state = "hair_coffeehouse"
 
 /datum/sprite_accessory/hair/combover
 	name = "Combover"

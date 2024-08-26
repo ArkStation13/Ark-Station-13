@@ -143,6 +143,9 @@ const FilterItemList = (items: LoadoutItem[]) => {
     if (item.erp_item && !erp_pref) {
       return false;
     }
+    if (item.erp_item && !erp_pref) {
+      return false;
+    }
 
     return true;
   });

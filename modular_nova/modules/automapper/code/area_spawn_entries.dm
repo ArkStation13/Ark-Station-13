@@ -37,7 +37,7 @@
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
 /datum/area_spawn/lustwish_prison
-	target_areas = list(/area/station/security/prison/*, /area/station/security/prison/shower*/) // ARK STATION EDIT
+	target_areas = list(/area/station/security/prison, /area/station/security/prison/shower)
 	desired_atom = /obj/machinery/vending/dorms
 	mode = AREA_SPAWN_MODE_HUG_WALL
 

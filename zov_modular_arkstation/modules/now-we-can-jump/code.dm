@@ -16,7 +16,7 @@
 			user.emote("cry") // НУ ЗАПЛАЧЬ.
 			return
 
-	if(prob(0.01))
+	if(prob(0.05)) // Шанс на отправку в ПИЗДЕЦ.
 		user.send_to_void()
 		user.emote("agony")
 		user.overlay_fullscreen("flash_void", /atom/movable/screen/fullscreen/flash/black)
@@ -24,10 +24,10 @@
 		user.clear_fullscreen("flash_void", rand(15, 60))
 		return
 
-	if(user.legcuffed)
-		if(user.handcuffed)
+	if(user.legcuffed) // Если Ноги связаны (Болой к примеру)
+		if(user.handcuffed) // А если ещё и руки.
 			user.visible_message(span_alert("[user] tried to jump with [user.p_their()] hands and feet tied, which is why [user.p_they()] fell and [jump_message]."))
-			if(jump_message == JUMP_MESSAGE_NOSE)
+			if(jump_message == JUMP_MESSAGE_NOSE) // Если зарандомил ломание носа.
 				user.adjustStaminaLoss(30)
 				user.Paralyze(30)
 				user.adjustBruteLoss(30)
@@ -37,7 +37,7 @@
 				sleep(6 SECONDS)
 				user.clear_fullscreen("flash_void", rand(15, 60))
 				return
-			else
+			else // Повезло просто удариться.
 				user.adjustStaminaLoss(20)
 				user.adjustBruteLoss(10)
 				user.Paralyze(10)
@@ -46,6 +46,16 @@
 		user.adjustStaminaLoss(20)
 		user.Paralyze(10)
 		return
+
+// Проверки на Пуллы
+	if(user.pulledby)
+		to_chat(user, span_warning("I won't be able to jump while I'm being pulled."))
+		return
+
+	if(user.pulling)
+		to_chat(user, span_warning("I won't be able to jump while I'm pulling someone."))
+		return
+//
 
 	if(user.staminaloss >= 60) // ПРЕДУПРЕЖДАЕМ ЧТО НЕКСТ ПРЫЖОК 100% БУДЕТ ЛЕЖАЧИМ.
 		to_chat(user, span_warning("My legs are really starting to hurt..."))

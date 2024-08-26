@@ -36,7 +36,7 @@
 /// These shuttles leave when the main emergency shuttle does but don't dock anywhere (to save space), so this counts as "escaped".
 #define ENDGAME_TRANSIT 3
 
-//positive value = cannot puchase
+//positive value = cannot purchase
 #define SHUTTLEPURCHASE_PURCHASABLE 0 //station can buy a shuttle
 #define SHUTTLEPURCHASE_PURCHASED 1 //station has already bought a shuttle, so cannot
 #define SHUTTLEPURCHASE_FORCED 2 //station was given a new shuttle through events or other shenanigans
@@ -49,7 +49,7 @@
 
 #define SHUTTLE_TRANSIT_BORDER 16
 
-#define PARALLAX_LOOP_TIME 25
+#define PARALLAX_LOOP_TIME 24 // ARK STATION EDIT (25) - BEE STATION PARALAX SYSTEM
 #define HYPERSPACE_END_TIME 5
 
 #define HYPERSPACE_WARMUP 1

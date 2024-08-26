@@ -49,7 +49,7 @@
 
 /obj/item/encryptionkey/headset_syndicate/inteq
 	name = "InteQ Encryption Key"
-	channels = list(RADIO_CHANNEL_SYNDICATE = 1)
+	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1)
 	icon_state = "inteq_cypherkey"
 	icon = 'zov_modular_arkstation/modules/faction-inteq/icons/key.dmi'
-	independent = TRUE
+	special_channels = RADIO_SPECIAL_CENTCOM

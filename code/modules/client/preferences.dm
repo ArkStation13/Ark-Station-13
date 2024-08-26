@@ -247,12 +247,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			remove_current_slot()
 			return TRUE
 		if ("rotate")
+		/* // ARK STATION EDIT START
 			/* NOVA EDIT - Bi-directional prefs menu rotation - ORIGINAL:
 			character_preview_view.setDir(turn(character_preview_view.dir, -90))
 			*/ // ORIGINAL END - NOVA EDIT START:
 			var/backwards = params["backwards"]
 			character_preview_view.setDir(turn(character_preview_view.dir, backwards ? 90 : -90))
 			// NOVA EDIT END
+			return TRUE
+		*/
+			var/direction = !!params["direction"]
+			if(isatom(character_preview_view.body))
+				character_preview_view.setDir(turn(character_preview_view.dir, (direction ? 1 : -1) * 90))
+		// ARK STATION EDIT END
+
 			return TRUE
 		if ("set_preference")
 			var/requested_preference_key = params["preference"]
@@ -306,6 +314,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				return FALSE
 
 			return TRUE
+
+// ARK STATION ADDITION START
+		if("open_game_preferences")
+			current_window = PREFERENCE_TAB_GAME_PREFERENCES
+			update_static_data(usr)
+			ui_interact(usr)
+			return TRUE
+		if("open_character_preferences")
+			current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
+			update_static_data(usr)
+			ui_interact(usr)
+			return TRUE
+// ARK STATION ADDITION END
+
 		// NOVA EDIT ADDITION START
 		if("update_preview")
 			preview_pref = params["updated_preview"]
