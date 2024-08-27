@@ -126,7 +126,7 @@ SUBSYSTEM_DEF(dynamic)
 	/// Equivalent to threat_curve_centre, but for the budget split.
 	/// A negative value will weigh towards midround rulesets, and a positive
 	/// value will weight towards roundstart ones.
-	var/roundstart_split_curve_centre = -1 // ARK STATION EDIT || 0
+	var/roundstart_split_curve_centre = 1 // ARK STATION EDIT || 0
 
 	/// A number between 0.5 and 4.
 	/// Equivalent to threat_curve_width, but for the budget split.
