@@ -1,9 +1,9 @@
 /obj/item/clothing/suit/armor/hos/pmc_leader_armor
 	name = "M4 pattern PMC leader armor"
 	desc = "A modification of the M4 body armor, it is designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "officer_armor"
 
 /obj/item/clothing/head/helmet/toggleable/riot/cerberus
@@ -64,42 +64,42 @@
 /obj/item/clothing/suit/armor/riot/cerberus/censor
 	name = "censor's coat"
 	desc = "A red overcoat with the coat of arms of Ravenheart in the middle. It has steel plates sewn into it."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "censor"
 
 /obj/item/clothing/suit/armor/riot/cerberus/baron
 	name = "gorgeous red outfit"
 	desc = "Lush black outfit with red stripes. Looks definitely very rich."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "baron"
 //////////////////////////////////////////////
 /obj/item/clothing/suit/hooded/chaplain_hoodie/monk_robe
 	name = "monk robe"
 	desc = "Now with a hood."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "monk"
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/monk_robe_hood
 //
 /obj/item/clothing/head/hooded/chaplain_hood/monk_robe_hood
 	name = "monk robe hood"
 	desc = "A torn hoodie that fits over your head."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 	icon_state = "monk_robe_hood"
 	flags_inv = HIDEHAIR|HIDEEARS
 ////////////////////////////////////////////////
 /obj/item/clothing/suit/hooded/plaguedoc_new
 	name = "plague doctor robe"
 	desc = "Everything will be fine..."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "plaguedoc"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
@@ -111,17 +111,17 @@
 /obj/item/clothing/head/hooded/plaguedoc_new
 	name = "plague doctor hood"
 	desc = "A torn hoodie that fits over your head."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 	icon_state = "plaguedoc_hood"
 	flags_inv = HIDEHAIR|HIDEEARS
 ///////////////////////////////////////////////
 /obj/item/clothing/suit/armor/riot/cerberus/inkvd
 	name = "inquisitor's overcoat"
 	desc = "Large overcoat with red embroidery on the sleeves. It also has a cross stitch on it."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "inkvd"
 
 //InteQ//
@@ -129,9 +129,9 @@
 /obj/item/clothing/suit/armor/inteq
 	name = "InteQ armor vest"
 	desc = "Strict black armor vest. Well, at least you won't die immediately."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "armor"
 
 /obj/item/clothing/suit/armor/inteq/honorable_vanguard
@@ -153,17 +153,17 @@
 /obj/item/clothing/suit/hooded/wintercoat/syndicate/inteq
 	name = "InteQ winter coat"
 	desc = "A sinister brown coat with black accents and a fancy mantle, it feels like it can take a hit."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "coatinteq"
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/syndicate/inteq
 ///Hood
 /obj/item/clothing/head/hooded/winterhood/syndicate/inteq
 	name = "InteQ winter hood"
 	desc = "A sinister brown hood with armor padding."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 	icon_state = "winterhood_inteq"
 ///
 
@@ -175,8 +175,8 @@
 // 	desc = "InteQ elite stormtrooper hardsuit helmet."
 // 	icon_state = "hardsuit0-inteqe"
 // 	item_state = "hardsuit0-inteqe"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 // 	hardsuit_type = "inteqe"
 // //Suit_ELITE
 // /obj/item/clothing/suit/space/hardsuit/syndi/elite/inteq
@@ -185,8 +185,8 @@
 // 	icon_state = "hardsuit0-inteqe"
 // 	item_state = "hardsuit0-inteqe"
 // 	hardsuit_type = "inteqe"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 // 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/suits_digidrated.dmi'
 // 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/inteq
 
@@ -211,8 +211,8 @@
 // 	desc = "InteQ stormtrooper hardsuit helmet."
 // 	icon_state = "hardsuit0-inteq"
 // 	item_state = "hardsuit0-inteq"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 // 	hardsuit_type = "inteq"
 
 // //Suit_STANDART
@@ -222,9 +222,9 @@
 // 	icon_state = "hardsuit0-inteq"
 // 	item_state = "hardsuit0-inteq"
 // 	hardsuit_type = "inteq"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 // 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/inteq
 // //////////
 
@@ -234,8 +234,8 @@
 // 	desc = "OTA stormtrooper hardsuit helmet."
 // 	icon_state = "hardsuit0-alliance"
 // 	item_state = "hardsuit0-alliance"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 // 	hardsuit_type = "alliance"
 
 // //Suit_ALLIANCE
@@ -245,9 +245,9 @@
 // 	icon_state = "hardsuit0-alliance"
 // 	item_state = "hardsuit0-alliance"
 // 	hardsuit_type = "alliance"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 
 // 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/alliance
 
@@ -259,8 +259,8 @@
 // 	desc = "InteQ shielded stormtrooper hardsuit helmet."
 // 	icon_state = "hardsuit0-inteq"
 // 	item_state = "hardsuit0-inteq"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 // 	hardsuit_type = "inteq"
 
 // //Suit_SHIELDED
@@ -270,9 +270,9 @@
 // 	icon_state = "hardsuit0-inteq"
 // 	item_state = "hardsuit0-inteq"
 // 	hardsuit_type = "inteq"
-// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+// 	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+// 	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+// 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 // 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/shielded/syndi/inteq
 // 	shield_state = "shield-yellow"
 
@@ -296,16 +296,16 @@
 /obj/item/clothing/head/helmet/space/syndicate/inteq
 	name = "brown space helmet"
 	icon_state = "space-inteq"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/head.dmi'
 
 
 /obj/item/clothing/suit/space/syndicate/inteq
 	name = "brown space suit"
 	icon_state = "space-inteq"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/suits.dmi'
 
 /////////////////
 

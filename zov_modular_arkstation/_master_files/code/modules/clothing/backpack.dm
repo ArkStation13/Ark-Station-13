@@ -2,7 +2,7 @@
 	name = "fabric satchel"
 	desc = "Bag with a flimsy closure and slit sides."
 	worn_icon_state = "satchel"
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/backpack.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/back/backpack.dmi'
 
 /obj/item/storage/belt/medical/aesculapus
 	name = "aesculapus medical belt"
@@ -19,15 +19,15 @@
 	name = "combat backpack"
 	desc = "Comfortable and stylish backpack."
 	icon_state = "backpack_inteq"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/backpack.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/backpack.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/back/backpack.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/back/backpack.dmi'
 
 /obj/item/storage/backpack/satchel/sec/inteq
 	name = "combat satchel"
 	desc = "The bag looks like a mail bag and has brown-yellow inserts."
 	icon_state = "satchel_inteq"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/backpack.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/backpack.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/back/backpack.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/back/backpack.dmi'
 
 /obj/item/storage/belt/military/inteq
 	name = "combat webbing"
@@ -43,6 +43,6 @@
 /obj/item/storage/backpack/duffelbag/syndie/inteq
 	name = "Suspicious Looking Duffel Bag"
 	desc = "A large duffel bag for holding extra tactical supplies."
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/backpack.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/backpack.dmi'
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/back/backpack.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/back/backpack.dmi'
 	icon_state = "duffel-inteq"

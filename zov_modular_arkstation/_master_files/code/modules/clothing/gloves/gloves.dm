@@ -1,0 +1,11 @@
+/obj/item/clothing/gloves/combat/maid/inteq
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/gloves/gloves.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/gloves/gloves.dmi'
+	icon_state = "inteqmaid_arms"
+
+/obj/item/clothing/gloves/color/latex/nitrile/plaguedoc_new
+	name = "plague doctor gloves"
+	desc = "They look extremely unhygienic... They just look, right..?"
+	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/gloves/gloves.dmi'
+	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/gloves/gloves.dmi'
+	icon_state = "plaguedoc_gloves"
