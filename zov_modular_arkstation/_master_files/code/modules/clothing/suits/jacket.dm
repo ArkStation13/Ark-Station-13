@@ -3,9 +3,9 @@
 /obj/item/clothing/suit/jacket/tailcoat //parent type
 	name = "tailcoat"
 	desc = "A coat usually worn by bunny themed waiters and the like."
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket_digi.dmi'
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "tailcoat"
 	greyscale_colors = "#39393f"
 	greyscale_config = /datum/greyscale_config/tailcoat
@@ -59,9 +59,9 @@
 /obj/item/clothing/suit/wizrobe/magician //Not really a robe but it's MAGIC
 	name = "magician's tailcoat"
 	desc = "A magnificent, gold-lined tailcoat that seems to radiate power."
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket_digi.dmi'
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "tailcoat_wiz"
 	inhand_icon_state = null
 	flags_inv = null
@@ -116,8 +116,8 @@
 	desc = "A nautical coat usually worn by bunny themed captains. It’s reinforced with genetically modified armored blue rabbit fluff."
 	icon_state = "captain"
 	inhand_icon_state = null
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	dog_fashion = null
@@ -208,8 +208,8 @@
 	name = "atmospheric technician's tailcoat"
 	desc = "A heavy duty fire-tailcoat worn by bunny themed atmospheric technicians. Reinforced with asbestos weave that makes this both stylish and lung-cancer inducing."
 	icon_state = "atmos"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	body_parts_covered = CHEST|GROIN|ARMS
 	slowdown = 0
@@ -235,8 +235,8 @@
 	name = "chief engineer's tailcoat"
 	desc = "A heavy duty green and white coat worn by bunny themed chief engineers. Made of a three layered composite fabric that is both insulating and fireproof, it also has an open face rendering all this useless."
 	icon_state = "ce"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	body_parts_covered = CHEST|GROIN|ARMS
 	slowdown = 0
@@ -264,8 +264,8 @@
 	name = "medical tailcoat"
 	desc = "A sterile white and blue coat worn by bunny themed doctors. Great for keeping the blood off."
 	icon_state = "doctor"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 
 /obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/paramedic
 	name = "paramedic's tailcoat"
@@ -314,8 +314,8 @@
 	name = "research director's tailcoat"
 	desc = "A smart purple coat worn by bunny themed head researchers. Created from captured abductor technology, what looks like a coat is actually an advanced hologram emitted from the pauldrons. Feels exactly like the real thing, too."
 	icon_state = "rd"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	body_parts_covered = CHEST|ARMS|GROIN
 
 //SECURITY
@@ -325,8 +325,8 @@
 	desc = "A reinforced tailcoat worn by bunny themed security officers. Uses the same lightweight armor as the MK 1 vest, though obviously has lighter protection in the chest area."
 	icon_state = "sec"
 	inhand_icon_state = "armor"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	dog_fashion = null
@@ -351,8 +351,8 @@
 	name = "detective's tailcoat"
 	desc = "A reinforced tailcoat worn by bunny themed detectives. Perfect for a hard boiled no-nonsense type of gal."
 	icon_state = "detective"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 
 /obj/item/clothing/suit/jacket/det_suit/tailcoat/noir
 	name = "noir detective's tailcoat"
@@ -364,8 +364,8 @@
 	desc = "A reinforced tailcoat worn by bunny themed security commanders. Enhanced with a special alloy for some extra protection and style."
 	icon_state = "hos"
 	inhand_icon_state = "armor"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	dog_fashion = null
@@ -378,8 +378,8 @@
 	desc = "A strict looking coat usually worn by bunny themed bureaucrats. The pauldrons are sure to make people finally take you seriously."
 	icon_state = "hop"
 	inhand_icon_state = "armor"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	dog_fashion = null
