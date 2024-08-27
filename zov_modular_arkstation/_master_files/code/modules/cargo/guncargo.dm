@@ -1,7 +1,7 @@
-#define MAX_HANDOUT_CHOICES 3
+#define MAX_HANDOUT_CHOICES 5 // 3
 
-#define BASE_COST_MINIMUM 1000
-#define BASE_COST_MAXIMUM 5000
+#define BASE_COST_MINIMUM 500
+#define BASE_COST_MAXIMUM 2000
 
 SUBSYSTEM_DEF(cargo_companies)
 	name = "Cargo Companies"
