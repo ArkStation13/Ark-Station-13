@@ -51,8 +51,8 @@
 	name = "heeled mining boots"
 	desc = "Steel-toed mining heels for mining in hazardous environments. This was an awful idea."
 	icon_state = "explorer_heeled"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/feet/feet.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/feet/feet.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/feet/feet.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/feet/feet.dmi'
 	species_exception = null
 
 /obj/item/clothing/shoes/fancy_heels/navyblue
@@ -64,8 +64,8 @@
 	name = "heeled work boots"
 	desc = "Nanotrasen-issue Engineering lace-up work heels that seem almost especially designed to cause a workplace accident."
 	icon_state = "workboots_heeled"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/feet/feet.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/feet/feet.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/feet/feet.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/feet/feet.dmi'
 	species_exception = null
 
 //MEDICAL
@@ -119,8 +119,8 @@
 	name = "tactical go-go boots"
 	desc = "Highly tactical footwear designed to give you a better view of the battlefield."
 	icon_state = "hos_boots"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/feet/feet.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/feet/feet.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/feet/feet.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/feet/feet.dmi'
 
 //SERVICE
 
@@ -135,8 +135,8 @@
 	name = "heeled galoshes"
 	desc = "A pair of yellow rubber heels, designed to prevent slipping on wet surfaces. These are even harder to walk in than normal heels."
 	icon_state ="galoshes_heeled"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/feet/feet.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/feet/feet.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/feet/feet.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/feet/feet.dmi'
 	custom_premium_price = PAYCHECK_CREW * 3
 
 /obj/item/clothing/shoes/fancy_heels/green
@@ -150,8 +150,8 @@
 	name = "honk heels"
 	desc = "A pair of high heeled clown shoes. What kind of maniac would design these?"
 	icon_state ="honk_heels"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/feet/feet.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/feet/feet.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/feet/feet.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/feet/feet.dmi'
 
 /obj/item/clothing/shoes/fancy_heels/darkgreen
 	name = "dark green heels"

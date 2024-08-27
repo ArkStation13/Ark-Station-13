@@ -42,7 +42,7 @@
 
 /datum/greyscale_config/playbunnyears
 	name = "Playbunny Ears"
-	icon_file = 'zov_modular_arkstation/modules/clothing-update/obj/clothing/head/hats.dmi'
+	icon_file = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/hats.dmi'
 	json_config = 'modular_nova/modules/GAGS/json_configs/bunny_stuff/playbunny_ears.json'
 
 /datum/greyscale_config/playbunnyears_worn

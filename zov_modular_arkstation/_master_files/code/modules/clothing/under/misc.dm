@@ -5,7 +5,7 @@
 	desc = "The staple of any bunny themed waiters and the like. It has a little cottonball tail too."
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/costume.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/costume.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/costume_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/costume_digi.dmi'
 	icon_state = "playbunny"
 	greyscale_colors = "#39393f#39393f#ffffff#87502e"
 	greyscale_config = /datum/greyscale_config/bunnysuit
@@ -24,7 +24,7 @@
 	desc = "The staple of any bunny themed syndicate assassins. Are those carbon nanotube stockings?"
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/costume.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/costume.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/costume_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/costume_digi.dmi'
 	icon_state = "syndibunny"
 	body_parts_covered = CHEST|GROIN|LEGS
 
@@ -379,8 +379,8 @@
 	desc = "The staple of any bunny themed security officers. The red coloring helps to hide any blood that may stain this."
 	name = "security bunnysuit"
 	icon_state = "bunnysuit_sec"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -393,8 +393,8 @@
 	desc = "The staple of any bunny themed security assistants. Can't lost respect you don't have!"
 	name = "security assistant's bunnysuit"
 	icon_state = "bunnysuit_sec_assistant"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -407,8 +407,8 @@
 	desc = "The staple of any bunny themed wardens. The more formal security bunny suit for a less combat focused job."
 	name = "warden's bunnysuit"
 	icon_state = "bunnysuit_warden"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -421,8 +421,8 @@
 	desc = "The staple of any bunny themed brig physicians. The rejected alternative to an already discontinued alternate uniform, now sold at a premium!"
 	name = "brig physician's bunnysuit"
 	icon_state = "bunnysuit_brig_phys"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -435,8 +435,8 @@
 	desc = "The staple of any bunny themed detectives. Capable of storing precious candy corns."
 	name = "detective's bunnysuit"
 	icon_state = "bunnysuit_det"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -449,8 +449,8 @@
 	desc = "The staple of any noir bunny themed detectives. Capable of storing precious candy corns."
 	name = "noir detective's bunnysuit"
 	icon_state = "bunnysuit_det_noir"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 
@@ -477,8 +477,8 @@
 	desc = "The staple of any bunny themed security commanders. Includes kevlar weave stockings and a gilded tail."
 	name = "Head of Security's bunnysuit"
 	icon_state = "bunnysuit_hos"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/under/security.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
 

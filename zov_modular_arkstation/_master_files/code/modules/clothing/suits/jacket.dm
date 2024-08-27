@@ -4,7 +4,7 @@
 	name = "tailcoat"
 	desc = "A coat usually worn by bunny themed waiters and the like."
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket_digi.dmi'
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "tailcoat"
 	greyscale_colors = "#39393f"
@@ -60,7 +60,7 @@
 	name = "magician's tailcoat"
 	desc = "A magnificent, gold-lined tailcoat that seems to radiate power."
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/_master_files/icons/mob/clothing/suits/jacket_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket_digi.dmi'
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "tailcoat_wiz"
 	inhand_icon_state = null

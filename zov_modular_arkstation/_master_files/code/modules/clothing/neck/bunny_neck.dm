@@ -22,7 +22,7 @@
 /obj/item/clothing/neck/tie/bunnytie
 	name = "bowtie collar"
 	desc = "A fancy tie that includes a collar. Looking snazzy!"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/neck/bunny_neck.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/neck/bunny_neck.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/neck/bunny_neck.dmi'
 	icon_state = "bowtie_collar_tied"
 	tie_type = "bowtie_collar"
@@ -476,7 +476,7 @@
 /obj/item/clothing/neck/tie/clown
 	name = "clown's bowtie"
 	desc = "An outrageously large blue bowtie. Looking funny!"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/neck/bunny_neck.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/neck/bunny_neck.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/neck/bunny_neck.dmi'
 	icon_state = "bowtie_clown_tied"
 	tie_type = "bowtie_clown"
@@ -493,7 +493,7 @@
 	name = "bunny pendant"
 	desc = "A golden pendant depicting a holy rabbit."
 	icon_state = "chaplain_pendant"
-	icon = 'zov_modular_arkstation/_master_files/icons/obj/clothing/neck/bunny_neck.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/neck/bunny_neck.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/neck/bunny_neck.dmi'
 
 /obj/item/clothing/neck/tie/bunnytie/lawyer_black

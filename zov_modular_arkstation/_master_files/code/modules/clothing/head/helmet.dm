@@ -3,8 +3,8 @@
 /obj/item/clothing/head/helmet/toggleable/pinwheel //sprites by Keila
 	name = "pinwheel hat"
 	desc = "Space Jesus gives his silliest hats to his most whimsical of goobers."
-	icon = 'zov_modular_arkstation/modules/clothing-update/obj/clothing/head/hats.dmi'
-	worn_icon = 'zov_modular_arkstation/_master_files/icons/mob/clothing/head/hats.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/hats.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/hats.dmi'
 	icon_state = "pinwheel"
 	inhand_icon_state = null
 	lefthand_file = null
@@ -35,7 +35,7 @@
 /obj/item/clothing/head/playbunnyears
 	name = "bunny ears headband"
 	desc = "A pair of bunny ears attached to a headband. One of the ears is already crooked."
-	icon = 'zov_modular_arkstation/modules/clothing-update/obj/clothing/head/hats.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/hats.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/bunnyears.dmi'
 	icon_state = "playbunny_ears"
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON
@@ -96,7 +96,7 @@
 	desc = "A pair of dark blue bunny ears attached to a headband. Worn in lieu of the more traditional bicorn hat."
 	icon_state = "captain"
 	inhand_icon_state = "that"
-	icon = 'zov_modular_arkstation/modules/clothing-update/obj/clothing/head/hats.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/hats.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/bunnyears.dmi'
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON
 	dog_fashion = null
