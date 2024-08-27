@@ -1,3 +1,4 @@
+// PORT FROM BUBBER
 /obj/item/storage/box/syndibunny
 	name = "Syndicate bunny assassin outfit"
 	desc = "A box containing a high tech specialized syndicate... bunny suit?"
