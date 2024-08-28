@@ -30,10 +30,12 @@
 	template_id = "shelter_echo"
 
 /datum/armament_entry/company_import/deforest/equipment/medpod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/medical
 	cost = PAYCHECK_COMMAND * 40
 
 /datum/armament_entry/company_import/deforest/equipment/chempod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/chemistry
 	cost = PAYCHECK_COMMAND * 20
 
@@ -199,22 +201,27 @@
 	banned_objects = typecacheof(/obj/structure/stone_tile)
 
 /datum/armament_entry/company_import/nri_surplus/misc/botanypod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/botany
 	cost = PAYCHECK_COMMAND * 4
 
 /datum/armament_entry/company_import/nri_surplus/misc/botanytrayspod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/trays
 	cost = PAYCHECK_COMMAND * 2
 
 /datum/armament_entry/company_import/nri_surplus/misc/kitchenpod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/kitchen
 	cost = PAYCHECK_COMMAND * 4
 
 /datum/armament_entry/company_import/nri_surplus/misc/o2pod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/o2
 	cost = PAYCHECK_COMMAND * 4
 
 /datum/armament_entry/company_import/nri_surplus/misc/fanpod
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/fan
 	cost = PAYCHECK_COMMAND * 1
 
@@ -223,9 +230,11 @@
 	cost = PAYCHECK_COMMAND * 1
 
 /datum/armament_entry/company_import/nri_surplus/misc/sixbysix
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/sixbysix
 	cost = PAYCHECK_COMMAND * 2
 
 /datum/armament_entry/company_import/nri_surplus/misc/cabin
+	subcategory = "Bluespace Pods"
 	item_type = /obj/item/survivalcapsule/cabin
 	cost = PAYCHECK_COMMAND * 2
