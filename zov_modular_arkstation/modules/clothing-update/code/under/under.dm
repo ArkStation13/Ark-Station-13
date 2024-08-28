@@ -147,11 +147,16 @@
 	name = "doll's dress"
 	desc = "Some dolly dress. Snip-snip"
 	icon_state = "gwen_dress"
-	inhand_icon_state = null
 	icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/dress.dmi'
 	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/mob/clothes_on.dmi'
 	lefthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/dress_left.dmi'
 	righthand_file = 'zov_modular_arkstation/modules/clothing-update/icons/gwen_clothes/obj/dress_right.dmi'
+
+/obj/item/clothing/under/arkstation/demi_skirt
+	name = "\improper Demi's skirt"
+	desc = "An old skirt with a breastplate. However, it hardly has any meaning."
+	icon_state = "demi_skirt"
+	inhand_icon_state = null
 	can_adjust = FALSE
 
 // SECURITY OVERRIDES
