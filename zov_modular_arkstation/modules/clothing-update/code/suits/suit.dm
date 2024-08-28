@@ -1,8 +1,8 @@
 /obj/item/clothing/suit/armor/vest/alt/sec/metropolice
 	name = "metropolice armor vest"
 	desc = "Pick up that can."
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	//worn_icon_digi = 'zov_modular_arkstation/clothing-update/icons/mob/clothing/suits_digi.dmi'
 	icon_state = "metrocop_armor"
 
@@ -20,8 +20,8 @@
 	name = "distinguished red dress"
 	desc = "A luxurious dress."
 	icon_state = "baroness"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS
 	flags_inv = HIDESHOES
@@ -33,49 +33,49 @@
 /obj/item/clothing/suit/armor/hos/syndicate_overcoat
 	name = "Syndicate overcoat"
 	icon_state = "str"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 
 /obj/item/clothing/head/utility/bomb_hood
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head_digi.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head_digi.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/utility/bomb_suit
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/head/utility/bomb_hood/security
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head_digi.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head_digi.dmi'
 
 /obj/item/clothing/suit/utility/bomb_suit/security
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 
 /obj/item/clothing/head/utility/bomb_hood/white
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head.dmi'
-	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head_digi.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/head/head.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/head/head_digi.dmi'
 
 /obj/item/clothing/suit/utility/bomb_suit/white
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 
 /obj/item/clothing/suit/toggle/jacket/flannel/white
 	name = "white flannel jacket"
 	icon_state = "flannel_white"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 
 /obj/item/clothing/suit/jacket/det_suit/fore_blue
 	name = "forensics blue coat"
 	icon_state = "forensics_blue"
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/suit/jacket/det_suit/fore_blue/fore_red
@@ -91,8 +91,8 @@
 	icon_state = "forensics_red_long"
 
 /obj/item/clothing/suit/toggle/hawaiiblack
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	name = "black hawaii shirt"
 	desc = "Tommy Vercetti is an innocent man."
 	icon_state = "hawaiiblack"
@@ -119,12 +119,12 @@
 
 /obj/item/clothing/head/mod
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION
-	worn_icon_muzzled = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/mod_digi.dmi'
+	worn_icon_muzzled = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/mod_digi.dmi'
 	worn_icon_better_vox = 'modular_nova/modules/better_vox/icons/clothing/mod.dmi'
 
 /obj/item/clothing/suit/mod
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
-	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/mod_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/mod_digi.dmi'
 	worn_icon_better_vox = 'modular_nova/modules/better_vox/icons/clothing/mod.dmi'
 
 /obj/item/clothing/gloves/mod
@@ -133,7 +133,7 @@
 
 /obj/item/clothing/shoes/mod
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
-	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/mod_digi.dmi'
+	worn_icon_digi = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/mod_digi.dmi'
 	worn_icon_better_vox = 'modular_nova/modules/better_vox/icons/clothing/mod.dmi'
 
 /obj/item/mod/control
@@ -186,8 +186,8 @@
 	)
 	variants = list(
 		"inteqe" = list(
-		MOD_ICON_OVERRIDE = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/mod.dmi', // Ark Station 13 Edit
-		MOD_WORN_ICON_OVERRIDE = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/mod.dmi', // Ark Station 13 Edit
+		MOD_ICON_OVERRIDE = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/mod.dmi', // Ark Station 13 Edit
+		MOD_WORN_ICON_OVERRIDE = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/mod.dmi', // Ark Station 13 Edit
 			/obj/item/clothing/head/mod = list(
 				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -226,21 +226,21 @@
 
 /obj/item/clothing/suit/armor/riot
 	uses_advanced_reskins = TRUE
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "riot"
 	inhand_icon_state = "swat_suit"
 	unique_reskin = list(
 		"Default" = list(
 			RESKIN_ICON_STATE = "riot",
-			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
-			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
+			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi',
+			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi',
 			RESKIN_WORN_ICON_STATE = "riot"
 		),
 		"Black" = list(
 			RESKIN_ICON_STATE = "riot-wm",
-			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
-			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
+			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi',
+			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi',
 			RESKIN_WORN_ICON_STATE = "riot-wm"
 		),
 		"Old" = list(
@@ -258,8 +258,8 @@
 
 /obj/item/clothing/suit/armor/bulletproof
 	uses_advanced_reskins = TRUE
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	icon_state = "riot"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -267,14 +267,14 @@
 	unique_reskin = list(
 		"Default" = list(
 			RESKIN_ICON_STATE = "bulletproof",
-			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
-			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
+			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi',
+			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi',
 			RESKIN_WORN_ICON_STATE = "bulletproof"
 		),
 		"Black" = list(
 			RESKIN_ICON_STATE = "bulletproof-wm",
-			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi',
-			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi',
+			RESKIN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi',
+			RESKIN_WORN_ICON = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi',
 			RESKIN_WORN_ICON_STATE = "bulletproof-wm"
 		),
 		"Old" = list(
@@ -337,8 +337,8 @@
 /obj/item/clothing/suit/toggle/labcoat/paramedic/red
 	name = "red EMT coat"
 	desc = "Patch themselves up."
-	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits.dmi'
-	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits.dmi'
+	icon = 'zov_modular_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
+	worn_icon = 'zov_modular_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	icon_state = "labcoat_emtred"
 
