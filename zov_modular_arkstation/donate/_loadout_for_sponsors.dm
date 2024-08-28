@@ -48,7 +48,7 @@
 	item_path = /obj/item/clothing/neck/flaming_haori
 	ckeywhitelist = list("romontesque")
 
-/datum/loadout_item/whitelisted/demi_skirt // Krashly // НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ?
+/datum/loadout_item/whitelisted/demi_skirt // Krashly - НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ? // No_Terra-Vi-Ja - Автор спрайта.
 	name = "Demi's Skirt"
 	item_path = /obj/item/clothing/under/arkstation/demi_skirt
-	ckeywhitelist = list("Krashly")
+	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
