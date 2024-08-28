@@ -115,14 +115,6 @@
 	name = "purple hawaii shirt"
 	icon_state = "hawaiimotu"
 
-/obj/item/clothing/suit/jacket/demi
-	name = "\improper Demi's jacket"
-	desc = "A jacket that probably makes quite the effective outdoors wear. However, \
-		some barbarian has cut the sleeves in half."
-	icon_state = "jacket_short"
-	greyscale_config = /datum/greyscale_config/shortsleeve_crop_jacket/demi
-	greyscale_config_worn = /datum/greyscale_config/shortsleeve_crop_jacket/demi/worn
-
 ////////////////////////// MOD SUITS ///
 
 /obj/item/clothing/head/mod
