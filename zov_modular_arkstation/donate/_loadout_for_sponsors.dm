@@ -52,3 +52,8 @@
 	name = "Demi's Skirt"
 	item_path = /obj/item/clothing/under/arkstation/demi_skirt
 	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
+
+/datum/loadout_item/whitelisted/demi_scythe // Krashly - НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ? // No_Terra-Vi-Ja - Автор спрайта.
+	name = "Demi's Scythe"
+	item_path = /obj/item/organ/internal/cyberimp/arm/shard/scythe/demi
+	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
