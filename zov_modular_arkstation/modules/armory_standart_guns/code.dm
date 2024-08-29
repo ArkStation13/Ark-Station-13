@@ -34,6 +34,7 @@
 	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/storage/box/rubbershot(src)
+	new /obj/item/storage/box/rubbershot(src)
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
@@ -43,7 +44,6 @@
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
 	new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
-
 
 /obj/effect/spawner/armory_spawn/smg
 	guns = list(
@@ -107,7 +107,6 @@
 	embed_falloff_tile = 0
 
 // IN CARGO //
-
 /datum/supply_pack/security/armory/wt_gun
 	name = "WT-550 Guns Crate"
 	desc = "Contains three automatic WT-550 guns. Has no ammo in box!"

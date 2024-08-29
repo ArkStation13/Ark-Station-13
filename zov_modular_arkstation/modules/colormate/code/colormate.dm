@@ -180,7 +180,7 @@
 				active_mode = text2num(params["mode"])
 				return TRUE
 			if("choose_color")
-				var/chosen_color = input(usr, "Choose a color: ", "Colormate color picking", activecolor) as color|null
+				var/chosen_color = tgui_color_picker(usr, "Choose a color: ", "Colormate color picking", activecolor) // ARK STATION EDIT: TGUI COLOR PICKER
 				if(chosen_color)
 					activecolor = chosen_color
 				return TRUE
