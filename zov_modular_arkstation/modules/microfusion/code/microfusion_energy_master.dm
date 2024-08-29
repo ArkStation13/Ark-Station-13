@@ -580,9 +580,9 @@
 	if(cell)
 		hotswap = TRUE
 	var/obj/item/stock_parts/power_store/old_cell = cell
-	if(inserting_cell.charge)
-		balloon_alert(user, "can't insert a charged cell!")
-		return FALSE
+	// if(inserting_cell.charge)
+	// 	balloon_alert(user, "can't insert a charged cell!")
+	// 	return FALSE
 	if(display_message)
 		balloon_alert(user, "cell inserted")
 	if(hotswap)
