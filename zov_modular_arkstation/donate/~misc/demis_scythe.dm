@@ -57,17 +57,6 @@
 
 /obj/item/vorpalscythe/demi/Initialize(mapload)
 	. = ..()
-	AddComponent(
-		/datum/component/butchering, \
-		speed = 3 SECONDS, \
-		effectiveness = 125, \
-	)
-	AddElement(/datum/element/bane, mob_biotypes = MOB_PLANT, damage_multiplier = 0.5, requires_combat_mode = FALSE) //less good at killing revenants, much better at killing plants
-	CompDelete()
-
-/obj/item/vorpalscythe/demi/proc/CompDelete()
-	qdel(GetComponent(/datum/component/anti_magic))
-	qdel(GetComponent(/datum/component/effect_remover))
 
 /obj/item/vorpalscythe/demi/attack(mob/living/target, mob/living/user, params)
 	return ..()
