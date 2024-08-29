@@ -25,7 +25,7 @@
 		"microfusion_gun_attachment_nt_camo",
 		"microfusion_gun_attachment_heatsink",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 250)
 
 //Advanced microfusion
 /datum/techweb_node/advanced_microfusion
@@ -49,7 +49,7 @@
 		"microfusion_gun_attachment_rail",
 		"microfusion_gun_attachment_scope",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 400)
 
 
 // Bluespace microfusion
@@ -68,7 +68,7 @@
 		"microfusion_gun_attachment_repeater",
 		"bluespace_microfusion_phase_emitter",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 500)
 
 // Quantum microfusion
 /datum/techweb_node/quantum_microfusion
@@ -82,7 +82,7 @@
 	design_ids = list(
 		"microfusion_gun_attachment_xray",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 700)
 
 // Warcrime microfusion
 /datum/techweb_node/illegal_microfusion
@@ -100,7 +100,7 @@
 		"microfusion_gun_attachment_syndi_camo",
 		"microfusion_gun_attachment_suppressor",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 500)
 
 // clown microfusion. | This exists to not make this non modular
 /datum/techweb_node/clown_microfusion
