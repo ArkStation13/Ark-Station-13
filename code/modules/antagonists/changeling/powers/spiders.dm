@@ -1,4 +1,5 @@
 // ARK STATION RETURNED
+// ARK STATION EDIT
 /datum/action/changeling/spiders
 	name = "Spread Infestation"
 	desc = "Our form divides, creating a cluster of eggs which will grow into a deadly arachnid. Costs 45 chemicals."
@@ -7,6 +8,7 @@
 	chemical_cost = 45
 	dna_cost = 1
 	req_absorbs = 3
+        dna_cost = CHANGELING_POWER_INNATE
 
 //Makes a spider egg cluster. Allows us to introduce new aggressive life forms to the station.
 /datum/action/changeling/spiders/sting_action(mob/user)
