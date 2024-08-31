@@ -21,6 +21,24 @@
 			LAZYADD(outfit.backpack_contents, outfit.l_hand)
 		outfit.l_hand = item_path
 
+/datum/loadout_category/whitelisted/New()
+	. = ..()
+	category_info = "(3 allowed)"
+
+/datum/loadout_category/whitelisted/handle_duplicate_entires(
+	datum/preference_middleware/loadout/manager,
+	datum/loadout_item/conflicting_item,
+	datum/loadout_item/added_item,
+	list/datum/loadout_item/all_loadout_items,
+)
+	var/list/datum/loadout_item/whitelisted/others = list()
+	for(var/datum/loadout_item/whitelisted/other in all_loadout_items)
+		others += other
+
+	if(length(others) >= 3)
+		manager.deselect_item(others[1])
+	return TRUE
+
 ///////////////////// LIST /////////////////////
 
 /datum/loadout_item/whitelisted/sneaksuit // lordoftheflie
@@ -47,3 +65,13 @@
 	name = "Flaming Haori"
 	item_path = /obj/item/clothing/neck/flaming_haori
 	ckeywhitelist = list("romontesque")
+
+/datum/loadout_item/whitelisted/demi_skirt // Krashly - НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ? // No_Terra-Vi-Ja - Автор спрайта.
+	name = "Demi's Skirt"
+	item_path = /obj/item/clothing/under/arkstation/demi_skirt
+	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
+
+/datum/loadout_item/whitelisted/demi_scythe // Krashly - НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ? // No_Terra-Vi-Ja - Автор спрайта.
+	name = "Demi's Scythe"
+	item_path = /obj/item/organ/internal/cyberimp/arm/shard/scythe/demi
+	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
