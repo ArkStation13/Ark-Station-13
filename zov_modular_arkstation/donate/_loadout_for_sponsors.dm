@@ -21,6 +21,24 @@
 			LAZYADD(outfit.backpack_contents, outfit.l_hand)
 		outfit.l_hand = item_path
 
+/datum/loadout_category/whitelisted/New()
+	. = ..()
+	category_info = "(3 allowed)"
+
+/datum/loadout_category/whitelisted/handle_duplicate_entires(
+	datum/preference_middleware/loadout/manager,
+	datum/loadout_item/conflicting_item,
+	datum/loadout_item/added_item,
+	list/datum/loadout_item/all_loadout_items,
+)
+	var/list/datum/loadout_item/whitelisted/others = list()
+	for(var/datum/loadout_item/whitelisted/other in all_loadout_items)
+		others += other
+
+	if(length(others) >= 3)
+		manager.deselect_item(others[1])
+	return TRUE
+
 ///////////////////// LIST /////////////////////
 
 /datum/loadout_item/whitelisted/sneaksuit // lordoftheflie
