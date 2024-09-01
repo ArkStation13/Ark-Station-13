@@ -166,8 +166,12 @@
 			"Engineering" = /obj/item/robot_model/engineering,
 			"Medical" = /obj/item/robot_model/medical,
 			"Cargo" = /obj/item/robot_model/cargo,
+			"Miner" = /obj/item/robot_model/miner,
 			"Janitor" = /obj/item/robot_model/janitor,
+			"Service" = /obj/item/robot_model/service,
 		)
+		if(!CONFIG_GET(flag/disable_peaceborg))
+			GLOB.cyborg_model_list["Peacekeeper"] = /obj/item/robot_model/peacekeeper
 		if(!CONFIG_GET(flag/disable_secborg))
 			GLOB.cyborg_model_list["Security"] = /obj/item/robot_model/security
 

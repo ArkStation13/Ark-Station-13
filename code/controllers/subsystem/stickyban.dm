@@ -13,7 +13,6 @@ SUBSYSTEM_DEF(stickyban)
 	if (length(GLOB.stickybanadminexemptions))
 		restore_stickybans()
 	var/list/bannedkeys = sticky_banned_ckeys()
-	world.SetConfig("ban", "Criminality_Player", null)
 	//sanitize the sticky ban list
 
 	//delete db bans that no longer exist in the database and add new legacy bans to the database

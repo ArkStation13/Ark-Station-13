@@ -152,7 +152,7 @@
 	desc = "A normal welder with a larger tank for cyborgs."
 	icon_state = "module_engineer"
 	require_model = TRUE
-	model_type = list()
+	model_type = list(/obj/item/robot_model/miner)
 	model_flags = BORG_MODEL_MINER
 
 /obj/item/borg/upgrade/welder/action(mob/living/silicon/robot/R, user = usr)
