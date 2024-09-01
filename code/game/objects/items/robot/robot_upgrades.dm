@@ -159,7 +159,6 @@
 	desc = "A diamond drill replacement for the mining model's standard drill."
 	icon_state = "module_miner"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/miner)
 	model_flags = BORG_MODEL_MINER
 
 	items_to_add = list(/obj/item/pickaxe/drill/cyborg/diamond)
@@ -170,7 +169,6 @@
 	desc = "A satchel of holding replacement for mining cyborg's ore satchel module."
 	icon_state = "module_miner"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/miner)
 	model_flags = BORG_MODEL_MINER
 
 	items_to_add = list(/obj/item/storage/bag/ore/holding)
@@ -253,7 +251,6 @@
 	icon_state = "module_miner"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | FREEZE_PROOF
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/miner)
 	model_flags = BORG_MODEL_MINER
 
 /obj/item/borg/upgrade/lavaproof/action(mob/living/silicon/robot/borg, mob/living/user = usr)
@@ -734,7 +731,6 @@
 	desc = "A supplementary drinking glass storage apparatus for service cyborgs."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/borg/apparatus/beaker/drink)
@@ -754,7 +750,7 @@
 	desc = "An upgrade to the service model cyborg, allowing it to produce solid condiments."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
+	model_type = list()
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/reagent_containers/borghypo/condiment_synthesizer)
@@ -764,7 +760,7 @@
 	desc = "An upgrade to the service model cyborg, to help process foods."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
+	model_type = list()
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/knife/kitchen/silicon)
@@ -774,7 +770,7 @@
 	desc = "An upgrade to the service model cyborg, to help handle foods and paper."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
+	model_type = list()
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/borg/apparatus/service)
@@ -784,7 +780,7 @@
 	desc = "An upgrade to the service model cyborg, to help provide mobile service."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
+	model_type = list()
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/rolling_table_dock)
@@ -794,7 +790,7 @@
 	desc = "An upgrade to the service model cyborg, that lets them create more foods."
 	icon_state = "module_service"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/service)
+	model_type = list()
 	model_flags = BORG_MODEL_SERVICE
 
 	items_to_add = list(/obj/item/borg/cookbook)

@@ -14,5 +14,3 @@
 
 	if(!new_ipc_screen)
 		return
-
-	synth_species.switch_to_screen(human, new_ipc_screen)

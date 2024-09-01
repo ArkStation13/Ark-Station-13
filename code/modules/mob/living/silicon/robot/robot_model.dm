@@ -737,63 +737,6 @@
 		"Machinified Doctor" = list(SKIN_ICON_STATE = "medical", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
 		"Qualified Doctor" = list(SKIN_ICON_STATE = "qualified_doctor", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
 	)
-
-/obj/item/robot_model/miner
-	name = "Miner"
-	basic_modules = list(
-		/obj/item/assembly/flash/cyborg,
-		/obj/item/borg/sight/meson,
-		/obj/item/storage/bag/ore/cyborg,
-		/obj/item/pickaxe/drill/cyborg,
-		/obj/item/shovel,
-		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool/mini,
-		/obj/item/extinguisher/mini,
-		/obj/item/storage/bag/sheetsnatcher/borg,
-		/obj/item/gun/energy/recharge/kinetic_accelerator/cyborg,
-		/obj/item/gps/cyborg,
-		/obj/item/stack/marker_beacon,
-		/obj/item/t_scanner/adv_mining_scanner/cyborg,
-	)
-	radio_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_SUPPLY)
-	emag_modules = list(
-		/obj/item/borg/stun,
-	)
-	cyborg_base_icon = "miner"
-	model_select_icon = "miner"
-	hat_offset = list("north" = list(0, 0), "south" = list(0, 0), "east" = list(0, 0), "west" = list(0, 0))
-	borg_skins = list(
-		"Asteroid Miner" = list(SKIN_ICON_STATE = "minerOLD"),
-		"Spider Miner" = list(SKIN_ICON_STATE = "spidermin", SKIN_HAT_OFFSET = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(-2, -2), "west" = list(2, -2))),
-		"Lavaland Miner" = list(SKIN_ICON_STATE = "miner"),
-	)
-
-/obj/item/robot_model/peacekeeper
-	name = "Peacekeeper"
-	basic_modules = list(
-		/obj/item/assembly/flash/cyborg,
-		/obj/item/rsf/cookiesynth,
-		/obj/item/harmalarm,
-		/obj/item/reagent_containers/borghypo/peace,
-		/obj/item/holosign_creator/cyborg,
-		/obj/item/borg/cyborghug/peacekeeper,
-		/obj/item/extinguisher,
-		/obj/item/borg/projectile_dampen,
-		/obj/item/gps/cyborg, //ARK STATION EDIT
-	)
-	emag_modules = list(
-		/obj/item/reagent_containers/borghypo/peace/hacked,
-	)
-	cyborg_base_icon = "peace"
-	model_select_icon = "standard"
-	model_traits = list(TRAIT_PUSHIMMUNE)
-	hat_offset = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(1, -2), "west" = list(-1, -2))
-
-/obj/item/robot_model/peacekeeper/do_transform_animation()
-	..()
-	to_chat(loc, "<span class='userdanger'>Under Safeguard, you are an enforcer of the PEACE and preventer of HARM. \
-	You are not a security member and you are expected to follow orders and prevent harm above all else. Space law means nothing to you.</span>") // NOVA EDIT Changes verbiage off ASIMOV/HUMAN Focus
-
 /obj/item/robot_model/security
 	name = "Security"
 	basic_modules = list(
@@ -830,67 +773,6 @@
 			taser.update_appearance()
 		else
 			taser.charge_timer = 0
-
-/obj/item/robot_model/service
-	name = "Service"
-	basic_modules = list(
-		/obj/item/assembly/flash/cyborg,
-		//obj/item/reagent_containers/borghypo/borgshaker, // NOVA EDIT REMOVAL - SPECIFIC SHAKERS
-		//NOVA EDIT ADDITION START
-		/obj/item/reagent_containers/borghypo/borgshaker/specific/alcohol,
-		/obj/item/reagent_containers/borghypo/borgshaker/specific/soda,
-		/obj/item/reagent_containers/borghypo/borgshaker/specific/juice,
-		/obj/item/reagent_containers/borghypo/borgshaker/specific/misc,
-		//NOVA EDIT ADDITION END
-		/obj/item/borg/apparatus/beaker/service,
-		/obj/item/borg/apparatus/beaker, // NOVA EDIT ADDITION - Allows the pickup of different beakers for easier drink mixing
-		/obj/item/reagent_containers/cup/beaker/large, //I know a shaker is more appropiate but this is for ease of identification
-		//obj/item/reagent_containers/condiment/enzyme, // NOVA EDIT REMOVAL - Borg shaker has it
-		/obj/item/reagent_containers/dropper,
-		/obj/item/reagent_containers/syringe, //NOVA EDIT ADDITION
-		/obj/item/rsf,
-		/obj/item/storage/bag/tray,
-		/obj/item/storage/bag/tray, // NOVA EDIT ADDITION: Adds second tray
-		/obj/item/cooking/cyborg/power, //NOVA EDIT ADDITION
-		/obj/item/pen,
-		/obj/item/toy/crayon/spraycan/borg,
-		/obj/item/extinguisher/mini,
-		/obj/item/hand_labeler/borg,
-		/obj/item/razor,
-		/obj/item/instrument/guitar,
-		/obj/item/instrument/piano_synth,
-		/obj/item/lighter,
-		/obj/item/borg/lollipop,
-		/obj/item/stack/pipe_cleaner_coil/cyborg,
-		/obj/item/chisel,
-		/obj/item/reagent_containers/cup/rag,
-		/obj/item/storage/bag/money,
-		/obj/item/gps/cyborg, //ARK STATION EDIT
-	)
-	radio_channels = list(RADIO_CHANNEL_SERVICE)
-	emag_modules = list(
-		/obj/item/reagent_containers/borghypo/borgshaker/hacked,
-	)
-	cyborg_base_icon = "service_m" // display as butlerborg for radial model selection
-	model_select_icon = "service"
-	special_light_key = "service"
-	hat_offset = list("north" = list(0, 0), "south" = list(0, 0), "east" = list(0, 0), "west" = list(0, 0))
-	borg_skins = list(
-		"Bro" = list(SKIN_ICON_STATE = "brobot"),
-		"Butler" = list(SKIN_ICON_STATE = "service_m"),
-		"Kent" = list(SKIN_ICON_STATE = "kent", SKIN_LIGHT_KEY = "medical", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
-		"Tophat" = list(SKIN_ICON_STATE = "tophat", SKIN_LIGHT_KEY = NONE, SKIN_HAT_OFFSET = INFINITY),
-		"Waitress" = list(SKIN_ICON_STATE = "service_f"),
-	)
-
-/obj/item/robot_model/service/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
-	..()
-	var/obj/item/reagent_containers/enzyme = locate(/obj/item/reagent_containers/condiment/enzyme) in basic_modules
-	if(enzyme)
-		var/datum/reagents/spicyketchup = enzyme.reagents
-		if(spicyketchup.total_volume < spicyketchup.maximum_volume)
-			. = TRUE
-			enzyme.reagents.add_reagent(/datum/reagent/consumable/enzyme, 2 * coeff)
 
 /obj/item/robot_model/syndicate
 	name = "Syndicate Assault"
