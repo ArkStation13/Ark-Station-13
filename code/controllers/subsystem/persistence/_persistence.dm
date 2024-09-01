@@ -61,6 +61,7 @@ SUBSYSTEM_DEF(persistence)
 	load_panic_bunker() //NOVA EDIT ADDITION - PANICBUNKER
 	load_tram_counter()
 	load_adventures()
+	load_gamemode() // ARK STATION ADDITION - GAMEVOTE
 	return SS_INIT_SUCCESS
 
 ///Collects all data to persist.
@@ -79,6 +80,7 @@ SUBSYSTEM_DEF(persistence)
 			save_tram_history(transport.specific_transport_id)
 		save_tram_counter()
 	save_panic_bunker() //NOVA EDIT ADDITION - PANICBUNKER
+	save_gamemode() // ARK STATION ADDITION - GAMEVOTE
 
 ///Loads up Poly's speech buffer.
 /datum/controller/subsystem/persistence/proc/load_poly()

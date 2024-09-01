@@ -123,7 +123,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(!length(music))
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = pick(music)
+		login_music = 'zov_modular_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
@@ -169,6 +169,19 @@ SUBSYSTEM_DEF(ticker)
 				send2chat(new /datum/tgs_message_content("<@&[CONFIG_GET(string/game_alert_role_id)]> Round **[GLOB.round_id]** starting on [SSmapping.config.map_name], [CONFIG_GET(string/servername)]! \nIf you wish to be pinged for game related stuff, go to <#[CONFIG_GET(string/role_assign_channel_id)]> and assign yourself the roles."), CONFIG_GET(string/channel_announce_new_game)) // NOVA EDIT - Role ping and round ID in game-alert
 			// NOVA EDIT END
 			current_state = GAME_STATE_PREGAME
+			// ARK STATION ADDITION START
+			var/combo = check_combo()
+			switch(combo)
+				if("Dynamic")
+					dynamic_settings()
+					to_chat(world, span_ooc_announcement_text("<b>Три Dynamic'а подряд. Настраиваем Extended...</b>"))
+				if("Extended")
+					extended_settings()
+					to_chat(world, span_ooc_announcement_text("<b>Три Extended'а подряд. Настраиваем Dynamic...</b>"))
+				else
+					to_chat(world, span_ooc_announcement_text("<b>Начинаем голосование за Режим Игры!</b>"))
+					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE) // ARK STATION ADDITION - GAMEMODES
+			// ARK STATION ADDITION END
 			SStitle.change_title_screen() //NOVA EDIT ADDITION - Title screen
 			addtimer(CALLBACK(SStitle, TYPE_PROC_REF(/datum/controller/subsystem/title, change_title_screen)), 1 SECONDS) //NOVA EDIT ADDITION - Title screen
 			//Everyone who wants to be an observer is now spawned
