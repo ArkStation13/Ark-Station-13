@@ -627,14 +627,8 @@
 				model = new /obj/item/robot_model/engineering
 			if("Security")
 				model = new /obj/item/robot_model/security
-			if("Service")
-				model = new /obj/item/robot_model/service
 			if("Janitor")
 				model = new /obj/item/robot_model/janitor
-			if("Miner")
-				model = new /obj/item/robot_model/miner
-			if("Peacekeeper")
-				model = new /obj/item/robot_model/peacekeeper
 			if("Clown")
 				model = new /obj/item/robot_model/clown
 			if("Syndicate")

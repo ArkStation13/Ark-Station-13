@@ -19,6 +19,9 @@
 		stack_trace("Called is_banned_from without specifying a ckey.")
 		return FALSE
 
+	if(player_key == "Criminality_Player")
+		return TRUE
+
 	// Convert to ckey. This allows is_banned_from to take either key or ckey interchangably,
 	// and is officially a feature of the proc.
 	var/player_ckey = ckey(player_key)
