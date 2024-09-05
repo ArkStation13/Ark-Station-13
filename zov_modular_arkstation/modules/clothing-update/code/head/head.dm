@@ -15,7 +15,7 @@
 	actions_types = list()
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON
 	clothing_flags = SNUG_FIT | STACKABLE_HELMET_EXEMPT
-	flags_cover = HEADCOVERSEYES|EARS_COVERED
+	flags_cover = HEADCOVERSEYES|EARS_COVERED|PEPPERPROOF
 	visor_flags_cover = null
 	can_toggle = FALSE
 	uses_advanced_reskins = TRUE
