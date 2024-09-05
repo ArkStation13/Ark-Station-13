@@ -100,9 +100,9 @@
 	autolinkers = list("supply")
 
 /obj/machinery/telecomms/server/presets/service
-	id = "Service Server"
-	freq_listening = list(FREQ_SERVICE, FREQ_CHURCH) // ARK STATION EDIT
-	autolinkers = list("service")
+	id = "Service Server & Entertainment Server"
+	freq_listening = list(FREQ_SERVICE, FREQ_ENTERTAINMENT, FREQ_CHURCH) // ARK STATION EDIT
+	autolinkers = list("service", "entertainment")
 
 /obj/machinery/telecomms/server/presets/common
 	id = "Common Server"

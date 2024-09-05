@@ -21,7 +21,7 @@
 	icon_state = "inteq_headset"
 	worn_icon_state = "syndie_headset"
 	icon = 'zov_modular_arkstation/modules/faction-inteq/icons/ear_obj.dmi'
-	radiosound = 'zov_modular_arkstation/modules/sounds-renewal/sound/radio.ogg'
+	radio_talk_sound = 'zov_modular_arkstation/modules/sounds-renewal/sound/radio.ogg'
 	freerange = FALSE
 	freqlock = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_syndicate/inteq
