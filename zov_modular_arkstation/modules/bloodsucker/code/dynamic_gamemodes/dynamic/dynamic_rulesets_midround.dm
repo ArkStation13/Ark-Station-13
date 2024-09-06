@@ -15,8 +15,8 @@
 	restricted_roles = BLOODSUCKER_RESTRICTED_ROLES
 	restricted_species = BLOODSUCKER_RESTRICTED_SPECIES
 	required_candidates = 1
-	weight = 5
-	cost = 10
+	weight = 12 // 5
+	cost = 16 // 10
 	requirements = list(40,30,20,10,10,10,10,10,10,10)
 	repeatable = FALSE
 
