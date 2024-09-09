@@ -5,7 +5,7 @@
 
 /atom/movable/screen/plane_master/shadowcasting/New()
 	. = ..()
-	add_filter("blur", 4, list("type" = "blur", size=2))
+	add_filter("thegreatdarkness", 1, drop_shadow_filter(x = 0, y = 0, size = 7, offset = 7, color = "#000000"))
 
 // A few vars shadowcasting needs
 /turf
@@ -49,7 +49,7 @@
 	locturf.shadowcasting_overlays = list()
 
 	// Handles almost every edge case there is.
-	var/vrange = 7
+	var/vrange = 11
 	var/moveid = rand(0,65535)
 	var/list/atom/movable/new_triangles = list()
 
@@ -147,21 +147,9 @@
 		var/right = dx-(signx*16)+(signx*32*width)
 
 		var/fac = 32/L
-		if(zy)
-			low_triangles += new /datum/triangle(left, top, left, bottom, left*fac, bottom*fac)
-			low_triangles += new /datum/triangle(left*fac,top*fac,left,top,left*fac,bottom*fac)
-		else if(zx)
-			low_triangles += new /datum/triangle(right, bottom, left, bottom, left*fac, bottom*fac)
-			low_triangles += new /datum/triangle(left*fac,bottom*fac,right,bottom,right*fac,bottom*fac)
-		else
-			new_triangles += make_triangle_image(right,top,left,top,left*fac,top*fac)
-			new_triangles += make_triangle_image(right,top,right,bottom,right*fac,bottom*fac)
-			new_triangles += make_triangle_image(left*fac,top*fac,right,top,right*fac,bottom*fac)
-
-	for(var/datum/triangle/T as anything in low_triangles)
-		new_triangles += make_triangle_image(T.x1,T.y1,T.x2,T.y2,T.x3,T.y3)
-		//we no longer need this triangle datum, clean it up
-		qdel(T)
+		new_triangles += make_triangle_image(right,top,left,top,left*fac,top*fac)
+		new_triangles += make_triangle_image(right,top,right,bottom,right*fac,bottom*fac)
+		new_triangles += make_triangle_image(left*fac,top*fac,right,top,right*fac,bottom*fac)
 
 	locturf.shadowcasting_overlays = new_triangles
 	return new_triangles
@@ -213,10 +201,10 @@
 	icon = 'zov_modular_arkstation/modules/shadowcasting/triangle.dmi'
 	icon_state = "triangle"
 	plane = SHADOWCASTING_PLANE
-	alpha = 160
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/triangle/New(x1, y1, x2, y2, x3, y3)
-	transform = matrix((x3*0.03125)-(x2*0.03125),-(x2*0.03125)+(x1*0.03125),(x3*0.5)+(x1*0.5),-(y2*0.03125)+(y3*0.03125),(y1*0.03125)-(y2*0.03125),(y1*0.5)+(y3*0.5))
+	transform = matrix((x3*0.03125)-(x2*0.03125), -(x2*0.03125)+(x1*0.03125), (x3*0.5)+(x1*0.5), -(y2*0.03125)+(y3*0.03125), (y1*0.03125)-(y2*0.03125), (y1*0.5)+(y3*0.5))
 	tag = "triangle-movable-[x1]-[y1]-[x2]-[y2]-[x3]-[y3]"
 
 /proc/make_triangle_image(x1,y1,x2,y2,x3,y3)
