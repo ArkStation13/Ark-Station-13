@@ -102,43 +102,43 @@
 	var/user_old_oxyloss
 
 	///Lots of sound vars.
-	var/activation_song = 'modular_nova/modules/hev_suit/sound/hev/anomalous_materials.ogg'
+	var/activation_song = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/anomalous_materials.ogg'
 
-	var/logon_sound = 'modular_nova/modules/hev_suit/sound/hev/01_hev_logon.ogg'
-	var/armor_sound = 'modular_nova/modules/hev_suit/sound/hev/02_powerarmor_on.ogg'
-	var/atmospherics_sound = 'modular_nova/modules/hev_suit/sound/hev/03_atmospherics_on.ogg'
-	var/vitalsigns_sound = 'modular_nova/modules/hev_suit/sound/hev/04_vitalsigns_on.ogg'
-	var/automedic_sound = 'modular_nova/modules/hev_suit/sound/hev/05_automedic_on.ogg'
-	var/weaponselect_sound = 'modular_nova/modules/hev_suit/sound/hev/06_weaponselect_on.ogg'
-	var/munitions_sound = 'modular_nova/modules/hev_suit/sound/hev/07_munitionview_on.ogg'
-	var/communications_sound = 'modular_nova/modules/hev_suit/sound/hev/08_communications_on.ogg'
-	var/safe_day_sound = 'modular_nova/modules/hev_suit/sound/hev/09_safe_day.ogg'
+	var/logon_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/01_hev_logon.ogg'
+	var/armor_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/02_powerarmor_on.ogg'
+	var/atmospherics_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/03_atmospherics_on.ogg'
+	var/vitalsigns_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/04_vitalsigns_on.ogg'
+	var/automedic_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/05_automedic_on.ogg'
+	var/weaponselect_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/06_weaponselect_on.ogg'
+	var/munitions_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/07_munitionview_on.ogg'
+	var/communications_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/08_communications_on.ogg'
+	var/safe_day_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/09_safe_day.ogg'
 
-	var/batt_50_sound = 'modular_nova/modules/hev_suit/sound/hev/power_level_is_fifty.ogg'
-	var/batt_40_sound = 'modular_nova/modules/hev_suit/sound/hev/power_level_is_fourty.ogg'
-	var/batt_30_sound = 'modular_nova/modules/hev_suit/sound/hev/power_level_is_thirty.ogg'
-	var/batt_20_sound = 'modular_nova/modules/hev_suit/sound/hev/power_level_is_twenty.ogg'
-	var/batt_10_sound = 'modular_nova/modules/hev_suit/sound/hev/power_level_is_ten.ogg'
+	var/batt_50_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/power_level_is_fifty.ogg'
+	var/batt_40_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/power_level_is_fourty.ogg'
+	var/batt_30_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/power_level_is_thirty.ogg'
+	var/batt_20_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/power_level_is_twenty.ogg'
+	var/batt_10_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/power_level_is_ten.ogg'
 
-	var/near_death_sound = 'modular_nova/modules/hev_suit/sound/hev/near_death.ogg'
-	var/health_critical_sound = 'modular_nova/modules/hev_suit/sound/hev/health_critical.ogg'
-	var/health_dropping_sound = 'modular_nova/modules/hev_suit/sound/hev/health_dropping2.ogg'
+	var/near_death_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/near_death.ogg'
+	var/health_critical_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/health_critical.ogg'
+	var/health_dropping_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/health_dropping2.ogg'
 
-	var/blood_loss_sound = 'modular_nova/modules/hev_suit/sound/hev/blood_loss.ogg'
-	var/blood_toxins_sound = 'modular_nova/modules/hev_suit/sound/hev/blood_toxins.ogg'
-	var/biohazard_sound = 'modular_nova/modules/hev_suit/sound/hev/biohazard_detected.ogg'
-	var/chemical_sound = 'modular_nova/modules/hev_suit/sound/hev/chemical_detected.ogg'
-	var/radiation_sound = 'modular_nova/modules/hev_suit/sound/hev/radiation_detected.ogg'
+	var/blood_loss_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/blood_loss.ogg'
+	var/blood_toxins_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/blood_toxins.ogg'
+	var/biohazard_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/biohazard_detected.ogg'
+	var/chemical_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/chemical_detected.ogg'
+	var/radiation_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/radiation_detected.ogg'
 
-	var/minor_fracture_sound = 'modular_nova/modules/hev_suit/sound/hev/minor_fracture.ogg'
-	var/major_fracture_sound = 'modular_nova/modules/hev_suit/sound/hev/major_fracture.ogg'
-	var/minor_lacerations_sound = 'modular_nova/modules/hev_suit/sound/hev/minor_lacerations.ogg'
-	var/major_lacerations_sound = 'modular_nova/modules/hev_suit/sound/hev/major_lacerations.ogg'
+	var/minor_fracture_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/minor_fracture.ogg'
+	var/major_fracture_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/major_fracture.ogg'
+	var/minor_lacerations_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/minor_lacerations.ogg'
+	var/major_lacerations_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/major_lacerations.ogg'
 
-	var/morphine_sound = 'modular_nova/modules/hev_suit/sound/hev/morphine_shot.ogg'
-	var/wound_sound = 'modular_nova/modules/hev_suit/sound/hev/wound_sterilized.ogg'
-	var/antitoxin_sound = 'modular_nova/modules/hev_suit/sound/hev/antitoxin_shot.ogg'
-	var/antidote_sound = 'modular_nova/modules/hev_suit/sound/hev/antidote_shot.ogg'
+	var/morphine_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/morphine_shot.ogg'
+	var/wound_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/wound_sterilized.ogg'
+	var/antitoxin_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/antitoxin_shot.ogg'
+	var/antidote_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/antidote_shot.ogg'
 
 	var/radio_channel = RADIO_CHANNEL_COMMON
 
@@ -214,19 +214,19 @@
 
 /datum/action/item_action/hev_toggle
 	name = "Toggle HEV Suit"
-	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
+	button_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi'
 	background_icon_state = "bg_hl"
-	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
+	button_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi'
 	button_icon_state = "system_off"
-	background_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi' // ARK STATION FIX
+	background_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi' // ARK STATION FIX
 
 /datum/action/item_action/hev_toggle_notifs
 	name = "Toggle HEV Suit Notifications"
-	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
+	button_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi'
 	background_icon_state = "bg_hl"
-	button_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi'
+	button_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi'
 	button_icon_state = "sound_VOICE_AND_TEXT"
-	background_icon = 'modular_nova/modules/hev_suit/icons/toggles.dmi' // ARK STATION FIX
+	background_icon = 'zov_modular_arkstation/modules/black_mesa/hev_suit/icons/toggles.dmi' // ARK STATION FIX
 
 /datum/action/item_action/hev_toggle_notifs/Trigger(trigger_flags)
 	var/obj/item/clothing/suit/space/hev_suit/my_suit = target
@@ -241,7 +241,7 @@
 
 	button_icon_state = "sound_[new_setting]"
 
-	playsound(my_suit, 'modular_nova/modules/hev_suit/sound/hev/blip.ogg', 50)
+	playsound(my_suit, 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/blip.ogg', 50)
 
 	build_all_button_icons()
 
@@ -259,7 +259,7 @@
 
 	button_icon_state = toggle ? "system_on" : "system_off"
 
-	playsound(my_suit, 'modular_nova/modules/hev_suit/sound/hev/blip.ogg', 50)
+	playsound(my_suit, 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/blip.ogg', 50)
 
 	build_all_button_icons()
 
@@ -502,7 +502,7 @@
 /obj/item/clothing/suit/space/hev_suit/proc/stat_changed(datum/source, new_stat)
 	SIGNAL_HANDLER
 	if(new_stat == DEAD)
-		playsound(src, 'modular_nova/modules/hev_suit/sound/hev/flatline.ogg', 40)
+		playsound(src, 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/hev/flatline.ogg', 40)
 		internal_radio.talk_into(src, "WARNING! USER [uppertext(current_user.real_name)] VITALSIGNS HAVE FLATLINED, CURRENT POSITION: [loc.x], [loc.y], [loc.z]!", radio_channel)
 		deactivate()
 
@@ -801,40 +801,40 @@
 
 	activation_song = null // removal of song only standard suit will have the song
 
-	logon_sound = 'modular_nova/modules/hev_suit/sound/pcv/01_pcv_logon.ogg'
-	armor_sound = 'modular_nova/modules/hev_suit/sound/pcv/02_powerarmor_on.ogg'
-	atmospherics_sound = 'modular_nova/modules/hev_suit/sound/pcv/03_atmospherics_on.ogg'
-	vitalsigns_sound = 'modular_nova/modules/hev_suit/sound/pcv/04_vitalsigns_on.ogg'
-	automedic_sound = 'modular_nova/modules/hev_suit/sound/pcv/05_automedic_on.ogg'
-	weaponselect_sound = 'modular_nova/modules/hev_suit/sound/pcv/06_weaponselect_on.ogg'
-	munitions_sound = 'modular_nova/modules/hev_suit/sound/pcv/07_munitionview_on.ogg'
-	communications_sound = 'modular_nova/modules/hev_suit/sound/pcv/08_communications_on.ogg'
-	safe_day_sound = 'modular_nova/modules/hev_suit/sound/pcv/09_safe_day.ogg'
+	logon_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/01_pcv_logon.ogg'
+	armor_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/02_powerarmor_on.ogg'
+	atmospherics_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/03_atmospherics_on.ogg'
+	vitalsigns_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/04_vitalsigns_on.ogg'
+	automedic_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/05_automedic_on.ogg'
+	weaponselect_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/06_weaponselect_on.ogg'
+	munitions_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/07_munitionview_on.ogg'
+	communications_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/08_communications_on.ogg'
+	safe_day_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/09_safe_day.ogg'
 
-	batt_50_sound = 'modular_nova/modules/hev_suit/sound/pcv/power_level_is_fifty.ogg'
-	batt_40_sound = 'modular_nova/modules/hev_suit/sound/pcv/power_level_is_fourty.ogg'
-	batt_30_sound = 'modular_nova/modules/hev_suit/sound/pcv/power_level_is_thirty.ogg'
-	batt_20_sound = 'modular_nova/modules/hev_suit/sound/pcv/power_level_is_twenty.ogg'
-	batt_10_sound = 'modular_nova/modules/hev_suit/sound/pcv/power_level_is_ten.ogg'
+	batt_50_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/power_level_is_fifty.ogg'
+	batt_40_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/power_level_is_fourty.ogg'
+	batt_30_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/power_level_is_thirty.ogg'
+	batt_20_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/power_level_is_twenty.ogg'
+	batt_10_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/power_level_is_ten.ogg'
 
-	near_death_sound = 'modular_nova/modules/hev_suit/sound/pcv/near_death.ogg'
-	health_critical_sound = 'modular_nova/modules/hev_suit/sound/pcv/health_critical.ogg'
-	health_dropping_sound = 'modular_nova/modules/hev_suit/sound/pcv/health_dropping2.ogg'
+	near_death_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/near_death.ogg'
+	health_critical_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/health_critical.ogg'
+	health_dropping_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/health_dropping2.ogg'
 
-	blood_loss_sound = 'modular_nova/modules/hev_suit/sound/pcv/blood_loss.ogg'
-	blood_toxins_sound = 'modular_nova/modules/hev_suit/sound/pcv/blood_toxins.ogg'
-	biohazard_sound = 'modular_nova/modules/hev_suit/sound/pcv/biohazard_detected.ogg'
-	chemical_sound = 'modular_nova/modules/hev_suit/sound/pcv/chemical_detected.ogg'
+	blood_loss_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/blood_loss.ogg'
+	blood_toxins_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/blood_toxins.ogg'
+	biohazard_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/biohazard_detected.ogg'
+	chemical_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/chemical_detected.ogg'
 
-	minor_fracture_sound = 'modular_nova/modules/hev_suit/sound/pcv/minor_fracture.ogg'
-	major_fracture_sound = 'modular_nova/modules/hev_suit/sound/pcv/major_fracture.ogg'
-	minor_lacerations_sound = 'modular_nova/modules/hev_suit/sound/pcv/minor_lacerations.ogg'
-	major_lacerations_sound = 'modular_nova/modules/hev_suit/sound/pcv/major_lacerations.ogg'
+	minor_fracture_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/minor_fracture.ogg'
+	major_fracture_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/major_fracture.ogg'
+	minor_lacerations_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/minor_lacerations.ogg'
+	major_lacerations_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/major_lacerations.ogg'
 
-	morphine_sound = 'modular_nova/modules/hev_suit/sound/pcv/morphine_shot.ogg'
-	wound_sound = 'modular_nova/modules/hev_suit/sound/pcv/wound_sterilized.ogg'
-	antitoxin_sound = 'modular_nova/modules/hev_suit/sound/pcv/antitoxin_shot.ogg'
-	antidote_sound = 'modular_nova/modules/hev_suit/sound/pcv/antidote_shot.ogg'
+	morphine_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/morphine_shot.ogg'
+	wound_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/wound_sterilized.ogg'
+	antitoxin_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/antitoxin_shot.ogg'
+	antidote_sound = 'zov_modular_arkstation/modules/black_mesa/hev_suit/sound/pcv/antidote_shot.ogg'
 
 	armor_unpowered = /datum/armor/hev_suit_pcv
 	armor_powered = /datum/armor/hev_suit_pcv/powered

@@ -19,7 +19,7 @@
 		return
 
 	// проверям может ли юзер использовать верб
-	if(usr.incapacitated() || !Adjacent(usr) || isobserver(usr) || isdead(usr)) //  || usr.lying
+	if(usr.incapacitated || !Adjacent(usr) || isobserver(usr) || isdead(usr)) //  || usr.lying
 		return
 
 	bottle_game_cd = world.time + 30	// задаем кулдаун 30 = 3 секунды

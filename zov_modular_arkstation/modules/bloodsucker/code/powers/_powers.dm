@@ -141,7 +141,7 @@
 		to_chat(user, span_warning("You can't do this while you are unconcious!"))
 		return FALSE
 	// Incapacitated?
-	if((check_flags & BP_CANT_USE_WHILE_INCAPACITATED) && (user.incapacitated(IGNORE_RESTRAINTS|IGNORE_GRAB)))
+	if((check_flags & BP_CANT_USE_WHILE_INCAPACITATED) && (INCAPACITATED_IGNORING(user, INCAPABLE_GRAB || INCAPABLE_RESTRAINTS)))
 		to_chat(user, span_warning("Not while you're incapacitated!"))
 		return FALSE
 	// Constant Cost (out of blood)
