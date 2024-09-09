@@ -15,8 +15,8 @@
 	restricted_roles = BLOODSUCKER_RESTRICTED_ROLES
 	restricted_species = BLOODSUCKER_RESTRICTED_SPECIES
 	required_candidates = 1
-	weight = 5
-	cost = 10
+	weight = 12 // 5
+	cost = 16 // 10
 	scaling_cost = 9
 	requirements = list(10,10,10,10,10,10,10,10,10,10)
 	antag_cap = list("denominator" = 24)

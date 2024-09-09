@@ -115,24 +115,24 @@ SUBSYSTEM_DEF(dynamic)
 	/// A number between -5 and +5.
 	/// A negative value will give a more peaceful round and
 	/// a positive value will give a round with higher threat.
-	var/threat_curve_centre = 0
+	var/threat_curve_centre = -1 // ARK STATION EDIT || 0
 
 	/// A number between 0.5 and 4.
 	/// Higher value will favour extreme rounds and
 	/// lower value rounds closer to the average.
-	var/threat_curve_width = 1.8
+	var/threat_curve_width = 2 // ARK STATION EDIT || 1.8
 
 	/// A number between -5 and +5.
 	/// Equivalent to threat_curve_centre, but for the budget split.
 	/// A negative value will weigh towards midround rulesets, and a positive
 	/// value will weight towards roundstart ones.
-	var/roundstart_split_curve_centre = 1
+	var/roundstart_split_curve_centre = 1 // ARK STATION EDIT || 0
 
 	/// A number between 0.5 and 4.
 	/// Equivalent to threat_curve_width, but for the budget split.
 	/// Higher value will favour more variance in splits and
 	/// lower value rounds closer to the average.
-	var/roundstart_split_curve_width = 1.8
+	var/roundstart_split_curve_width = 2 // ARK STATION EDIT || 1.8
 
 	/// The minimum amount of time for antag random events to be hijacked.
 	var/random_event_hijack_minimum = 10 MINUTES
