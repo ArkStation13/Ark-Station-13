@@ -126,11 +126,18 @@
 	falloff_distance = 1 //Instant falloff after initial tile
 
 /datum/looping_sound/gravgen
-	mid_sounds = list('sound/machines/gravgen/gravgen_mid1.ogg' = 1, 'sound/machines/gravgen/gravgen_mid2.ogg' = 1, 'sound/machines/gravgen/gravgen_mid3.ogg' = 1, 'sound/machines/gravgen/gravgen_mid4.ogg' = 1)
-	mid_length = 1.8 SECONDS
-	extra_range = 2 //ARK STATION EDIT ORIGINAL 10
-	volume = 20
-	falloff_distance = 1 // ARK STATION EDIT ORIGINAL 5
+	start_sound = 'sound/machines/gravgen/grav_gen_start.ogg'
+	start_length = 1 SECONDS
+	mid_sounds = list(
+		'sound/machines/gravgen/grav_gen_mid1.ogg' = 12,
+		'sound/machines/gravgen/grav_gen_mid2.ogg' = 1,
+	)
+	mid_length = 1.1 SECONDS
+	end_sound = 'sound/machines/gravgen/grav_gen_end.ogg'
+	extra_range = 2 // ARK STATION EDIT - ORIGINAL - 8
+	vary = TRUE
+	volume = 20 // ARK STATION EDIT - ORIGINAL - 70
+	falloff_distance = 1 // ARK STATION EDIT - ORIGINAL - 5
 	falloff_exponent = 20
 
 /datum/looping_sound/firealarm

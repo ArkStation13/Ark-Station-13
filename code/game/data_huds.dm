@@ -47,7 +47,7 @@
 	hud_icons = list(ID_HUD)
 
 /datum/atom_hud/data/human/security/advanced
-	hud_icons = list(ID_HUD, IMPSEC_FIRST_HUD, IMPLOYAL_HUD, IMPSEC_SECOND_HUD, WANTED_HUD, DNR_HUD) //NOVA EDIT ADDITION - PERMIT_HUD, DNR_HUD
+	hud_icons = list(ID_HUD, IMPSEC_FIRST_HUD, IMPLOYAL_HUD, IMPSEC_SECOND_HUD, WANTED_HUD, PERMIT_HUD, DNR_HUD) //NOVA EDIT ADDITION - PERMIT_HUD, DNR_HUD
 
 /datum/atom_hud/data/human/fan_hud
 	hud_icons = list(FAN_HUD)
@@ -275,7 +275,6 @@ Security HUDs! Basic mode shows only the job.
 		sechud_icon_state = "hudno_id"
 	holder.icon_state = sechud_icon_state
 	sec_hud_set_security_status()
-/* // ARK STATION REMOVAL
 	//NOVA EDIT START
 	var/image/permit_holder = hud_list[PERMIT_HUD]
 	permit_holder.pixel_y = I.Height() - world.icon_size
@@ -284,7 +283,6 @@ Security HUDs! Basic mode shows only the job.
 		permit_icon_state = "hudfan_no"
 	permit_holder.icon_state = permit_icon_state
 	//NOVA EDIT END
-*/ // ARK STATION REMOVAL
 
 /mob/living/proc/sec_hud_set_implants()
 	var/image/holder

@@ -86,12 +86,12 @@
 	build_path = /obj/item/disk/nifsoft_uploader/sec_hud
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-// /datum/design/nifsoft_hud/cargo
-// 	name = "Permit HUD NIFSoft"
-// 	desc = "A NIFSoft datadisk containing the Permit HUD NIFsoft."
-// 	id = "nifsoft_hud_cargo"
-// 	build_path = /obj/item/disk/nifsoft_uploader/permit_hud
-// 	departmental_flags = DEPARTMENT_BITFLAG_CARGO
+/datum/design/nifsoft_hud/cargo
+	name = "Permit HUD NIFSoft"
+	desc = "A NIFSoft datadisk containing the Permit HUD NIFsoft."
+	id = "nifsoft_hud_cargo"
+	build_path = /obj/item/disk/nifsoft_uploader/permit_hud
+	departmental_flags = DEPARTMENT_BITFLAG_CARGO
 
 /datum/design/nifsoft_hud/diagnostic
 	name = "Diagnostic HUD NIFSoft"

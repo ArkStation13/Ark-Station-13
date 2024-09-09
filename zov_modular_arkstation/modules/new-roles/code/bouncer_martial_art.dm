@@ -29,7 +29,7 @@
 	button_icon_state = "legsweep"
 
 /datum/action/bounce/Trigger(trigger_flags)
-	if(owner.incapacitated())
+	if(owner.incapacitated)
 		to_chat(owner, "<span class='warning'>You can't bounce while you're incapacitated.</span>")
 		return
 	var/mob/living/carbon/human/H = owner

@@ -113,10 +113,10 @@
 	hud_type = DATA_HUD_SECURITY_ADVANCED
 	hud_traits = list(TRAIT_SECURITY_HUD)
 
-// /datum/nifsoft/hud/job/cargo_tech
-// 	name = "Permit Scrying Lens"
-// 	ui_icon = "gun"
-// 	hud_type = DATA_HUD_PERMIT
+/datum/nifsoft/hud/job/cargo_tech
+	name = "Permit Scrying Lens"
+	ui_icon = "gun"
+	hud_type = DATA_HUD_PERMIT
 
 /datum/nifsoft/hud/job/science
 	name = "Science Scrying Lens"
@@ -144,9 +144,9 @@
 	name = "Security Scrying Lens"
 	loaded_nifsoft = /datum/nifsoft/hud/job/security
 
-// /obj/item/disk/nifsoft_uploader/permit_hud
-// 	name = "Permit Scrying Lens"
-// 	loaded_nifsoft = /datum/nifsoft/hud/job/cargo_tech
+/obj/item/disk/nifsoft_uploader/permit_hud
+	name = "Permit Scrying Lens"
+	loaded_nifsoft = /datum/nifsoft/hud/job/cargo_tech
 
 /obj/item/disk/nifsoft_uploader/sci_hud
 	name = "Science Scrying Lens"
