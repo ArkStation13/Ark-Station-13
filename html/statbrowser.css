@@ -41,7 +41,7 @@ a:hover {
 }
 
 h3 {
-	margin: 0 -0.5em 0.25em;
+	margin: 0 -0.5em 0.5em;
 	padding: 1em 0.66em 0.5em;
 	border-bottom: 0.1667em solid;
 }
@@ -64,6 +64,27 @@ img {
 	overflow-y: hidden;
 	padding: 0.25em 0.25em 0;
 	background-color: #ffffff;
+}
+
+.menu-wrap {
+	flex-wrap: wrap-reverse;
+}
+
+#menu.tabs-classic {
+	padding: 0.15em;
+}
+
+#menu.tabs-classic .button {
+	min-width: 2em;
+	margin: 0.1em;
+	padding: 0.25em 0.4em;
+	border: 0;
+	border-radius: 0.25em;
+}
+
+#menu.tabs-classic .button.active {
+	background-color: #0668b8;
+	color: white;
 }
 
 .button {
@@ -111,7 +132,8 @@ img {
 }
 
 .button.active {
-	background-color: #acacac;
+	cursor: default;
+	background-color: #acacac; /* ARK STATION EDIT */
 	color: black;
 	border-bottom-color: #000000;
 }
@@ -132,8 +154,8 @@ img {
 }
 
 .grid-container {
-	margin: -2px;
-	margin-right: -15px;
+	margin: -2px; /* ARK STATION EDIT */
+	margin-right: -15px; /* ARK STATION EDIT */
 }
 
 .grid-item {
@@ -142,23 +164,27 @@ img {
 	user-select: none;
 	-ms-user-select: none; /* Remove after Byond 516 */
 	width: 100%;
-	box-sizing: border-box;
+	max-height: 1.85em;
 	text-decoration: none;
 	background-color: transparent;
 	color: black;
 }
 
 .grid-item:hover {
-	color: #184d1d;
+	color: #2e6934; /* ARK STATION EDIT */
 	z-index: 1;
+}
+
+.grid-item:active {
+	color: rgb(6, 83, 10); /* ARK STATION EDIT */
 }
 
 .grid-item-text {
 	display: inline-block;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	box-sizing: border-box;
 	white-space: nowrap;
+	pointer-events: none;
 	width: 100%;
 	padding: 0.33em 0.5em;
 	border-radius: 0.25em;
@@ -194,7 +220,7 @@ a:hover {
 	background-color: #ececec;
 }
 
-.grid-item-text:active {
+.grid-item:active .grid-item-text  {
 	background-color: #dfdfdf;
 }
 
@@ -291,10 +317,10 @@ body.dark {
 	color: #b2c4dd;
 }
 
-.dark .grid-item-text:hover {
+.dark .grid-item:hover .grid-item-text {
 	background-color: #252525;
 }
 
-.dark  .grid-item-text:active {
+.dark .grid-item:active .grid-item-text {
 	background-color: #313131;
 }
