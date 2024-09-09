@@ -44,7 +44,7 @@
 		/obj/item/clothing/under/rank/cargo/tech/nova/utility = 3,
 		/obj/item/clothing/under/rank/cargo/tech/nova/casualman = 3,
 		/obj/item/clothing/suit/toggle/jacket/supply = 3,
-		// /obj/item/clothing/glasses/hud/gun_permit = 5, //from company imports module
+		/obj/item/clothing/glasses/hud/gun_permit = 5, //from company imports module
 		/obj/item/storage/backpack/messenger = 3,
 	)
 

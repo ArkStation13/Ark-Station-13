@@ -910,5 +910,5 @@
 		/obj/item/clothing/head/beret/sec/cargo = 2,
 		/obj/item/clothing/suit/armor/vest/blueshirt/nova/customs_agent = 2,
 		/obj/item/clothing/glasses/hud/security = 2,
-		// /obj/item/clothing/glasses/hud/gun_permit = 2,
+		/obj/item/clothing/glasses/hud/gun_permit = 2,
 	), src)
