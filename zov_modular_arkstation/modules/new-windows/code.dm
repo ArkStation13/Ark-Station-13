@@ -1,3 +1,34 @@
+// New Icons (Shiptest Style)
+
+/obj/structure/window/fulltile
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/window.dmi'
+
+/obj/structure/window/reinforced/fulltile
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/reinforced_window.dmi'
+
+/obj/structure/window/plasma/reinforced/plastitanium
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/plastitanium_window.dmi'
+
+/obj/structure/window/reinforced/tinted/fulltile
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/reinforced_window.dmi'
+	color = "#000000"
+	icon_state = "reinforced_window-0"
+	base_icon_state = "reinforced_window"
+
+/obj/structure/window/plasma/fulltile
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/plasma_window.dmi'
+	icon_state = "plasma_window-0"
+	base_icon_state = "plasma_window"
+
+/obj/structure/window/reinforced/plasma/fulltile
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/rplasma_window.dmi'
+	icon_state = "rplasma_window-0"
+	base_icon_state = "rplasma_window"
+
+/turf/closed/indestructible/opsglass
+	name = "window"
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/plastitanium_window.dmi'
+
 // New-Old Icons (Ark Style)
 /obj/structure/window/fulltile/old
 	icon = 'zov_modular_arkstation/modules/new-windows/window.dmi'

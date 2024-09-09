@@ -1,5 +1,6 @@
 /// Create colored subtypes for sofas
-#define COLORED_SOFA(path, color_name, sofa_color) \
+/*
+#define COLORED_SOFA(path, color_name, sofa_color) \ // ARK STATION EDITED BELOW
 path/middle/color_name {\
 	color = sofa_color; \
 } \
@@ -12,6 +13,32 @@ path/left/color_name {\
 path/corner/color_name {\
 	color = sofa_color; \
 }
+*/
+
+// ARK STATION OWN SOFAS START
+#define COLORED_SOFA(path, color_name, sofa_base_state) \
+path/middle/color_name {\
+	icon_state = sofa_base_state + "_middle"; \
+} \
+path/right/color_name {\
+	icon_state = sofa_base_state + "_end_right"; \
+} \
+path/left/color_name {\
+	icon_state = sofa_base_state + "_end_left"; \
+} \
+path/corner/color_name {\
+	icon_state = sofa_base_state + "_corner"; \
+}
+
+COLORED_SOFA(/obj/structure/chair/sofa, purple, "purple_sofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, purple_corp, "purple_corpsofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, blue, "blue_sofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, blue_corp, "blue_corpsofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, red_corp, "red_corpsofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, grey, "grey_sofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, olive, "olive_sofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, olive_corp, "olive_corpsofa") // ARK STATION EDIT
+// ARK STATION OWN SOFAS END
 
 /obj/structure/chair/sofa
 	name = "old ratty sofa"
@@ -72,8 +99,8 @@ path/corner/color_name {\
 /obj/structure/chair/sofa/corner
 	icon_state = "sofacorner"
 
-COLORED_SOFA(/obj/structure/chair/sofa, brown, SOFA_BROWN)
-COLORED_SOFA(/obj/structure/chair/sofa, maroon, SOFA_MAROON)
+COLORED_SOFA(/obj/structure/chair/sofa, brown, "brown_sofa") // ARK STATION EDIT
+COLORED_SOFA(/obj/structure/chair/sofa, maroon, "red_sofa") // ARK STATION EDIT
 
 // Original icon ported from Eris(?) and updated to work here.
 /obj/structure/chair/sofa/corp

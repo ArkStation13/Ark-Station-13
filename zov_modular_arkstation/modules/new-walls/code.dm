@@ -2,6 +2,33 @@
 /turf/closed/wall
 	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
 
+// New Icons (Shiptest Style)
+/turf/closed/wall
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/wall.dmi'
+	icon_state = "wall-0"
+	base_icon_state = "wall"
+
+/turf/closed/wall/r_wall
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/rwalls/reinforced_wall.dmi'
+	icon_state = "reinforced_wall-0"
+	base_icon_state = "reinforced_wall"
+
+/turf/closed/wall/rust
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/rusty_wall.dmi'
+	icon_state = "rusty_wall-0"
+	base_icon_state = "rusty_wall"
+
+/turf/closed/wall/r_wall/rust
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/rusty_reinforced_wall.dmi'
+	icon_state = "rusty_reinforced_wall-0"
+	base_icon_state = "rusty_reinforced_wall"
+	base_decon_state = "r_wall"
+
+/turf/closed/wall/material
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/materialwall.dmi'
+	icon_state = "materialwall-0"
+	base_icon_state = "materialwall"
+
 // New-Old Icons (Ark Style)
 /turf/closed/wall/old
 	icon = 'zov_modular_arkstation/modules/new-walls/walls.dmi'
