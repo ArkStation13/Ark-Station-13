@@ -64,8 +64,6 @@
 			vturfsordered += locate(locturf.x + J, locturf.y + I - J, locturf.z)
 			vturfsordered += locate(locturf.x - J, locturf.y - I + J, locturf.z)
 
-	var/list/low_triangles = list()
-
 	// we need to typecheck as there is no way to know if locate() didn't return null
 	for(var/turf/T in vturfsordered)
 		if((T.shadowcast_inview != moveid) || !T.opacity || (T.shadowcast_considered == moveid))
