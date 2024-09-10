@@ -11,7 +11,7 @@
 
 /obj/structure/window/reinforced/tinted/fulltile
 	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/reinforced_window.dmi'
-	color = "#000000"
+	color = "#7a7a7a"
 	icon_state = "reinforced_window-0"
 	base_icon_state = "reinforced_window"
 

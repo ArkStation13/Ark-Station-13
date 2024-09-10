@@ -7,14 +7,14 @@
 	. = ..()
 	add_filter("thegreatdarkness", 1, drop_shadow_filter(x = 0, y = 0, size = 7, offset = 7, color = "#000000"))
 
-// A few vars shadowcasting needs
+// Переменные
 /turf
 	var/shadowcast_inview
 	var/shadowcast_considered
 	var/shadowcasting_initialized = FALSE
 	var/list/shadowcasting_overlays = list()
 
-//this ensures that shadowcasting overlays are updated whenever a turf is destroyed (AKA, a new one is created)
+// Создаём
 /turf/New()
 	. = ..()
 	if(!shadowcasting_controller.initialized)
@@ -27,7 +27,7 @@
 	create_shadowcast_overlays(src)
 	shadowcasting_initialized = TRUE
 
-// Datums are faster than lists
+// Датумы
 /datum/triangle
 	var/x1
 	var/x2
@@ -45,10 +45,8 @@
 	src.y3 = y3
 
 /proc/create_shadowcast_overlays(turf/locturf)
-	// Clean up old list before making a new one
 	locturf.shadowcasting_overlays = list()
 
-	// Handles almost every edge case there is.
 	var/vrange = 11
 	var/moveid = rand(0,65535)
 	var/list/atom/movable/new_triangles = list()
@@ -64,7 +62,6 @@
 			vturfsordered += locate(locturf.x + J, locturf.y + I - J, locturf.z)
 			vturfsordered += locate(locturf.x - J, locturf.y - I + J, locturf.z)
 
-	// we need to typecheck as there is no way to know if locate() didn't return null
 	for(var/turf/T in vturfsordered)
 		if((T.shadowcast_inview != moveid) || !T.opacity || (T.shadowcast_considered == moveid))
 			continue
@@ -167,7 +164,6 @@
 /client/proc/update_opacity_image()
 	var/turf/T = get_turf(mob)
 	reflector.vis_contents.Cut()
-	//Ah hell naw my nigga we in nullspace
 	if(!T)
 		return
 	else if(!T.shadowcasting_initialized)
@@ -206,9 +202,7 @@
 	tag = "triangle-movable-[x1]-[y1]-[x2]-[y2]-[x3]-[y3]"
 
 /proc/make_triangle_image(x1,y1,x2,y2,x3,y3)
-	//first we try to find an existing triangle atom
 	var/atom/movable/triangle/triangle_image = locate("triangle-movable-[x1]-[y1]-[x2]-[y2]-[x3]-[y3]")
-	//if we fail to find one, we make one ourselves
 	if(!triangle_image)
 		triangle_image = new(x1,y1,x2,y2,x3,y3)
 	return triangle_image
