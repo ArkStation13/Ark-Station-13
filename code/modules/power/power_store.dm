@@ -161,7 +161,7 @@
 /// - used: Amount of power in joules to use.
 /// - force: If true, uses the remaining power from the cell if there isn't enough power to supply the demand.
 /// Returns: The power used from the cell in joules.
-/obj/item/stock_parts/power_store/use(used, force = FALSE)
+/obj/item/stock_parts/power_store/use(used, force)
 	var/power_used = min(used, charge)
 	if(rigged && power_used > 0)
 		explode()
@@ -199,8 +199,20 @@
 
 /obj/item/stock_parts/power_store/examine(mob/user)
 	. = ..()
+
+	// ARK STATION ADDITION START
+	if(ratingdesc && !microfusion_readout)
+		. += "This one has a rating of [display_energy(maxcharge)], and you should not swallow it."
+	// ARK STATION ADDITION END
+
 	if(rigged)
-		. += span_danger("This [name] seems to be faulty!")
+		. += span_danger("This power cell seems to be faulty!")
+
+	// ARK STATION ADDITION START
+	else if(microfusion_readout)
+		. += "The charge meter reads [charge]/[maxcharge] MF."
+	// ARK STATION ADDITION END
+
 	else
 		. += "The charge meter reads [CEILING(percent(), 0.1)]%." //so it doesn't say 0% charge when the overlay indicates it still has charge
 

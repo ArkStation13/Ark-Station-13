@@ -12,9 +12,9 @@
 	/// Multiplier added to the cost before showing the final price to the user
 	var/cost_mult = 1
 	/// On a subsystem fire, will lower/raise company values by a random value between lower and upper
-	var/cost_change_lower = -100
+	var/cost_change_lower = -50 // ARK STATION EDIT || 100
 	/// On a subsystem fire, will lower/raise company values by a random value between lower and upper
-	var/cost_change_upper = 100
+	var/cost_change_upper = 50 // ARK STATION EDIT || 100
 	/// If this company can be picked to be a handout company to start
 	var/can_roundstart_pick = TRUE
 	/// The "interest" value of the company, to determine how much stock the company has, goes down passively and is raised by things being bought

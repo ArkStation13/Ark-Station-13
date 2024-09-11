@@ -567,6 +567,13 @@
 	dir = 1
 	},
 /area/station/hallway/floor4/fore)
+"agL" = (
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/warden)
 "agU" = (
 /obj/structure/chair/pew/left{
 	dir = 4
@@ -1011,6 +1018,8 @@
 "anj" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/table,
+/obj/machinery/recharger,
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "ann" = (
@@ -69557,10 +69566,11 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "skQ" = (
-/obj/structure/table,
-/obj/machinery/recharger,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/computer/cargo/request/sec{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "skU" = (
@@ -89309,6 +89319,13 @@
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white/herringbone,
 /area/station/medical/patients_rooms)
+"xoY" = (
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/warden)
 "xpi" = (
 /obj/structure/table/wood,
 /obj/structure/sign/poster/official/random/directional/east,
@@ -322538,7 +322555,7 @@ cWy
 tcm
 inj
 skQ
-hED
+agL
 bNg
 dPH
 nSg
@@ -322791,7 +322808,7 @@ fGm
 vOE
 wDy
 gaC
-hED
+xoY
 fdB
 wHU
 gEh
