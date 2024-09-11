@@ -230,7 +230,19 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		var/datum/bank_account/buying_account = buyer_key
 		var/buyer = buying_account.account_holder
 
-		if(buying_account_orders.len > GOODY_FREE_SHIPPING_MAX) // no free shipping, send a crate
+// ARK STATION ADDITION START
+		if(istype(buyer_key, /datum/bank_account/department))
+			var/datum/bank_account/department/account = buyer_key
+			if(account.department_id == ACCOUNT_SEC)
+				var/obj/structure/closet/crate/secure/owned/security/our_crate = new /obj/structure/closet/crate/secure/owned/security(pick_n_take(empty_turfs))
+				our_crate.buyer_account = buying_account
+				our_crate.department_purchase = TRUE
+				our_crate.department_account = our_crate.buyer_account
+				our_crate.name = "security department goodies crate"
+				miscboxes[buyer] = our_crate
+// ARK STATION ADDITION END
+
+		else if(buying_account_orders.len > GOODY_FREE_SHIPPING_MAX) // no free shipping, send a crate // ARK STATION EDIT
 			var/obj/structure/closet/crate/secure/owned/our_crate = new /obj/structure/closet/crate/secure/owned(pick_n_take(empty_turfs))
 			our_crate.buyer_account = buying_account
 			/// NOVA EDIT ADDITION START - FIXES COMMAND BUDGET CASES BEING UNOPENABLE

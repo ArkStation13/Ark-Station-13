@@ -20,39 +20,70 @@ export const CargoImportConsole = (props) => {
     <Window
       theme="armament"
       title="Company Import Requisition Console"
-      width={1100}
-      height={750}
+      width={1150} /* ARK STATION EDIT */
+      height={650} /* ARK STATION EDIT */
     >
       <Window.Content>
-        <Section height="100%" title="Company Import Requisition Console">
+        <Section /* ARK STATION EDIT */
+          height="100%" /* ARK STATION EDIT */
+          title="Консоль Импортных Товаров" /* ARK STATION EDIT */
+        >
           <Stack>
             <Stack.Item grow fill>
               <Button.Checkbox
-                content="Buy Privately"
+                content="Купить за свой Счёт" /* ARK STATION EDIT */
                 checked={self_paid}
                 onClick={() => act('toggleprivate')}
               />
               <Box>
-                <b>Current Budget:</b> {budget_name}
+                <b /* ARK STATION EDIT */>Текущий Бюджет:</b> {budget_name}
               </Box>
               <Box>
-                <b>Budget Remaining:</b> {budget_points}
+                <b /* ARK STATION EDIT */>Количество Денег:</b> {budget_points}{' '}
+                <b /* ARK STATION EDIT */>₮</b>
               </Box>
             </Stack.Item>
           </Stack>
           <Divider />
           <Stack fill grow>
             <Stack.Item mr={1}>
-              <Section title="Companies">
+              <Section title="Компании" /* ARK STATION EDIT */>
                 <Stack vertical>
                   {armaments_list.map((armament_category) => (
-                    <Stack.Item key={armament_category.category}>
-                      <Button
-                        width="100%"
-                        content={armament_category.category}
-                        selected={category === armament_category.category}
-                        onClick={() => setCategory(armament_category.category)}
-                      />
+                    <Stack.Item
+                      key={
+                        armament_category.category
+                      } /* ARK STATION EDIT START */
+                    >
+                      {armament_category.category_purchased ? (
+                        <Button
+                          width="100%"
+                          content={armament_category.category}
+                          selected={category === armament_category.category}
+                          onClick={() =>
+                            setCategory(armament_category.category)
+                          }
+                        />
+                      ) : (
+                        <Button
+                          width="100%"
+                          color="bad"
+                          onClick={() =>
+                            act('buy_company', {
+                              selected_company: armament_category.category,
+                            })
+                          }
+                          content={
+                            'Купить: ' +
+                            armament_category.category +
+                            ' (' +
+                            (armament_category.handout
+                              ? 'Бесплатная лицензия [Выберите ОДНО]'
+                              : armament_category.cost) +
+                            ' ₮)'
+                          }
+                        /> /* ARK STATION EDIT END */
+                      )}
                     </Stack.Item>
                   ))}
                 </Stack>
@@ -100,7 +131,7 @@ export const CargoImportConsole = (props) => {
             </Stack.Item>
             <Divider vertical />
             <Stack.Item width="20%">
-              <Section title="Selected Item">
+              <Section title="Выбранный Товар" /* ARK STATION EDIT */>
                 {armaments_list.map((armament_category) =>
                   armament_category.subcategories.map((subcat) =>
                     subcat.items.map(
