@@ -126,8 +126,12 @@
 
 /obj/machinery/door/airlock/shuttle
 	name = "shuttle airlock"
-	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/shuttle/shuttle.dmi'
-	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/shuttle/old_overlays.dmi'
+	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
+	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+
+/obj/machinery/door/airlock/bathroom
+	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station/freezer.dmi'
+	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
 
 /obj/machinery/door/airlock/abductor
 	name = "alien airlock"
@@ -140,3 +144,18 @@
 	name = "cult airlock"
 	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/cult/runed/cult.dmi'
 	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/cult/runed/overlays.dmi'
+
+/obj/machinery/door/airlock/titanium
+	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
+	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+
+/obj/machinery/door/airlock/survival_pod
+	icon = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station/base_airlock.dmi'
+	overlays_file = 'zov_modular_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+
+//
+/obj/machinery/door/airlock/proc/airlock_dir_change(mob/user, obj/item/tool, new_dir, time = 20)
+	if(time)
+		to_chat(user, span_notice("You begin changing [src]'s direction..."))
+	tool.play_tool_sound(src, 50)
+	setDir(new_dir)

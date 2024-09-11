@@ -29,6 +29,12 @@
 	name = "window"
 	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/plastitanium_window.dmi'
 
+/obj/structure/window/reinforced/shuttle
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/shuttle_window.dmi'
+
+/obj/structure/window
+	icon = 'zov_modular_arkstation/modules/new-windows/shiptest/structures.dmi'
+
 // New-Old Icons (Ark Style)
 /obj/structure/window/fulltile/old
 	icon = 'zov_modular_arkstation/modules/new-windows/window.dmi'

@@ -1040,6 +1040,11 @@
 	if(is_wire_tool(C) && panel_open)
 		attempt_wire_interaction(user)
 		return
+	// ARK STATION ADDITION START
+	if(C.tool_behaviour == TOOL_WRENCH && panel_open)
+		dir == 1? airlock_dir_change(user, C, 4) : airlock_dir_change(user, C, 1)
+		return TRUE
+	// ARK STATION ADDITION END
 	else if(panel_open && security_level == AIRLOCK_SECURITY_NONE && istype(C, /obj/item/stack/sheet))
 		if(istype(C, /obj/item/stack/sheet/iron))
 			return try_reinforce(user, C, 2, AIRLOCK_SECURITY_IRON)

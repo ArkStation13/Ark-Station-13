@@ -29,6 +29,54 @@
 	icon_state = "materialwall-0"
 	base_icon_state = "materialwall"
 
+/turf/closed/wall/mineral/titanium/survival
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/survival_pod_walls.dmi'
+
+/turf/closed/wall/mineral/titanium/survival/nodiagonal
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/survival_pod_walls.dmi'
+
+/turf/closed/wall/mineral/plastitanium
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
+
+/turf/closed/wall/mineral/plastitanium/nodiagonal
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
+
+/turf/closed/wall/mineral/iron
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/iron_wall.dmi'
+
+/turf/closed/wall/mineral/titanium
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/shuttle_wall.dmi'
+
+/turf/closed/wall/mineral/titanium/nodiagonal
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/shuttle_wall.dmi'
+
+/turf/closed/wall/mineral/wood
+	icon = 'zov_modular_arkstation/modules/new-walls/walls/wood_wall.dmi'
+
+/turf/closed/mineral
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/smoothrocks.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/snowmountain
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/random/snow
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/random/labormineral/ice
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/snowmountain/cavern
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/random/snow
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/asteroid
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/red_wall.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/random/stationside/asteroid
+	icon = MAP_SWITCH('zov_modular_arkstation/modules/new-walls/walls/red_wall.dmi', 'icons/turf/mining.dmi')
+
 // New-Old Icons (Ark Style)
 /turf/closed/wall/old
 	icon = 'zov_modular_arkstation/modules/new-walls/walls.dmi'
