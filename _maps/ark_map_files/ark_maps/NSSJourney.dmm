@@ -1544,6 +1544,9 @@
 "alt" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/red/filled/line,
+/obj/machinery/computer/crew{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "alu" = (
@@ -10171,6 +10174,9 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/wood/tile,
 /area/station/service/library)
 "aUE" = (
@@ -11063,9 +11069,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
 /turf/open/floor/wood/tile,
 /area/station/hallway/primary/starboard)
 "aXv" = (
@@ -11574,19 +11577,6 @@
 "aYV" = (
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
-"aYW" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "library2"
-	},
-/obj/machinery/door/airlock/public/glass{
-	name = "Library"
-	},
-/turf/open/floor/wood/tile,
-/area/station/service/library)
 "aYY" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/corner{
@@ -36500,6 +36490,9 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Library"
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/wood/tile,
 /area/station/service/library)
 "fjm" = (
@@ -45573,10 +45566,10 @@
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "lfO" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood/tile,
 /area/station/service/library)
 "lgc" = (
@@ -63796,12 +63789,12 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "xAH" = (
-/obj/machinery/computer/crew{
-	dir = 1
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
+	},
+/obj/machinery/computer/cargo/request/sec{
+	dir = 1
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
@@ -108418,8 +108411,8 @@ aVO
 aVO
 aNW
 aIw
-aOS
-aYW
+iFn
+vhr
 aXu
 jIb
 oLy

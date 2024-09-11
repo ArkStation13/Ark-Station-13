@@ -13,6 +13,8 @@
 	var/finished_recharging = FALSE
 
 	var/static/list/allowed_devices = typecacheof(list(
+		/obj/item/stock_parts/power_store/cell/microfusion, // ARK STATION ADDITION
+		/obj/item/gun/microfusion, // ARK STATION ADDITION
 		/obj/item/gun/energy,
 		/obj/item/melee/baton/security,
 		/obj/item/ammo_box/magazine/recharge,
@@ -97,6 +99,21 @@
 		if(!energy_gun.can_charge)
 			to_chat(user, span_notice("Your gun has no external power connector."))
 			return TRUE
+
+	// ARK STATION ADDITION START
+	if (istype(attacking_item, /obj/item/gun/microfusion))
+		var/obj/item/gun/microfusion/microfusion_gun = attacking_item
+		if(microfusion_gun.cell?.chargerate <= 0)
+			to_chat(user, span_notice("[microfusion_gun] cannot be recharged!"))
+			return TRUE
+
+	if (istype(attacking_item, /obj/item/stock_parts/power_store/cell/microfusion))
+		var/obj/item/stock_parts/power_store/cell/microfusion/inserting_cell = attacking_item
+		if(inserting_cell.chargerate <= 0)
+			to_chat(user, span_notice("[inserting_cell] cannot be recharged!"))
+			return TRUE
+	// ARK STATION ADDITION END
+
 	user.transferItemToLoc(attacking_item, src)
 	return TRUE
 

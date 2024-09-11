@@ -23079,6 +23079,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/siding/red,
+/obj/machinery/computer/cargo/request/sec{
+	dir = 1
+	},
 /turf/open/floor/iron/white/small,
 /area/station/security/warden)
 "iLp" = (
@@ -50652,10 +50655,7 @@
 "rGm" = (
 /obj/effect/turf_decal/tile/dark_red/opposingcorners,
 /obj/machinery/computer/security,
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching Prison Wing holding areas.";
-	name = "Prison Monitor"
-	},
+/obj/machinery/computer/security/telescreen/prison/directional/north,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "rGp" = (

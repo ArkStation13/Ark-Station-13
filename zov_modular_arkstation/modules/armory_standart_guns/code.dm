@@ -5,17 +5,20 @@
 		/obj/item/gun/ballistic/shotgun/riot,
 		/obj/item/gun/ballistic/shotgun/riot,
 		/obj/item/gun/ballistic/shotgun/riot,
+		/obj/item/gun/ballistic/shotgun/riot,
 	)
 
 /obj/effect/spawner/armory_spawn/mod_lasers_big
 	guns = list(
-		/obj/item/gun/energy/laser,
-		/obj/item/gun/energy/laser,
-		/obj/item/gun/energy/laser,
+		/obj/item/gun/microfusion/mcr01,
+		/obj/item/gun/microfusion/mcr01,
+		/obj/item/gun/microfusion/mcr01,
+		/obj/item/gun/microfusion/mcr01,
 	)
 
 /obj/effect/spawner/armory_spawn/mod_lasers_small
 	guns = list(
+		/obj/item/gun/energy/e_gun,
 		/obj/item/gun/energy/e_gun,
 		/obj/item/gun/energy/e_gun,
 		/obj/item/gun/energy/e_gun,
@@ -47,6 +50,7 @@
 		/obj/item/gun/ballistic/automatic/wt550/ammoless,
 		/obj/item/gun/ballistic/automatic/wt550/ammoless,
 		/obj/item/gun/ballistic/automatic/wt550/ammoless,
+		/obj/item/gun/ballistic/automatic/wt550/ammoless,
 	)
 	vertical_guns = TRUE
 
@@ -62,10 +66,17 @@
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
 	new /obj/item/storage/box/lethalshot(src)
+	new /obj/item/storage/box/lethalshot(src)
+	new /obj/item/storage/box/ammo_box/microfusion(src)
+	new /obj/item/storage/box/ammo_box/microfusion(src)
+	new /obj/item/storage/box/ammo_box/microfusion(src)
+	new /obj/item/storage/box/ammo_box/microfusion(src)
 
 /obj/item/gun/ballistic/automatic/wt550/ammoless
 	spawnwithmagazine = FALSE
