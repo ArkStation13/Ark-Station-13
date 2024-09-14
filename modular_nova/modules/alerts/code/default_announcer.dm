@@ -40,7 +40,7 @@
 		ANNOUNCER_SPOOKY = 'modular_nova/modules/alerts/sound/misc/admin_horror_music.ogg',
 		ANNOUNCER_ERTYES = 'modular_nova/modules/alerts/sound/alerts/yesert.ogg',
 		ANNOUNCER_MUTANTS = 'modular_nova/modules/alerts/sound/alerts/hazdet.ogg',
-		ANNOUNCER_KLAXON = 'zov_modular_arkstation/modules/black_mesa/sound/siren1_long.ogg', // ARK STATION ADDITION
+		ANNOUNCER_KLAXON = 'modularz_arkstation/modules/black_mesa/sound/siren1_long.ogg', // ARK STATION ADDITION
 		ANNOUNCER_NRI_RAIDERS = 'modular_nova/modules/encounters/sounds/morse.ogg',
 		ANNOUNCER_DEPARTMENTAL = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',
 		ANNOUNCER_SHUTTLE = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',

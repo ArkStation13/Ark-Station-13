@@ -95,7 +95,7 @@
 	if(is_directional)
 		directional = TRUE
 		directional_atom = new() // ARK STATION ADDITION
-		cone = image('zov_modular_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light") // ARK STATION EDIT
+		cone = image('modularz_arkstation/modules/dynamic_flashlight/light_cone.dmi', icon_state = "light") // ARK STATION EDIT
 		SET_PLANE_EXPLICIT(cone, O_LIGHTING_VISUAL_PLANE, movable_parent)
 		cone.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 		cone.alpha = 110

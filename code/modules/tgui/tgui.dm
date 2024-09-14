@@ -98,7 +98,7 @@
 		window.initialize(
 			strict_mode = TRUE,
 			fancy = user.client.prefs.read_preference(/datum/preference/toggle/tgui_fancy),
-			inline_css = file('zov_modular_arkstation/_master_files/interface/arkstation.css'), // ARK STATION ADDITION
+			inline_css = file('modularz_arkstation/_master_files/interface/arkstation.css'), // ARK STATION ADDITION
 			assets = list(
 				get_asset_datum(/datum/asset/simple/tgui),
 			))

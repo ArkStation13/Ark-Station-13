@@ -88,7 +88,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	// NOVA EDIT ADDITION START - Donator icons in OOC
 	if(SSplayer_ranks.is_donator(src))
 		if(prefs.read_preference(/datum/preference/toggle/display_donator_status))
-			keyname = "<font color='[prefs.read_preference(/datum/preference/color/ooc_color) || GLOB.normal_ooc_colour]'>[icon2html('zov_modular_arkstation/_master_files/icons/ui_icons/chat_icon/ark_icon.dmi', world, "full")][keyname]</font>"
+			keyname = "<font color='[prefs.read_preference(/datum/preference/color/ooc_color) || GLOB.normal_ooc_colour]'>[icon2html('modularz_arkstation/_master_files/icons/ui_icons/chat_icon/ark_icon.dmi', world, "full")][keyname]</font>"
 	// NOVA EDIT ADDITION END
 	if(prefs.hearted)
 		var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/chat)

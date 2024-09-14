@@ -97,13 +97,13 @@
 				soundin = pick('modular_nova/master_files/sound/weapons/punch1.ogg', 'modular_nova/master_files/sound/weapons/punch3.ogg')
 			if ("explosion")
 				soundin = pick(
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode1.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode2.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode3.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode4.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode5.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode6.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode7.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode1.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode2.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode3.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode4.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode5.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode6.ogg', // ARK STATION EDIT
+					'modularz_arkstation/modules/black_mesa/sound/explosions/explode7.ogg', // ARK STATION EDIT
 				)
 			if(SFX_BRICK_DROP)
 				soundin = pick(

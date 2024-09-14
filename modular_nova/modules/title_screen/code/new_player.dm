@@ -135,7 +135,7 @@
 		winset(client, "status_bar", "is-visible=true")
 
 /mob/dead/new_player/proc/play_lobby_button_sound()
-	SEND_SOUND(src, sound('zov_modular_arkstation/modules/sounds-renewal/sound/items/flashlight_off.ogg')) // ARK STATION EDIT
+	SEND_SOUND(src, sound('modularz_arkstation/modules/sounds-renewal/sound/items/flashlight_off.ogg')) // ARK STATION EDIT
 
 /**
  * Allows the player to select a server to join from any loaded servers.

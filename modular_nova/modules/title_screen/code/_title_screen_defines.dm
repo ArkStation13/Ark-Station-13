@@ -1,7 +1,7 @@
 #define DEFAULT_TITLE_MAP_LOADTIME (150 SECONDS)
 
-#define DEFAULT_TITLE_SCREEN_IMAGE 'zov_modular_arkstation/_master_files/icons/ui_icons/theme/screen.jpg' // ARK STATION EDIT
-#define DEFAULT_TITLE_LOADING_SCREEN 'zov_modular_arkstation/_master_files/icons/ui_icons/theme/loading.gif' // ARK STATION EDIT
+#define DEFAULT_TITLE_SCREEN_IMAGE 'modularz_arkstation/_master_files/icons/ui_icons/theme/screen.jpg' // ARK STATION EDIT
+#define DEFAULT_TITLE_LOADING_SCREEN 'modularz_arkstation/_master_files/icons/ui_icons/theme/loading.gif' // ARK STATION EDIT
 
 #define TITLE_PROGRESS_CACHE_FILE "data/progress_cache.json"
 #define TITLE_PROGRESS_CACHE_VERSION "2"

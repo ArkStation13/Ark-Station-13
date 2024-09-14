@@ -44,7 +44,7 @@
 	// Perform a clean initialization
 	window.initialize(
 		strict_mode = TRUE,
-		inline_css = file('zov_modular_arkstation/_master_files/interface/arkstation.css'), // ARK STATION ADDITION
+		inline_css = file('modularz_arkstation/_master_files/interface/arkstation.css'), // ARK STATION ADDITION
 		assets = list(
 			get_asset_datum(/datum/asset/simple/tgui_panel),
 		))
