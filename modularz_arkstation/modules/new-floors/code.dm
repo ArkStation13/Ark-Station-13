@@ -63,6 +63,15 @@
 	icon = 'modularz_arkstation/modules/new-floors/floors.dmi'
 	icon_state = "floor"
 
+/turf/open/floor/mineral
+	icon = 'modularz_arkstation/modules/new-floors/floors.dmi'
+
+/turf/open/floor/iron/white
+	icon = 'modularz_arkstation/modules/new-floors/floors.dmi'
+
+/turf/open/floor/iron/freezer
+	icon = 'modularz_arkstation/modules/new-floors/floors.dmi'
+
 /turf/open/floor/stone
 	icon = 'icons/turf/floors.dmi'
 

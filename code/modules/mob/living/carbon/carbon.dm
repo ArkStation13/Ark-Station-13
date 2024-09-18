@@ -861,6 +861,7 @@
 	update_health_hud()
 	update_stamina_hud()
 	med_hud_set_status()
+	vignette_set_update() // ARK STATION ADDITION
 
 
 //called when we get cuffed/uncuffed

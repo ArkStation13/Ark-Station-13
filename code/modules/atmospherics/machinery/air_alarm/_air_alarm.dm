@@ -546,7 +546,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		state = "alarm0"
 
 	. += mutable_appearance(icon, state)
-	. += emissive_appearance(icon, state, src, alpha = src.alpha)
+	. += emissive_appearance(icon, "alarm-mask", src, alpha = src.alpha) // ARK STATION EDIT || state
 
 /// Check the current air and update our danger level.
 /// [/obj/machinery/airalarm/var/danger_level]

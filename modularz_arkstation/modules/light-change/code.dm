@@ -3,6 +3,17 @@
 	nightshift_brightness = 6
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
 	nightshift_light_color = LIGHT_COLOR_TUNGSTEN
+	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
+	overlay_icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
+
+/obj/structure/light_construct
+	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
+
+/obj/item/light
+	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
+
+/obj/item/wallframe/light_fixture
+	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
 
 /obj/machinery/light/dim
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
@@ -15,19 +26,19 @@
 
 #define MAPPING_DIRECTIONAL_HELPERS_LIGHT(path, offset) ##path/directional/north {\
     dir = NORTH; \
-    pixel_y = 14; \
+    pixel_y = 32; \
 } \
 ##path/directional/south {\
     dir = SOUTH; \
-    pixel_y = -5; \
+    pixel_y = -32; \
 } \
 ##path/directional/east {\
     dir = EAST; \
-    pixel_x = 8; \
+    pixel_x = 32; \
 } \
 ##path/directional/west {\
     dir = WEST; \
-    pixel_x = -8; \
+    pixel_x = -32; \
 }
 
 // -------- Directional presets

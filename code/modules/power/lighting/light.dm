@@ -177,15 +177,14 @@
 	if(!on || status != LIGHT_OK)
 		return
 
-	. += emissive_appearance(overlay_icon, "[base_state]", src, alpha = src.alpha)
-
+	. += emissive_appearance(overlay_icon, "[base_state]-on", src, alpha = src.alpha) // ARK STATION EDIT - "[base_state]"
 	var/area/local_area = get_room_area()
 
 	if(low_power_mode || major_emergency || (local_area?.fire))
 		. += mutable_appearance(overlay_icon, "[base_state]_emergency")
 		return
 	if(nightshift_enabled)
-		. += mutable_appearance(overlay_icon, "[base_state]_nightshift")
+		. += mutable_appearance(overlay_icon, "[base_state]") // ARK STATION EDIT - "[base_state]_nightshift"
 		return
 	. += mutable_appearance(overlay_icon, base_state)
 

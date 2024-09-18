@@ -35,6 +35,13 @@
 /turf/closed/wall/mineral/titanium/survival/nodiagonal
 	icon = 'modularz_arkstation/modules/new-walls/walls/survival_pod_walls.dmi'
 
+/turf/closed/wall/mineral/titanium/spaceship
+	icon = 'modularz_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
+	icon_state = "plastitanium_wall-0"
+	base_icon_state = "plastitanium_wall"
+
+/turf/closed/wall/mineral/titanium/spaceship/nodiagonal
+
 /turf/closed/wall/mineral/plastitanium
 	icon = 'modularz_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
 
@@ -53,8 +60,22 @@
 /turf/closed/wall/mineral/wood
 	icon = 'modularz_arkstation/modules/new-walls/walls/wood_wall.dmi'
 
+/turf/closed/wall/mineral/sandstone
+	icon = 'modularz_arkstation/modules/new-walls/walls/sandstone_wall.dmi'
+
+/turf/closed/indestructible/riveted/boss
+	icon = 'modularz_arkstation/modules/new-walls/walls/boss_wall.dmi'
+
+/turf/closed/wall/mineral/stone
+	icon = 'modularz_arkstation/modules/new-walls/walls/iron_wall.dmi'
+	icon_state = "iron_wall-0"
+	base_icon_state = "iron_wall"
+
 /turf/closed/mineral
 	icon = MAP_SWITCH('modularz_arkstation/modules/new-walls/walls/smoothrocks.dmi', 'icons/turf/mining.dmi')
+
+/turf/closed/mineral/strange_rock/volcanic
+	icon = MAP_SWITCH('modularz_arkstation/modules/new-walls/walls/smoothrocks.dmi', 'modular_nova/modules/xenoarch/icons/mining.dmi')
 
 /turf/closed/mineral/snowmountain
 	icon = MAP_SWITCH('modularz_arkstation/modules/new-walls/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
