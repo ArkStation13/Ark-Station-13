@@ -81,3 +81,20 @@
 
 		if(MC_TICK_CHECK)
 			return
+
+/mob/dead/get_status_tab_items()
+	. = ..()
+	if(SSticker.HasRoundStarted())
+		return
+	var/time_remaining = SSticker.GetTimeLeft()
+	if(time_remaining > 0)
+		. += "Начало раунда: [round(time_remaining/10)] секунд"
+	else if(time_remaining == -10)
+		. += "Начало раунда: ОТЛОЖЕНО"
+	else
+		. += "Начало раунда: СКОРО"
+
+	. += "Игроков: [LAZYLEN(GLOB.clients)]"
+	if(client.holder)
+		. += "Игроков Готово: [SSticker.totalPlayersReady]"
+		. += "Админов Готово: [SSticker.total_admins_ready] / [length(GLOB.admins)]"

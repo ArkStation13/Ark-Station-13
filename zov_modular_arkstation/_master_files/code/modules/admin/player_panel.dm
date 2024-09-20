@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 	.["mob_name"] = targetMob.real_name
 	.["mob_type"] = targetMob.type
 	.["admin_mob_type"] = user.client?.mob.type
-	.["godmode"] = targetMob.status_flags & GODMODE
+	.["godmode"] = targetMob.status_flags & check_godmode(targetMob)
 
 	var/mob/living/L = targetMob
 	if (istype(L))
@@ -66,6 +66,13 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 
 		if (targetMob.ckey)
 			.["last_ckey"] = copytext(targetMob.ckey, 2)
+
+/datum/player_panel/proc/check_godmode(mob/living/targetMob)
+	var/had_trait = HAS_TRAIT_FROM(targetMob, TRAIT_GODMODE, ADMIN_TRAIT)
+	if(had_trait)
+		return TRUE
+	else
+		return FALSE
 
 /datum/player_panel/ui_static_data()
 	. = list()

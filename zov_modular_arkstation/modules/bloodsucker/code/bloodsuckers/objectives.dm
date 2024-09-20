@@ -44,11 +44,11 @@
 			vassal_job = bloodsucker_vassals.owner.assigned_role
 		// Mob Assigned
 		else if(bloodsucker_vassals.owner?.current?.job)
-			vassal_job = SSjob.GetJob(bloodsucker_vassals.owner.current.job)
+			vassal_job = SSjob.get_job(bloodsucker_vassals.owner.current.job)
 		// PDA Assigned
 		else if(bloodsucker_vassals.owner?.current && ishuman(bloodsucker_vassals.owner.current))
 			var/mob/living/carbon/human/vassal = bloodsucker_vassals.owner.current
-			vassal_job = SSjob.GetJob(vassal.get_assignment())
+			vassal_job = SSjob.get_job(vassal.get_assignment())
 		if(vassal_job)
 			all_vassal_jobs += vassal_job
 	return all_vassal_jobs

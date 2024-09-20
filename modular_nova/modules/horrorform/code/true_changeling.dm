@@ -126,8 +126,8 @@
 	mind.transfer_to(stored_changeling)
 	stored_changeling.Paralyze(10 SECONDS) //Make them helpless for 10 seconds
 	stored_changeling.adjustBruteLoss(30, TRUE, TRUE)
-	stored_changeling.status_flags &= ~GODMODE
-	stored_changeling.emote("agony") // Ark Station 13 Edit
+	REMOVE_TRAIT(stored_changeling, TRAIT_GODMODE, "Changeling_True_Form")
+	stored_changeling.emote("agony") // ARK STATION EDIT
 	stored_changeling.gib()
 	stored_changeling = null
 	SEND_SIGNAL(src, COMSIG_HORRORFORM_EXPLODE)
@@ -201,7 +201,7 @@
 	horrorform.stored_changeling.loc = get_turf(horrorform)
 	horrorform.mind.transfer_to(horrorform.stored_changeling)
 	horrorform.stored_changeling.Stun(2 SECONDS)
-	horrorform.stored_changeling.status_flags &= ~GODMODE
+	REMOVE_TRAIT(horrorform.stored_changeling, TRAIT_GODMODE, "Changeling_True_Form")
 	qdel(horrorform)
 	return TRUE
 
