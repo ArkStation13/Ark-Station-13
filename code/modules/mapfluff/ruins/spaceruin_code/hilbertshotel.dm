@@ -22,7 +22,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	var/list/storedRooms = list()
 	var/storageTurf
 	//Lore Stuff
-	var/ruinSpawned = FALSE
+	var/                                                                                    = FALSE
 
 /obj/item/hilbertshotel/Initialize(mapload)
 	. = ..()
