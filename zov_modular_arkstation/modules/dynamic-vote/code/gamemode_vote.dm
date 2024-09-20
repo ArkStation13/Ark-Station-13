@@ -1,6 +1,9 @@
 #define CHOICE_DYNAMIC "Dynamic - Режим с антагонистами"
 #define CHOICE_EXTENDED "Extended - Мирный режим"
 
+/datum/vote
+	vote_sound = 'zov_modular_arkstation/modules/dynamic-vote/code/select.ogg'
+
 /datum/vote/gamemode_vote
 	name = "Game Mode"
 	default_choices = list(
@@ -9,13 +12,19 @@
 	)
 	default_message = "Голосование за режим игры."
 
+/datum/vote/transfer_vote/toggle_votable()
+	return FALSE
+
 /datum/vote/gamemode_vote/is_config_enabled()
 	return CONFIG_GET(flag/dynamic_vote)
 
 /datum/vote/gamemode_vote/can_be_initiated(forced)
 	. = ..()
 
-	return "Game Mode voting is disabled."
+	if(!forced)
+		return "This vote is currently disabled by the server configuration."
+
+	return VOTE_AVAILABLE
 
 /datum/vote/gamemode_vote/finalize_vote(winning_option)
 	if(winning_option == CHOICE_EXTENDED)

@@ -180,7 +180,7 @@ SUBSYSTEM_DEF(ticker)
 					to_chat(world, span_ooc_announcement_text("<b>Три Extended'а подряд. Настраиваем Dynamic...</b>"))
 				else
 					to_chat(world, span_ooc_announcement_text("<b>Начинаем голосование за Режим Игры!</b>"))
-					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE) // ARK STATION ADDITION - GAMEMODES
+					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE)
 			// ARK STATION ADDITION END
 			SStitle.change_title_screen() //NOVA EDIT ADDITION - Title screen
 			addtimer(CALLBACK(SStitle, TYPE_PROC_REF(/datum/controller/subsystem/title, change_title_screen)), 1 SECONDS) //NOVA EDIT ADDITION - Title screen
@@ -262,14 +262,14 @@ SUBSYSTEM_DEF(ticker)
 	can_continue = SSdynamic.pre_setup() //Choose antagonists
 	CHECK_TICK
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_PRE_JOBS_ASSIGNED, src)
-	can_continue = can_continue && SSjob.DivideOccupations() //Distribute jobs
+	can_continue = can_continue && SSjob.divide_occupations() //Distribute jobs
 	CHECK_TICK
 
 	if(!GLOB.Debug2)
 		if(!can_continue)
 			log_game("Game failed pre_setup")
 			to_chat(world, "<B>Error setting up game.</B> Reverting to pre-game lobby.")
-			SSjob.ResetOccupations()
+			SSjob.reset_occupations()
 			return FALSE
 	else
 		message_admins(span_notice("DEBUG: Bypassing prestart checks..."))
@@ -450,7 +450,7 @@ SUBSYSTEM_DEF(ticker)
 			continue
 		var/datum/job/player_assigned_role = new_player_living.mind.assigned_role
 		if(player_assigned_role.job_flags & JOB_EQUIP_RANK)
-			SSjob.EquipRank(new_player_living, player_assigned_role, new_player_mob.client)
+			SSjob.equip_rank(new_player_living, player_assigned_role, new_player_mob.client)
 		player_assigned_role.after_roundstart_spawn(new_player_living, new_player_mob.client)
 		if(picked_spare_id_candidate == new_player_mob)
 			captainless = FALSE
