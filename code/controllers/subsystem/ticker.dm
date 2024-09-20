@@ -180,7 +180,7 @@ SUBSYSTEM_DEF(ticker)
 					to_chat(world, span_ooc_announcement_text("<b>Три Extended'а подряд. Настраиваем Dynamic...</b>"))
 				else
 					to_chat(world, span_ooc_announcement_text("<b>Начинаем голосование за Режим Игры!</b>"))
-					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE) // ARK STATION ADDITION - GAMEMODES
+					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE)
 			// ARK STATION ADDITION END
 			SStitle.change_title_screen() //NOVA EDIT ADDITION - Title screen
 			addtimer(CALLBACK(SStitle, TYPE_PROC_REF(/datum/controller/subsystem/title, change_title_screen)), 1 SECONDS) //NOVA EDIT ADDITION - Title screen
