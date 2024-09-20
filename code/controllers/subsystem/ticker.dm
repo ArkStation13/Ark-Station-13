@@ -123,7 +123,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(!length(music))
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = 'zov_modular_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
+		login_music = 'modularz_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
