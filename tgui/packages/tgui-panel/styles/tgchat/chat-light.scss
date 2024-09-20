@@ -783,6 +783,10 @@ h2.alert {
   font-size: 60%;
 }
 
+.slightly_larger {
+  font-size: 115%;
+}
+
 .big {
   font-size: 185%;
 }
@@ -988,6 +992,49 @@ h2.alert {
   border-bottom: 1px dashed #333;
 }
 
+// Provides a horizontal bar with text in the middle
+// I got this off stackoverflow
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #111a27;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+// Used to display images besides text
+.img_by_text_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img_by_text_container img {
+  width: 2.5em; // a css guru can probably dehardcode this later
+  height: auto;
+  margin-right: 12px;
+  margin-top: 6px;
+}
+
+.img_by_text_container .img_text {
+  flex-grow: 1;
+}
+
+// NOVA EDIT CHANGE BEGIN - Remove neon colors, replaced with less saturated
+/*
 $alert-stripe-colors: (
   // Ark Station Change
   'default': #e3e3e3,
@@ -1039,6 +1086,56 @@ $alert-subheader-header-colors: (
   'purple': #005229,
   'grey': #005229
 );
+NOVA EDIT CHANGE END */
+
+$alert-stripe-colors: (
+  'default': #c6ccec,
+  'green': #ceebc2,
+  'blue': #c6ccec,
+  'pink': #ecc6d9,
+  'yellow': #fff3b3,
+  'orange': #ffe2b3,
+  'red': #ffbbb3,
+  'purple': #e6d1f0,
+  'grey': #e3e3e3,
+);
+
+$alert-stripe-alternate-colors: (
+  'default': #ced3ef,
+  'green': #d8efce,
+  'blue': #ced3ef,
+  'pink': #f0d1e1,
+  'yellow': #fff5c2,
+  'orange': #ffe8c2,
+  'red': #ffc8c2,
+  'purple': #ead9f2,
+  'grey': #ebebeb,
+);
+
+$alert-major-header-colors: (
+  'default': #003061,
+  'green': #1f440e,
+  'blue': #003061,
+  'pink': #602040,
+  'yellow': #990f00,
+  'orange': #b14810,
+  'red': #a80e00,
+  'purple': #5b2673,
+  'grey': #a80e00,
+);
+
+$alert-subheader-header-colors: (
+  'default': #991200,
+  'green': #002c85,
+  'blue': #991200,
+  'pink': #002c85,
+  'yellow': #214164,
+  'orange': #002c85,
+  'red': #483c3c,
+  'purple': #991200,
+  'grey': #002c85,
+);
+// NOVA EDIT CHANGE END
 
 $border-width: 4;
 
