@@ -1042,7 +1042,7 @@
 		return
 	// ARK STATION ADDITION START
 	if(C.tool_behaviour == TOOL_WRENCH && panel_open)
-		dir == 1? airlock_dir_change(user, C, 4) : airlock_dir_change(user, C, 1)
+		dir == 2? airlock_dir_change(user, C, 4) : airlock_dir_change(user, C, 2)
 		return TRUE
 	// ARK STATION ADDITION END
 	else if(panel_open && security_level == AIRLOCK_SECURITY_NONE && istype(C, /obj/item/stack/sheet))

@@ -23,7 +23,7 @@
 	var/obj/effect/abstract/light_spot/light_spot = new
 	var/trans_angle
 	var/icon_dist
-	plane = ABOVE_GAME_PLANE
+	plane = DYNAMIC_FLASLIGHT_PLANE //ABOVE_GAME_PLANE
 	layer = FLY_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
