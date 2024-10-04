@@ -191,78 +191,78 @@
 		var/obj/item/stack/used_stack = tool
 		used_stack.use(1)
 
-/// Surgery to repair cranial fissures // ARK STATION REMOVED
-// /datum/surgery/cranial_reconstruction
-// 	name = "Cranial reconstruction"
-// 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
-// 	targetable_wound = /datum/wound/cranial_fissure
-// 	possible_locs = list(
-// 		BODY_ZONE_HEAD,
-// 	)
-// 	steps = list(
-// 		/datum/surgery_step/clamp_bleeders/discard_skull_debris,
-// 		/datum/surgery_step/repair_skull
-// 	)
+/// Surgery to repair cranial fissures
+/datum/surgery/cranial_reconstruction
+	name = "Cranial reconstruction"
+	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
+	targetable_wound = /datum/wound/cranial_fissure
+	possible_locs = list(
+		BODY_ZONE_HEAD,
+	)
+	steps = list(
+		/datum/surgery_step/clamp_bleeders/discard_skull_debris,
+		/datum/surgery_step/repair_skull
+	)
 
-// /datum/surgery_step/clamp_bleeders/discard_skull_debris
-// 	name = "discard skull debris (hemostat)"
-// 	implements = list(
-// 		TOOL_HEMOSTAT = 100,
-// 		TOOL_WIRECUTTER = 40,
-// 		TOOL_SCREWDRIVER = 40,
-// 	)
-// 	time = 2.4 SECONDS
-// 	preop_sound = 'sound/surgery/hemostat1.ogg'
+/datum/surgery_step/clamp_bleeders/discard_skull_debris
+	name = "discard skull debris (hemostat)"
+	implements = list(
+		TOOL_HEMOSTAT = 100,
+		TOOL_WIRECUTTER = 40,
+		TOOL_SCREWDRIVER = 40,
+	)
+	time = 2.4 SECONDS
+	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
 
-///datum/surgery_step/clamp_bleeders/discard_skull_debris/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-//	display_results(
-//		user,
-//		target,
-//		span_notice("You begin to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-//		span_notice("[user] begins to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-//		span_notice("[user] begins to poke around in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
-//	)
+/datum/surgery_step/clamp_bleeders/discard_skull_debris/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
+	display_results(
+		user,
+		target,
+		span_notice("You begin to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+		span_notice("[user] begins to discard the smaller skull debris in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+		span_notice("[user] begins to poke around in [target]'s [target.parse_zone_with_bodypart(target_zone)]..."),
+	)
 
-// 	display_pain(target, "Your brain feels like it's getting stabbed by little shards of glass!")
+	display_pain(target, "Your brain feels like it's getting stabbed by little shards of glass!")
 
-// /datum/surgery_step/repair_skull
-// 	name = "repair skull (bone gel/tape)"
-// 	implements = IMPLEMENTS_THAT_FIX_BONES
-// 	time = 4 SECONDS
+/datum/surgery_step/repair_skull
+	name = "repair skull (bone gel/tape)"
+	implements = IMPLEMENTS_THAT_FIX_BONES
+	time = 4 SECONDS
 
-// /datum/surgery_step/repair_skull/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
-// 	ASSERT(surgery.operated_wound, "Repairing skull without a wound")
+/datum/surgery_step/repair_skull/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
+	ASSERT(surgery.operated_wound, "Repairing skull without a wound")
 
-// 	display_results(
-// 		user,
-// 		target,
-// 		span_notice("You begin to repair [target]'s skull as best you can..."),
-// 		span_notice("[user] begins to repair [target]'s skull with [tool]."),
-// 		span_notice("[user] begins to repair [target]'s skull."),
-// 	)
+	display_results(
+		user,
+		target,
+		span_notice("You begin to repair [target]'s skull as best you can..."),
+		span_notice("[user] begins to repair [target]'s skull with [tool]."),
+		span_notice("[user] begins to repair [target]'s skull."),
+	)
 
-// 	display_pain(target, "You can feel pieces of your skull rubbing against your brain!")
+	display_pain(target, "You can feel pieces of your skull rubbing against your brain!")
 
-// /datum/surgery_step/repair_skull/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
-// 	if (isnull(surgery.operated_wound))
-// 		to_chat(user, span_warning("[target]'s skull is fine!"))
-// 		return ..()
+/datum/surgery_step/repair_skull/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
+	if (isnull(surgery.operated_wound))
+		to_chat(user, span_warning("[target]'s skull is fine!"))
+		return ..()
 
 
-// 	if (isstack(tool))
-// 		var/obj/item/stack/used_stack = tool
-// 		used_stack.use(1)
+	if (isstack(tool))
+		var/obj/item/stack/used_stack = tool
+		used_stack.use(1)
 
-// 	display_results(
-// 		user,
-// 		target,
-// 		span_notice("You successfully repair [target]'s skull."),
-// 		span_notice("[user] successfully repairs [target]'s skull with [tool]."),
-// 		span_notice("[user] successfully repairs [target]'s skull.")
-// 	)
+	display_results(
+		user,
+		target,
+		span_notice("You successfully repair [target]'s skull."),
+		span_notice("[user] successfully repairs [target]'s skull with [tool]."),
+		span_notice("[user] successfully repairs [target]'s skull.")
+	)
 
-// 	qdel(surgery.operated_wound)
+	qdel(surgery.operated_wound)
 
-// 	return ..()
+	return ..()
 
 #undef IMPLEMENTS_THAT_FIX_BONES

@@ -97,24 +97,11 @@
 				soundin = pick('modular_nova/master_files/sound/weapons/punch1.ogg', 'modular_nova/master_files/sound/weapons/punch3.ogg')
 			if ("explosion")
 				soundin = pick(
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode1.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode2.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode3.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode4.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode5.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode6.ogg', // ARK STATION EDIT
-					'zov_modular_arkstation/modules/black_mesa/sound/explosions/explode7.ogg', // ARK STATION EDIT
-				)
-			if(SFX_BRICK_DROP)
-				soundin = pick(
-					'modular_nova/master_files/sound/items/bricks/brick_drop_1.ogg',
-					'modular_nova/master_files/sound/items/bricks/brick_drop_2.ogg',
-					'modular_nova/master_files/sound/items/bricks/brick_drop_3.ogg',
-				)
-			if(SFX_BRICK_PICKUP)
-				soundin = pick(
-					'modular_nova/master_files/sound/items/bricks/brick_pick_up_1.ogg',
-					'modular_nova/master_files/sound/items/bricks/brick_pick_up_2.ogg',
+					'sound/effects/explosion/explosion1.ogg',
+					'sound/effects/explosion/explosion2.ogg',
+					'sound/effects/explosion/explosion3.ogg',
+					'sound/effects/explosion/explosioncreak1.ogg',
+					'sound/effects/explosion/explosioncreak2.ogg',
 				)
 			if(SFX_BRICK_DROP)
 				soundin = pick(

@@ -281,7 +281,7 @@
 
 	if(possible_console)
 		if(possible_console.requestonly && !self_paid)
-			reason = tgui_input_text(user, "Reason", name)
+			reason = tgui_input_text(user, "Reason", name, max_length = MAX_MESSAGE_LEN)
 // ARK STATION ADDITION START
 			if(console_state == SEC_CARGO_CONSOLE)
 				reason = "SECURITY DEPARTMENT: "+"[reason]"
@@ -292,7 +292,7 @@
 	else if(possible_downloader)
 		var/datum/computer_file/program/budgetorders/parent_file = parent_prog
 		if((parent_file.requestonly && !self_paid) || !(possible_downloader.computer_id_slot?.GetID()))
-			reason = tgui_input_text(user, "Reason", name)
+			reason = tgui_input_text(user, "Reason", name, max_length = MAX_MESSAGE_LEN)
 			if(isnull(reason))
 				return
 
