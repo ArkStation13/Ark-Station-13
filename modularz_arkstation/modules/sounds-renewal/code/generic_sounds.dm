@@ -116,7 +116,7 @@
 // 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/shipambience.ogg'
 
 /area/station/maintenance
-	ambient_buzz = 'sound/ambience/maintambience.ogg'
+	ambient_buzz = 'sound/ambience/maintenance/maintambience.ogg'
 	ambient_buzz_vol = 20
 
 // SCI

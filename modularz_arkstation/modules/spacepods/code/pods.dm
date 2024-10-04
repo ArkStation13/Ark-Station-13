@@ -239,7 +239,7 @@
 	setDir(SOUTH)
 	playsound(src, 'sound/machines/windowdoor.ogg', 50, TRUE)
 	set_mouse_pointer()
-	SEND_SOUND(newoccupant, sound('sound/mecha/nominal.ogg',volume=50))
+	SEND_SOUND(newoccupant, sound('sound/vehicles/mecha/nominal.ogg',volume=50))
 	return TRUE
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/set_mouse_pointer()

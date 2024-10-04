@@ -989,7 +989,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///This fish is currently on cooldown and cannot splash ink unto people's faces
 #define TRAIT_FISH_INK_ON_COOLDOWN "fish_ink_on_cooldown"
 ///This fish requires two hands to carry even if smaller than FISH_SIZE_TWO_HANDS_REQUIRED, as long as it's bulky-sized.
-#define TRAIT_FISH_SHOULD_TWOHANDED "should_twohanded"
+#define TRAIT_FISH_SHOULD_TWOHANDED "fish_should_twohanded"
+///This fish won't be killed when cooked.
+#define TRAIT_FISH_SURVIVE_COOKING "fish_survive_cooking"
 
 /// Trait given to angelic constructs to let them purge cult runes
 #define TRAIT_ANGELIC "angelic"
@@ -1073,11 +1075,10 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// This atom is currently spinning.
 #define TRAIT_SPINNING "spinning"
 
-// ARK STATION REMOVED
-// /// This limb can't be torn open anymore
-// #define TRAIT_IMMUNE_TO_CRANIAL_FISSURE "immune_to_cranial_fissure"
-// /// Trait given if the mob has a cranial fissure.
-// #define TRAIT_HAS_CRANIAL_FISSURE "has_cranial_fissure"
+/// This limb can't be torn open anymore
+#define TRAIT_IMMUNE_TO_CRANIAL_FISSURE "immune_to_cranial_fissure"
+/// Trait given if the mob has a cranial fissure.
+#define TRAIT_HAS_CRANIAL_FISSURE "has_cranial_fissure"
 
 /// Denotes that this id card was given via the job outfit, aka the first ID this player got.
 #define TRAIT_JOB_FIRST_ID_CARD "job_first_id_card"
@@ -1279,6 +1280,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 ///Trait given to a turf that should not be allowed to be terraformed, such as turfs holding ore vents.
 #define TRAIT_NO_TERRAFORM "no_terraform"
+
+///Trait that prevents mobs from stopping by grabbing objects
+#define TRAIT_NOGRAV_ALWAYS_DRIFT "nograv_always_drift"
 
 ///Mobs with these trait do not get italicized/quiet speech when speaking in low pressure
 #define TRAIT_SPEECH_BOOSTER "speech_booster"
