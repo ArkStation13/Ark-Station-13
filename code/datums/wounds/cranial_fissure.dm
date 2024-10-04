@@ -1,5 +1,4 @@
-/* // ARK STATION REMOVED
-/datum/wound_pregen_data/cranial_fissure // ARK STATION REMOVED
+/datum/wound_pregen_data/cranial_fissure
 	wound_path_to_generate = /datum/wound/cranial_fissure
 	required_limb_biostate = BIO_BONE
 
@@ -138,4 +137,3 @@
 	return victim?.get_organ_by_type(/obj/item/organ/internal/eyes) == eyes
 
 #undef CRANIAL_FISSURE_FILTER_DISPLACEMENT
-*/ // ARK STATION REMOVED

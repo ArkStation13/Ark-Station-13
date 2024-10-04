@@ -198,7 +198,7 @@ GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
 	melee_damage_upper = 30
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/hallucinations/look_up2.ogg'
+	attack_sound = 'sound/effects/hallucinations/look_up2.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	melee_attack_cooldown = 2 SECONDS
 
@@ -221,7 +221,7 @@ GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
 /mob/living/basic/void_monster/Initialize(mapload)
 	. = ..()
 
-	AddComponent(/datum/component/squeak, list('sound/hallucinations/radio_static.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	AddComponent(/datum/component/squeak, list('sound/effects/hallucinations/radio_static.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 
 /datum/ai_controller/basic_controller/void_monster
 	blackboard = list(

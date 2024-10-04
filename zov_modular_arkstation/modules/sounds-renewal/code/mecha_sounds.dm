@@ -62,10 +62,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/mecha_parts/mecha_equipment
-	destroy_sound = 'sound/machines/engine_alert1.ogg'
+	destroy_sound = 'sound/machines/engine_alert/engine_alert1.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon
-	destroy_sound = 'sound/machines/engine_alert1.ogg'
+	destroy_sound = 'sound/machines/engine_alert/engine_alert1.ogg'
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

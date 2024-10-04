@@ -19,7 +19,7 @@
 	speak_emote = list("hums")
 	bubble_icon = "holo"
 	combat_mode = TRUE
-	attack_sound = 'sound/weapons/bladeslice.ogg'
+	attack_sound = 'sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	faction = list(ROLE_NECROMORPH)
 	status_flags = CANPUSH

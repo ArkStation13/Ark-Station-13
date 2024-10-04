@@ -144,7 +144,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = target_mob.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				target_mob.playsound_local(get_turf(target_mob), 'sound/effects/glockenspiel_ping.ogg', 50)
+				target_mob.playsound_local(get_turf(target_mob), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 		else
 			to_chat(user, span_warning("Your emote was unable to be sent to your target: Too far away."))
@@ -155,7 +155,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = hologram.Impersonation.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				hologram.Impersonation.playsound_local(get_turf(hologram.Impersonation), 'sound/effects/glockenspiel_ping.ogg', 50)
+				hologram.Impersonation.playsound_local(get_turf(hologram.Impersonation), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 	else
 		var/ghostless = get_hearers_in_view(target, user) - GLOB.dead_mob_list
@@ -173,7 +173,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = reciever.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				reciever.playsound_local(get_turf(reciever), 'sound/effects/glockenspiel_ping.ogg', 50)
+				reciever.playsound_local(get_turf(reciever), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 
 	return TRUE
