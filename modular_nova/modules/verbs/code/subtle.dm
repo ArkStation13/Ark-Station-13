@@ -24,7 +24,7 @@
 		to_chat(user, "You cannot send IC messages (muted).")
 		return FALSE
 	else if(!params)
-		subtle_emote = tgui_input_text(user, "Choose an emote to display.", "Subtle", null, MAX_MESSAGE_LEN, TRUE)
+		subtle_emote = tgui_input_text(user, "Choose an emote to display.", "Subtle", null, max_length = MAX_MESSAGE_LEN, multiline = TRUE)
 		if(!subtle_emote)
 			return FALSE
 		subtle_message = subtle_emote
@@ -92,7 +92,7 @@
 		to_chat(user, span_warning("You cannot send IC messages (muted)."))
 		return FALSE
 	else if(!subtler_emote)
-		subtler_emote = tgui_input_text(user, "Choose an emote to display.", "Subtler" , null, MAX_MESSAGE_LEN, TRUE)
+		subtler_emote = tgui_input_text(user, "Choose an emote to display.", "Subtler" , max_length = MAX_MESSAGE_LEN, multiline = TRUE)
 		if(!subtler_emote)
 			return FALSE
 
@@ -144,7 +144,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = target_mob.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				target_mob.playsound_local(get_turf(target_mob), 'sound/effects/glockenspiel_ping.ogg', 50)
+				target_mob.playsound_local(get_turf(target_mob), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 		else
 			to_chat(user, span_warning("Your emote was unable to be sent to your target: Too far away."))
@@ -155,7 +155,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = hologram.Impersonation.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				hologram.Impersonation.playsound_local(get_turf(hologram.Impersonation), 'sound/effects/glockenspiel_ping.ogg', 50)
+				hologram.Impersonation.playsound_local(get_turf(hologram.Impersonation), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 	else
 		var/ghostless = get_hearers_in_view(target, user) - GLOB.dead_mob_list
@@ -173,7 +173,7 @@
 			// ARK STATION EDIT BEGIN - Subtler sounds
 			var/datum/preferences/prefs = reciever.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
-				reciever.playsound_local(get_turf(reciever), 'sound/effects/glockenspiel_ping.ogg', 50)
+				reciever.playsound_local(get_turf(reciever), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
 			// ARK STATION EDIT END
 
 	return TRUE

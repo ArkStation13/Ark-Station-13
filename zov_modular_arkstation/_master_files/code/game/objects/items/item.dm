@@ -380,7 +380,7 @@
 	name = "Vance plushie"
 	desc = "A plush rodent, she smells like cheese and xenobiology!"
 	icon_state = "vance"
-	squeak_override = list('sound/items/toysqueak1.ogg' = 3, 'sound/items/toysqueak2.ogg' = 3, 'sound/items/toysqueak3.ogg' = 3)
+	squeak_override = list('sound/items/toy_squeak/toysqueak1.ogg' = 3, 'sound/items/toy_squeak/toysqueak2.ogg' = 3, 'sound/items/toy_squeak/toysqueak3.ogg' = 3)
 
 
 ///////////////////

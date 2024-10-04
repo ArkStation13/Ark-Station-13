@@ -23,7 +23,7 @@
 	BLACKSTEEL_FOUNDATION_NAME,
 	NAKAMURA_ENGINEERING_MODSUITS_NAME
 	)
-	podType = /obj/structure/closet/supplypod/bluespacepod
+	pod_type = /obj/structure/closet/supplypod/bluespacepod
 
 /obj/machinery/computer/cargo/express/interdyne/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(user)
@@ -52,7 +52,7 @@
 
 /obj/machinery/computer/cargo/express/interdyne/ui_act(action, params, datum/tgui/ui)
 	if(action == "add")//if we're generating a supply order
-		if (!beacon || !usingBeacon)//if not using beacon
+		if (!beacon || !using_beacon)//if not using beacon
 			say("Error! Destination is not whitelisted, aborting.")
 			return
 		var/id = params["id"]
