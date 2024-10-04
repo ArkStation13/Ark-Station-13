@@ -328,22 +328,22 @@ friction reduces the vector by an ammount to both axis*/
 	switch(speed)
 		if(-INFINITY to 10)
 			movedelay = 5
-			inertia_move_delay = 5
+			inertia_move_multiplier = 5
 		if(10 to 20)
 			movedelay = 4
-			inertia_move_delay = 4
+			inertia_move_multiplier = 4
 		if(20 to 35)
 			movedelay = 3
-			inertia_move_delay = 3
+			inertia_move_multiplier = 3
 		if(35 to 60)
 			movedelay = 2
-			inertia_move_delay = 2
+			inertia_move_multiplier = 2
 		if(60 to 90)
 			movedelay = 1
-			inertia_move_delay = 1
+			inertia_move_multiplier = 1
 		if(90 to INFINITY)
 			movedelay = 0
-			inertia_move_delay = 0
+			inertia_move_multiplier = 0
 	return
 
 /*

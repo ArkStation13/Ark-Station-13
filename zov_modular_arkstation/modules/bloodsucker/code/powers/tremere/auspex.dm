@@ -104,8 +104,8 @@
 	auspex_blink(user, targeted_turf)
 
 /datum/action/cooldown/bloodsucker/targeted/tremere/auspex/proc/auspex_blink(mob/living/user, turf/targeted_turf)
-	playsound(user, 'sound/magic/summon_karp.ogg', 60)
-	playsound(targeted_turf, 'sound/magic/summon_karp.ogg', 60)
+	playsound(user, 'sound/effects/magic/summon_karp.ogg', 60)
+	playsound(targeted_turf, 'sound/effects/magic/summon_karp.ogg', 60)
 
 	new /obj/effect/particle_effect/fluid/smoke/vampsmoke(user.drop_location())
 	new /obj/effect/particle_effect/fluid/smoke/vampsmoke(targeted_turf)
@@ -119,7 +119,7 @@
 			living_mob.adjustBruteLoss(15)
 		if(level_current >= 5)
 			living_mob.Knockdown(10 SECONDS, ignore_canstun = TRUE)
-	
+
 	do_teleport(owner, targeted_turf, no_effects = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 	user.adjustStaminaLoss(-user.staminaloss)
 	power_activated_sucessfully()
