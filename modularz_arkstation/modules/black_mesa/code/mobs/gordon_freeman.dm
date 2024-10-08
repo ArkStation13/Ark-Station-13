@@ -18,7 +18,7 @@
 	melee_damage_lower = 45
 	melee_damage_upper = 45
 	wander = FALSE
-	attack_sound = 'zov_modular_arkstation/modules/black_mesa/sound/crowbar2.ogg'
+	attack_sound = 'modularz_arkstation/modules/black_mesa/sound/crowbar2.ogg'
 	loot = list(/obj/item/crowbar/freeman/ultimate, /obj/item/keycard/freeman_boss_exit)
 	gold_core_spawnable = NO_SPAWN
 

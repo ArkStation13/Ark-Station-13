@@ -1,3 +1,12 @@
+/datum/controller/subsystem/statpanels/set_status_tab(client/target)
+	if(!global_data)//statbrowser hasnt fired yet and we were called from immediate_send_stat_data()
+		return
+
+	target.stat_panel.send_message("update_stat", list(
+		"global_data" = global_data,
+		"ping_str" = "Пинг: [round(target.lastping, 1)]мс (Среднее: [round(target.avgping, 1)]мс)",
+		"other_str" = target.mob?.get_status_tab_items(),
+	))
 
 /datum/controller/subsystem/statpanels/fire(resumed = FALSE)
 	if (!resumed)
@@ -8,26 +17,26 @@
 		var/active_players = get_active_player_count(alive_check = FALSE, afk_check = TRUE, human_check = FALSE) //This is a list of all active players, including players who are dead
 		var/observing_players = length(GLOB.current_observers_list) //This is a list of all players that started as an observer-- dead and lobby players are not included.
 		global_data = list(
-			"ID Раунда: [GLOB.round_id ? GLOB.round_id : "N/A"]",
-			"Игровой Режим: [GLOB.dynamic_forced_extended == TRUE? "Extended" : "Dynamic"]",
-			"Предыдущие Режимы: [jointext(SSpersistence.saved_modes, ", ")]", // Because some of us want to know when our favorite mode becomes forced - Flauros
+			"ID раунда: [GLOB.round_id ? GLOB.round_id : "Н/Д"]",
+			"Игровой режим: [GLOB.dynamic_forced_extended == TRUE? "Extended" : "Dynamic"]",
+			"Предыдущие режимы: [jointext(SSpersistence.saved_modes, ", ")]", // Because some of us want to know when our favorite mode becomes forced - Flauros
 			// "Server Rev: [server_rev ? server_rev : "N/A"]",
-			"Текущая Станция: [SSmapping.config?.map_name || "Loading..."]",
-			cached ? "Следующая Станция: [cached.map_name]" : null,
+			"Текущая станция: [SSmapping.config?.map_name || "Грузим..."]",
+			cached ? "Следующая станция: [cached.map_name]" : null,
 			"Подключено: [GLOB.clients.len] | Активно: [active_players] | Наблюдает: [observing_players]",
-			"Задержка Тиков: [round(SStime_track.time_dilation_current,1)]% (Среднее: [round(SStime_track.time_dilation_avg_fast,1)]% / [round(SStime_track.time_dilation_avg,1)]% / [round(SStime_track.time_dilation_avg_slow,1)]%)",
+			"Задержка тиков: [round(SStime_track.time_dilation_current,1)]% (Среднее: [round(SStime_track.time_dilation_avg_fast,1)]% / [round(SStime_track.time_dilation_avg,1)]% / [round(SStime_track.time_dilation_avg_slow,1)]%)",
 			" ",
-			"Серверное Время: [time2text(world.timeofday, "DD-MM-YYYY hh:mm:ss")]",
+			"Серверное время: [time2text(world.timeofday, "DD-MM-YYYY hh:mm:ss")]",
 		)
 
 		if(SSticker.HasRoundStarted())
-			global_data += "Время Раунда: [time2text(round_real_time, "hh:mm:ss", 0)]"
-			global_data += "Станционное Время: [station_time_timestamp()]"
+			global_data += "Время раунда: [time2text(round_real_time, "hh:mm:ss", 0)]"
+			global_data += "Станционное время: [station_time_timestamp()]"
 
 		if(SSshuttle.emergency)
 			var/ETA = SSshuttle.emergency.getModeStr()
 			if(ETA)
-				global_data += "Шаттл Эвакуации: [ETA] [SSshuttle.emergency.getTimerStr()]"
+				global_data += "Шаттл эвакуации: [ETA] [SSshuttle.emergency.getTimerStr()]"
 		src.currentrun = GLOB.clients.Copy()
 		mc_data = null
 
@@ -96,5 +105,5 @@
 
 	. += "Игроков: [LAZYLEN(GLOB.clients)]"
 	if(client.holder)
-		. += "Игроков Готово: [SSticker.totalPlayersReady]"
-		. += "Админов Готово: [SSticker.total_admins_ready] / [length(GLOB.admins)]"
+		. += "Игроков готово: [SSticker.totalPlayersReady]"
+		. += "Админов готово: [SSticker.total_admins_ready] / [length(GLOB.admins)]"

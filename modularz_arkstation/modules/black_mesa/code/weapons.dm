@@ -7,8 +7,8 @@
 	throwforce = 45
 	toolspeed = 0.1
 	wound_bonus = 10
-	hitsound = 'zov_modular_arkstation/modules/black_mesa/sound/crowbar2.ogg'
-	mob_throw_hit_sound = 'zov_modular_arkstation/modules/black_mesa/sound/crowbar2.ogg'
+	hitsound = 'modularz_arkstation/modules/black_mesa/sound/crowbar2.ogg'
+	mob_throw_hit_sound = 'modularz_arkstation/modules/black_mesa/sound/crowbar2.ogg'
 	force_opens = TRUE
 
 /obj/item/crowbar/freeman/ultimate

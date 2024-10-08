@@ -149,13 +149,13 @@
 						'modularz_arkstation/modules/sounds-renewal/sound/ambience/church-bell2.ogg',
 						'modularz_arkstation/modules/sounds-renewal/sound/ambience/church-cross1.ogg',
 						'modularz_arkstation/modules/sounds-renewal/sound/ambience/church-cross2.ogg',
-						'sound/ambience/ambicha1.ogg',
-						'sound/ambience/ambicha2.ogg',
-						'sound/ambience/ambicha3.ogg',
-						'sound/ambience/ambicha4.ogg',
-						'sound/ambience/ambiholy.ogg',
-						'sound/ambience/ambiholy2.ogg',
-						'sound/ambience/ambiholy3.ogg')
+						'sound/ambience/holy/ambicha1.ogg',
+						'sound/ambience/holy/ambicha2.ogg',
+						'sound/ambience/holy/ambicha3.ogg',
+						'sound/ambience/holy/ambicha4.ogg',
+						'sound/ambience/holy/ambiholy.ogg',
+						'sound/ambience/holy/ambiholy2.ogg',
+						'sound/ambience/holy/ambiholy3.ogg')
 	min_ambience_cooldown = 35 SECONDS
 	max_ambience_cooldown = 65 SECONDS
 
