@@ -87,8 +87,9 @@ MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/blacklight, 0)
 // ---- Dim tubes
 MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/dim, 0)
 
+/* __________________________________________________________________ */
 
-// -------- Bulb lights
+// ---- Bulb lights
 MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small, -3)
 
 // ---- Bulb construct
