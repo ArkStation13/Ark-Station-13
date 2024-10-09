@@ -47,7 +47,7 @@
 
 /obj/structure/mirror/Initialize(mapload)
 	. = ..()
-	var/static/list/reflection_filter = alpha_mask_filter(icon = icon('icons/obj/watercloset.dmi', "mirror_mask"))
+	var/static/list/reflection_filter = alpha_mask_filter(icon = icon(/*'icons/obj/watercloset.dmi' ARK STATION EDIT*/'modularz_arkstation/modules/new-watercloset-sprites/watercloset.dmi', "mirror_mask")) // ARK STATION EDIT
 	var/static/matrix/reflection_matrix = matrix(0.75, 0, 0, 0, 0.75, 0)
 	var/datum/callback/can_reflect = CALLBACK(src, PROC_REF(can_reflect))
 	var/list/update_signals = list(COMSIG_ATOM_BREAK)
