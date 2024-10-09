@@ -20,7 +20,7 @@
 	desc = "A brown headset, used by InteQ members."
 	icon_state = "inteq_headset"
 	worn_icon_state = "syndie_headset"
-	icon = 'modularz_arkstation/modules/faction-inteq/icons/ear_obj.dmi'
+	icon = 'modularz_arkstation/modules/faction_inteq/icons/ear_obj.dmi'
 	radio_talk_sound = 'modularz_arkstation/modules/sounds-renewal/sound/radio.ogg'
 	freerange = FALSE
 	freqlock = TRUE
@@ -51,5 +51,5 @@
 	name = "InteQ Encryption Key"
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1)
 	icon_state = "inteq_cypherkey"
-	icon = 'modularz_arkstation/modules/faction-inteq/icons/key.dmi'
+	icon = 'modularz_arkstation/modules/faction_inteq/icons/key.dmi'
 	special_channels = RADIO_SPECIAL_CENTCOM

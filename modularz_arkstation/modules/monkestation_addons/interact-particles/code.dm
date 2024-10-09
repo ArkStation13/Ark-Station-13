@@ -1,6 +1,6 @@
 /obj/effect/abstract/interact
 	name = "You shouldn't see this!"
-	icon = 'modularz_arkstation/modules/monkestation-addons/interact-particles/interact.dmi'
+	icon = 'modularz_arkstation/modules/monkestation_addons/interact-particles/interact.dmi'
 	icon_state = "interact"
 	alpha = 180
 	plane = POINT_PLANE

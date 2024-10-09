@@ -141,7 +141,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 			poll_question = "The station has ordered $35,000 in pizza. Will you deliver?"
 			cell_phone_number = "Dogginos"
 			list_to_use = "dogginos"
-	priority_announce(announcement_message, announcer, 'modularz_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message=TRUE, color_override = "orange")
+	priority_announce(announcement_message, announcer, 'modularz_arkstation/modules/faction_inteq/sound/inteq.ogg', has_important_message=TRUE, color_override = "orange")
 	var/list/candidates = SSpolling.poll_ghost_candidates(
 		poll_question,
 		check_jobban = ROLE_DEATHSQUAD,
@@ -438,7 +438,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				var/datum/bank_account/station_balance = SSeconomy.get_dep_account(ACCOUNT_CAR)
 				station_balance?.adjust_money(SOLFED_FINE_AMOUNT) // paying for the gas to drive all the fuckin' way out to the frontier
 
-			priority_announce(announcement_message, announcement_source, 'modularz_arkstation/modules/faction-inteq/sound/inteq.ogg', has_important_message = TRUE, color_override = "orange")
+			priority_announce(announcement_message, announcement_source, 'modularz_arkstation/modules/faction_inteq/sound/inteq.ogg', has_important_message = TRUE, color_override = "orange")
 			var/list/candidates = SSpolling.poll_ghost_candidates(
 				ghost_poll_msg,
 				jobban_to_check,
@@ -643,7 +643,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /obj/effect/landmark/inteq_spawn
 	name = "InteQteam"
-	icon = 'modularz_arkstation/modules/faction-inteq/icons/landmark.dmi'
+	icon = 'modularz_arkstation/modules/faction_inteq/icons/landmark.dmi'
 	icon_state = "inteq_spawn"
 
 /obj/effect/landmark/inteq_spawn/Initialize(mapload)

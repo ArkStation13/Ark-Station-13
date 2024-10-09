@@ -2,7 +2,7 @@
 #define CHOICE_EXTENDED "Extended - Мирный режим"
 
 /datum/vote
-	vote_sound = 'modularz_arkstation/modules/dynamic-vote/code/select.ogg'
+	vote_sound = 'modularz_arkstation/modules/dynamic_vote/code/select.ogg'
 
 /datum/vote/gamemode_vote
 	name = "Game Mode"
