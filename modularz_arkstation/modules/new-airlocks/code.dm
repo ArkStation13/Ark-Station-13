@@ -127,11 +127,11 @@
 /obj/machinery/door/airlock/shuttle
 	name = "shuttle airlock"
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
-	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/bathroom
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/freezer.dmi'
-	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/abductor
 	name = "alien airlock"
@@ -147,7 +147,7 @@
 
 /obj/machinery/door/airlock/titanium
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
-	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/survival_pod
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/base_airlock.dmi'
