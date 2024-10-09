@@ -244,7 +244,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	QDEL_NULL(soundloop)
 
 // ARK STATION ADDITION START
-	distort.icon = 'zov_modular_arkstation/modules/supermatter_distortion/32x32.dmi'
+	distort.icon = 'modularz_arkstation/modules/supermatter_distortion/32x32.dmi'
 	distort.icon_state = "SM_remnant"
 	distort.pixel_x = 0
 	distort.pixel_y = 0

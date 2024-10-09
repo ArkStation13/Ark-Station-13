@@ -516,7 +516,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	"Multilayer cable hub" = image(icon = 'icons/obj/pipes_n_cables/structures.dmi', icon_state = "cable_bridge"),
 	"Multi Z layer cable hub" = image(icon = 'icons/obj/pipes_n_cables/structures.dmi', icon_state = "cablerelay-broken-cable"),
 	"Cable restraints" = restraints_icon,
-	"Noose" = image(icon = 'zov_modular_arkstation/modules/noose/objects.dmi', icon_state = "noose") // ARK STATION ADDITION
+	"Noose" = image(icon = 'modularz_arkstation/modules/noose/objects.dmi', icon_state = "noose") // ARK STATION ADDITION
 	)
 
 	var/layer_result = show_radial_menu(user, src, radial_menu, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)

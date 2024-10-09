@@ -7428,7 +7428,9 @@
 /area/station/science/lobby)
 "cyR" = (
 /obj/effect/spawner/random/vending/colavend,
-/obj/machinery/light/directional/north,
+/obj/machinery/light/directional/north{
+	pixel_y = 30
+	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "cyS" = (
@@ -17656,7 +17658,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	name = "Brig Infirmary Maintenance"
+	name = "Brig Infirmary Maintenance";
+	dir = 4
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -45302,7 +45305,8 @@
 /area/station/science/cytology)
 "pkQ" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock"
+	name = "Security External Airlock";
+	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -49595,7 +49599,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small/directional/south{
+	pixel_y = -30
+	},
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "qIL" = (
@@ -59641,8 +59647,9 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
 "tTa" = (
-/obj/effect/decal/cleanable/cobweb,
 /obj/machinery/suit_storage_unit/industrial/loader,
+/obj/machinery/light_switch/directional/north,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "tTB" = (
@@ -62360,7 +62367,8 @@
 /area/station/engineering/break_room)
 "uMY" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock"
+	name = "Security External Airlock";
+	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -68253,7 +68261,6 @@
 /obj/item/pushbroom,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp,
-/obj/machinery/light_switch/directional/north,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "wFy" = (
