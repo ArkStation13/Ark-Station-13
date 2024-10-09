@@ -6,7 +6,7 @@
 /obj/structure/window/reinforced/fulltile
 	icon = 'modularz_arkstation/modules/new-windows/shiptest/reinforced_window.dmi'
 
-/obj/structure/window/plasma/reinforced/plastitanium
+/obj/structure/window/reinforced/plasma/plastitanium
 	icon = 'modularz_arkstation/modules/new-windows/shiptest/plastitanium_window.dmi'
 
 /obj/structure/window/reinforced/tinted/fulltile

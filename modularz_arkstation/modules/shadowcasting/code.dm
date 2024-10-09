@@ -1,6 +1,7 @@
 /atom/movable/screen/plane_master/shadowcasting
 	name = "shadowcasting plane master"
 	plane = SHADOWCASTING_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_target = "all3"
 
 /atom/movable/screen/plane_master/shadowcasting/New()
@@ -173,7 +174,7 @@
 	src.reflector.loc = mover
 
 /mob/Login()
-	. =..()
+	. = ..()
 	spawn(1)
 		client.create_opacity_image()
 		client.reflector.vis_contents.Cut()
