@@ -24,21 +24,21 @@
 /obj/machinery/light/warm
 	bulb_colour = LIGHT_COLOR_TUNGSTEN
 
-#define MAPPING_DIRECTIONAL_HELPERS_LIGHT(path, offset) ##path/directional/north {\
+#define MAPPING_DIRECTIONAL_HELPERS_LIGHT(path, dop_offset) ##path/directional/north {\
     dir = NORTH; \
-    pixel_y = 32; \
+    pixel_y = 32 + dop_offset; \
 } \
 ##path/directional/south {\
     dir = SOUTH; \
-    pixel_y = -32; \
+    pixel_y = -32 + dop_offset; \
 } \
 ##path/directional/east {\
     dir = EAST; \
-    pixel_x = 32; \
+    pixel_x = 32 + dop_offset; \
 } \
 ##path/directional/west {\
     dir = WEST; \
-    pixel_x = -32; \
+    pixel_x = -32 + dop_offset; \
 }
 
 // -------- Directional presets
@@ -89,26 +89,26 @@ MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/dim, 0)
 
 
 // -------- Bulb lights
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small, -3)
 
 // ---- Bulb construct
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/structure/light_construct/small, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/structure/light_construct/small, -3)
 
 // ---- Bulb frames
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/built, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/built, -3)
 
 // ---- Broken bulbs
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/broken, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/broken, -3)
 
 // ---- Red bulbs
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/dim, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/dim, -3)
 
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/red, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/red, -3)
 
 // ---- Red dim bulbs
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/red/dim, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/red/dim, -3)
 
 // ---- Blacklight bulbs
-MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/blacklight, 0)
+MAPPING_DIRECTIONAL_HELPERS_LIGHT(/obj/machinery/light/small/blacklight, -3)
 
 #undef MAPPING_DIRECTIONAL_HELPERS_LIGHT

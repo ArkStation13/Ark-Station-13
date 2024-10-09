@@ -177,7 +177,7 @@
 		return adjacent_turf
 
 	for(item in adjacent_turf)
-		if(istype(item, /obj/machinery/door/poddoor) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/machinery/door/airlock))
+		if(istype(item, /obj/machinery/door/poddoor) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile))
 			return item
 
 	return null
@@ -232,7 +232,7 @@
 		return adjacent_turf
 
 	for(item in adjacent_turf)
-		if(istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile))
+		if(istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile))
 			return item
 
 	return null

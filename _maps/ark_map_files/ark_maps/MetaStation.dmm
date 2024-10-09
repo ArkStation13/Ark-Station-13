@@ -7428,7 +7428,9 @@
 /area/station/science/lobby)
 "cyR" = (
 /obj/effect/spawner/random/vending/colavend,
-/obj/machinery/light/directional/north,
+/obj/machinery/light/directional/north{
+	pixel_y = 30
+	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "cyS" = (
@@ -49597,7 +49599,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small/directional/south{
+	pixel_y = -30
+	},
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "qIL" = (
@@ -59643,8 +59647,9 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
 "tTa" = (
-/obj/effect/decal/cleanable/cobweb,
 /obj/machinery/suit_storage_unit/industrial/loader,
+/obj/machinery/light_switch/directional/north,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "tTB" = (
@@ -68256,7 +68261,6 @@
 /obj/item/pushbroom,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp,
-/obj/machinery/light_switch/directional/north,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "wFy" = (
