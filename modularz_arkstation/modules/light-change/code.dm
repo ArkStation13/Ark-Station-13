@@ -18,6 +18,19 @@
 /obj/item/wallframe/light_fixture
 	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
 
+/atom
+	var/glow_icon = 'modularz_arkstation/modules/light-change/lamps.dmi'
+	var/exposure_icon = 'modularz_arkstation/modules/light-change/exposures.dmi'
+
+	var/glow_icon_state
+	var/glow_colored = FALSE
+
+	var/exposure_icon_state
+	var/exposure_colored = TRUE
+
+	var/image/glow_overlay
+	var/image/exposure_overlay
+
 /obj/machinery/computer
 	exposure_icon_state = "circle"
 	glow_icon = 'modularz_arkstation/modules/new-computer-sprites/computer.dmi'

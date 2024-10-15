@@ -126,7 +126,7 @@
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // NOVA EDIT ADDITION START
-#define JOB_BLUESHIELD "Admiral's Shield" // ARK STATION EDIT || Blueshield
+#define JOB_BLUESHIELD "Admirals Shield" // ARK STATION EDIT || Blueshield
 #define JOB_NT_REP "Consul of the Solar Federation" // ARK STATION EDIT || Nanotrasen Consultant
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"

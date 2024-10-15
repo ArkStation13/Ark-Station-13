@@ -141,20 +141,6 @@
 	/// Flags to check for in can_perform_action for mouse drag & drop checks. To bypass checks see interaction_flags_atom mouse drop flags
 	var/interaction_flags_mouse_drop = NONE
 
-	// ARK STATION ADDITION START
-	var/glow_icon = 'modularz_arkstation/modules/light-change/lamps.dmi'
-	var/exposure_icon = 'modularz_arkstation/modules/light-change/exposures.dmi'
-
-	var/glow_icon_state
-	var/glow_colored = FALSE
-
-	var/exposure_icon_state
-	var/exposure_colored = TRUE
-
-	var/image/glow_overlay
-	var/image/exposure_overlay
-	// ARK STATION ADDITION END
-
 /**
  * Top level of the destroy chain for most atoms
  *

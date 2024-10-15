@@ -5,11 +5,10 @@
 
 /obj/projectile
 	name = "projectile"
-	icon = 'modularz_arkstation/_master_files/icons/obj/weapons/guns/projectiles.dmi' // 'icons/obj/weapons/guns/projectiles.dmi' // ARK STATION EDIT
+	icon = 'icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "bullet"
 	density = FALSE
 	anchored = TRUE
-	animate_movement = NO_STEPS // ARK STATION ADDITION
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	movement_type = FLYING
 	wound_bonus = CANT_WOUND // can't wound by default

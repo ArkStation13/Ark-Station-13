@@ -72,12 +72,12 @@
 	if(isnum(text2num(num1)))
 		num1 = text2num(num1)
 	else
-		num1 = text2ascii(lowertext(num1)) - 87
+		num1 = text2ascii(LOWER_TEXT(num1)) - 87
 
 	if(isnum(text2num(num1)))
 		num2 = text2num(num1)
 	else
-		num2 = text2ascii(lowertext(num2)) - 87
+		num2 = text2ascii(LOWER_TEXT(num2)) - 87
 
 	return num1 * 16 + num2
 
@@ -97,7 +97,7 @@
 	SetBrightness(brightness)
 
 /datum/ColorMatrix/proc/SetPreset(preset)
-	switch(lowertext(preset))
+	switch(LOWER_TEXT(preset))
 		if("invert")
 			matrix = list(-1,0,0,
 						  0,-1,0,

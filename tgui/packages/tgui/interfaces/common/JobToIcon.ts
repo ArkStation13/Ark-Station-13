@@ -293,7 +293,7 @@ const ALTTITLES = {
   'Dispatch Officer': BASEICONS['Warden'],
   'Brig Governor': BASEICONS['Warden'],
   Jailer: BASEICONS['Warden'],
-  // ARK STATION JOBS
+  // ARK STATION JOBS START
   // Mechanic - space-shuttle
   'Pod Pilot': BASEICONS['Mechanic'],
   'Space Pods Builder': BASEICONS['Mechanic'],
@@ -325,6 +325,16 @@ const ALTTITLES = {
   Escapist: BASEICONS['Stowaway'],
   Savage: BASEICONS['Stowaway'],
   Outcast: BASEICONS['Stowaway'],
+  // // RE-NAMING OTHER JOBS // //
+  // Assistant
+  Colonist: BASEICONS['Assistant'],
+  // Captain
+  Admiral: BASEICONS['Captain'],
+  // Blueshield
+  'Admirals Shield': BASEICONS['Blueshield'],
+  // NTR
+  'Consul of the Solar Federation': BASEICONS['Nanotrasen Consultant'],
+  // ARK STATION JOBS END
 } as const;
 
 // Combine the Base icons and ALt titles

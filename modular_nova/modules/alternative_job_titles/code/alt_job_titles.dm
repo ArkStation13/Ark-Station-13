@@ -31,14 +31,14 @@
 		"Off-Duty Staff",
 		"Musician",
 		"Colonist",
-		"Contractor",
+		//"Contractor", // ARK STATION REMOVED
 	)
 
 /datum/job/atmospheric_technician
 	alt_titles = list(
 		"Atmospheric Technician",
 		"Emergency Fire Technician",
-		"Firefighter",
+		//"Firefighter", // ARK STATION REMOVED
 		"Life Support Technician",
 	)
 
@@ -73,8 +73,9 @@
 
 /datum/job/blueshield
 	alt_titles = list(
-		"Blueshield",
-		"Command Bodyguard",
+		"Admirals Shield", // ARK STATION ADDITION
+		//"Blueshield", // ARK STATION REMOVED
+		//"Command Bodyguard", // ARK STATION REMOVED
 		"Executive Protection Agent",
 	)
 
@@ -101,22 +102,25 @@
 		"Doorman",
 	)
 
-/*
+/* // ARK STATION REMOVED START
 /datum/job/corrections_officer
 	alt_titles = list(
 		"Corrections Officer",
 		"Brig Officer",
 		"Prison Guard",
 	)
-*/
+*/ // ARK STATION REMOVED END
 
 /datum/job/captain
 	alt_titles = list(
+		/* // ARK STATION REMOVED START
 		"Captain",
 		"Commanding Officer",
 		"Site Manager",
 		"Station Commander",
 		"Facility Director",
+		*/ // ARK STATION REMOVED END
+		"Admiral", // ARK STATION ADDITION
 	)
 
 /datum/job/cargo_technician
@@ -215,11 +219,13 @@
 		"Librarian",
 	)
 
-///datum/job/customs_agent
-//	alt_titles = list(
-//		"Customs Agent",
-//		"Supply Guard",
-//	)
+/* // ARK STATION REMOVED START
+/datum/job/customs_agent
+	alt_titles = list(
+		"Customs Agent",
+		"Supply Guard",
+	)
+*/ // ARK STATION REMOVED END
 
 /datum/job/cyborg
 	alt_titles = list(
@@ -270,7 +276,7 @@
 		"Chief Constable",
 		"Chief of Security",
 		"Security Commander",
-		"Sheriff",
+		// "Sheriff", // ARK STATION REMOVED
 	)
 
 /datum/job/janitor
@@ -310,11 +316,13 @@
 		"Nanotrasen Diplomat",
 	)
 
-///datum/job/orderly
-//	alt_titles = list(
-//		"Orderly",
-//		"Medical Guard",
-//	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+/* // ARK STATION REMOVED START
+/datum/job/orderly
+	alt_titles = list(
+		"Orderly",
+		"Medical Guard",
+	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+*/ // ARK STATION REMOVED END
 
 /datum/job/paramedic
 	alt_titles = list(

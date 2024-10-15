@@ -24,16 +24,16 @@
 //
 //
 // Лампы. К нему подсасываются другие эффекты, а от него уже на update_bloom() по LIGHTING_LAMPS_PLANE
-/atom/movable/screen/plane_master/lamps
-	name = "Lamps Plane Master"
-	documentation = "Lamps."
-	plane = LIGHTING_LAMPS_PLANE
-	appearance_flags = PLANE_MASTER
-	blend_mode_override = BLEND_OVERLAY
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	render_relay_planes = list(RENDER_PLANE_GAME)
+// /atom/movable/screen/plane_master/lamps
+// 	name = "Lamps Plane Master"
+// 	documentation = "Lamps."
+// 	plane = LIGHTING_LAMPS_PLANE
+// 	appearance_flags = PLANE_MASTER
+// 	blend_mode_override = BLEND_OVERLAY
+// 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+// 	render_relay_planes = list(RENDER_PLANE_GAME)
 
-	render_target = LIGHTING_LAMPS_RENDER_TARGET // ТАРГЕТ ДЛЯ ДРУГИХ ЭФФЕКТОВ. ВСЁ ЭТО КОМПАНУЕТСЯ И СОСЕТСЯ К update_bloom() ПОД LIGHTING_LAMPS_PLANE
+// 	render_target = LIGHTING_LAMPS_RENDER_TARGET // ТАРГЕТ ДЛЯ ДРУГИХ ЭФФЕКТОВ. ВСЁ ЭТО КОМПАНУЕТСЯ И СОСЕТСЯ К update_bloom() ПОД LIGHTING_LAMPS_PLANE
 
 // Блюр на LIGHTING_EXPOSURE_PLANE плейн (Т.е. это сам эффект БЛУМА. Там добавляется оверлей, а эта хуйня его блюрит.)
 /atom/movable/screen/plane_master/exposure
@@ -58,10 +58,10 @@
 /atom/movable/screen/plane_master/lamps_selfglow
 	name = "Lamps Selfglow Plane Master"
 	documentation = "Lamps Selfglow."
-	plane = LIGHTING_LAMPS_PLANE //LIGHTING_LAMPS_SELFGLOW
+	plane = LIGHTING_LAMPS_PLANE
 	appearance_flags = PLANE_MASTER
-	blend_mode = BLEND_OVERLAY //BLEND_ADD
-	blend_mode_override = BLEND_OVERLAY //BLEND_ADD
+	blend_mode = BLEND_ADD //BLEND_OVERLAY
+	blend_mode_override = BLEND_ADD //BLEND_OVERLAY
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_relay_planes = list(RENDER_PLANE_GAME)
 
@@ -69,7 +69,6 @@
 	. = ..()
 	if(!.)
 		return
-	// remove_filter("add_lamps_to_selfglow")
 	remove_filter("lamps_selfglow_bloom")
 
 	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/bloom_filter))
@@ -88,14 +87,13 @@
 				bloomsize = 5
 				bloomoffset = 3
 
-		//add_filter("add_lamps_to_selfglow", 1, layering_filter(render_source = LIGHTING_LAMPS_RENDER_TARGET, blend_mode = BLEND_OVERLAY)) // ПО ИДЕЕ ПОДСАСЫВАЕТСЯ НА СВЕТ ОТ update_bloom() от LIGHTING_LAMPS_RENDER_TARGET
-		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = bloomsize, offset = bloomoffset, alpha = 100)) // 100
+		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = bloomsize, offset = bloomoffset, alpha = 100))
 
 // Блики
 /atom/movable/screen/plane_master/lamps_glare
 	name = "Lamps Glare Plane Master"
 	documentation = "Lamps Glare."
-	plane = LIGHTING_LAMPS_PLANE //LIGHTING_LAMPS_GLARE
+	plane = LIGHTING_LAMPS_PLANE
 	appearance_flags = PLANE_MASTER
 	blend_mode = BLEND_OVERLAY
 	blend_mode_override = BLEND_OVERLAY
@@ -106,58 +104,6 @@
 	. = ..()
 	if(!.)
 		return
-	// remove_filter("add_lamps_to_glare")
 	remove_filter("lamps_glare")
 	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/bloom_filter))
-		//add_filter("add_lamps_to_glare", 1, layering_filter(render_source = LIGHTING_LAMPS_RENDER_TARGET, blend_mode = BLEND_OVERLAY)) // ПО ИДЕЕ ПОДСАСЫВАЕТСЯ НА СВЕТ ОТ update_bloom() от LIGHTING_LAMPS_RENDER_TARGET
 		add_filter("lamps_glare", 1, radial_blur_filter(size = 0.06)) // 0.05
-
-// ГЛУПЫЕ НАСТРОЙКИ. ВРУБИТЬ ЕСЛИ ОХОТА ПРОСТО ТЫКАТЬ КНОПКУ. //
-/*
-/client/verb/set_bloom_level()
-	set name = "LIGHTING: Set Bloom Level"
-	set category = "OOC"
-	set desc = "Set bloom level near lamps."
-
-	var/new_setting = input(src, "LIGHTING: Bloom Level:") as null|anything in list("Disable", "Low", "Medium (Default)", "High")
-	if(!new_setting)
-		return
-
-	switch(new_setting)
-		if("Disable")
-			prefs.bloomlevel = BLOOM_DISABLE
-		if("Low")
-			prefs.bloomlevel = BLOOM_LOW
-		if("Medium (Default)")
-			prefs.bloomlevel = BLOOM_MED
-		if("High")
-			prefs.bloomlevel = BLOOM_HIGH
-
-	to_chat(src, "Bloom: [new_setting].")
-	prefs.save_preferences()
-	if(screen && screen.len)
-		var/atom/movable/screen/plane_master/lamps_selfglow/PM = locate() in screen
-		PM.show_to(mob)
-
-/client/verb/toggle_oldnew_lighting()
-	set name = "LIGHTING: Toggle Old/New Lighting"
-	set category = "OOC"
-	set desc = "Toggle lighting variant."
-
-	prefs.old_lighting = !prefs.old_lighting
-	to_chat(src, "Lighting: [prefs.old_lighting ? "Old" : "New"].")
-	prefs.save_preferences()
-	if(screen && screen.len)
-		var/atom/movable/screen/plane_master/exposure/EXP = locate() in screen
-		var/atom/movable/screen/plane_master/lamps_selfglow/BLM = locate() in screen
-		var/atom/movable/screen/plane_master/lamps_glare/GLR = locate() in screen
-
-		if(prefs.old_lighting)
-			EXP.alpha = 0
-		else
-			EXP.alpha = 255
-
-		EXP.show_to(mob)
-		BLM.show_to(mob)
-		GLR.show_to(mob)
-*/
