@@ -147,7 +147,12 @@ DEFINE_BITFIELD(smoothing_junction, list(
 
 #define SMOOTH_GROUP_MUSHROOM S_TURF(64)
 
-#define MAX_S_TURF 64 //Always match this value with the one above it.
+// ARK STATION ADDITION START
+
+#define SMOOTH_GROUP_GRILLE S_TURF(65)
+
+#define MAX_S_TURF 65 //Always match this value with the one above it.
+// ARK STATION ADDITION END
 //NOVA EDIT END
 
 

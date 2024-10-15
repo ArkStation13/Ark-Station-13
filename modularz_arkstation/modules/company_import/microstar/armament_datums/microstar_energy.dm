@@ -28,6 +28,18 @@
 	name = "microfusion suppressor kit"
 	item_type = /obj/item/storage/briefcase/secure/white/mcr_loadout/tacticool
 
+/datum/armament_entry/company_import/microstar/mcr_attachments/scope
+	name = "microfusion scope kit"
+	item_type = /obj/item/microfusion_gun_attachment/scope
+
+/datum/armament_entry/company_import/microstar/mcr_attachments/grip
+	name = "microfusion grip kit"
+	item_type = /obj/item/microfusion_gun_attachment/grip
+
+/datum/armament_entry/company_import/microstar/mcr_attachments/rail
+	name = "microfusion rail kit"
+	item_type = /obj/item/microfusion_gun_attachment/rail
+
 // Improved phase emitters, cells, and cell attachments
 
 /datum/armament_entry/company_import/microstar/mcr_upgrades

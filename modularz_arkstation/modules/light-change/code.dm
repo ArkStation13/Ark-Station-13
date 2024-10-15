@@ -1,10 +1,13 @@
 /obj/machinery/light
-	brightness = 7 // 7.5
+	bulb_colour = "#ffe6cd"
+	brightness = 7.5 // 7.5
+	bulb_power = 0.6
 	nightshift_brightness = 6
-	bulb_colour = LIGHT_COLOR_TUNGSTEN
-	nightshift_light_color = LIGHT_COLOR_TUNGSTEN
 	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
 	overlay_icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
+
+	glow_icon_state = "tube"
+	exposure_icon_state = "cone"
 
 /obj/structure/light_construct
 	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
@@ -15,14 +18,98 @@
 /obj/item/wallframe/light_fixture
 	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
 
-/obj/machinery/light/dim
-	bulb_colour = LIGHT_COLOR_TUNGSTEN
+/obj/machinery/computer
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-computer-sprites/computer.dmi'
+	glow_icon_state = "computer_light_mask"
+
+/obj/machinery/computer/records/security/laptop
+	glow_icon_state = "laptop_light_mask"
+
+/obj/machinery/computer/records/medical/laptop
+	glow_icon_state = "laptop_light_mask"
+
+/obj/machinery/computer/security/wooden_tv
+	glow_icon_state = "tv_light_mask"
+
+/obj/machinery/computer/arcade
+	glow_icon_state = "arcade_light_mask"
+
+/obj/machinery/vending
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-vending-sprites/vendomats_dolbajob.dmi'
+	glow_icon_state = "generic-light-mask"
+
+/obj/machinery/vending/Initialize(mapload)
+	. = ..()
+	glow_icon_state = light_mask
+
+/obj/machinery/power/apc
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-wall-machines/power.dmi'
+	glow_icon_state = "apc_light_mask"
+	light_on_range = 2
+
+/obj/machinery/airalarm
+	light_power = 0.8
+	light_range = 1.5
+	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-air-alarm/airalarm.dmi'
+	glow_icon_state = "alarm-mask"
+
+/obj/machinery/firealarm
+	light_power = 0.5
+	light_range = 1
+	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-wall-machines/monitors.dmi'
+	glow_icon_state = "fire_light_mask"
+
+/obj/item/radio/intercom
+	light_power = 0.8
+	light_range = 1.5
+	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+	exposure_icon_state = "circle"
+	glow_icon = 'modularz_arkstation/modules/new-wall-machines/radio.dmi'
+	glow_icon_state = "intercom_light_mask"
+
+/obj/machinery/light/red
+	glow_icon_state = "tube_red"
+	bulb_colour = "#FF3232"
 
 /obj/machinery/light/small
-	bulb_colour = LIGHT_COLOR_TUNGSTEN
+	glow_icon_state = "bulb"
+	exposure_icon_state = "circle"
+	bulb_power = 0.6
+
+/obj/machinery/light/small/red
+	glow_icon_state = "bulb_red"
+
+/obj/machinery/light/small/maintenance
+	bulb_colour = "#e0a142"
+	nightshift_allowed = FALSE
+	bulb_power = 0.45
+	brightness = 2
+	glow_icon_state = "bulb_maint"
+
+/obj/machinery/light/floor
+	brightness = 4
+	bulb_power = 0.6
+	glow_icon_state = "floor"
+	exposure_icon_state = "floor"
+
+/obj/machinery/light/dim
+	nightshift_allowed = FALSE
+	bulb_colour = "#ffd9b3"
+	bulb_power = 0.5
+
+/obj/machinery/light/small
+	glow_icon_state = "bulb"
+	exposure_icon_state = "circle"
 
 /obj/machinery/light/warm
-	bulb_colour = LIGHT_COLOR_TUNGSTEN
+	bulb_colour = "#fae5c1"
 
 #define MAPPING_DIRECTIONAL_HELPERS_LIGHT(path, dop_offset) ##path/directional/north {\
     dir = NORTH; \
@@ -30,7 +117,7 @@
 } \
 ##path/directional/south {\
     dir = SOUTH; \
-    pixel_y = -32 + dop_offset; \
+    pixel_y = -32 - dop_offset; \
 } \
 ##path/directional/east {\
     dir = EAST; \
@@ -38,7 +125,7 @@
 } \
 ##path/directional/west {\
     dir = WEST; \
-    pixel_x = -32 + dop_offset; \
+    pixel_x = -32 - dop_offset; \
 }
 
 // -------- Directional presets

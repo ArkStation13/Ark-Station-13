@@ -55,6 +55,12 @@
 	/// If a food doesn't exist in this list, it uses the default value.
 	var/list/food_preferences = list()
 
+	// ARK STATION ADDITION START
+	// var/bloomlevel = BLOOM_MED
+	// var/old_lighting = FALSE
+	// var/lampsglare = TRUE
+	// ARK STATION ADDITION END
+
 /datum/preferences/proc/species_updated(species_type)
 	all_quirks = list()
 	// Reset cultural stuff

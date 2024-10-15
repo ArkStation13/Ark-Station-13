@@ -13,6 +13,10 @@
 /obj/structure/urinal
 	icon = 'modularz_arkstation/modules/new-watercloset-sprites/watercloset.dmi'
 
+/obj/structure/urinal/Initialize(mapload)
+	. = ..()
+	dir = REVERSE_DIR(dir)
+
 /obj/item/wallframe/urinal
 	icon = 'modularz_arkstation/modules/new-watercloset-sprites/watercloset.dmi'
 

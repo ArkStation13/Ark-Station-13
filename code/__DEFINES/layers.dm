@@ -10,6 +10,8 @@
 
 #define CLICKCATCHER_PLANE -40
 
+#define DYNAMIC_FLASLIGHT_PLANE -22 // ARK STATION ADDITION
+
 #define PLANE_SPACE -21
 #define PLANE_SPACE_PARALLAX -20
 
@@ -39,15 +41,23 @@
 
 //---------- LIGHTING -------------
 ///Normal 1 per turf dynamic lighting underlays
-#define LIGHTING_PLANE 10
+#define LIGHTING_PLANE 100 // ARK STATION EDIT - 10X
+
+// ARK STATION EDIT START
+#define LIGHTING_EXPOSURE_PLANE 101 // Light sources "cones"
+#define LIGHTING_LAMPS_SELFGLOW 102 // Light sources glow (lamps, doors overlay, etc.)
+#define LIGHTING_LAMPS_PLANE 103 // Light sources themselves (lamps, screens, etc.)
+#define LIGHTING_LAMPS_GLARE 104 // Light glare (optional setting)
+#define LIGHTING_LAMPS_RENDER_TARGET "*LIGHTING_LAMPS_RENDER_TARGET"
+// ARK STATION EDIT END
 
 ///Lighting objects that are "free floating"
-#define O_LIGHTING_VISUAL_PLANE 11
+#define O_LIGHTING_VISUAL_PLANE 110 // ARK STATION EDIT - 10X
 #define O_LIGHTING_VISUAL_RENDER_TARGET "O_LIGHT_VISUAL_PLANE"
 
-#define EMISSIVE_PLANE 13
+#define EMISSIVE_PLANE 130 // ARK STATION EDIT - 10X
 /// This plane masks out lighting to create an "emissive" effect, ie for glowing lights in otherwise dark areas.
-#define EMISSIVE_RENDER_PLATE 14
+#define EMISSIVE_RENDER_PLATE 140 // ARK STATION EDIT - 10X
 #define EMISSIVE_RENDER_TARGET "*EMISSIVE_PLANE"
 // Ensures all the render targets that point at the emissive plate layer correctly
 #define EMISSIVE_Z_BELOW_LAYER 1
@@ -55,61 +65,64 @@
 #define EMISSIVE_SPACE_LAYER 3
 #define EMISSIVE_WALL_LAYER 4
 
-#define RENDER_PLANE_LIGHTING 15
+#define RENDER_PLANE_LIGHTING 150 // ARK STATION EDIT - 10X
 
 /// Masks the lighting plane with turfs, so we never light up the void
 /// Failing that, masks emissives and the overlay lighting plane
-#define LIGHT_MASK_PLANE 16
+#define LIGHT_MASK_PLANE 160 // ARK STATION EDIT - 10X
 #define LIGHT_MASK_RENDER_TARGET "*LIGHT_MASK_PLANE"
 
 ///Things that should render ignoring lighting
-#define ABOVE_LIGHTING_PLANE 17
+#define ABOVE_LIGHTING_PLANE 170 // ARK STATION EDIT - 10X
 
 ///---------------- MISC -----------------------
 
 ///Pipecrawling images
-#define PIPECRAWL_IMAGES_PLANE 20
+#define PIPECRAWL_IMAGES_PLANE 200 // ARK STATION EDIT - 20X
 
 ///AI Camera Static
-#define CAMERA_STATIC_PLANE 21
+#define CAMERA_STATIC_PLANE 210 // ARK STATION EDIT - 20X
 
 ///Anything that wants to be part of the game plane, but also wants to draw above literally everything else
-#define HIGH_GAME_PLANE 22
+#define HIGH_GAME_PLANE 220 // ARK STATION EDIT - 20X
 
-#define FULLSCREEN_PLANE 23
+#define FULLSCREEN_PLANE 230 // ARK STATION EDIT - 20X
+
+#define SHADOWCASTING_REFLECTOR_PLANE 240 // ARK STATION ADDITION
+#define SHADOWCASTING_PLANE 250 // ARK STATION ADDITION
 
 ///--------------- FULLSCREEN RUNECHAT BUBBLES ------------
 
 ///Popup Chat Messages
-#define RUNECHAT_PLANE 30
+#define RUNECHAT_PLANE 300 // ARK STATION EDIT - 30X
 /// Plane for balloon text (text that fades up)
-#define BALLOON_CHAT_PLANE 31
+#define BALLOON_CHAT_PLANE 310 // ARK STATION EDIT - 30X
 
 //-------------------- HUD ---------------------
 //HUD layer defines
-#define HUD_PLANE 35
-#define ABOVE_HUD_PLANE 36
+#define HUD_PLANE 350 // ARK STATION EDIT - 30X
+#define ABOVE_HUD_PLANE 360 // ARK STATION EDIT - 30X
 
 ///Plane of the "splash" icon used that shows on the lobby screen
-#define SPLASHSCREEN_PLANE 37
+#define SPLASHSCREEN_PLANE 370 // ARK STATION EDIT - 30X
 
 // The largest plane here must still be less than RENDER_PLANE_GAME
 
 //-------------------- Rendering ---------------------
-#define RENDER_PLANE_GAME 40
+#define RENDER_PLANE_GAME 400 // ARK STATION EDIT - 40X
 /// If fov is enabled we'll draw game to this and do shit to it
-#define RENDER_PLANE_GAME_MASKED 41
+#define RENDER_PLANE_GAME_MASKED 410 // ARK STATION EDIT - 40X
 /// The bit of the game plane that is let alone is sent here
-#define RENDER_PLANE_GAME_UNMASKED 42
-#define RENDER_PLANE_NON_GAME 45
+#define RENDER_PLANE_GAME_UNMASKED 420 // ARK STATION EDIT - 40X
+#define RENDER_PLANE_NON_GAME 450 // ARK STATION EDIT - 40X
 
 // Only VERY special planes should be here, as they are above not just the game, but the UI planes as well.
 
 /// Plane related to the menu when pressing Escape.
 /// Needed so that we can apply a blur effect to EVERYTHING, and guarantee we are above all UI.
-#define ESCAPE_MENU_PLANE 46
+#define ESCAPE_MENU_PLANE 460 // ARK STATION EDIT - 40X
 
-#define RENDER_PLANE_MASTER 50
+#define RENDER_PLANE_MASTER 500 // ARK STATION EDIT - 50X
 
 // Lummox I swear to god I will find you
 // NOTE! You can only ever have planes greater then -10000, if you add too many with large offsets you will brick multiz

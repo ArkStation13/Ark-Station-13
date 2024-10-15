@@ -56,9 +56,9 @@ GLOBAL_LIST_INIT(shower_mode_descriptions, list(
 	///The cooldown for SHOWER_MODE_TIMED mode.
 	COOLDOWN_DECLARE(timed_cooldown)
 	///How far to shift the sprite when placing.
-	var/pixel_shift = 16
+	var/pixel_shift = 8 // 16 // ARK STATION EDIT
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-10)) //(-16)) // ARK STATION EDIT
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-8)) //(-16)) // ARK STATION EDIT
 
 /obj/machinery/shower/Initialize(mapload, ndir = 0, has_water_reclaimer = null)
 	. = ..()

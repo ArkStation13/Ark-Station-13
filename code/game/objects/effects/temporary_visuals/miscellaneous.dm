@@ -333,6 +333,7 @@
 	plane = ABOVE_GAME_PLANE
 	duration = 4
 
+/* // ARK STATION REFORCED IN 'modularz_arkstation\_master_files\code\game\objects\effects\temporary_visuals\explosions.dm'
 /obj/effect/temp_visual/explosion
 	name = "explosion"
 	icon = 'icons/effects/96x96.dmi'
@@ -344,6 +345,7 @@
 /obj/effect/temp_visual/explosion/fast
 	icon_state = "explosionfast"
 	duration = 4
+*/ // ARK STATION REFORCED END
 
 /obj/effect/temp_visual/blob
 	name = "blob"

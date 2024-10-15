@@ -32,12 +32,14 @@
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/ammo_box/c38/match/bouncy)
 
+/* // ARK STATION REMOVED START
 /datum/supply_pack/goody/mars_single
 	name = "Colt Detective Special Single-Pack"
 	desc = "The HoS took your gun and your badge? No problem! Just pay the absurd taxation fee and you too can be reunited with the lethal power of a .38!"
 	cost = PAYCHECK_CREW * 40 //they really mean a premium here
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/gun/ballistic/revolver/c38/detective)
+*/ // ARK STATION REMOVED END
 
 /datum/supply_pack/goody/stingbang
 	name = "Stingbang Single-Pack"

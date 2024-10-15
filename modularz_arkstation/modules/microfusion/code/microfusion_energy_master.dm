@@ -72,6 +72,8 @@
 	/// Recoil from attachments.
 	var/attachment_recoil = 0
 
+	recoil = 0.2 // ARK STATION EDIT
+
 /obj/item/gun/microfusion/emp_act(severity)
 	. = ..()
 	if(!(. & EMP_PROTECT_CONTENTS))
@@ -450,8 +452,12 @@
 	return TRUE
 
 /obj/item/gun/microfusion/shoot_live_shot(mob/living/user, pointblank, atom/pbtarget, message)
+	var/angle = get_angle(user, pbtarget)+rand(-recoil_deviation, recoil_deviation) + 180
+	if(angle > 360)
+		angle -= 360
+
 	if(recoil)
-		shake_camera(user, recoil + 1, recoil)
+		recoil_camera(user, recoil+1, (recoil*recoil_backtime_multiplier) + 1, recoil, angle)
 
 	var/sound_freq_to_add = 0
 

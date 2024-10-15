@@ -139,6 +139,8 @@
 	/// If it has an icon for a selector switch indicating current firemode.
 	var/selector_switch_icon = FALSE
 
+	recoil = 1 // ARK STATION EDIT
+
 /obj/item/gun/ballistic/Initialize(mapload)
 	. = ..()
 	if(!spawn_magazine_type)

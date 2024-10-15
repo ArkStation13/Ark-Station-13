@@ -10,7 +10,7 @@
 	/// What's in the urinal
 	var/obj/item/hidden_item
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 16) // ARK STATION EDIT - 32
 
 /obj/structure/urinal/Initialize(mapload)
 	. = ..()

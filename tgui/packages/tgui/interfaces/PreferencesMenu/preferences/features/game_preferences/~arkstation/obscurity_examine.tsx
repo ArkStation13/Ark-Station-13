@@ -1,3 +1,4 @@
+// ARK STATION UI FILE
 import { CheckboxInput, FeatureToggle } from '../../base';
 
 export const obscurity_examine_pref: FeatureToggle = {

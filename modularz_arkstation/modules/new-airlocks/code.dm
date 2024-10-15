@@ -88,6 +88,9 @@
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/glass.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
 
+/obj/machinery/door/airlock/corporate
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/solgov.dmi'
+
 /obj/machinery/door/airlock/external
 	name = "external airlock"
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/external/external.dmi'
@@ -102,11 +105,6 @@
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/centcom/centcom.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/centcom/overlays.dmi'
 
-// /obj/machinery/door/airlock/vault
-// 	name = "vault door"
-// 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/vault/vault.dmi'
-// 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/vault/overlays.dmi'
-
 /obj/machinery/door/airlock/hatch
 	name = "airtight hatch"
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/hatch/centcom.dmi'
@@ -119,13 +117,7 @@
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/hatch/overlays.dmi'
 	note_overlay_file = 'modularz_arkstation/modules/new-airlocks/airlocks/hatch/overlays.dmi'
 
-// /obj/machinery/door/airlock/highsecurity
-// 	name = "high tech security airlock"
-// 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/highsec/highsec.dmi'
-// 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/highsec/overlays.dmi'
-
 /obj/machinery/door/airlock/shuttle
-	name = "shuttle airlock"
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
@@ -133,20 +125,40 @@
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/freezer.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
-// /obj/machinery/door/airlock/abductor
-// 	name = "alien airlock"
-// 	desc = "With humanity's current technological level, it could take years to hack this advanced airlock... or maybe we should give a screwdriver a try?"
-// 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/abductor/abductor_airlock.dmi'
-// 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/abductor/overlays.dmi'
-// 	note_overlay_file = 'modularz_arkstation/modules/new-airlocks/airlocks/external/overlays.dmi'
-
-// /obj/machinery/door/airlock/cult
-// 	name = "cult airlock"
-// 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/cult/runed/cult.dmi'
-// 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/cult/runed/overlays.dmi'
-
 /obj/machinery/door/airlock/titanium
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/silver
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/silver.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/plasma
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/plasma.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/gold
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/gold.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/diamond
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/diamond.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/bananium
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/bananium.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/uranium
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/uranium.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/wood
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/wood.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/machinery/door/airlock/sandstone
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/sandstone.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/survival_pod

@@ -15,11 +15,13 @@ GLOBAL_LIST_EMPTY(valid_for_spawn_cryopods)
 	close_machine(M, TRUE, TRUE)
 
 /obj/machinery/cryopod/proc/apply_effects_to_mob(mob/living/carbon/sleepyhead)
-	to_chat(sleepyhead, "<span class='boldnotice'>You begin to wake from cryosleep...</span>")
+	to_chat(sleepyhead, "<span class='boldnotice'>Вы начинаете просыпаться от продолжительного криосна...</span>")
 	sleepyhead.SetSleeping(75)
 
-	var/wakeupmessage = "The cryopod shudders as the pneumatic seals separating you and the waking world let out a hiss."
-	if(prob(60))
-		wakeupmessage += " A sickly feeling along with the pangs of hunger greet you upon your awakening."
+	var/wakeupmessage = span_infoplain("&bull; Криокапсула содрогается, когда пневматические уплотнения, разделяющие вас и реальный мир, издают шипение.\n")
+	if(prob(20))
+		wakeupmessage += span_infoplain("&bull; Чувство тошноты и голода приветствуют вас при пробуждении.\n")
 		sleepyhead.adjust_drowsiness(rand(3, 10) SECONDS)
-	to_chat(sleepyhead, span_danger(examine_block(wakeupmessage)))
+
+	wakeupmessage += span_alien("&bull; До судного дня осталось... <b>X дней</b>.")
+	to_chat(sleepyhead, examine_block(wakeupmessage))

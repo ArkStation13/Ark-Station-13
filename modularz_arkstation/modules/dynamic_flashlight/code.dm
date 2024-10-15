@@ -23,13 +23,15 @@
 	var/obj/effect/abstract/light_spot/light_spot = new
 	var/trans_angle
 	var/icon_dist
-	plane = DYNAMIC_FLASLIGHT_PLANE //ABOVE_GAME_PLANE
+	plane = DYNAMIC_FLASLIGHT_PLANE
 	layer = FLY_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	animate_movement = SLIDE_STEPS
 
 /obj/effect/abstract/directional_lighting/Initialize()
 	. = ..()
 	vis_contents += light_spot
+	light_spot.add_filter("dir_light", 1, gauss_blur_filter(1.8))
 
 /obj/effect/abstract/directional_lighting/proc/face_light(atom/movable/source, angle, distance)
 	if(!loc)
@@ -58,6 +60,7 @@
 		return QDEL_HINT_LETMELIVE
 
 	vis_contents.Cut()
+	light_spot.remove_filter("dir_light")
 	qdel(light_spot)
 
 	return ..()

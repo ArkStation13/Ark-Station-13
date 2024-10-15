@@ -39,10 +39,10 @@
  */
 
 //No department
-#define JOB_ASSISTANT "Assistant"
+#define JOB_ASSISTANT "Colonist" // ARK STATION EDIT || Assistant
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Captain"
+#define JOB_CAPTAIN "Admiral" // ARK STATION EDIT || Captain
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
@@ -98,7 +98,7 @@
 #define JOB_MIME "Mime"
 #define JOB_CURATOR "Curator"
 #define JOB_LAWYER "Lawyer"
-#define JOB_CHAPLAIN "Priest" // ARK STATION EDIT
+#define JOB_CHAPLAIN "Priest" // ARK STATION EDIT || Chaplain
 #define JOB_PSYCHOLOGIST "Psychologist"
 #define JOB_PUN_PUN "Pun Pun"
 #define JOB_BARBER "Barber" // NOVA EDIT ADDITION
@@ -126,8 +126,8 @@
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // NOVA EDIT ADDITION START
-#define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Nanotrasen Consultant"
+#define JOB_BLUESHIELD "Admiral's Shield" // ARK STATION EDIT || Blueshield
+#define JOB_NT_REP "Consul of the Solar Federation" // ARK STATION EDIT || Nanotrasen Consultant
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
@@ -138,7 +138,7 @@
 #define JOB_NAVAL_ADMIRAL "Admiral"
 #define JOB_NAVAL_FLEET_ADMIRAL "Fleet Admiral"
 // Off-Station
-#define JOB_SPACE_POLICE "Space Police"
+#define JOB_SPACE_POLICE "SolFed Police Department" // ARK STATION EDIT || Space Police
 #define JOB_SOLFED "SolFed"
 #define JOB_SOLFED_LIASON "SolFed Liason"
 // NOVA EDIT ADDITION END
