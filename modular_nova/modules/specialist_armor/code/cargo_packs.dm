@@ -1,3 +1,5 @@
+// ARK STATION REMOVED START
+/*
 /datum/supply_pack/security/armory/soft_armor
 	name = "Soft Armor Kit Crate"
 	crate_name = "soft armor kit crate"
@@ -28,3 +30,4 @@
 		/obj/item/sacrificial_face_shield = 3,
 		/obj/item/clothing/suit/armor/sf_sacrificial = 3,
 	)
+*/ // ARK STATION REMOVED END

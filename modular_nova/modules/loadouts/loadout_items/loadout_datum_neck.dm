@@ -246,7 +246,7 @@
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR)
 
 /datum/loadout_item/neck/mantle_ce
-	name = "Chief Engineer's Mantle"
+	name = "Tech Overseer's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/cemantle
 	restricted_roles = list(JOB_CHIEF_ENGINEER)
 

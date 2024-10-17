@@ -11,8 +11,8 @@
 	acid = 20
 
 /obj/item/clothing/under/rank/engineering/chief_engineer
-	desc = "It's a high visibility jumpsuit given to those engineers insane enough to achieve the rank of \"Chief Engineer\". Made from fire resistant materials."
-	name = "chief engineer's jumpsuit"
+	desc = "It's a high visibility jumpsuit given to those engineers insane enough to achieve the rank of \"Tech Overseer\". Made from fire resistant materials." // ARK STATION EDIT
+	name = "tech overseer's jumpsuit" // ARK STATION EDIT
 	icon_state = "chiefengineer"
 	inhand_icon_state = "gy_suit"
 	armor_type = /datum/armor/clothing_under/engineering_chief_engineer
@@ -22,8 +22,8 @@
 	acid = 40
 
 /obj/item/clothing/under/rank/engineering/chief_engineer/skirt
-	name = "chief engineer's jumpskirt"
-	desc = "It's a high visibility jumpskirt given to those engineers insane enough to achieve the rank of \"Chief Engineer\". Made from fire resistant materials."
+	name = "tech overseer's jumpskirt" // ARK STATION EDIT
+	desc = "It's a high visibility jumpskirt given to those engineers insane enough to achieve the rank of \"Tech Overseer\". Made from fire resistant materials." // ARK STATION EDIT
 	icon_state = "chief_skirt"
 	inhand_icon_state = "gy_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -32,8 +32,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/engineering/chief_engineer/turtleneck
-	name = "chief engineer's turtleneck"
-	desc = "A yellow turtleneck and white khakis, for a chief engineer with a superior sense of style."
+	name = "tech overseer's turtleneck" // ARK STATION EDIT
+	desc = "A yellow turtleneck and white khakis, for a tech overseer with a superior sense of style." // ARK STATION EDIT
 	icon_state = "ceturtle"
 	inhand_icon_state = "y_suit"
 	can_adjust = TRUE
@@ -41,8 +41,8 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 
 /obj/item/clothing/under/rank/engineering/chief_engineer/turtleneck/skirt
-	name = "chief engineer's turtleneck skirt"
-	desc = "A yellow turtleneck and white khaki skirt, for a chief engineer with a superior sense of style."
+	name = "tech overseer's turtleneck skirt" // ARK STATION EDIT
+	desc = "A yellow turtleneck and white khaki skirt, for a tech overseer with a superior sense of style." // ARK STATION EDIT
 	icon_state = "ceturtle_skirt"
 	inhand_icon_state = "y_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

@@ -80,9 +80,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
 	busy = TRUE
+	// TO-DO Звук крана.
 
 	if(!do_after(user, 4 SECONDS, target = src))
 		busy = FALSE
+		// TO-DO Звук крана.
 		return
 
 	busy = FALSE
@@ -117,6 +119,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 				reagents.trans_to(RG, RG.amount_per_transfer_from_this, transferred_by = user)
 				begin_reclamation()
 				to_chat(user, span_notice("You fill [RG] from [src]."))
+				// TO-DO Звук крана.
 				return TRUE
 			to_chat(user, span_notice("\The [RG] is full."))
 			return FALSE
@@ -206,6 +209,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 
 	if(!user.combat_mode || (O.item_flags & NOBLUDGEON))
 		to_chat(user, span_notice("You start washing [O]..."))
+		// TO-DO Звук крана.
 		busy = TRUE
 		if(!do_after(user, 4 SECONDS, target = src))
 			busy = FALSE

@@ -48,6 +48,8 @@
 
 	voice_of_god_power = 1.4 //Command staff has authority
 
+	species_whitelist = list(SPECIES_HUMAN) // ARK STATION ADDITION
+
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
 	return "Captain [captain.real_name] on deck!"

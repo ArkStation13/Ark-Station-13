@@ -36,7 +36,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     color: 'blue',
     // NOVA EDIT CHANGE START - ORIGINAL: trims: ['Captain', 'Head of Personnel'],
     trims: [
-      'Captain',
+      'Admiral', // ARK STATION EDIT
       'Head of Personnel',
       'Nanotrasen Consultant',
       'Blueshield',
@@ -49,7 +49,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     */
     trims: [
       'Atmospheric Technician',
-      'Chief Engineer',
+      'Tech Overseer', // ARK STATION EDIT
       'Engineering Guard',
       'Station Engineer',
       'Telecomms Specialist',
