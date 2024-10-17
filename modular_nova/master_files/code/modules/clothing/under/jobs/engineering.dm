@@ -63,7 +63,7 @@
 
 /obj/item/clothing/under/rank/engineering/chief_engineer/nova/imperial
 	desc = "A gray naval suit with a lead-lined vest and a rank badge denoting the Officer of the Internal Engineering Division. Doesn't come with a death machine building guide."
-	name = "chief engineer's naval jumpsuit"
+	name = "tech overseer's naval jumpsuit" // ARK STATION EDIT
 	icon_state = "impce"
 
 /*

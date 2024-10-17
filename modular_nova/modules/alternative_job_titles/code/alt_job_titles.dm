@@ -31,14 +31,14 @@
 		"Off-Duty Staff",
 		"Musician",
 		"Colonist",
-		//"Contractor", // ARK STATION REMOVED
+		"Contractor",
 	)
 
 /datum/job/atmospheric_technician
 	alt_titles = list(
 		"Atmospheric Technician",
 		"Emergency Fire Technician",
-		//"Firefighter", // ARK STATION REMOVED
+		"Firefighter",
 		"Life Support Technician",
 	)
 
@@ -73,9 +73,8 @@
 
 /datum/job/blueshield
 	alt_titles = list(
-		"Admirals Shield", // ARK STATION ADDITION
-		//"Blueshield", // ARK STATION REMOVED
-		//"Command Bodyguard", // ARK STATION REMOVED
+		"Blueshield",
+		"Command Bodyguard",
 		"Executive Protection Agent",
 	)
 
@@ -113,14 +112,11 @@
 
 /datum/job/captain
 	alt_titles = list(
-		/* // ARK STATION REMOVED START
 		"Captain",
 		"Commanding Officer",
 		"Site Manager",
 		"Station Commander",
 		"Facility Director",
-		*/ // ARK STATION REMOVED END
-		"Admiral", // ARK STATION ADDITION
 	)
 
 /datum/job/cargo_technician
@@ -276,7 +272,7 @@
 		"Chief Constable",
 		"Chief of Security",
 		"Security Commander",
-		// "Sheriff", // ARK STATION REMOVED
+		"Sheriff",
 	)
 
 /datum/job/janitor

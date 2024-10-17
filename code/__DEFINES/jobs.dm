@@ -46,7 +46,7 @@
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
-#define JOB_CHIEF_ENGINEER "Chief Engineer"
+#define JOB_CHIEF_ENGINEER "Tech Overseer" // ARK STATION EDIT || Chief Engineer
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
 #define JOB_BRIDGE_ASSISTANT "Bridge Assistant"
 #define JOB_VETERAN_ADVISOR "Veteran Security Advisor"
@@ -304,8 +304,8 @@ DEFINE_BITFIELD(job_flags, list(
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
-#define SUPERVISOR_CAPTAIN "the Captain"
-#define SUPERVISOR_CE "the Chief Engineer"
+#define SUPERVISOR_CAPTAIN "the Admiral" // "the Captain" // ARK STATION EDIT
+#define SUPERVISOR_CE "the Tech Overseer" // "the Chief Engineer" // ARK STATION EDIT
 #define SUPERVISOR_CMO "the Chief Medical Officer"
 #define SUPERVISOR_HOP "the Head of Personnel"
 #define SUPERVISOR_HOS "the Head of Security"

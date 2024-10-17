@@ -52,7 +52,7 @@
 		JOB_DETECTIVE = "Det.",
 		JOB_SECURITY_OFFICER = "Officer",
 
-		JOB_CHIEF_ENGINEER = "Chief Engineer",
+		JOB_CHIEF_ENGINEER = "Tech Overseer", // ARK STATION EDIT || Chief Engineering
 		JOB_STATION_ENGINEER = "Engineer",
 		JOB_ATMOSPHERIC_TECHNICIAN = "Technician",
 

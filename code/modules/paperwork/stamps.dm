@@ -55,7 +55,7 @@
 	dye_color = DYE_HOS
 
 /obj/item/stamp/head/ce
-	name = "chief engineer's rubber stamp"
+	name = "chief engineer's rubber stamp" // ARK STATION EDIT
 	icon_state = "stamp-ce"
 	dye_color = DYE_CE
 

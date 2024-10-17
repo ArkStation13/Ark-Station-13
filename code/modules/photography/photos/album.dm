@@ -111,7 +111,7 @@
 	persistence_id = "QM"
 
 /obj/item/storage/photo_album/ce
-	name = "photo album (Chief Engineer)"
+	name = "photo album (Tech Overseer)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "CE"
 

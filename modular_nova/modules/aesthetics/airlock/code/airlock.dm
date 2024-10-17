@@ -555,7 +555,7 @@
 	airlock_type = /obj/machinery/door/airlock/cmo
 
 /obj/structure/door_assembly/door_assembly_ce
-	name = "chief engineer airlock assembly"
+	name = "tech overseer airlock assembly" // ARK STATION EDIT
 	icon = 'modular_nova/modules/aesthetics/airlock/icons/airlocks/ce.dmi'
 	glass_type = /obj/machinery/door/airlock/ce/glass
 	airlock_type = /obj/machinery/door/airlock/ce

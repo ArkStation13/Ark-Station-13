@@ -197,7 +197,7 @@
 	is_tied = TRUE
 
 /obj/item/clothing/neck/tie/bunnytie/ce
-	name = "chief engineer's bowtie"
+	name = "tech overseer's bowtie"
 	desc = "A green tie that includes a collar. Looking managerial!"
 	icon_state = "bowtie_collar_ce_tied"
 	tie_type = "bowtie_collar_ce"

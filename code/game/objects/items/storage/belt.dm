@@ -81,7 +81,7 @@
 	))
 
 /obj/item/storage/belt/utility/chief
-	name = "chief engineer's toolbelt"
+	name = "tech overseer's toolbelt" // ARK STATION EDIT
 	desc = "Holds tools, looks snazzy."
 	icon_state = "utility_ce"
 	inhand_icon_state = "utility_ce"

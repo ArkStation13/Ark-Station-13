@@ -89,8 +89,8 @@
 // From this point forth will be berets that are made especially for Nova Sector. Those are loosely based off of the ones that were ported initially, but they might not be 1:1
 
 /obj/item/clothing/head/beret/engi/ce
-	name = "chief engineer's beret"
-	desc = "A fancy beret designed exactly to the Chief Engineer's tastes, minus the LEDs."
+	name = "tech overseer's beret" // ARK STATION EDIT
+	desc = "A fancy beret designed exactly to the Tech Overseer's tastes, minus the LEDs." // ARK STATION EDIT
 	greyscale_colors = "#FFFFFF#2E992E"
 
 /obj/item/clothing/head/beret/medical/cmo

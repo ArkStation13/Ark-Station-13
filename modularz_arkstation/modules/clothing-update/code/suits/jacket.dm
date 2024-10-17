@@ -232,8 +232,8 @@
 	acid = 50
 
 /obj/item/clothing/suit/utility/fire/ce_tailcoat
-	name = "chief engineer's tailcoat"
-	desc = "A heavy duty green and white coat worn by bunny themed chief engineers. Made of a three layered composite fabric that is both insulating and fireproof, it also has an open face rendering all this useless."
+	name = "tech overseer's tailcoat"
+	desc = "A heavy duty green and white coat worn by bunny themed tech overseers. Made of a three layered composite fabric that is both insulating and fireproof, it also has an open face rendering all this useless."
 	icon_state = "ce"
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket.dmi'

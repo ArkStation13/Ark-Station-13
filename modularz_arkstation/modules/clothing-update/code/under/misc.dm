@@ -214,8 +214,8 @@
 	create_storage(storage_type = /datum/storage/pockets/tiny)
 
 /obj/item/clothing/under/rank/engineering/chief_engineer/bunnysuit
-	name = "chief engineer's bunny suit"
-	desc = "The staple of any bunny themed chief engineers. The airy design helps with keeping cool when  engine fires get too hot to handle."
+	name = "tech overseer's bunny suit"
+	desc = "The staple of any bunny themed tech overseers. The airy design helps with keeping cool when  engine fires get too hot to handle."
 	icon_state = "bunnysuit_ce"
 	inhand_icon_state = null
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/under/costume.dmi'

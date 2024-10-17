@@ -1233,7 +1233,7 @@
 	toysay = "For Cargonia!"
 
 /obj/item/toy/figure/ce
-	name = "\improper Chief Engineer action figure"
+	name = "\improper Tech Overseer action figure" // ARK STATION EDIT
 	icon_state = "ce"
 	toysay = "Wire the solars!"
 

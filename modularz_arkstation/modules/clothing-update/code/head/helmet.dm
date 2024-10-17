@@ -163,7 +163,7 @@
 	greyscale_config_worn = null
 
 /obj/item/clothing/head/playbunnyears/ce
-	name = "chief engineer's bunny ears"
+	name = "tech overseer's bunny ears"
 	desc = "Green and white bunny ears attached to a headband. Just keep them away from the supermatter."
 	icon_state = "ce"
 	greyscale_colors = null

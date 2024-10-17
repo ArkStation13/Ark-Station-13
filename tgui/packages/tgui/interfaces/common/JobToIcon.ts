@@ -334,6 +334,8 @@ const ALTTITLES = {
   'Admirals Shield': BASEICONS['Blueshield'],
   // NTR
   'Consul of the Solar Federation': BASEICONS['Nanotrasen Consultant'],
+  // CE
+  'Tech Overseer': BASEICONS['Chief Engineer'],
   // ARK STATION JOBS END
 } as const;
 
