@@ -217,12 +217,12 @@
 	return add_item_to_steal(src, /obj/item/clothing/accessory/lawyers_badge)
 
 /datum/objective_item/steal/traitor/chief_engineer_belt
-	name = "the chief engineer's belt"
+	name = "the tech overseer's belt" // ARK STATION EDIT
 	targetitem = /obj/item/storage/belt/utility/chief
 	excludefromjob = list(JOB_CHIEF_ENGINEER)
 	exists_on_map = TRUE
 	difficulty = 2
-	steal_hint = "The chief engineer's toolbelt, strapped to their waist at all times."
+	steal_hint = "The tech overseer's toolbelt, strapped to their waist at all times." // ARK STATION EDIT
 
 /obj/item/storage/belt/utility/chief/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/storage/belt/utility/chief)
@@ -362,14 +362,14 @@
 	return add_item_to_steal(src, /obj/item/tank/jetpack/oxygen/captain)
 
 /datum/objective_item/steal/magboots
-	name = "the chief engineer's advanced magnetic boots"
+	name = "the tech overseer's advanced magnetic boots" // ARK STATION EDIT
 	targetitem = /obj/item/clothing/shoes/magboots/advance
 	excludefromjob = list(JOB_CHIEF_ENGINEER)
 	item_owner = list(JOB_CHIEF_ENGINEER)
 	exists_on_map = TRUE
 	difficulty = 3
-	steal_hint = "A pair of magnetic boots found in the Chief Engineer's Suit Storage Unit. \
-		May also be found on their person, concealed beneath their MODsuit."
+	steal_hint = "A pair of magnetic boots found in the Tech Overseer's Suit Storage Unit. \
+		May also be found on their person, concealed beneath their MODsuit." // ARK STATION EDIT
 
 /obj/item/clothing/shoes/magboots/advance/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/clothing/shoes/magboots/advance)
@@ -541,7 +541,7 @@
 	altitems = list(/obj/item/photo)
 	exists_on_map = TRUE
 	difficulty = 3
-	steal_hint = "The blueprints of the station, found in the Chief Engineer's locker, or on their person. A picture may suffice."
+	steal_hint = "The blueprints of the station, found in the Tech Overseer's locker, or on their person. A picture may suffice." // ARK STATION EDIT
 
 /obj/item/blueprints/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/blueprints)
@@ -832,12 +832,12 @@
 		You can also obtain a pair from dissassembling hudglasses."
 
 /datum/objective_item/steal/spy/ce_modsuit
-	name = "the chief engineer's advanced MOD control unit"
+	name = "the tech overseer's advanced MOD control unit" // ARK STATION EDIT
 	targetitem = /obj/item/mod/control/pre_equipped/advanced
 	excludefromjob = list(JOB_CHIEF_ENGINEER)
 	exists_on_map = TRUE
 	difficulty = 2
-	steal_hint = "An advanced version of the standard Engineering MODsuit commonly worn by the Chief Engineer."
+	steal_hint = "An advanced version of the standard Engineering MODsuit commonly worn by the Tech Overseer." // ARK STATION EDIT
 
 /obj/item/mod/control/pre_equipped/advanced/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/mod/control/pre_equipped/advanced)

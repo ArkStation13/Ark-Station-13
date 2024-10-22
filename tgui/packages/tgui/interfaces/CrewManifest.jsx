@@ -1,17 +1,17 @@
 import { Icon, Section, Table, Tooltip } from 'tgui-core/components';
-import { classes } from '../../common/react';
 
+import { classes } from '../../common/react';
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const commandJobs = [
   'Head of Personnel',
   'Head of Security',
-  'Chief Engineer',
+  'Tech Overseer', // ARK STATION EDIT
   'Research Director',
   'Chief Medical Officer',
   'Quartermaster',
-  'Nanotrasen Consultant', // NOVA EDIT ADDITION
+  'Consul of the Solar Federation', // NOVA EDIT ADDITION // ARK STATION EDIT
 ];
 
 export const CrewManifest = (props) => {

@@ -72,6 +72,7 @@
 /datum/light_source/Destroy(force)
 	remove_lum()
 	if (source_atom)
+		source_atom.delete_lights() // ARK STATION ADDITION
 		remove_from_light_sources(source_atom)
 
 	if (top_atom)
@@ -451,6 +452,8 @@
 	if (update)
 		needs_update = LIGHTING_CHECK_UPDATE
 		applied = TRUE
+		if(source_atom) // ARK STATION ADDITION
+			source_atom.update_bloom(offset_x, offset_y) // ARK STATION ADDITION
 		return TRUE
 
 	// Otherwise, go off the needs_update var. If it requires an update provide one, otherwise we're kosher

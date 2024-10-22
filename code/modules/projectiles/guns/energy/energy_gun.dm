@@ -39,6 +39,8 @@
 	charge_sections = 3
 	single_shot_type_overlay = FALSE
 
+	recoil = 0.1 // ARK STATION EDIT
+
 /obj/item/gun/energy/e_gun/mini/add_seclight_point()
 	// The mini energy gun's light comes attached but is unremovable.
 	AddComponent(/datum/component/seclite_attachable, \

@@ -45,7 +45,7 @@
 	icon_state = "rdmantle"
 
 /obj/item/clothing/neck/mantle/cemantle
-	name = "\proper the chief engineer's mantle"
+	name = "\proper the tech overseer's mantle" // ARK STATION EDIT
 	desc = "A bright white and yellow striped mantle. Do not wear around active machinery."
 	icon = 'modular_nova/master_files/icons/mob/clothing/neck.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/neck.dmi'

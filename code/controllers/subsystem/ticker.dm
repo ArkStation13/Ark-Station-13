@@ -123,7 +123,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(!length(music))
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = 'zov_modular_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
+		login_music = 'modularz_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
@@ -289,6 +289,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	GLOB.start_landmarks_list = shuffle(GLOB.start_landmarks_list) //Shuffle the order of spawn points so they dont always predictably spawn bottom-up and right-to-left
 	create_characters() //Create player characters
+	shadowcasting_controller.initialized = TRUE // ARK STATION ADDITION
 	collect_minds()
 	equip_characters()
 

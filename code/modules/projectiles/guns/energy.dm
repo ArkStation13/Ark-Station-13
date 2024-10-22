@@ -46,6 +46,8 @@
 	/// The amount restored by the gun to the cell per self charge tick
 	var/self_charge_amount = STANDARD_ENERGY_GUN_SELF_CHARGE_RATE
 
+	recoil = 0.2 // ARK STATION EDIT
+
 /obj/item/gun/energy/fire_sounds()
 	// What frequency the energy gun's sound will make
 	var/pitch_to_use = 1

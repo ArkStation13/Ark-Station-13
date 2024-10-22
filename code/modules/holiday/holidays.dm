@@ -93,9 +93,9 @@
 	switch(pattern)
 		if(PATTERN_RANDOM)
 			return "#[random_short_color()]"
-		// if(PATTERN_RAINBOW)
-		// 	var/datum/holiday/pride_week/rainbow_datum = new()
-		// 	return rainbow_datum.get_holiday_colors(thing_to_color, PATTERN_DEFAULT)
+		// if(PATTERN_RAINBOW) 															// ARK STATION REMOVED
+		// 	var/datum/holiday/pride_week/rainbow_datum = new() 							// ARK STATION REMOVED
+		// 	return rainbow_datum.get_holiday_colors(thing_to_color, PATTERN_DEFAULT)	// ARK STATION REMOVED
 	if(!length(GLOB.holidays))
 		return
 	for(var/holiday_key in GLOB.holidays)
@@ -352,20 +352,6 @@
 
 // JUNE
 
-// ARK STATION ADDITION
-// /datum/holiday/russia
-// 	name = "National Day of Russia"
-// 	begin_month = JUNE
-// 	begin_day = 12
-// 	holiday_hat = /obj/item/clothing/head/costume/ushanka
-// 	holiday_colors = list(COLOR_WHITE, COLOR_TRUE_BLUE, COLOR_RED)
-
-// /datum/holiday/russia/getStationPrefix()
-// 	return pick("Moscow", "Russia", "Saint Petersburg")
-
-// /datum/holiday/russia/greet()
-// 	return "УРАААААА, ГОООЙДАААААА!"
-
 //The Festival of Atrakor's Might (Tizira's Moon) is celebrated on June 15th, the date on which the lizard visual revamp was merged (#9808)
 /datum/holiday/atrakor_festival
 	name = "Festival of Atrakor's Might"
@@ -394,20 +380,22 @@
 	begin_month = JUNE
 	holiday_hat = /obj/item/clothing/head/costume/garland
 
-// /datum/holiday/pride_week
-// 	name = PRIDE_WEEK
-// 	begin_month = JUNE
-// 	// Stonewall was June 28th, this captures its week.
-// 	begin_day = 23
-// 	end_day = 29
-// 	holiday_colors = list(
-// 		COLOR_PRIDE_PURPLE,
-// 		COLOR_PRIDE_BLUE,
-// 		COLOR_PRIDE_GREEN,
-// 		COLOR_PRIDE_YELLOW,
-// 		COLOR_PRIDE_ORANGE,
-// 		COLOR_PRIDE_RED,
-// 	)
+/* // ARK STATION REMOVED START
+/datum/holiday/pride_week
+	name = PRIDE_WEEK
+	begin_month = JUNE
+	// Stonewall was June 28th, this captures its week.
+	begin_day = 23
+	end_day = 29
+	holiday_colors = list(
+		COLOR_PRIDE_PURPLE,
+		COLOR_PRIDE_BLUE,
+		COLOR_PRIDE_GREEN,
+		COLOR_PRIDE_YELLOW,
+		COLOR_PRIDE_ORANGE,
+		COLOR_PRIDE_RED,
+	)
+*/ // ARK STATION REMOVED END
 
 // JULY
 
@@ -508,14 +496,16 @@
 
 // AUGUST
 
-// /datum/holiday/ukraine // wtf???? ARK STATION REMOVED
-// 	name = "Independence Day of Ukraine"
-// 	begin_month = AUGUST
-// 	begin_day = 24
-// 	holiday_colors = list(COLOR_TRUE_BLUE, COLOR_TANGERINE_YELLOW)
+/* // ARK STATION REMOVED START
+/datum/holiday/ukraine // wtf???? ARK STATION REMOVED
+	name = "Independence Day of Ukraine"
+	begin_month = AUGUST
+	begin_day = 24
+	holiday_colors = list(COLOR_TRUE_BLUE, COLOR_TANGERINE_YELLOW)
 
-// /datum/holiday/ukraine/getStationPrefix()
-// 	return pick("Kyiv", "Ukraine")
+/datum/holiday/ukraine/getStationPrefix()
+	return pick("Kyiv", "Ukraine")
+*/ // ARK STATION REMOVED END
 
 // SEPTEMBER
 

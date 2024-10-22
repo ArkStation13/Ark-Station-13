@@ -175,6 +175,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod, 32)
 /obj/machinery/cryopod/Initialize(mapload)
 	..()
 	if(!quiet)
+	// ARK STATION ADDITION START
+		if(is_station_level(src.loc.z))
+			if(can_human_spawn_here)
+				GLOB.valid_for_spawn_cryopods += src
+	// ARK STATION ADDITION END
 		GLOB.valid_cryopods += src
 	return INITIALIZE_HINT_LATELOAD //Gotta populate the cryopod computer GLOB first
 
@@ -186,6 +191,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod, 32)
 // This is not a good situation
 /obj/machinery/cryopod/Destroy()
 	GLOB.valid_cryopods -= src
+	GLOB.valid_for_spawn_cryopods -= src // ARK STATION ADDITION
 	control_computer_weakref = null
 	return ..()
 
@@ -205,11 +211,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod, 32)
 
 	return control_computer_weakref != null
 
-/obj/machinery/cryopod/close_machine(atom/movable/target, density_to_set = TRUE)
+/obj/machinery/cryopod/close_machine(atom/movable/target, density_to_set = TRUE, exiting = FALSE) // ARK STATION EDIT - exiting = FALSE
 	if(!control_computer_weakref)
 		find_control_computer(TRUE)
 	if((isnull(target) || isliving(target)) && state_open && !panel_open)
 		..(target)
+		// ARK STATION ADDITION START
+		if(exiting && istype(target, /mob/living/carbon))
+			var/mob/living/carbon/C = target
+			apply_effects_to_mob(C)
+			icon_state = "cryopod"
+			playsound(src, 'sound/machines/hiss.ogg', 30, 1)
+			return
+		// ARK STATION ADDITION END
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)
 			to_chat(occupant, span_notice("<b>You feel cool air surround you. You go numb as your senses turn inward.</b>"))
