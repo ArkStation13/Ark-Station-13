@@ -37,6 +37,8 @@
 			handle_heart(seconds_per_tick, times_fired)
 			//handles liver failure effects, if we lack a liver
 			handle_liver(seconds_per_tick, times_fired)
+			//Sleeping System // Ark Station
+			try_to_sleep() // ARK STATION ADDITION
 
 		// for special species interactions
 		dna.species.spec_life(src, seconds_per_tick, times_fired)

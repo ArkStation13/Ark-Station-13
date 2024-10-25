@@ -23,7 +23,7 @@
 // HEADSETS //
 /obj/item/radio/headset/headset_church
 	name = "church radio headset"
-	desc = "Headset used by the church staff. God bless our Station."
+	desc = "Headset used by the church staff. God bless our Ark."
 	icon_state = "srv_headset"
 	worn_icon_state = "srv_headset"
 	keyslot = /obj/item/encryptionkey/headset_church
@@ -38,7 +38,7 @@
 // Priest - Command
 /obj/item/radio/headset/heads/priest
 	name = "command church radio headset"
-	desc = "Headset used by the Priest. God bless our Station."
+	desc = "Headset used by the Priest. God bless our Ark."
 	icon_state = "srv_headset"
 	worn_icon_state = "srv_headset"
 	keyslot = /obj/item/encryptionkey/heads/headset_priest

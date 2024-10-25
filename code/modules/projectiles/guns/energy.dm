@@ -199,7 +199,7 @@
 			if(!chambered.loaded_projectile)
 				chambered.newshot()
 
-/obj/item/gun/energy/handle_chamber()
+/obj/item/gun/energy/handle_chamber(mob/living/user, empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE) // ARK STATION EDIT
 	if(chambered && !chambered.loaded_projectile) //if loaded_projectile is null, i.e the shot has been fired...
 		var/obj/item/ammo_casing/energy/shot = chambered
 		cell.use(shot.e_cost)//... drain the cell cell
@@ -208,12 +208,12 @@
 
 /obj/item/gun/energy/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(!chambered && can_shoot())
-		process_chamber() // If the gun was drained and then recharged, load a new shot.
+		process_chamber(user = user) // ARK STATION EDIT // If the gun was drained and then recharged, load a new shot.
 	return ..()
 
 /obj/item/gun/energy/process_burst(mob/living/user, atom/target, message = TRUE, params = null, zone_override="", randomized_gun_spread = 0, randomized_bonus_spread = 0, rand_spr = 0, iteration = 0)
 	if(!chambered && can_shoot())
-		process_chamber() // Ditto.
+		process_chamber(user = user) // ARK STATION EDIT // Ditto.
 	return ..()
 
 /obj/item/gun/energy/proc/select_fire(mob/living/user)

@@ -449,5 +449,5 @@
 		if(!ghost.client || isnewplayer(ghost))
 			continue
 		if(get_chat_toggles(ghost.client) & CHAT_GHOSTSIGHT && !(ghost in viewers(origin_turf, null)))
-			ghost.show_message("[FOLLOW_LINK(ghost, src)] [ghost_text]")
+			ghost.show_message("[FOLLOW_LINK(ghost, src)]<span class='emote'> [ghost_text]</span>") // ARK STATION EDIT
 	return TRUE

@@ -299,8 +299,8 @@
 	inhand_icon_state = null
 
 /obj/item/clothing/head/helmet/space/plasmaman/chief_medical_officer
-	name = "chief medical officer's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Chief Medical Officer. A gold stripe applied to differentiate them from other medical staff."
+	name = "medtech curator's plasma envirosuit helmet" // ARK STATION EDIT
+	desc = "A special containment helmet designed for the Medtech Curator. A gold stripe applied to differentiate them from other medical staff." // ARK STATION EDIT
 	icon_state = "cmo_envirohelm"
 	inhand_icon_state = null
 
@@ -420,8 +420,8 @@
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
 
 /obj/item/clothing/head/helmet/space/plasmaman/head_of_personnel
-	name = "head of personnel's envirosuit helmet"
-	desc = "A special containment helmet designed for the Head of Personnel. Embarrassingly enough, it looks way too much like the captain's design save for the red stripes."
+	name = "Donk Co. Manager's envirosuit helmet" // ARK STATION EDIT
+	desc = "A special containment helmet designed for the Donk Co. Manager. Embarrassingly enough, it looks way too much like the captain's design save for the red stripes." // ARK STATION EDIT
 	icon_state = "hop_envirohelm"
 	inhand_icon_state = null
 	armor_type = /datum/armor/hats_hopcap/plasmaman
@@ -432,8 +432,8 @@
 	acid = 75
 
 /obj/item/clothing/head/helmet/space/plasmaman/captain
-	name = "captain's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Captain. Embarrassingly enough, it looks way too much like the Head of Personnel's design save for the gold stripes. I mean, come on. Gold stripes can fix anything."
+	name = "Ark Commander's plasma envirosuit helmet" // ARK STATION EDIT
+	desc = "A special containment helmet designed for the commander. Embarrassingly enough, it looks way too much like the Donk Co. Manager's design save for the gold stripes. I mean, come on. Gold stripes can fix anything." // ARK STATION EDIT
 	icon_state = "captain_envirohelm"
 	inhand_icon_state = null
 	armor_type = /datum/armor/hats_caphat/plasmaman

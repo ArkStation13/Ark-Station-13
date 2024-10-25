@@ -108,4 +108,6 @@
 		/obj/item/ammo_box/c980grenade/shrapnel/phosphor = 1,
 		/obj/item/ammo_box/c980grenade/smoke = 1,
 		/obj/item/ammo_box/c980grenade/riot = 1,
+		/obj/item/gun/energy/modular_laser_rifle = 3, // ARK STATION ADDITION
+		/obj/item/gun/energy/modular_laser_rifle/carbine = 3, // ARK STATION ADDITION
 	), src)

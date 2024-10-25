@@ -5,14 +5,15 @@
 
 /obj/machinery/computer/cargo/express/interdyne
 	name = "interdyne express supply console"
-	desc = "A standard NT express console, hacked by Gorlex Industries to use \
+	desc = "A standard SolFed express console, hacked by Syndicat to use \
 	their own experimental \"1100mm Rail Cannon\", made to be extra robust to prevent \
 	being emagged by the Syndicate cadets of the SSV Dauntless."
 	circuit = /obj/item/circuitboard/computer/cargo/express/interdyne
 	req_access = list(ACCESS_SYNDICATE)
 	cargo_account = ACCOUNT_INT
 	contraband = TRUE
-	var/allowed_categories = list(VITEZSTVI_AMMO_NAME, 	//used for company items import supports companies and specific categories
+	var/allowed_categories = list(
+	VITEZSTVI_AMMO_NAME,
 	MICROSTAR_ENERGY_NAME,
 	SOL_DEFENSE_DEFENSE_NAME,
 	FRONTIER_EQUIPMENT_NAME,
@@ -21,7 +22,8 @@
 	DEFOREST_MEDICAL_NAME,
 	NRI_SURPLUS_COMPANY_NAME,
 	BLACKSTEEL_FOUNDATION_NAME,
-	NAKAMURA_ENGINEERING_MODSUITS_NAME
+	NAKAMURA_ENGINEERING_MODSUITS_NAME,
+	INTEQ_WEAPONS_NAME
 	)
 	pod_type = /obj/structure/closet/supplypod/bluespacepod
 

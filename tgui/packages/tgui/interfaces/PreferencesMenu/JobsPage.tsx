@@ -401,33 +401,39 @@ export const JobsPage = () => {
 
               <PriorityHeaders />
 
-              <Department department="Engineering">
+              <Department
+                department="Solar Global Energy" /* Ark Station Edit */
+              >
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Science">
+              <Department
+                department="Bishop Developments" /* Ark Station Edit */
+              >
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Silicon">
+              <Department department="Synthetics" /* Ark Station Edit */>
                 <Gap amount={12} />
               </Department>
 
-              <Department department="Assistant" />
+              <Department department="Colonist" /* Ark Station Edit */ />
             </Stack.Item>
 
             <Stack.Item mr={1}>
               <PriorityHeaders />
 
-              <Department department="Captain">
+              <Department department="Ark Commander" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Service">
+              <Department department="Donk Co." /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Cargo" />
+              <Department
+                department="Atlas Transportations" /* Ark Station Edit */
+              />
             </Stack.Item>
 
             <Stack.Item>
@@ -439,11 +445,11 @@ export const JobsPage = () => {
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Security">
+              <Department department="Red Hawk Security" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Medical" />
+              <Department department="De Forest" /* Ark Station Edit */ />
             </Stack.Item>
           </Stack>
         </Stack.Item>

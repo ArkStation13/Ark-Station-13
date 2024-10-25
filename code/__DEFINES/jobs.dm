@@ -42,50 +42,50 @@
 #define JOB_ASSISTANT "Colonist" // ARK STATION EDIT || Assistant
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Admiral" // ARK STATION EDIT || Captain
-#define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
-#define JOB_HEAD_OF_SECURITY "Head of Security"
-#define JOB_RESEARCH_DIRECTOR "Research Director"
+#define JOB_CAPTAIN "Ark Commander" // ARK STATION EDIT || Captain
+#define JOB_HEAD_OF_PERSONNEL "Donk Co. Manager" // ARK STATION EDIT || Head of Personnel
+#define JOB_HEAD_OF_SECURITY "Head of Red Hawk" // ARK STATION EDIT || Head of Security
+#define JOB_RESEARCH_DIRECTOR "Scientific Director" // ARK STATION EDIT || Research Director
 #define JOB_CHIEF_ENGINEER "Tech Overseer" // ARK STATION EDIT || Chief Engineer
-#define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
+#define JOB_CHIEF_MEDICAL_OFFICER "Medtech Curator" // ARK STATION EDIT || Chief Medical Officer
 #define JOB_BRIDGE_ASSISTANT "Bridge Assistant"
 #define JOB_VETERAN_ADVISOR "Veteran Security Advisor"
 //Silicon
 #define JOB_AI "AI"
-#define JOB_CYBORG "Cyborg"
+#define JOB_CYBORG "Synthetic Unit" // ARK STATION EDIT || Cyborg
 #define JOB_PERSONAL_AI "Personal AI"
 #define JOB_HUMAN_AI "Big Brother"
 //Security
-#define JOB_WARDEN "Warden"
-#define JOB_DETECTIVE "Detective"
-#define JOB_SECURITY_OFFICER "Security Officer"
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_WARDEN "Red Hawk Inspector" // ARK STATION EDIT || Warden
+#define JOB_DETECTIVE "RHIB Agent" // ARK STATION EDIT || Detective
+#define JOB_SECURITY_OFFICER "Red Hawk Private" // ARK STATION EDIT || Security Officer
+#define JOB_SECURITY_OFFICER_MEDICAL "Red Hawk Private (Green)" // ARK STATION EDIT || Security Officer (Medical)
+#define JOB_SECURITY_OFFICER_ENGINEERING "Red Hawk Private (Orange)" // ARK STATION EDIT || Security Officer (Engineering)
+#define JOB_SECURITY_OFFICER_SCIENCE "Red Hawk Private (Purple)" // ARK STATION EDIT || Security Officer (Science)
+#define JOB_SECURITY_OFFICER_SUPPLY "Red Hawk Private (Brown)" // ARK STATION EDIT || Security Officer (Cargo)
 // #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Engineering
-#define JOB_STATION_ENGINEER "Station Engineer"
-#define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
+#define JOB_STATION_ENGINEER "Engine Specialist" // ARK STATION EDIT || Station Engineer
+#define JOB_ATMOSPHERIC_TECHNICIAN "Life Support Technician" // ARK STATION EDIT || Atmospheric Technician
 #define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // NOVA EDIT ADDITION
 // #define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Medical
-#define JOB_CORONER "Coroner"
-#define JOB_MEDICAL_DOCTOR "Medical Doctor"
-#define JOB_PARAMEDIC "Paramedic"
-#define JOB_CHEMIST "Chemist"
-#define JOB_VIROLOGIST "Virologist"
+#define JOB_CORONER "Necropsier" // ARK STATION EDIT || Coroner
+#define JOB_MEDICAL_DOCTOR "Physician" // ARK STATION EDIT || Medical Doctor
+#define JOB_PARAMEDIC "Emergency Medical Technician" // ARK STATION EDIT || Paramedic
+#define JOB_CHEMIST "Synthetic Pharmacist" // ARK STATION EDIT || Chemist
+#define JOB_VIROLOGIST "Viral Selectionist" // ARK STATION EDIT || Virologist
 // #define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Science
-#define JOB_SCIENTIST "Scientist"
-#define JOB_ROBOTICIST "Roboticist"
-#define JOB_GENETICIST "Geneticist"
+#define JOB_SCIENTIST "Researcher" // ARK STATION EDIT || Scientist
+#define JOB_ROBOTICIST "Biomechanical Engineer" // ARK STATION EDIT || Roboticist
+#define JOB_GENETICIST "Bioaugmentator" // ARK STATION EDIT || Geneticist
 //#define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
-#define JOB_CARGO_TECHNICIAN "Cargo Technician"
+#define JOB_CARGO_TECHNICIAN "Deck Worker" // ARK STATION EDIT || Cargo Technician
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
-#define JOB_SHAFT_MINER "Shaft Miner"
+#define JOB_SHAFT_MINER "Excavation Specialist" // ARK STATION EDIT || Shaft Miner
 #define JOB_BITRUNNER "Bitrunner"
 // #define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION // ARK STATION REMOVED
 //Service
@@ -98,11 +98,11 @@
 #define JOB_MIME "Mime"
 #define JOB_CURATOR "Curator"
 #define JOB_LAWYER "Lawyer"
-#define JOB_CHAPLAIN "Priest" // ARK STATION EDIT || Chaplain
+#define JOB_CHAPLAIN "Priest of Neo-Vatican" // ARK STATION EDIT || Chaplain
 #define JOB_PSYCHOLOGIST "Psychologist"
 #define JOB_PUN_PUN "Pun Pun"
 #define JOB_BARBER "Barber" // NOVA EDIT ADDITION
-#define JOB_BOUNCER "Service Guard" // NOVA EDIT ADDITION
+#define JOB_BOUNCER "Donk Co. Guard" // NOVA EDIT ADDITION // ARK STATION EDIT || Service Guard
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"
 #define JOB_ERT_COMMANDER "Emergency Response Team Commander"
@@ -126,7 +126,7 @@
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // NOVA EDIT ADDITION START
-#define JOB_BLUESHIELD "Admirals Shield" // ARK STATION EDIT || Blueshield
+#define JOB_BLUESHIELD "Solar Federation Shield" // ARK STATION EDIT || Blueshield
 #define JOB_NT_REP "Consul of the Solar Federation" // ARK STATION EDIT || Nanotrasen Consultant
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
@@ -207,34 +207,35 @@
 #define JOB_DISPLAY_ORDER_BRIG_PILOT 54 // ARK STATION EDIT ADDITION
 #define JOB_DISPLAY_ORDER_DEACON 55 // ARK STATION EDIT ADDITION
 #define JOB_DISPLAY_ORDER_FISCAL 56 // ARK STATION EDIT ADDITION
+#define JOB_DISPLAY_ORDER_ADVISOR 57
 
 #define DEPARTMENT_UNASSIGNED "No Department"
 
 #define DEPARTMENT_BITFLAG_SECURITY (1<<0)
-#define DEPARTMENT_SECURITY "Security"
+#define DEPARTMENT_SECURITY "Red Hawk Security" // ARK STATION EDIT || Security
 #define DEPARTMENT_BITFLAG_COMMAND (1<<1)
-#define DEPARTMENT_COMMAND "Command"
+#define DEPARTMENT_COMMAND "Ark Command" // ARK STATION EDIT || Command
 #define DEPARTMENT_BITFLAG_SERVICE (1<<2)
-#define DEPARTMENT_SERVICE "Service"
+#define DEPARTMENT_SERVICE "Donk Corporation" // ARK STATION EDIT || Service
 #define DEPARTMENT_BITFLAG_CARGO (1<<3)
-#define DEPARTMENT_CARGO "Cargo"
+#define DEPARTMENT_CARGO "Atlas & Nanotrasen" // ARK STATION EDIT || Cargo
 #define DEPARTMENT_BITFLAG_ENGINEERING (1<<4)
-#define DEPARTMENT_ENGINEERING "Engineering"
+#define DEPARTMENT_ENGINEERING "Global Solar Energy" // ARK STATION EDIT || Engineering
 #define DEPARTMENT_BITFLAG_SCIENCE (1<<5)
-#define DEPARTMENT_SCIENCE "Science"
+#define DEPARTMENT_SCIENCE "Bishop Developments" // ARK STATION EDIT || Science
 #define DEPARTMENT_BITFLAG_MEDICAL (1<<6)
-#define DEPARTMENT_MEDICAL "Medical"
+#define DEPARTMENT_MEDICAL "De Forest" // ARK STATION EDIT || Medical
 #define DEPARTMENT_BITFLAG_SILICON (1<<7)
-#define DEPARTMENT_SILICON "Silicon"
+#define DEPARTMENT_SILICON "Synthetics" // ARK STATION EDIT || Silicon
 #define DEPARTMENT_BITFLAG_ASSISTANT (1<<8)
-#define DEPARTMENT_ASSISTANT "Assistant"
+#define DEPARTMENT_ASSISTANT "Colonist" // ARK STATION EDIT || Assistant
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
-#define DEPARTMENT_CAPTAIN "Captain"
+#define DEPARTMENT_CAPTAIN "Ark Commander" // ARK STATION EDIT || Captain
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //NOVA EDIT CHANGE
-#define DEPARTMENT_CENTRAL_COMMAND "Command Support" //NOVA EDIT CHANGE
+#define DEPARTMENT_CENTRAL_COMMAND "SolFed Workers" //NOVA EDIT CHANGE // ARK STATION EDIT || Command Support
 
 #define DEPARTMENT_BITFLAG_CHURCH (1<<11) // ARK STATION EDIT ADDITION
-#define DEPARTMENT_CHURCH "Church" // ARK STATION EDIT ADDITION
+#define DEPARTMENT_CHURCH "Neo-Vatican Church" // ARK STATION EDIT ADDITION
 
 DEFINE_BITFIELD(departments_bitflags, list(
 	"SECURITY" = DEPARTMENT_BITFLAG_SECURITY,
@@ -304,9 +305,9 @@ DEFINE_BITFIELD(job_flags, list(
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
-#define SUPERVISOR_CAPTAIN "the Admiral" // "the Captain" // ARK STATION EDIT
+#define SUPERVISOR_CAPTAIN "the Ark Commander" // "the Captain" // ARK STATION EDIT
 #define SUPERVISOR_CE "the Tech Overseer" // "the Chief Engineer" // ARK STATION EDIT
-#define SUPERVISOR_CMO "the Chief Medical Officer"
+#define SUPERVISOR_CMO "the Medtech Curator" // "the Chief Medical Officer" // ARK STATION EDIT
 #define SUPERVISOR_HOP "the Head of Personnel"
 #define SUPERVISOR_HOS "the Head of Security"
 #define SUPERVISOR_QM "the Quartermaster"

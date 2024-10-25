@@ -235,13 +235,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/research
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/ce, 32)
 
 /obj/machinery/computer/security/telescreen/cmo
-	name = "\improper Chief Medical Officer's telescreen"
+	name = "\improper Medtech Curator's telescreen" // ARK STATION EDIT
 	desc = "A telescreen with access to the medbay's camera network."
 	network = list(CAMERANET_NETWORK_MEDBAY)
 	frame_type = /obj/item/wallframe/telescreen/cmo
 
 /obj/item/wallframe/telescreen/cmo
-	name = "\improper Chief Medical Officer's telescreen frame"
+	name = "\improper Medtech Curator's telescreen frame" // ARK STATION EDIT
 	result_path = /obj/machinery/computer/security/telescreen/cmo
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/cmo, 32)

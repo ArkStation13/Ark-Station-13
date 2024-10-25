@@ -60,7 +60,7 @@
 
 /datum/job/blueshield
 	alt_titles = list(
-		"Admirals Shield",
+		"Solar Federation Shield",
 		"Executive Protection Agent",
 	)
 

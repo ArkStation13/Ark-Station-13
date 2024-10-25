@@ -389,15 +389,15 @@
 
 /datum/objective_item/steal/hypo
 	//name = "the hypospray" // ORIGINAL
-	name = "the Chief Medical Officer's hypospray" // NOVA EDIT CHANGE
+	name = "the Medtech Curator's hypospray" // NOVA EDIT CHANGE // ARK STATION EDIT
 	//targetitem = /obj/item/reagent_containers/hypospray/cmo // ORIGINAL
 	targetitem = /obj/item/hypospray/mkii/deluxe/cmo // NOVA EDIT CHANGE
 	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER)
 	item_owner = list(JOB_CHIEF_MEDICAL_OFFICER)
 	exists_on_map = TRUE
 	difficulty = 3
-	steal_hint = "The Chief Medical Officer's personal medical injector. \
-		Usually found amongst their medical supplies on their person, in their belt, or otherwise in their locker."
+	steal_hint = "The Medtech Curator's personal medical injector. \
+		Usually found amongst their medical supplies on their person, in their belt, or otherwise in their locker." // ARK STATION EDIT
 
 /obj/item/hypospray/mkii/deluxe/cmo/add_stealing_item_objective() // NOVA EDIT CHANGE
 	return add_item_to_steal(src, /obj/item/hypospray/mkii/deluxe/cmo) // NOVA EDIT CHANGE
@@ -854,12 +854,12 @@
 	return add_item_to_steal(src, /obj/item/mod/control/pre_equipped/research)
 
 /datum/objective_item/steal/spy/cmo_modsuit
-	name = "the chief medical officer's rescure MOD control unit"
+	name = "the medtech curator's rescure MOD control unit" // ARK STATION EDIT
 	targetitem = /obj/item/mod/control/pre_equipped/rescue
 	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER)
 	exists_on_map = TRUE
 	difficulty = 2
-	steal_hint = "A MODsuit sometimes equipped by the Chief Medical Officer to perform rescue opperations in hazardous environments."
+	steal_hint = "A MODsuit sometimes equipped by the Medtech Curator to perform rescue opperations in hazardous environments." // ARK STATION EDIT
 
 /obj/item/mod/control/pre_equipped/rescue/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/mod/control/pre_equipped/rescue)

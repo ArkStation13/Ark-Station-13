@@ -62,8 +62,8 @@
 			if(length(title) > 0)
 				header += SUBHEADER_ANNOUNCEMENT_TITLE(title)
 		if(ANNOUNCEMENT_TYPE_CAPTAIN)
-			header = MAJOR_ANNOUNCEMENT_TITLE("Captain's Announcement")
-			GLOB.news_network.submit_article(text, "Captain's Announcement", "Station Announcements", null)
+			header = MAJOR_ANNOUNCEMENT_TITLE("Ark Commander's Announcement") // ARK STATION EDIT || Captain
+			GLOB.news_network.submit_article(text, "Ark Commander's Announcement", "Station Announcements", null) // ARK STATION EDIT || Captain
 		if(ANNOUNCEMENT_TYPE_SYNDICATE)
 			header = MAJOR_ANNOUNCEMENT_TITLE("Syndicate Captain's Announcement")
 		else

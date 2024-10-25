@@ -2,10 +2,10 @@
 // Very loosely grouped based on what company makes what mainly for your viewing pleasure
 
 #define COMPANY_DONK "It has a <b>[span_green("Donk Corporation")]</b> label visible on it."
-#define COMPANY_BOLT "It has <b>[span_yellow("Bolt Fabrications")]</b> stamped onto it."
-#define COMPANY_NANOTRASEN "It has <b>[span_blue("Nanotrasen Armories")]</b> etched into it."
+#define COMPANY_BOLT "It has <b>[span_yellow("CIG Weapons Fabrications")]</b> stamped onto it." // ARK STATION EDIT
+#define COMPANY_NANOTRASEN "It has <b>[span_red("Red Hawk Armories")]</b> etched into it." // ARK STATION EDIT
 
-#define COMPANY_CARWO "It has a small <b>[span_cyan("four pointed star")]</b> alongside <b>[span_cyan("Carwo Defense Systems")]</b> etched into it."
+#define COMPANY_CARWO "It has a small <b>[span_engradio("yellow sun")]</b> alongside <b>[span_cyan("Solar Federation Military")]</b> etched into it." // ARK STATION EDIT
 #define COMPANY_TRAPPISTE "It has a small <b>[span_red("pattern of five squares")]</b> alongside <b>[span_red("Trappiste Fabriek")]</b> etched into it."
 
 #define COMPANY_CYBERSUN "It has a <b>[span_red("red circle")]</b> broken by a <b>hexagonal flower</b> alongside <b>[span_red("Cybersun Industries")]</b> in Konjin etched into it."

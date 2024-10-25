@@ -27,13 +27,13 @@
 
 // NT Consultant area
 /area/station/command/heads_quarters/nt_rep
-	name = "Nanotrasen Consultant's Office"
+	name = "Consul of the Solar Federation's Office" // ARK STATION EDIT
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "nt_rep"
 
 // Blueshield area
 /area/station/command/heads_quarters/blueshield
-	name = "Blueshield's Office"
+	name = "Solfed Shield's Office" // ARK STATION EDIT
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "blueshield"
 

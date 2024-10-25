@@ -81,27 +81,27 @@
 	save_everything()
 
 /obj/item/storage/photo_album/hos
-	name = "photo album (Head of Security)"
+	name = "photo album (Head of Red Hawk)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "HoS"
 
 /obj/item/storage/photo_album/rd
-	name = "photo album (Research Director)"
+	name = "photo album (Scientific Director)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "RD"
 
 /obj/item/storage/photo_album/hop
-	name = "photo album (Head of Personnel)"
+	name = "photo album (Donk Co. Manager)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "HoP"
 
 /obj/item/storage/photo_album/captain
-	name = "photo album (Captain)"
+	name = "photo album (Ark Commander)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "Captain"
 
 /obj/item/storage/photo_album/cmo
-	name = "photo album (Chief Medical Officer)"
+	name = "photo album (Medtech Curator)" // ARK STATION EDIT
 	icon_state = "album_blue"
 	persistence_id = "CMO"
 

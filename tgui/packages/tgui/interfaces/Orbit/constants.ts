@@ -26,9 +26,9 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     */
     trims: [
       'Bitrunner',
-      'Cargo Technician',
+      'Deck Worker', // ARK STATION EDIT
       'Customs Agent',
-      'Shaft Miner',
+      'Excavation Specialist', // ARK STATION EDIT
       'Quartermaster',
     ],
   },
@@ -36,10 +36,10 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     color: 'blue',
     // NOVA EDIT CHANGE START - ORIGINAL: trims: ['Captain', 'Head of Personnel'],
     trims: [
-      'Admiral', // ARK STATION EDIT
-      'Head of Personnel',
-      'Nanotrasen Consultant',
-      'Blueshield',
+      'Ark Commander', // ARK STATION EDIT
+      'Donk Co. Manager', // ARK STATION EDIT
+      'Consul of the Solar Federation', // ARK STATION EDIT
+      'Solar Federation Shield', // ARK STATION EDIT
     ], // NOVA EDIT CHANGE END
   },
   engineering: {
@@ -48,23 +48,23 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     trims: ['Atmospheric Technician', 'Chief Engineer', 'Station Engineer'],
     */
     trims: [
-      'Atmospheric Technician',
+      'Life Support Technician', // ARK STATION EDIT
       'Tech Overseer', // ARK STATION EDIT
       'Engineering Guard',
-      'Station Engineer',
+      'Engine Specialist', // ARK STATION EDIT
       'Telecomms Specialist',
     ], // NOVA EDIT CHANGE END
   },
   medical: {
-    color: 'teal',
+    color: 'olive',
     trims: [
-      'Chemist',
-      'Chief Medical Officer',
-      'Coroner',
-      'Medical Doctor',
-      'Paramedic',
+      'Synthetic Pharmacist', // ARK STATION EDIT
+      'Medtech Curator', // ARK STATION EDIT
+      'Necropsier', // ARK STATION EDIT
+      'Physician', // ARK STATION EDIT
+      'Emergency Medical Technician', // ARK STATION EDIT
       'Orderly', // NOVA EDIT ADDITION
-      'Virologist', // NOVA EDIT ADDITION
+      'Viral Selectionist', // NOVA EDIT ADDITION // ARK STATION EDIT
     ],
   },
   science: {
@@ -73,11 +73,11 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     trims: ['Geneticist', 'Research Director', 'Roboticist', 'Scientist'],
     */
     trims: [
-      'Geneticist',
-      'Research Director',
-      'Roboticist',
-      'Science Guard',
-      'Scientist',
+      'Bioaugmentator', // ARK STATION EDIT
+      'Scientific Director ', // ARK STATION EDIT
+      'Biomechanical Engineer', // ARK STATION EDIT
+      'Science Guard', // ARK STATION EDIT
+      'Researcher', // ARK STATION EDIT
     ], // NOVA EDIT CHANGE END
   },
   security: {
@@ -87,10 +87,12 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     */
     trims: [
       'Corrections Officer',
-      'Detective',
-      'Head of Security',
-      'Security Officer',
-      'Warden',
+      'RHIB Agent', // ARK STATION EDIT
+      'Head of Red Hawk', // ARK STATION EDIT
+      'Red Hawk Private', // ARK STATION EDIT
+      'Red Hawk Inspector', // ARK STATION EDIT
+      'Red Hawk Pilot', // ARK STATION ADDITION
+      'Red Hawk Medic', // ARK STATION ADDITION
     ], // NOVA EDIT CHANGE END
   },
   service: {
@@ -98,7 +100,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     trims: [
       'Bartender',
       'Botanist',
-      'Chaplain',
+      // 'Chaplain', // ARK STATION REMOVED
       'Chef',
       'Clown',
       'Cook',
@@ -108,8 +110,13 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'Mime',
       'Psychologist',
       'Barber', // NOVA EDIT ADDITION
-      'Bouncer', // NOVA EDIT ADDITION
+      'Donk Co. Guard', // NOVA EDIT ADDITION // ARK STATION EDIT
     ],
+  },
+  church: {
+    // ARK STATION ADDITION
+    color: 'grey',
+    trims: ['Priest of Neo-Vatican', 'Fiscal', 'Deacon'],
   },
 };
 

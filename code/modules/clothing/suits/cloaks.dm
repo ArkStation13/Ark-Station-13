@@ -19,7 +19,7 @@
 	return OXYLOSS
 
 /obj/item/clothing/neck/cloak/hos
-	name = "head of security's cloak"
+	name = "head of Red Hawk's cloak" // ARK STATION EDIT
 	desc = "Worn by Securistan, ruling the station with an iron fist."
 	icon_state = "hoscloak"
 
@@ -28,7 +28,7 @@
 	desc = "Worn by Cargonia, supplying the station with the necessary tools for survival."
 
 /obj/item/clothing/neck/cloak/cmo
-	name = "chief medical officer's cloak"
+	name = "medtech curator's cloak" // ARK STATION EDIT
 	desc = "Worn by Meditopia, the valiant men and women keeping pestilence at bay."
 	icon_state = "cmocloak"
 
@@ -39,18 +39,18 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/cloak/rd
-	name = "research director's cloak"
+	name = "scientific director's cloak" // ARK STATION EDIT
 	desc = "Worn by Sciencia, thaumaturges and researchers of the universe."
 	icon_state = "rdcloak"
 
 /obj/item/clothing/neck/cloak/cap
-	name = "captain's cloak"
+	name = "Ark Commander's cloak" // ARK STATION EDIT
 	desc = "Worn by the commander of Space Station 13."
 	icon_state = "capcloak"
 
 /obj/item/clothing/neck/cloak/hop
-	name = "head of personnel's cloak"
-	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
+	name = "Donk Co. Manager's cloak" // ARK STATION EDIT
+	desc = "Worn by the Donk Co. Manager. It smells faintly of bureaucracy." // ARK STATION EDIT
 	icon_state = "hopcloak"
 
 /obj/item/clothing/neck/cloak/skill_reward

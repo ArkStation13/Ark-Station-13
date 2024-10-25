@@ -48,6 +48,12 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal
 	icon = 'modularz_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
 
+/turf/closed/wall/r_wall/syndicate
+	icon = 'modularz_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
+
+/turf/closed/wall/r_wall/syndicate/nodiagonal
+	icon = 'modularz_arkstation/modules/new-walls/walls/plastitanium_wall.dmi'
+
 /turf/closed/wall/mineral/iron
 	icon = 'modularz_arkstation/modules/new-walls/walls/iron_wall.dmi'
 

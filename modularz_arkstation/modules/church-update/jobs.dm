@@ -65,7 +65,7 @@
 
 // Outfit
 /datum/outfit/job/chaplain
-	name = "Priest"
+	name = "Priest of Neo-Vatican"
 	jobtype = /datum/job/chaplain
 
 	id_trim = /datum/id_trim/job/chaplain
@@ -94,7 +94,7 @@
 
 // Trim
 /datum/id_trim/job/chaplain
-	assignment = "Priest"
+	assignment = "Priest of Neo-Vatican"
 	trim_state = "trim_chaplain"
 	department_color = COLOR_LIGHT_YELLOW // ARK STATION EDIT
 	subdepartment_color = COLOR_LIGHT_YELLOW // ARK STATION EDIT
@@ -124,7 +124,7 @@
 	job = /datum/job/chaplain
 
 /obj/effect/landmark/start/chaplain
-	name = "Priest"
+	name = "Priest of Neo-Vatican"
 	icon_state = "priest"
 	icon = 'modularz_arkstation/modules/church-update/icons/misc/landmarks.dmi'
 

@@ -2,6 +2,6 @@
 /// Prefix this announcement with "Priority Announcement"
 #define ANNOUNCEMENT_TYPE_PRIORITY "Priority"
 /// Make it sound like it's coming from the Captain
-#define ANNOUNCEMENT_TYPE_CAPTAIN "Captain"
+#define ANNOUNCEMENT_TYPE_CAPTAIN "Ark Commander" // ARK STATION EDIT || Captain
 /// Make it sound like it's coming from the Syndicate
 #define ANNOUNCEMENT_TYPE_SYNDICATE "Syndicate"

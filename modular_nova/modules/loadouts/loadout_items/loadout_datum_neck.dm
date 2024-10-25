@@ -231,17 +231,17 @@
 	restricted_roles = list(JOB_QUARTERMASTER)
 
 /datum/loadout_item/neck/mantle_hop
-	name = "Head of Personnel's Mantle"
+	name = "Donk Co. Manager's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/hopmantle
 	restricted_roles = list(JOB_HEAD_OF_PERSONNEL)
 
 /datum/loadout_item/neck/mantle_cmo
-	name = "Chief Medical Officer's Mantle"
+	name = "Medtech Curator's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/cmomantle
 	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/neck/mantle_rd
-	name = "Research Director's Mantle"
+	name = "Scientific Director's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/rdmantle
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR)
 
@@ -251,17 +251,17 @@
 	restricted_roles = list(JOB_CHIEF_ENGINEER)
 
 /datum/loadout_item/neck/mantle_hos
-	name = "Head of Security's Mantle"
+	name = "Head of Red Hawk's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/hosmantle
 	restricted_roles = list(JOB_HEAD_OF_SECURITY)
 
 /datum/loadout_item/neck/mantle_bs
-	name = "Blueshield's Mantle"
+	name = "Solfed Shield's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/bsmantle
 	restricted_roles = list(JOB_BLUESHIELD)
 
 /datum/loadout_item/neck/mantle_cap
-	name = "Captain's Mantle"
+	name = "Ark Commander's Mantle" // ARK STATION EDIT
 	item_path = /obj/item/clothing/neck/mantle/capmantle
 	restricted_roles = list(JOB_CAPTAIN)
 

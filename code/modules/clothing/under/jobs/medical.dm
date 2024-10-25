@@ -23,14 +23,14 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer
-	desc = "It's a jumpsuit worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection."
-	name = "chief medical officer's jumpsuit"
+	desc = "It's a jumpsuit worn by those with the experience to be \"Medtech Curator\". It provides minor biological protection." // ARK STATION EDIT
+	name = "medtech curator's jumpsuit" // ARK STATION EDIT
 	icon_state = "cmo"
 	inhand_icon_state = "w_suit"
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/skirt
-	name = "chief medical officer's jumpskirt"
-	desc = "It's a jumpskirt worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection."
+	name = "medtech curator's jumpskirt" // ARK STATION EDIT
+	desc = "It's a jumpskirt worn by those with the experience to be \"Medtech Curator\". It provides minor biological protection." // ARK STATION EDIT
 	icon_state = "cmo_skirt"
 	inhand_icon_state = "w_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -39,8 +39,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/scrubs
-	name = "chief medical officer's scrubs"
-	desc = "A distinctive set of white and turquoise scrubs given to chief medical officers who desire a clinical look."
+	name = "medtech curator's scrubs" // ARK STATION EDIT
+	desc = "A distinctive set of white and turquoise scrubs given to medtech curators who desire a clinical look." // ARK STATION EDIT
 	icon_state = "scrubscmo"
 	inhand_icon_state = "w_suit"
 
@@ -49,8 +49,8 @@
 	AddComponent(/datum/component/adjust_fishing_difficulty, -2) //FISH DOCTOR?!
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck
-	name = "chief medical officer's turtleneck"
-	desc = "A light blue turtleneck and tan khakis, for a chief medical officer with a superior sense of style."
+	name = "medtech curator's turtleneck" // ARK STATION EDIT
+	desc = "A light blue turtleneck and tan khakis, for a medtech curator with a superior sense of style." // ARK STATION EDIT
 	icon_state = "cmoturtle"
 	inhand_icon_state = "b_suit"
 	can_adjust = TRUE
@@ -58,8 +58,8 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck/skirt
-	name = "chief medical officer's turtleneck skirt"
-	desc = "A light blue turtleneck and tan khaki skirt, for a chief medical officer with a superior sense of style."
+	name = "medtech curator's turtleneck skirt" // ARK STATION EDIT
+	desc = "A light blue turtleneck and tan khaki skirt, for a medtech curator with a superior sense of style." // ARK STATION EDIT
 	icon_state = "cmoturtle_skirt"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

@@ -6,11 +6,11 @@ import { Button, Icon, Section, Table, Tooltip } from '../components';
 import { Window } from '../layouts';
 
 const commandJobs = [
-  'Head of Personnel',
-  'Head of Security',
-  'Tech Overseer',
-  'Research Director',
-  'Chief Medical Officer',
+  'Donk Co. Manager', // ARK STATION EDIT
+  'Head of Red Hawk', // ARK STATION EDIT
+  'Tech Overseer', // ARK STATION EDIT
+  'Scientific Director', // ARK STATION EDIT
+  'Medtech Curator', // ARK STATION EDIT
 ];
 
 export const RecordManifest = (props) => {
@@ -60,8 +60,8 @@ export const RecordManifest = (props) => {
                         <Icon className="CrewManifest__Icon" name="infinity" />
                       </Tooltip>
                     )}
-                    {crewMember.rank === 'Captain' && (
-                      <Tooltip content="Captain" position="bottom">
+                    {crewMember.rank === 'Ark Commander' && (
+                      <Tooltip content="Ark Commander" position="bottom">
                         <Icon
                           className={classes([
                             'CrewManifest__Icon',

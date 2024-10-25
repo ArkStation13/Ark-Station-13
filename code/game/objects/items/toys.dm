@@ -1186,7 +1186,7 @@
 		playsound(user, toysound, 20, TRUE)
 
 /obj/item/toy/figure/cmo
-	name = "\improper Chief Medical Officer action figure"
+	name = "\improper Medtech Curator action figure" // ARK STATION EDIT
 	icon_state = "cmo"
 	toysay = "Suit sensors!"
 
@@ -1284,7 +1284,7 @@
 	toysay = "Smash!"
 
 /obj/item/toy/figure/hop
-	name = "\improper Head of Personnel action figure"
+	name = "\improper Donk Co. Manager action figure" // ARK STATION EDIT
 	icon_state = "hop"
 	toysay = "Giving out all access!"
 

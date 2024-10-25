@@ -127,7 +127,7 @@ GLOBAL_VAR_INIT(sc_safecode5, "[rand(0,9)]")
  * Captain's safe
  */
 /obj/structure/secure_safe/sc_ssafe
-	name = "Captain's secure safe"
+	name = "Ark Commander's secure safe" // ARK STATION EDIT || Captain
 
 /obj/structure/secure_safe/sc_ssafe/Initialize(mapload)
 	. = ..()

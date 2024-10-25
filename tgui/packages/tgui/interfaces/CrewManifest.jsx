@@ -5,11 +5,11 @@ import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const commandJobs = [
-  'Head of Personnel',
-  'Head of Security',
+  'Donk Co. Manager', // ARK STATION EDIT
+  'Head of Red Hawk', // ARK STATION EDIT
   'Tech Overseer', // ARK STATION EDIT
-  'Research Director',
-  'Chief Medical Officer',
+  'Scientific Director', // ARK STATION EDIT
+  'Medtech Curator', // ARK STATION EDIT
   'Quartermaster',
   'Consul of the Solar Federation', // NOVA EDIT ADDITION // ARK STATION EDIT
 ];

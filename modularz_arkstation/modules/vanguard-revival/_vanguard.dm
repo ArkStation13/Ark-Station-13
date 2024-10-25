@@ -1,15 +1,15 @@
 /datum/job/expeditionary_trooper
 	title = JOB_VANGUARD_OPERATIVE
 	description = "Explore gateways, watch your friends die, find all the loot."
-	department_head = list(JOB_RESEARCH_DIRECTOR)
+	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = SUPERVISOR_RD
+	supervisors = SUPERVISOR_QM
 	config_tag = "VANGUARD_OPERATIVE"
 
 	departments_list = list(
-		/datum/job_department/science,
+		/datum/job_department/cargo,
 	)
 
 	outfit = /datum/outfit/job/expeditionary_trooper

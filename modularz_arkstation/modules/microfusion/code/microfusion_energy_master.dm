@@ -161,7 +161,7 @@
 
 /obj/item/gun/microfusion/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(!chambered && can_shoot())
-		process_chamber() // If the gun was drained and then recharged, load a new shot.
+		process_chamber(user = user) // ARK STATION EDIT // If the gun was drained and then recharged, load a new shot.
 	return ..()
 
 /obj/item/gun/microfusion/process(seconds_per_tick)
@@ -246,7 +246,7 @@
 	if(istype(attacking_item, base_phase_emitter_type))
 		insert_emitter(attacking_item, user)
 
-/obj/item/gun/microfusion/process_chamber(empty_chamber, from_firing, chamber_next_round)
+/obj/item/gun/microfusion/process_chamber(user, empty_chamber, from_firing, chamber_next_round)
 	. = ..()
 	if(!cell?.stabilised && prob(40))
 		do_sparks(2, FALSE, src) //Microfusion guns create sparks!
@@ -379,7 +379,7 @@
 		else
 			shoot_with_empty_chamber(user)
 			return
-		process_chamber()
+		process_chamber(user = user) // ARK STATION EDIT
 		update_appearance()
 		semicd = TRUE
 		var/fire_delay_to_add = 0
@@ -414,7 +414,7 @@
 		firing_burst = FALSE
 		return FALSE
 	if(!chambered)
-		process_chamber() // Ditto.
+		process_chamber(user = user) // ARK STATION EDIT // Ditto.
 	if(!issilicon(user))
 		if(iteration > 1 && !(user.is_holding(src))) //for burst firing
 			firing_burst = FALSE
@@ -446,7 +446,7 @@
 		shoot_with_empty_chamber(user)
 		firing_burst = FALSE
 		return FALSE
-	process_chamber()
+	process_chamber(user = user) // ARK STATION EDIT
 	update_appearance()
 	SEND_SIGNAL(src, COMSIG_UPDATE_AMMO_HUD)
 	return TRUE

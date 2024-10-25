@@ -44,12 +44,12 @@
 	icon_state = "heads_quarters"
 
 /area/station/command/heads_quarters/captain
-	name = "\improper Admirals's Office" // ARK STATION EDIT
+	name = "\improper Ark Commander's Office" // ARK STATION EDIT
 	icon_state = "captain"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/station/command/heads_quarters/captain/private
-	name = "\improper Admirals's Quarters" // ARK STATION EDIT
+	name = "\improper Ark Commander's Quarters" // ARK STATION EDIT
 	icon_state = "captain_private"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
@@ -58,19 +58,19 @@
 	icon_state = "ce_office"
 
 /area/station/command/heads_quarters/cmo
-	name = "\improper Chief Medical Officer's Office"
+	name = "\improper Medtech Curator's Office" // ARK STATION EDIT
 	icon_state = "cmo_office"
 
 /area/station/command/heads_quarters/hop
-	name = "\improper Head of Personnel's Office"
+	name = "\improper Donk Co. Manager's Office" // ARK STATION EDIT
 	icon_state = "hop_office"
 
 /area/station/command/heads_quarters/hos
-	name = "\improper Head of Security's Office"
+	name = "\improper Head of Red Hawk's Office" // ARK STATION EDIT
 	icon_state = "hos_office"
 
 /area/station/command/heads_quarters/rd
-	name = "\improper Research Director's Office"
+	name = "\improper Scientific Director's Office" // ARK STATION EDIT
 	icon_state = "rd_office"
 
 /area/station/command/heads_quarters/qm

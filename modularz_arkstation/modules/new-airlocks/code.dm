@@ -49,6 +49,9 @@
 /obj/machinery/door/airlock/security
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/security.dmi'
 
+/obj/machinery/door/airlock/security/old
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/security.dmi'
+
 /obj/machinery/door/airlock/engineering
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/engineering.dmi'
 
@@ -189,7 +192,9 @@
 		return adjacent_turf
 
 	for(item in adjacent_turf)
-		if(istype(item, /obj/machinery/door/poddoor) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile))
+		if(istype(item, src.type))
+			return item
+		if(istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/plastitanium))
 			return item
 
 	return null
@@ -244,7 +249,9 @@
 		return adjacent_turf
 
 	for(item in adjacent_turf)
-		if(istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile))
+		if(istype(item, src.type))
+			return item
+		if(istype(item, /obj/machinery/door/poddoor) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/plastitanium))
 			return item
 
 	return null

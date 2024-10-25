@@ -334,11 +334,6 @@
 	name = "Raita plushie"
 	icon_state = "raita"
 
-// /obj/item/toy/plush/fox/emma/aiko // Fuck SmileyCom
-// 	name = "Aiko Plushie"
-// 	icon_state = "aiko"
-// 	item_state = "aiko"
-
 /obj/item/toy/plush/fox/emma/red
 	name = "Red plushie"
 	icon_state = "red"
@@ -395,17 +390,17 @@
 	toysay = "For money!"
 
 /obj/item/toy/figure/brigmedic
-	name = "\improper Brig Medic action figure"
+	name = "\improper Red Hawk Medic action figure"
 	icon_state = "brigmedic"
 	toysay = "Rescue heroes!"
 
 /obj/item/toy/figure/blueshield
-	name = "\improper Blueshield action figure"
+	name = "\improper Solar Federation Shield action figure"
 	icon_state = "blueshield"
 	toysay = "At the cost of my life!"
 
 /obj/item/toy/figure/pilot
-	name = "\improper Brig Pilot action figure"
+	name = "\improper Red Hawk Pilot action figure"
 	icon_state = "pilot"
 	toysay = "Star Wars!"
 

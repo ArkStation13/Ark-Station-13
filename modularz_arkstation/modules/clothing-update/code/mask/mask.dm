@@ -65,14 +65,14 @@
 	//worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/mask/mask.dmi'
 
 /obj/item/clothing/mask/gas/sechailer/swat/hos
-	name = "\improper HoS SWAT mask"
+	name = "\improper HoRH SWAT mask"
 	icon_state = "hosmask"
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/mask/mask.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/mask/mask.dmi'
 	worn_icon_muzzled = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/mask/mask_digi.dmi'
 
 /obj/item/clothing/mask/gas/sechailer/swat/blueshield
-	name = "\improper Blueshield SWAT mask"
+	name = "\improper Solfed Shield SWAT mask"
 	icon_state = "blue_sechailer"
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/mask/mask.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/mask/mask.dmi'

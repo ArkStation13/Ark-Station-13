@@ -164,7 +164,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/messagepart
 	var/languageicon = ""
 	if(message_mods[MODE_CUSTOM_SAY_ERASE_INPUT])
-		messagepart = message_mods[MODE_CUSTOM_SAY_EMOTE]
+		messagepart = "<span class='emote'>[message_mods[MODE_CUSTOM_SAY_EMOTE]]</span>" // ARK STATION EDIT
 	else
 		messagepart = speaker.say_quote(raw_message, spans, message_mods)
 
@@ -172,9 +172,9 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		if(istype(dialect) && dialect.display_icon(src))
 			languageicon = "[dialect.get_icon()] "
 
-	messagepart = " <span class='message'>[say_emphasis(messagepart)]</span></span>"
+	messagepart = " <span class='message'>[speaker.say_emphasis(messagepart)]</span></span>" // ARK STATION EDIT
 
-	return "[spanpart1][spanpart2][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]"
+	return "[spanpart1][freqpart][spanpart2][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]" // ARK STATION EDIT
 
 /atom/movable/proc/compose_track_href(atom/movable/speaker, message_langs, raw_message, radio_freq)
 	return ""
@@ -231,7 +231,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		spans |= SPAN_YELL
 
 	var/spanned = attach_spans(input, spans)
-	return "[say_mod], \"[spanned]\""
+	return "<span class='sayverb'>[say_mod],</span> \"[spanned]\"" // ARK STATION EDIT
 
 /// Transforms the speech emphasis mods from [/atom/movable/proc/say_emphasis] into the appropriate HTML tags. Includes escaping.
 #define ENCODE_HTML_EMPHASIS(input, char, html, varname) \

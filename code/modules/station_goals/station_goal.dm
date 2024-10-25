@@ -7,8 +7,8 @@
 	var/report_message = "Complete this goal."
 
 /datum/station_goal/proc/send_report()
-	priority_announce("Priority Nanotrasen directive received. Project \"[name]\" details inbound.", "Incoming Priority Message", SSstation.announcer.get_rand_report_sound())
-	print_command_report(get_report(),"Nanotrasen Directive [pick(GLOB.phonetic_alphabet)] \Roman[rand(1,50)]", announce=FALSE)
+	priority_announce("Priority Solar Federation directive received. Project \"[name]\" details inbound.", "Incoming Priority Message", SSstation.announcer.get_rand_report_sound()) // ARK STATION EDIT - NT TO SOLFED
+	print_command_report(get_report(),"Solar Federation Directive [pick(GLOB.phonetic_alphabet)] \Roman[rand(1,50)]", announce=FALSE) // ARK STATION EDIT - NT TO SOLFED
 	on_report()
 
 /datum/station_goal/proc/on_report()
