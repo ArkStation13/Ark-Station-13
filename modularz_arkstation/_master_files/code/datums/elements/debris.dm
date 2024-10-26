@@ -65,22 +65,24 @@
 	var/obj/effect/abstract/particle_holder/debris_visuals
 	var/obj/effect/abstract/particle_holder/smoke_visuals
 	var/position_offset = rand(-6,6)
-	smoke_visuals = new(source, /particles/impact_smoke)
-	smoke_visuals.particles.position = list(position_offset, position_offset)
-	smoke_visuals.particles.velocity = list(x_component_smoke, y_component_smoke)
-	if(debris) //&& !(P.ammo.flags_ammo_behavior & AMMO_ENERGY || P.ammo.flags_ammo_behavior & AMMO_XENO))
+	if(!(P.armor_flag == LASER || P.armor_flag == ENERGY))
+		smoke_visuals = new(source, /particles/impact_smoke)
+		smoke_visuals.particles.position = list(position_offset, position_offset)
+		smoke_visuals.particles.velocity = list(x_component_smoke, y_component_smoke)
+		smoke_visuals.layer = ABOVE_ALL_MOB_LAYER + 0.01 // ABOVE_OBJ_LAYER + 0.01
+	if((debris) && !(P.armor_flag == LASER || P.armor_flag == ENERGY))
 		debris_visuals = new(source, /particles/debris)
 		debris_visuals.particles.position = generator(GEN_CIRCLE, position_offset, position_offset)
 		debris_visuals.particles.velocity = list(x_component, y_component)
-		debris_visuals.layer = ABOVE_OBJ_LAYER + 0.02
+		debris_visuals.layer = ABOVE_ALL_MOB_LAYER + 0.02 // ABOVE_OBJ_LAYER + 0.02
 		debris_visuals.particles.icon_state = debris
 		debris_visuals.particles.count = debris_amount
 		debris_visuals.particles.spawning = debris_amount
 		debris_visuals.particles.scale = debris_scale
-	smoke_visuals.layer = ABOVE_OBJ_LAYER + 0.01
 	addtimer(CALLBACK(src, PROC_REF(remove_ping), src, smoke_visuals, debris_visuals), 0.7 SECONDS)
 
 /datum/element/debris/proc/remove_ping(hit, obj/effect/abstract/particle_holder/smoke_visuals, obj/effect/abstract/particle_holder/debris_visuals)
-	QDEL_NULL(smoke_visuals)
 	if(debris_visuals)
 		QDEL_NULL(debris_visuals)
+	if(smoke_visuals)
+		QDEL_NULL(smoke_visuals)

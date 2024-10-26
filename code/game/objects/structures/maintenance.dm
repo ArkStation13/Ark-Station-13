@@ -260,7 +260,7 @@ at the cost of risking a vicious bite.**/
 
 /obj/structure/steam_vent/Initialize(mapload)
 	. = ..()
-	if(prob(75))
+	if(prob(45)) // 75 // ARK STATION EDIT
 		vent_active = FALSE
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_EXIT = PROC_REF(blow_steam),

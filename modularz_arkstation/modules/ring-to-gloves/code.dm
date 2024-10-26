@@ -32,7 +32,8 @@
 	. = ..()
 	if(!attached_ring)
 		return
-	user.put_in_active_hand(attached_ring)
+	if(!user.put_in_active_hand(attached_ring))
+		attached_ring.forceMove(user.loc)
 	to_chat(user, span_notice("You removed [attached_ring.name] from [src.name]!"))
 	attached_ring = null
 	user.update_worn_gloves()

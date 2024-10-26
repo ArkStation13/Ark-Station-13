@@ -19,8 +19,8 @@
 	grow = 0.05
 
 /particles/firing_smoke
-	icon = 'modularz_arkstation/_master_files/icons/effects/96x96.dmi'
-	icon_state = "smoke5"
+	icon = 'modularz_arkstation/_master_files/code/game/objects/effects/temporary_visuals/96x96.dmi'
+	icon_state = "smoke" // "smoke5"
 	width = 500
 	height = 500
 	count = 5
@@ -359,14 +359,3 @@
 
 /obj/item/gun/ballistic
 	smoking_gun = TRUE
-
-/obj/item/gun/shoot_live_shot(mob/living/user, pointblank, atom/pbtarget, message)
-	. = ..()
-	if(smoking_gun)
-		var/x_component = sin(get_angle(user, pbtarget)) * 40
-		var/y_component = cos(get_angle(user, pbtarget)) * 40
-		var/obj/effect/abstract/particle_holder/gun_smoke = new(get_turf(src), /particles/firing_smoke)
-		gun_smoke.particles.velocity = list(x_component, y_component)
-		addtimer(VARSET_CALLBACK(gun_smoke.particles, count, 0), 5)
-		addtimer(VARSET_CALLBACK(gun_smoke.particles, drift, 0), 3)
-		QDEL_IN(gun_smoke, 0.6 SECONDS)

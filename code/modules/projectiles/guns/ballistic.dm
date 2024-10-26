@@ -299,22 +299,18 @@
 			stack_trace("Trying to move a qdeleted casing of type [casing.type]!")
 			chambered = null
 		else if(casing_ejector || !from_firing)
+			casing.forceMove(drop_location()) //Eject casing onto ground.
+			if(!QDELETED(casing))
 		/* // ARK STATION EDIT START
-			casing.forceMove(drop_location()) //Eject casing onto ground.
-			if(!QDELETED(casing))
 				casing.bounce_away(TRUE)
-				SEND_SIGNAL(casing, COMSIG_CASING_EJECTED)
 		*/
-			chambered = null
-			casing.forceMove(drop_location()) //Eject casing onto ground.
-			if(!QDELETED(casing))
 				var/bounce_angle
 				if(user)
 					var/sign_x = (istype(user) && !(user.get_held_index_of_item(src) % RIGHT_HANDS)) ? 1 : -1
 					bounce_angle = SIMPLIFY_DEGREES(dir2angle(user.dir) + (sign_x * 90) + rand(-45, 45))
 				casing.bounce_away(bounce_angle = bounce_angle, still_warm = TRUE)
-				SEND_SIGNAL(casing, COMSIG_CASING_EJECTED)
 		// ARK STATION EDIT END
+				SEND_SIGNAL(casing, COMSIG_CASING_EJECTED)
 		else if(empty_chamber)
 			clear_chambered()
 	if (chamber_next_round && (magazine?.max_ammo > 1))

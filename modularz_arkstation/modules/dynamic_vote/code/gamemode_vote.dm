@@ -1,6 +1,8 @@
 #define CHOICE_DYNAMIC "Dynamic - Режим с антагонистами"
 #define CHOICE_EXTENDED "Extended - Мирный режим"
 
+GLOBAL_VAR_INIT(dynamic_forced_secret, FALSE)
+
 /datum/vote
 	vote_sound = 'modularz_arkstation/modules/dynamic_vote/code/select.ogg'
 
@@ -16,7 +18,7 @@
 	return FALSE
 
 /datum/vote/gamemode_vote/is_config_enabled()
-	return CONFIG_GET(flag/dynamic_vote)
+	return FALSE
 
 /datum/vote/gamemode_vote/can_be_initiated(forced)
 	. = ..()
@@ -42,10 +44,67 @@
 
 /datum/proc/extended_settings()
 	GLOB.dynamic_forced_extended = TRUE
-	SSdynamic.threat_level = 0
+	GLOB.dynamic_forced_threat_level = 0
 
 /datum/proc/dynamic_settings()
 	GLOB.dynamic_forced_extended = FALSE
+
+/datum/proc/secret_settings()
+	var/gamemode_rule
+
+	// Проверяем нет ли уже каких-то форсов. К примеру от администрации.
+	if(GLOB.dynamic_forced_extended == TRUE)
+		return
+	if(GLOB.dynamic_forced_roundstart_ruleset.len > 0)
+		return
+
+	// Начинаем рулетку смерти.
+	if(prob(10))
+		// Secret Extended
+		GLOB.dynamic_forced_extended = TRUE
+		GLOB.dynamic_forced_threat_level = 0
+		log_admin("Game has set Forced Extended for round.")
+		message_admins("Game has set Forced Extended for round.", 1)
+	else if(prob(6))
+		// Nuke
+		gamemode_rule += "Nuclear Emergency"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(4))
+		// Wiz
+		gamemode_rule += "Wizard"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(4))
+		// Malf
+		gamemode_rule += "Malfunctioning AI"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(10))
+		// Revolution
+		gamemode_rule += "Revolution"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(10))
+		// Blood Cult
+		gamemode_rule += "Blood Cult"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(10))
+		// Spies
+		gamemode_rule += "Spies"
+		GLOB.dynamic_forced_threat_level = 0
+	else if(prob(20))
+		// Traitors
+		gamemode_rule += "Traitors"
+		GLOB.dynamic_forced_threat_level = 0
+	else
+		// Random Dynamic
+		GLOB.dynamic_forced_threat_level = rand(5, 150)
+		log_admin("Game has set [GLOB.dynamic_forced_threat_level] threat for round.")
+		message_admins("Game has set [GLOB.dynamic_forced_threat_level] threat for round.", 1)
+
+	if(gamemode_rule)
+		GLOB.dynamic_forced_roundstart_ruleset += gamemode_rule
+		log_admin("Game has set [gamemode_rule] to be a forced roundstart ruleset.")
+		message_admins("Game has set [gamemode_rule] to be a forced roundstart ruleset.", 1)
+
+	GLOB.dynamic_forced_secret = TRUE
 
 #undef CHOICE_DYNAMIC
 #undef CHOICE_EXTENDED

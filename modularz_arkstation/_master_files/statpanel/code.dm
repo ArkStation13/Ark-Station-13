@@ -8,6 +8,14 @@
 		"other_str" = target.mob?.get_status_tab_items(),
 	))
 
+/datum/controller/subsystem/statpanels/proc/check_for_gamemode()
+	if(GLOB.dynamic_forced_secret == TRUE)
+		return "Secret"
+	else if(GLOB.dynamic_forced_extended == TRUE)
+		return "Extended"
+	else
+		return "Dynamic"
+
 /datum/controller/subsystem/statpanels/fire(resumed = FALSE)
 	if (!resumed)
 		num_fires++
@@ -18,7 +26,7 @@
 		var/observing_players = length(GLOB.current_observers_list) //This is a list of all players that started as an observer-- dead and lobby players are not included.
 		global_data = list(
 			"ID раунда: [GLOB.round_id ? GLOB.round_id : "Н/Д"]",
-			"Игровой режим: [GLOB.dynamic_forced_extended == TRUE? "Extended" : "Dynamic"]",
+			"Игровой режим: [check_for_gamemode()]",
 			"Предыдущие режимы: [jointext(SSpersistence.saved_modes, ", ")]", // Because some of us want to know when our favorite mode becomes forced - Flauros
 			// "Server Rev: [server_rev ? server_rev : "N/A"]",
 			"Текущая станция: [SSmapping.config?.map_name || "Грузим..."]",

@@ -205,6 +205,14 @@
 	var/angle = get_angle(user, pbtarget)+rand(-recoil_deviation, recoil_deviation) + 180
 	if(angle > 360)
 		angle -= 360
+	if(smoking_gun)
+		var/x_component = sin(get_angle(user, pbtarget)) * 40
+		var/y_component = cos(get_angle(user, pbtarget)) * 40
+		var/obj/effect/abstract/particle_holder/gun_smoke = new(get_turf(src), /particles/firing_smoke)
+		gun_smoke.particles.velocity = list(x_component, y_component)
+		addtimer(VARSET_CALLBACK(gun_smoke.particles, count, 0), 5)
+		addtimer(VARSET_CALLBACK(gun_smoke.particles, drift, 0), 3)
+		QDEL_IN(gun_smoke, 0.6 SECONDS)
 	// ARK STATION ADDITION END
 	if(recoil && !tk_firing(user))
 		recoil_camera(user, recoil+1, (recoil*recoil_backtime_multiplier) + 1, recoil, angle) // shake_camera(user, recoil + 1, recoil) // ARK STATION EDIT
