@@ -1207,17 +1207,20 @@
 					pressure_resistance_prob_delta -= 20
 					break
 	// ARK STATION ADDITION START
-	if(prob(30))
-		Knockdown(3 SECONDS)
-		to_chat(src, span_warning("The flow of gas knocks you off your feet!"))
+	if(pressure_difference > 20)
+		if(body_position == STANDING_UP)
+			if(prob(15)) // 30
+				Knockdown(3 SECONDS)
+				to_chat(src, span_warning("The flow of gas knocks you off your feet!"))
 
-	if(pressure_difference > 50)
-		if(prob(30))
-			var/turf/target_turf1 = get_turf(get_step(src, direction))
-			var/turf/target_turf2 = get_turf(get_step(target_turf1, direction))
-			Knockdown(2 SECONDS)
-			throw_at(target_turf2, 2)
-			to_chat(src, span_warning("The flow of gas throws you to the side!"))
+	if(pressure_difference > 70)
+		if(body_position == STANDING_UP)
+			if(prob(10)) // 30
+				var/turf/target_turf1 = get_turf(get_step(src, direction))
+				var/turf/target_turf2 = get_turf(get_step(target_turf1, direction))
+				Knockdown(2 SECONDS)
+				throw_at(target_turf2, 2)
+				to_chat(src, span_warning("The flow of gas throws you to the side!"))
 	// ARK STATION ADDITION END
 
 	..(pressure_difference, direction, pressure_resistance_prob_delta)
