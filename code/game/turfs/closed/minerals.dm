@@ -778,8 +778,8 @@
 	var/mutable_appearance/activated_overlay
 
 /turf/closed/mineral/gibtonite/Initialize(mapload)
-	. = ..() // ARK STATION EDIT || Поменял местами
 	det_time = rand(8,10) //So you don't know exactly when the hot potato will explode
+	. = ..()
 
 /turf/closed/mineral/gibtonite/attackby(obj/item/attacking_item, mob/living/user, params)
 	var/previous_stage = stage

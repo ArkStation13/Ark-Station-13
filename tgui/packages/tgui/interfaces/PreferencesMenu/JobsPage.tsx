@@ -402,7 +402,7 @@ export const JobsPage = () => {
               <PriorityHeaders />
 
               <Department
-                department="Solar Global Energy" /* Ark Station Edit */
+                department="Global Solar Energy" /* Ark Station Edit */
               >
                 <Gap amount={6} />
               </Department>
@@ -423,7 +423,7 @@ export const JobsPage = () => {
             <Stack.Item mr={1}>
               <PriorityHeaders />
 
-              <Department department="Ark Commander" /* Ark Station Edit */>
+              <Department department="Ark Command" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
@@ -432,7 +432,7 @@ export const JobsPage = () => {
               </Department>
 
               <Department
-                department="Atlas Transportations" /* Ark Station Edit */
+                department="Atlas & Nanotrasen" /* Ark Station Edit */
               />
             </Stack.Item>
 
@@ -441,7 +441,9 @@ export const JobsPage = () => {
 
               <PriorityHeaders />
 
-              <Department department="Church" /* Ark Station Addition */>
+              <Department
+                department="Neo-Vatican Church" /* Ark Station Addition */
+              >
                 <Gap amount={6} />
               </Department>
 

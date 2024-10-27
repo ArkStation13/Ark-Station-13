@@ -1,7 +1,7 @@
 /obj/machinery/light
 	bulb_colour = "#ffe6cd"
 	brightness = 7.5 // 7.5
-	bulb_power = 0.6
+	bulb_power = 0.7 // 0.6
 	nightshift_brightness = 6
 	icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
 	overlay_icon = 'modularz_arkstation/modules/light-change/lighting.dmi'
