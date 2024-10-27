@@ -141,8 +141,8 @@
 	falloff_exponent = 20
 
 /datum/looping_sound/firealarm
-	//mid_sounds = list('sound/machines/fire_alarm/FireAlarm1.ogg' = 1,'sound/machines/fire_alarm/FireAlarm2.ogg' = 1,'sound/machines/fire_alarm/FireAlarm3.ogg' = 1,'sound/machines/fire_alarm/FireAlarm4.ogg' = 1) // ARK STATION EDIT BELOW
-	mid_sounds = list('modularz_arkstation/_master_files/sound/effects/firealarm.ogg' = 1) // ARK STATION ADDITION
+	mid_sounds = list('sound/machines/fire_alarm/FireAlarm1.ogg' = 1,'sound/machines/fire_alarm/FireAlarm2.ogg' = 1,'sound/machines/fire_alarm/FireAlarm3.ogg' = 1,'sound/machines/fire_alarm/FireAlarm4.ogg' = 1) // ARK STATION EDIT BELOW
+	// mid_sounds = list('modularz_arkstation/_master_files/sound/effects/firealarm.ogg' = 1) // ARK STATION ADDITION
 	mid_length = 20 SECONDS // ARK STATION EDIT - ORIGINAL - 2.4 SECONDS
 	volume = 30
 
