@@ -64,11 +64,11 @@
 	shlang = new(src)
 
 /obj/item/shlang/examine(mob/user)
-	. += span_notice("Has [tank?.target_fuel] liters of the fuel in.")
+	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
-	qdel(tank?.current_beam)
+	qdel(tank.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
@@ -76,8 +76,8 @@
 	. += span_yellow("[LITER_PRICE] credits for 1 liter of Fuel!")
 
 /obj/machinery/walltank/attackby(obj/item/I, mob/living/user, params)
-	if(I == src.shlang)
-		src.shlang.snap_back()
+	if(I == shlang)
+		shlang.snap_back()
 		return
 	if(istype(I, /obj/item/holochip))
 		var/obj/item/holochip/H = I
@@ -134,10 +134,11 @@
 
 /obj/item/shlang/proc/snap_back()
 	if(!tank)
+		qdel(src, TRUE)
 		return
 	forceMove(tank)
-	tank?.shlang_na_meste = TRUE
-	qdel(tank?.current_beam)
+	tank.shlang_na_meste = TRUE
+	qdel(tank.current_beam)
 
 /obj/item/shlang/proc/check_range()
 	SIGNAL_HANDLER
