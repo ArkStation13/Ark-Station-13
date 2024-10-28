@@ -124,6 +124,33 @@
 /obj/machinery/light/warm
 	bulb_colour = "#fae5c1"
 
+/obj/item/wallframe/light_fixture/attach(turf/on_wall, mob/user)
+	if(result_path)
+		playsound(src.loc, 'sound/machines/click.ogg', 75, TRUE)
+		user.visible_message(span_notice("[user.name] attaches [src] to the wall."),
+			span_notice("You attach [src] to the wall."),
+			span_hear("You hear clicking."))
+		var/floor_to_wall = get_dir(user, on_wall)
+
+		var/obj/hanging_object = new result_path(get_turf(user), floor_to_wall, TRUE)
+		hanging_object.setDir(floor_to_wall)
+		pixel_shift = 32
+		if(pixel_shift)
+			switch(floor_to_wall)
+				if(NORTH)
+					hanging_object.pixel_y = pixel_shift
+				if(SOUTH)
+					hanging_object.pixel_y = -pixel_shift
+				if(EAST)
+					hanging_object.pixel_x = pixel_shift
+				if(WEST)
+					hanging_object.pixel_x = -pixel_shift
+		after_attach(hanging_object)
+
+	qdel(src)
+
+
+
 #define MAPPING_DIRECTIONAL_HELPERS_LIGHT(path, dop_offset) ##path/directional/north {\
     dir = NORTH; \
     pixel_y = 32 + dop_offset; \

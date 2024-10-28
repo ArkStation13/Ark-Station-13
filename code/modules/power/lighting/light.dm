@@ -81,6 +81,8 @@
 	var/power_consumption_rate = 20
 	///break if moved, if false also makes it ignore if the wall its on breaks
 	var/break_if_moved = TRUE
+	//ARK STATION
+	var/pixel_shift = 32
 
 /obj/machinery/light/Move()
 	if(status != LIGHT_BROKEN && break_if_moved)
@@ -457,6 +459,18 @@
 			new_light.icon_state = "bulb-construct-stage[current_stage]"
 	new_light.setDir(dir)
 	new_light.stage = current_stage
+	// ARK STATION ADD START
+	if(pixel_shift)
+		switch(dir)
+			if(NORTH)
+				new_light.pixel_y = pixel_shift
+			if(SOUTH)
+				new_light.pixel_y = -pixel_shift
+			if(EAST)
+				new_light.pixel_x = pixel_shift
+			if(WEST)
+				new_light.pixel_x = -pixel_shift
+// ARK STATION ADD END
 	if(!disassembled)
 		new_light.take_damage(new_light.max_integrity * 0.5, sound_effect=FALSE)
 		if(status != LIGHT_BROKEN)
