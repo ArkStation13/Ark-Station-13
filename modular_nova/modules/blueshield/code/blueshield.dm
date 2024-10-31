@@ -42,7 +42,7 @@
 	// veteran_only = TRUE // ARK STATION REMOVED
 	job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
 
-	species_whitelist = list(SPECIES_HUMAN) // ARK STATION ADDITION
+	species_whitelist = list(SPECIES_HUMAN, SPECIES_HEMOPHAGE, SPECIES_HUMANOID) // ARK STATION ADDITION
 
 /datum/outfit/job/blueshield
 	name = "Blueshield"
