@@ -73,6 +73,6 @@
 	next_midround_injection = world.time + rand(ALT_MIDROUND_LOWER_TIME, ALT_MIDROUND_UPPER_TIME)
 	log_dynamic_and_announce("Alternate midround injection in [DisplayTimeText(next_midround_injection - world.time)]")
 
-#undef MIN_MIDROUND_COST
+// #undef MIN_MIDROUND_COST // ARK STATION REMOVED
 #undef ALT_MIDROUND_LOWER_TIME
 #undef ALT_MIDROUND_UPPER_TIME
