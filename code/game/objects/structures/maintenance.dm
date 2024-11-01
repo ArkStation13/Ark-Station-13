@@ -272,7 +272,7 @@ at the cost of risking a vicious bite.**/
 	if(steam)
 		steam = new steam()
 	update_appearance(UPDATE_ICON)
-	 // ARK STATION ADDITION END
+	// ARK STATION ADDITION END
 
 /obj/structure/steam_vent/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
