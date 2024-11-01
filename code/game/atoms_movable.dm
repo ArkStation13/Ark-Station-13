@@ -1741,12 +1741,6 @@
 		log_admin("[key_name(usr)] has added deadchat control to [src]")
 		message_admins(span_notice("[key_name(usr)] has added deadchat control to [src]"))
 
-	// ARK STATION ADDITION START
-	if(href_list[VV_HK_EDIT_MOVABLE_PHYSICS] && check_rights(R_VAREDIT))
-		var/client/C = usr.client
-		C?.open_movable_physics_editor(src)
-	// ARK STATION ADDITION END
-
 /**
 * A wrapper for setDir that should only be able to fail by living mobs.
 *
