@@ -68,7 +68,8 @@
 
 /obj/item/shlang/Destroy(force)
 	. = ..()
-	qdel(tank.current_beam)
+	if(tank)
+		qdel(tank.current_beam)
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
