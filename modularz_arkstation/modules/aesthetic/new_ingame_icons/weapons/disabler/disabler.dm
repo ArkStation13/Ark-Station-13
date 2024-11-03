@@ -37,3 +37,13 @@
 			C.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
 		else if(!C.check_stun_immunity(CANKNOCKDOWN))
 			addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 20), 0.5 SECONDS)
+
+// Other
+/obj/item/gun/energy/disabler/smoothbore
+	icon = 'icons/obj/weapons/guns/energy.dmi'
+
+/obj/item/gun/energy/disabler/smoothbore/prime
+	icon = 'icons/obj/weapons/guns/energy.dmi'
+
+/obj/item/gun/energy/disabler/smg
+	icon = 'icons/obj/weapons/guns/energy.dmi'

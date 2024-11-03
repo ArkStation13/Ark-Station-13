@@ -93,7 +93,7 @@
 /atom/movable/screen/plane_master/lamps_glare
 	name = "Lamps Glare Plane Master"
 	documentation = "Lamps Glare."
-	plane = LIGHTING_LAMPS_PLANE
+	plane = LIGHTING_LAMPS_GLARE
 	appearance_flags = PLANE_MASTER
 	blend_mode = BLEND_OVERLAY
 	blend_mode_override = BLEND_OVERLAY

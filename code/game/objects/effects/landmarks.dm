@@ -58,7 +58,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 // START LANDMARKS FOLLOW. Don't change the names unless
 // you are refactoring shitty landmark code.
 /obj/effect/landmark/start/assistant
-	name = JOB_ASSISTANT
+	name = "Assistant" // ARK STATION EDIT
 	icon_state = JOB_ASSISTANT //icon_state is case sensitive. why are all of these capitalized? because fuck you that's why
 
 /obj/effect/landmark/start/assistant/override
@@ -186,7 +186,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/research_director
 	name = JOB_RESEARCH_DIRECTOR
-	icon_state = JOB_RESEARCH_DIRECTOR
+	icon_state = "Research Director" // ARK STATION EDIT
 
 /obj/effect/landmark/start/geneticist
 	name = "Geneticist"
