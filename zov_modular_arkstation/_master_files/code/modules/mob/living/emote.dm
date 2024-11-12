@@ -43,7 +43,7 @@
 	message = "chitters."
 	message_mime = "chitters silently!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/moth/mothchitter2.ogg'
-	audio_cooldown = 0.3 SECONDS
+	cooldown = 0.3 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/eyebrow2
@@ -52,7 +52,7 @@
 	message = "<b>raises an eyebrow.</b>"
 	message_mime = "<b>raises an eyebrow with quaking force!</b>"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/vineboom.ogg'
-	audio_cooldown = 2.9 SECONDS
+	cooldown = 2.9 SECONDS
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/blink3
@@ -61,7 +61,7 @@
 	message = "blinks."
 	message_mime = "blinks expressively."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/blink.ogg'
-	audio_cooldown = 0.25 SECONDS
+	cooldown = 0.25 SECONDS
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/laugh2
@@ -79,7 +79,7 @@
 	message = "laughs silly."
 	message_mime = "acts out laughing silly."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/lol.ogg'
-	audio_cooldown = 6.1 SECONDS
+	cooldown = 6.1 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/laugh4
@@ -88,7 +88,7 @@
 	message = "burst into laughter!"
 	message_mime = "acts out bursting into laughter."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/laugh_muta.ogg'
-	audio_cooldown = 3 SECONDS
+	cooldown = 3 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/laugh5
@@ -97,7 +97,7 @@
 	message = "laughs in Scottish."
 	message_mime = "acts out laughing in Scottish."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/laugh_deman.ogg'
-	audio_cooldown = 2.75 SECONDS
+	cooldown = 2.75 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/laugh6
@@ -106,7 +106,7 @@
 	message = "laughs like a kettle!"
 	message_mime = "acts out laughing like a kettle."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/laugh6.ogg'
-	audio_cooldown = 4.45 SECONDS
+	cooldown = 4.45 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cry2
@@ -115,7 +115,7 @@
 	message = "cries like a king."
 	message_mime = "acts out crying like a king."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/cry_king.ogg'
-	audio_cooldown = 1.6 SECONDS // Uses longest sound's time
+	cooldown = 1.6 SECONDS // Uses longest sound's time
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cry2/get_sound(mob/living/user)
@@ -129,7 +129,7 @@
 	message = "whistles a tune."
 	message_mime = "makes an expression as if whistling."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/wtune1.ogg'
-	audio_cooldown = 4.55 SECONDS // Uses longest sound's time.
+	cooldown = 4.55 SECONDS // Uses longest sound's time.
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/wtune/get_sound(mob/living/user)
@@ -143,7 +143,7 @@
 	message_param = "audibly approves %t's appearance."
 	message_mime = "makes an expression as if <i>inappropriately</i> whistling."
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/wolfwhistle.ogg'
-	audio_cooldown = 0.78 SECONDS
+	cooldown = 0.78 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/weh2
@@ -152,7 +152,7 @@
 	message = "let out a weh!"
 	message_mime = "acts out a weh!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/weh2.ogg'
-	audio_cooldown = 0.25 SECONDS
+	cooldown = 0.25 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/weh3
@@ -161,7 +161,7 @@
 	message = "let out a weh!"
 	message_mime = "acts out a weh!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/weh3.ogg'
-	audio_cooldown = 0.25 SECONDS
+	cooldown = 0.25 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 
@@ -171,7 +171,7 @@
 	message = "let out a surprised weh!"
 	message_mime = "acts out a surprised weh!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/weh_s.ogg'
-	audio_cooldown = 0.35 SECONDS
+	cooldown = 0.35 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/bark2
@@ -180,14 +180,14 @@
 	message = "barks!"
 	message_mime = "acts out a bark!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/bark_alt.ogg'
-	audio_cooldown = 0.35 SECONDS
+	cooldown = 0.35 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/woof/alt
 	key = "woof2"
 	key_third_person = "woofs2"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/woof2.ogg'
-	audio_cooldown = 0.3 SECONDS
+	cooldown = 0.3 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/coyhowl
@@ -196,7 +196,7 @@
 	message = "howls like coyote!"
 	message_mime = "acts out a coyote's howl!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/coyotehowl.ogg'
-	audio_cooldown = 2.94 SECONDS // Uses longest sound's time
+	cooldown = 2.94 SECONDS // Uses longest sound's time
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/coyhowl/get_sound(mob/living/user)
@@ -215,7 +215,7 @@
 	message = "lets out an <b>earthshaking</b> snore"
 	message_mime = "lets out an <b>inaudible</b> snore!"
 	sound = 'zov_modular_arkstation/_master_files/sound/voice/aauugghh1.ogg'
-	audio_cooldown = 2.1 SECONDS
+	cooldown = 2.1 SECONDS
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/snore/snore2/run_emote(mob/user, params)

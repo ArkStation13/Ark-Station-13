@@ -15,8 +15,8 @@
 
 	var/players = GLOB.clients.len
 
-	if(SSmapping.config)
-		new_status += "<br>Map: <b>[SSmapping.config.map_name]</b>"
+	if(SSmapping.current_map)
+		new_status += "<br>Map: <b>[SSmapping.current_map.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.current_map.map_name]</b>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		new_status += "<br>Game Status: <b>IN LOBBY</b><br>"
