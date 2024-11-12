@@ -8,11 +8,11 @@
 		var/active_players = get_active_player_count(alive_check = FALSE, afk_check = TRUE, human_check = FALSE) //This is a list of all active players, including players who are dead
 		var/observing_players = length(GLOB.current_observers_list) //This is a list of all players that started as an observer-- dead and lobby players are not included.
 		global_data = list(
-			"ID Раунда: [GLOB.round_id ? GLOB.round_id : "N/A"]",
+			"ID Раунда: [GLOB.round_id ? GLOB.round_id : "Н/Д"]",
 			"Игровой Режим: [GLOB.dynamic_forced_extended == TRUE? "Extended" : "Dynamic"]",
 			"Предыдущие Режимы: [jointext(SSpersistence.saved_modes, ", ")]", // Because some of us want to know when our favorite mode becomes forced - Flauros
 			// "Server Rev: [server_rev ? server_rev : "N/A"]",
-			"Текущая Станция: [SSmapping.config?.map_name || "Loading..."]",
+			"Текущая Станция: [SSmapping.current_map?.map_name || "Подгружаем..."]",
 			cached ? "Следующая Станция: [cached.map_name]" : null,
 			"Подключено: [GLOB.clients.len] | Активно: [active_players] | Наблюдает: [observing_players]",
 			"Задержка Тиков: [round(SStime_track.time_dilation_current,1)]% (Среднее: [round(SStime_track.time_dilation_avg_fast,1)]% / [round(SStime_track.time_dilation_avg,1)]% / [round(SStime_track.time_dilation_avg_slow,1)]%)",
