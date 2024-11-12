@@ -46,7 +46,7 @@ COLORED_SOFA(/obj/structure/chair/sofa, olive_corp, "olive_corpsofa") // ARK STA
 	icon = 'icons/obj/chairs_wide.dmi'
 	buildstackamount = 1
 	item_chair = null
-	fishing_modifier = -4
+	fishing_modifier = -6
 	var/mutable_appearance/armrest
 
 /obj/structure/chair/sofa/Initialize(mapload)

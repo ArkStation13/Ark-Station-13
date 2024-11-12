@@ -37,6 +37,11 @@
 	item_path = /obj/item/clothing/neck/padded/alt
 	// ARK STATION REMOVED: ckeywhitelist = list("snailomi")
 
+/datum/loadout_item/neck/padded/security
+	name = "Vanguard Cloak"
+	item_path = /obj/item/clothing/neck/padded/security
+	ckeywhitelist = list("actualvanguard")
+
 /datum/loadout_item/gloves/padded
 	name = "Serenity Gloves"
 	item_path = /obj/item/clothing/gloves/padded
@@ -870,3 +875,18 @@
 	name = "Shendyt"
 	item_path = /obj/item/clothing/under/costume/shendyt
 	// ARK STATION REMOVED: ckeywhitelist = list("hyperhazel")
+
+/datum/loadout_item/pocket_items/jumperbox
+	name = "Jumper Conversation Kit Box"
+	item_path = /obj/item/mod/skin_applier/jumper
+	// ARK STATION REMOVED: ckeywhitelist = list("bonkaitheroris")
+
+/datum/loadout_item/pocket_items/starfruit_seed
+	name = "Primidine Starfruit Seed"
+	item_path = /obj/item/seeds/starfruit
+	// ARK STATION REMOVED: ckeywhitelist = list("snailomi", "thedragmeme")
+
+/datum/loadout_item/suit/butter
+	name = "Butter Costume"
+	item_path = /obj/item/clothing/suit/costume/butter
+	// ARK STATION REMOVED: ckeywhitelist = list("drpmstr", "pyritechimera")

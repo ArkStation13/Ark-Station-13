@@ -19,7 +19,7 @@
 /datum/controller/subsystem/statpanels/fire(resumed = FALSE)
 	if (!resumed)
 		num_fires++
-		var/datum/map_config/cached = SSmapping.next_map_config
+		var/datum/map_config/cached = SSmap_vote.next_map_config
 		// var/server_rev = copytext(GLOB.revdata.originmastercommit, 1, 8)
 		var/round_real_time = REALTIMEOFDAY - SSticker.real_round_start_time
 		var/active_players = get_active_player_count(alive_check = FALSE, afk_check = TRUE, human_check = FALSE) //This is a list of all active players, including players who are dead
@@ -29,7 +29,7 @@
 			"Игровой режим: [check_for_gamemode()]",
 			"Предыдущие режимы: [jointext(SSpersistence.saved_modes, ", ")]", // Because some of us want to know when our favorite mode becomes forced - Flauros
 			// "Server Rev: [server_rev ? server_rev : "N/A"]",
-			"Текущая станция: [SSmapping.config?.map_name || "Грузим..."]",
+			"Текущая станция: [SSmapping.current_map?.map_name || "Подгружаем..."]",
 			cached ? "Следующая станция: [cached.map_name]" : null,
 			"Подключено: [GLOB.clients.len] | Активно: [active_players] | Наблюдает: [observing_players]",
 			"Задержка тиков: [round(SStime_track.time_dilation_current,1)]% (Среднее: [round(SStime_track.time_dilation_avg_fast,1)]% / [round(SStime_track.time_dilation_avg,1)]% / [round(SStime_track.time_dilation_avg_slow,1)]%)",

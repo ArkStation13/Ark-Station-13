@@ -12,7 +12,7 @@
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
 	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
-	w_class = WEIGHT_CLASS_NORMAL // WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_BULKY
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
 
 /obj/item/storage/belt/suicide_act(mob/living/carbon/user)
@@ -230,6 +230,8 @@
 	icon_state = "medical"
 	inhand_icon_state = "medical"
 	worn_icon_state = "medical"
+	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
 /obj/item/storage/belt/medical/Initialize(mapload)
 	. = ..()
@@ -498,7 +500,8 @@
 	icon_state = "soulstonebelt"
 	inhand_icon_state = "soulstonebelt"
 	worn_icon_state = "soulstonebelt"
-	w_class = WEIGHT_CLASS_BULKY
+	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
 /obj/item/storage/belt/soulstone/Initialize(mapload)
 	. = ..()
@@ -635,7 +638,8 @@
 	icon_state = "grenadebeltnew"
 	inhand_icon_state = "security"
 	worn_icon_state = "grenadebeltnew"
-	w_class = WEIGHT_CLASS_BULKY
+	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
 /obj/item/storage/belt/grenade/Initialize(mapload)
 	. = ..()
@@ -700,6 +704,8 @@
 	icon_state = "janibelt"
 	inhand_icon_state = "janibelt"
 	worn_icon_state = "janibelt"
+	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
 /obj/item/storage/belt/janitor/Initialize(mapload)
 	. = ..()
