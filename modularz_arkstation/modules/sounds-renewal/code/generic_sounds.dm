@@ -40,16 +40,16 @@
 	fire_sound = 'modularz_arkstation/modules/sounds-renewal/sound/weapons/laser.ogg'
 
 /datum/looping_sound/chainsaw
-	start_sound = list('zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawstart.ogg' = 1)
+	start_sound = list('modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawstart.ogg' = 1)
 	start_length = 4 SECONDS
 
 // /obj/item/chainsaw/attack_self(mob/user)
 // 	. = ..()
 // 	if(on)
-// 		playsound(src, 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawstart.ogg', 65, 1)
+// 		playsound(src, 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawstart.ogg', 65, 1)
 
 // 	if(on)
-// 		hitsound = 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg'
+// 		hitsound = 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg'
 // 		chainsaw_loop.start()
 // 	else
 // 		hitsound = SFX_SWING_HIT

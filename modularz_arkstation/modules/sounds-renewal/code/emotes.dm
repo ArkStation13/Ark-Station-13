@@ -447,7 +447,7 @@ var/static/list/female_yawn = list(
 	key_third_person = "coyhowls"
 	message = "howls like coyote!"
 	emote_type = EMOTE_AUDIBLE
-	audio_cooldown = 5 SECONDS
+	cooldown = 5 SECONDS
 	vary = TRUE
 
 /datum/emote/living/coyhowl/get_sound(mob/living/user)
