@@ -15893,6 +15893,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/machinery/surgery_sign/directional/south{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "fuS" = (
@@ -17181,11 +17184,19 @@
 /area/station/science/xenobiology)
 "fVa" = (
 /obj/structure/cable,
-/obj/machinery/light_switch/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 1
+	},
+/obj/machinery/light_switch/directional/west{
+	pixel_y = 26
+	},
+/obj/machinery/surgery_sign/directional/north{
+	id = "surgery1"
+	},
+/obj/machinery/button/surgery/directional/west{
+	id = "surgery1"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
