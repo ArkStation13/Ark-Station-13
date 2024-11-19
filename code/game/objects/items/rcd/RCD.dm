@@ -492,7 +492,7 @@
 
 /obj/item/construction/rcd/ce
 	name = "professional RCD"
-	desc = "A higher-end model of the rapid construction device, prefitted with improved cooling and disruption prevention. Provided to the Tech Overseer." // ARK STATION EDIT
+	desc = "A higher-end model of the rapid construction device, prefitted with improved cooling and disruption prevention. Provided to the chief engineer."
 	upgrade = RCD_UPGRADE_ANTI_INTERRUPT | RCD_UPGRADE_NO_FREQUENT_USE_COOLDOWN
 	matter = 160
 	color = list(

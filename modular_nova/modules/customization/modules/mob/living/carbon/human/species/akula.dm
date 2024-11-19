@@ -236,7 +236,11 @@
 	. = ..()
 	RegisterSignal(akula, COMSIG_MOB_TRIGGER_WET_SKIN, PROC_REF(wetted), akula)
 	// lets give 15 wet_stacks on initial
-	akula?.set_wet_stacks(WETSTACK_INITIAL, remove_fire_stacks = FALSE) // ARK STATION FIX
+	/* // ARK STATION ADDITION START
+	if(!akula)
+		return
+	*/ // ARK STATION ADDITION END
+	akula.set_wet_stacks(WETSTACK_INITIAL, remove_fire_stacks = FALSE)
 
 /// Remove the signal on species loss
 /datum/species/akula/on_species_loss(mob/living/carbon/akula, datum/species/new_species, pref_load)
@@ -251,14 +255,22 @@
 		ADD_TRAIT(akula, TRAIT_SLIPPERY, SPECIES_TRAIT)
 
 	// Relieve the negative moodlet
-	akula?.clear_mood_event("dry_skin") // ARK STATION FIX
+	/* // ARK STATION ADDITION START
+	if(!akula)
+		return
+	*/ // ARK STATION ADDITION END
+	akula.clear_mood_event("dry_skin")
 	// The timer which will initiate above 10 wet_stacks, and call dried() once the timer runs out
 	dry_up_timer = addtimer(CALLBACK(src, PROC_REF(dried), akula), DRY_UP_TIME, TIMER_UNIQUE | TIMER_STOPPABLE)
 
 /// This proc is called after a mob with the TRAIT_SLIPPERY has its related timer run out
 /datum/species/akula/proc/dried(mob/living/carbon/akula)
 	// A moodlet which will not go away until the user gets wet
-	akula?.add_mood_event("dry_skin", /datum/mood_event/dry_skin) // ARK STATION FIX
+	/* // ARK STATION ADDITION START
+	if(!akula)
+		return
+	*/ // ARK STATION ADDITION END
+	akula.add_mood_event("dry_skin", /datum/mood_event/dry_skin)
 
 /// A simple overwrite which calls parent to listen to wet_stacks
 /datum/status_effect/fire_handler/wet_stacks/tick(delta_time)

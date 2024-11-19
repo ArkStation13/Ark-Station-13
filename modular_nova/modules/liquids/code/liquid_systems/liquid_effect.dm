@@ -489,10 +489,10 @@
 		QUEUE_SMOOTH(src)
 		QUEUE_SMOOTH_NEIGHBORS(src)
 
-//Cant do it immediately, hmhm
+	/* //Cant do it immediately, hmhm
 	if(isspaceturf(my_turf))
 		qdel(src, TRUE)
-
+	*/
 
 /obj/effect/abstract/liquid_turf/Destroy(force)
 	if(force)

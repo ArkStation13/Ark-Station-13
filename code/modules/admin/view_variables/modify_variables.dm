@@ -287,7 +287,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 			return FALSE
 	return TRUE
 
-/client/proc/modify_variables(atom/O, param_var_name = null, autodetect_class = FALSE) // ARK STATION EDIT - 0 to FALSE
+/client/proc/modify_variables(atom/O, param_var_name = null, autodetect_class = 0)
 	if(!check_rights(R_VAREDIT))
 		return
 

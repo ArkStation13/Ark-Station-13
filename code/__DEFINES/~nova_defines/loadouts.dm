@@ -33,4 +33,3 @@
 #define LOADOUT_OVERRIDE_JOB "Delete job items"
 #define LOADOUT_OVERRIDE_BACKPACK "Move job to backpack"
 #define LOADOUT_OVERRIDE_CASE "Place all in case"
-

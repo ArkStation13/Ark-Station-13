@@ -2,14 +2,8 @@
 	name = "Assassination/Kidnap"
 	objectives = list(
 		list(
-			list(
-				/datum/traitor_objective/target_player/assassinate/calling_card = 1,
-				/datum/traitor_objective/target_player/assassinate/behead = 1,
-			) = 1,
-			list(
-				/datum/traitor_objective/target_player/assassinate/calling_card/heads_of_staff = 1,
-				/datum/traitor_objective/target_player/assassinate/behead/heads_of_staff = 1,
-			) = 1,
+			/datum/traitor_objective/target_player/assassinate/calling_card = 1,
+			/datum/traitor_objective/target_player/assassinate/calling_card/heads_of_staff = 1,
 		) = 1,
 		list(
 			list(

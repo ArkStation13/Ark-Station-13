@@ -514,7 +514,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	return OXYLOSS
 
 /obj/item/bambostaff
-	name = "Bamboo Staff"
+	name = "bamboo staff"
 	desc = "A long bamboo-made staff with steel-capped ends. It is rumoured that initiates of Spider Clan train with such before getting to learn how to use a katana."
 	force = 10
 	block_chance = 45
@@ -534,6 +534,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/bambostaff/Initialize(mapload)
 	. = ..()
+	// there are too many puns to choose from. ('Bo' is the 'real' name for this kind of weapon.)
+	name = pick("bamboo staff", "bambo staff", "bam-Bo staff", "bam boo staff", "bam-boo staff", "bam Bo", "bambo", "bam-Bo", "bamboo-Bo")
 	AddComponent(/datum/component/two_handed, \
 		force_unwielded = 10, \
 		force_wielded = 14, \
@@ -908,14 +910,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	if(homerun_ready)
 		user.visible_message(span_userdanger("It's a home run!"))
 		if(!QDELETED(target))
-			target.throw_at(throw_target, rand(8,10), 14, user, spin = FALSE) // ARK STATION EDIT || spin = FALSE
+			target.throw_at(throw_target, rand(8,10), 14, user)
 		SSexplosions.medturf += throw_target
 		playsound(get_turf(src), 'sound/items/weapons/homerun.ogg', 100, TRUE)
 		homerun_ready = FALSE
 		return
 	else if(!QDELETED(target) && !target.anchored)
 		var/whack_speed = (prob(60) ? 1 : 4)
-		target.throw_at(throw_target, rand(1, 2), whack_speed, user, gentle = TRUE, spin = FALSE) // sorry friends, 7 speed batting caused wounds to absolutely delete whoever you knocked your target into (and said target) // ARK STATION EDIT || spin = FALSE
+		target.throw_at(throw_target, rand(1, 2), whack_speed, user, gentle = TRUE) // sorry friends, 7 speed batting caused wounds to absolutely delete whoever you knocked your target into (and said target)
 
 /obj/item/melee/baseball_bat/Destroy(force)
 	for(var/target in thrown_datums)
@@ -1169,7 +1171,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	if(attack_type == PROJECTILE_ATTACK)
 		if(HAS_TRAIT(src, TRAIT_WIELDED) || prob(final_block_chance))
 			owner.visible_message(span_danger("[owner] deflects [attack_text] with [src]!"))
-			playsound(src, pick('sound/items/weapons/bulletflyby.ogg', 'sound/items/weapons/bulletflyby2.ogg', 'sound/items/weapons/bulletflyby3.ogg'), 75, TRUE)
+			playsound(src, SFX_BULLET_MISS, 75, TRUE)
 			return TRUE
 		return FALSE
 	if(prob(final_block_chance * (HAS_TRAIT(src, TRAIT_WIELDED) ? 2 : 1)))

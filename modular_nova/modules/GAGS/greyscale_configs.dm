@@ -882,7 +882,7 @@
 
 /datum/greyscale_config/overalls/worn/better_vox
 	name = "Overalls (Worn, Better Vox)"
-	icon_file = 'modular_nova/master_files/icons/mob/clothing/species/vox/suit.dmi'
+	icon_file = 'modular_nova/modules/better_vox/icons/clothing/suit.dmi'
 
 // URBAN COAT
 

@@ -44,3 +44,16 @@
 		else
 			if(time_to_sleep)
 				deltimer(time_to_sleep)
+
+/// Прок пермасна (Вырезан на оффах)
+/mob/living/proc/PermaSleeping()
+	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, -1) & COMPONENT_NO_STUN)
+		return
+	if(HAS_TRAIT(src, TRAIT_GODMODE))
+		return
+	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
+	if(S)
+		S.duration = -1
+	else
+		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, -1)
+	return S
