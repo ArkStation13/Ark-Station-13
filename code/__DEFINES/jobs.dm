@@ -224,7 +224,7 @@
 #define DEPARTMENT_BITFLAG_SERVICE (1<<2)
 #define DEPARTMENT_SERVICE "Donk Corporation" // ARK STATION EDIT || Service
 #define DEPARTMENT_BITFLAG_CARGO (1<<3)
-#define DEPARTMENT_CARGO "Atlas & Nanotrasen" // ARK STATION EDIT || Cargo
+#define DEPARTMENT_CARGO "Atlas and Nanotrasen" // ARK STATION EDIT || Cargo
 #define DEPARTMENT_BITFLAG_ENGINEERING (1<<4)
 #define DEPARTMENT_ENGINEERING "Global Solar Energy" // ARK STATION EDIT || Engineering
 #define DEPARTMENT_BITFLAG_SCIENCE (1<<5)

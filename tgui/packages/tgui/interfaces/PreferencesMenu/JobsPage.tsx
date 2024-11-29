@@ -423,16 +423,16 @@ export const JobsPage = () => {
             <Stack.Item mr={1}>
               <PriorityHeaders />
 
-              <Department department="Ark Command" /* Ark Station Edit */>
+              <Department department="Ark Commander" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Donk Co." /* Ark Station Edit */>
+              <Department department="Donk Corporation" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
               <Department
-                department="Atlas & Nanotrasen" /* Ark Station Edit */
+                department="Atlas and Nanotrasen" /* Ark Station Edit */
               />
             </Stack.Item>
 
