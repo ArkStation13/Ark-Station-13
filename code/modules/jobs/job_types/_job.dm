@@ -136,6 +136,9 @@
 	/// Minimal character age for this job
 	var/required_character_age
 
+	/// For jobs like AI or Prisoner. If you do not want for role to be spawn in common cryo
+	var/do_not_spawn_in_common_cryo = FALSE // ARK ADDITION
+
 
 /datum/job/New()
 	. = ..()

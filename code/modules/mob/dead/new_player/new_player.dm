@@ -216,9 +216,13 @@
 	transfer_character()
 
 	SSjob.equip_rank(character, job, character.client)
-	// job.after_latejoin_spawn(character) ARK STATION REMOVED
-	var/atom/spawn_point = pick(GLOB.valid_for_spawn_cryopods) // ARK STATION ADDITION
-	spawn_point.join_player_here(character) // ARK STATION EDIT
+	// ARK STATION CHANGE START
+	if(job.do_not_spawn_in_common_cryo) // Check if we want to spawn it in station common cryo
+		job.after_latejoin_spawn(character) // If no - proceed job custom spawn parameters
+	if(!job.do_not_spawn_in_common_cryo) // If it's casual worker, spawn him in cryo
+		var/atom/spawn_point = pick(GLOB.valid_for_spawn_cryopods)
+		spawn_point.join_player_here(character)
+	// ARK STATION CHANGE END
 
 	#define IS_NOT_CAPTAIN 0
 	#define IS_ACTING_CAPTAIN 1
