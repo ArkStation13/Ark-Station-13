@@ -177,7 +177,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/neutral{
@@ -6161,7 +6160,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -7827,8 +7825,8 @@
 "cId" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "rdgene2";
+	dir = 1;
+	id = "rdgene";
 	name = "Genetics Lab Shutters"
 	},
 /turf/open/floor/plating,
@@ -8092,13 +8090,6 @@
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron/white,
 /area/station/medical/psychology)
-"cNi" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/duct,
-/turf/open/floor/iron/cafeteria,
-/area/station/service/kitchen)
 "cNk" = (
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
@@ -21188,13 +21179,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/space/nearstation)
-"hnv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/bar{
-	dir = 1
-	},
-/turf/open/floor/iron/cafeteria,
-/area/station/service/kitchen)
 "hnG" = (
 /obj/machinery/door/poddoor{
 	id = "Secure Storage";
@@ -21315,7 +21299,6 @@
 "hqM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/hangover,
 /obj/machinery/duct,
 /obj/effect/turf_decal/tile/neutral{
@@ -24685,7 +24668,6 @@
 "itg" = (
 /obj/effect/landmark/event_spawn,
 /obj/effect/turf_decal/tile/bar,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "itn" = (
@@ -25813,15 +25795,6 @@
 /obj/effect/mapping_helpers/mail_sorting/security/detectives_office,
 /turf/open/floor/iron,
 /area/station/security/brig)
-"iMr" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "chem_lockdown";
-	name = "Chemistry Shutters"
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/medical/chemistry)
 "iMs" = (
 /obj/effect/turf_decal/trimline/red/filled/corner{
 	dir = 4
@@ -34995,7 +34968,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "lPi" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -35603,7 +35575,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "mam" = (
@@ -37140,13 +37111,12 @@
 /turf/open/floor/iron,
 /area/station/security/prison/work)
 "mzL" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
 /obj/machinery/door/poddoor/shutters{
-	dir = 4;
 	id = "visitation";
 	name = "Visitation Shutters"
 	},
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/security/prison/visit)
 "mzR" = (
@@ -38141,7 +38111,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/smartfridge/drying,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/trimline/brown/warning{
@@ -44063,13 +44032,12 @@
 /area/station/engineering/supermatter)
 "oNy" = (
 /obj/machinery/smartfridge/chemistry/preloaded,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/yellow/full,
 /obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
 	id = "chem_lockdown";
 	name = "Chemistry Shutters"
 	},
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/tile/yellow/full,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/chemistry)
 "oNP" = (
@@ -44968,7 +44936,6 @@
 /area/station/command/heads_quarters/captain/private)
 "pem" = (
 /obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "peF" = (
@@ -45460,7 +45427,6 @@
 /obj/machinery/light_switch/directional/west{
 	pixel_y = 26
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
@@ -46123,11 +46089,6 @@
 /area/station/security/brig)
 "pyM" = (
 /obj/structure/cable,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "chem_lockdown";
-	name = "Chemistry Shutters"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/research/glass{
@@ -46136,6 +46097,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/chemistry,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "chem_lockdown";
+	name = "Chemistry Shutters"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "pyP" = (
@@ -46855,7 +46820,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
 	id = "chem_lockdown";
 	name = "Chemistry Shutters"
 	},
@@ -53442,11 +53406,6 @@
 "rQl" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "rdgene2";
-	name = "Genetics Lab Shutters"
-	},
 /obj/machinery/door/window/left/directional/east{
 	name = "Genetics Desk";
 	req_access = list("genetics")
@@ -53454,6 +53413,11 @@
 /obj/item/folder,
 /obj/item/pen,
 /obj/effect/turf_decal/tile/purple/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "rdgene";
+	name = "Genetics Lab Shutters"
+	},
 /turf/open/floor/iron,
 /area/station/science/genetics)
 "rQr" = (
@@ -53640,7 +53604,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
 "rTQ" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -56045,15 +56008,6 @@
 	},
 /turf/open/floor/grass,
 /area/station/service/chapel/monastery)
-"sIG" = (
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
-	id = "pharmacy_shutters";
-	name = "Pharmacy Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/medical/pharmacy)
 "sIO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -56168,7 +56122,6 @@
 "sLp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -60141,15 +60094,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private)
-"tZJ" = (
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
-	id = "pharmacy_shutters_2";
-	name = "Pharmacy Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/medical/pharmacy)
 "tZL" = (
 /obj/machinery/light_switch/directional/east,
 /obj/structure/easel,
@@ -63736,16 +63680,16 @@
 	pixel_y = -3
 	},
 /obj/item/pen,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
-	id = "pharmacy_shutters_2";
-	name = "Pharmacy Shutters"
-	},
 /obj/machinery/door/window/right/directional/east{
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy")
 	},
 /obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "pharmacy_shutters";
+	name = "Pharmacy Shutters"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "vjZ" = (
@@ -65566,7 +65510,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -72985,15 +72928,6 @@
 /obj/machinery/computer/security/telescreen/rd/directional/north,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
-"yfg" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "chem_lockdown";
-	name = "Chemistry Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/medical/chemistry)
 "yfi" = (
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -96678,13 +96612,13 @@ pKP
 pKP
 bqX
 bqX
-yfg
-yfg
-yfg
-yfg
-yfg
+lrZ
+lrZ
+lrZ
+lrZ
+lrZ
 bqX
-iMr
+lrZ
 pyM
 oNy
 bqX
@@ -100011,9 +99945,9 @@ qJn
 hYA
 jsh
 rvE
-tZJ
+hEc
 vjX
-tZJ
+hEc
 eIO
 wKC
 fvE
@@ -100263,9 +100197,9 @@ uBI
 uBI
 mTk
 rvE
-sIG
+hEc
 rvE
-sIG
+hEc
 rvE
 rvE
 sgc
@@ -108469,7 +108403,7 @@ pmA
 mal
 ccc
 hqM
-cNi
+xzj
 xzj
 vMb
 adG
@@ -110265,7 +110199,7 @@ ogb
 uhW
 eSC
 obG
-hnv
+jXE
 jzT
 ivy
 ebK

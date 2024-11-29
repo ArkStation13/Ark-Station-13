@@ -10,6 +10,7 @@
 	worn_icon_state = "p90"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	accepted_magazine_type = /obj/item/ammo_box/magazine/p90
+	weapon_weight = WEAPON_HEAVY
 	can_suppress = FALSE
 	fire_delay = 1
 	burst_size = 1

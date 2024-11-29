@@ -10,6 +10,7 @@
 	worn_icon_state = "mp40"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	accepted_magazine_type = /obj/item/ammo_box/magazine/mp40
+	weapon_weight = WEAPON_HEAVY
 	can_suppress = FALSE
 	burst_size = 1
 	fire_delay = 1.7

@@ -9,8 +9,8 @@
 	worn_icon = 'modularz_arkstation/modules/guns/icons/guns/gunsgalore_back.dmi'
 	worn_icon_state = "scar"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
-	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
 	accepted_magazine_type = /obj/item/ammo_box/magazine/scar
 	can_suppress = FALSE
 	fire_delay = 2.4

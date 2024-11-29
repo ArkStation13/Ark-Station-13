@@ -15,6 +15,12 @@
 	name = "Mouse (Alt)"
 	icon_state = "mouse"
 
+/datum/sprite_accessory/snouts/mammal/ark/fox_alt
+	name = "Fox Alt 2"
+	icon = 'modularz_arkstation/modules/new-accessories/snouts.dmi'
+	icon_state = "lcanidstripealt"
+
+
 /*
  * ACRADORS
  */
