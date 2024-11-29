@@ -20,6 +20,8 @@
 	var/obj/item/stock_parts/power_store/cell
 	///Can we support a cell?
 	var/cell_connectors = TRUE
+	///ARK STATION
+	var/pixel_shift = 32
 
 /datum/armor/structure_light_construct
 	melee = 50
@@ -148,6 +150,18 @@
 					if("bulb")
 						new_light = new /obj/machinery/light/small/built(loc)
 				new_light.setDir(dir)
+// ARK STATION ADD START
+				if(pixel_shift)
+					switch(dir)
+						if(NORTH)
+							new_light.pixel_y = pixel_shift
+						if(SOUTH)
+							new_light.pixel_y = -pixel_shift
+						if(EAST)
+							new_light.pixel_x = pixel_shift
+						if(WEST)
+							new_light.pixel_x = -pixel_shift
+// ARK STATION ADD END
 				transfer_fingerprints_to(new_light)
 				if(!QDELETED(cell))
 					new_light.cell = cell
