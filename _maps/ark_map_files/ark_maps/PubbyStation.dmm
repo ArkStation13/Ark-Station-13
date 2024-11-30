@@ -31559,6 +31559,9 @@
 /obj/effect/turf_decal/trimline/green/line{
 	dir = 4
 	},
+/obj/machinery/surgery_sign/directional/east{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/central)
 "eta" = (
@@ -33337,6 +33340,9 @@
 	},
 /obj/effect/turf_decal/trimline/green/line{
 	dir = 8
+	},
+/obj/machinery/surgery_sign/directional/west{
+	id = "surgery1"
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/theatre)
@@ -39080,6 +39086,9 @@
 	dir = 8
 	},
 /obj/structure/sink/directional/east,
+/obj/machinery/button/surgery/directional/west{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/theatre)
 "kzG" = (
@@ -49403,7 +49412,9 @@
 /obj/structure/table/reinforced,
 /obj/item/toy/figure/mechanic,
 /obj/item/paper_bin,
-/obj/machinery/door/window/brigdoor/right/directional/east,
+/obj/machinery/door/window/brigdoor/right/directional/east{
+	req_access = list("engineering")
+	},
 /turf/open/floor/iron,
 /area/station/engineering/mechanic)
 "ssU" = (

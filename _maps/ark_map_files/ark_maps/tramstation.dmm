@@ -3277,7 +3277,7 @@
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},
-/obj/machinery/computer/security/telescreen/engine,
+/obj/machinery/computer/security/telescreen/engine/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "arV" = (
@@ -4211,6 +4211,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/minisat/directional/south,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "aCa" = (
@@ -24650,6 +24651,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/surgery_sign/directional/east{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "hss" = (
@@ -24881,10 +24885,6 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
-"hwG" = (
-/obj/machinery/computer/security/telescreen/engine,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/ce)
 "hwM" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/requests_console/directional/west{
@@ -25314,6 +25314,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/surgery_sign/directional/west{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "hFL" = (
@@ -33747,10 +33750,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/service/chapel/monastery)
-"kuV" = (
-/obj/machinery/computer/security/telescreen/rd,
-/turf/closed/wall/r_wall,
-/area/station/science/server)
 "kuX" = (
 /obj/structure/closet/radiation,
 /obj/effect/turf_decal/bot,
@@ -38137,10 +38136,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
-"lOt" = (
-/obj/machinery/computer/security/telescreen/minisat,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/captain)
 "lOv" = (
 /obj/structure/chair{
 	name = "Defense"
@@ -38672,10 +38667,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
-"lVF" = (
-/obj/machinery/computer/security/telescreen/cmo,
-/turf/closed/wall/r_wall,
-/area/station/maintenance/department/crew_quarters/dorms)
 "lVJ" = (
 /obj/machinery/disposal/bin,
 /obj/machinery/firealarm/directional/north,
@@ -38724,6 +38715,9 @@
 	pixel_y = -9
 	},
 /obj/machinery/newscaster/directional/north,
+/obj/machinery/button/surgery/directional/east{
+	id = "surgery2"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "lWv" = (
@@ -43053,6 +43047,7 @@
 /area/station/medical/chemistry)
 "nwE" = (
 /obj/machinery/pdapainter/research,
+/obj/machinery/computer/security/telescreen/rd/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/command/heads_quarters/rd)
 "nwI" = (
@@ -43906,7 +43901,6 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/ordnance,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -47262,10 +47256,6 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/checker,
 /area/station/commons/lounge)
-"paW" = (
-/obj/machinery/computer/security/telescreen/ce,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/ce)
 "pbo" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -51433,6 +51423,7 @@
 "qsJ" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/table,
+/obj/machinery/computer/security/telescreen/ordnance,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "qsP" = (
@@ -55327,7 +55318,9 @@
 /obj/structure/table/reinforced,
 /obj/item/toy/figure/mechanic,
 /obj/item/paper_bin,
-/obj/machinery/door/window/brigdoor/right/directional/north,
+/obj/machinery/door/window/brigdoor/right/directional/north{
+	req_access = list("engineering")
+	},
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/mechanic)
@@ -56632,6 +56625,9 @@
 /obj/machinery/light_switch/directional/east{
 	pixel_x = 22;
 	pixel_y = -9
+	},
+/obj/machinery/button/surgery/directional/east{
+	id = "surgery1"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
@@ -59666,6 +59662,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/cmo/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "tgB" = (
@@ -62002,6 +61999,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/surgery_sign/directional/east{
+	id = "surgery2"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "tTW" = (
@@ -62270,6 +62270,7 @@
 	},
 /obj/item/clipboard,
 /obj/item/paper/monitorkey,
+/obj/machinery/computer/security/telescreen/ce/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "tYg" = (
@@ -63772,6 +63773,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/surgery_sign/directional/west{
+	id = "surgery2"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "uwf" = (
@@ -68514,6 +68518,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/vault/directional/north,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "vTI" = (
@@ -68922,10 +68927,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/tram/center)
-"wcj" = (
-/obj/machinery/computer/security/telescreen/vault,
-/turf/closed/wall,
-/area/station/command/heads_quarters/qm)
 "wcl" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -72690,6 +72691,7 @@
 /obj/machinery/modular_computer/preset/engineering{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/engine/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "xyk" = (
@@ -106147,7 +106149,7 @@ sHH
 tcO
 obz
 tcO
-paW
+sHH
 sHH
 ccX
 bvI
@@ -106921,7 +106923,7 @@ vRv
 bDf
 ubt
 xyd
-hwG
+sHH
 viW
 qHs
 jPt
@@ -161874,7 +161876,7 @@ cvf
 iUw
 moq
 aBZ
-lOt
+xEo
 aCE
 aCS
 pIl
@@ -169880,7 +169882,7 @@ hsh
 gnM
 apC
 abM
-lVF
+mBq
 tgw
 kHy
 fxM
@@ -184226,7 +184228,7 @@ uax
 uax
 uax
 mur
-wcj
+qza
 vTH
 aAJ
 riJ
@@ -186586,7 +186588,7 @@ tes
 kye
 kye
 nwE
-kuV
+pbH
 mAL
 nKU
 qVr
