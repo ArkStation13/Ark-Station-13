@@ -1686,6 +1686,9 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/machinery/surgery_sign/directional/north{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "asH" = (
@@ -16473,6 +16476,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/green/filled/warning,
+/obj/machinery/surgery_sign/directional/south{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "dWe" = (
@@ -17364,12 +17370,14 @@
 /area/station/cargo/storage)
 "eif" = (
 /obj/item/kirbyplants/random,
-/obj/machinery/firealarm/directional/north,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 9
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/button/surgery/directional/north{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "eio" = (
@@ -40944,8 +40952,7 @@
 /area/station/medical/treatment_center)
 "jRK" = (
 /obj/machinery/door/airlock/church{
-	name = "Toilet";
-	id = "Toilet12"
+	name = "Toilet"
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
@@ -48161,6 +48168,9 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
 	},
+/obj/machinery/surgery_sign/directional/north{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "lHu" = (
@@ -48616,6 +48626,7 @@
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/vending/wallmed/directional/south,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/theatre)
 "lLU" = (
@@ -51289,6 +51300,9 @@
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/green/filled/warning,
+/obj/machinery/surgery_sign/directional/south{
+	id = "surgery1"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "mwW" = (
@@ -73179,13 +73193,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
-"rRu" = (
-/obj/machinery/door/airlock/church{
-	name = "Toilet";
-	id = "Toilet11"
-	},
-/turf/open/floor/iron/dark,
-/area/station/service/chapel/monastery)
 "rRz" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
@@ -148322,7 +148329,7 @@ qMf
 npp
 gpY
 rcY
-rRu
+jRK
 rcY
 dNf
 uMj
