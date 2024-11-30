@@ -62,7 +62,7 @@
 	)
 	fauna_density = 4
 	fauna_types = list(
-		SPAWN_MEGAFAUNA = 2, // Не работает
+		// SPAWN_MEGAFAUNA = 2, // Не работает
 		/mob/living/simple_animal/hostile/megafauna/bubblegum = 1, // Костыль
 		/mob/living/simple_animal/hostile/megafauna/colossus = 2, // Костыль
 		/mob/living/simple_animal/hostile/megafauna/dragon = 2, // Костыль
@@ -168,7 +168,7 @@
 	// )
 	fauna_density = 4
 	fauna_types = list(
-		SPAWN_MEGAFAUNA = 2, // Не работает
+		// SPAWN_MEGAFAUNA = 2, // Не работает
 		/mob/living/simple_animal/hostile/megafauna/bubblegum = 1, // Костыль
 		/mob/living/simple_animal/hostile/megafauna/colossus = 2, // Костыль
 		/mob/living/simple_animal/hostile/megafauna/dragon = 2, // Костыль
