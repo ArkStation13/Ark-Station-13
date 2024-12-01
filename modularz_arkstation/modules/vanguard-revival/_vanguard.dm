@@ -16,7 +16,7 @@
 	plasmaman_outfit = /datum/outfit/plasmaman/mining
 
 	paycheck = PAYCHECK_CREW
-	paycheck_department = ACCOUNT_SCI
+	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_EXP_CORPS
 	bounty_types = CIV_JOB_SCI

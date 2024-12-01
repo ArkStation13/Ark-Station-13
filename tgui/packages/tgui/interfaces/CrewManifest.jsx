@@ -12,6 +12,7 @@ const commandJobs = [
   'Medtech Curator', // ARK STATION EDIT
   'Quartermaster',
   'Consul of the Solar Federation', // NOVA EDIT ADDITION // ARK STATION EDIT
+  'Priest of Neo-Vatican',
 ];
 
 export const CrewManifest = (props) => {
@@ -58,8 +59,8 @@ export const CrewManifest = (props) => {
                         <Icon className="CrewManifest__Icon" name="infinity" />
                       </Tooltip>
                     )}
-                    {crewMember.trim === 'Captain' && (
-                      <Tooltip content="Captain" position="bottom">
+                    {crewMember.trim === 'Ark Commander' && (
+                      <Tooltip content="Ark Commander" position="bottom">
                         <Icon
                           className={classes([
                             'CrewManifest__Icon',
