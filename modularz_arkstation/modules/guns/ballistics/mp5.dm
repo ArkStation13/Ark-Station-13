@@ -28,13 +28,34 @@
 /obj/item/gun/ballistic/automatic/mp5/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, CARGO_COMPANY_INTEQ_WEAPONS)
 
+// Caliber
+/obj/item/ammo_casing/c385
+	name = ".385 bullet casing"
+	desc = "A .385 bullet casing."
+	caliber = ".385"
+	projectile_type = /obj/projectile/bullet/c385
+
+/obj/projectile/bullet/c385
+	name = ".385 bullet"
+	damage = 15
+	ricochets_max = 2
+	ricochet_chance = 50
+	ricochet_auto_aim_angle = 10
+	ricochet_auto_aim_range = 3
+	wound_bonus = -20
+	bare_wound_bonus = 10
+	embed_type = /datum/embed_data/bullet_c38
+	embed_falloff_tile = -4
+//
+
 /obj/item/ammo_box/magazine/mp5
 	name = "\improper SPG-Q-5 magazine"
+	desc = "Magazine with .385 caliber cartridges. Suitable for SPG-Q-5."
 	icon = 'modularz_arkstation/modules/guns/icons/guns/gunsgalore_items.dmi'
 	icon_state = "mp5"
-	ammo_type = /obj/item/ammo_casing/c38
-	caliber = "c34acp"
-	max_ammo = 50
+	ammo_type = /obj/item/ammo_casing/c385
+	caliber = ".385"
+	max_ammo = 25
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /// InteQ Bizon
@@ -60,11 +81,12 @@
 
 /obj/item/ammo_box/magazine/bison
 	name = "\improper SPG-X-19 Bizon magazine"
+	desc = "Magazine with .385 caliber cartridges. Suitable for Bizon."
 	icon = 'modularz_arkstation/modules/guns/icons/guns/gunsgalore_items.dmi'
 	icon_state = "p90"
-	ammo_type = /obj/item/ammo_casing/c38
-	caliber = "c34acp"
-	max_ammo = 64
+	ammo_type = /obj/item/ammo_casing/c385
+	caliber = ".385"
+	max_ammo = 50
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /// NRI Bizon

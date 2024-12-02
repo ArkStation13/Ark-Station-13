@@ -12,7 +12,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/p90
 	weapon_weight = WEAPON_HEAVY
 	can_suppress = FALSE
-	fire_delay = 1
+	fire_delay = 2
 	burst_size = 1
 	fire_sound = 'modularz_arkstation/modules/guns/sound/guns/fire/p90_fire.ogg'
 	fire_sound_volume = 100
@@ -32,7 +32,7 @@
 	name = "\improper SPG-Q-90 magazine"
 	icon = 'modularz_arkstation/modules/guns/icons/guns/gunsgalore_items.dmi'
 	icon_state = "p90"
-	ammo_type = /obj/item/ammo_casing/c38
-	caliber = "c34acp"
-	max_ammo = 50
+	ammo_type = /obj/item/ammo_casing/c385
+	caliber = ".385"
+	max_ammo = 45
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
