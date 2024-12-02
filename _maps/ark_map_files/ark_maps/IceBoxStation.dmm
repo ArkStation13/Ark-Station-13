@@ -5151,7 +5151,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/structure/chair/stool/directional/north,
+/obj/structure/chair{
+	dir = 1
+	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/qm)
 "bAk" = (
@@ -13263,6 +13265,19 @@
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
+"dPY" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/green/filled/warning{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/aft)
 "dQd" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance"
@@ -18627,9 +18642,12 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 8
+	},
+/obj/machinery/light_switch/directional/south{
+	pixel_x = -21;
+	pixel_y = -25
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
@@ -36920,6 +36938,10 @@
 	dir = 1
 	},
 /area/station/service/chapel/office)
+"kTm" = (
+/obj/machinery/holopad,
+/turf/open/floor/carpet,
+/area/station/command/heads_quarters/qm)
 "kTz" = (
 /turf/open/floor/iron/smooth_half,
 /area/station/security/brig/upper)
@@ -41209,6 +41231,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "mjI" = (
@@ -45052,6 +45075,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "nqn" = (
@@ -54433,9 +54457,11 @@
 /area/station/maintenance/starboard/fore)
 "qaU" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 1
+	},
+/obj/machinery/light_switch/directional/north{
+	pixel_x = -23
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
@@ -58565,19 +58591,6 @@
 "rkL" = (
 /turf/open/floor/carpet/blue,
 /area/station/medical/psychology)
-"rkM" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/green/filled/warning{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/aft)
 "rkN" = (
 /turf/closed/wall,
 /area/station/engineering/atmos/hfr_room)
@@ -61837,6 +61850,7 @@
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/requests_console/ore_update,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "skx" = (
@@ -76760,7 +76774,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/holopad,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -234253,7 +234266,7 @@ alT
 dcs
 kin
 dsU
-alT
+kTm
 lbg
 ikO
 ikd
@@ -253036,11 +253049,11 @@ tVB
 klc
 sHd
 jih
-rkM
+dPY
 eHU
 iYs
 eHU
-rkM
+dPY
 eHU
 pko
 gsT
