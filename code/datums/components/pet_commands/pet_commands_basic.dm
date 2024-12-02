@@ -9,7 +9,7 @@
 	command_desc = "Command your pet to stay idle in this location."
 	radial_icon = 'icons/obj/bed.dmi'
 	radial_icon_state = "dogbed"
-	speech_commands = list("sit", "stay", "stop")
+	speech_commands = list("сидеть", "стой тут", "стоп") // ARK STATION EDIT
 	command_feedback = "sits"
 
 /datum/pet_command/idle/execute_action(datum/ai_controller/controller)
@@ -24,7 +24,7 @@
 	command_desc = "Allow your pet to resume its natural behaviours."
 	radial_icon = 'icons/mob/actions/actions_spells.dmi'
 	radial_icon_state = "repulse"
-	speech_commands = list("free", "loose")
+	speech_commands = list("свободен", "потеряйся") // ARK STATION EDIT
 	command_feedback = "relaxes"
 
 /datum/pet_command/free/execute_action(datum/ai_controller/controller)
@@ -40,7 +40,7 @@
 	command_desc = "Command your pet to accompany you."
 	radial_icon = 'icons/testing/turf_analysis.dmi'
 	radial_icon_state = "red_arrow"
-	speech_commands = list("heel", "follow")
+	speech_commands = list("к ноге", "за мной") // ARK STATION EDIT
 	callout_type = /datum/callout_option/move
 	///the behavior we use to follow
 	var/follow_behavior = /datum/ai_behavior/pet_follow_friend
@@ -62,7 +62,7 @@
 	command_desc = "Play a macabre trick."
 	radial_icon = 'icons/mob/simple/pets.dmi'
 	radial_icon_state = "puppy_dead"
-	speech_commands = list("play dead") // Don't get too creative here, people talk about dying pretty often
+	speech_commands = list("прикинься мертвым") // Don't get too creative here, people talk about dying pretty often // ARK STATION EDIT
 
 /datum/pet_command/play_dead/execute_action(datum/ai_controller/controller)
 	controller.queue_behavior(/datum/ai_behavior/play_dead)
@@ -79,13 +79,13 @@
 
 /datum/pet_command/good_boy/New(mob/living/parent)
 	. = ..()
-	speech_commands += "good [parent.name]"
+	speech_commands += "хороший [parent.name]" // ARK STATION EDIT
 	switch (parent.gender)
 		if (MALE)
-			speech_commands += "good boy"
+			speech_commands += "хороший мальчик" // ARK STATION EDIT
 			return
 		if (FEMALE)
-			speech_commands += "good girl"
+			speech_commands += "хорошая девочка" // ARK STATION EDIT
 			return
 	// If we get past this point someone has finally added a non-binary dog
 
@@ -126,7 +126,7 @@
 	radial_icon_state = "bite"
 
 	callout_type = /datum/callout_option/attack
-	speech_commands = list("attack", "sic", "kill")
+	speech_commands = list("в атаку", "фас", "убить") // ARK STATION EDIT
 	command_feedback = "growl"
 	pointed_reaction = "and growls"
 	/// Balloon alert to display if providing an invalid target
@@ -167,7 +167,7 @@
 	command_desc = "Command your pet to attempt to breed with a partner."
 	radial_icon = 'icons/mob/simple/animal.dmi'
 	radial_icon_state = "heart"
-	speech_commands = list("breed", "consummate")
+	speech_commands = list("трахайтесь", "размножайтесь") // ARK STATION EDIT
 	var/datum/ai_behavior/reproduce_behavior = /datum/ai_behavior/make_babies
 
 /datum/pet_command/point_targeting/breed/set_command_target(mob/living/parent, atom/target)
@@ -199,7 +199,7 @@
 	command_desc = "Command your pet to use one of its special skills on something that you point out to it."
 	radial_icon = 'icons/mob/actions/actions_spells.dmi'
 	radial_icon_state = "projectile"
-	speech_commands = list("shoot", "blast", "cast")
+	speech_commands = list("стреляй", "пуляй", "кастуй") // ARK STATION EDIT
 	command_feedback = "growl"
 	pointed_reaction = "and growls"
 	/// Blackboard key where a reference to some kind of mob ability is stored
@@ -283,7 +283,7 @@
 	command_desc = "Command your pet to try fishing at a nearby fishing spot."
 	radial_icon = 'icons/obj/aquarium/fish.dmi'
 	radial_icon_state = "goldfish"
-	speech_commands = list("fish")
+	speech_commands = list("рыба") // ARK STATION EDIT
 
 // Refuse to target things we can't target, chiefly other friends
 /datum/pet_command/point_targeting/fish/set_command_target(mob/living/parent, atom/target)
