@@ -175,6 +175,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "aaO" = (
@@ -424,7 +425,7 @@
 	name = "AI Intercom";
 	pixel_y = -40
 	},
-/obj/structure/cable/multilayer/connected,
+/obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "acr" = (
@@ -472,6 +473,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "acD" = (
@@ -1540,10 +1542,10 @@
 	department = "AI";
 	name = "AI Satellite Requests Console"
 	},
-/obj/structure/cable/multilayer/connected,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "agh" = (
@@ -1642,6 +1644,7 @@
 /obj/machinery/light/small/directional/west,
 /obj/structure/sign/warning/vacuum/external/directional/east,
 /obj/structure/sign/warning/vacuum/external/directional/west,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "agE" = (
@@ -1698,6 +1701,7 @@
 	cycle_id = "ai-sat-entrance"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/minisat,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "agS" = (
@@ -1790,12 +1794,13 @@
 /turf/closed/wall,
 /area/station/security/prison/safe)
 "ahr" = (
-/obj/structure/lattice,
 /obj/machinery/camera/directional/north{
 	c_tag = "MiniSat Entrance";
 	network = list("minisat")
 	},
-/turf/open/space,
+/obj/structure/lattice/catwalk,
+/obj/structure/cable,
+/turf/open/space/basic,
 /area/space/nearstation)
 "ahs" = (
 /obj/structure/lattice/catwalk,
@@ -8297,6 +8302,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/science/ordnance/testlab)
 "aEs" = (
@@ -19637,6 +19643,7 @@
 	dir = 1
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "bBM" = (
@@ -20215,6 +20222,7 @@
 /area/station/science/ordnance)
 "bEd" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
 "bEf" = (
@@ -21268,6 +21276,7 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/testlab)
 "bJZ" = (
@@ -24357,6 +24366,7 @@
 	name = "AI Core"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/minisat,
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/ai_monitored/turret_protected/ai)
 "bXi" = (
@@ -38843,6 +38853,7 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "kqc" = (
@@ -43874,6 +43885,14 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/hallway/primary/central/fore)
+"ooU" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/showcase/cyborg/old{
+	pixel_y = 20
+	},
+/obj/structure/cable,
+/turf/open/space,
+/area/space/nearstation)
 "ops" = (
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
@@ -45910,10 +45929,11 @@
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "pNy" = (
-/obj/machinery/atmospherics/components/binary/tank_compressor{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/light/directional/north,
+/obj/machinery/atmospherics/components/binary/tank_compressor{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "pNZ" = (
@@ -46661,6 +46681,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
+"qoV" = (
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/station/ai_monitored/turret_protected/aisat_interior)
 "qph" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -49403,7 +49427,9 @@
 /obj/structure/table/reinforced,
 /obj/item/toy/figure/mechanic,
 /obj/item/paper_bin,
-/obj/machinery/door/window/brigdoor/right/directional/east,
+/obj/machinery/door/window/brigdoor/right/directional/east{
+	req_access = list("engineering")
+	},
 /turf/open/floor/iron,
 /area/station/engineering/mechanic)
 "ssU" = (
@@ -56196,6 +56222,7 @@
 	dir = 1;
 	name = "Connector Port (Air Supply)"
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/engine,
 /area/station/science/ordnance)
 "xeB" = (
@@ -86183,7 +86210,7 @@ aaa
 aaa
 aaa
 aaa
-ahi
+iiy
 ahi
 aqG
 arD
@@ -86439,9 +86466,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+tBP
+tBP
+cdm
 aqG
 arE
 arA
@@ -86695,8 +86722,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+tBP
+tBP
 aht
 apS
 ala
@@ -86952,7 +86979,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+tBP
 aht
 apo
 abI
@@ -87208,8 +87235,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+tBP
+tBP
 alO
 aaa
 aaa
@@ -87464,8 +87491,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+tBP
+tBP
 anl
 aht
 aaa
@@ -87720,8 +87747,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+tBP
+tBP
 anl
 aaa
 aht
@@ -87977,7 +88004,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amA
 aht
 aht
@@ -88234,7 +88261,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amB
 aht
 aaa
@@ -88491,7 +88518,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -88748,7 +88775,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -89005,7 +89032,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aht
@@ -89262,7 +89289,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amB
 aht
 aaa
@@ -89519,7 +89546,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -89776,7 +89803,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -90033,7 +90060,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aht
@@ -90290,7 +90317,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -90547,7 +90574,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amB
 aht
 aaa
@@ -90792,11 +90819,11 @@ aeO
 aff
 afy
 afP
-agf
+qoV
 agR
 agD
 agR
-ahi
+iiy
 aaa
 aaa
 aaa
@@ -90804,7 +90831,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+tBP
 amC
 aht
 aaa
@@ -91053,15 +91080,15 @@ agg
 adX
 adX
 adX
-ahh
+ooU
+tBP
 aaa
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aht
+tBP
+tBP
 amD
 aht
 aaa
@@ -91312,12 +91339,12 @@ adX
 adX
 adX
 ahr
-aht
-aht
-aht
-aht
-aht
-aht
+tBP
+tBP
+tBP
+tBP
+tBP
+tBP
 alO
 aht
 aht

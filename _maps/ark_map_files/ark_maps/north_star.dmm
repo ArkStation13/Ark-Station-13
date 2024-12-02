@@ -7092,8 +7092,8 @@
 /area/station/service/library)
 "bMu" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
-/obj/machinery/computer/security/telescreen/rd,
 /obj/machinery/pdapainter/research,
+/obj/machinery/computer/security/telescreen/rd/directional/west,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
 "bMz" = (
@@ -22741,6 +22741,12 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/station/medical/office)
+"fYe" = (
+/obj/machinery/computer/security/telescreen{
+	name = "\improper Engine Waste Monitor"
+	},
+/turf/closed/wall/r_wall,
+/area/station/engineering/supermatter/waste)
 "fYf" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -31929,10 +31935,11 @@
 /area/station/maintenance/floor2/starboard/aft)
 "isp" = (
 /obj/machinery/computer/security/telescreen{
-	name = "\improper Engine Waste Monitor"
+	desc = "Used for the Auxiliary Mining Base.";
+	name = "Auxiliary Base Monitor"
 	},
-/turf/open/floor/engine,
-/area/station/engineering/supermatter/room)
+/turf/closed/wall,
+/area/station/construction/mining/aux_base)
 "isq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/landmark/navigate_destination/dockaux,
@@ -33057,7 +33064,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/interrogation,
+/obj/machinery/computer/security/telescreen/interrogation/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/interrogation)
 "iIm" = (
@@ -33384,10 +33391,10 @@
 	},
 /area/station/hallway/floor2/fore)
 "iNA" = (
-/obj/machinery/computer/security/telescreen/vault,
 /obj/machinery/computer/security{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/vault/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hop)
 "iNB" = (
@@ -36300,7 +36307,7 @@
 "jAe" = (
 /obj/effect/turf_decal/tile/green/opposingcorners,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/machinery/computer/security/telescreen/minisat,
+/obj/machinery/computer/security/telescreen/minisat/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/teleporter)
 "jAl" = (
@@ -40570,17 +40577,12 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
 "kFk" = (
-/obj/machinery/atmospherics/pipe/smart/simple/purple/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/computer/security/telescreen{
-	name = "\improper Engine Waste Monitor"
+	desc = "Used for watching the AI Upload.";
+	name = "AI Upload Monitor"
 	},
-/turf/open/floor/catwalk_floor/iron,
-/area/station/engineering/atmos/pumproom)
+/turf/closed/wall/r_wall,
+/area/station/ai_monitored/turret_protected/ai_upload_foyer)
 "kFp" = (
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 10
@@ -40918,9 +40920,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/computer/security/telescreen{
-	name = "\improper Engine Waste Monitor"
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/atmos/pumproom)
@@ -41187,10 +41186,6 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/spawner/random/aimodule/neutral{
 	pixel_x = 15
-	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the AI Upload.";
-	name = "AI Upload Monitor"
 	},
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload_foyer)
@@ -41850,13 +41845,13 @@
 /turf/open/floor/engine/hull,
 /area/space/nearstation)
 "kVs" = (
-/obj/machinery/computer/security/telescreen/minisat,
 /obj/machinery/camera/directional/south{
 	c_tag = "MiniSat Exterior Access";
 	network = list("minisat")
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm/directional/south,
+/obj/machinery/computer/security/telescreen/minisat/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat)
 "kVu" = (
@@ -48902,10 +48897,6 @@
 /turf/open/floor/wood/tile,
 /area/station/command/heads_quarters/captain)
 "mIV" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for the Auxiliary Mining Base.";
-	name = "Auxiliary Base Monitor"
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -67132,7 +67123,7 @@
 	name = "Private Channel"
 	},
 /obj/machinery/recharge_station,
-/obj/machinery/computer/security/telescreen/minisat,
+/obj/machinery/computer/security/telescreen/minisat/directional/east,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/aisat/service)
 "rxz" = (
@@ -71141,6 +71132,7 @@
 	name = "AI Upload turret control";
 	pixel_y = 28
 	},
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload_foyer)
 "sEA" = (
@@ -81803,7 +81795,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/ordnance,
 /obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver,
 /obj/structure/table,
 /obj/item/binoculars{
@@ -81813,6 +81804,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 5
 	},
+/obj/machinery/computer/security/telescreen/ordnance/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/storage)
 "vrh" = (
@@ -86420,7 +86412,6 @@
 /obj/effect/turf_decal/trimline/green/filled/corner{
 	dir = 8
 	},
-/obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload_foyer)
 "wye" = (
@@ -86538,9 +86529,11 @@
 /obj/item/toy/figure/mechanic,
 /obj/item/paper_bin,
 /obj/structure/cable,
-/obj/machinery/door/window/brigdoor/right/directional/east,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
+	},
+/obj/machinery/door/window/brigdoor/right/directional/east{
+	req_access = list("engineering")
 	},
 /turf/open/floor/wood,
 /area/station/engineering/mechanic)
@@ -109603,7 +109596,7 @@ hyN
 wBR
 pTR
 mIV
-wBR
+isp
 wBR
 wBR
 amK
@@ -139649,7 +139642,7 @@ tZD
 iMe
 xIL
 sAH
-sAH
+fYe
 fWf
 sAH
 sAH
@@ -140418,13 +140411,13 @@ hQy
 vmr
 vmr
 skj
-kFk
-sAH
+fLn
+fYe
 hhb
 gGt
 qEw
-sAH
-isp
+fYe
+xgW
 jSD
 ppd
 uyD
@@ -203137,7 +203130,7 @@ svu
 uZF
 uZF
 uZF
-nyE
+kFk
 hni
 nyE
 nyE

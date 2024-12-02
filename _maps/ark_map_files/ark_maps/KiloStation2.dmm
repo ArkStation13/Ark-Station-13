@@ -70163,7 +70163,9 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos/pumproom)
 "vVy" = (
-/obj/machinery/door/window/brigdoor/right/directional/west,
+/obj/machinery/door/window/brigdoor/right/directional/west{
+	req_access = list("engineering")
+	},
 /obj/structure/table/reinforced,
 /obj/structure/cable,
 /obj/item/paper_bin,
