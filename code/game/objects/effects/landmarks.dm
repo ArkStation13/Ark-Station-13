@@ -58,7 +58,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 // START LANDMARKS FOLLOW. Don't change the names unless
 // you are refactoring shitty landmark code.
 /obj/effect/landmark/start/assistant
-	name = JOB_ASSISTANT
+	name = "Colonist"
 	icon_state = "Assistant" //icon_state is case sensitive. why are all of these capitalized? because fuck you that's why // ARK STATION EDIT
 
 /obj/effect/landmark/start/assistant/override
@@ -81,7 +81,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Cargo Technician"
+	name = "Deck Worker"
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bitrunner
@@ -105,7 +105,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Quartermaster"
 
 /obj/effect/landmark/start/atmospheric_technician
-	name = "Atmospheric Technician"
+	name = "Life Support Technician"
 	icon_state = "Atmospheric Technician"
 
 /obj/effect/landmark/start/cook
@@ -113,11 +113,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Cook"
 
 /obj/effect/landmark/start/shaft_miner
-	name = "Shaft Miner"
+	name = "Excavation Specialist"
 	icon_state = "Shaft Miner"
 
 /obj/effect/landmark/start/security_officer
-	name = "Security Officer"
+	name = "Red Hawk Private"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/botanist
@@ -125,27 +125,27 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Botanist"
 
 /obj/effect/landmark/start/head_of_security
-	name = "Head of Security"
+	name = "Head of Red Hawk"
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/captain
-	name = "Captain"
+	name = "Ark Commander"
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "Detective"
+	name = "RHIB Agent"
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden
-	name = "Warden"
+	name = "Red Hawk Inspector"
 	icon_state = "Warden"
 
 /obj/effect/landmark/start/chief_engineer
-	name = "Chief Engineer"
+	name = "Tech Overseer"
 	icon_state = "Chief Engineer"
 
 /obj/effect/landmark/start/head_of_personnel
-	name = "Head of Personnel"
+	name = "Donk Co. Manager"
 	icon_state = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
@@ -157,31 +157,31 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/station_engineer
-	name = "Station Engineer"
+	name = "Engine Specialist"
 	icon_state = "Station Engineer"
 
 /obj/effect/landmark/start/medical_doctor
-	name = "Medical Doctor"
+	name = "Physician"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/coroner
-	name = "Coroner"
+	name = "Necropsier"
 	icon_state = "Coroner"
 
 /obj/effect/landmark/start/paramedic
-	name = "Paramedic"
+	name = "Emergency Medical Technician"
 	icon_state = "Paramedic"
 
 /obj/effect/landmark/start/scientist
-	name = "Scientist"
+	name = JOB_SCIENTIST
 	icon_state = "Scientist"
 
 /obj/effect/landmark/start/chemist
-	name = "Chemist"
+	name = JOB_CHEMIST
 	icon_state = "Chemist"
 
 /obj/effect/landmark/start/roboticist
-	name = "Roboticist"
+	name = JOB_ROBOTICIST
 	icon_state = "Roboticist"
 
 /obj/effect/landmark/start/research_director
@@ -189,11 +189,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Research Director" // ARK STATION EDIT
 
 /obj/effect/landmark/start/geneticist
-	name = "Geneticist"
+	name = JOB_GENETICIST
 	icon_state = "Geneticist"
 
 /obj/effect/landmark/start/chief_medical_officer
-	name = "Chief Medical Officer"
+	name = JOB_CHIEF_MEDICAL_OFFICER
 	icon_state = "Chief Medical Officer"
 
 
@@ -202,11 +202,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Psychologist"
 
 /obj/effect/landmark/start/chaplain
-	name = "Chaplain"
+	name = JOB_CHAPLAIN
 	icon_state = "Chaplain"
 
 /obj/effect/landmark/start/cyborg
-	name = "Cyborg"
+	name = JOB_CYBORG
 	icon_state = "Cyborg"
 	//NOVA EDIT: Start - Makes latejoin cyborgs spawn in the station instead of on the interlink.
 	jobspawn_override = TRUE
@@ -248,19 +248,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return ..()
 
 /obj/effect/landmark/start/depsec/supply
-	name = "supply_sec"
+	name = JOB_SECURITY_OFFICER_SUPPLY
 	department = SEC_DEPT_SUPPLY
 
 /obj/effect/landmark/start/depsec/medical
-	name = "medical_sec"
+	name = JOB_SECURITY_OFFICER_MEDICAL
 	department = SEC_DEPT_MEDICAL
 
 /obj/effect/landmark/start/depsec/engineering
-	name = "engineering_sec"
+	name = JOB_SECURITY_OFFICER_ENGINEERING
 	department = SEC_DEPT_ENGINEERING
 
 /obj/effect/landmark/start/depsec/science
-	name = "science_sec"
+	name = JOB_SECURITY_OFFICER_SCIENCE
 	department = SEC_DEPT_SCIENCE
 
 //Antagonist spawns
