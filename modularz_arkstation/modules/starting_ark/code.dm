@@ -16,6 +16,8 @@
 	endvote_passed = TRUE
 	SSevents.can_fire = FALSE
 
+	INVOKE_ASYNC(SSvote, TYPE_PROC_REF(/datum/controller/subsystem/vote, initiate_vote), /datum/vote/map_vote, vote_initiator_name = "Map Rotation", forced = TRUE)
+
 	// Последствия.
 	addtimer(CALLBACK(src, PROC_REF(ark_goes_first)), 1 MINUTES)
 	set_starlight("#88b487", 1.5, 1.5)
