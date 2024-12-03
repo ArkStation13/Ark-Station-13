@@ -77,99 +77,99 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return
 
 /obj/effect/landmark/start/janitor
-	name = "Janitor"
+	name = JOB_JANITOR
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Deck Worker"
+	name = JOB_CARGO_TECHNICIAN
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bitrunner
-	name = "Bitrunner"
+	name = JOB_BITRUNNER
 	icon_state = "Bitrunner"
 
 /obj/effect/landmark/start/bartender
-	name = "Bartender"
+	name = JOB_BARTENDER
 	icon_state = "Bartender"
 
 /obj/effect/landmark/start/clown
-	name = "Clown"
+	name = JOB_CLOWN
 	icon_state = "Clown"
 
 /obj/effect/landmark/start/mime
-	name = "Mime"
+	name = JOB_MIME
 	icon_state = "Mime"
 
 /obj/effect/landmark/start/quartermaster
-	name = "Quartermaster"
+	name = JOB_QUARTERMASTER
 	icon_state = "Quartermaster"
 
 /obj/effect/landmark/start/atmospheric_technician
-	name = "Life Support Technician"
+	name = JOB_ATMOSPHERIC_TECHNICIAN
 	icon_state = "Atmospheric Technician"
 
 /obj/effect/landmark/start/cook
-	name = "Cook"
+	name = JOB_COOK
 	icon_state = "Cook"
 
 /obj/effect/landmark/start/shaft_miner
-	name = "Excavation Specialist"
+	name = JOB_SHAFT_MINER
 	icon_state = "Shaft Miner"
 
 /obj/effect/landmark/start/security_officer
-	name = "Red Hawk Private"
+	name = JOB_SECURITY_OFFICER
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/botanist
-	name = "Botanist"
+	name = JOB_BOTANIST
 	icon_state = "Botanist"
 
 /obj/effect/landmark/start/head_of_security
-	name = "Head of Red Hawk"
+	name = JOB_HEAD_OF_SECURITY
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/captain
-	name = "Ark Commander"
+	name = JOB_CAPTAIN
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "RHIB Agent"
+	name = JOB_DETECTIVE
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden
-	name = "Red Hawk Inspector"
+	name = JOB_WARDEN
 	icon_state = "Warden"
 
 /obj/effect/landmark/start/chief_engineer
-	name = "Tech Overseer"
+	name = JOB_CHIEF_ENGINEER
 	icon_state = "Chief Engineer"
 
 /obj/effect/landmark/start/head_of_personnel
-	name = "Donk Co. Manager"
+	name = JOB_HEAD_OF_PERSONNEL
 	icon_state = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
-	name = "Curator"
+	name = JOB_CURATOR
 	icon_state = "Curator"
 
 /obj/effect/landmark/start/lawyer
-	name = "Lawyer"
+	name = JOB_LAWYER
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/station_engineer
-	name = "Engine Specialist"
+	name = JOB_STATION_ENGINEER
 	icon_state = "Station Engineer"
 
 /obj/effect/landmark/start/medical_doctor
-	name = "Physician"
+	name = JOB_MEDICAL_DOCTOR
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/coroner
-	name = "Necropsier"
+	name = JOB_CORONER
 	icon_state = "Coroner"
 
 /obj/effect/landmark/start/paramedic
-	name = "Emergency Medical Technician"
+	name = JOB_PARAMEDIC
 	icon_state = "Paramedic"
 
 /obj/effect/landmark/start/scientist
@@ -198,7 +198,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 
 /obj/effect/landmark/start/psychologist
-	name = "Psychologist"
+	name = JOB_PSYCHOLOGIST
 	icon_state = "Psychologist"
 
 /obj/effect/landmark/start/chaplain
@@ -214,7 +214,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	//NOVA EDIT: End - Makes latejoin cyborgs spawn in the station instead of on the interlink.
 
 /obj/effect/landmark/start/ai
-	name = "AI"
+	name = JOB_AI
 	icon_state = "AI"
 	delete_after_roundstart = FALSE
 	var/primary_ai = TRUE
