@@ -16,7 +16,13 @@ import {
 } from 'common/color';
 import { clamp } from 'common/math';
 import { classes } from 'common/react';
-import React, { FocusEvent, FormEvent, useEffect, useState } from 'react';
+import React, {
+  FocusEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import { Interactive } from 'tgui/components/Interactive';
 import { logger } from 'tgui/logging';
 
@@ -147,11 +153,12 @@ export const ColorPresets = ({ setColor, setShowPresets }) => {
 };
 
 export const ColorSelector = ({ color, setColor, defaultColor }) => {
-  const handleChange = (params: Partial<HsvaColor>) => {
-    setColor((current: HsvaColor) => {
-      return { ...current, ...params };
-    });
-  };
+  const handleChange = useCallback(
+    (params: Partial<HsvaColor>) => {
+      setColor((current) => ({ ...current, ...params }));
+    },
+    [setColor],
+  );
 
   const [showPresets, setShowPresets] = useState<boolean>(false);
   const rgb = hsvaToRgba(color);
@@ -242,7 +249,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.h}
-                    callback={(_, v) => handleChange({ h: v })}
+                    callback={(v) => handleChange({ h: v })}
                     max={360}
                     unit="°"
                   />
@@ -260,7 +267,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.s}
-                    callback={(_, v) => handleChange({ s: v })}
+                    callback={(v) => handleChange({ s: v })}
                     unit="%"
                   />
                 </Stack.Item>
@@ -277,7 +284,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.v}
-                    callback={(_, v) => handleChange({ v: v })}
+                    callback={(v) => handleChange({ v: v })}
                     unit="%"
                   />
                 </Stack.Item>
@@ -295,9 +302,8 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.r}
-                    callback={(_, v) => {
-                      rgb.r = v;
-                      handleChange(rgbaToHsva(rgb));
+                    callback={(v) => {
+                      handleChange(rgbaToHsva({ ...rgb, r: v }));
                     }}
                     max={255}
                   />
@@ -315,7 +321,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.g}
-                    callback={(_, v) => {
+                    callback={(v) => {
                       rgb.g = v;
                       handleChange(rgbaToHsva(rgb));
                     }}
@@ -335,7 +341,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.b}
-                    callback={(_, v) => {
+                    callback={(v) => {
                       rgb.b = v;
                       handleChange(rgbaToHsva(rgb));
                     }}
@@ -359,7 +365,7 @@ const TextSetter = ({
   unit,
 }: {
   value: number;
-  callback: any;
+  callback: (value: number) => void;
   min?: number;
   max?: number;
   unit?: string;
@@ -392,26 +398,38 @@ const HexColorInput = ({
   onChange: (newColor: string) => void;
 }) => {
   const escape = (value: string) =>
-    value.replace(/([^0-9A-F]+)/gi, '').substring(0, alpha ? 8 : 6);
-  const validate = (value: string) => validHex(value, alpha);
+    value
+      .replace(/[^0-9A-Fa-f]/g, '')
+      .substring(0, alpha ? 8 : 6)
+      .toUpperCase();
+  const validate = (value: string) =>
+    validHex(value, alpha) &&
+    (value.length === 6 || (alpha && value.length === 8));
 
   const [localValue, setLocalValue] = useState(escape(color));
 
-  // Обновляем localValue при изменении color
   useEffect(() => {
-    setLocalValue(escape(color));
+    if (escape(color) !== localValue) {
+      setLocalValue(escape(color));
+    }
   }, [color]);
 
   const handleInput = (e: FormEvent<HTMLInputElement>) => {
     const inputValue = escape(e.currentTarget.value);
     setLocalValue(inputValue);
+
+    if (inputValue.length === 6 && validate(inputValue)) {
+      onChange(inputValue);
+    }
   };
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
-    if (!validate(e.currentTarget.value)) {
-      setLocalValue(escape(color)); // return to default;
+    const inputValue = escape(e.currentTarget.value);
+
+    if (!validate(inputValue) || inputValue.length !== 6) {
+      setLocalValue(escape(color));
     } else {
-      onChange(escape(e.currentTarget.value));
+      onChange(inputValue);
     }
   };
 
@@ -475,16 +493,20 @@ const ColorInput = ({
 
 const SaturationValue = ({ hsva, onChange }) => {
   const handleMove = (interaction: { left: number; top: number }) => {
-    onChange({
-      s: interaction.left * 100,
-      v: 100 - interaction.top * 100,
+    requestAnimationFrame(() => {
+      onChange({
+        s: interaction.left * 100,
+        v: 100 - interaction.top * 100,
+      });
     });
   };
 
   const handleKey = (offset: { left: number; top: number }) => {
-    onChange({
-      s: clamp(hsva.s + offset.left * 100, 0, 100),
-      v: clamp(hsva.v - offset.top * 100, 0, 100),
+    requestAnimationFrame(() => {
+      onChange({
+        s: clamp(hsva.s + offset.left * 100, 0, 100),
+        v: clamp(hsva.v - offset.top * 100, 0, 100),
+      });
     });
   };
 
@@ -529,11 +551,15 @@ const Hue = ({
   onChange: (newHue: { h: number }) => void;
 }) => {
   const handleMove = (interaction: { left: number }) => {
-    onChange({ h: 360 * interaction.left });
+    requestAnimationFrame(() => {
+      onChange({ h: 360 * interaction.left });
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    onChange({ h: clamp(hue + offset.left * 360, 0, 360) });
+    requestAnimationFrame(() => {
+      onChange({ h: clamp(hue + offset.left * 360, 0, 360) });
+    });
   };
 
   const nodeClassName = classes(['react-colorful__hue', className]);
@@ -571,11 +597,15 @@ const Saturation = ({
   onChange: (newSaturation: { s: number }) => void;
 }) => {
   const handleMove = (interaction: { left: number }) => {
-    onChange({ s: 100 * interaction.left });
+    requestAnimationFrame(() => {
+      onChange({ s: 100 * interaction.left });
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    onChange({ s: clamp(color.s + offset.left * 100, 0, 100) });
+    requestAnimationFrame(() => {
+      onChange({ s: clamp(color.s + offset.left * 100, 0, 100) });
+    });
   };
 
   const nodeClassName = classes(['react-colorful__saturation', className]);
@@ -626,12 +656,16 @@ const Value = ({
   onChange: (newValue: { v: number }) => void;
 }) => {
   const handleMove = (interaction: { left: number }) => {
-    onChange({ v: 100 * interaction.left });
+    requestAnimationFrame(() => {
+      onChange({ v: 100 * interaction.left });
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    onChange({
-      v: clamp(color.v + offset.left * 100, 0, 100),
+    requestAnimationFrame(() => {
+      onChange({
+        v: clamp(color.v + offset.left * 100, 0, 100),
+      });
     });
   };
 
@@ -692,11 +726,15 @@ const RGBSlider = ({
   };
 
   const handleMove = (interaction: { left: number }) => {
-    setNewTarget(255 * interaction.left);
+    requestAnimationFrame(() => {
+      setNewTarget(255 * interaction.left);
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    setNewTarget(clamp(rgb[target] + offset.left * 255, 0, 255));
+    requestAnimationFrame(() => {
+      setNewTarget(clamp(rgb[target] + offset.left * 255, 0, 255));
+    });
   };
 
   const nodeClassName = classes([`react-colorful__${target}`, className]);
