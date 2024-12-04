@@ -55394,7 +55394,6 @@
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/suit/apron/surgical,
-/obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/aft)
@@ -70163,7 +70162,9 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos/pumproom)
 "vVy" = (
-/obj/machinery/door/window/brigdoor/right/directional/west,
+/obj/machinery/door/window/brigdoor/right/directional/west{
+	req_access = list("engineering")
+	},
 /obj/structure/table/reinforced,
 /obj/structure/cable,
 /obj/item/paper_bin,
@@ -75953,6 +75954,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/aft)
 "xLk" = (
