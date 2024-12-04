@@ -11074,10 +11074,6 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
-"dPP" = (
-/obj/machinery/computer/security/telescreen/rd,
-/turf/closed/wall/r_wall,
-/area/station/science/server)
 "dPY" = (
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Antechamber"
@@ -13573,6 +13569,7 @@
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/minisat/directional/east,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "eHc" = (
@@ -14655,9 +14652,9 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "ffn" = (
-/obj/machinery/computer/security/telescreen/ce,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/ce)
+/obj/machinery/computer/security/telescreen/rd/directional/south,
+/turf/open/floor/glass/reinforced/plasma,
+/area/station/command/heads_quarters/rd)
 "ffp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -17190,6 +17187,7 @@
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/computer/security/telescreen/minisat/directional/west,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/captain/private)
 "fWh" = (
@@ -18736,10 +18734,6 @@
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/textured,
 /area/station/engineering/storage/tech)
-"gwM" = (
-/obj/machinery/computer/security/telescreen/vault,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/qm)
 "gwS" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -27426,10 +27420,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
-"jxS" = (
-/obj/machinery/computer/security/telescreen/minisat,
-/turf/closed/wall/r_wall,
-/area/station/command/bridge)
 "jyg" = (
 /obj/machinery/suit_storage_unit/medical,
 /obj/item/radio/intercom/directional/north,
@@ -36163,7 +36153,6 @@
 	icon = 'icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
-/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/surgery/theatre)
 "mrV" = (
@@ -37643,10 +37632,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/exam_room)
-"mTu" = (
-/obj/machinery/computer/security/telescreen/cmo,
-/turf/closed/wall,
-/area/station/command/heads_quarters/cmo)
 "mTP" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
@@ -38276,6 +38261,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/cmo/directional/east,
 /turf/open/floor/holofloor/dark,
 /area/station/command/heads_quarters/cmo)
 "ndo" = (
@@ -39127,10 +39113,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
-"nrr" = (
-/obj/machinery/computer/security/telescreen/ordnance,
-/turf/closed/wall/r_wall,
-/area/station/science/ordnance/testlab)
 "nrL" = (
 /obj/structure/cable,
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -39320,6 +39302,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/tile/green/fourcorners,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/surgery/theatre)
 "nwc" = (
@@ -39877,6 +39860,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/computer/security/telescreen/interrogation/directional/east,
 /turf/open/floor/iron,
 /area/station/security/interrogation)
 "nHm" = (
@@ -54426,10 +54410,6 @@
 /obj/item/radio/intercom,
 /turf/open/floor/carpet,
 /area/station/service/theater)
-"sAe" = (
-/obj/machinery/computer/security/telescreen/minisat,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/captain/private)
 "sAf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
 /turf/open/floor/iron/dark/smooth_edge,
@@ -55363,6 +55343,7 @@
 /obj/machinery/keycard_auth/wall_mounted/directional/west{
 	pixel_y = 12
 	},
+/obj/machinery/computer/security/telescreen/vault/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "sQD" = (
@@ -64083,6 +64064,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 10
 	},
+/obj/machinery/computer/security/telescreen/ce/directional/west,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "vPN" = (
@@ -68819,9 +68801,9 @@
 /turf/closed/wall,
 /area/station/engineering/supermatter/room)
 "xwt" = (
-/obj/machinery/computer/security/telescreen/interrogation,
-/turf/closed/wall/r_wall,
-/area/station/security/interrogation)
+/obj/machinery/computer/security/telescreen/ordnance/directional/south,
+/turf/open/floor/iron/white,
+/area/station/science/ordnance/testlab)
 "xwu" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/textured_large,
@@ -84619,7 +84601,7 @@ jea
 ghU
 icM
 hoX
-gwM
+wOU
 sQi
 dNW
 hdK
@@ -93316,7 +93298,7 @@ fmB
 rAu
 hDo
 qmc
-xwt
+wBC
 net
 vlJ
 net
@@ -95374,7 +95356,7 @@ iUF
 cLf
 fZF
 axD
-sAe
+axD
 sas
 axD
 axD
@@ -99746,7 +99728,7 @@ eKR
 eKR
 alg
 eKR
-jxS
+eKR
 eKR
 eKR
 eKR
@@ -116474,8 +116456,8 @@ moe
 sbE
 dlE
 xjq
-oix
-nrr
+xwt
+moe
 fDj
 fDj
 moe
@@ -155835,7 +155817,7 @@ vxX
 gvw
 gvw
 gvw
-mTu
+gvw
 gvw
 gvw
 gvw
@@ -176662,7 +176644,7 @@ iNj
 wtH
 wtH
 jNL
-ffn
+wtH
 wtH
 iNj
 mog
@@ -180214,8 +180196,8 @@ gmH
 rXS
 tOL
 fPv
-jzM
-dPP
+ffn
+iFN
 mZn
 oND
 iem
