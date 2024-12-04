@@ -53,7 +53,18 @@
 /datum/controller/subsystem/shuttle/proc/ark_goes_third()
 	if(ark_round_end_cancell == TRUE)
 		return
-	play_cinematic(/datum/cinematic/nuke/fake, world, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)))
+	// play_cinematic(/datum/cinematic/nuke/fake, world, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)))
+	ending_helper()
+	for(var/mob/living/carbon/human/humans in GLOB.mob_list)
+		for(var/turf/human_turfs in GLOB.station_turfs)
+			if(humans.loc == human_turfs)
+				humans.adjustStaminaLoss(30)
+				humans.Paralyze(10)
+				shake_camera(humans, 2, 3)
+				humans.close_eyes()
+				sleep(2 SECONDS)
+				humans.open_eyes()
+	sound_to_playing_players('sound/effects/magic/voidblink.ogg')
 	set_starlight("#88b487", 1.5, 1.5)
 
 // ГАЛЯ, У НАС ОТМЕНА
