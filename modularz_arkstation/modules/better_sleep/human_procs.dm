@@ -45,6 +45,11 @@
 			if(time_to_sleep)
 				deltimer(time_to_sleep)
 
+/mob/living/carbon/human/proc/eyes_blink()
+	close_eyes()
+	sleep(1 SECONDS)
+	open_eyes()
+
 /// Прок пермасна (Вырезан на оффах)
 /mob/living/proc/PermaSleeping()
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, -1) & COMPONENT_NO_STUN)
