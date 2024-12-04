@@ -27,7 +27,7 @@
 		return
 	addtimer(CALLBACK(src, PROC_REF(ark_goes_second)), 2 MINUTES)
 	priority_announce("Пограничные миры Солнечной Системы уничтожены. 2 МИНУТЫ до запуска.", null, null, "Terra", color_override = "blue")
-	sound_to_playing_players('modularz_arkstation/modules/starting_ark/siren.ogg')
+	sound_to_playing_players('modularz_arkstation/modules/starting_ark/siren.ogg', 70)
 	set_starlight("#a0df9f", 3, 3)
 
 /datum/controller/subsystem/shuttle/proc/ark_goes_second()
