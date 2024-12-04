@@ -67,31 +67,31 @@ GLOBAL_VAR_INIT(dynamic_forced_secret, FALSE)
 		message_admins("Game has set Forced Extended for round.", 1)
 	else if(prob(6))
 		// Nuke
-		gamemode_rule += "Nuclear Emergency"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/nuclear
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(4))
 		// Wiz
-		gamemode_rule += "Wizard"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/wizard
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(4))
 		// Malf
-		gamemode_rule += "Malfunctioning AI"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/malf_ai
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Revolution
-		gamemode_rule += "Revolution"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/revs
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Blood Cult
-		gamemode_rule += "Blood Cult"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/bloodcult
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Spies
-		gamemode_rule += "Spies"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/spies
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(20))
 		// Traitors
-		gamemode_rule += "Traitors"
+		gamemode_rule += /datum/dynamic_ruleset/roundstart/traitor
 		GLOB.dynamic_forced_threat_level = 0
 	else
 		// Random Dynamic
