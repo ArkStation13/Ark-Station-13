@@ -54,7 +54,6 @@
 	if(ark_round_end_cancell == TRUE)
 		return
 	// play_cinematic(/datum/cinematic/nuke/fake, world, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)))
-	ending_helper()
 	for(var/mob/living/carbon/human/humans in GLOB.mob_list)
 		for(var/turf/human_turfs in GLOB.station_turfs)
 			if(humans.loc == human_turfs)
@@ -66,6 +65,8 @@
 				humans.open_eyes()
 	sound_to_playing_players('sound/effects/magic/voidblink.ogg')
 	set_starlight("#88b487", 1.5, 1.5)
+	sleep(4 SECONDS)
+	ending_helper()
 
 // ГАЛЯ, У НАС ОТМЕНА
 ADMIN_VERB(arkroundendcancell, R_ADMIN, "Disable/Enable Ark Launch", "Cancel or Enable it on every stage!", ADMIN_CATEGORY_EVENTS)
