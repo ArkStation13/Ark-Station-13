@@ -401,33 +401,39 @@ export const JobsPage = () => {
 
               <PriorityHeaders />
 
-              <Department department="Engineering">
+              <Department
+                department="Global Solar Energy" /* Ark Station Edit */
+              >
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Science">
+              <Department
+                department="Bishop Developments" /* Ark Station Edit */
+              >
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Silicon">
+              <Department department="Synthetics" /* Ark Station Edit */>
                 <Gap amount={12} />
               </Department>
 
-              <Department department="Assistant" />
+              <Department department="Colonist" /* Ark Station Edit */ />
             </Stack.Item>
 
             <Stack.Item mr={1}>
               <PriorityHeaders />
 
-              <Department department="Captain">
+              <Department department="Ark Commander" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Service">
+              <Department department="Donk Corporation" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Cargo" />
+              <Department
+                department="Atlas and Nanotrasen" /* Ark Station Edit */
+              />
             </Stack.Item>
 
             <Stack.Item>
@@ -435,15 +441,17 @@ export const JobsPage = () => {
 
               <PriorityHeaders />
 
-              <Department department="Church" /* Ark Station Addition */>
+              <Department
+                department="Neo-Vatican Church" /* Ark Station Addition */
+              >
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Security">
+              <Department department="Red Hawk Security" /* Ark Station Edit */>
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Medical" />
+              <Department department="De Forest" /* Ark Station Edit */ />
             </Stack.Item>
           </Stack>
         </Stack.Item>

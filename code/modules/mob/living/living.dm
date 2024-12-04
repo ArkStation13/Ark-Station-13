@@ -1,7 +1,7 @@
 /mob/living/Initialize(mapload)
 	. = ..()
-	if(current_size != RESIZE_DEFAULT_SIZE)
-		update_transform(current_size)
+	if(initial_size != RESIZE_DEFAULT_SIZE)
+		update_transform(initial_size)
 	AddElement(/datum/element/movetype_handler)
 	register_init_signals()
 	if(unique_name)
@@ -1206,6 +1206,23 @@
 				if (AM.density && AM.anchored)
 					pressure_resistance_prob_delta -= 20
 					break
+	// ARK STATION ADDITION START
+	if(pressure_difference > 20)
+		if(body_position == STANDING_UP)
+			if(prob(15)) // 30
+				Knockdown(3 SECONDS)
+				to_chat(src, span_warning("The flow of gas knocks you off your feet!"))
+
+	if(pressure_difference > 70)
+		if(body_position == STANDING_UP)
+			if(prob(10)) // 30
+				var/turf/target_turf1 = get_turf(get_step(src, direction))
+				var/turf/target_turf2 = get_turf(get_step(target_turf1, direction))
+				Knockdown(2 SECONDS)
+				throw_at(target_turf2, 2)
+				to_chat(src, span_warning("The flow of gas throws you to the side!"))
+	// ARK STATION ADDITION END
+
 	..(pressure_difference, direction, pressure_resistance_prob_delta)
 
 /mob/living/can_resist()
@@ -1366,14 +1383,14 @@
 		animate(src, transform = flipped_matrix, pixel_y = pixel_y-4, time = 0.5 SECONDS, easing = EASE_OUT)
 		base_pixel_y -= 4
 
-/mob/living/singularity_pull(S, current_size)
+/mob/living/singularity_pull(atom/singularity, current_size)
 	..()
 	if(move_resist == INFINITY)
 		return
 	if(current_size >= STAGE_SIX) //your puny magboots/wings/whatever will not save you against supermatter singularity
-		throw_at(S, 14, 3, src, TRUE)
+		throw_at(singularity, 14, 3, src, TRUE)
 	else if(!src.mob_negates_gravity())
-		step_towards(src,S)
+		step_towards(src, singularity)
 
 /mob/living/proc/get_temperature(datum/gas_mixture/environment)
 	var/loc_temp = environment ? environment.temperature : T0C

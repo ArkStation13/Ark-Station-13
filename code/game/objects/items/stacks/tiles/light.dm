@@ -2,7 +2,7 @@
 	name = "light tile"
 	singular_name = "light floor tile"
 	desc = "A floor tile, made out of glass. It produces light."
-	icon_state = "tile"
+	icon_state = "tile_e"
 	obj_flags = CONDUCTS_ELECTRICITY
 	attack_verb_continuous = list("bashes", "batters", "bludgeons", "thrashes", "smashes")
 	attack_verb_simple = list("bash", "batter", "bludgeon", "thrash", "smash")

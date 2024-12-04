@@ -57,7 +57,7 @@
 /obj/item/gun/syringe/can_shoot()
 	return syringes.len
 
-/obj/item/gun/syringe/handle_chamber()
+/obj/item/gun/syringe/handle_chamber(mob/living/user, empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE) // ARK STATION EDIT
 	if(chambered && !chambered.loaded_projectile) //we just fired
 		recharge_newshot()
 	update_appearance()

@@ -16,6 +16,9 @@ SUBSYSTEM_DEF(parallax)
 	var/random_parallax_weights = list(
 		/atom/movable/screen/parallax_layer/random/space_gas = 35,
 		/atom/movable/screen/parallax_layer/random/asteroids = 35,
+		/atom/movable/screen/parallax_layer/random/trash = 35, // ARK STATION ADDITION
+		/atom/movable/screen/parallax_layer/random/infection = 25, // ARK STATION ADDITION
+		/atom/movable/screen/parallax_layer/random/gas = 35, // ARK STATION ADDITION
 		PARALLAX_NONE = 30,
 	)
 

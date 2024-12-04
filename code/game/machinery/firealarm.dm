@@ -425,7 +425,7 @@
 			if(prob(33) && buildstage == FIRE_ALARM_BUILD_SECURED) //require fully wired electronics to set of the alarms
 				alarm()
 
-/obj/machinery/firealarm/singularity_pull(S, current_size)
+/obj/machinery/firealarm/singularity_pull(atom/singularity, current_size)
 	if (current_size >= STAGE_FIVE) // If the singulo is strong enough to pull anchored objects, the fire alarm experiences integrity failure
 		deconstruct()
 	return ..()
@@ -484,7 +484,7 @@
 		balloon_alert(user, "thermal sensors [my_area.fire_detect ? "enabled" : "disabled"]")
 		user.log_message("[ my_area.fire_detect ? "enabled" : "disabled" ] firelock sensors using [src].", LOG_GAME)
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm, 26)
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm, 32) // ARK STATION EDIT (26)
 
 /*
  * Return of Party button

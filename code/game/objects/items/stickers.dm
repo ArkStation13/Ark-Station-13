@@ -153,10 +153,10 @@
 	icon_state = "soul"
 
 /obj/item/sticker/chief_engineer
-	name = "CE approved sticker"
+	name = "TO approved sticker" // Tech Overseer // ARK STATION EDIT
 	icon_state = "ce_approved"
 	exclude_from_random = TRUE
-	examine_text = "There is a sticker displaying the <b>Chief Engineer's SEAL OF APPROVAL.</b>"
+	examine_text = "There is a sticker displaying the <b>Tech Overseer's SEAL OF APPROVAL.</b>" // ARK STATION EDIT
 
 /obj/item/sticker/clown
 	name = "clown sticker"

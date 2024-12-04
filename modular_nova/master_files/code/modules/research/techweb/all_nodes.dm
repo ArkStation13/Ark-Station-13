@@ -156,7 +156,7 @@
 		"nifsoft_hud_medical",
 		"nifsoft_hud_security",
 		"nifsoft_hud_diagnostic",
-		// "nifsoft_hud_cargo",
+		"nifsoft_hud_cargo",
 	)
 	return ..()
 

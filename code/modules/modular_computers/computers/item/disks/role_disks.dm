@@ -56,7 +56,7 @@
 	)
 
 /obj/item/computer_disk/command/ce
-	name = "chief engineer data disk"
+	name = "tech overseer data disk" // ARK STATION EDIT
 	desc = "Removable disk used to download essential CE tablet apps."
 	starting_programs = list(
 		/datum/computer_file/program/supermatter_monitor,

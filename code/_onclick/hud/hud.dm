@@ -125,6 +125,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	// subtypes can override this to force a specific UI style
 	var/ui_style
 	var/erp_ui_style //NOVA EDIT - ADDITION - ERP ICONS FIX
+	var/ark_ui_style // ARK STATION ADDITION
 
 	// List of weakrefs to objects that we add to our screen that we don't expect to DO anything
 	// They typically use * in their render target. They exist solely so we can reuse them,
@@ -138,6 +139,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 		// will fall back to the default if any of these are null
 		ui_style = ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style))
 		erp_ui_style = erp_ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)) //NOVA EDIT - ADDITION - ERP ICONS FIX
+		ark_ui_style = ark_ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)) // ARK STATION ADDITION
 
 	toggle_palette = new()
 	toggle_palette.set_hud(src)

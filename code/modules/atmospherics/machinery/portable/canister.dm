@@ -111,8 +111,6 @@
 		. += span_notice("Warning, no cell installed, use a screwdriver to open the hatch and insert one.")
 	if(panel_open)
 		. += span_notice("Hatch open, close it with a screwdriver.")
-	if(integrity_failure)
-		. += span_notice("Integrity compromised, repair hull with a welding tool.")
 
 // Please keep the canister types sorted
 // Basic canister per gas below here

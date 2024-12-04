@@ -315,6 +315,7 @@
 		/datum/job/security_medic = /obj/item/organ/internal/cyberimp/eyes/hud/medical,
 		/datum/job/deacon = /obj/item/organ/internal/cyberimp/brain/anti_drop,
 		/datum/job/fiscal = /obj/item/organ/internal/cyberimp/brain/anti_drop,
+		/datum/job/synthetic_advisor = /obj/item/organ/internal/cyberimp/arm/toolset,
 		// ARK STATION ADDITION END
 	)
 
