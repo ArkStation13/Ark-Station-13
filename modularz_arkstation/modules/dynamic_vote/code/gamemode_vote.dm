@@ -67,31 +67,31 @@ GLOBAL_VAR_INIT(dynamic_forced_secret, FALSE)
 		message_admins("Game has set Forced Extended for round.", 1)
 	else if(prob(6))
 		// Nuke
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/nuclear
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/nuclear
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(4))
 		// Wiz
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/wizard
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/wizard
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(4))
 		// Malf
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/malf_ai
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/malf_ai
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Revolution
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/revs
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/revs
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Blood Cult
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/bloodcult
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/bloodcult
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Spies
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/spies
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/spies
 		GLOB.dynamic_forced_threat_level = 0
 	else if(prob(20))
 		// Traitors
-		gamemode_rule += /datum/dynamic_ruleset/roundstart/traitor
+		gamemode_rule = /datum/dynamic_ruleset/roundstart/traitor
 		GLOB.dynamic_forced_threat_level = 0
 	else
 		// Random Dynamic
@@ -100,7 +100,7 @@ GLOBAL_VAR_INIT(dynamic_forced_secret, FALSE)
 		message_admins("Game has set [GLOB.dynamic_forced_threat_level] threat for round.", 1)
 
 	if(gamemode_rule)
-		GLOB.dynamic_forced_roundstart_ruleset += gamemode_rule
+		GLOB.dynamic_forced_rulesets[gamemode_rule] = RULESET_FORCE_ENABLED
 		log_admin("Game has set [gamemode_rule] to be a forced roundstart ruleset.")
 		message_admins("Game has set [gamemode_rule] to be a forced roundstart ruleset.", 1)
 
