@@ -4,3 +4,5 @@
 
 #define SECHUD_DEACON "huddeacon"
 #define SECHUD_FISCAL "hudfiscal"
+
+#define SENTIENT_DISEASE_HUD "23"
