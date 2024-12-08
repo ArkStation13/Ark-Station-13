@@ -70,7 +70,7 @@
 	id_trim = /datum/id_trim/job/mechanic
 
 /obj/effect/landmark/start/mechanic
-	name = "Mechanic"
+	name = JOB_MECHANIC
 	icon_state = "Engineering Guard"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 

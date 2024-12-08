@@ -48,7 +48,7 @@
 	belt = /obj/item/modular_computer/pda/expeditionary_corps
 
 /obj/effect/landmark/start/expeditionary_corps
-	name = "Vanguard Operative"
+	name = JOB_VANGUARD_OPERATIVE
 	icon_state = "Vanguard Operative"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 

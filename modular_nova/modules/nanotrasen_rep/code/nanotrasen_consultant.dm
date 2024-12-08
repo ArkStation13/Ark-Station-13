@@ -91,7 +91,7 @@
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/effect/landmark/start/nanotrasen_consultant
-	name = "Nanotrasen Consultant"
+	name = JOB_NT_REP
 	icon_state = "Nanotrasen Consultant"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 

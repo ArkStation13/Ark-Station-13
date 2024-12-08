@@ -124,7 +124,7 @@
 	job = /datum/job/chaplain
 
 /obj/effect/landmark/start/chaplain
-	name = "Priest of Neo-Vatican"
+	name = JOB_CHAPLAIN
 	icon_state = "priest"
 	icon = 'modularz_arkstation/modules/church-update/icons/misc/landmarks.dmi'
 
@@ -232,7 +232,7 @@
 	job = /datum/job/deacon
 
 /obj/effect/landmark/start/deacon
-	name = "Deacon"
+	name = JOB_DEACON
 	icon_state = "deacon"
 	icon = 'modularz_arkstation/modules/church-update/icons/misc/landmarks.dmi'
 
@@ -350,6 +350,6 @@
 	job = /datum/job/fiscal
 
 /obj/effect/landmark/start/fiscal
-	name = "Fiscal"
+	name = JOB_FISCAL
 	icon_state = "fiscal"
 	icon = 'modularz_arkstation/modules/church-update/icons/misc/landmarks.dmi'
