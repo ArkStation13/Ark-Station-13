@@ -16,9 +16,14 @@ import {
 } from 'common/color';
 import { clamp } from 'common/math';
 import { classes } from 'common/react';
-import React, { FocusEvent, FormEvent, useEffect, useState } from 'react';
+import React, {
+  FocusEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import { Interactive } from 'tgui/components/Interactive';
-import { logger } from 'tgui/logging';
 
 import { useBackend } from '../backend';
 import {
@@ -121,7 +126,6 @@ export const ColorPresets = ({ setColor, setShowPresets }) => {
                     return (
                       <Box key={entry} p="1px" backgroundColor="black">
                         <Box
-                          key={entry}
                           p="1px"
                           backgroundColor="#AAAAAA"
                           onClick={() => setColor(hexToHsva(entry))}
@@ -147,11 +151,12 @@ export const ColorPresets = ({ setColor, setShowPresets }) => {
 };
 
 export const ColorSelector = ({ color, setColor, defaultColor }) => {
-  const handleChange = (params: Partial<HsvaColor>) => {
-    setColor((current: HsvaColor) => {
-      return { ...current, ...params };
-    });
-  };
+  const handleChange = useCallback(
+    (params: Partial<HsvaColor>) => {
+      setColor((current) => ({ ...current, ...params }));
+    },
+    [setColor],
+  );
 
   const [showPresets, setShowPresets] = useState<boolean>(false);
   const rgb = hsvaToRgba(color);
@@ -199,13 +204,12 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
         </Stack>
       </Flex.Item>
       <Flex.Item grow fontSize="15px" lineHeight="24px">
-        {showPresets && (
+        {showPresets ? (
           <ColorPresets
             setColor={handleChange}
             setShowPresets={setShowPresets}
           />
-        )}
-        {!showPresets && (
+        ) : (
           <Stack vertical>
             <Stack.Item>
               <Stack>
@@ -217,7 +221,6 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                     fluid
                     color={hsvaToHex(color).substring(1)}
                     onChange={(value) => {
-                      logger.info(value);
                       setColor(hexToHsva(value));
                     }}
                   />
@@ -242,7 +245,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.h}
-                    callback={(_, v) => handleChange({ h: v })}
+                    callback={(v) => handleChange({ h: v })}
                     max={360}
                     unit="°"
                   />
@@ -260,7 +263,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.s}
-                    callback={(_, v) => handleChange({ s: v })}
+                    callback={(v) => handleChange({ s: v })}
                     unit="%"
                   />
                 </Stack.Item>
@@ -277,7 +280,7 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={color.v}
-                    callback={(_, v) => handleChange({ v: v })}
+                    callback={(v) => handleChange({ v })}
                     unit="%"
                   />
                 </Stack.Item>
@@ -295,9 +298,8 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.r}
-                    callback={(_, v) => {
-                      rgb.r = v;
-                      handleChange(rgbaToHsva(rgb));
+                    callback={(v) => {
+                      handleChange(rgbaToHsva({ ...rgb, r: v }));
                     }}
                     max={255}
                   />
@@ -315,9 +317,8 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.g}
-                    callback={(_, v) => {
-                      rgb.g = v;
-                      handleChange(rgbaToHsva(rgb));
+                    callback={(v) => {
+                      handleChange(rgbaToHsva({ ...rgb, g: v }));
                     }}
                     max={255}
                   />
@@ -335,9 +336,8 @@ export const ColorSelector = ({ color, setColor, defaultColor }) => {
                 <Stack.Item>
                   <TextSetter
                     value={rgb.b}
-                    callback={(_, v) => {
-                      rgb.b = v;
-                      handleChange(rgbaToHsva(rgb));
+                    callback={(v) => {
+                      handleChange(rgbaToHsva({ ...rgb, b: v }));
                     }}
                     max={255}
                   />
@@ -359,7 +359,7 @@ const TextSetter = ({
   unit,
 }: {
   value: number;
-  callback: any;
+  callback: (value: number) => void;
   min?: number;
   max?: number;
   unit?: string;
@@ -392,26 +392,38 @@ const HexColorInput = ({
   onChange: (newColor: string) => void;
 }) => {
   const escape = (value: string) =>
-    value.replace(/([^0-9A-F]+)/gi, '').substring(0, alpha ? 8 : 6);
-  const validate = (value: string) => validHex(value, alpha);
+    value
+      .replace(/[^0-9A-Fa-f]/g, '')
+      .substring(0, alpha ? 8 : 6)
+      .toUpperCase();
+  const validate = (value: string) =>
+    validHex(value, alpha) &&
+    (value.length === 6 || (alpha && value.length === 8));
 
   const [localValue, setLocalValue] = useState(escape(color));
 
-  // Обновляем localValue при изменении color
   useEffect(() => {
-    setLocalValue(escape(color));
+    if (escape(color) !== localValue) {
+      setLocalValue(escape(color));
+    }
   }, [color]);
 
   const handleInput = (e: FormEvent<HTMLInputElement>) => {
     const inputValue = escape(e.currentTarget.value);
     setLocalValue(inputValue);
+
+    if (inputValue.length === 6 && validate(inputValue)) {
+      onChange(inputValue);
+    }
   };
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
-    if (!validate(e.currentTarget.value)) {
-      setLocalValue(escape(color)); // return to default;
+    const inputValue = escape(e.currentTarget.value);
+
+    if (!validate(inputValue) || inputValue.length !== 6) {
+      setLocalValue(escape(color));
     } else {
-      onChange(escape(e.currentTarget.value));
+      onChange(inputValue);
     }
   };
 
@@ -424,116 +436,88 @@ const HexColorInput = ({
         spellCheck={false}
         onInput={handleInput}
         onBlur={handleBlur}
+        {...rest}
       />
     </Box>
   );
 };
 
-const ColorInput = ({
-  fluid,
-  color,
-  onChange,
-  escape,
-  validate,
-  format,
-}: {
-  fluid?: boolean;
-  color: string;
-  onChange: (newColor: string) => void;
-  escape: (value: string) => string;
-  validate: (value: string) => boolean;
-  format?: (value: string) => string;
-}) => {
-  const [localValue, setLocalValue] = useState(escape(color));
+interface SaturationValueProps {
+  hsva: HsvaColor;
+  onChange: (newColor: Partial<HsvaColor>) => void;
+}
 
-  const handleInput = (e: FormEvent<HTMLInputElement>) => {
-    const inputValue = escape(e.currentTarget.value);
-    setLocalValue(inputValue);
-  };
+export const SaturationValue = React.memo(
+  ({ hsva, onChange }: SaturationValueProps) => {
+    const handleMove = (interaction: { left: number; top: number }) => {
+      requestAnimationFrame(() => {
+        onChange({
+          s: interaction.left * 100,
+          v: 100 - interaction.top * 100,
+        });
+      });
+    };
 
-  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
-    if (!validate(e.currentTarget.value)) {
-      setLocalValue(escape(color)); // return to default;
-    } else {
-      onChange(escape(e.currentTarget.value));
-    }
-  };
+    const handleKey = (offset: { left: number; top: number }) => {
+      requestAnimationFrame(() => {
+        onChange({
+          s: clamp(hsva.s + offset.left * 100, 0, 100),
+          v: clamp(hsva.v - offset.top * 100, 0, 100),
+        });
+      });
+    };
 
-  return (
-    <Box className={classes(['Input', fluid && 'Input--fluid'])}>
-      <div className="Input__baseline">.</div>
-      <input
-        className="Input__input"
-        value={format ? format(localValue) : localValue}
-        spellCheck={false}
-        onInput={handleInput}
-        onBlur={handleBlur}
-      />
-    </Box>
-  );
-};
+    const containerStyle = {
+      backgroundColor: hsvaToHslString({
+        h: hsva.h,
+        s: 100,
+        v: 100,
+        a: 1,
+      }),
+    };
 
-const SaturationValue = ({ hsva, onChange }) => {
-  const handleMove = (interaction: { left: number; top: number }) => {
-    onChange({
-      s: interaction.left * 100,
-      v: 100 - interaction.top * 100,
-    });
-  };
+    return (
+      <div className="react-colorful__saturation_value" style={containerStyle}>
+        <Interactive
+          onMove={handleMove}
+          onKey={handleKey}
+          aria-label="Color"
+          aria-valuetext={`Saturation ${Math.round(
+            hsva.s,
+          )}%, Brightness ${Math.round(hsva.v)}%`}
+        >
+          {[
+            <Pointer
+              key="pointer"
+              className="react-colorful__saturation_value-pointer"
+              top={1 - hsva.v / 100}
+              left={hsva.s / 100}
+              color={hsvaToHslString(hsva)}
+            />,
+          ]}
+        </Interactive>
+      </div>
+    );
+  },
+);
 
-  const handleKey = (offset: { left: number; top: number }) => {
-    onChange({
-      s: clamp(hsva.s + offset.left * 100, 0, 100),
-      v: clamp(hsva.v - offset.top * 100, 0, 100),
-    });
-  };
-
-  const containerStyle = {
-    backgroundColor: hsvaToHslString({
-      h: hsva.h,
-      s: 100,
-      v: 100,
-      a: 1,
-    }),
-  };
-
-  return (
-    <div className="react-colorful__saturation_value" style={containerStyle}>
-      <Interactive
-        onMove={handleMove}
-        onKey={handleKey}
-        aria-label="Color"
-        aria-valuetext={`Saturation ${Math.round(hsva.s)}%, Brightness ${Math.round(hsva.v)}%`}
-      >
-        {[
-          <Pointer
-            key="saturation-pointer"
-            className="react-colorful__saturation_value-pointer"
-            top={1 - hsva.v / 100}
-            left={hsva.s / 100}
-            color={hsvaToHslString(hsva)}
-          />,
-        ]}
-      </Interactive>
-    </div>
-  );
-};
-
-const Hue = ({
-  className,
-  hue,
-  onChange,
-}: {
+interface HueProps {
   className?: string;
   hue: number;
   onChange: (newHue: { h: number }) => void;
-}) => {
+}
+
+const Hue = React.memo(({ className, hue, onChange }: HueProps) => {
   const handleMove = (interaction: { left: number }) => {
-    onChange({ h: 360 * interaction.left });
+    requestAnimationFrame(() => {
+      onChange({ h: 360 * interaction.left });
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    onChange({ h: clamp(hue + offset.left * 360, 0, 360) });
+    requestAnimationFrame(() => {
+      onChange({ h: clamp(hue + offset.left * 360, 0, 360) });
+    });
   };
 
   const nodeClassName = classes(['react-colorful__hue', className]);
@@ -559,79 +543,85 @@ const Hue = ({
       </Interactive>
     </div>
   );
-};
+});
 
-const Saturation = ({
-  className,
-  color,
-  onChange,
-}: {
+interface SaturationProps {
   className?: string;
   color: HsvaColor;
   onChange: (newSaturation: { s: number }) => void;
-}) => {
-  const handleMove = (interaction: { left: number }) => {
-    onChange({ s: 100 * interaction.left });
-  };
+}
 
-  const handleKey = (offset: { left: number }) => {
-    onChange({ s: clamp(color.s + offset.left * 100, 0, 100) });
-  };
+const Saturation = React.memo(
+  ({ className, color, onChange }: SaturationProps) => {
+    const handleMove = (interaction: { left: number }) => {
+      requestAnimationFrame(() => {
+        onChange({ s: 100 * interaction.left });
+      });
+    };
 
-  const nodeClassName = classes(['react-colorful__saturation', className]);
+    const handleKey = (offset: { left: number }) => {
+      requestAnimationFrame(() => {
+        onChange({ s: clamp(color.s + offset.left * 100, 0, 100) });
+      });
+    };
 
-  return (
-    <div className={nodeClassName}>
-      <Interactive
-        style={{
-          background: `linear-gradient(to right, ${hsvaToHslString({
-            h: color.h,
-            s: 0,
-            v: color.v,
-            a: 1,
-          })}, ${hsvaToHslString({ h: color.h, s: 100, v: color.v, a: 1 })})`,
-        }}
-        onMove={handleMove}
-        onKey={handleKey}
-        aria-label="Saturation"
-        aria-valuenow={Math.round(color.s)}
-        aria-valuemax="100"
-        aria-valuemin="0"
-      >
-        {[
-          <Pointer
-            key="corolful-saturation-pointer"
-            className="react-colorful__saturation-pointer"
-            left={color.s / 100}
-            color={hsvaToHslString({
+    const nodeClassName = classes(['react-colorful__saturation', className]);
+
+    return (
+      <div className={nodeClassName}>
+        <Interactive
+          style={{
+            background: `linear-gradient(to right, ${hsvaToHslString({
               h: color.h,
-              s: color.s,
+              s: 0,
               v: color.v,
               a: 1,
-            })}
-          />,
-        ]}
-      </Interactive>
-    </div>
-  );
-};
+            })}, ${hsvaToHslString({ h: color.h, s: 100, v: color.v, a: 1 })})`,
+          }}
+          onMove={handleMove}
+          onKey={handleKey}
+          aria-label="Saturation"
+          aria-valuenow={Math.round(color.s)}
+          aria-valuemax="100"
+          aria-valuemin="0"
+        >
+          {[
+            <Pointer
+              key="saturation-pointer"
+              className="react-colorful__saturation-pointer"
+              left={color.s / 100}
+              color={hsvaToHslString({
+                h: color.h,
+                s: color.s,
+                v: color.v,
+                a: 1,
+              })}
+            />,
+          ]}
+        </Interactive>
+      </div>
+    );
+  },
+);
 
-const Value = ({
-  className,
-  color,
-  onChange,
-}: {
+interface ValueProps {
   className?: string;
   color: HsvaColor;
   onChange: (newValue: { v: number }) => void;
-}) => {
+}
+
+const Value = React.memo(({ className, color, onChange }: ValueProps) => {
   const handleMove = (interaction: { left: number }) => {
-    onChange({ v: 100 * interaction.left });
+    requestAnimationFrame(() => {
+      onChange({ v: 100 * interaction.left });
+    });
   };
 
   const handleKey = (offset: { left: number }) => {
-    onChange({
-      v: clamp(color.v + offset.left * 100, 0, 100),
+    requestAnimationFrame(() => {
+      onChange({
+        v: clamp(color.v + offset.left * 100, 0, 100),
+      });
     });
   };
 
@@ -657,7 +647,7 @@ const Value = ({
       >
         {[
           <Pointer
-            key="colorful_value-pointer"
+            key="value-pointer"
             className="react-colorful__value-pointer"
             left={color.v / 100}
             color={hsvaToHslString({
@@ -671,61 +661,64 @@ const Value = ({
       </Interactive>
     </div>
   );
-};
+});
 
-const RGBSlider = ({
-  className,
-  color,
-  onChange,
-  target,
-}: {
+interface RGBSliderProps {
   className?: string;
   color: HsvaColor;
   onChange: (newValue: HsvaColor) => void;
   target: 'r' | 'g' | 'b';
-}) => {
-  const rgb = hsvaToRgba(color);
+}
 
-  const setNewTarget = (value: number) => {
-    rgb[target] = value;
-    onChange(rgbaToHsva(rgb));
-  };
+const RGBSlider = React.memo(
+  ({ className, color, onChange, target }: RGBSliderProps) => {
+    const rgb = hsvaToRgba(color);
 
-  const handleMove = (interaction: { left: number }) => {
-    setNewTarget(255 * interaction.left);
-  };
+    const setNewTarget = (value: number) => {
+      const newRgb = { ...rgb, [target]: value };
+      onChange(rgbaToHsva(newRgb));
+    };
 
-  const handleKey = (offset: { left: number }) => {
-    setNewTarget(clamp(rgb[target] + offset.left * 255, 0, 255));
-  };
+    const handleMove = (interaction: { left: number }) => {
+      requestAnimationFrame(() => {
+        setNewTarget(255 * interaction.left);
+      });
+    };
 
-  const nodeClassName = classes([`react-colorful__${target}`, className]);
+    const handleKey = (offset: { left: number }) => {
+      requestAnimationFrame(() => {
+        setNewTarget(clamp(rgb[target] + offset.left * 255, 0, 255));
+      });
+    };
 
-  let selected =
-    target === 'r'
-      ? `rgb(${Math.round(rgb.r)},0,0)`
-      : target === 'g'
-        ? `rgb(0,${Math.round(rgb.g)},0)`
-        : `rgb(0,0,${Math.round(rgb.b)})`;
+    const nodeClassName = classes([`react-colorful__${target}`, className]);
 
-  return (
-    <div className={nodeClassName}>
-      <Interactive
-        onMove={handleMove}
-        onKey={handleKey}
-        aria-valuenow={rgb[target]}
-        aria-valuemax="255"
-        aria-valuemin="0"
-      >
-        {[
-          <Pointer
-            key="react-colorful-pointer"
-            className={`react-colorful__${target}-pointer`}
-            left={rgb[target] / 255}
-            color={selected}
-          />,
-        ]}
-      </Interactive>
-    </div>
-  );
-};
+    const selected =
+      target === 'r'
+        ? `rgb(${Math.round(rgb.r)},0,0)`
+        : target === 'g'
+          ? `rgb(0,${Math.round(rgb.g)},0)`
+          : `rgb(0,0,${Math.round(rgb.b)})`;
+
+    return (
+      <div className={nodeClassName}>
+        <Interactive
+          onMove={handleMove}
+          onKey={handleKey}
+          aria-valuenow={rgb[target]}
+          aria-valuemax="255"
+          aria-valuemin="0"
+        >
+          {[
+            <Pointer
+              key={`${target}-pointer`}
+              className={`react-colorful__${target}-pointer`}
+              left={rgb[target] / 255}
+              color={selected}
+            />,
+          ]}
+        </Interactive>
+      </div>
+    );
+  },
+);
