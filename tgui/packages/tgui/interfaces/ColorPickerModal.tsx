@@ -16,14 +16,7 @@ import {
 } from 'common/color';
 import { clamp } from 'common/math';
 import { classes } from 'common/react';
-import React, {
-  FocusEvent,
-  FormEvent,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Interaction, Interactive } from 'tgui/components/Interactive';
 
 import { useBackend } from '../backend';
@@ -444,48 +437,58 @@ interface HexColorInputProps {
 }
 
 const HexColorInput: React.FC<HexColorInputProps> = React.memo(
-  ({ prefixed, alpha, color, fluid, onChange, ...rest }) => {
-    const escape = useCallback(
-      (value: string) =>
-        value
-          .replace(/[^0-9A-Fa-f]/g, '')
-          .substring(0, alpha ? 8 : 6)
-          .toUpperCase(),
-      [alpha],
-    );
+  ({ alpha, color, fluid, onChange, ...rest }) => {
+    const initialColor = useMemo(() => {
+      const stripped = color
+        .replace(/[^0-9A-Fa-f]/g, '')
+        .substring(0, 6)
+        .toUpperCase();
+      return stripped;
+    }, [color]);
 
-    const validate = useCallback(
-      (value: string) =>
-        validHex(value, alpha) &&
-        (value.length === 6 || (alpha && value.length === 8)),
-      [alpha],
-    );
-
-    const [localValue, setLocalValue] = useState(escape(color));
+    const [localValue, setLocalValue] = useState(initialColor);
 
     useEffect(() => {
-      const newVal = escape(color);
-      if (newVal !== localValue) {
-        setLocalValue(newVal);
-      }
-    }, [color, escape, localValue]);
+      setLocalValue(initialColor);
+    }, [initialColor]);
 
-    const handleInput = (e: FormEvent<HTMLInputElement>) => {
-      const inputValue = escape(e.currentTarget.value);
-      setLocalValue(inputValue);
+    const isValidFullHex = useCallback(
+      (val: string) => {
+        return validHex(val, alpha) && val.length === 6;
+      },
+      [alpha],
+    );
 
-      if (inputValue.length === 6 && validate(inputValue)) {
-        onChange(inputValue);
+    const handleChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const inputValue = e.currentTarget.value;
+      const strippedValue = inputValue
+        .replace(/[^0-9A-Fa-f]/g, '')
+        .substring(0, 6)
+        .toUpperCase();
+
+      setLocalValue(strippedValue);
+
+      if (isValidFullHex(strippedValue)) {
+        onChange(strippedValue);
       }
     };
 
-    const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
-      const inputValue = escape(e.currentTarget.value);
-
-      if (!validate(inputValue) || inputValue.length !== 6) {
-        setLocalValue(escape(color));
+    const commitOrRevert = useCallback(() => {
+      if (isValidFullHex(localValue)) {
+        onChange(localValue);
       } else {
-        onChange(inputValue);
+        setLocalValue(initialColor);
+      }
+    }, [initialColor, isValidFullHex, localValue, onChange]);
+
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+      commitOrRevert();
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Enter') {
+        commitOrRevert();
+        (e.currentTarget as HTMLInputElement).blur();
       }
     };
 
@@ -496,8 +499,9 @@ const HexColorInput: React.FC<HexColorInputProps> = React.memo(
           className="Input__input"
           value={localValue}
           spellCheck={false}
-          onInput={handleInput}
+          onChange={handleChangeEvent}
           onBlur={handleBlur}
+          onKeyDown={handleKeyDown}
           {...rest}
         />
       </Box>
