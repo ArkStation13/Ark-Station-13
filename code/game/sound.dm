@@ -146,7 +146,7 @@
 				pressure_factor = 0
 
 			if(distance <= 1)
-				pressure_factor = max(pressure_factor, 0.15) //touching the source of the sound
+				pressure_factor = max(pressure_factor, 0.1) //touching the source of the sound // 0.15 - ARK STATION EDIT
 
 			sound_to_use.volume *= pressure_factor
 			//End Atmosphere affecting sound

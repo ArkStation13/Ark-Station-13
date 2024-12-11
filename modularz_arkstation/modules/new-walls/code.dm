@@ -104,6 +104,18 @@
 /turf/closed/mineral/random/stationside/asteroid
 	icon = MAP_SWITCH('modularz_arkstation/modules/new-walls/walls/red_wall.dmi', 'icons/turf/mining.dmi')
 
+/obj/structure/falsewall
+	icon_state = "wall-open"
+	base_icon_state = "wall"
+	icon = 'modularz_arkstation/modules/new-walls/walls/wall.dmi'
+	fake_icon = 'modularz_arkstation/modules/new-walls/walls/wall.dmi'
+
+/obj/structure/falsewall/reinforced
+	icon_state = "wall-open"
+	base_icon_state = "reinforced_wall"
+	icon = 'modularz_arkstation/modules/new-walls/walls/rwalls/reinforced_wall.dmi'
+	fake_icon = 'modularz_arkstation/modules/new-walls/walls/rwalls/reinforced_wall.dmi'
+
 // New-Old Icons (Ark Style)
 /turf/closed/wall/old
 	icon = 'modularz_arkstation/modules/new-walls/walls.dmi'

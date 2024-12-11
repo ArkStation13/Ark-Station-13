@@ -123,7 +123,7 @@
 	ambient_buzz = 'sound/ambience/maintenance/maintambience.ogg'
 	ambient_buzz_vol = 20
 
-// SCI
+// SCIENCE
 /area/station/science
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/sci.ogg'
 	ambient_buzz_vol = 20
@@ -132,7 +132,7 @@
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/sci.ogg'
 	ambient_buzz_vol = 20
 
-// MED
+// MEDICAL
 /area/station/medical
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/med.ogg'
 	ambient_buzz_vol = 20
@@ -163,14 +163,43 @@
 	min_ambience_cooldown = 35 SECONDS
 	max_ambience_cooldown = 65 SECONDS
 
-// SEC
+// SECURITY
 /area/station/security
-	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/ambidanger6.ogg'
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/security.ogg'
 	ambient_buzz_vol = 15
 
 /area/station/command/heads_quarters/hos
-	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/ambidanger6.ogg'
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/security.ogg'
 	ambient_buzz_vol = 15
+
+// ENGINEERING
+/area/station/engineering
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/engineering.ogg'
+	ambient_buzz_vol = 15
+
+/area/station/construction
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/engineering.ogg'
+	ambient_buzz_vol = 15
+
+// ATMOS
+/area/station/engineering/atmos
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/atmos.ogg'
+	ambient_buzz_vol = 10
+
+/area/space
+
+GLOBAL_LIST_INIT(space_ambience_ark,list(
+	'modular_nova/master_files/sound/ambience/starlight.ogg', //NOVA EDIT ADDITION
+	'sound/ambience/engineering/ambiatmos.ogg',
+	'sound/ambience/space/ambispace.ogg',
+	'sound/ambience/space/ambispace2.ogg',
+	'sound/ambience/space/ambispace3.ogg',
+	'sound/ambience/space/ambispace4.ogg',
+	'sound/ambience/space/ambispace5.ogg',
+	'sound/ambience/space/ambispace6.ogg',
+	'modularz_arkstation/modules/sounds-renewal/sound/ambience/space/space1.ogg',
+	'modularz_arkstation/modules/sounds-renewal/sound/ambience/space/space2.ogg',
+))
 
 // MISC
 /area/shuttle

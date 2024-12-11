@@ -2095,12 +2095,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room)
-"aSZ" = (
-/obj/machinery/computer/security/telescreen/interrogation{
-	name = "isolation room monitor"
-	},
-/turf/closed/wall/r_wall,
-/area/station/security/prison/safe)
 "aTb" = (
 /obj/structure/toilet{
 	dir = 4
@@ -3032,7 +3026,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/recreation)
 "bor" = (
-/obj/machinery/firealarm/directional/east,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
@@ -6016,10 +6009,6 @@
 	dir = 8
 	},
 /area/station/service/janitor)
-"czU" = (
-/obj/machinery/computer/security/telescreen/rd,
-/turf/closed/wall/r_wall,
-/area/station/maintenance/starboard/central)
 "cAb" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -7141,6 +7130,7 @@
 /obj/effect/turf_decal/siding/purple{
 	dir = 5
 	},
+/obj/machinery/computer/security/telescreen/rd/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "cWZ" = (
@@ -12263,6 +12253,7 @@
 /obj/machinery/computer/monitor{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/minisat/directional/south,
 /turf/open/floor/iron/smooth,
 /area/station/ai_monitored/turret_protected/aisat/equipment)
 "eYp" = (
@@ -13894,10 +13885,6 @@
 /obj/effect/landmark/start/mechanic,
 /turf/open/floor/iron/dark,
 /area/station/engineering/mechanic)
-"fEV" = (
-/obj/machinery/computer/security/telescreen/minisat,
-/turf/closed/wall/r_wall,
-/area/station/ai_monitored/turret_protected/aisat/maint)
 "fFe" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -16250,6 +16237,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/status_display/evac/directional/west,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/surgery/theatre)
 "gxg" = (
@@ -17380,13 +17368,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/engine,
 /area/station/engineering/atmos)
-"gPx" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching Prison Wing holding areas.";
-	name = "Prison Monitor"
-	},
-/turf/closed/wall/r_wall,
-/area/station/maintenance/port/aft)
 "gPN" = (
 /obj/structure/fermenting_barrel,
 /turf/open/floor/plating,
@@ -20928,11 +20909,12 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port/aft)
 "hWZ" = (
-/obj/machinery/computer/security/telescreen/interrogation{
-	name = "reflection room monitor"
+/obj/machinery/computer/security/telescreen{
+	desc = "Used for watching Prison Wing holding areas.";
+	name = "Prison Monitor"
 	},
 /turf/closed/wall,
-/area/station/security/execution/education)
+/area/station/security/lockers)
 "hXf" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Hull Breach Emergency Storage"
@@ -22475,6 +22457,7 @@
 	pixel_x = 1;
 	pixel_y = 3
 	},
+/obj/machinery/light_switch/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce)
 "iwO" = (
@@ -23782,10 +23765,6 @@
 /obj/item/stack/cable_coil/five,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"iSm" = (
-/obj/machinery/computer/security/telescreen/cmo,
-/turf/closed/wall,
-/area/station/command/heads_quarters/cmo)
 "iSr" = (
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
@@ -33289,6 +33268,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)
 "lVP" = (
+/obj/machinery/computer/security/telescreen/cmo/directional/west,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
 "lVW" = (
@@ -33905,10 +33885,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/maintenance/starboard/greater)
-"mfC" = (
-/obj/machinery/computer/security/telescreen/minisat,
-/turf/closed/wall/r_wall,
-/area/station/ai_monitored/turret_protected/aisat/equipment)
 "mfP" = (
 /obj/structure/hedge,
 /obj/machinery/light_switch/directional/west,
@@ -35060,6 +35036,7 @@
 	},
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/light/small/directional/south,
+/obj/machinery/computer/security/telescreen/vault/directional/south,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "mCf" = (
@@ -36051,7 +36028,9 @@
 /obj/structure/table/reinforced,
 /obj/item/toy/figure/mechanic,
 /obj/item/paper_bin,
-/obj/machinery/door/window/brigdoor/right/directional/north,
+/obj/machinery/door/window/brigdoor/right/directional/north{
+	req_access = list("engineering")
+	},
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/mechanic)
@@ -36737,6 +36716,7 @@
 	dir = 8
 	},
 /obj/machinery/photobooth/security,
+/obj/machinery/computer/security/telescreen/interrogation/directional/east,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "nhe" = (
@@ -38203,6 +38183,11 @@
 "nGd" = (
 /obj/machinery/vending/wardrobe/det_wardrobe,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/curtain{
+	pixel_x = -24;
+	name = "Curtains";
+	id = "detpriv"
+	},
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "nGe" = (
@@ -47480,7 +47465,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/obj/machinery/light_switch/directional/north,
 /turf/open/floor/iron/grimy,
 /area/station/command/heads_quarters/ce)
 "qCU" = (
@@ -53259,11 +53243,7 @@
 /area/station/maintenance/port/fore)
 "slZ" = (
 /obj/structure/closet/secure_closet/detective,
-/obj/machinery/requests_console/directional/north{
-	department = "Detective's Office";
-	name = "Detective Requests Console"
-	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/requests_console/directional/west,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "smd" = (
@@ -68399,17 +68379,16 @@
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/machinery/button/curtain{
-	pixel_x = -24;
-	name = "Curtains";
-	id = "detpriv"
-	},
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "wAp" = (
-/obj/machinery/computer/security/telescreen/interrogation,
-/turf/closed/wall,
-/area/station/security/brig)
+/obj/machinery/porta_turret/ai,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/status_display/ai/directional/north,
+/obj/machinery/computer/security/telescreen/minisat/directional/east,
+/turf/open/floor/iron/smooth,
+/area/station/ai_monitored/turret_protected/aisat_interior)
 "wAM" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/simple/general/visible{
@@ -69899,6 +69878,7 @@
 	pixel_x = 28;
 	pixel_y = 28
 	},
+/obj/machinery/computer/security/telescreen/interrogation/directional/north,
 /turf/open/floor/iron/dark/small,
 /area/station/security/execution/education)
 "wVI" = (
@@ -72281,9 +72261,12 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "xAE" = (
-/obj/machinery/computer/security/telescreen/vault,
+/obj/machinery/computer/security/telescreen{
+	desc = "Used for monitoring the engine.";
+	name = "Engine Monitor"
+	},
 /turf/closed/wall,
-/area/station/maintenance/port/greater)
+/area/station/command/heads_quarters/ce)
 "xAG" = (
 /turf/closed/wall,
 /area/station/maintenance/department/prison)
@@ -74426,12 +74409,13 @@
 /turf/open/floor/iron/dark/small,
 /area/station/service/chapel/funeral)
 "yaY" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring the engine.";
-	name = "Engine Monitor"
-	},
-/turf/closed/wall/r_wall,
-/area/station/maintenance/department/engine/atmos)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/structure/cable,
+/obj/machinery/computer/security/telescreen/interrogation/directional/north,
+/turf/open/floor/iron,
+/area/station/security)
 "yba" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/purple/visible/layer2{
 	dir = 4
@@ -88561,7 +88545,7 @@ mDh
 qVP
 kvO
 tug
-hWZ
+hXU
 wVs
 pxj
 hAC
@@ -89278,7 +89262,7 @@ lHe
 lWU
 tca
 mCb
-xAE
+mhk
 xZd
 mhk
 sNW
@@ -90843,8 +90827,8 @@ xFO
 yeF
 xle
 xle
-xPJ
 xle
+xPJ
 xle
 xKx
 kte
@@ -90869,7 +90853,7 @@ dDQ
 utP
 bVO
 fpd
-gPx
+wuc
 iiX
 sos
 trp
@@ -91098,7 +91082,7 @@ tEW
 blq
 uoW
 xle
-xle
+snw
 slZ
 nGd
 wAj
@@ -91354,7 +91338,7 @@ mKY
 wWT
 xiF
 xOS
-snw
+xle
 vrt
 swu
 iDA
@@ -91376,7 +91360,7 @@ xdo
 gLs
 nfg
 icc
-xFe
+hWZ
 rqp
 bQc
 phd
@@ -92459,7 +92443,7 @@ qPN
 qPN
 qPN
 qPN
-aSZ
+qPN
 qPN
 eQk
 qPN
@@ -92833,7 +92817,7 @@ lhq
 cBw
 bNq
 bNq
-yaY
+bNq
 bNq
 knv
 eeY
@@ -93167,8 +93151,8 @@ qVV
 qVV
 qVV
 qVV
-wAp
-ylR
+qVV
+yaY
 qlc
 xur
 nGi
@@ -93602,7 +93586,7 @@ rdH
 gpI
 ceP
 wld
-gpI
+xAE
 qCT
 rWH
 bNq
@@ -101830,7 +101814,7 @@ eND
 dbz
 fkj
 wct
-edU
+wAp
 eBN
 fQY
 fTh
@@ -102087,7 +102071,7 @@ eNU
 qEk
 wct
 gOm
-mfC
+gOm
 eDJ
 gOm
 xvT
@@ -102604,7 +102588,7 @@ itb
 eip
 eFk
 eYn
-fEV
+xvT
 fDk
 gcL
 wen
@@ -102707,7 +102691,7 @@ vDV
 vDV
 qxN
 wCY
-iSm
+wCY
 wCY
 wgL
 ngq
@@ -121940,7 +121924,7 @@ xVY
 cyx
 xok
 upe
-czU
+xok
 cWT
 nuo
 eQt
