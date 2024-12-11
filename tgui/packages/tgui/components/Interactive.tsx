@@ -50,7 +50,7 @@ const getRelativePosition = (
 export interface InteractiveProps {
   onMove: (interaction: Interaction) => void;
   onKey: (offset: Interaction) => void;
-  children: ReactNode[];
+  children: ReactNode; // Change from ReactNode[] to ReactNode
   style?: React.CSSProperties;
 }
 
@@ -74,7 +74,6 @@ export class Interactive extends Component<InteractiveProps> {
   };
 
   handleMove = (event: MouseEvent) => {
-    // Prevent text selection
     event.preventDefault();
 
     const isDown = event.buttons > 0;
@@ -121,10 +120,11 @@ export class Interactive extends Component<InteractiveProps> {
   }
 
   render() {
+    const { style, children, ...rest } = this.props;
     return (
       <div
-        {...this.props}
-        style={this.props.style}
+        {...rest}
+        style={style}
         ref={this.containerRef}
         onMouseDown={this.handleMoveStart}
         className="react-colorful__interactive"
@@ -132,7 +132,7 @@ export class Interactive extends Component<InteractiveProps> {
         tabIndex={0}
         role="slider"
       >
-        {this.props.children}
+        {children}
       </div>
     );
   }
