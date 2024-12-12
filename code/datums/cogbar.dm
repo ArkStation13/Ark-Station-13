@@ -45,7 +45,7 @@
 /// Adds the cog to the user, visible by other players
 /datum/cogbar/proc/add_cog_to_user()
 	cog = SSvis_overlays.add_vis_overlay(user,
-		icon = 'icons/effects/progressbar.dmi',
+		icon = 'modularz_arkstation/modules/new-progressbar-sprites/progressbar.dmi', // ARK STATION EDIT - OUR NEW COG
 		iconstate = "cog",
 		plane = HIGH_GAME_PLANE,
 		add_appearance_flags = APPEARANCE_UI_IGNORE_ALPHA,
@@ -57,13 +57,14 @@
 
 	if(isnull(user_client))
 		return
-
+/* // ARK STATION REMOVED START
 	blank = image('icons/blanks/32x32.dmi', cog, "nothing")
 	SET_PLANE_EXPLICIT(blank, HIGH_GAME_PLANE, user)
 	blank.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	blank.override = TRUE
 
 	user_client.images += blank
+*/ // ARK STATION REMOVED END
 
 
 /// Removes the cog from the user

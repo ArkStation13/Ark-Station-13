@@ -69,6 +69,7 @@
 	/// Keeps track of our soulcatcher component
 	var/datum/component/soulcatcher/tracked_soulcatcher
 	/// What is this gun's extended examine, we only have to do this because the carbine is a subtype
+	/* // ARK STATION REMOVED START
 	var/expanded_examine_text = "The Hyeseong rifle is the first line of man-portable Marsian weapons platforms \
 		from Cybersun Industries. Like her younger sister weapon, the Hoshi carbine, CI used funding aid provided \
 		by SolFed to develop a portable weapon fueled by a proprietary generator rumored to be fueled by superstable plasma. \
@@ -76,7 +77,8 @@
 		in CQB. Her onboard machine intelligence, at first devised to support the operator and manage the internal reactor, \
 		is shipped with a more professional and understated personality-- since influenced by 'negligence' from users in \
 		wiping the intelligence's memory before resale or transport."
-	/// A cooldown for when the weapon has last spoken, prevents messages from getting turbo spammed
+	*/ // ARK STATION REMOVED END
+	/// A cooldown for when the weapon has last spoken, prevents messages from getting turbo spammed // ARK STATION REMOVED
 	COOLDOWN_DECLARE(last_speech)
 
 /obj/item/gun/energy/modular_laser_rifle/Initialize(mapload)
@@ -96,7 +98,7 @@
 
 /obj/item/gun/energy/modular_laser_rifle/examine_more(mob/user)
 	. = ..()
-	. += expanded_examine_text
+	// . += expanded_examine_text // ARK STATION REMOVED
 	return .
 
 /obj/item/gun/energy/modular_laser_rifle/Destroy()
@@ -277,6 +279,7 @@
 	)
 	default_selected_mode = "Incinerate"
 	speech_json_file = SHORT_MOD_LASER_SPEECH
+	/* // ARK STATION REMOVED START
 	expanded_examine_text = "The Hoshi carbine is the latest line of man-portable Marsian weapons platforms from \
 		Cybersun Industries. Like her older sister weapon, the Hyeseong rifle, CI used funding aid provided by SolFed \
 		to develop a portable weapon fueled by a proprietary generator rumored to be fueled by superstable plasma. A \
@@ -284,6 +287,7 @@
 		ineffective at ranged combat. Her onboard machine intelligence, at first devised to support the operator and \
 		manage the internal reactor, was originally shipped with a more energetic personality-- since influenced by 'negligence' \
 		from users in wiping the intelligence's memory before resale or transport."
+	*/ // ARK STATION REMOVED END
 
 /obj/item/gun/energy/modular_laser_rifle/carbine/emp_act(severity)
 	. = ..()

@@ -48,7 +48,9 @@
 		QUEUE_SMOOTH(src)
 
 /obj/structure/grille/update_icon_state()
-	icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]"
+	// icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]" // ARK STATION REMOVED
+	if(broken) // ARK STATION ADDITION
+		icon_state = "brokengrille" // ARK STATION ADDITION
 	return ..()
 
 /obj/structure/grille/examine(mob/user)
@@ -305,6 +307,8 @@
 		rods_amount = 1
 		var/obj/item/dropped_rods = new rods_type(drop_location(), rods_amount)
 		transfer_fingerprints_to(dropped_rods)
+		smoothing_flags = NONE // ARK STATION ADDITION
+		update_appearance() // ARK STATION ADDITION
 
 /obj/structure/grille/proc/repair_grille()
 	if(broken)
@@ -313,6 +317,8 @@
 		atom_integrity = max_integrity
 		broken = FALSE
 		rods_amount = 2
+		smoothing_flags = SMOOTH_BITMASK // ARK STATION ADDITION
+		update_appearance() // ARK STATION ADDITION
 		return TRUE
 	return FALSE
 

@@ -17,7 +17,7 @@
 	custom_materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 6.5)
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg' // SFX_SWING_HIT // ARK STATION EDIT
+	hitsound = 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg' // SFX_SWING_HIT // ARK STATION EDIT
 	sharpness = SHARP_EDGED
 	actions_types = list(/datum/action/item_action/startchainsaw)
 	tool_behaviour = TOOL_SAW
@@ -38,7 +38,7 @@
 		throwforce_on = force_on, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
-		hitsound_on = 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg',/*ARK STATIOM EDIT*/ \
+		hitsound_on = 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg',/*ARK STATIOM EDIT*/ \
 		w_class_on = w_class, \
 	)
 
@@ -49,7 +49,7 @@
 		speed = 3 SECONDS, \
 		effectiveness = 100, \
 		bonus_modifier = 0, \
-		butcher_sound = 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg',/*ARK STATIOM EDIT*/ \
+		butcher_sound = 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg',/*ARK STATIOM EDIT*/ \
 		disabled = TRUE, \
 	)
 	AddComponent(/datum/component/two_handed, require_twohands = TRUE)
@@ -75,7 +75,7 @@
 		return BRUTELOSS
 
 	user.visible_message(span_suicide("[user] begins to tear [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'zov_modular_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg', 100, TRUE) // ARK STATION EDIT
+	playsound(src, 'modularz_arkstation/modules/sounds-renewal/sound/weapons/chainsawhit.ogg', 100, TRUE) // ARK STATION EDIT
 	var/obj/item/bodypart/head/myhead = user.get_bodypart(BODY_ZONE_HEAD)
 	if(myhead)
 		myhead.dismember()
