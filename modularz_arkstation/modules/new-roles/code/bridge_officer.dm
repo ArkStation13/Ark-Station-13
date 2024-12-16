@@ -75,7 +75,7 @@
 	id_trim = /datum/id_trim/job/bridge_officer
 
 /obj/effect/landmark/start/bridge_officer
-	name = "Bridge Officer"
+	name = JOB_BRIDGE_OFFICER
 	icon_state = "Nanotrasen Consultant"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 

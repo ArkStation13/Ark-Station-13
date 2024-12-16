@@ -58,7 +58,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 // START LANDMARKS FOLLOW. Don't change the names unless
 // you are refactoring shitty landmark code.
 /obj/effect/landmark/start/assistant
-	name = JOB_ASSISTANT
+	name = "Colonist"
 	icon_state = "Assistant" //icon_state is case sensitive. why are all of these capitalized? because fuck you that's why // ARK STATION EDIT
 
 /obj/effect/landmark/start/assistant/override
@@ -77,111 +77,111 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return
 
 /obj/effect/landmark/start/janitor
-	name = "Janitor"
+	name = JOB_JANITOR
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Cargo Technician"
+	name = JOB_CARGO_TECHNICIAN
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bitrunner
-	name = "Bitrunner"
+	name = JOB_BITRUNNER
 	icon_state = "Bitrunner"
 
 /obj/effect/landmark/start/bartender
-	name = "Bartender"
+	name = JOB_BARTENDER
 	icon_state = "Bartender"
 
 /obj/effect/landmark/start/clown
-	name = "Clown"
+	name = JOB_CLOWN
 	icon_state = "Clown"
 
 /obj/effect/landmark/start/mime
-	name = "Mime"
+	name = JOB_MIME
 	icon_state = "Mime"
 
 /obj/effect/landmark/start/quartermaster
-	name = "Quartermaster"
+	name = JOB_QUARTERMASTER
 	icon_state = "Quartermaster"
 
 /obj/effect/landmark/start/atmospheric_technician
-	name = "Atmospheric Technician"
+	name = JOB_ATMOSPHERIC_TECHNICIAN
 	icon_state = "Atmospheric Technician"
 
 /obj/effect/landmark/start/cook
-	name = "Cook"
+	name = JOB_COOK
 	icon_state = "Cook"
 
 /obj/effect/landmark/start/shaft_miner
-	name = "Shaft Miner"
+	name = JOB_SHAFT_MINER
 	icon_state = "Shaft Miner"
 
 /obj/effect/landmark/start/security_officer
-	name = "Security Officer"
+	name = JOB_SECURITY_OFFICER
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/botanist
-	name = "Botanist"
+	name = JOB_BOTANIST
 	icon_state = "Botanist"
 
 /obj/effect/landmark/start/head_of_security
-	name = "Head of Security"
+	name = JOB_HEAD_OF_SECURITY
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/captain
-	name = "Captain"
+	name = JOB_CAPTAIN
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "Detective"
+	name = JOB_DETECTIVE
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden
-	name = "Warden"
+	name = JOB_WARDEN
 	icon_state = "Warden"
 
 /obj/effect/landmark/start/chief_engineer
-	name = "Chief Engineer"
+	name = JOB_CHIEF_ENGINEER
 	icon_state = "Chief Engineer"
 
 /obj/effect/landmark/start/head_of_personnel
-	name = "Head of Personnel"
+	name = JOB_HEAD_OF_PERSONNEL
 	icon_state = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
-	name = "Curator"
+	name = JOB_CURATOR
 	icon_state = "Curator"
 
 /obj/effect/landmark/start/lawyer
-	name = "Lawyer"
+	name = JOB_LAWYER
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/station_engineer
-	name = "Station Engineer"
+	name = JOB_STATION_ENGINEER
 	icon_state = "Station Engineer"
 
 /obj/effect/landmark/start/medical_doctor
-	name = "Medical Doctor"
+	name = JOB_MEDICAL_DOCTOR
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/coroner
-	name = "Coroner"
+	name = JOB_CORONER
 	icon_state = "Coroner"
 
 /obj/effect/landmark/start/paramedic
-	name = "Paramedic"
+	name = JOB_PARAMEDIC
 	icon_state = "Paramedic"
 
 /obj/effect/landmark/start/scientist
-	name = "Scientist"
+	name = JOB_SCIENTIST
 	icon_state = "Scientist"
 
 /obj/effect/landmark/start/chemist
-	name = "Chemist"
+	name = JOB_CHEMIST
 	icon_state = "Chemist"
 
 /obj/effect/landmark/start/roboticist
-	name = "Roboticist"
+	name = JOB_ROBOTICIST
 	icon_state = "Roboticist"
 
 /obj/effect/landmark/start/research_director
@@ -189,24 +189,24 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Research Director" // ARK STATION EDIT
 
 /obj/effect/landmark/start/geneticist
-	name = "Geneticist"
+	name = JOB_GENETICIST
 	icon_state = "Geneticist"
 
 /obj/effect/landmark/start/chief_medical_officer
-	name = "Chief Medical Officer"
+	name = JOB_CHIEF_MEDICAL_OFFICER
 	icon_state = "Chief Medical Officer"
 
 
 /obj/effect/landmark/start/psychologist
-	name = "Psychologist"
+	name = JOB_PSYCHOLOGIST
 	icon_state = "Psychologist"
 
 /obj/effect/landmark/start/chaplain
-	name = "Chaplain"
+	name = JOB_CHAPLAIN
 	icon_state = "Chaplain"
 
 /obj/effect/landmark/start/cyborg
-	name = "Cyborg"
+	name = JOB_CYBORG
 	icon_state = "Cyborg"
 	//NOVA EDIT: Start - Makes latejoin cyborgs spawn in the station instead of on the interlink.
 	jobspawn_override = TRUE
@@ -214,7 +214,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	//NOVA EDIT: End - Makes latejoin cyborgs spawn in the station instead of on the interlink.
 
 /obj/effect/landmark/start/ai
-	name = "AI"
+	name = JOB_AI
 	icon_state = "AI"
 	delete_after_roundstart = FALSE
 	var/primary_ai = TRUE
@@ -248,19 +248,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return ..()
 
 /obj/effect/landmark/start/depsec/supply
-	name = "supply_sec"
+	name = JOB_SECURITY_OFFICER_SUPPLY
 	department = SEC_DEPT_SUPPLY
 
 /obj/effect/landmark/start/depsec/medical
-	name = "medical_sec"
+	name = JOB_SECURITY_OFFICER_MEDICAL
 	department = SEC_DEPT_MEDICAL
 
 /obj/effect/landmark/start/depsec/engineering
-	name = "engineering_sec"
+	name = JOB_SECURITY_OFFICER_ENGINEERING
 	department = SEC_DEPT_ENGINEERING
 
 /obj/effect/landmark/start/depsec/science
-	name = "science_sec"
+	name = JOB_SECURITY_OFFICER_SCIENCE
 	department = SEC_DEPT_SCIENCE
 
 //Antagonist spawns

@@ -61,7 +61,7 @@
 	)
 
 /obj/effect/landmark/start/stowaway
-	name = "Stowaway"
+	name = JOB_STOWAWAY
 	icon_state = "Assistant"
 	jobspawn_override = TRUE
 	delete_after_roundstart = FALSE

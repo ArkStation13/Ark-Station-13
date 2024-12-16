@@ -80,7 +80,7 @@
 	implants = list(/obj/item/implant/mindshield)
 
 /obj/effect/landmark/start/brig_pilot
-	name = "Brig Pilot"
+	name = "Red Hawk Pilot"
 	icon_state = "Corrections Officer"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 
