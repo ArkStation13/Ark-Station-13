@@ -45,11 +45,11 @@
 	name = "Burning Offering"
 	desc = "Sacrifice a buckled burning or husked corpse for favor, the more burn damage the corpse has the more favor you will receive."
 	ritual_length = 15 SECONDS
-	ritual_invocations = list("Горящее тело ...", // ARK STATION EDIT
-	"... очищенное языками пламени ...", // ARK STATION EDIT
-	"... все мы сотканы из огня ...", // ARK STATION EDIT
-	"... и к нему ...") // ARK STATION EDIT
-	invoke_msg = "... МЫ ВЕРНЕМСЯ! " // ARK STATION EDIT
+	ritual_invocations = list("Burning body ...",
+	"... cleansed by the flame ...",
+	"... we were all created from fire ...",
+	"... and to it ...")
+	invoke_msg = "... WE RETURN! "
 ///the burning corpse chosen for the sacrifice of the rite
 	var/mob/living/carbon/chosen_sacrifice
 

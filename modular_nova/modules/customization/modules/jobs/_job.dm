@@ -35,12 +35,14 @@
 	var/species_type = pref.read_preference(/datum/preference/choiced/species)
 	var/datum/species/species = new species_type
 	var/my_id = species.id
-	if(species_whitelist && !species_whitelist[my_id])
-		return TRUE
+	if(length(species_whitelist)) // ARK STATION FIX
+		if(!(my_id in species_whitelist)) // ARK STATION FIX
+			return TRUE // ARK STATION FIX
 	else if(!(my_id in get_selectable_species()))
 		return TRUE
-	if(species_blacklist && species_blacklist[my_id])
-		return TRUE
+	if(length(species_blacklist)) // ARK STATION FIX
+		if((my_id in species_blacklist)) // ARK STATION FIX
+			return TRUE // ARK STATION FIX
 	return FALSE
 
 /datum/job/proc/has_banned_augment(datum/preferences/pref)

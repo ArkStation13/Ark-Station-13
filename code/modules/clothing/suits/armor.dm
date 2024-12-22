@@ -441,7 +441,6 @@
 	strip_delay = 120
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	clothing_flags = THICKMATERIAL
-	clothing_flags = THICKMATERIAL
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
@@ -704,8 +703,8 @@
 	AddComponent(/datum/component/toggle_icon)
 
 /obj/item/clothing/suit/armor/vest/hop
-	name = "head of personnel's coat"
-	desc = "A stylish coat given to a Head of Personnel."
+	name = "Donk Co. Manager's coat" // ARK STATION EDIT
+	desc = "A stylish coat given to a Donk Co. Manager." // ARK STATION EDIT
 	icon_state = "hop_coat"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -784,8 +783,8 @@
 	take_damage(1, BRUTE, 0, 0)
 
 /obj/item/clothing/suit/armor/durability/watermelon
-	name = "watermelon"
-	desc = "An armour, made from watermelons. Propably won't take too many hits, but at least it looks serious... As serious as worn watermelon can be."
+	name = "watermelon armor"
+	desc = "An armor, made from watermelons. Propably won't take too many hits, but at least it looks serious... As serious as worn watermelon can be."
 	icon_state = "watermelon"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -818,8 +817,8 @@
 	wound = 5
 
 /obj/item/clothing/suit/armor/durability/holymelon
-	name = "holymelon"
-	desc = "An armour, made from holymelons. Inspires you to go on some sort of a crusade... Perhaps spreading spinach to children?"
+	name = "holymelon armor"
+	desc = "An armor, made from holymelons. Inspires you to go on some sort of a crusade... Perhaps spreading spinach to children?"
 	icon_state = "holymelon"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -857,8 +856,8 @@
 
 
 /obj/item/clothing/suit/armor/durability/barrelmelon
-	name = "barrelmelon"
-	desc = "An armour, made from barrelmelons. Reeks of ale, inspiring to courageous deeds. Or, perhaps, a bar brawl."
+	name = "barrelmelon armor"
+	desc = "An armor, made from barrelmelons. Reeks of ale, inspiring to courageous deeds. Or, perhaps, a bar brawl."
 	icon_state = "barrelmelon"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS

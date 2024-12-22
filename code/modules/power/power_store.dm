@@ -161,7 +161,7 @@
 /// - used: Amount of power in joules to use.
 /// - force: If true, uses the remaining power from the cell if there isn't enough power to supply the demand.
 /// Returns: The power used from the cell in joules.
-/obj/item/stock_parts/power_store/use(used, force)
+/obj/item/stock_parts/power_store/use(used, force = FALSE)
 	var/power_used = min(used, charge)
 	if(rigged && power_used > 0)
 		explode()

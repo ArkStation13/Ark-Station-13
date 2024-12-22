@@ -84,6 +84,9 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	var/rolling_usage_length = 5 SECONDS
 
 /datum/controller/master/New()
+	// Ensure usr is null, to prevent any potential weirdness resulting from the MC having a usr if it's manually restarted.
+	usr = null
+
 	if(!config)
 		config = new
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
@@ -371,7 +374,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 
 
 	if(world.system_type == MS_WINDOWS && CONFIG_GET(flag/toast_notification_on_init) && !length(GLOB.clients))
-		world.shelleo("start /min powershell -ExecutionPolicy Bypass -File tools/initToast/initToast.ps1 -name \"[world.name]\" -icon %CD%\\zov_modular_arkstation\\_master_files\\icons\\ui_icons\\common\\tg_16.png -port [world.port]") // ARK STATION EDIT
+		world.shelleo("start /min powershell -ExecutionPolicy Bypass -File tools/initToast/initToast.ps1 -name \"[world.name]\" -icon %CD%\\modularz_arkstation\\_master_files\\icons\\ui_icons\\common\\tg_16.png -port [world.port]") // ARK STATION EDIT
 
 	// Set world options.
 	world.change_fps(CONFIG_GET(number/fps))
