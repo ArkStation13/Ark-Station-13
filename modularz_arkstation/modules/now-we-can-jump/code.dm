@@ -26,7 +26,7 @@
 
 	if(user.legcuffed) // Если Ноги связаны (Болой к примеру)
 		if(user.handcuffed) // А если ещё и руки.
-			user.visible_message(span_alert("[user] tried to jump with [user.p_their()] hands and feet tied, which is why [user.p_they()] fell and [jump_message]."))
+			user.visible_message(span_alert("[user] had tried to jump while being tied, so [user.p_they()] fell and [jump_message]."))
 			if(jump_message == JUMP_MESSAGE_NOSE) // Если зарандомил ломание носа.
 				user.adjustStaminaLoss(30)
 				user.Paralyze(30)
@@ -49,16 +49,16 @@
 
 // Проверки на Пуллы
 	if(user.pulledby)
-		to_chat(user, span_warning("I won't be able to jump while I'm being pulled."))
+		to_chat(user, span_warning("I can't jump while I'm being pulled."))
 		return
 
 	if(user.pulling)
-		to_chat(user, span_warning("I won't be able to jump while I'm pulling someone."))
+		to_chat(user, span_warning("I can't jump while I'm pulling someone."))
 		return
 //
 
 	if(user.staminaloss >= 60) // ПРЕДУПРЕЖДАЕМ ЧТО НЕКСТ ПРЫЖОК 100% БУДЕТ ЛЕЖАЧИМ.
-		to_chat(user, span_warning("My legs are really starting to hurt..."))
+		to_chat(user, span_warning("My legs really hurt..."))
 
 	if(user.staminaloss >= 90) // ПЕРЕПРЫГАЛ? ПОЛУЧАЙ НАХУЙ ИНСУЛЬТ.
 		to_chat(user, span_notice("Tired muscles are unable to lift your carcass into the air and you fall to the floor."))

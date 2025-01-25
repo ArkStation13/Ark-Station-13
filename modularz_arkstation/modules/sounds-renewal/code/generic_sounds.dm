@@ -145,6 +145,11 @@
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/med_sur.ogg'
 	ambient_buzz_vol = 20
 
+/area/station/medical/psychology
+	ambient_buzz = 'sound/ambience/misc/ticking_clock.ogg'
+	ambient_buzz_vol = 10
+	ambientsounds = null
+
 // CHAPEL
 /area/station/service/chapel
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/church.ogg'
@@ -186,7 +191,11 @@
 	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/atmos.ogg'
 	ambient_buzz_vol = 10
 
-/area/space
+// AI and TELECOMMS
+
+/area/station/tcommsat
+	ambient_buzz = 'modularz_arkstation/modules/sounds-renewal/sound/ambience/tcommsat.ogg'
+	ambient_buzz_vol = 15
 
 GLOBAL_LIST_INIT(space_ambience_ark,list(
 	'modular_nova/master_files/sound/ambience/starlight.ogg', //NOVA EDIT ADDITION

@@ -195,6 +195,8 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			var/reason = trim(params["reason"], MAX_MESSAGE_LEN)
 			if (length(reason) < CALL_SHUTTLE_REASON_LENGTH)
 				return
+			if(tgui_alert(user, "Вызывать шаттл Эвакуации стоит ТОЛЬКО если Ковчегу пришёл конец и это ваш единственный шанс на выживание. Вы согласны?", "Запросить Эвакуацию", list("Да", "Нет")) != "Да") // ARK STATION ADDITION
+				return
 			SSshuttle.requestEvac(user, reason)
 			post_status("shuttle")
 		if ("changeSecurityLevel")

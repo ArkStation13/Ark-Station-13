@@ -4,13 +4,15 @@
 	. = ..()
 	SEND_SOUND(owner.current, sound('modularz_arkstation/modules/sounds-renewal/sound/antag/pirate.ogg'))
 
-/datum/antagonist/rev/greet()
-	. = ..()
-	SEND_SOUND(owner.current, sound('modularz_arkstation/modules/sounds-renewal/sound/antag/revolution.ogg'))
+/datum/antagonist/rev
+	stinger_sound = 'modularz_arkstation/modules/sounds-renewal/sound/antag/revolution.ogg'
 
 /datum/antagonist/cop/greet()
 	. = ..()
 	SEND_SOUND(owner.current, sound('modularz_arkstation/modules/sounds-renewal/sound/antag/nri_spawn.ogg'))
+
+/datum/antagonist/nukeop
+	stinger_sound = 'modularz_arkstation/modules/sounds-renewal/sound/antag/nuketeam.ogg'
 
 //////////////////// Звуки при появлении ОБР
 
