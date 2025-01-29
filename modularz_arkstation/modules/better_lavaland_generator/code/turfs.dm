@@ -6,22 +6,22 @@
 	icon_state = "grass-255"
 	base_icon_state = "grass"
 	planetary_atmos = TRUE
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_red.dmi'
-	smooth_icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_red.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_red.dmi'
+	smooth_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_red.dmi'
 	light_range = 0.1
 	light_power = 0.1
 	light_color = LIGHT_COLOR_FIRE
 	gender = PLURAL
 
 /turf/open/misc/grass/lavaland/orange
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_orange.dmi'
-	smooth_icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_orange.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_orange.dmi'
+	smooth_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_orange.dmi'
 	baseturfs = /turf/open/misc/grass/lavaland/orange
 
 /turf/open/misc/grass/lavaland/purple
 	baseturfs = /turf/open/misc/grass/lavaland/purple
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_purple.dmi'
-	smooth_icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_grass_purple.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_purple.dmi'
+	smooth_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_grass_purple.dmi'
 
 //
 /turf/open/misc/asteroid/basalt/lava_land_surface/lit
@@ -33,7 +33,7 @@
 /turf/open/misc/asteroid/purple
 	name = "ashen sand"
 	desc = "Sand, tinted by the chemicals in the atmosphere to an uncanny shade of purple."
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lavaland_purple.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lavaland_purple.dmi'
 	baseturfs = /turf/open/misc/asteroid/purple
 	turf_type = /turf/open/misc/asteroid/basalt/purple
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
@@ -46,7 +46,7 @@
 
 //
 /turf/open/misc/asteroid/basalt/purple
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lavaland_purple.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lavaland_purple.dmi'
 	baseturfs = /turf/open/misc/asteroid/basalt/purple
 	turf_type = /turf/open/misc/asteroid/basalt/purple
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
@@ -65,7 +65,7 @@
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 	icon_state = "moss"
-	icon = 'modularz_arkstation/modules/icons/better_lavaland_generator/lava_moss.dmi'
+	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/lava_moss.dmi'
 	base_icon_state = "moss"
 	bullet_bounce_sound = null
 	footstep = FOOTSTEP_GRASS
