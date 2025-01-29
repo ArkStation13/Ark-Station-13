@@ -4,6 +4,8 @@
 	progression_reward = 2 MINUTES
 	telecrystal_reward = list(1, 2)
 
+	abstract_type = /datum/traitor_objective/target_player/assassinate/behead
+
 	///the body who needs to hold the head
 	var/mob/living/needs_to_hold_head
 	///the head that needs to be picked up
@@ -12,6 +14,8 @@
 /datum/traitor_objective/target_player/assassinate/behead/heads_of_staff
 	progression_reward = 4 MINUTES
 	telecrystal_reward = list(2, 3)
+
+	abstract_type = /datum/traitor_objective/target_player/assassinate/behead/heads_of_staff
 
 	heads_of_staff = TRUE
 

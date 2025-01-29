@@ -26,6 +26,7 @@
 	name = "pack of cave fern seeds"
 	desc = "These seeds grow into cave ferns."
 	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
+	growing_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
 	plantname = "Cave Fern"
 	icon_state = "seed_fern"
 	species = "fern"
@@ -115,6 +116,7 @@
 	name = "Pucestal Growth"
 	desc = "A collection of puce colored crystal growths."
 	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/ash_flora.dmi'
+	growing_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
 	icon_state = "pucetal"
 	harvested_name = "Pucestal fragments"
 	harvested_desc = "A few pucestal fragments, slowly regrowing."
