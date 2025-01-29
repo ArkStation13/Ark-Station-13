@@ -13,7 +13,7 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	..()
+	. = ..()
 
 // Bullets
 /obj/projectile/bullet
@@ -33,7 +33,7 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	..()
+	. = ..()
 
 /datum/embed_data/bullet
 	embed_chance=30 // 20
@@ -55,6 +55,6 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	..()
+	. = ..()
 
 //
