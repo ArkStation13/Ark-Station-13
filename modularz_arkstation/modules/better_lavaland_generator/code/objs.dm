@@ -116,7 +116,6 @@
 	name = "Pucestal Growth"
 	desc = "A collection of puce colored crystal growths."
 	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/ash_flora.dmi'
-	growing_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
 	icon_state = "pucetal"
 	harvested_name = "Pucestal fragments"
 	harvested_desc = "A few pucestal fragments, slowly regrowing."
@@ -148,6 +147,7 @@
 	desc = "These crystals can be grown into larger crystals."
 	plantname = "Pucestal Growth"
 	icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
+	growing_icon = 'modularz_arkstation/modules/better_lavaland_generator/icons/growing.dmi'
 	icon_state = "cluster_puce"
 	species = "puce"
 	growthstages = 3
