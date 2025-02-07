@@ -4,6 +4,7 @@
 
 // Melee
 /obj/item/Initialize(mapload)
+	. = ..()
 	if(wound_bonus <= 0)
 		wound_bonus = 10
 	else
@@ -13,7 +14,7 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	. = ..()
+
 
 // Bullets
 /obj/projectile/bullet
@@ -24,6 +25,7 @@
 	light_on = TRUE
 
 /obj/projectile/bullet/Initialize(mapload)
+	. = ..()
 	if(wound_bonus <= 0)
 		wound_bonus = 5
 	else
@@ -33,7 +35,7 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	. = ..()
+
 
 /datum/embed_data/bullet
 	embed_chance=30 // 20
@@ -46,6 +48,7 @@
 
 // Beams
 /obj/projectile/beam/Initialize(mapload)
+	. = ..()
 	if(wound_bonus <= 0)
 		wound_bonus = 5
 	else
@@ -55,6 +58,5 @@
 		bare_wound_bonus = 10
 	else
 		bare_wound_bonus = bare_wound_bonus * 2
-	. = ..()
 
 //
