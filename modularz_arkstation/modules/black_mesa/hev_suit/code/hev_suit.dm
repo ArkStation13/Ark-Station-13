@@ -32,8 +32,9 @@
 /obj/item/clothing/head/helmet/space/hev_suit
 	name = "hazardous environment suit helmet"
 	desc = "The Mark IV HEV suit helmet."
-	icon = 'modular_nova/master_files/icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/head/helmet.dmi'
+	icon = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_helmet/helmet_hev_obj.dmi'
+	worn_icon = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_helmet/helmet_hev_mob.dmi'
+	worn_icon_muzzled = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_helmet/helmet_hev_mob_muzzled.dmi'
 	icon_state = "hev"
 	armor_type = /datum/armor/space_hev_suit
 	obj_flags = NO_MAT_REDEMPTION
