@@ -72,9 +72,9 @@
 /obj/item/clothing/suit/space/hev_suit
 	name = "hazardous environment suit"
 	desc = "The Mark IV HEV suit protects the user from a number of hazardous environments and has in build ballistic protection."
-	icon = 'modular_nova/master_files/icons/obj/clothing/suits/spacesuit.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/spacesuit.dmi'
-	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/suits/spacesuit_digi.dmi'
+	icon = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_suit/hev_obj.dmi'
+	worn_icon = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_suit/hev_worn.dmi'
+	worn_icon_digi = 'modularz_arkstation/modules/black_mesa/hev_suit/icons/hev_suit/hev_worn_digi.dmi'
 	icon_state = "hev"
 	inhand_icon_state = "syndicate-orange"
 	armor_type = /datum/armor/space_hev_suit
