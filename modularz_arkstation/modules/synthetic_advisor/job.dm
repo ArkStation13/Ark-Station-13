@@ -25,6 +25,12 @@ GLOBAL_LIST_EMPTY(SynthAdvisors)
 	random_spawns_possible = FALSE
 	job_flags = JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK | JOB_CANNOT_OPEN_SLOTS | JOB_CREW_MEMBER | JOB_CREW_MANIFEST | JOB_ANNOUNCE_ARRIVAL
 
+/obj/effect/landmark/start/synthetic_advisor
+	name = JOB_SYNTHETIC_ADVISOR
+	icon_state = "Orderly"
+	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
+
+
 /datum/job/synthetic_advisor/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
 	if(issynthetic(spawned))

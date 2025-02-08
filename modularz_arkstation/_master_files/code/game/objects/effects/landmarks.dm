@@ -142,3 +142,21 @@
 /obj/effect/landmark/start/ai
 	name = JOB_AI
 	icon_state = "AI"
+
+// Nova Sector //
+
+/obj/effect/landmark/start/virologist
+	name = JOB_VIROLOGIST
+	icon_state = "Virologist"
+
+/obj/effect/landmark/start/nanotrasen_consultant
+	name = JOB_NT_REP
+	icon_state = "Nanotrasen Consultant"
+
+/obj/effect/landmark/start/blueshield
+	name = JOB_BLUESHIELD
+	icon_state = "Blueshield"
+
+/obj/effect/landmark/start/bouncer
+	name = JOB_BOUNCER
+	icon_state = "Bouncer"

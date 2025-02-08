@@ -92,7 +92,7 @@
 	new /obj/effect/landmark/start/security_medic(get_turf(src))
 
 /obj/effect/landmark/start/security_medic
-	name = "Security Medic"
+	name = JOB_SECURITY_MEDIC
 	icon_state = "Security Medic"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 
