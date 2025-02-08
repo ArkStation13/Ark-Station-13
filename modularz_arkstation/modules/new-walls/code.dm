@@ -111,7 +111,7 @@
 	fake_icon = 'modularz_arkstation/modules/new-walls/walls/wall.dmi'
 
 /obj/structure/falsewall/reinforced
-	icon_state = "wall-open"
+	icon_state = "reinforced_wall-open"
 	base_icon_state = "reinforced_wall"
 	icon = 'modularz_arkstation/modules/new-walls/walls/rwalls/reinforced_wall.dmi'
 	fake_icon = 'modularz_arkstation/modules/new-walls/walls/rwalls/reinforced_wall.dmi'
