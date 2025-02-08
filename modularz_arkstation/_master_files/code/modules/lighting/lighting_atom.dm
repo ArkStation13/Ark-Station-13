@@ -6,7 +6,7 @@
 			glow_overlay = image(icon = glow_icon, icon_state = glow_icon_state, dir = dir, layer = 1)
 
 		glow_overlay.plane = LIGHTING_LAMPS_PLANE // ЕБАНЫЙ ПЛЕЙН ЛАМП.
-		glow_overlay.blend_mode = BLEND_OVERLAY
+		glow_overlay.blend_mode = BLEND_ADD // BLEND_OVERLAY
 		if(glow_colored)
 			var/datum/ColorMatrix/MATRIX = new(light_color, GLOB.GLOW_CONTRAST_BASE + GLOB.GLOW_CONTRAST_POWER * light_power, GLOB.GLOW_BRIGHTNESS_BASE + GLOB.GLOW_BRIGHTNESS_POWER * light_power)
 			glow_overlay.color = MATRIX.Get()

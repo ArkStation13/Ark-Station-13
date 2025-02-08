@@ -51,14 +51,14 @@
 	if(!.)
 		return
 	remove_filter("blur_exposure")
-	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/bloom_filter))
+	if(istype(mymob))
 		add_filter("blur_exposure", 1, gauss_blur_filter(size = 20))
 
 // Собственно свет (По идее)
 /atom/movable/screen/plane_master/lamps_selfglow
 	name = "Lamps Selfglow Plane Master"
 	documentation = "Lamps Selfglow."
-	plane = LIGHTING_LAMPS_PLANE
+	plane = LIGHTING_LAMPS_SELFGLOW
 	appearance_flags = PLANE_MASTER
 	blend_mode = BLEND_ADD //BLEND_OVERLAY
 	blend_mode_override = BLEND_ADD //BLEND_OVERLAY
@@ -71,23 +71,23 @@
 		return
 	remove_filter("lamps_selfglow_bloom")
 
-	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/bloom_filter))
-		var/bloomsize = 0
-		var/bloomoffset = 0
-		switch(mymob.canon_client?.prefs?.read_preference(/datum/preference/choiced/bloom_filter_level))
-			if("Disabled")
-				return
-			if("Low")
-				bloomsize = 2
-				bloomoffset = 1
-			if("Medium (Default)")
-				bloomsize = 3
-				bloomoffset = 2
-			if("High")
-				bloomsize = 5
-				bloomoffset = 3
+	if(istype(mymob))
+		// var/bloomsize = 0
+		// var/bloomoffset = 0
+		// switch(mymob.canon_client?.prefs?.read_preference(/datum/preference/choiced/bloom_filter_level))
+		// 	if("Disabled")
+		// 		return
+		// 	if("Low")
+		// 		bloomsize = 2
+		// 		bloomoffset = 1
+		// 	if("Medium (Default)")
+		// 		bloomsize = 3
+		// 		bloomoffset = 2
+		// 	if("High")
+		// 		bloomsize = 5
+		// 		bloomoffset = 3
 
-		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = bloomsize, offset = bloomoffset, alpha = 100))
+		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = 3, offset = 2, alpha = 100))
 
 // Блики
 /atom/movable/screen/plane_master/lamps_glare
@@ -105,5 +105,5 @@
 	if(!.)
 		return
 	remove_filter("lamps_glare")
-	if(istype(mymob) && mymob.canon_client?.prefs?.read_preference(/datum/preference/toggle/bloom_filter))
+	if(istype(mymob))
 		add_filter("lamps_glare", 1, radial_blur_filter(size = 0.06)) // 0.05
