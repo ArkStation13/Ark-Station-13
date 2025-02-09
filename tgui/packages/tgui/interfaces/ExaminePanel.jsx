@@ -1,9 +1,9 @@
 // THIS IS AN ARK STATION UI FILE
 import { useState } from 'react';
+import { ByondUi, Section, Stack, Tabs } from 'tgui-core/components'; // ARK STATION edit: add Tabs
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { ByondUi, Section, Stack, Tabs } from '../components'; // ARK STATION edit: add Tabs
 import { Window } from '../layouts';
 
 const formatURLs = (text) => {

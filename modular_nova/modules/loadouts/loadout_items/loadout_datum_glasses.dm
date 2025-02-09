@@ -164,7 +164,7 @@
 /datum/loadout_item/glasses/sechud
 	name = "Security HUD"
 	item_path = /obj/item/clothing/glasses/hud/security
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/medicpatch
 	name = "Medical HUD Eyepatch"
@@ -189,12 +189,12 @@
 /datum/loadout_item/glasses/secpatch
 	name = "Security HUD Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/eyepatch/sec
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/sechud_glasses
 	name = "Prescription Security HUD"
 	item_path = /obj/item/clothing/glasses/hud/security/prescription
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/medhud_glasses
 	name = "Prescription Medical HUD"
@@ -214,7 +214,7 @@
 /datum/loadout_item/glasses/aviator_security
 	name = "Security HUD Aviators"
 	item_path = /obj/item/clothing/glasses/hud/ar/aviator/security
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/aviator_health
 	name = "Medical HUD Aviators"
@@ -239,7 +239,7 @@
 /datum/loadout_item/glasses/prescription_aviator_security
 	name = "Prescription Security HUD Aviators"
 	item_path = /obj/item/clothing/glasses/hud/ar/aviator/security/prescription
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/prescription_aviator_health
 	name = "Prescription Medical HUD Aviators"
@@ -264,7 +264,7 @@
 /datum/loadout_item/glasses/retinal_projector_security
 	name = "Retinal Projector Security HUD"
 	item_path = /obj/item/clothing/glasses/hud/ar/projector/security
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_BOUNCER, JOB_BLUESHIELD, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT)
 
 /datum/loadout_item/glasses/retinal_projector_health
 	name = "Retinal Projector Health HUD"

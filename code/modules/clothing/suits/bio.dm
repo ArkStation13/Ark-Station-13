@@ -21,6 +21,7 @@
 		AddComponent(/datum/component/clothing_fov_visor, FOV_90_DEGREES)
 	*/ // ARK STATION REMOVED END
 	AddComponent(/datum/component/adjust_fishing_difficulty, 6)
+	AddComponent(/datum/component/hat_stabilizer, loose_hat = TRUE)
 
 /datum/armor/head_bio_hood
 	bio = 100

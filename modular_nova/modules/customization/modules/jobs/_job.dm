@@ -72,6 +72,7 @@
 /datum/job/security_officer
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/detective
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
@@ -80,35 +81,45 @@
 /datum/job/warden
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/blueshield
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
-///datum/job/corrections_officer
-//	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
-//	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+/* // ARK STATION REMOVED START
+/datum/job/corrections_officer
+	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
+	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+*/ // ARK STATION REMOVED END
 
 // Command
 /datum/job/captain
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/nanotrasen_consultant
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/head_of_security
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS, HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/chief_medical_officer
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/chief_engineer
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS, "Paraplegic" = TRUE)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/research_director
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
@@ -146,20 +157,24 @@
 	required_languages = null
 	banned_quirks = list(PRISONER_RESTRICTED_QUIRKS)
 
-// /datum/job/orderly
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/* // ARK STATION REMOVED START
+/datum/job/orderly
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-// /datum/job/science_guard
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/datum/job/science_guard
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-// /datum/job/customs_agent
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/datum/job/customs_agent
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+*/ // ARK STATION REMOVED END
 
 /datum/job/bouncer
 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
-// /datum/job/engineering_guard
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/* // ARK STATION REMOVED START
+/datum/job/engineering_guard
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+*/ // ARK STATION REMOVED END
 
 /datum/job/proc/has_required_languages(datum/preferences/pref)
 	if(!required_languages)

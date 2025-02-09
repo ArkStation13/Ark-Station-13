@@ -14,6 +14,7 @@
 		#include "ark_map_files\ark_maps\north_star.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\tramstation.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\wawastation.dmm" // ARK STATION EDIT
+		#include "map_files\NebulaStation\NebulaStation.dmm"
 		// NOVA EDIT ADDITON START - Compiling our modular maps too!
 		#include "ark_map_files\ark_maps\VoidRaptor.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\Blueshift.dmm" // ARK STATION EDIT
