@@ -71,7 +71,11 @@ const HealthStat = (props) => {
 // all of this just to change the name
 export const CrewConsoleNovaBlueshield = () => {
   return (
-    <Window title="Blueshield Monitor" width={600} height={300}>
+    <Window
+      title="SolFed Shield Monitor"
+      width={600}
+      height={300} /* ARK STATION EDIT*/
+    >
       <Window.Content scrollable>
         <Section minHeight="540px">
           <CrewTable />

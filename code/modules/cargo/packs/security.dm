@@ -223,6 +223,7 @@
 	)
 	crate_name = "\improper DRAGnet crate"
 
+/* // ARK STATION REMOVED START
 /datum/supply_pack/security/armory/energy
 	name = "Energy Guns Crate"
 	desc = "Contains two Energy Guns, capable of firing both nonlethal and lethal \
@@ -247,6 +248,7 @@
 	contains = list(/obj/item/gun/energy/disabler/smg = 3)
 	crate_name = "disabler smg crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
+*/ // ARK STATION REMOVED END
 
 /datum/supply_pack/security/armory/exileimp
 	name = "Exile Implants Crate"

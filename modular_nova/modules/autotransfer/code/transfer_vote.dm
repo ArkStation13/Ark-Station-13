@@ -1,4 +1,4 @@
-#define CHOICE_TRANSFER "Initiate Crew Transfer"
+#define CHOICE_TRANSFER "Launch Ark-Ship (End of Round)" // "Initiate Crew Transfer" // ARK STATION EDIT
 #define CHOICE_CONTINUE "Continue Playing"
 
 /datum/vote/transfer_vote

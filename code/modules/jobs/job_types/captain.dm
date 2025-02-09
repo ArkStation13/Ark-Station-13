@@ -50,9 +50,11 @@
 
 	voice_of_god_power = 1.4 //Command staff has authority
 
+	species_whitelist = list(SPECIES_HUMAN, SPECIES_HEMOPHAGE, SPECIES_HUMANOID) // ARK STATION ADDITION
+
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "Captain [captain.real_name] on deck!"
+	return "Ark Commander [captain.real_name] on deck!" // ARK STATION EDIT || Captain
 
 /datum/job/captain/get_radio_information()
 	. = ..()

@@ -92,7 +92,7 @@
 	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/under/jumpsuit/impce
-	name = "Chief Engineer's Naval Uniform"
+	name = "Tech Overseer's Naval Uniform" // ARK STATION EDIT
 	item_path = /obj/item/clothing/under/rank/engineering/chief_engineer/nova/imperial
 	restricted_roles = list(JOB_CHIEF_ENGINEER)
 

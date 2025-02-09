@@ -91,7 +91,7 @@
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
 	balloon_alert(user, "analyzing vitals")
-	playsound(user.loc, 'zov_modular_arkstation/modules/sounds-renewal/sound/items/healthanalyzer.ogg', 50) // ARK STATION EDIT
+	playsound(user.loc, 'modularz_arkstation/modules/sounds-renewal/sound/items/healthanalyzer.ogg', 50) // ARK STATION EDIT
 
 	var/readability_check = user.can_read(src) // NOVA EDIT CHANGE - Blind people can analyze again - ORIGINAL: var/readability_check = user.can_read(src) && !user.is_blind()
 	switch (scanmode)

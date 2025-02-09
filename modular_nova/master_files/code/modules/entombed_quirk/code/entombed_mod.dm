@@ -94,8 +94,6 @@
 
 // CUSTOM BEHAVIOR
 
-// CUSTOM BEHAVIOR
-
 /obj/item/mod/control/pre_equipped/entombed/canStrip(mob/who)
 	return TRUE //you can always try, and it'll hit doStrip below
 

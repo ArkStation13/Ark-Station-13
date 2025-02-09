@@ -1,5 +1,5 @@
 /obj/item/storage/bag/garment/blueshield
-	name = "blueshield's garment bag"
+	name = "solfed shield's garment bag" // ARK STATION EDIT
 	desc = "A bag for storing extra clothes and shoes. This one belongs to the blueshield."
 
 /obj/item/storage/bag/garment/blueshield/PopulateContents()
@@ -15,7 +15,7 @@
 	new /obj/item/clothing/neck/mantle/bsmantle(src)
 
 /obj/structure/closet/secure_closet/blueshield
-	name = "blueshield's locker"
+	name = "solfed shield's locker" // ARK STATION EDIT
 	icon_state = "bs"
 	icon = 'modular_nova/master_files/icons/obj/closet.dmi'
 	req_access = list(ACCESS_CAPTAIN)

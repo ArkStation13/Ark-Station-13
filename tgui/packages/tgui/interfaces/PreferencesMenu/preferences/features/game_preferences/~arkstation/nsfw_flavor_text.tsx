@@ -1,3 +1,4 @@
+// ARK STATION UI FILE
 import { FeatureChoiced, FeatureDropdownInput } from '../../base';
 
 export const show_flavor_text_nsfw: FeatureChoiced = {

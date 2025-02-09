@@ -4,8 +4,8 @@
 /obj/structure/kitchenspike
 	icon = 'modular_nova/modules/aesthetics/kitchen/kitchen.dmi'
 
-/obj/machinery/deepfryer
-	icon = 'modular_nova/modules/aesthetics/kitchen/kitchen.dmi'
+// /obj/machinery/deepfryer // ARK STATION RETURNED
+// 	icon = 'modular_nova/modules/aesthetics/kitchen/kitchen.dmi' // ARK STATION RETURNED
 
 /obj/machinery/grill
 	icon = 'modular_nova/modules/aesthetics/kitchen/kitchen.dmi'

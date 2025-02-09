@@ -43,7 +43,7 @@
 	var/offset_x = icon_offsets["x"]
 	offset_y = icon_offsets["y"]
 
-	bar = image('icons/effects/progressbar.dmi', bar_loc, "prog_bar_0", pixel_x = offset_x)
+	bar = image('modularz_arkstation/modules/new-progressbar-sprites/progressbar.dmi', bar_loc, "prog_bar_0", pixel_x = offset_x) // ARK STATION EDIT - OUR NEW PROGRESSBAR
 	SET_PLANE_EXPLICIT(bar, ABOVE_HUD_PLANE, User)
 	bar.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	user = User

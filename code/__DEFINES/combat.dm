@@ -122,9 +122,9 @@ DEFINE_BITFIELD(status_flags, list(
 #define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
 
 //slowdown when in softcrit. Note that crawling slowdown will also apply at the same time!
-#define SOFTCRIT_ADD_SLOWDOWN 2
+#define SOFTCRIT_ADD_SLOWDOWN 3 // 2 // ARK STATION EDIT
 //slowdown when crawling
-#define CRAWLING_ADD_SLOWDOWN 4
+#define CRAWLING_ADD_SLOWDOWN 5 // 4 // ARK STATION EDIT
 
 //Attack types for checking block reactions
 /// Attack was made with a melee weapon

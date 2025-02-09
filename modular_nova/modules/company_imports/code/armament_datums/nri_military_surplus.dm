@@ -87,9 +87,11 @@
 	item_type = /obj/item/circuitboard/machine/biogenerator/food_replicator
 	cost = CARGO_CRATE_VALUE * 9
 
+/* // ARK STATION REMOVED START
 /datum/armament_entry/company_import/nri_surplus/misc/nri_flag
 	item_type = /obj/item/sign/flag/nri
 	cost = PAYCHECK_LOWER
+*/ // ARK STATION REMOVED END
 
 /datum/armament_entry/company_import/nri_surplus/firearm
 	subcategory = "Firearms"

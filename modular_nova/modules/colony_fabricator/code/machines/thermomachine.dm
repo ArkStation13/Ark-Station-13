@@ -12,11 +12,11 @@
 	/// The item we turn into when repacked
 	var/repacked_type = /obj/item/flatpacked_machine/thermomachine
 	/// Soundloop for while the thermomachine is turned on
-	// var/datum/looping_sound/conditioner_running/soundloop
+	var/datum/looping_sound/conditioner_running/soundloop
 
 /obj/machinery/atmospherics/components/unary/thermomachine/deployable/Initialize(mapload)
 	. = ..()
-	// soundloop = new(src, FALSE)
+	soundloop = new(src, FALSE)
 	AddElement(/datum/element/repackable, repacked_type, 2 SECONDS)
 	AddElement(/datum/element/manufacturer_examine, COMPANY_FRONTIER)
 	flick("thermo_deploy", src)
@@ -34,12 +34,12 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/deployable/default_deconstruction_crowbar()
 	return
 
-// /obj/machinery/atmospherics/components/unary/thermomachine/deployable/process_atmos()
-// 	if(on && !soundloop.loop_started)
-// 		soundloop.start()
-// 	else if(soundloop.loop_started)
-// 		soundloop.stop()
-// 	. = ..()
+/obj/machinery/atmospherics/components/unary/thermomachine/deployable/process_atmos()
+	if(on && !soundloop.loop_started)
+		soundloop.start()
+	else if(soundloop.loop_started)
+		soundloop.stop()
+	. = ..()
 
 // Item for creating the regulator and carrying it about
 

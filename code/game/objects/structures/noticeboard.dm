@@ -133,33 +133,33 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 // Notice boards for the heads of staff (plus the qm)
 
 /obj/structure/noticeboard/captain
-	name = "Captain's Notice Board"
-	desc = "Important notices from the Captain."
+	name = "Ark Commander's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Ark Commander." // ARK STATION EDIT
 	req_access = list(ACCESS_CAPTAIN)
 
 /obj/structure/noticeboard/hop
-	name = "Head of Personnel's Notice Board"
-	desc = "Important notices from the Head of Personnel."
+	name = "Donk Co. Manager's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Donk Co. Manager." // ARK STATION EDIT
 	req_access = list(ACCESS_HOP)
 
 /obj/structure/noticeboard/ce
-	name = "Chief Engineer's Notice Board"
-	desc = "Important notices from the Chief Engineer."
+	name = "Tech Overseer's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Tech Overseer." // ARK STATION EDIT
 	req_access = list(ACCESS_CE)
 
 /obj/structure/noticeboard/hos
-	name = "Head of Security's Notice Board"
-	desc = "Important notices from the Head of Security."
+	name = "Head of Red Hawk's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Head of Red Hawk." // ARK STATION EDIT
 	req_access = list(ACCESS_HOS)
 
 /obj/structure/noticeboard/cmo
-	name = "Chief Medical Officer's Notice Board"
-	desc = "Important notices from the Chief Medical Officer."
+	name = "Medtech Curator's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Medtech Curator." // ARK STATION EDIT
 	req_access = list(ACCESS_CMO)
 
 /obj/structure/noticeboard/rd
-	name = "Research Director's Notice Board"
-	desc = "Important notices from the Research Director."
+	name = "Scientific Director's Notice Board" // ARK STATION EDIT
+	desc = "Important notices from the Scrientific Director." // ARK STATION EDIT
 	req_access = list(ACCESS_RD)
 
 /obj/structure/noticeboard/qm

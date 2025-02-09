@@ -275,7 +275,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_TELEPORTER]"] = "Teleporter"
 	desc_by_access["[ACCESS_EVA]"] = "EVA"
 	desc_by_access["[ACCESS_COMMAND]"] = "Command"
-	desc_by_access["[ACCESS_CAPTAIN]"] = "Captain"
+	desc_by_access["[ACCESS_CAPTAIN]"] = "Ark Commander" // ARK STATION EDIT || Captain
 	desc_by_access["[ACCESS_ALL_PERSONAL_LOCKERS]"] = "Personal Lockers"
 	desc_by_access["[ACCESS_CHAPEL_OFFICE]"] = "Chapel Office"
 	desc_by_access["[ACCESS_TECH_STORAGE]"] = "Technical Storage"
@@ -290,7 +290,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_ROBOTICS]"] = "Robotics"
 	desc_by_access["[ACCESS_VIROLOGY]"] = "Virology"
 	desc_by_access["[ACCESS_PSYCHOLOGY]"] = "Psychology"
-	desc_by_access["[ACCESS_CMO]"] = "CMO Office"
+	desc_by_access["[ACCESS_CMO]"] = "MTC Office" // ARK STATION EDIT || CMO Office
 	desc_by_access["[ACCESS_QM]"] = "QM Office"
 	desc_by_access["[ACCESS_SURGERY]"] = "Surgery"
 	desc_by_access["[ACCESS_THEATRE]"] = "Theatre"
@@ -300,9 +300,9 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_VAULT]"] = "Main Vault"
 	desc_by_access["[ACCESS_MINING_STATION]"] = "Mining Outpost"
 	desc_by_access["[ACCESS_XENOBIOLOGY]"] = "Xenobiology Lab"
-	desc_by_access["[ACCESS_HOP]"] = "HoP Office"
-	desc_by_access["[ACCESS_HOS]"] = "HoS Office"
-	desc_by_access["[ACCESS_CE]"] = "CE Office"
+	desc_by_access["[ACCESS_HOP]"] = "Donk Manager Office" // ARK STATION EDIT || HoP Office
+	desc_by_access["[ACCESS_HOS]"] = "HoRH Office" // ARK STATION EDIT || HoS Office
+	desc_by_access["[ACCESS_CE]"] = "TO Office"  // ARK STATION EDIT || CE Office
 	desc_by_access["[ACCESS_PHARMACY]"] = "Pharmacy"
 	desc_by_access["[ACCESS_RC_ANNOUNCE]"] = "RC Announcements"
 	desc_by_access["[ACCESS_KEYCARD_AUTH]"] = "Keycode Auth."

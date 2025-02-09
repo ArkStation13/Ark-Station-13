@@ -180,7 +180,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 /obj/machinery/keycard_auth/wall_mounted
 	icon = 'icons/obj/machines/wallmounts.dmi'
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth/wall_mounted, 26)
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth/wall_mounted, 32) // 26 // ARK STATION EDIT
 
 /obj/machinery/keycard_auth/wall_mounted/Initialize(mapload)
 	. = ..()

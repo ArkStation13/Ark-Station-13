@@ -119,7 +119,7 @@
 	icon_state = "impcmo"
 
 /obj/item/clothing/head/hats/imperial/ce
-	name = "chief engineer's blast helmet"
+	name = "tech overseer's blast helmet" // ARK STATION EDIT
 	desc = "Despite seeming like it's made of metal, it's actually a very cheap plastic.."
 	armor_type = /datum/armor/imperial_ce
 	clothing_flags = STOPSPRESSUREDAMAGE

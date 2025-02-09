@@ -1,21 +1,24 @@
 // COMMAND
-#define JOB_BRIDGE_OFFICER "Bridge Officer"
+#define JOB_BRIDGE_OFFICER "Command Secretary" // 'Bridge Officer'
 
 // ENGINEERING
 #define JOB_MECHANIC "Mechanic"
 
 // SECURITY
-#define JOB_BRIG_PILOT "Brig Pilot"
-#define JOB_SECURITY_MEDIC "Security Medic"
+#define JOB_BRIG_PILOT "Red Hawk Pilot" // "Brig Pilot"
+#define JOB_SECURITY_MEDIC "Red Hawk Medic" // "Security Medic"
 
 // RND
-#define JOB_VANGUARD_OPERATIVE "Vanguard Operative"
+#define JOB_VANGUARD_OPERATIVE "Ruin Explorer" // "Vanguard Operative"
 
 // ORTHODOX CHURCH
 #define JOB_DEACON "Deacon"
 #define JOB_FISCAL "Fiscal"
 
-#define SUPERVISOR_CHAP "the Priest"
+#define SUPERVISOR_CHAP "the Priest of Neo-Vatican"
+
+// SYNTHETIC
+#define JOB_SYNTHETIC_ADVISOR "Synthetic Advisor"
 
 // MISC
 #define JOB_STOWAWAY "Stowaway"

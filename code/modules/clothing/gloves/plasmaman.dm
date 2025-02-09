@@ -92,7 +92,7 @@
 	greyscale_colors = null
 
 /obj/item/clothing/gloves/color/plasmaman/chief_engineer
-	name = "chief engineer's envirogloves"
+	name = "tech overseer's envirogloves" // ARK STATION EDIT
 	icon_state = "ceplasma"
 	greyscale_colors = "#45ff00"
 	siemens_coefficient = 0

@@ -101,14 +101,14 @@
 		"Doorman",
 	)
 
-/*
+/* // ARK STATION REMOVED START
 /datum/job/corrections_officer
 	alt_titles = list(
 		"Corrections Officer",
 		"Brig Officer",
 		"Prison Guard",
 	)
-*/
+*/ // ARK STATION REMOVED END
 
 /datum/job/captain
 	alt_titles = list(
@@ -215,11 +215,13 @@
 		"Librarian",
 	)
 
-///datum/job/customs_agent
-//	alt_titles = list(
-//		"Customs Agent",
-//		"Supply Guard",
-//	)
+/* // ARK STATION REMOVED START
+/datum/job/customs_agent
+	alt_titles = list(
+		"Customs Agent",
+		"Supply Guard",
+	)
+*/ // ARK STATION REMOVED END
 
 /datum/job/cyborg
 	alt_titles = list(
@@ -310,11 +312,13 @@
 		"Nanotrasen Diplomat",
 	)
 
-///datum/job/orderly
-//	alt_titles = list(
-//		"Orderly",
-//		"Medical Guard",
-//	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+/* // ARK STATION REMOVED START
+/datum/job/orderly
+	alt_titles = list(
+		"Orderly",
+		"Medical Guard",
+	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+*/ // ARK STATION REMOVED END
 
 /datum/job/paramedic
 	alt_titles = list(

@@ -54,7 +54,7 @@
 
 /obj/item/melee/sabre
 	name = "officer's sabre" //NOVA EDIT - Buffed in modular_nova/modules/modular_weapons/code/melee.dm
-	desc = "An elegant weapon, its monomolecular edge is capable of cutting through flesh and bone with ease."
+	desc = "An elegant weapon, its monomolecular edge is capable of cutting through flesh and bone with ease." 
 	icon = 'icons/obj/weapons/sword.dmi'
 	icon_state = "sabre"
 	inhand_icon_state = "sabre"

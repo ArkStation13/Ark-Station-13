@@ -123,7 +123,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(!length(music))
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = 'zov_modular_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
+		login_music = 'modularz_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
@@ -170,17 +170,21 @@ SUBSYSTEM_DEF(ticker)
 			// NOVA EDIT END
 			current_state = GAME_STATE_PREGAME
 			// ARK STATION ADDITION START
-			var/combo = check_combo()
-			switch(combo)
-				if("Dynamic")
-					dynamic_settings()
-					to_chat(world, span_ooc_announcement_text("<b>Три Dynamic'а подряд. Настраиваем Extended...</b>"))
-				if("Extended")
-					extended_settings()
-					to_chat(world, span_ooc_announcement_text("<b>Три Extended'а подряд. Настраиваем Dynamic...</b>"))
-				else
-					to_chat(world, span_ooc_announcement_text("<b>Начинаем голосование за Режим Игры!</b>"))
-					SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE)
+			if(CONFIG_GET(flag/dynamic_vote))
+				var/combo = check_combo()
+				switch(combo)
+					if("Dynamic")
+						dynamic_settings()
+						to_chat(world, span_ooc_announcement_text("<b>Три Dynamic'а подряд. Настраиваем Extended...</b>"))
+					if("Extended")
+						extended_settings()
+						to_chat(world, span_ooc_announcement_text("<b>Три Extended'а подряд. Настраиваем Dynamic...</b>"))
+					else
+						to_chat(world, span_ooc_announcement_text("<b>Начинаем голосование за режим игры!</b>"))
+						SSvote.initiate_vote(/datum/vote/gamemode_vote, "gamemode vote", forced = TRUE)
+			else if(CONFIG_GET(flag/dynamic_secret))
+				secret_settings()
+				to_chat(world, span_ooc_announcement_text("<b>Режим скрыт... Может быть всё что угодно...</b>"))
 			// ARK STATION ADDITION END
 			SStitle.change_title_screen() //NOVA EDIT ADDITION - Title screen
 			addtimer(CALLBACK(SStitle, TYPE_PROC_REF(/datum/controller/subsystem/title, change_title_screen)), 1 SECONDS) //NOVA EDIT ADDITION - Title screen
@@ -288,6 +292,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	GLOB.start_landmarks_list = shuffle(GLOB.start_landmarks_list) //Shuffle the order of spawn points so they dont always predictably spawn bottom-up and right-to-left
 	create_characters() //Create player characters
+//	shadowcasting_controller.initialized = TRUE // ARK STATION ADDITION
 	collect_minds()
 	equip_characters()
 

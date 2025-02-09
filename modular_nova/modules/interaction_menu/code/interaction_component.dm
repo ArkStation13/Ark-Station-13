@@ -7,7 +7,7 @@
 	var/interact_last = 0
 	var/interact_next = 0
 
-/* ARK STATION REPATH - zov_modular_arkstation\modules\sexupdate_erp_panel\code.dm
+/* ARK STATION REPATH - modularz_arkstation\modules\sexupdate_erp_panel\code.dm
 
 /datum/component/interactable/Initialize(...)
 	if(QDELETED(parent))

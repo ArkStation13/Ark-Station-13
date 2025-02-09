@@ -553,7 +553,7 @@
 	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/head/imperial_ce
-	name = "Chief Engineer's blast helmet."
+	name = "Tech Overseer's blast helmet." // ARK STATION EDIT
 	item_path = /obj/item/clothing/head/hats/imperial/ce
 	restricted_roles = list(JOB_CHIEF_ENGINEER)
 

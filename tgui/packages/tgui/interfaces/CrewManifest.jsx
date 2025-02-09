@@ -1,17 +1,18 @@
 import { Icon, Section, Table, Tooltip } from 'tgui-core/components';
-import { classes } from '../../common/react';
 
+import { classes } from '../../common/react';
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const commandJobs = [
-  'Head of Personnel',
-  'Head of Security',
-  'Chief Engineer',
-  'Research Director',
-  'Chief Medical Officer',
+  'Donk Co. Manager', // ARK STATION EDIT
+  'Head of Red Hawk', // ARK STATION EDIT
+  'Tech Overseer', // ARK STATION EDIT
+  'Scientific Director', // ARK STATION EDIT
+  'Medtech Curator', // ARK STATION EDIT
   'Quartermaster',
-  'Nanotrasen Consultant', // NOVA EDIT ADDITION
+  'Consul of the Solar Federation', // NOVA EDIT ADDITION // ARK STATION EDIT
+  'Priest of Neo-Vatican',
 ];
 
 export const CrewManifest = (props) => {
@@ -58,8 +59,8 @@ export const CrewManifest = (props) => {
                         <Icon className="CrewManifest__Icon" name="infinity" />
                       </Tooltip>
                     )}
-                    {crewMember.trim === 'Captain' && (
-                      <Tooltip content="Captain" position="bottom">
+                    {crewMember.trim === 'Ark Commander' && (
+                      <Tooltip content="Ark Commander" position="bottom">
                         <Icon
                           className={classes([
                             'CrewManifest__Icon',

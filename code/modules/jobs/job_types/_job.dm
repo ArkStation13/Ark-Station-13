@@ -136,6 +136,9 @@
 	/// Minimal character age for this job
 	var/required_character_age
 
+	/// For jobs like AI or Prisoner. If you do not want for role to be spawn in common cryo
+	var/do_not_spawn_in_common_cryo = FALSE // ARK ADDITION
+
 
 /datum/job/New()
 	. = ..()
@@ -484,7 +487,7 @@
 
 
 /datum/job/proc/get_captaincy_announcement(mob/living/captain)
-	return "Due to extreme staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to extreme staffing shortages, newly promoted Acting Ark Commander [captain.real_name] on deck!" // ARK STATION EDIT || Captain
 
 
 /// Returns an atom where the mob should spawn in.

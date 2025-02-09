@@ -1,5 +1,5 @@
 /mob/living/carbon/human/Initialize(mapload)
-	add_verb(src, /mob/living/proc/mob_sleep)
+	// add_verb(src, /mob/living/proc/mob_sleep) // ARK STATION REMOVED - We have own sleep system.
 	add_verb(src, /mob/living/proc/toggle_resting)
 
 	icon_state = "" //Remove the inherent human icon that is visible on the map editor. We're rendering ourselves limb by limb, having it still be there results in a bug where the basic human icon appears below as south in all directions and generally looks nasty.
@@ -533,13 +533,13 @@
 	underwear = "Nude"
 	update_body(is_creating = TRUE)
 
-/mob/living/carbon/human/singularity_pull(S, current_size)
+/mob/living/carbon/human/singularity_pull(atom/singularity, current_size)
 	..()
 	if(current_size >= STAGE_THREE)
 		for(var/obj/item/hand in held_items)
 			if(prob(current_size * 5) && hand.w_class >= ((11-current_size)/2)  && dropItemToGround(hand))
 				step_towards(hand, src)
-				to_chat(src, span_warning("\The [S] pulls \the [hand] from your grip!"))
+				to_chat(src, span_warning("\The [singularity] pulls \the [hand] from your grip!"))
 
 #define CPR_PANIC_SPEED (0.8 SECONDS)
 

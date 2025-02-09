@@ -95,7 +95,7 @@
 
 //Captain
 /obj/item/clothing/head/hats/caphat
-	name = "captain's hat"
+	name = "Ark Commander's hat" // ARK STATION EDIT
 	desc = "It's good being the king."
 	icon_state = "captain"
 	inhand_icon_state = "that"
@@ -116,14 +116,14 @@
 	wound = 5
 
 /obj/item/clothing/head/hats/caphat/parade
-	name = "captain's parade cap"
-	desc = "Worn only by Captains with an abundance of class."
+	name = "Ark Commander's parade cap" // ARK STATION EDIT
+	desc = "Worn only by Commanders with an abundance of class." // ARK STATION EDIT
 	icon_state = "capcap"
 	dog_fashion = null
 
 /obj/item/clothing/head/caphat/beret
-	name = "captain's beret"
-	desc = "For the Captains known for their sense of fashion."
+	name = "Ark Commander's beret" // ARK STATION EDIT
+	desc = "For the Commanders known for their sense of fashion." // ARK STATION EDIT
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
@@ -131,7 +131,7 @@
 
 //Head of Personnel
 /obj/item/clothing/head/hats/hopcap
-	name = "head of personnel's cap"
+	name = "Donk Co. Manager's cap" // ARK STATION EDIT
 	icon_state = "hopcap"
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor_type = /datum/armor/hats_hopcap

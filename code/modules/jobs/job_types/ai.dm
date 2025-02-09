@@ -22,6 +22,8 @@
 	job_flags = JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
 	config_tag = "AI"
 
+	do_not_spawn_in_common_cryo = TRUE // ARK STATION ADDITION
+
 
 /datum/job/ai/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()

@@ -41,6 +41,8 @@
 
 	job_tone = "objection"
 
+	species_whitelist = list(SPECIES_HUMAN, SPECIES_HEMOPHAGE, SPECIES_HUMANOID) // ARK STATION ADDITION
+
 /datum/outfit/job/nanotrasen_consultant
 	name = "Nanotrasen Consultant"
 	jobtype = /datum/job/nanotrasen_consultant

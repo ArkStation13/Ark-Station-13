@@ -32,6 +32,7 @@
 		#define MAKE_SPARKS 2
 		// cut the power for 2-4 seconds
 		#define CAUSE_BROWNOUT 3
+
 		var/effect = pick(list(
 			SHOCK_SOMEONE,
 			MAKE_SPARKS,

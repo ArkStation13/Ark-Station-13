@@ -139,6 +139,8 @@
 	/// If it has an icon for a selector switch indicating current firemode.
 	var/selector_switch_icon = FALSE
 
+	recoil = 1 // ARK STATION EDIT
+
 /obj/item/gun/ballistic/Initialize(mapload)
 	. = ..()
 	if(!spawn_magazine_type)
@@ -288,7 +290,7 @@
 	update_appearance()
 	update_item_action_buttons()
 
-/obj/item/gun/ballistic/handle_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE)
+/obj/item/gun/ballistic/handle_chamber(mob/living/user, empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE) // ARK STATION EDIT
 	if(!semi_auto && from_firing)
 		return
 	var/obj/item/ammo_casing/casing = chambered //Find chambered round
@@ -299,7 +301,15 @@
 		else if(casing_ejector || !from_firing)
 			casing.forceMove(drop_location()) //Eject casing onto ground.
 			if(!QDELETED(casing))
+		/* // ARK STATION EDIT START
 				casing.bounce_away(TRUE)
+		*/
+				var/bounce_angle
+				if(user)
+					var/sign_x = (istype(user) && !(user.get_held_index_of_item(src) % RIGHT_HANDS)) ? 1 : -1
+					bounce_angle = SIMPLIFY_DEGREES(dir2angle(user.dir) + (sign_x * 90) + rand(-45, 45))
+				casing.bounce_away(bounce_angle = bounce_angle, still_warm = TRUE)
+		// ARK STATION EDIT END
 				SEND_SIGNAL(casing, COMSIG_CASING_EJECTED)
 		else if(empty_chamber)
 			clear_chambered()
@@ -336,7 +346,7 @@
 		bolt_locked = FALSE
 	if (user)
 		balloon_alert(user, "[bolt_wording] racked")
-	process_chamber(!chambered, FALSE)
+	process_chamber(user = user, empty_chamber = !chambered, from_firing = FALSE) // process_chamber(!chambered, FALSE) // ARK STATION EDIT
 	if (bolt_type == BOLT_TYPE_LOCKING && !chambered)
 		bolt_locked = TRUE
 		playsound(src, lock_back_sound, lock_back_sound_volume, lock_back_sound_vary)
@@ -550,8 +560,17 @@
 	if(bolt_type == BOLT_TYPE_NO_BOLT)
 		var/num_unloaded = 0
 		for(var/obj/item/ammo_casing/CB as anything in get_ammo_list(FALSE))
+			/* // ARK STATION EDIT START
 			CB.forceMove(drop_location())
 			CB.bounce_away(FALSE, NONE)
+			*/
+			CB.forceMove(drop_location())
+			var/bounce_angle
+			if(user)
+				var/sign_x = (istype(user) && !(user.get_held_index_of_item(src) % RIGHT_HANDS)) ? 1 : -1
+				bounce_angle = SIMPLIFY_DEGREES(dir2angle(user.dir) + (sign_x * 90) + rand(-45, 45))
+			CB.bounce_away(bounce_angle = bounce_angle, still_warm = FALSE, sound_delay = 0)
+			// ARK STATION EDIT END
 			num_unloaded++
 			var/turf/T = get_turf(drop_location())
 			if(T && is_station_level(T.z))

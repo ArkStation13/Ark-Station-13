@@ -260,14 +260,19 @@ at the cost of risking a vicious bite.**/
 
 /obj/structure/steam_vent/Initialize(mapload)
 	. = ..()
-	if(prob(75))
+	if(prob(45)) // 75 // ARK STATION EDIT
 		vent_active = FALSE
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_EXIT = PROC_REF(blow_steam),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 	register_context()
-	update_icon_state()
+	// update_icon_state() // ARK STATION REMOVED
+	// ARK STATION ADDITION START
+	if(steam)
+		steam = new steam()
+	update_appearance(UPDATE_ICON)
+	// ARK STATION ADDITION END
 
 /obj/structure/steam_vent/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
@@ -275,7 +280,7 @@ at the cost of risking a vicious bite.**/
 		balloon_alert(user, "not ready to adjust!")
 		return
 	vent_active = !vent_active
-	update_icon_state()
+	update_appearance(UPDATE_ICON) // update_icon_state() // ARK STATION EDIT
 	if(vent_active)
 		balloon_alert(user, "vent on")
 	else
@@ -324,9 +329,11 @@ at the cost of risking a vicious bite.**/
 	playsound(src, 'sound/machines/steam_hiss.ogg', 75, TRUE, -2)
 	COOLDOWN_START(src, steam_vent_interact, steam_speed)
 
+/* // ARK STATION REMOVED START
 /obj/structure/steam_vent/update_icon_state()
 	. = ..()
 	icon_state = "steam_vent[vent_active ? "": "_off"]"
+*/ // ARK STATION REMOVED END
 
 /obj/structure/steam_vent/fast
 	desc = "A device periodically filtering out moisture particles from the nearby walls and windows. It's only possible due to the moisture traps nearby. It's faster than most."

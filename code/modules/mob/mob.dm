@@ -181,7 +181,7 @@
 			hud_list[hud] = list()
 
 		else
-			var/image/I = image('zov_modular_arkstation/_master_files/icons/mob/hud.dmi', src, "")	//NOVA EDIT: original filepath 'icons/mob/huds/hud.dmi' // ARK STATION EDIT || OUR HUDS
+			var/image/I = image('modularz_arkstation/_master_files/icons/mob/hud.dmi', src, "")	//NOVA EDIT: original filepath 'icons/mob/huds/hud.dmi' // ARK STATION EDIT || OUR HUDS
 			I.appearance_flags = RESET_COLOR|RESET_TRANSFORM
 			hud_list[hud] = I
 		set_hud_image_active(hud, update_huds = FALSE) //by default everything is active. but dont add it to huds to keep control.

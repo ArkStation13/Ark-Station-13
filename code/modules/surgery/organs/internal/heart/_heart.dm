@@ -25,7 +25,7 @@
 
 	/// Whether the heart is currently beating.
 	/// Do not set this directly. Use Restart() and Stop() instead.
-	var/beating = TRUE
+	VAR_PRIVATE/beating = TRUE
 
 	/// is this mob having a heatbeat sound played? if so, which?
 	var/beat = BEAT_NONE

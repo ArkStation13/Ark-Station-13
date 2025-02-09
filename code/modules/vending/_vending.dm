@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	var/loaded_items = 0
 
 	///Name of lighting mask for the vending machine
-	var/light_mask
+	var/light_mask = null // ARK STATION EDIT
 
 	/// used for narcing on underages
 	var/obj/item/radio/sec_radio

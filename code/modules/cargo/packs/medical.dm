@@ -176,7 +176,7 @@
 	dangerous = TRUE
 
 /datum/supply_pack/medical/cmoturtlenecks
-	name = "Chief Medical Officer Turtlenecks"
+	name = "Medtech Curator Turtlenecks" // ARK STATION EDIT
 	desc = "Contains the CMO's turtleneck and turtleneck skirt."
 	cost = CARGO_CRATE_VALUE * 2
 	access = ACCESS_CMO

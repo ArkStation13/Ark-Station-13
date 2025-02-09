@@ -293,12 +293,14 @@ const ALTTITLES = {
   'Dispatch Officer': BASEICONS['Warden'],
   'Brig Governor': BASEICONS['Warden'],
   Jailer: BASEICONS['Warden'],
-  // ARK STATION JOBS
+  // ARK STATION JOBS START
   // Mechanic - space-shuttle
   'Pod Pilot': BASEICONS['Mechanic'],
   'Space Pods Builder': BASEICONS['Mechanic'],
   'Space Pods Maintainer': BASEICONS['Mechanic'],
   Coachman: BASEICONS['Mechanic'],
+  // Priest - cross
+  'Priest of Neo-Vatican': BASEICONS['Chaplain'],
   // Brig Pilot - space-shuttle
   'Security Pilot': BASEICONS['Brig Pilot'],
   'Space Guard': BASEICONS['Brig Pilot'],
@@ -325,6 +327,48 @@ const ALTTITLES = {
   Escapist: BASEICONS['Stowaway'],
   Savage: BASEICONS['Stowaway'],
   Outcast: BASEICONS['Stowaway'],
+  // // RE-NAMING OTHER JOBS // //
+  // Assistant
+  Colonist: BASEICONS['Assistant'],
+  // Captain
+  'Ark Commander': BASEICONS['Captain'],
+  // Blueshield
+  'Solar Federation Shield': BASEICONS['Blueshield'],
+  // NTR
+  'Consul of the Solar Federation': BASEICONS['Nanotrasen Consultant'],
+  // Security
+  'Head of Red Hawk': BASEICONS['Head of Security'],
+  'Red Hawk Private (Brown)': BASEICONS['Security Officer'],
+  'Red Hawk Private (Orange)': BASEICONS['Security Officer'],
+  'Red Hawk Private (Green)': BASEICONS['Security Officer'],
+  'Red Hawk Private (Purple)': BASEICONS['Security Officer'],
+  'Red Hawk Private': BASEICONS['Security Officer'],
+  'Red Hawk Medic': BASEICONS['Security Medic'],
+  'Red Hawk Pilot': BASEICONS['Brig Pilot'],
+  'RHIB Agent': BASEICONS['Detective'],
+  'Red Hawk Inspector': BASEICONS['Warden'],
+  // Cargo
+  'Excavation Specialist': BASEICONS['Shaft Miner'],
+  'Ruin Explorer': BASEICONS['Vanguard Operative'],
+  // Engineering
+  'Tech Overseer': BASEICONS['Chief Engineer'],
+  'Engine Specialist': BASEICONS['Station Engineer'],
+  // Medical
+  'Medtech Curator': BASEICONS['Chief Medical Officer'],
+  Necropsier: BASEICONS['Coroner'],
+  'Synthetic Pharmacist': BASEICONS['Chemist'],
+  'Viral Selectionist': BASEICONS['Virologist'],
+  // RND
+  'Scientific Director': BASEICONS['Research Director'],
+  Researcher: BASEICONS['Scientist'],
+  Bioaugmentator: BASEICONS['Geneticist'],
+  // Service
+  'Donk Co. Manager': BASEICONS['Head of Personnel'],
+  'Donk Co. Guard': BASEICONS['Bouncer'],
+  // Silicon
+  'Synthetic Unit': BASEICONS['Cyborg'],
+  'S.H.O.D.A.N.': BASEICONS['Big Brother'],
+  // ARK STATION JOBS END
 } as const;
 
 // Combine the Base icons and ALt titles

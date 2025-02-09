@@ -71,7 +71,7 @@ GLOBAL_PROTECT(exp_specialmap)
 	job = hos_expand.Replace(job, "head of security")
 	job = hop_expand.Replace(job, "head of personnel")
 	job = rd_expand.Replace(job, "research director")
-	job = ce_expand.Replace(job, "chief engineer")
+	job = ce_expand.Replace(job, "tech overseer") // ARK STATION EDIT || chief engineering
 	job = qm_expand.Replace(job, "quartermaster")
 	job = sec_expand.Replace(job, "security officer")
 	job = engi_expand.Replace(job, "station engineer")

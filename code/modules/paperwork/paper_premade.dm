@@ -61,7 +61,7 @@
 	8. Install the fusor in the center machine frame.
 	9. Install the generator in the back machine frame.
 	10. Examine the three machines and see what else they need, you can use a screwdriver to finish the assembly when parts are installed.
-	11. Construct a computer terminal in the same room as the BSA assembly, make sure they draw power from the same APC or ask the Chief Engineer to check the blueprints for you.
+	11. Construct a computer terminal in the same room as the BSA assembly, make sure they draw power from the same APC or ask the Tech Overseer to check the blueprints for you.
 	12. Use a screwdriver to fasten the board, install wires and one glass sheet, use screwdriver again to turn on.
 	13. Use a multitool and interact with the generator, then the fusor.
 	14. Use a multitool again to interact with the bore, then the fusor.
@@ -70,7 +70,7 @@
 	<b>Commencing firing protocols requires the access of at least two heads, the console will be locked down until this requirement is met.</b>
 	<b>Always make sure you are certain before attempting to fire the BSA.<b>
 	<br>
-	<i>Keep this manual for your records, failure to do so will void your 2 day limited liability warranty from Nanotrasen.</i>"}
+	<i>Keep this manual for your records, failure to do so will void your 2 day limited liability warranty from Solar Federation.</i>"}
 
 /obj/item/paper/fluff/jobs/engineering/frequencies
 	name = "Station Frequencies"

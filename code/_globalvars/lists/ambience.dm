@@ -207,7 +207,7 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_ICEMOON = GLOB.icemoon_ambience,
 	AMBIENCE_REEBE = GLOB.reebe_ambience,
 	AMBIENCE_RUINS = GLOB.ruins_ambience,
-	AMBIENCE_SPACE = GLOB.space_ambience,
+	AMBIENCE_SPACE = GLOB.space_ambience_ark, // ARK STATIOM EDIT
 	AMBIENCE_SPOOKY = GLOB.spooky_ambience,
 	AMBIENCE_OMEGA = GLOB.omega_ambience, // ARK STATION ADDITION
 	AMBIENCE_MUSHROOM = GLOB.mushroom_ambience, // NOVA EDIT - Mushroom caves!

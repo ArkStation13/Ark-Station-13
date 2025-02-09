@@ -302,6 +302,18 @@
 	ammo_counter = new /atom/movable/screen/ammo_counter(null, src) //NOVA EDIT ADDITION
 	infodisplay += ammo_counter //NOVA EDIT ADDITION
 
+	// ARK STATION ADDITION START
+	thirst = new /atom/movable/screen/thirst(null, src)
+	infodisplay += thirst
+
+	using = new /atom/movable/screen/close_eyes(null, src)
+	using.name = (owner.is_eyes_open == TRUE ? "close eyes" : "open eyes")
+	using.icon = ark_ui_style
+	using.icon_state = (owner.IsSleeping() == null ? "opened" : "closed")
+	using.screen_loc = ui_above_movement
+	static_inventory += using
+	// ARK STATION ADDITION END
+
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory))
 		if(inv.slot_id)
 			inv_slots[TOBITSHIFT(inv.slot_id) + 1] = inv
