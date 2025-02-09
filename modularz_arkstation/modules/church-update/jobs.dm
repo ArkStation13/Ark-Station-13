@@ -122,6 +122,8 @@
 		ACCESS_HOP,
 		)
 	job = /datum/job/chaplain
+	honorifics = list("Chaplain", "Reverend")
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
 /obj/effect/landmark/start/chaplain
 	name = "Priest of Neo-Vatican"
