@@ -168,8 +168,59 @@
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/base_airlock.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
 
-////
-/obj/machinery/door/airlock/proc/airlock_dir_change(mob/user, obj/item/wrench, new_dir, time = 20)
+// Лист для авто-разворота //
+/obj/machinery/door
+	var/list/autodir_list = list(
+		/obj/machinery/door/poddoor,
+		/obj/machinery/door/airlock,
+		/obj/structure/window/fulltile,
+		/obj/structure/window/reinforced/fulltile,
+		/obj/structure/window/reinforced/plasma/fulltile,
+		/obj/structure/window/reinforced/tinted/fulltile
+	)
+
+// Запускает проверку на авто-разворот //
+/obj/machinery/door/poddoor/Initialize(mapload)
+	. = ..()
+	update_dir()
+
+/obj/machinery/door/airlock/Initialize(mapload)
+	. = ..()
+	update_dir()
+
+// Доп.проверка к авто-развороту
+/obj/machinery/door/proc/find_list_object_in_dir(search_dir)
+	var/turf/adjacent_turf = get_step(src, search_dir)
+	var/obj/item = null
+
+	for(item in adjacent_turf)
+		if(is_type_in_list(item, autodir_list))
+			return 3
+
+	if(istype(adjacent_turf, /turf/closed/wall))
+		return 2 // Стена по приоритету меньше чем объект из списка
+
+	return 0
+
+// Авто-разворот
+/obj/machinery/door/proc/update_dir()
+	var/left_turf = 0
+	var/right_turf = 0
+	var/top_turf = 0
+	var/bottom_turf = 0
+
+	left_turf = find_list_object_in_dir(WEST)
+	right_turf = find_list_object_in_dir(EAST)
+	top_turf = find_list_object_in_dir(NORTH)
+	bottom_turf = find_list_object_in_dir(SOUTH)
+
+	if((left_turf + right_turf) > (bottom_turf + top_turf))
+		setDir(2)
+	else
+		setDir(4)
+
+// Механ разворота шлюза ключом //
+/obj/machinery/door/airlock/proc/airlock_dir_change(mob/user, obj/item/wrench, new_dir, time = 40)
 	if(wrench.tool_behaviour != TOOL_WRENCH)
 		return CANT_UNFASTEN
 	if(time)
@@ -178,116 +229,3 @@
 		return FAILED_UNFASTEN
 	wrench.play_tool_sound(src, 50)
 	setDir(new_dir)
-
-////
-/obj/machinery/door/poddoor/Initialize(mapload)
-	. = ..()
-	update_dir()
-
-/obj/machinery/door/poddoor/proc/find_list_object_in_dir(search_dir)
-	var/turf/adjacent_turf = get_step(src, search_dir)
-	var/obj/item = null
-
-	if(istype(adjacent_turf, /turf/closed/wall))
-		return adjacent_turf
-
-	for(item in adjacent_turf)
-		if(istype(item, src.type))
-			return item
-		if(istype(item, /obj/machinery/door/airlock) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/plastitanium))
-			return item
-
-	return null
-
-/obj/machinery/door/poddoor/proc/update_dir()
-	var/left_turf = null
-	var/right_turf = null
-	var/top_turf = null
-	var/bottom_turf = null
-	switch(dir)
-		if(NORTH)
-			left_turf = find_list_object_in_dir(WEST)
-			right_turf = find_list_object_in_dir(EAST)
-			top_turf = find_list_object_in_dir(NORTH)
-			bottom_turf = find_list_object_in_dir(SOUTH)
-
-		if(EAST)
-			left_turf = find_list_object_in_dir(NORTH)
-			right_turf = find_list_object_in_dir(SOUTH)
-			top_turf = find_list_object_in_dir(EAST)
-			bottom_turf = find_list_object_in_dir(WEST)
-
-		if(SOUTH)
-			left_turf = find_list_object_in_dir(EAST)
-			right_turf = find_list_object_in_dir(WEST)
-			top_turf = find_list_object_in_dir(SOUTH)
-			bottom_turf = find_list_object_in_dir(NORTH)
-
-		if(WEST)
-			left_turf = find_list_object_in_dir(SOUTH)
-			right_turf = find_list_object_in_dir(NORTH)
-			top_turf = find_list_object_in_dir(WEST)
-			bottom_turf = find_list_object_in_dir(EAST)
-
-	if(left_turf || right_turf)
-		setDir(2)
-
-	if(top_turf || bottom_turf)
-		setDir(4)
-
-
-/////////////////////////////////////////////////
-/obj/machinery/door/airlock/Initialize(mapload)
-	. = ..()
-	update_dir()
-
-/obj/machinery/door/airlock/proc/find_list_object_in_dir(search_dir)
-	var/turf/adjacent_turf = get_step(src, search_dir)
-	var/obj/item = null
-
-	if(istype(adjacent_turf, /turf/closed/wall))
-		return adjacent_turf
-
-	for(item in adjacent_turf)
-		if(istype(item, src.type))
-			return item
-		if(istype(item, /obj/machinery/door/poddoor) || istype(item, /obj/structure/window/fulltile) || istype(item, /obj/structure/window/reinforced/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/fulltile) || istype(item, /obj/structure/window/plasma/fulltile) || istype(item, /obj/structure/window/reinforced/plasma/plastitanium))
-			return item
-
-	return null
-
-/obj/machinery/door/airlock/proc/update_dir()
-	var/left_turf = null
-	var/right_turf = null
-	var/top_turf = null
-	var/bottom_turf = null
-	switch(dir)
-		if(NORTH)
-			left_turf = find_list_object_in_dir(WEST)
-			right_turf = find_list_object_in_dir(EAST)
-			top_turf = find_list_object_in_dir(NORTH)
-			bottom_turf = find_list_object_in_dir(SOUTH)
-
-		if(EAST)
-			left_turf = find_list_object_in_dir(NORTH)
-			right_turf = find_list_object_in_dir(SOUTH)
-			top_turf = find_list_object_in_dir(EAST)
-			bottom_turf = find_list_object_in_dir(WEST)
-
-		if(SOUTH)
-			left_turf = find_list_object_in_dir(EAST)
-			right_turf = find_list_object_in_dir(WEST)
-			top_turf = find_list_object_in_dir(SOUTH)
-			bottom_turf = find_list_object_in_dir(NORTH)
-
-		if(WEST)
-			left_turf = find_list_object_in_dir(SOUTH)
-			right_turf = find_list_object_in_dir(NORTH)
-			top_turf = find_list_object_in_dir(WEST)
-			bottom_turf = find_list_object_in_dir(EAST)
-
-	if(left_turf || right_turf)
-		setDir(2)
-
-	if(top_turf || bottom_turf)
-		setDir(4)
