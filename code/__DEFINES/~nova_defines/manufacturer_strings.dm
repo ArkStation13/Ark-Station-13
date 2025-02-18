@@ -21,6 +21,7 @@
 #define COMPANY_SZOT "It has a small <b>[span_engradio("three point crown")]</b> alongside <b>[span_engradio("Empire")]</b> cut into it." // ARK STATION EDIT
 #define COMPANY_SAKHNO "It has <b>[span_engradio("Empire")]</b> stamped onto it." // ARK STATION EDIT
 #define COMPANY_XHIHAO "It has <b>[span_engradio("Empire")]</b> etched into it." // ARK STATION EDIT
+#define COMPANY_ZCM "It has a stamped in <b>[span_engradio("three point crown")]</b> with <b>[span_engradio("Empire")]</b> legible at a certain angle." //-nyan :3 // ARK STATION EDIT
 
 #define COMPANY_ABDUCTOR "It has <b>[span_abductor("✌︎︎♌︎︎♎︎︎◆︎︎♍︎︎⧫︎︎❄︎♏︎♍︎♒︎")]</b> engraved into it."
 

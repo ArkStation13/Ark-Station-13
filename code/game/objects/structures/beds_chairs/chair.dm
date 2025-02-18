@@ -86,6 +86,15 @@
 	return mutable_appearance(icon, "[icon_state]_armrest")
 
 /obj/structure/chair/proc/update_armrest()
+<<<<<<< HEAD
+=======
+	if (cached_color_filter)
+		armrest = filter_appearance_recursive(armrest, cached_color_filter)
+	update_appearance()
+
+/obj/structure/chair/update_overlays()
+	. = ..()
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 	if(has_buckled_mobs())
 		add_overlay(armrest)
 	else
@@ -327,7 +336,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	hit_reaction_chance = 50
 	custom_materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT)
 	item_flags = SKIP_FANTASY_ON_SPAWN
+<<<<<<< HEAD
 	var/break_chance = 5 //Likely hood of smashing the chair.
+=======
+
+	// Duration of daze inflicted when the chair is smashed against someone from behind.
+	var/daze_amount = 3 SECONDS
+
+	// What structure type does this chair become when placed?
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 	var/obj/structure/chair/origin_type = /obj/structure/chair
 
 /obj/item/chair/suicide_act(mob/living/carbon/user)
@@ -385,11 +402,33 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 /obj/item/chair/afterattack(atom/target, mob/user, click_parameters)
 	if(!prob(break_chance))
 		return
+<<<<<<< HEAD
 	user.visible_message(span_danger("[user] smashes [src] to pieces against [target]"))
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
 		if(C.health < C.maxHealth*0.5)
 			C.Paralyze(20)
+=======
+
+	var/mob/living/carbon/human/give_this_fucker_the_chair = target
+
+	// Here we determine if our attack is against a vulnerable target
+	var/vulnerable_hit = check_behind(user, give_this_fucker_the_chair)
+
+	// If our attack is against a vulnerable target, we do additional damage to the chair
+	var/damage_to_inflict = vulnerable_hit ? (force * 5) : (force * 2.5)
+
+	if(!take_chair_damage(damage_to_inflict, damtype, MELEE)) // If we would do enough damage to bring our chair's integrity to 0, we instead go past the check to smash it against our target
+		return
+
+	user.visible_message(span_danger("[user] smashes [src] to pieces against [give_this_fucker_the_chair]"))
+	if(!HAS_TRAIT(give_this_fucker_the_chair, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED))
+		if(vulnerable_hit || give_this_fucker_the_chair.get_timed_status_effect_duration(/datum/status_effect/staggered))
+			give_this_fucker_the_chair.Knockdown(2 SECONDS, daze_amount = daze_amount)
+			if(give_this_fucker_the_chair.health < give_this_fucker_the_chair.maxHealth*0.5)
+				give_this_fucker_the_chair.adjust_confusion(10 SECONDS)
+
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 	smash(user)
 
 /obj/item/chair/greyscale
@@ -415,7 +454,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	inhand_icon_state = "stool_bamboo"
 	hitsound = 'sound/items/weapons/genhit1.ogg'
 	origin_type = /obj/structure/chair/stool/bamboo
+<<<<<<< HEAD
 	break_chance = 50	//Submissive and breakable unlike the chad iron stool
+=======
+	max_integrity = 40 //Submissive and breakable unlike the chad iron stool
+	daze_amount = 0 //Not hard enough to cause them to become dazed
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 
 /obj/item/chair/stool/narsie_act()
 	return //sturdy enough to ignore a god
@@ -429,7 +473,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	hitsound = 'sound/items/weapons/genhit1.ogg'
 	origin_type = /obj/structure/chair/wood
 	custom_materials = null
+<<<<<<< HEAD
 	break_chance = 50
+=======
+	daze_amount = 0
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 
 /obj/item/chair/wood/narsie_act()
 	return
@@ -550,7 +598,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	force = 7
 	throw_range = 5 //Lighter Weight --> Flies Farther.
 	custom_materials = list(/datum/material/plastic =SHEET_MATERIAL_AMOUNT)
+<<<<<<< HEAD
 	break_chance = 25
+=======
+	max_integrity = 70
+	daze_amount = 0
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 	origin_type = /obj/structure/chair/plastic
 
 /obj/structure/chair/musical

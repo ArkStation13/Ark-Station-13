@@ -95,6 +95,8 @@
 #define ROLE_SYNDICATE_MEDBORG "Syndicate Medical Cyborg"
 #define ROLE_SYNDICATE_ASSAULTBORG "Syndicate Assault Cyborg"
 
+#define ROLE_RECOVERED_CREW "Recovered Crew"
+
 //Spawner roles
 #define ROLE_ANCIENT_CREW "Ancient Crew"
 #define ROLE_ASHWALKER "Ash Walker"
@@ -209,6 +211,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_BLOODSUCKERBREAKOUT = 0,
 	ROLE_MONSTERHUNTER = 0,
 	// ARK STATION EDIT END
+	ROLE_RECOVERED_CREW = 0,
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

@@ -20,4 +20,11 @@ DreamDaemon tgstation.dmb -close -trusted -verbose -params "log-directory=ci"
 
 cd ..
 
+<<<<<<< HEAD
+=======
+mkdir -p data/screenshots_new
+cp -r ci_test/data/screenshots_new data/screenshots_new
+cp ci_test/data/unit_tests.json data/unit_tests.json
+
+>>>>>>> 3a1efdd069bfd5d39d34cbd2e08de594521efccb
 cat ci_test/data/logs/ci/clean_run.lk

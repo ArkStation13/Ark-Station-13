@@ -15,11 +15,21 @@
 /datum/loadout_item/pocket_items/stellar_bouquet
 	name = "Stellar Bouquet"
 	item_path = /obj/item/bouquet/stellar
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/paddedunder
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/under/jumpsuit/sweater_dress
+	name = "Virgin Killer Sweater"
+	item_path = /obj/item/clothing/under/sweater_dress
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/suit/bomber_donor
+	name = "Old Hoodie"
+	item_path = /obj/item/clothing/suit/jacket/bomber_donor
 	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/paddedunder/alt
@@ -40,7 +50,7 @@
 /datum/loadout_item/neck/padded/security
 	name = "Vanguard Cloak"
 	item_path = /obj/item/clothing/neck/padded/security
-	ckeywhitelist = list("actualvanguard")
+	// ARK STATION REMOVED: ckeywhitelist = list("actualvanguard")
 
 /datum/loadout_item/gloves/padded
 	name = "Serenity Gloves"
@@ -128,12 +138,12 @@
 /datum/loadout_item/mask/divemask_koru
 	name = "S.O.K.O. Gaiter"
 	item_path = /obj/item/clothing/mask/gas/signalis_gaiter
-	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22")
+	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22", "regaleira")
 
 /datum/loadout_item/under/jumpsuit/divesuit_koru
 	name = "S.O.K.O. Bodysuit"
 	item_path = /obj/item/clothing/under/bodysuit_koruu
-	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22")
+	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22", "regaleira")
 
 /datum/loadout_item/under/jumpsuit/anasuit
 	name = "Azulean's Enviro-Suit"
@@ -809,6 +819,16 @@
 	item_path = /obj/item/implanter/toaster
 	// ARK STATION REMOVED: ckeywhitelist = list("jasohavents")
 
+/datum/loadout_item/pocket_items/theurgic_crystal
+	name = "Theurgic Stone"
+	item_path = /obj/item/organ/cyberimp/arm/shard/donator/theurgic_crystal
+	ckeywhitelist = list("sciamach")
+
+/datum/loadout_item/toys/delphic_synth
+	name = "Surgery Synth Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/delphic_synth
+	ckeywhitelist = list("sciamach")
+
 /datum/loadout_item/under/miscellaneous/rem
 	name = "M.I.A. Limiter"
 	item_path = /obj/item/clothing/under/rem
@@ -839,7 +859,7 @@
     item_path = /obj/item/storage/backpack/satchel/drop_pouch
     // ARK STATION REMOVED: ckeywhitelist = list("alvcyktor", "snakebittenn")
 
-/datum/loadout_item/inhand/melonseva
+/datum/loadout_item/pocket_items/melonseva
 	name = "Sundowner SEVA"
 	item_path = /obj/item/clothing/suit/hooded/seva/melon
 	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
@@ -884,9 +904,36 @@
 /datum/loadout_item/pocket_items/starfruit_seed
 	name = "Primidine Starfruit Seed"
 	item_path = /obj/item/seeds/starfruit
-	// ARK STATION REMOVED: ckeywhitelist = list("snailomi", "thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("snailomi", "thedragmeme", "DayDream21", "Sketchy_Axoltol", "Tesla825")
 
 /datum/loadout_item/suit/butter
 	name = "Butter Costume"
 	item_path = /obj/item/clothing/suit/costume/butter
 	// ARK STATION REMOVED: ckeywhitelist = list("drpmstr", "pyritechimera")
+
+/datum/loadout_item/neck/tattered
+	name = "Worn Corporate Cloak"
+	item_path = /obj/item/clothing/neck/tattered
+	// ARK STATION REMOVED: ckeywhitelist = list("jaklz")
+
+/datum/loadout_item/toys/commandant
+	name = "Commandant Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/commandant
+// ckeywhitelist = list("bonkaitheroris") // Asked it to be public
+
+/datum/loadout_item/neck/noble_cloak
+	name = "Noble Cloak"
+	item_path = /obj/item/clothing/neck/noble_mantle
+	// ARK STATION REMOVED: ckeywhitelist = list("sharkoink")
+
+/datum/loadout_item/pocket_items/comvest
+	name = "Command Armor Vest"
+	item_path = /obj/item/clothing/suit/armor/hos/trenchcoat/melon
+	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
+	restricted_roles = list(JOB_HEAD_OF_SECURITY)
+
+/datum/loadout_item/pocket_items/amps
+	name = "Anomalous Materials Protection Suit"
+	item_path = /obj/item/clothing/suit/hooded/explorer/melon
+	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
+	restricted_roles = list(JOB_SHAFT_MINER)

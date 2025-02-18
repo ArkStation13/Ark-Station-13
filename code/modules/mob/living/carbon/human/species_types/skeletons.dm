@@ -26,14 +26,14 @@
 		TRAIT_NOTHIRST, // ARK STATION EDIT
 	)
 	inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
-	mutanttongue = /obj/item/organ/internal/tongue/bone
-	mutantstomach = /obj/item/organ/internal/stomach/bone
+	mutanttongue = /obj/item/organ/tongue/bone
+	mutantstomach = /obj/item/organ/stomach/bone
 	mutantappendix = null
 	mutantheart = null
-	mutantliver = /obj/item/organ/internal/liver/bone
+	mutantliver = /obj/item/organ/liver/bone
 	mutantlungs = null
 	//They can technically be in an ERT
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | ERT_SPAWN
 	species_cookie = /obj/item/reagent_containers/condiment/milk
 	species_language_holder = /datum/language_holder/skeleton
 

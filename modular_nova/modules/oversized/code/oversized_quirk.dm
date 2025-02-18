@@ -1,4 +1,4 @@
-#define OVERSIZED_SPEED_SLOWDOWN 0.5
+#define OVERSIZED_SPEED_SLOWDOWN 0.9
 #define OVERSIZED_HUNGER_MOD 1.5
 
 // Before making any changes to oversized, please see the module's readme.md file
@@ -75,9 +75,9 @@
 			continue
 
 		// if it's a brain, make sure the mob doesn't get stuck outside their body
-		var/obj/item/organ/internal/brain/possibly_a_brain = organ_to_restore
+		var/obj/item/organ/brain/possibly_a_brain = organ_to_restore
 		if(istype(possibly_a_brain))
-			var/obj/item/organ/internal/brain/current_brain = human_holder.get_organ_slot(ORGAN_SLOT_BRAIN)
+			var/obj/item/organ/brain/current_brain = human_holder.get_organ_slot(ORGAN_SLOT_BRAIN)
 			possibly_a_brain.brainmob = current_brain.brainmob
 
 		organ_to_restore.replace_into(quirk_holder)

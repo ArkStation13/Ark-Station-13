@@ -88,7 +88,7 @@
 	z_turf = get_turf(factory)
 
 /// If the blob changes to distributed neurons then you can control the spores
-/mob/living/basic/blob_minion/spore/minion/on_strain_updated(mob/camera/blob/overmind, datum/blobstrain/new_strain)
+/mob/living/basic/blob_minion/spore/minion/on_strain_updated(mob/eye/blob/overmind, datum/blobstrain/new_strain)
 	if (isnull(overmind))
 		REMOVE_TRAIT(src, TRAIT_PERMANENTLY_MORTAL, INNATE_TRAIT)
 	else
@@ -105,7 +105,7 @@
 		qdel(GetComponent(/datum/component/ghost_direct_control))
 
 /mob/living/basic/blob_minion/spore/minion/death_burst()
-	return // This behaviour is superceded by the overmind's intervention
+	return // This behaviour is superseded by the overmind's intervention
 
 
 /// Weakened spore spawned by distributed neurons, can't zombify people and makes a teeny explosion

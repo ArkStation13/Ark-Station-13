@@ -1346,6 +1346,15 @@
 	name = "Wedding Dress With Ribbon (Worn)"
 	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/skirts_dresses.dmi'
 
+/datum/greyscale_config/giant_scarf
+	name = "Giant Scarf"
+	icon_file = 'modular_nova/master_files/icons/obj/clothing/under/skirts_dresses.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/pants_shorts_skirts_dresses/giant_scarf.json'
+
+/datum/greyscale_config/giant_scarf/worn
+	name = "Giant Scarf (Worn)"
+	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/skirts_dresses.dmi'
+
 
 // KILT
 // COSTUMES
@@ -1995,3 +2004,18 @@ TREK
 /datum/greyscale_config/turret/toolbox
 	name = "Donksoft Turret"
 	json_config = 'modular_nova/modules/GAGS/json_configs/turret/turret_toolbox.json'
+
+// Fancy Labcoat
+
+/datum/greyscale_config/fancy_labcoat
+	name = "Fancy Suit"
+	icon_file = 'modular_nova/modules/GAGS/icons/fancy_labcoat.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/fancy_labcoat/fancy_labcoat.json'
+
+/datum/greyscale_config/fancy_labcoat/worn
+	name = "Fancy Suit (Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/fancy_labcoat/fancy_labcoat_worn.json'
+
+/datum/greyscale_config/fancy_labcoat/worn/teshari
+	name = "Fancy Suit (Worn, Teshari)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/fancy_labcoat/fancy_labcoat_tesh_worn.json'

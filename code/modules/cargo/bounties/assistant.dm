@@ -55,7 +55,7 @@
 
 /datum/bounty/item/assistant/statue
 	name = "Statue"
-	description = "Central Command would like to commision an artsy statue for the lobby. Ship one out, when possible."
+	description = "Central Command would like to commission an artsy statue for the lobby. Ship one out, when possible."
 	reward = CARGO_CRATE_VALUE * 4
 	wanted_types = list(/obj/structure/statue = TRUE)
 
@@ -187,7 +187,7 @@
 	name = "Crayons"
 	description = "Dr. Jones's kid ate all of our crayons again. Please send us yours."
 	reward = CARGO_CRATE_VALUE * 4
-	required_count = 24
+	required_count = 8
 	wanted_types = list(/obj/item/toy/crayon = TRUE)
 */ // NOVA EDIT REMOVAL END 
 

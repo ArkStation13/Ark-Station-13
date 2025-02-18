@@ -6,10 +6,10 @@
 @use 'sass:color';
 @use 'sass:math';
 
-$color-fg: #e6ebe6 !default; // ARK STATION EDIT
-$color-bg: #1e221e !default; // ARK STATION EDIT
-$color-bg-section: rgba(9, 10, 9, 0.17) !default; // ARK STATION EDIT
-$color-bg-grad-spread: 2% !default; // ARK STATION EDIT
+$color-fg: hsl(0, 0%, 100%) !default;
+$color-bg: hsl(0, 0%, 14%) !default;
+$color-bg-section: rgba(0, 0, 0, 0.33) !default;
+$color-bg-grad-spread: 2% !default;
 $color-bg-start: color.adjust(
   $color-bg,
   $lightness: $color-bg-grad-spread
@@ -18,11 +18,10 @@ $color-bg-end: color.adjust(
   $color-bg,
   $lightness: -$color-bg-grad-spread
 ) !default;
-$color-bg-alt: #383a37 !default; // ARK STATION ADDITION
 
 $unit: 12px;
 $font-size: 1 * $unit !default;
-$border-radius: 2px !default; // ARK STATION EDIT (0.16em)
+$border-radius: 0.16em !default;
 
 @function em($px) {
   @return 1em * math.div($px, $unit);
