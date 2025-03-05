@@ -77,10 +77,10 @@ GLOBAL_VAR_INIT(dynamic_forced_secret, FALSE)
 		// Malf
 		gamemode_rule = /datum/dynamic_ruleset/roundstart/malf_ai
 		GLOB.dynamic_forced_threat_level = 0
-	else if(prob(10))
-		// Revolution
-		gamemode_rule = /datum/dynamic_ruleset/roundstart/revs
-		GLOB.dynamic_forced_threat_level = 0
+	// else if(prob(10))
+	// 	// Revolution
+	// 	gamemode_rule = /datum/dynamic_ruleset/roundstart/revs
+	// 	GLOB.dynamic_forced_threat_level = 0
 	else if(prob(10))
 		// Blood Cult
 		gamemode_rule = /datum/dynamic_ruleset/roundstart/bloodcult

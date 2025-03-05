@@ -90,7 +90,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'RHIB Agent', // ARK STATION EDIT
       'Head of Red Hawk', // ARK STATION EDIT
       'Red Hawk Private', // ARK STATION EDIT
-      'Red Hawk Inspector', // ARK STATION EDIT
+      'Red Hawk Sergeant', // ARK STATION EDIT
       'Red Hawk Pilot', // ARK STATION ADDITION
       'Red Hawk Medic', // ARK STATION ADDITION
     ], // NOVA EDIT CHANGE END

@@ -168,6 +168,13 @@
 	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/base_airlock.dmi'
 	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station2/overlays.dmi'
 
+/obj/machinery/door/airlock/hydroponics
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/botany.dmi'
+	overlays_file = 'modularz_arkstation/modules/new-airlocks/airlocks/station/overlays.dmi'
+
+/obj/structure/door_assembly/door_assembly_hydro
+	icon = 'modularz_arkstation/modules/new-airlocks/airlocks/station/botany.dmi'
+
 // Лист для авто-разворота //
 /obj/machinery/door
 	var/list/autodir_list = list(
@@ -229,3 +236,7 @@
 		return FAILED_UNFASTEN
 	wrench.play_tool_sound(src, 50)
 	setDir(new_dir)
+
+/obj/machinery/door/airlock/examine(mob/user)
+	. = ..()
+	. += span_notice("The <b>direction</b> of the airlock can be changed with a <b>wrench when the wiring is open</b>.")

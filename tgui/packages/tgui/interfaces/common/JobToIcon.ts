@@ -346,7 +346,7 @@ const ALTTITLES = {
   'Red Hawk Medic': BASEICONS['Security Medic'],
   'Red Hawk Pilot': BASEICONS['Brig Pilot'],
   'RHIB Agent': BASEICONS['Detective'],
-  'Red Hawk Inspector': BASEICONS['Warden'],
+  'Red Hawk Sergeant': BASEICONS['Warden'],
   // Cargo
   'Excavation Specialist': BASEICONS['Shaft Miner'],
   'Ruin Explorer': BASEICONS['Vanguard Operative'],

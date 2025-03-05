@@ -1559,9 +1559,7 @@
 "alt" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/machinery/computer/crew{
-	dir = 1
-	},
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "alu" = (
@@ -27150,7 +27148,6 @@
 /area/station/maintenance/port/aft)
 "cfE" = (
 /obj/structure/closet/secure_closet/warden,
-/obj/item/gun/energy/laser,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 10
 	},
@@ -40159,6 +40156,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/station/security/execution/transfer)
+"hEV" = (
+/obj/effect/landmark/start/warden,
+/turf/open/floor/iron/dark,
+/area/station/security/warden)
 "hFg" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -40437,6 +40438,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "hPQ" = (
@@ -43222,6 +43224,13 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
+"jBh" = (
+/obj/effect/landmark/start/warden,
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/warden)
 "jBL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -43977,6 +43986,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
+	},
+/obj/machinery/computer/crew{
+	dir = 1
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
@@ -95758,9 +95770,9 @@ lSJ
 ldO
 agn
 vHb
-vEA
+jBh
 oAN
-vEA
+hEV
 afQ
 aIF
 alz
