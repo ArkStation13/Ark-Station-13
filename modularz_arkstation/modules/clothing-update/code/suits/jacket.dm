@@ -338,7 +338,7 @@
 	icon_state = "sec_assistant"
 
 /obj/item/clothing/suit/armor/security_tailcoat/warden
-	name = "warden's tailcoat"
+	name = "sergeant's tailcoat"
 	desc = "A reinforced tailcoat worn by bunny themed wardens. Stylishly holds hidden flak plates."
 	icon_state = "warden"
 

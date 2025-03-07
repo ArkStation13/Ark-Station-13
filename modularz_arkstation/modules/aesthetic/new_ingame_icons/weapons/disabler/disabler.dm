@@ -1,8 +1,16 @@
 /obj/item/gun/energy/disabler
+	name = "criminal stopper"
+	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
 	icon = 'modularz_arkstation/modules/aesthetic/new_ingame_icons/weapons/disabler/disabler.dmi'
-	shaded_charge = TRUE
+	lefthand_file = 'modularz_arkstation/modules/aesthetic/new_ingame_icons/weapons/disabler/guns_lefthand.dmi'
+	righthand_file = 'modularz_arkstation/modules/aesthetic/new_ingame_icons/weapons/disabler/guns_righthand.dmi'
+	shaded_charge = FALSE
+	modifystate = TRUE
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/electrode/disabler)
 
+	recoil = 0.1
+
+//
 /obj/item/ammo_casing/energy/electrode/disabler
 	projectile_type = /obj/projectile/energy/electrode/disabler
 	select_name = "stun"
@@ -41,9 +49,14 @@
 // Other
 /obj/item/gun/energy/disabler/smoothbore
 	icon = 'icons/obj/weapons/guns/energy.dmi'
-
-/obj/item/gun/energy/disabler/smoothbore/prime
-	icon = 'icons/obj/weapons/guns/energy.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	shaded_charge = FALSE
+	modifystate = FALSE
 
 /obj/item/gun/energy/disabler/smg
 	icon = 'icons/obj/weapons/guns/energy.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	shaded_charge = TRUE
+	modifystate = FALSE

@@ -789,7 +789,7 @@
 	return pick("span>","DEBUG: ","null","/list","EVENT PREFIX NOT FOUND") //Portability
 
 // ISLAMIC
-
+/* // ARK STATION REMOVED START - Вы ебанаты?
 /datum/holiday/islamic
 	name = "Islamic calendar code broken"
 
@@ -811,7 +811,7 @@
 	end_month = 10
 	begin_day = 28
 	end_day = 1
-
+*/ // ARK STATION REMOVED END - Вы ебанаты?
 // HEBREW
 
 /datum/holiday/hebrew

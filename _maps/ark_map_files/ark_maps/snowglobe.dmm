@@ -8294,9 +8294,21 @@
 /turf/open/water/overlay,
 /area/station/hallway/floor2)
 "cjk" = (
-/obj/structure/closet/secure_closet/warden,
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 6
+	},
+/obj/structure/table/reinforced,
+/obj/item/paper_bin/carbon{
+	pixel_x = -12;
+	pixel_y = 7
+	},
+/obj/item/pen{
+	pixel_y = 7;
+	pixel_x = -8
+	},
+/obj/item/book/manual/wiki/security_space_law{
+	pixel_y = 6;
+	pixel_x = 4
 	},
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 1
@@ -12031,14 +12043,10 @@
 /area/station/ai_monitored/turret_protected/aisat/hallway)
 "dkq" = (
 /obj/machinery/light_switch/directional/north,
-/obj/structure/table/reinforced,
-/obj/item/flashlight/lamp{
-	pixel_y = 11;
-	pixel_x = 3
-	},
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -18360,8 +18368,8 @@
 "eVX" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/item/radio/intercom/directional/south,
-/obj/effect/turf_decal/bot_blue,
 /obj/item/clothing/mask/balaclava,
+/obj/effect/turf_decal/bot_red,
 /turf/open/floor/iron/smooth_large,
 /area/station/security/lockers)
 "eWc" = (
@@ -22880,9 +22888,6 @@
 /area/station/commons/lounge)
 "ggD" = (
 /obj/effect/landmark/start/warden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "ggF" = (
@@ -42811,22 +42816,10 @@
 "lsE" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/security_space_law{
-	pixel_y = 6;
-	pixel_x = 4
-	},
-/obj/item/paper_bin/carbon{
-	pixel_x = -12;
-	pixel_y = 7
-	},
-/obj/item/pen{
-	pixel_y = 7;
-	pixel_x = -8
-	},
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -64000,7 +63993,7 @@
 	},
 /obj/item/inspector{
 	pixel_y = 5;
-	pixel_x = 17
+	pixel_x = 9
 	},
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 9
@@ -65709,8 +65702,8 @@
 /area/station/maintenance/abandon_art_studio)
 "rJL" = (
 /obj/structure/closet/secure_closet/security/sec,
-/obj/effect/turf_decal/bot_blue,
 /obj/item/clothing/mask/balaclava,
+/obj/effect/turf_decal/bot_red,
 /turf/open/floor/iron/smooth_large,
 /area/station/security/lockers)
 "rKa" = (
@@ -66286,8 +66279,8 @@
 /obj/structure/closet/secure_closet/security/sec,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/effect/turf_decal/bot_blue,
 /obj/item/clothing/mask/balaclava,
+/obj/effect/turf_decal/bot_red,
 /turf/open/floor/iron/smooth_large,
 /area/station/security/lockers)
 "rSz" = (
@@ -67155,7 +67148,7 @@
 "sbg" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/security{
-	name = "Warden's Quarters"
+	name = "Sergeant Quarters"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/landmark/navigate_destination{
@@ -82915,8 +82908,8 @@
 "wka" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/structure/extinguisher_cabinet/directional/east,
-/obj/effect/turf_decal/bot_blue,
 /obj/item/clothing/mask/balaclava,
+/obj/effect/turf_decal/bot_red,
 /turf/open/floor/iron/smooth_large,
 /area/station/security/lockers)
 "wko" = (
@@ -84652,6 +84645,11 @@
 "wGX" = (
 /obj/machinery/status_display/evac/directional/south,
 /obj/effect/turf_decal/trimline/white/line,
+/obj/structure/table/reinforced,
+/obj/item/flashlight/lamp{
+	pixel_y = 11;
+	pixel_x = 3
+	},
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/security/warden)
 "wHa" = (
@@ -246787,10 +246785,10 @@ xbD
 rJL
 jZq
 dkq
-cEY
+ggD
 flT
 cEY
-cEY
+ggD
 uaq
 jZq
 mza
@@ -247045,7 +247043,7 @@ rSv
 jZq
 lsE
 dTp
-ggD
+flT
 ikN
 ksK
 ggj
@@ -247302,7 +247300,7 @@ eVX
 jZq
 cPp
 mEU
-cEY
+ggD
 cEY
 xdt
 wGX

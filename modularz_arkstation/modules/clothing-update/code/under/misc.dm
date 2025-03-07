@@ -405,7 +405,7 @@
 
 /obj/item/clothing/under/rank/security/warden_bunnysuit
 	desc = "The staple of any bunny themed wardens. The more formal security bunny suit for a less combat focused job."
-	name = "warden's bunnysuit"
+	name = "sergeant's bunnysuit"
 	icon_state = "bunnysuit_warden"
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/under/security.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/under/security.dmi'

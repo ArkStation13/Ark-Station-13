@@ -33378,6 +33378,9 @@
 	pixel_y = 9
 	},
 /obj/item/radio/intercom/directional/north,
+/obj/machinery/recharger{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/security/warden)
 "jUB" = (
@@ -42529,6 +42532,7 @@
 "mEB" = (
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
+/obj/effect/landmark/start/warden,
 /turf/open/floor/iron/white,
 /area/station/security/warden)
 "mEJ" = (
@@ -53678,8 +53682,28 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "pNz" = (
-/obj/structure/closet/secure_closet/warden,
 /obj/machinery/light/small/directional/east,
+/obj/structure/table,
+/obj/item/hand_labeler{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/item/clothing/ears/earmuffs{
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/clothing/ears/earmuffs{
+	pixel_x = -8;
+	pixel_y = 11
+	},
+/obj/item/clothing/glasses/sunglasses{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/clothing/glasses/sunglasses{
+	pixel_x = 8;
+	pixel_y = 10
+	},
 /turf/open/floor/iron/white,
 /area/station/security/warden)
 "pNB" = (
@@ -57885,28 +57909,8 @@
 /turf/open/floor/iron,
 /area/station/command/teleporter)
 "rai" = (
-/obj/structure/table,
-/obj/item/clothing/ears/earmuffs{
-	pixel_x = -8;
-	pixel_y = 11
-	},
-/obj/item/clothing/ears/earmuffs{
-	pixel_x = -8;
-	pixel_y = 6
-	},
-/obj/item/clothing/glasses/sunglasses{
-	pixel_x = 8;
-	pixel_y = 10
-	},
-/obj/item/clothing/glasses/sunglasses{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/hand_labeler{
-	pixel_x = -4;
-	pixel_y = -6
-	},
 /obj/machinery/newscaster/directional/north,
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron/white,
 /area/station/security/warden)
 "rao" = (
@@ -64113,6 +64117,18 @@
 	id = "BrigLock";
 	name = "Cell Shutters";
 	pixel_x = 7;
+	pixel_y = -9
+	},
+/obj/machinery/button/door{
+	id = "Prison Gate";
+	name = "Prison Wing Lockdown";
+	pixel_x = 7;
+	req_access = list("brig")
+	},
+/obj/machinery/button/door{
+	id = "Secure Gate";
+	name = "Cell Shutters";
+	pixel_x = 7;
 	pixel_y = 9
 	},
 /turf/open/floor/iron/white,
@@ -66009,23 +66025,8 @@
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "twP" = (
-/obj/structure/table,
-/obj/machinery/recharger{
-	pixel_x = -6
-	},
-/obj/machinery/button/door{
-	id = "Secure Gate";
-	name = "Cell Shutters";
-	pixel_x = 7;
-	pixel_y = 9
-	},
-/obj/machinery/button/door{
-	id = "Prison Gate";
-	name = "Prison Wing Lockdown";
-	pixel_x = 7;
-	req_access = list("brig")
-	},
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron/white,
 /area/station/security/warden)
 "twU" = (

@@ -13729,6 +13729,13 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/space/nearstation)
+"doc" = (
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/obj/effect/landmark/start/warden,
+/turf/open/floor/iron,
+/area/station/security/warden)
 "doe" = (
 /obj/machinery/airalarm/directional/west,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -27950,19 +27957,11 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
 "gIB" = (
-/obj/structure/table/reinforced,
 /obj/machinery/newscaster/directional/west,
-/obj/machinery/recharger{
-	pixel_x = -6;
-	pixel_y = 2
-	},
-/obj/machinery/recharger{
-	pixel_x = 6;
-	pixel_y = 2
-	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "gIE" = (
@@ -52003,10 +52002,17 @@
 /area/station/science/robotics/mechbay)
 "mFp" = (
 /obj/structure/table/reinforced,
-/obj/item/paper_bin,
-/obj/item/pen,
+/obj/item/paper_bin{
+	pixel_x = -6
+	},
+/obj/item/pen{
+	pixel_x = -6
+	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
+	},
+/obj/item/book/manual/wiki/security_space_law{
+	pixel_x = 8
 	},
 /turf/open/floor/iron,
 /area/station/security/warden)
@@ -54844,6 +54850,9 @@
 /obj/machinery/computer/crew,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 1
+	},
+/obj/item/toy/figure/warden{
+	pixel_y = 9
 	},
 /turf/open/floor/iron,
 /area/station/security/warden)
@@ -63833,20 +63842,16 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port/aft)
 "pFg" = (
-/obj/structure/table/reinforced,
 /obj/machinery/requests_console/directional/west{
 	department = "Security";
 	name = "Security Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/supplies,
 /obj/effect/mapping_helpers/requests_console/assistance,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/toy/figure/warden{
-	pixel_y = 3
-	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "pFk" = (
@@ -84088,11 +84093,18 @@
 /turf/open/floor/iron/white,
 /area/station/science/lobby)
 "uyK" = (
-/obj/structure/closet/secure_closet/warden,
-/obj/item/clothing/under/rank/security/warden/grey,
 /obj/machinery/light_switch/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 2
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "uyL" = (
@@ -97165,6 +97177,7 @@
 /obj/structure/cable,
 /obj/structure/chair/office,
 /obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/effect/landmark/start/warden,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "xIR" = (
@@ -151862,7 +151875,7 @@ ufR
 peu
 rIa
 pMh
-rIa
+doc
 rIa
 rIa
 aVz

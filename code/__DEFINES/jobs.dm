@@ -62,7 +62,7 @@
 #define JOB_PERSONAL_AI "Personal AI"
 #define JOB_HUMAN_AI "Big Brother"
 //Security
-#define JOB_WARDEN "Red Hawk Inspector" // ARK STATION EDIT || Warden
+#define JOB_WARDEN "Red Hawk Sergeant" // ARK STATION EDIT || Warden
 #define JOB_DETECTIVE "RHIB Agent" // ARK STATION EDIT || Detective
 #define JOB_SECURITY_OFFICER "Red Hawk Private" // ARK STATION EDIT || Security Officer
 #define JOB_SECURITY_OFFICER_MEDICAL "Red Hawk Private (Green)" // ARK STATION EDIT || Security Officer (Medical)

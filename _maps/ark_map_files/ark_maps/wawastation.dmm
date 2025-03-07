@@ -8455,6 +8455,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/effect/landmark/start/warden,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "cYH" = (
@@ -16103,7 +16104,15 @@
 /area/station/engineering/atmos)
 "fDV" = (
 /obj/machinery/light/small/directional/west,
-/obj/structure/chair/office,
+/obj/structure/dresser,
+/obj/item/toy/figure/secofficer{
+	pixel_y = 12;
+	pixel_x = -6
+	},
+/obj/item/toy/figure/dsquad{
+	pixel_y = 12;
+	pixel_x = 6
+	},
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "fEa" = (
@@ -24230,16 +24239,8 @@
 /area/station/science/xenobiology)
 "ioZ" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/dresser,
-/obj/item/toy/figure/dsquad{
-	pixel_y = 12;
-	pixel_x = 6
-	},
-/obj/item/toy/figure/secofficer{
-	pixel_y = 12;
-	pixel_x = -6
-	},
 /obj/machinery/light_switch/directional/east,
+/obj/structure/closet/secure_closet/warden,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "ipc" = (
@@ -30095,7 +30096,6 @@
 /area/space/nearstation)
 "kng" = (
 /obj/structure/closet/secure_closet/warden,
-/obj/item/gun/energy/laser,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
@@ -52279,7 +52279,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
 "rQY" = (
-/obj/effect/landmark/start/warden,
 /obj/effect/landmark/event_spawn,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -58137,8 +58136,13 @@
 /turf/open/floor/iron/white/smooth_large,
 /area/station/service/chapel)
 "tMf" = (
-/obj/item/modular_computer/laptop/preset/civilian,
-/obj/structure/table/wood,
+/obj/item/bedsheet/brown{
+	dir = 1
+	},
+/obj/structure/bed{
+	dir = 4
+	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "tMp" = (
@@ -70548,7 +70552,7 @@
 /area/station/tcommsat/server)
 "xZO" = (
 /obj/machinery/door/airlock/security{
-	name = "Warden Quarters"
+	name = "Sergeant Quarters"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/wood{

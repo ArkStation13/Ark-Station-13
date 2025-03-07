@@ -275,7 +275,7 @@
 //TODO: Find a way to add Warden stuff that isn't hack-y.
 
 /obj/item/clothing/head/playbunnyears/warden
-	name = "warden's bunny ears"
+	name = "sergeant's bunny ears"
 	desc = "Red and white bunny ears attached to a headband. Keeps the hair out of the face when checking on cameras."
 	icon_state = "warden"
 	clothing_flags = SNUG_FIT
