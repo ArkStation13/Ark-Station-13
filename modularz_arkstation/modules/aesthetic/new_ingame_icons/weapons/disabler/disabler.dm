@@ -51,10 +51,12 @@
 	icon = 'icons/obj/weapons/guns/energy.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	shaded_charge = FALSE
+	modifystate = FALSE
 
 /obj/item/gun/energy/disabler/smg
 	icon = 'icons/obj/weapons/guns/energy.dmi'
-	shaded_charge = TRUE
-	modifystate = FALSE
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	shaded_charge = TRUE
+	modifystate = FALSE
