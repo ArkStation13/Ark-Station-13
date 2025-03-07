@@ -5,4 +5,4 @@
 
 /obj/item/storage/medkit/advanced
 	icon_state = "medkit_advanced"
-	inhand_icon_state = "medkit_advanced"
+	inhand_icon_state = "medkit-advanced"
