@@ -14,7 +14,7 @@
 
 /obj/projectile/bullet/a792x33
 	name = "7.92x33 bullet"
-	damage = 32
+	damage = 6 // 32
 	wound_bonus = 10
 	wound_falloff_tile = 0
 //
@@ -60,9 +60,9 @@
 
 /obj/projectile/bullet/a762x39
 	name = "5.6mm bullet"
-	damage = 38
-	wound_bonus = 35
-	armour_penetration = 40
+	damage = 18 // 38
+	wound_bonus = 20 // 35
+	armour_penetration = 20 // 40
 	wound_falloff_tile = 0
 
 /obj/item/ammo_casing/realistic/a762x39/ricochet
@@ -74,7 +74,7 @@
 
 /obj/projectile/bullet/a762x39/ricochet
 	name = "5.6mm match bullet"
-	damage = 30
+	damage = 15 // 30
 	wound_bonus = 25
 	armour_penetration = 25
 	ricochets_max = 2
@@ -95,7 +95,7 @@
 
 /obj/projectile/bullet/incendiary/a762x39
 	name = "5.6mm incendiary bullet"
-	damage = 30
+	damage = 15 // 30
 	wound_bonus = 25
 	armour_penetration = 30
 	wound_falloff_tile = -5
@@ -112,7 +112,7 @@
 
 /obj/projectile/bullet/a762x39/ap
 	name = "5.6mm armor-piercing bullet"
-	damage = 30
+	damage = 20 // 30
 	wound_bonus = 15
 	armour_penetration = 60
 
@@ -145,7 +145,7 @@
 
 /obj/projectile/bullet/a762x39/civilian
 	name = "5.6mm civilian bullet"
-	damage = 34
+	damage = 16 // 34
 	wound_bonus = 15
 	armour_penetration = 10
 	wound_falloff_tile = 3
@@ -159,7 +159,7 @@
 
 /obj/projectile/bullet/a762x39/rubber
 	name = "5.6mm rubber bullet"
-	damage = 15
+	damage = 4 // 15
 	armour_penetration = 10
 	stamina = 45
 	ricochets_max = 6
@@ -205,7 +205,7 @@
 	name = "hot gas"
 	icon = 'icons/obj/weapons/guns/projectiles_muzzle.dmi'
 	icon_state = "muzzle_bullet"
-	damage = 5
+	damage = 3 // 5
 	damage_type = BURN
 	wound_bonus = -100
 	armour_penetration = 0
