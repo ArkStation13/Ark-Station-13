@@ -55,4 +55,4 @@
 	remove_filter("lamps_selfglow_bloom")
 	if(istype(mymob))
 		add_filter("lamps_glare", 1, radial_blur_filter(size = 0.04)) // 0.06
-		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = 2, offset = 1, alpha = 60))
+		add_filter("lamps_selfglow_bloom", 1, bloom_filter(threshold = "#aaaaaa", size = 1.3, offset = 1, alpha = 30))
