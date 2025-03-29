@@ -26,6 +26,11 @@ GLOBAL_LIST(whitelist)
 
 // ARK STATION ADDED BELOW || BLUEMOON WHITELIST
 /proc/check_whitelist(key)
+	if(!CONFIG_GET(flag/usewhitelist))
+		log_world("Whitelist disabled in Configs.")
+		log_game("Whitelist disabled in Configs.")
+		return TRUE
+
 	if(!SSdbcore.Connect())
 		log_world("Failed to connect to database in check_whitelist(). Disabling whitelist for current round.")
 		log_game("Failed to connect to database in check_whitelist(). Disabling whitelist for current round.")
