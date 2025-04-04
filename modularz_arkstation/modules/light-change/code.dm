@@ -31,61 +31,61 @@
 	var/image/glow_overlay
 	var/image/exposure_overlay
 
-/obj/machinery/computer
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-computer-sprites/computer.dmi'
-	glow_icon_state = "computer_light_mask"
+// /obj/machinery/computer
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-computer-sprites/computer.dmi'
+// 	glow_icon_state = "computer_light_mask"
 
-/obj/machinery/computer/records/security/laptop
-	glow_icon_state = "laptop_light_mask"
+// /obj/machinery/computer/records/security/laptop
+// 	glow_icon_state = "laptop_light_mask"
 
-/obj/machinery/computer/records/medical/laptop
-	glow_icon_state = "laptop_light_mask"
+// /obj/machinery/computer/records/medical/laptop
+// 	glow_icon_state = "laptop_light_mask"
 
-/obj/machinery/computer/security/wooden_tv
-	glow_icon_state = "tv_light_mask"
+// /obj/machinery/computer/security/wooden_tv
+// 	glow_icon_state = "tv_light_mask"
 
-/obj/machinery/computer/arcade
-	glow_icon_state = "arcade_light_mask"
+// /obj/machinery/computer/arcade
+// 	glow_icon_state = "arcade_light_mask"
 
-/obj/machinery/vending
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-vending-sprites/vendomats_dolbajob.dmi'
-	glow_icon_state = "generic-light-mask"
+// /obj/machinery/vending
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-vending-sprites/vendomats_dolbajob.dmi'
+// 	glow_icon_state = "generic-light-mask"
 
-/obj/machinery/vending/Initialize(mapload)
-	. = ..()
-	glow_icon_state = light_mask
+// /obj/machinery/vending/Initialize(mapload)
+// 	. = ..()
+// 	glow_icon_state = light_mask
 
-/obj/machinery/power/apc
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-wall-machines/power.dmi'
-	glow_icon_state = "apc_light_mask"
-	light_on_range = 2
+// /obj/machinery/power/apc
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-wall-machines/power.dmi'
+// 	glow_icon_state = "apc_light_mask"
+// 	light_on_range = 2
 
-/obj/machinery/airalarm
-	light_power = 0.8
-	light_range = 1.5
-	light_color = LIGHT_COLOR_ELECTRIC_GREEN
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-air-alarm/airalarm.dmi'
-	glow_icon_state = "alarm-mask"
+// /obj/machinery/airalarm
+// 	light_power = 0.8
+// 	light_range = 1.5
+// 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-air-alarm/airalarm.dmi'
+// 	glow_icon_state = "alarm-mask"
 
-/obj/machinery/firealarm
-	light_power = 0.5
-	light_range = 1
-	light_color = LIGHT_COLOR_ELECTRIC_GREEN
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-wall-machines/monitors.dmi'
-	glow_icon_state = "fire_light_mask"
+// /obj/machinery/firealarm
+// 	light_power = 0.5
+// 	light_range = 1
+// 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-wall-machines/monitors.dmi'
+// 	glow_icon_state = "fire_light_mask"
 
-/obj/item/radio/intercom
-	light_power = 0.8
-	light_range = 1.5
-	light_color = LIGHT_COLOR_ELECTRIC_GREEN
-	exposure_icon_state = "circle"
-	glow_icon = 'modularz_arkstation/modules/new-wall-machines/radio.dmi'
-	glow_icon_state = "intercom_light_mask"
+// /obj/item/radio/intercom
+// 	light_power = 0.8
+// 	light_range = 1.5
+// 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+// 	exposure_icon_state = "circle"
+// 	glow_icon = 'modularz_arkstation/modules/new-wall-machines/radio.dmi'
+// 	glow_icon_state = "intercom_light_mask"
 
 /obj/machinery/light/red
 	glow_icon_state = "tube_red"
