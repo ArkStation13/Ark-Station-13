@@ -263,7 +263,7 @@
 	)
 	required_candidates = 1
 	weight = 35
-	cost = 3
+	cost = 6 // 3 // ARK STATION EDIT
 	requirements = list(3,3,3,3,3,3,3,3,3,3)
 	repeatable = TRUE
 
@@ -315,13 +315,19 @@
 		JOB_SCIENTIST,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_SECURITY_MEDIC, // ARK STATION ADDITION
+		JOB_BRIG_PILOT, // ARK STATION ADDITION
+		JOB_CHAPLAIN, // ARK STATION ADDITION
+		JOB_FISCAL, // ARK STATION ADDITION
+		JOB_SHAFT_MINER, // ARK STATION ADDITION
+		JOB_VANGUARD_OPERATIVE, // ARK STATION ADDITION
 	)
 	exclusive_roles = list(JOB_AI)
 	required_enemies = list(4,4,4,4,4,4,2,2,2,0)
 	required_candidates = 1
 	minimum_players = 25
 	weight = 2
-	cost = 10
+	cost = 24 // 10 // ARK STATION EDIT
 	required_type = /mob/living/silicon/ai
 	blocking_rules = list(/datum/dynamic_ruleset/roundstart/malf_ai)
 	// AIs are technically considered "Ghost roles" as far as candidate selection are concerned
@@ -371,7 +377,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 1
-	cost = 10
+	cost = 30 // 10 // ARK STATION EDIT
 	requirements = REQUIREMENTS_VERY_HIGH_THREAT_NEEDED
 	flags = HIGH_IMPACT_RULESET
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_WIZARDDEN)
@@ -406,11 +412,17 @@
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_SECURITY_MEDIC, // ARK STATION ADDITION
+		JOB_BRIG_PILOT, // ARK STATION ADDITION
+		JOB_CHAPLAIN, // ARK STATION ADDITION
+		JOB_FISCAL, // ARK STATION ADDITION
+		JOB_SHAFT_MINER, // ARK STATION ADDITION
+		JOB_VANGUARD_OPERATIVE, // ARK STATION ADDITION
 	)
 	required_enemies = list(3,3,3,3,3,2,1,1,0,0)
 	required_candidates = 5
 	weight = 5
-	cost = 7
+	cost = 26 // 7 // ARK STATION EDIT
 	minimum_round_time = 70 MINUTES
 	requirements = REQUIREMENTS_VERY_HIGH_THREAT_NEEDED
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
@@ -458,7 +470,7 @@
 	required_candidates = 1
 	minimum_round_time = 35 MINUTES
 	weight = 3
-	cost = 8
+	cost = 18 // 8 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 	signup_item_path = /obj/structure/blob/normal
@@ -498,7 +510,7 @@
 	required_candidates = 1
 	minimum_round_time = 35 MINUTES
 	weight = 3
-	cost = 10
+	cost = 20 // 10 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 
@@ -538,7 +550,7 @@
 	required_candidates = 1
 	minimum_round_time = 40 MINUTES
 	weight = 5
-	cost = 10
+	cost = 16 // 10 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 	signup_item_path = /mob/living/basic/alien
@@ -587,7 +599,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 3
-	cost = 5
+	cost = 8 // 5 // ARK STATION EDIT
 	minimum_players = 15
 	repeatable = TRUE
 	signup_item_path = /obj/item/light_eater
@@ -624,7 +636,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 4
-	cost = 7
+	cost = 14 // 7 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 	signup_item_path = /mob/living/basic/space_dragon
@@ -666,7 +678,7 @@
 	required_candidates = 2
 	required_applicants = 2
 	weight = 4
-	cost = 7
+	cost = 14 // 7 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_ABDUCTOR_SHIPS)
@@ -703,7 +715,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 4
-	cost = 8
+	cost = 16 // 8 // ARK STATION EDIT
 	minimum_players = 30
 	repeatable = TRUE
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NINJA_HOLDING_FACILITY) // I mean, no one uses the nets anymore but whateva
@@ -745,7 +757,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 0
 	weight = 3
-	cost = 8
+	cost = 16 // 8 // ARK STATION EDIT
 	minimum_players = 27
 	repeatable = TRUE
 	var/spawncount = 2
@@ -764,7 +776,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 4
-	cost = 5
+	cost = 10 // 5 // ARK STATION EDIT
 	minimum_players = 15
 	repeatable = TRUE
 	signup_item_path = /mob/living/basic/revenant
@@ -816,7 +828,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 0
 	weight = 3
-	cost = 8
+	cost = 16 // 8 // ARK STATION EDIT
 	minimum_players = 20
 	repeatable = TRUE
 
@@ -839,7 +851,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 0
 	weight = 3
-	cost = 8
+	cost = 16 // 8 // ARK STATION EDIT
 	minimum_players = 25
 	repeatable = TRUE
 
@@ -867,7 +879,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 4
-	cost = 3 // Doesn't have the same impact on rounds as revenants, dragons, sentient disease (10) or syndicate infiltrators (5).
+	cost = 6 // 3 // Doesn't have the same impact on rounds as revenants, dragons, sentient disease (10) or syndicate infiltrators (5). // ARK STATION EDIT
 	repeatable = TRUE
 
 /datum/dynamic_ruleset/midround/from_living/obsessed/trim_candidates()
@@ -907,7 +919,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 3
-	cost = 7
+	cost = 14 // 7 // ARK STATION EDIT
 	minimum_players = 15
 	repeatable = TRUE
 	signup_item_path = /obj/effect/meteor/meaty/changeling
@@ -931,11 +943,17 @@
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_SECURITY_MEDIC, // ARK STATION ADDITION
+		JOB_BRIG_PILOT, // ARK STATION ADDITION
+		JOB_CHAPLAIN, // ARK STATION ADDITION
+		JOB_FISCAL, // ARK STATION ADDITION
+		JOB_SHAFT_MINER, // ARK STATION ADDITION
+		JOB_VANGUARD_OPERATIVE, // ARK STATION ADDITION
 	)
 	required_enemies = list(2, 2, 1, 1, 1, 1, 1, 0, 0, 0)
 	required_candidates = 1
 	weight = 4
-	cost = 3
+	cost = 6 // 3 // ARK STATION EDIT
 	repeatable = TRUE
 	signup_item_path = /obj/effect/bluespace_stream
 	var/list/possible_spawns = list() ///places the antag can spawn
@@ -1006,7 +1024,7 @@
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 2
-	cost = 5
+	cost = 12 // 5 // ARK STATION EDIT
 	minimum_players = 40
 	repeatable = TRUE
 	signup_item_path = /obj/item/cosmic_skull

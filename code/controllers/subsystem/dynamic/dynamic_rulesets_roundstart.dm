@@ -31,7 +31,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	)
 	required_candidates = 1
 	weight = 5
-	cost = 8 // Avoid raising traitor threat above this, as it is the default low cost ruleset.
+	cost = 10 // 8 // Avoid raising traitor threat above this, as it is the default low cost ruleset. // ARK STATION EDIT
 	scaling_cost = 9
 	requirements = list(8,8,8,8,8,8,8,8,8,8)
 	antag_cap = list("denominator" = 38)
@@ -235,7 +235,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	)
 	required_candidates = 1
 	weight = 3
-	cost = 10
+	cost = 20 // 10 // ARK STATION EDIT
 	scaling_cost = 9
 	requirements = list(101,101,60,30,30,25,20,15,10,10)
 	antag_cap = list("denominator" = 24)
@@ -287,7 +287,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	) // Just to be sure that a wizard getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 1
 	weight = 2
-	cost = 20
+	cost = 30 // 20 // ARK STATION EDIT
 	requirements = list(90,90,90,80,60,40,30,20,10,10)
 	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_WIZARDDEN)
 
@@ -353,7 +353,12 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_PRISONER,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_SECURITY_MEDIC, // ARK STATION ADDITION
+		JOB_BRIG_PILOT, // ARK STATION ADDITION
+		JOB_CHAPLAIN, // ARK STATION ADDITION
 		JOB_FISCAL, // ARK STATION ADDITION
+		JOB_SHAFT_MINER, // ARK STATION ADDITION
+		JOB_VANGUARD_OPERATIVE, // ARK STATION ADDITION
 	)
 	required_candidates = 2
 	weight = 3
@@ -431,7 +436,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	) // Just to be sure that a nukie getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 5
 	weight = 3
-	cost = 20
+	cost = 30 // 20 // ARK STATION EDIT
 	requirements = list(90,90,90,80,60,40,30,20,10,10)
 	flags = HIGH_IMPACT_RULESET
 	antag_cap = list("denominator" = 18, "offset" = 1)
@@ -532,11 +537,17 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_RESEARCH_DIRECTOR,
 		JOB_SECURITY_OFFICER,
 		JOB_WARDEN,
+		JOB_SECURITY_MEDIC, // ARK STATION ADDITION
+		JOB_BRIG_PILOT, // ARK STATION ADDITION
+		JOB_CHAPLAIN, // ARK STATION ADDITION
+		JOB_FISCAL, // ARK STATION ADDITION
+		JOB_SHAFT_MINER, // ARK STATION ADDITION
+		JOB_VANGUARD_OPERATIVE, // ARK STATION ADDITION
 	)
 	required_candidates = 3
 	weight = 3
 	delay = 7 MINUTES
-	cost = 20
+	cost = 30 // 20 // ARK STATION EDIT
 	requirements = list(101,101,70,40,30,20,10,10,10,10)
 	antag_cap = 3
 	flags = HIGH_IMPACT_RULESET
@@ -715,6 +726,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		/datum/job_department/science,
 		/datum/job_department/security,
 		/datum/job_department/service,
+		/datum/job_department/church, // ARK STATION ADDITION
 	)
 
 	for(var/department_type in department_types)

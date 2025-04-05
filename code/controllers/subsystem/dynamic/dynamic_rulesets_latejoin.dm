@@ -83,7 +83,7 @@
 	)
 	required_candidates = 1
 	weight = 11
-	cost = 5
+	cost = 8 // 5 // ARK STATION EDIT
 	requirements = list(5,5,5,5,5,5,5,5,5,5)
 	repeatable = TRUE
 
@@ -127,7 +127,7 @@
 	required_candidates = 1
 	weight = 1
 	delay = 1 MINUTES // Prevents rule start while head is offstation.
-	cost = 10
+	cost = 20 // 10 // ARK STATION EDIT
 	requirements = list(101,101,70,40,30,20,20,20,20,20)
 	flags = HIGH_IMPACT_RULESET
 	blocking_rules = list(/datum/dynamic_ruleset/roundstart/revs)
@@ -220,7 +220,7 @@
 	)
 	required_candidates = 1
 	weight = 8
-	cost = 6
+	cost = 16 // 6 // ARK STATION EDIT
 	requirements = list(101,101,50,10,10,10,10,10,10,10)
 	repeatable = TRUE
 
@@ -268,7 +268,7 @@
 	)
 	required_candidates = 1
 	weight = 2
-	cost = 12
+	cost = 16 // 12 // ARK STATION EDIT
 	requirements = list(101,101,60,50,40,20,20,10,10,10)
 	repeatable = TRUE
 
