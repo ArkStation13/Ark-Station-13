@@ -73,89 +73,175 @@
 	armor_type = /datum/armor/vest_armor_plate
 	body_parts_covered = CHEST
 	only_functional = TRUE
+	armor = NONE
 
 	var/list/modular_slots = list(
-		"front_slot" = null,
-		"elbows_slot" = null,
-		"knees_slot" = null,
-		"groin_slot" = null,
-		"chevron" = null,
-		"gorget" = null
+		/obj/item/modular_armor/front = null,
+		/obj/item/modular_armor/elbow = null,
+		/obj/item/modular_armor/knee = null,
+		/obj/item/modular_armor/groin = null,
+		/obj/item/modular_armor/chevron = null,
+		/obj/item/modular_armor/gorget = null
 	)
 
 	var/obj/item/armor_plate/armor_plate = null
 
+	var/mutable_appearance/modules_overlays = list()
+
 ///
-/obj/item/clothing/suit/armor/vest/modular/security
-	modular_slots = list(
-		"front_slot" = /obj/item/modular_armor/loading_vest,
-		"elbows_slot" = /obj/item/modular_armor/elbow_pads,
-		"knees_slot" = /obj/item/modular_armor/knee_pads,
-		"groin_slot" = /obj/item/modular_armor/groin_armor,
-		"chevron" = /obj/item/modular_armor/chevron,
-		"gorget" = /obj/item/modular_armor/gorget
-	)
-
-	armor_plate = /obj/item/armor_plate/standart_security
-
 /obj/item/clothing/suit/armor/vest/modular/examine(mob/user)
 	. = ..()
 	if(armor_plate)
 		. += span_notice("<b>[armor_plate]</b> has next integrity: <b>[armor_plate.plate_integrity]%</b><br>")
 
-/// Добавление модулей или плиты на плитник.
+/obj/item/clothing/suit/armor/vest/modular/examine_more(mob/user)
+	. = ..()
+	. += span_notice("<i>You examine [src] closer, and note the following...</i>")
+	var/list/attached_modules = list()
+	for(var/key in modular_slots)
+		var/value = modular_slots[key]
+		if(value)
+			attached_modules += value
+
+	. += span_notice("The [src] [length(attached_modules) ? "has [english_list(attached_modules)]" : "doesn't have any"] module[length(attached_modules) > 1 ? "s" : ""] attached.")
+
 /obj/item/clothing/suit/armor/vest/modular/attackby(obj/item/attacking_item, mob/living/user)
 	if(istype(attacking_item, /obj/item/armor_plate))
 		var/obj/item/armor_plate/plate = attacking_item
 		if(!armor_plate)
 			armor_plate = plate
 			plate.forceMove(src)
-			set_armor(plate.armor_type)
+			if(src.armor)
+				var/datum/armor/current_armor = src.armor
+				var/datum/armor/armor_plate_armor = new armor_plate.armor_type
+				set_armor(current_armor.add_other_armor(armor_plate_armor))
+			else
+				set_armor(armor_plate.armor_type)
 			return
 
 	if(istype(attacking_item, /obj/item/modular_armor))
 		var/obj/item/modular_armor/module = attacking_item
-		if(!(modular_slots[module.plate_carrier_used_slot]))
-			update_modules_on_armor(module, TRUE, user)
-			return
+		if(try_attach_module(user, module))
+			balloon_alert(user, "attached")
 	return ..()
 
-/// Обновление модулей (будь то удаление или добавление).
-/obj/item/clothing/suit/armor/vest/modular/proc/update_modules_on_armor(obj/item/modular_armor/module, added_or_removed = TRUE, mob/living/user)
-	if(added_or_removed == TRUE)
-		modular_slots[module.plate_carrier_used_slot] = module
+/obj/item/clothing/suit/armor/vest/modular/proc/try_attach_module(mob/user, obj/item/modular_armor/module)
+	if(!module || !istype(module, /obj/item/modular_armor))
+		return FALSE
+
+	var/module_type = module.type
+	for(var/slot_type in modular_slots)
+		if(!ispath(module_type, slot_type) || !istype(module, slot_type))
+			continue
+
+		if(modular_slots[slot_type])
+			to_chat(user, span_warning("This slot is already occupied!"))
+			return FALSE
+
+		to_chat(user, span_notice("You attach the [module] to the [src]."))
 		module.forceMove(src)
-		if(module == modular_slots[module.plate_carrier_used_slot])
-			armor.add_other_armor(module.armor_type)
-			body_parts_covered |= module.body_parts_covered
-	else
-		if(module == modular_slots[module.plate_carrier_used_slot])
-			body_parts_covered &= ~module.body_parts_covered
-			armor.subtract_other_armor(module.armor_type)
-			modular_slots[module.plate_carrier_used_slot] = null
-			user.put_in_active_hand(module)
+		modular_slots[slot_type] = module
+		body_parts_covered |= module.body_parts_covered
+		update_module_overlay(module, TRUE)
+
+		if(src.armor)
+			var/datum/armor/current_armor = src.armor
+			var/datum/armor/module_armor = new module.armor_type
+			set_armor(current_armor.add_other_armor(module_armor))
+		else
+			set_armor(module.armor_type)
+
+		return TRUE
+	balloon_alert(user, "doesn't fit!")
+	return FALSE
+
+/obj/item/clothing/suit/armor/vest/modular/proc/try_detatch_module(mob/user, obj/item/modular_armor/module)
+	if(!module)
+		return FALSE
+
+	var/found_slot = null
+	for(var/slot in modular_slots)
+		if(modular_slots[slot] == module)
+			found_slot = slot
+			break
+
+	if(!found_slot)
+		return FALSE
+
+	body_parts_covered &= ~module.body_parts_covered
+
+	if(src.armor)
+		var/datum/armor/current_armor = src.armor
+		var/datum/armor/module_armor = new module.armor_type
+		set_armor(current_armor.subtract_other_armor(module_armor))
+
+	modular_slots[found_slot] = null
+	user.put_in_active_hand(module)
+	update_module_overlay(module, FALSE)
+	return TRUE
 
 /// Другое
 /obj/item/clothing/suit/armor/vest/modular/click_alt(mob/user)
-	if(armor_plate || modular_slots)
-		var/tgui_answer = tgui_alert(user, "Remove the Plate or Modules?", "Your option", list("Plate", "Modules"))
-		if(tgui_answer == "Plate")
-			if(armor_plate)
-				user.put_in_active_hand(armor_plate)
-				set_armor(initial(armor_type))
-				armor_plate = null
-				return CLICK_ACTION_SUCCESS
-		else
-			var/list/choices = list()
-			for (var/key in modular_slots)
-				var/value = modular_slots[key]
-				if(value)
-					choices += value
-			var/picked_option = show_radial_menu(user, user, choices, require_near = TRUE)
-			if(picked_option)
-				update_modules_on_armor(picked_option, FALSE, user)
+	if(!armor_plate && !length(modular_slots))
+		return ..()
+
+	var/option = tgui_alert(user, "Remove the Plate or Modules?", "Your option", list("Plate", "Modules"))
+	if(!option)
+		return
+
+	if(option == "Plate")
+		if(!armor_plate)
+			balloon_alert(user, "nothing attached!")
+			return
+
+		if(src.armor)
+			var/datum/armor/current_armor = src.armor
+			var/datum/armor/armor_plate_armor = new armor_plate.armor_type
+			set_armor(current_armor.subtract_other_armor(armor_plate_armor))
+
+		user.put_in_active_hand(armor_plate)
+		armor_plate = null
+		balloon_alert(user, "detached")
+		return CLICK_ACTION_SUCCESS
+	else
+		var/list/choices_list = list()
+		for(var/key in modular_slots)
+			var/obj/item/modular_armor/value = modular_slots[key]
+			if(value)
+				var/image/module_image = image(icon = value.icon, icon_state = value.icon_state)
+				choices_list[value] = module_image
+
+		if(!length(choices_list))
+			balloon_alert(user, "nothing attached!")
+			return
+
+		var/obj/item/modular_armor/picked_module = show_radial_menu(user, src, choices_list, require_near = TRUE)
+		if(!picked_module)
+			return
+
+		if(try_detatch_module(user, picked_module))
+			balloon_alert(user, "detached")
 			return CLICK_ACTION_SUCCESS
-	..()
+		else
+			return CLICK_ACTION_BLOCKING
+
+/// Создаём оверлеи
+/obj/item/clothing/suit/armor/vest/modular/proc/create_module_overlay(obj/item/modular_armor/module, attached_or_detached)
+	var/mutable_appearance/new_overlay = mutable_appearance(module.worn_icon, module.icon_state)
+	if(attached_or_detached == TRUE)
+		modules_overlays += new_overlay
+	else
+		modules_overlays -= new_overlay
+
+/obj/item/clothing/suit/armor/vest/modular/proc/update_module_overlay(obj/item/modular_armor/module, attached_or_detached)
+	cut_overlay(modules_overlays)
+	create_module_overlay(module, attached_or_detached)
+	update_icon(UPDATE_OVERLAYS)
+
+/obj/item/clothing/suit/armor/vest/modular/update_overlays()
+	. = ..()
+	if(modules_overlays)
+		. += modules_overlays
 
 /*
 *-* Основа для модулей.
@@ -170,8 +256,6 @@
 	body_parts_covered = CHEST
 	armor_type = /datum/armor/modular_armor
 
-	/// (back_slot, front_slot, elbows_slot, knees_slot, groin_slot, etc.)
-	var/plate_carrier_used_slot = null
 	/// Количество ХП у модуля. 100 = 100%. Ставьте -1 чтобы сделать нерушимыми.
 	var/modular_armor_integrity = -1
 	var/modular_armor_max_integrity = -1
@@ -189,14 +273,13 @@
 	wound = 10
 
 /*
-*-* Разгрузка. У разных - разнок кол-во слотов.
+*-* Разгрузка/Так.мешки. У разных - разнок кол-во слотов.
 */
 
-/obj/item/modular_armor/loading_vest
-	name = "load-bearing vest"
-	desc = "Standard two-slot load-bearing vest."
+/obj/item/modular_armor/front
+	name = "security pouches"
+	desc = "Standard two-slot pouches."
 	icon_state = "loading_vest-sec"
-	plate_carrier_used_slot = "front_slot"
 	armor_type = /datum/armor/modular_armor/loading_vest
 
 	var/vest_slots = 2
@@ -217,11 +300,10 @@
 *-* Налокотники. Модуль для плитника, защищающий руки (не ладошки).
 */
 
-/obj/item/modular_armor/elbow_pads
+/obj/item/modular_armor/elbow
 	name = "plastic elbow pads"
 	desc = "Standart police elbow pads."
 	icon_state = "elbow_pads-sec"
-	plate_carrier_used_slot = "elbows_slot"
 	body_parts_covered = ARMS
 	armor_type = /datum/armor/modular_armor/elbow_pads
 
@@ -241,11 +323,10 @@
 *-* Наколенники. Модуль для плитника, защищающий ноги (не ступни).
 */
 
-/obj/item/modular_armor/knee_pads
+/obj/item/modular_armor/knee
 	name = "plastic knee pads"
 	desc = "Standart police knee pads."
 	icon_state = "knee_pads-sec"
-	plate_carrier_used_slot = "knees_slot"
 	body_parts_covered = LEGS
 	armor_type = /datum/armor/modular_armor/knee_pads
 
@@ -265,11 +346,10 @@
 *-* Защита паха. Напашник.
 */
 
-/obj/item/modular_armor/groin_armor
+/obj/item/modular_armor/groin
 	name = "plastic groin armor"
 	desc = "Police groin armor. Doesn't look like anything serious."
 	icon_state = "groin-sec"
-	plate_carrier_used_slot = "groin_slot"
 	body_parts_covered = GROIN
 	armor_type = /datum/armor/modular_armor/groin_armor
 
@@ -294,7 +374,6 @@
 	name = "'Red Hawks' chevron"
 	desc = "Red chevron with Hawk on it."
 	icon_state = "chevron-rh"
-	plate_carrier_used_slot = "chevron"
 	armor_type = /datum/armor/none
 
 /*
@@ -305,7 +384,6 @@
 	name = "plastic gorget"
 	desc = "Police gorget. Doesn't look like anything serious."
 	icon_state = "gorget-sec"
-	plate_carrier_used_slot = "gorget"
 	body_parts_covered = NECK
 	armor_type = /datum/armor/modular_armor/gorget
 
