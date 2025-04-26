@@ -71,3 +71,9 @@ ADMIN_VERB(arkroundendcancell, R_ADMIN, "Disable/Enable Ark Launch", "Cancel or 
 	SSshuttle.ark_round_end_cancell = !SSshuttle.ark_round_end_cancell
 	log_admin("[key_name(usr)] has cancelled/enabled round end.")
 	message_admins("[key_name_admin(usr)] has cancelled/enabled round end.")
+
+// ГАЛЯ, У НАС ЭВАК
+ADMIN_VERB(arkroundendcancell, R_ADMIN, "Process Ark Launch", "Start that damn ship (Round End)!", ADMIN_CATEGORY_EVENTS)
+	SSshuttle.autoEnd()
+	log_admin("[key_name(usr)] has started process of the round end.")
+	message_admins("[key_name_admin(usr)] has started process of the round end.")

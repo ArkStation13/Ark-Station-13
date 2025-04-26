@@ -29071,14 +29071,14 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAI" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 8;
-	id = "secmechbay";
-	name = "Security Mech Bay Shutters"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/machinery/door/poddoor/shutters{
+	dir = 2;
+	id = "secmechbay";
+	name = "Security Mech Bay Shutters"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/mechbay)
@@ -31172,17 +31172,17 @@
 /turf/open/floor/iron,
 /area/station/cargo/drone_bay)
 "ecV" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 8;
-	id = "secmechbay";
-	name = "Security Mech Bay Shutters"
-	},
 /obj/machinery/button/door/directional/north{
 	id = "secmechbay";
 	name = "Security Mech Garage Door Controls";
 	req_access = list("security")
 	},
 /obj/structure/cable,
+/obj/machinery/door/poddoor/shutters{
+	dir = 2;
+	id = "secmechbay";
+	name = "Security Mech Bay Shutters"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/mechbay)
 "edl" = (
@@ -35549,9 +35549,6 @@
 /area/station/service/chapel)
 "hAg" = (
 /obj/machinery/light/directional/west,
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /turf/open/floor/iron/dark,
 /area/station/security/prison)
 "hAp" = (
@@ -36153,9 +36150,6 @@
 /obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
-	},
-/obj/machinery/walltank{
-	pixel_x = 30
 	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/mechanic/hallway)
@@ -49519,10 +49513,6 @@
 /area/station/medical/medbay/central)
 "svw" = (
 /obj/machinery/camera/directional/south,
-/obj/machinery/computer/cryopod/directional/west,
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /turf/open/floor/iron/dark,
 /area/station/security/prison)
 "svD" = (
@@ -55311,9 +55301,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
 "wBY" = (
-/obj/machinery/walltank{
-	pixel_x = 30
-	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
