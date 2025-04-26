@@ -16,7 +16,8 @@
 	endvote_passed = TRUE
 	SSevents.can_fire = FALSE
 
-	INVOKE_ASYNC(SSvote, TYPE_PROC_REF(/datum/controller/subsystem/vote, initiate_vote), /datum/vote/map_vote, vote_initiator_name = "Map Rotation", forced = TRUE)
+	INVOKE_ASYNC(SSticker, TYPE_PROC_REF(/datum/controller/subsystem/ticker, poll_hearts))
+	SSvote.initiate_vote(/datum/vote/map_vote, "Map Rotation", forced = TRUE)
 
 	// Последствия.
 	addtimer(CALLBACK(src, PROC_REF(ark_goes_first)), 1 MINUTES)
@@ -41,12 +42,14 @@
 	sleep(8 SECONDS)
 	priority_announce("3... 2... 1...", null, null, "Automatic", color_override = "red")
 	sound_to_playing_players('sound/effects/explosion/explosioncreak2.ogg')
-	for(var/mob/living/carbon/human/humans in GLOB.mob_list)
-		for(var/turf/human_turfs in GLOB.station_turfs)
-			if(humans.loc == human_turfs)
-				humans.adjustStaminaLoss(30)
-				humans.Paralyze(10)
-				shake_camera(humans, 2, 3)
+	var/mob/living/carbon/human/our_fucking_humans = list()
+	for(var/mob/living/carbon/human/humans in GLOB.player_list)
+		if(humans.loc in GLOB.station_turfs)
+			our_fucking_humans += humans
+	for(var/mob/living/carbon/human/humans in our_fucking_humans)
+		humans.adjustStaminaLoss(30)
+		humans.Paralyze(10)
+		shake_camera(humans, 2, 3)
 	sleep(2 SECONDS)
 	sound_to_playing_players('sound/effects/magic/lightningbolt.ogg')
 
@@ -54,13 +57,16 @@
 	if(ark_round_end_cancell == TRUE)
 		return
 	// play_cinematic(/datum/cinematic/nuke/fake, world, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)))
-	for(var/mob/living/carbon/human/humans in GLOB.mob_list)
-		for(var/turf/human_turfs in GLOB.station_turfs)
-			if(humans.loc == human_turfs)
-				humans.adjustStaminaLoss(30)
-				humans.Paralyze(10)
-				shake_camera(humans, 2, 3)
-				humans.eyes_blink()
+	var/mob/living/carbon/human/our_fucking_humans = list()
+	for(var/mob/living/carbon/human/humans in GLOB.player_list)
+		if(humans.loc in GLOB.station_turfs)
+			our_fucking_humans += humans
+	for(var/mob/living/carbon/human/humans in our_fucking_humans)
+		humans.adjustStaminaLoss(30)
+		humans.Paralyze(10)
+		shake_camera(humans, 2, 3)
+		humans.eyes_blink()
+
 	sound_to_playing_players('sound/effects/magic/voidblink.ogg')
 	set_starlight("#88b487", 1.5, 1.5)
 	sleep(4 SECONDS)
