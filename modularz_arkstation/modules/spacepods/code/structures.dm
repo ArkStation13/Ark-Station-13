@@ -124,10 +124,6 @@
 
 //defib interaction
 /obj/machinery/walltank/attack_hand(mob/living/user, list/modifiers)
-	. = ..()
-	if(!IN_GIVEN_RANGE(src, user, SHLANG_RANGE))
-		to_chat(user, span_warning("[shlang] overextend and come out of your hands!"))
-		return
 	user.put_in_hands(shlang)
 	shlang_na_meste = FALSE
 	current_beam = new(user, src, icon = 'modularz_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
