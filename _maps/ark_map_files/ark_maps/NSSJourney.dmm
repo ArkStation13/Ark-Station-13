@@ -27960,9 +27960,18 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "cke" = (
-/obj/machinery/walltank,
-/turf/closed/wall,
-/area/station/engineering/mechanic/hallway)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "cks" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -29662,6 +29671,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/atmos)
+"cuP" = (
+/obj/effect/spawner/random/maintenance,
+/obj/structure/rack,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "cuQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch{
@@ -35535,6 +35549,7 @@
 /area/station/maintenance/fore)
 "eDG" = (
 /obj/machinery/light/small/directional/north,
+/obj/structure/closet/firecloset,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "eDN" = (
@@ -36966,6 +36981,11 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/cargo/drone_bay)
+"fAA" = (
+/obj/structure/table/glass,
+/obj/effect/spawner/random/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "fAI" = (
 /obj/effect/turf_decal/bot_white/right,
 /obj/effect/decal/cleanable/greenglow,
@@ -47788,6 +47808,20 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
+"mHU" = (
+/obj/structure/chair/stool/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "mIp" = (
 /obj/effect/turf_decal/trimline/green/filled/arrow_cw,
 /obj/machinery/light/small/directional/north,
@@ -51958,6 +51992,19 @@
 /obj/structure/secure_safe/directional/west,
 /turf/open/floor/carpet/purple,
 /area/station/command/heads_quarters/rd)
+"pxa" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "pxV" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -55811,6 +55858,19 @@
 /obj/machinery/light/warm/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/service/chapel/monastery)
+"rXA" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "rXJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/item/radio/intercom/directional/east,
@@ -63328,9 +63388,18 @@
 /turf/open/floor/plating,
 /area/station/security/prison/work)
 "xeZ" = (
-/obj/machinery/walltank,
-/turf/closed/wall/r_wall,
-/area/station/security/brig_pilot)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/fore)
 "xfc" = (
 /obj/structure/rack,
 /obj/item/clothing/under/misc/burial{
@@ -84833,7 +84902,7 @@ wSh
 wSh
 wSh
 wTu
-cke
+wTu
 wSh
 wSh
 wSh
@@ -85489,7 +85558,7 @@ sUX
 ors
 ors
 ors
-xeZ
+ors
 ors
 ors
 ors
@@ -106858,7 +106927,7 @@ anf
 izV
 alP
 awG
-anf
+alP
 bKK
 alP
 aJN
@@ -108657,7 +108726,7 @@ alP
 alP
 alP
 aED
-anf
+alP
 aFu
 aFu
 aJM
@@ -108912,9 +108981,9 @@ anf
 alP
 aAv
 anf
-alP
+apE
 aED
-anf
+awF
 aFu
 aIB
 aJR
@@ -109169,9 +109238,9 @@ anf
 apE
 anf
 mdr
-alP
+apE
 aED
-anf
+fAA
 aFu
 aIx
 ivk
@@ -109426,9 +109495,9 @@ aCQ
 alP
 alP
 alP
-awG
+alP
 aED
-anf
+apE
 aFu
 aIA
 ivk
@@ -109940,7 +110009,7 @@ anf
 anf
 apE
 anf
-anf
+alP
 aEC
 anf
 aFu
@@ -110454,7 +110523,7 @@ aEe
 anf
 apE
 anf
-anf
+alP
 sds
 anf
 aFu
@@ -110711,8 +110780,8 @@ aEe
 asA
 apE
 arx
-arx
-sds
+mHU
+pxa
 anf
 aFu
 aIC
@@ -110968,9 +111037,9 @@ avo
 vFb
 alP
 alP
-aoQ
-sds
-anf
+xeZ
+alP
+apE
 aFu
 aIA
 ivk
@@ -111225,9 +111294,9 @@ uEk
 fMb
 biJ
 alP
-aoP
-sds
-anf
+cke
+rXA
+auD
 aFu
 aII
 ivk
@@ -111484,7 +111553,7 @@ cIP
 alP
 auD
 sds
-anf
+aoQ
 aFu
 aIC
 aJQ
@@ -111739,9 +111808,9 @@ mAK
 iYU
 nYb
 alP
-anf
+cuP
 qro
-anf
+alP
 aFu
 aFu
 fwJ
@@ -111996,9 +112065,9 @@ waf
 ygt
 aAz
 alP
-anf
+alP
 qro
-anf
+ffa
 aFu
 mZD
 uYf
@@ -112255,7 +112324,7 @@ asB
 alP
 eDG
 arW
-anf
+aqy
 aFu
 atO
 rLy
