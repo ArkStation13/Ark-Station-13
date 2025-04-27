@@ -51,7 +51,8 @@
 	. = ..()
 
 /datum/quirk/chipped/proc/cause_itchy(obj/item/organ/internal/brain/itchy_brain)
-
+	if(!itchy_brain) // ARK STATION ADDITION
+		return // ARK STATION ADDITION
 	itchy_brain.apply_organ_damage(rand(1, 5), maximum = itchy_brain.maxHealth * 0.3)
 	to_chat(itchy_brain.owner, span_warning("Your [itchy_brain] itches."))
 	itchy_timer = addtimer(CALLBACK(itchy_brain, PROC_REF(cause_itchy)), rand(5 SECONDS, 10 MINUTES)) // it will never end

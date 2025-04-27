@@ -495,6 +495,8 @@
 /datum/antagonist/bloodsucker/proc/remove_invalid_quirks()
 	var/datum/quirk/bad_quirk = owner.current.get_quirk(/datum/quirk/sol_weakness)
 	// silently remove the quirk if it's not valid
+	if(!bad_quirk)
+		return
 	bad_quirk.remove_from_current_holder(TRUE)
 	owner.current.remove_quirk(/datum/quirk/sol_weakness)
 
