@@ -363,7 +363,6 @@
 	alt_titles = list(
 		"Biomechanical Engineer",
 		"Roboticist",
-		"Biomechanical Engineer",
 		"Cyberneticist",
 		"Machinist",
 		"Mechatronic Engineer",
