@@ -7,6 +7,7 @@
 
 /datum/job/assistant
 	alt_titles = list(
+		"Colonist",
 		"Assistant",
 		"Artist",
 		"Businessman",
@@ -19,14 +20,15 @@
 		"Off-Duty Crew",
 		"Off-Duty Staff",
 		"Musician",
-		"Colonist",
+		"Contractor",
 	)
 
 /datum/job/atmospheric_technician
 	alt_titles = list(
+		"Life Support Technician",
 		"Atmospheric Technician",
 		"Emergency Fire Technician",
-		"Life Support Technician",
+		"Firefighter",
 	)
 
 /datum/job/barber
@@ -61,6 +63,7 @@
 /datum/job/blueshield
 	alt_titles = list(
 		"Solar Federation Shield",
+		"Command Bodyguard",
 		"Executive Protection Agent",
 	)
 
@@ -82,22 +85,35 @@
 
 /datum/job/bouncer
 	alt_titles = list(
+		"Donk Co. Guard",
 		"Bouncer",
 		"Service Guard",
 		"Doorman",
 	)
 
+/* // ARK STATION REMOVED START
+/datum/job/corrections_officer
+	alt_titles = list(
+		"Corrections Officer",
+		"Brig Officer",
+		"Prison Guard",
+	)
+*/ // ARK STATION REMOVED END
+
 /datum/job/captain
 	alt_titles = list(
-		"Admiral",
+		"Ark Commander",
+		"Captain",
+		"Commanding Officer",
+		"Station Commander",
 	)
 
 /datum/job/cargo_technician
 	alt_titles = list(
+		"Deck Worker",
 		"Cargo Technician",
 		"Warehouse Technician",
 		"Commodities Trader",
-		"Deck Worker",
 		"Inventory Associate",
 		"Mailman",
 		"Mail Carrier",
@@ -107,6 +123,7 @@
 
 /datum/job/chaplain
 	alt_titles = list(
+		"Priest of Neo-Vatican",
 		"Chaplain",
 		"High Priest",
 		"High Priestess",
@@ -127,6 +144,7 @@
 
 /datum/job/chemist
 	alt_titles = list(
+		"Synthetic Pharmacist",
 		"Chemist",
 		"Pharmacist",
 		"Pharmacologist",
@@ -136,10 +154,14 @@
 /datum/job/chief_engineer
 	alt_titles = list(
 		"Tech Overseer",
+		"Chief Engineer",
+		"Engineering Foreman",
+		"Head of Engineering",
 	)
 
 /datum/job/chief_medical_officer
 	alt_titles = list(
+		"Medtech Curator",
 		"Chief Medical Officer",
 		"Chief Physician",
 		"Head of Medical",
@@ -170,9 +192,9 @@
 
 /datum/job/coroner
 	alt_titles = list(
+		"Necropsier",
 		"Coroner",
 		"Forensic Pathologist",
-		"Funeral Director",
 		"Medical Examiner",
 		"Mortician",
 	)
@@ -186,8 +208,17 @@
 		"Librarian",
 	)
 
+/* // ARK STATION REMOVED START
+/datum/job/customs_agent
+	alt_titles = list(
+		"Customs Agent",
+		"Supply Guard",
+	)
+*/ // ARK STATION REMOVED END
+
 /datum/job/cyborg
 	alt_titles = list(
+		"Synthetic Unit",
 		"Cyborg",
 		"Android",
 		"Robot",
@@ -195,6 +226,7 @@
 
 /datum/job/detective
 	alt_titles = list(
+		"RHIB Agent",
 		"Detective",
 		"Forensic Scientist",
 		"Forensic Technician",
@@ -203,17 +235,18 @@
 
 /datum/job/doctor
 	alt_titles = list(
+		"Physician",
 		"Medical Doctor",
 		"General Practitioner",
 		"Medical Resident",
 		"Nurse",
-		"Physician",
 		"Surgeon",
 		"Medical Student",
 	)
 
 /datum/job/geneticist
 	alt_titles = list(
+		"Bioaugmentator",
 		"Geneticist",
 		"Gene Tailor",
 		"Mutation Researcher",
@@ -221,6 +254,7 @@
 
 /datum/job/head_of_personnel
 	alt_titles = list(
+		"Donk Co. Manager",
 		"Head of Personnel",
 		"Crew Supervisor",
 		"Employment Officer",
@@ -229,8 +263,8 @@
 
 /datum/job/head_of_security
 	alt_titles = list(
+		"Head of Red Hawk",
 		"Head of Security",
-		"Chief Constable",
 		"Chief of Security",
 		"Security Commander",
 	)
@@ -267,17 +301,23 @@
 
 /datum/job/nanotrasen_consultant
 	alt_titles = list(
-		"Nanotrasen Consultant",
-		"Nanotrasen Advisor",
-		"Nanotrasen Diplomat",
+		"Consul of the Solar Federation",
+		"SolFed Consultant",
 	)
+
+/* // ARK STATION REMOVED START
+/datum/job/orderly
+	alt_titles = list(
+		"Orderly",
+		"Medical Guard",
+	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+*/ // ARK STATION REMOVED END
 
 /datum/job/paramedic
 	alt_titles = list(
-		"Paramedic",
 		"Emergency Medical Technician",
+		"Paramedic",
 		"Search and Rescue Technician",
-		"Trauma Team Responder",
 	)
 
 /datum/job/prisoner
@@ -310,6 +350,7 @@
 
 /datum/job/research_director
 	alt_titles = list(
+		"Scientific Director",
 		"Research Director",
 		"Biorobotics Director",
 		"Chief Science Officer",
@@ -320,6 +361,7 @@
 
 /datum/job/roboticist
 	alt_titles = list(
+		"Biomechanical Engineer",
 		"Roboticist",
 		"Biomechanical Engineer",
 		"Cyberneticist",
@@ -330,6 +372,7 @@
 
 /datum/job/scientist
 	alt_titles = list(
+		"Researcher",
 		"Scientist",
 		"Anomalist",
 		"Circuitry Designer",
@@ -347,18 +390,19 @@
 
 /datum/job/security_officer
 	alt_titles = list(
-		"Security Officer",
-		"Peacekeeper",
-		"Security Operative",
-		"Security Cadet",
+		"Red Hawk Private",
+		"Red Hawk Corporal",
+		"Red Hawk Cadet",
+		"Red Hawk Stormtrooper",
+		"Red Hawk Operative",
+		"Red Hawk Officer",
 	)
 
 /datum/job/shaft_miner
 	alt_titles = list(
+		"Excavation Specialist",
 		"Shaft Miner",
 		"Union Miner",
-		"Excavator",
-		"Drill Technician",
 		"Prospector",
 		"Spelunker",
 		"Apprentice Miner",
@@ -366,12 +410,12 @@
 
 /datum/job/station_engineer
 	alt_titles = list(
+		"Engine Specialist",
 		"Station Engineer",
 		"Electrician",
 		"Emergency Damage Control Technician",
 		"Engine Technician",
 		"EVA Technician",
-		"Mechanic",
 		"Apprentice Engineer",
 	)
 
@@ -386,6 +430,7 @@
 
 /datum/job/virologist
 	alt_titles = list(
+		"Viral Selectionist",
 		"Virologist",
 		"Epidemiologist",
 		"Pathologist",
@@ -394,12 +439,22 @@
 
 /datum/job/warden
 	alt_titles = list(
-		"Warden",
-		"Brig Sergeant",
-		"Brig Governor",
-		"Dispatch Officer",
-		"Jailer",
-		"Corrections Officer",
-		"Brig Officer",
-		"Prison Guard",
+		"Red Hawk Sergeant",
+		"Red Hawk Warden",
+		"Red Hawk Jailer",
+	)
+
+/datum/job/synthetic_advisor
+	alt_titles = list(
+		"Synthetic Advisor",
+	)
+
+/datum/job/deacon
+	alt_titles = list(
+		"Deacon",
+	)
+
+/datum/job/fiscal
+	alt_titles = list(
+		"Fiscal",
 	)
