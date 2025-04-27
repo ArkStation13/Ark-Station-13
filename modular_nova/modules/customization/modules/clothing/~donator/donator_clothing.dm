@@ -762,9 +762,7 @@
 
 /obj/item/storage/belt/sabre/darksabre/Initialize(mapload)
 	. = ..()
-	atom_storage.set_holdable(list(
-		/obj/item/toy/darksabre
-		))
+	atom_storage.set_holdable(/obj/item/toy/darksabre)
 
 /obj/item/storage/belt/sabre/darksabre/PopulateContents()
 	new /obj/item/toy/darksabre(src)
@@ -1116,7 +1114,7 @@
 // Donation reward for Raxraus
 /obj/item/clothing/shoes/combat/rax
 	name = "tactical boots"
-	desc = "Tactical and sleek. This model seems to resemble Armadyne's."
+	desc = "Tactical and sleek. This model seems to resemble an armament manufacturer retired long ago."
 	icon = 'modular_nova/master_files/icons/obj/clothing/shoes.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/feet.dmi'
 	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/feet_digi.dmi'
@@ -1467,7 +1465,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	desc = "A customized eyepatch with a bright pink HUD floating in front of it. It looks like there's more to it than just an eyepatch, considering the materials it's made of."
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/glasses.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/eyes.dmi'
-	icon_state = "rosepatch_R"
+	icon_state = "rosepatch"
 	base_icon_state = "rosepatch"
 
 // Donation reward for Cimika
@@ -2103,6 +2101,32 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	desc = "A glass case containing a toaster implant. Sweet."
 	imp_type = /obj/item/implant/toaster
 
+#undef TOASTER_IMPLANT_COOLDOWN
+
+// donator item for Sciamach
+/obj/item/organ/cyberimp/arm/shard/donator/theurgic_crystal
+	name = "theurgic stone"
+	desc = "An eerie crystalline shard that pulses with theurgic energies. Tendrils of crimson energy seem to dance along its surface."
+	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
+	icon_state = "crystal"
+	items_to_create = list(/obj/item/knife/razor_claws/donator/theurgic_knife)
+	extend_sound = 'sound/items/haunted/ghostitemattack.ogg'
+	retract_sound = 'sound/items/haunted/ghostitemattack.ogg'
+
+/obj/item/knife/razor_claws/donator/theurgic_knife
+	name = "cursed ritual knife"
+	desc = "A large carving or flensing dagger made of a heavy, dusty material. It seems to emit a soft, eerie crimson glow."
+	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
+	righthand_file = 'modular_nova/modules/modular_ert/icons/pizza/righthand.dmi'
+	lefthand_file = 'modular_nova/modules/modular_ert/icons/pizza/lefthand.dmi'
+	icon_state = "dagger"
+	inhand_icon_state = "hotknife"
+	toggle_sound = 'sound/items/haunted/ghostitemattack.ogg'
+
+/obj/item/knife/razor_claws/donator/theurgic_knife/attack_self(mob/user)
+	. = ..()
+	inhand_icon_state = src::inhand_icon_state // Don't have a precision variant for this, just always use base
+
 // donator reward for ignari
 /obj/item/clothing/under/rem
 	name = "\improper M.I.A. limiter"
@@ -2165,6 +2189,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	greyscale_config_worn = /datum/greyscale_config/replica_parade_jacket/worn
 	greyscale_colors = "#b0c5ff#434343"
 	flags_1 = IS_PLAYER_COLORABLE_1
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/suit/replica_parade_jacket/Initialize(mapload)
 	. = ..()
@@ -2227,6 +2252,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	greyscale_config_worn = /datum/greyscale_config/half_leotard/worn
 	greyscale_colors = "#80C7D0"
 	flags_1 = IS_PLAYER_COLORABLE_1
+	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = NONE
 	body_parts_covered = CHEST|ARM_RIGHT|HAND_RIGHT|GROIN
 
@@ -2255,3 +2281,80 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	attachment_slot = NONE
 	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
+
+// Donation reward for jaklz
+/obj/item/clothing/neck/tattered
+	name = "worn corporate cloak"
+	desc = "A worn, battle-torn cloak. Complete with light red trimmings, tears, burns, and even some holes through out it's design, it clearly has seen better days. You can practically smell the despair, a hint of welding fuel, and a bit of a pine smell."
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/neck.dmi'
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	lefthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_left.dmi'
+	righthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_right.dmi'
+	icon_state = "tattered_cloak"
+	inhand_icon_state = "tattered_cloak"
+
+// Donation reward for Sharkoink, shork
+
+/obj/item/clothing/neck/noble_mantle
+	name = "noble mantle"
+	desc = "A noble mantle for a loyal and hearty Dragonshark."
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/neck.dmi'
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	lefthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_left.dmi'
+	righthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_right.dmi'
+	icon_state = "noble_mantle"
+	inhand_icon_state = "noble_mantle"
+
+/obj/item/clothing/suit/armor/hos/trenchcoat/melon
+	name = "\improper Command Armor Vest"
+	desc = "An armor vest with improved armor plates. Designed for use by command units."
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/suit.dmi'
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/suits.dmi'
+	icon_state = "vest_com_melon"
+
+/obj/item/clothing/suit/hooded/explorer/melon
+	name = "anomalous materials protection suit"
+	desc = "A suit originally designed for the SolFed Army to be used in CBRN environments. This suit still has it's protective plates installed. It's clear that this suit has been patched up over many years."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/suits.dmi'
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/suit.dmi'
+	worn_icon_digi = 'modular_nova/master_files/icons/donator/mob/clothing/suit_digi.dmi'
+	icon_state = "explorer_melon"
+	hoodtype = /obj/item/clothing/head/hooded/explorer/melon
+	hood_up_affix = ""
+
+/obj/item/clothing/head/hooded/explorer/melon
+	name = "\improper AMPS hood"
+	desc = "Designed to give soldiers protection in anomalous and dangerous areas, the AMPS hood features materials that make it resistant to attack."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/hats.dmi'
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/head.dmi'
+	icon_state = "explorer_melon"
+
+/obj/item/clothing/under/dress/heirloomdagmar
+	name = "heirloom dress"
+	desc = "An early 21st century dress in a vintage style, part of the Ms. Ann Thorpe Overbearing Granny Summer collection. A travel look for an overbearing matchmaker."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	alternate_worn_layer = ABOVE_SHOES_LAYER
+	icon_state = "dagmardress_a"
+
+/obj/item/clothing/under/dress/neoflapperdagmar
+	name = "neo-flapper dress"
+	desc = "Part of a shameful and best left forgotten nostalgic fashion movement among the Martian elite, nearly all traces of which were scrubbed from the holonet. Even recognizing this puts you at risk."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	alternate_worn_layer = ABOVE_SHOES_LAYER
+	icon_state = "dagmardress_b"
+
+/obj/item/clothing/under/dress/ambassadordagmar
+	name = "ambassador's dress"
+	desc = "Eveningwear for a cardshark or someone who refuses to take ‘No Dogs Allowed’ for an answer. A Martian fusion style evening gown, from cheating at blackjack to welcoming a diplomat delegation, you'll find every card trick already up its ample furisode sleeves."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	alternate_worn_layer = ABOVE_SHOES_LAYER
+	icon_state = "dagmardress_c"

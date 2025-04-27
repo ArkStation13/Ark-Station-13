@@ -4,10 +4,20 @@
 	font-weight: 500;
 	font-display: block;
 	src: url("ChakraPetch-Medium.ttf");
-	  }
+	}
 
 * {
 	font-family: "Chakra Petch", Tahoma, sans-serif;
+}
+
+.light:root {
+	--scrollbar-base: #f2f2f2;
+	--scrollbar-thumb: #a7a7a7;
+}
+
+html,
+body {
+	scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-base);
 }
 
 body {
@@ -143,14 +153,16 @@ img {
 	background-color: #eeeeee;
 }
 
-.dark .button:active,
-.dark .button.active {
-	background-color: #1C1D22; /* ARK STATION EDIT */
-	color: white;
-	border-top-color: #000000; /* ARK STATION EDIT */
-	border-left-color: #000000; /* ARK STATION EDIT */
-	border-right-color: #000000; /* ARK STATION EDIT */
-	border-bottom-color: #ffffff;
+#under-content {
+	height: calc(0.5em - 4px);
+	background-color: #1C1D22;
+}
+
+#statcontent {
+	flex: 1;
+	padding: 0.75em 0.5em;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .grid-container {
@@ -190,32 +202,9 @@ img {
 	border-radius: 0.25em;
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	background-color: #333;
-}
-
-li {
-	float: left;
-}
-
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #007fff;
-}
-
-.grid-item-text:hover {
-	position: absolute;
-	top: -1.33em;
+.grid-item:hover .grid-item-text {
+	height: 100%;
+	overflow: visible;
 	white-space: normal;
 	background-color: #ececec;
 }
@@ -257,7 +246,14 @@ a:hover {
 	margin-bottom: 10px;
 }
 
-/* Dark theme colors */
+/**
+ * MARK: Dark theme colors
+ */
+.dark:root {
+	--scrollbar-base: #151515;
+	--scrollbar-thumb: #363636;
+}
+
 body.dark {
 	background-color: #1c1d22; /* ARK STATION EDIT */
 	color: #e6f1ff; /* ARK STATION EDIT */
@@ -309,7 +305,8 @@ body.dark {
 	border-bottom-color: #d4dfec;
 }
 
-.dark #under-menu {
+.dark #under-menu,
+.dark #under-content {
 	background-color: #202020;
 }
 

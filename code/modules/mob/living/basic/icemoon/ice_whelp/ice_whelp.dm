@@ -15,6 +15,7 @@
 	)
 	crusher_loot = /obj/item/crusher_trophy/tail_spike
 	speed = 12
+	initial_language_holder = /datum/language_holder/lizard/hear_common
 
 	maxHealth = 300
 	health = 300
@@ -43,7 +44,6 @@
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_HEAVY)
 	AddComponent(/datum/component/basic_mob_ability_telegraph)
-	AddComponent(/datum/component/basic_mob_attack_telegraph, telegraph_duration = 0.6 SECONDS)
 
 	var/static/list/innate_actions = list(
 		/datum/action/cooldown/mob_cooldown/fire_breath/ice = BB_WHELP_STRAIGHTLINE_FIRE,

@@ -1,14 +1,5 @@
-// Remove these once we have Byond implementation.
-// ------------------------------------
-#define IS_NAN(a) (a != a)
-
-#define IS_INF__UNSAFE(a) (a == a && a-a != a-a)
-#define IS_INF(a) (isnum(a) && IS_INF__UNSAFE(a))
-
-#define IS_FINITE__UNSAFE(a) (a-a == a-a)
+#define IS_FINITE__UNSAFE(a) (!isinf(a) && !isnan(a))
 #define IS_FINITE(a) (isnum(a) && IS_FINITE__UNSAFE(a))
-// ------------------------------------
-// Aight dont remove the rest
 
 // Credits to Nickr5 for the useful procs I've taken from his library resource.
 // This file is quadruple wrapped for your pleasure
@@ -38,9 +29,16 @@
 /// Gets the sign of x, returns -1 if negative, 0 if 0, 1 if positive
 #define SIGN(x) ( ((x) > 0) - ((x) < 0) )
 
+/// Returns the integer closest to 0 from a division
+#define SIGNED_FLOOR_DIVISION(x, y) (SIGN(x) * FLOOR(abs(x) / y, 1))
+
 #define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
 
 #define ROUND_UP(x) ( -round(-(x)))
+
+/// Probabilistic rounding: Adds 1 to the integer part of x with a probability equal to the decimal part of x.
+/// ie. ROUND_PROB(40.25) returns 40 with 75% probability, and 41 with 25% probability.
+#define ROUND_PROB(x) ( floor(x) + (prob(fract(x) * 100)) )
 
 /// Returns the number of digits in a number. Only works on whole numbers.
 /// This is marginally faster than string interpolation -> length
@@ -137,6 +135,9 @@
 // Will filter out extra rotations and negative rotations
 // E.g: 540 becomes 180. -180 becomes 180.
 #define SIMPLIFY_DEGREES(degrees) (MODULUS((degrees), 360))
+
+// 180s an angle
+#define REVERSE_ANGLE(degrees) (SIMPLIFY_DEGREES(degrees + 180))
 
 #define GET_ANGLE_OF_INCIDENCE(face, input) (MODULUS((face) - (input), 360))
 

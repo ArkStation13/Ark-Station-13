@@ -101,7 +101,7 @@
 		return
 	ooga_ooga()
 	if (prob(paralyze_chance))
-		target.Paralyze(2 SECONDS)
+		target.Knockdown(1 SECONDS) // NOVA EDIT CHANGE - ORIGINAL:  target.Paralyze(2 SECONDS)
 		visible_message(span_danger("[src] knocks [target] down!"))
 	else
 		target.throw_at(get_edge_target_turf(target, dir), range = rand(1, 2), speed = 7, thrower = src)
@@ -176,6 +176,19 @@
 	speed = 0.1
 	paralyze_chance = 0
 	initial_size = 0.9
+
+/mob/living/basic/gorilla/hostile
+	name = "Feral Gorilla"
+	maxHealth = 180
+	health = 180
+	desc = "A gorilla created via \"advanced genetic science\". While not quite as strong as their wildborne brethren, this simian still packs a punch."
+	melee_damage_lower = 15
+	melee_damage_upper = 18
+	obj_damage = 25
+	speed = 0.1
+	paralyze_chance = 0
+	initial_size = 0.9
+	faction = list(FACTION_HOSTILE)
 
 /mob/living/basic/gorilla/genetics/Initialize(mapload)
 	. = ..()

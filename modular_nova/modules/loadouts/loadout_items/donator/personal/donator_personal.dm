@@ -1,9 +1,9 @@
-/datum/loadout_item/toys/miafoxplush
+/datum/loadout_item/toys/plush/miafoxplush
 	name = "Mia's fox plushie"
 	item_path = /obj/item/toy/plush/nova/donator/fox/mia
 	// ARK STATION REMOVED: ckeywhitelist = list("fuzlet")
 
-/datum/loadout_item/toys/teasefoxplush
+/datum/loadout_item/toys/plush/teasefoxplush
 	name = "Teasable fox plushie"
 	item_path = /obj/item/toy/plush/nova/donator/fox/kailyn
 	// ARK STATION REMOVED: ckeywhitelist = list("ratraus")
@@ -15,11 +15,21 @@
 /datum/loadout_item/pocket_items/stellar_bouquet
 	name = "Stellar Bouquet"
 	item_path = /obj/item/bouquet/stellar
-	ckeywhitelist = list("thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/paddedunder
 	name = "Feathered Serenity Suit"
 	item_path = /obj/item/clothing/under/padded
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/under/jumpsuit/sweater_dress
+	name = "Virgin Killer Sweater"
+	item_path = /obj/item/clothing/under/sweater_dress
+	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
+
+/datum/loadout_item/suit/bomber_donor
+	name = "Old Hoodie"
+	item_path = /obj/item/clothing/suit/jacket/bomber_donor
 	// ARK STATION REMOVED: ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/paddedunder/alt
@@ -40,7 +50,7 @@
 /datum/loadout_item/neck/padded/security
 	name = "Vanguard Cloak"
 	item_path = /obj/item/clothing/neck/padded/security
-	ckeywhitelist = list("actualvanguard")
+	// ARK STATION REMOVED: ckeywhitelist = list("actualvanguard")
 
 /datum/loadout_item/gloves/padded
 	name = "Serenity Gloves"
@@ -87,8 +97,8 @@
 	item_path = /obj/item/clothing/shoes/combat/rax
 	// ARK STATION REMOVED: ckeywhitelist = list("raxraus")
 
-/datum/loadout_item/suit/rax_peacekeeper_jacket
-	name = "Peacekeeper jacket"
+/datum/loadout_item/suit/rax_officer_jacket
+	name = "Officer jacket"
 	item_path = /obj/item/clothing/suit/armor/vest/warden/rax
 	// ARK STATION REMOVED: ckeywhitelist = list("raxraus")
 	restricted_roles = list(JOB_BLUESHIELD, JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_MEDIC, JOB_BRIG_PILOT) // ARK STATION EDIT
@@ -128,12 +138,12 @@
 /datum/loadout_item/mask/divemask_koru
 	name = "S.O.K.O. Gaiter"
 	item_path = /obj/item/clothing/mask/gas/signalis_gaiter
-	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22")
+	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22", "regaleira")
 
 /datum/loadout_item/under/jumpsuit/divesuit_koru
 	name = "S.O.K.O. Bodysuit"
 	item_path = /obj/item/clothing/under/bodysuit_koruu
-	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22")
+	// ARK STATION REMOVED: ckeywhitelist = list("koruu", "foxyandiknowit", "candlejax", "shyelf", "opportunerover22", "regaleira")
 
 /datum/loadout_item/under/jumpsuit/anasuit
 	name = "Azulean's Enviro-Suit"
@@ -421,7 +431,7 @@
 	item_path = /obj/item/storage/belt/fannypack/occult
 	// ARK STATION REMOVED: ckeywhitelist = list("gamerguy14948")
 
-/datum/loadout_item/toys/voodooplush
+/datum/loadout_item/toys/plush/voodooplush
 	name = "Voodoo Doll"
 	item_path = /obj/item/toy/plush/nova/donator/voodoo
 	// ARK STATION REMOVED: ckeywhitelist = list("gamerguy14948")
@@ -471,7 +481,7 @@
 	item_path = /obj/item/clothing/mask/gas/larpswat
 	// ARK STATION REMOVED: ckeywhitelist = list("erdinyobarboza")
 
-/datum/loadout_item/toys/zappplush
+/datum/loadout_item/toys/plush/zappplush
 	name = "Lil' Zapp Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/zapp
 	item_path = /obj/item/toy/plush/nova/donator/zapp
@@ -487,12 +497,12 @@
 	item_path = /obj/item/clothing/neck/fishpendant
 	// ARK STATION REMOVED: ckeywhitelist = list("cimika")
 
-/datum/loadout_item/toys/immovable_rod_plush
+/datum/loadout_item/toys/plush/immovable_rod_plush
 	name = "Immovable Rod Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/immovable_rod
 	// ARK STATION REMOVED: ckeywhitelist = list("tobjv")
 
-/datum/loadout_item/toys/tesh_plush
+/datum/loadout_item/toys/plush/tesh_plush
 	name = "Squish-Me-Tesh Plush"
 	item_path = /obj/item/toy/plush/nova/donator/tesh
 	// ARK STATION REMOVED: ckeywhitelist = list("tobjv")
@@ -509,7 +519,7 @@
 	// ARK STATION REMOVED: ckeywhitelist = list("ultimarifox")
 	restricted_roles = list(JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER)
 
-/datum/loadout_item/toys/roselia_plush
+/datum/loadout_item/toys/plush/roselia_plush
 	name = "Obscene Sergal Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/roselia
 	// ARK STATION REMOVED: ckeywhitelist = list("ultimarifox")
@@ -519,12 +529,12 @@
 	item_path = /obj/item/clothing/accessory/badge/holo/jade
 	// ARK STATION REMOVED: ckeywhitelist = list("konstyantyn")
 
-/datum/loadout_item/toys/plushe_winrow
+/datum/loadout_item/toys/plush/plushe_winrow
 	name = "Dark and Brooding Lizard Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_winrow
 	item_path = /obj/item/toy/plush/nova/donator/plushie_winrow
 
-/datum/loadout_item/toys/plushie_star
+/datum/loadout_item/toys/plush/plushie_star
 	name = "Star Angel Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_star
 	item_path = /obj/item/toy/plush/nova/donator/plushie_star
@@ -562,27 +572,27 @@
 
 //Chunko Fops were donated by SlippyJoe, who requested they are usable by everyone
 
-/datum/loadout_item/toys/CFBonnie
+/datum/loadout_item/toys/plush/CFBonnie
 	name = "Chunko Fop: Blue Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/bonnie
 	// ARK STATION REMOVED: donator_only = TRUE
 
-/datum/loadout_item/toys/CFAndrew
+/datum/loadout_item/toys/plush/CFAndrew
 	name = "Chunko Fop: Green Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/andrew
 	// ARK STATION REMOVED: donator_only = TRUE
 
-/datum/loadout_item/toys/CFInessa
+/datum/loadout_item/toys/plush/CFInessa
 	name = "Chunko Fop: Medical Bear Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/chunko/inessa
 	// ARK STATION REMOVED: donator_only = TRUE
 
-/datum/loadout_item/toys/plushie_chiara
+/datum/loadout_item/toys/plush/plushie_chiara
 	name = "Commanding Fox Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_chiara
 	// ARK STATION REMOVED: ckeywhitelist = list("srq", "superlagg")
 
-/datum/loadout_item/toys/plushie_dan
+/datum/loadout_item/toys/plush/plushie_dan
 	name = "Comfy Fox Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_dan
 	// ARK STATION REMOVED: ckeywhitelist = list("srq", "superlagg")
@@ -598,7 +608,7 @@
 	item_path = /obj/item/coin/donator/marsoc
 	// ARK STATION REMOVED: ckeywhitelist = list("sweetsoulbrother")
 
-/datum/loadout_item/toys/plushie_jeanne
+/datum/loadout_item/toys/plush/plushie_jeanne
 	name = "Masked Roboticist Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_jeanne
 	// ARK STATION REMOVED: ckeywhitelist = list("klb100") // Asked it to be public.
@@ -613,7 +623,7 @@
 	item_path = /obj/item/clothing/suit/hooded/techpriest
 	// ARK STATION REMOVED: ckeywhitelist = list("imthinkingarbys")
 
-/datum/loadout_item/toys/plushie_azyre
+/datum/loadout_item/toys/plush/plushie_azyre
 	name = "Handsome Chef Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_azyre
 	// ARK STATION REMOVED: ckeywhitelist = list("dalaoazure")
@@ -634,17 +644,17 @@
 	restricted_roles = list(JOB_CAPTAIN)
 	// ARK STATION REMOVED: ckeywhitelist = list("razurath")
 
-/datum/loadout_item/toys/plushie_razurath
+/datum/loadout_item/toys/plush/plushie_razurath
 	name = "Science Shark Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_razurath
 	// ARK STATION REMOVED: ckeywhitelist = list("razurath")
 
-/datum/loadout_item/toys/plushie_razurath/second
+/datum/loadout_item/toys/plush/plushie_razurath/second
 	name = "Dwarf Shark Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_razurath/second
 	// ARK STATION REMOVED: ckeywhitelist = list("razurath")
 
-/datum/loadout_item/toys/plushie_elofy
+/datum/loadout_item/toys/plush/plushie_elofy
 	name = "Bumbling Wolfgirl Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_elofy
 	item_path = /obj/item/toy/plush/nova/donator/plushie_elofy
@@ -693,7 +703,7 @@
 	item_path = /obj/item/clothing/suit/hooded/sigmarcoat
 	// ARK STATION REMOVED: ckeywhitelist = list("sigmaralkahest")
 
-/datum/loadout_item/toys/plushy_syntax1112
+/datum/loadout_item/toys/plush/plushy_syntax1112
 	name = "Lop Bunny Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/plushie_syntax1112
 	// ARK STATION REMOVED: ckeywhitelist = list("syntax1112")
@@ -809,6 +819,15 @@
 	item_path = /obj/item/implanter/toaster
 	// ARK STATION REMOVED: ckeywhitelist = list("jasohavents")
 
+/datum/loadout_item/pocket_items/theurgic_crystal
+	name = "Theurgic Stone"
+	item_path = /obj/item/organ/cyberimp/arm/shard/donator/theurgic_crystal
+	ckeywhitelist = list("sciamach")
+
+/datum/loadout_item/toys/plush/delphic_synth
+	name = "Surgery Synth Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/delphic_synth
+
 /datum/loadout_item/under/miscellaneous/rem
 	name = "M.I.A. Limiter"
 	item_path = /obj/item/clothing/under/rem
@@ -839,7 +858,7 @@
     item_path = /obj/item/storage/backpack/satchel/drop_pouch
     // ARK STATION REMOVED: ckeywhitelist = list("alvcyktor", "snakebittenn")
 
-/datum/loadout_item/inhand/melonseva
+/datum/loadout_item/pocket_items/melonseva
 	name = "Sundowner SEVA"
 	item_path = /obj/item/clothing/suit/hooded/seva/melon
 	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
@@ -884,9 +903,57 @@
 /datum/loadout_item/pocket_items/starfruit_seed
 	name = "Primidine Starfruit Seed"
 	item_path = /obj/item/seeds/starfruit
-	// ARK STATION REMOVED: ckeywhitelist = list("snailomi", "thedragmeme")
+	// ARK STATION REMOVED: ckeywhitelist = list("snailomi", "thedragmeme", "DayDream21", "Sketchy_Axoltol", "Tesla825")
 
 /datum/loadout_item/suit/butter
 	name = "Butter Costume"
 	item_path = /obj/item/clothing/suit/costume/butter
 	// ARK STATION REMOVED: ckeywhitelist = list("drpmstr", "pyritechimera")
+
+/datum/loadout_item/neck/tattered
+	name = "Worn Corporate Cloak"
+	item_path = /obj/item/clothing/neck/tattered
+	// ARK STATION REMOVED: ckeywhitelist = list("jaklz")
+
+/datum/loadout_item/toys/plush/commandant
+	name = "Commandant Plushie"
+	item_path = /obj/item/toy/plush/nova/donator/commandant
+// ckeywhitelist = list("bonkaitheroris") // Asked it to be public
+
+/datum/loadout_item/neck/noble_cloak
+	name = "Noble Cloak"
+	item_path = /obj/item/clothing/neck/noble_mantle
+	// ARK STATION REMOVED: ckeywhitelist = list("sharkoink")
+
+/datum/loadout_item/pocket_items/comvest
+	name = "Command Armor Vest"
+	item_path = /obj/item/clothing/suit/armor/hos/trenchcoat/melon
+	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
+	restricted_roles = list(JOB_HEAD_OF_SECURITY)
+
+/datum/loadout_item/pocket_items/amps
+	name = "Anomalous Materials Protection Suit"
+	item_path = /obj/item/clothing/suit/hooded/explorer/melon
+	// ARK STATION REMOVED: ckeywhitelist = list("deadmonwonderland")
+	restricted_roles = list(JOB_SHAFT_MINER)
+
+/datum/loadout_item/under/formal/ambassadordagmar
+	name = "Ambassador's Dress"
+	item_path = /obj/item/clothing/under/dress/ambassadordagmar
+	// ARK STATION REMOVED: ckeywhitelist = list("spookyrotini")
+
+/datum/loadout_item/under/formal/neoflapper
+	name = "Neo-Flapper Dress"
+	item_path = /obj/item/clothing/under/dress/neoflapperdagmar
+	// ARK STATION REMOVED: ckeywhitelist = list("spookyrotini")
+
+/datum/loadout_item/under/formal/heirloomdagmar
+	name = "Heirloom Dress"
+	item_path = /obj/item/clothing/under/dress/heirloomdagmar
+	// ARK STATION REMOVED: ckeywhitelist = list("spookyrotini")
+
+/datum/loadout_item/pocket_items/ahabs_spear
+	name = "Ahab's Spear Retool Kit"
+	item_path = /obj/item/crusher_trophy/retool_kit/ahab
+	// ARK STATION REMOVED: ckeywhitelist = list("tamaya")
+	restricted_roles = list(JOB_SHAFT_MINER)

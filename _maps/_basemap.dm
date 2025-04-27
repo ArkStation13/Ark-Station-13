@@ -13,6 +13,7 @@
 		#include "map_files\Mining\Lavaland.dmm"
 		#include "ark_map_files\ark_maps\north_star.dmm" // ARK STATION EDIT
 		#include "ark_map_files\ark_maps\tramstation.dmm" // ARK STATION EDIT
+		#include "map_files\NebulaStation\NebulaStation.dmm"
 		#include "ark_map_files\ark_maps\wawastation.dmm" // ARK STATION EDIT
 		// NOVA EDIT ADDITON START - Compiling our modular maps too!
 		#include "ark_map_files\ark_maps\VoidRaptor.dmm" // ARK STATION EDIT

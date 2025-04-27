@@ -27,6 +27,7 @@
 	looping_sound = FALSE
 
 	shell_capacity = SHELL_CAPACITY_SMALL
+	action_slots = ALL
 
 	///The item currently inserted into the PDA, starts with a pen.
 	var/obj/item/inserted_item = /obj/item/pen
@@ -329,7 +330,6 @@
 	starting_programs = list(
 		/datum/computer_file/program/filemanager,
 		/datum/computer_file/program/robotact,
-		/datum/computer_file/program/borg_monitor,
 		/datum/computer_file/program/atmosscan,
 		/datum/computer_file/program/crew_manifest,
 		/datum/computer_file/program/messenger, // NOVA EDIT ADDITION - Messenger for borgs

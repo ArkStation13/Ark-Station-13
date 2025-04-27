@@ -333,9 +333,9 @@
 		"nuzzle",
 		)
 	squeak_override = list(
-		'sound/effects/can/can_open1.ogg' = 1,
-		'sound/effects/can/can_open2.ogg' = 1,
-		'sound/effects/can/can_open3.ogg' = 1,
+		'sound/items/can/can_open1.ogg' = 1,
+		'sound/items/can/can_open2.ogg' = 1,
+		'sound/items/can/can_open3.ogg' = 1,
 		)
 	///the list that is chosen from depending on gaming skill
 	var/static/list/skill_response = list(
@@ -374,7 +374,7 @@
 		skill_level = (max(6, skill_level))
 	say(skill_response[skill_level])
 	if(skill_level == 7)
-		playsound(src_turf, 'sound/effects/can/can_pop.ogg', 80, TRUE)
+		playsound(src_turf, 'sound/items/can/can_pop.ogg', 80, TRUE)
 		new /obj/effect/abstract/liquid_turf/pwr_gamr(src_turf)
 		playsound(src_turf, 'sound/effects/bubbles/bubbles.ogg', 50, TRUE)
 		qdel(src)
@@ -723,7 +723,7 @@
 		"detain",
 		"taze",
 		)
-	squeak_override = list('modular_nova/modules/emotes/sound/emotes/female/female_sneeze.ogg' = 1)
+	squeak_override = list('sound/mobs/humanoids/human/sneeze/female_sneeze1.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/xixi
 	name = "familiar looking harpy plushie"
@@ -781,6 +781,32 @@
 	attack_verb_simple = list("hug")
 	squeak_override = list('modular_nova/modules/emotes/sound/voice/merp.ogg' = 1)
 	young = FALSE
+
+/obj/item/toy/plush/nova/donator/delphic_synth
+	name = "surgery synth plushie"
+	desc = "A plush in the shape of a familiar white synthetic with toggleable holographic wings. It even comes complete with real fake blood stains and a functional mini-syringe! Dont think too hard about how safe it is..."
+	icon_state = "plushie_delphi"
+	squeak_override = list('modular_nova/modules/emotes/sound/emotes/dwoop.ogg' = 1)
+	attack_verb_continuous = list(
+		"lobotomizes",
+		"appendectomys",
+		"transplants",
+		"amputates",
+		"vivisects",
+		"vasotomys",
+		"myotomys",
+		"angioectomys",
+	)
+	attack_verb_simple = list(
+		"lobotomize",
+		"appendectomy",
+		"transplant",
+		"amputate",
+		"vivisect",
+		"vasotomy",
+		"myotomy",
+		"angioectomy",
+	)
 
 /obj/item/toy/plush/nova/donator/chunko
 	name = "chunko fop"
@@ -899,9 +925,9 @@
 		"smoke",
 		)
 	squeak_override = list(
-		'modular_nova/modules/emotes/sound/emotes/female/female_cough_3.ogg' = 1,
-		'modular_nova/modules/emotes/sound/emotes/female/female_cough_2.ogg' = 1,
-		'modular_nova/modules/emotes/sound/emotes/female/female_cough_1.ogg' = 1,
+		'sound/mobs/humanoids/human/cough/female_cough1.ogg' = 1,
+		'sound/mobs/humanoids/human/cough/female_cough2.ogg' = 1,
+		'sound/mobs/humanoids/human/cough/female_cough3.ogg' = 1,
 		)
 	responses = list(
 		"The human body can survive three weeks without skiiiiiiiiiiin.",
@@ -909,3 +935,22 @@
 		"Yeeeessss?", "Helloooooo.",
 		"Don't be such a baby, ribs grow baaaaaaaaaack.",
 		)
+
+// Donation reward for bonkaitheroris
+/obj/item/toy/plush/nova/donator/commandant
+	name = "commandant plushie"
+	desc = "From Cenion's Marketing Team: a cute plushie! A Plushie! Plooshi? Jamlet? Creature!"
+	icon_state = "plushie_commandant"
+	inhand_icon_state = "plushie_commandant"
+	lefthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_left.dmi'
+	righthand_file = 'modular_nova/master_files/icons/donator/mob/inhands/donator_right.dmi'
+	attack_verb_continuous = list(
+		"hugs",
+		"squishes",
+		"baps",
+	)
+	attack_verb_simple = list(
+		"hug",
+		"squish",
+		"bap",
+	)

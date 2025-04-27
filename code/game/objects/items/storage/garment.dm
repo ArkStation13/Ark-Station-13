@@ -74,7 +74,7 @@
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/item/storage/bag/garment/hos/PopulateContents()
-	//new /obj/item/clothing/under/rank/security/head_of_security/skirt(src) // NOVA EDIT REMOVAL - Blue Sec
+	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/grey(src)
@@ -91,6 +91,10 @@
 	new /obj/item/clothing/head/hats/hos/cap(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
 	new /obj/item/clothing/neck/cloak/hos(src)
+	// NOVA EDIT ADDITION START - EXTRA GOODIES
+	new /obj/item/clothing/under/rank/security/head_of_security/nova(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/nova/formal(src)
+	// NOVA EDIT ADDITION END
 
 /obj/item/storage/bag/garment/warden/PopulateContents()
 	new /obj/item/clothing/suit/armor/vest/warden(src)
@@ -105,6 +109,12 @@
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
+	// NOVA EDIT ADDITION START - EXTRA GOODIES
+	new /obj/item/clothing/under/rank/security/warden/nova(src)
+	new /obj/item/clothing/under/rank/security/warden/formal(src)
+	new /obj/item/clothing/under/rank/security/warden/nova/suit(src)
+	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
+	// NOVA EDIT ADDITION END
 
 /obj/item/storage/bag/garment/research_director/PopulateContents()
 	new /obj/item/clothing/under/rank/rnd/research_director(src)
@@ -113,7 +123,7 @@
 	new /obj/item/clothing/under/rank/rnd/research_director/alt/skirt(src)
 	new /obj/item/clothing/under/rank/rnd/research_director/turtleneck(src)
 	new /obj/item/clothing/under/rank/rnd/research_director/turtleneck/skirt(src)
-	new /obj/item/clothing/suit/toggle/labcoat/nova/rd(src) //NOVA EDIT ADDITION
+	new /obj/item/clothing/suit/toggle/labcoat/nova/fancy/rd(src) //NOVA EDIT ADDITION
 	new /obj/item/clothing/suit/hooded/wintercoat/science/rd(src)
 	new /obj/item/clothing/head/beret/science/rd(src)
 	new /obj/item/clothing/gloves/color/black(src)

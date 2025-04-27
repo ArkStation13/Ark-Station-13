@@ -7,7 +7,7 @@
 		<b>not much quicker than unpowered tools</b>."
 	icon = 'modular_nova/modules/colony_fabricator/icons/tools.dmi'
 	icon_state = "drill"
-	belt_icon_state = null
+	inside_belt_icon_state = null
 	inhand_icon_state = "drill"
 	worn_icon_state = "drill"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
@@ -103,6 +103,7 @@
 	icon_state = "prybar"
 	toolspeed = 1.3
 	force_opens = TRUE
+	custom_premium_price = PAYCHECK_COMMAND * 5
 	custom_materials = list(
 		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.75,
 		/datum/material/titanium = HALF_SHEET_MATERIAL_AMOUNT,

@@ -1,9 +1,8 @@
-// THIS IS AN ARK STATION UI FILE
-import { useState } from 'react';
+// THIS IS A NOVA SECTOR UI FILE
+import { ByondUi, Section, Stack, Tabs } from 'tgui-core/components'; // ARK STATION EDIT: added Tabs
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { ByondUi, Section, Stack, Tabs } from '../components'; // ARK STATION edit: add Tabs
 import { Window } from '../layouts';
 
 const formatURLs = (text) => {
@@ -50,6 +49,10 @@ export const ExaminePanel = (props) => {
     character_ad, // ARK STATION edit
     headshot,
     headshot_nsfw, // ARK STATION edit addition
+    // veteran_status,
+    ideal_antag_optin_status,
+    current_antag_optin_status,
+    opt_in_colors = { optin, color },
   } = data;
   return (
     <Window

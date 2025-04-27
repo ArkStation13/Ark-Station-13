@@ -17,9 +17,9 @@
 		TRAIT_TOXINLOVER,
 		TRAIT_NOBLOOD,
 	)
-	mutanttongue = /obj/item/organ/internal/tongue/jelly
-	mutantlungs = /obj/item/organ/internal/lungs/slime
-	mutanteyes = /obj/item/organ/internal/eyes/jelly
+	mutanttongue = /obj/item/organ/tongue/jelly
+	mutantlungs = /obj/item/organ/lungs/slime
+	mutanteyes = /obj/item/organ/eyes/jelly
 	mutantheart = null
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
@@ -43,7 +43,7 @@
 	)
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 
-/datum/species/jelly/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load)
+/datum/species/jelly/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	if(ishuman(new_jellyperson))
 		regenerate_limbs = new
@@ -65,13 +65,13 @@
 		return HANDLE_BLOOD_HANDLED
 
 	if(slime.blood_volume <= 0)
-		slime.blood_volume += JELLY_REGEN_RATE_EMPTY * seconds_per_tick
+		slime.blood_volume += JELLY_REGEN_RATE_EMPTY * slime.physiology.blood_regen_mod * seconds_per_tick
 		slime.adjustBruteLoss(2.5 * seconds_per_tick)
 		to_chat(slime, span_danger("You feel empty!"))
 
 	if(slime.blood_volume < BLOOD_VOLUME_NORMAL)
 		if(slime.nutrition >= NUTRITION_LEVEL_STARVING)
-			slime.blood_volume += JELLY_REGEN_RATE * seconds_per_tick
+			slime.blood_volume += JELLY_REGEN_RATE * slime.physiology.blood_regen_mod * seconds_per_tick
 			if(slime.blood_volume <= BLOOD_VOLUME_LOSE_NUTRITION) // don't lose nutrition if we are above a certain threshold, otherwise slimes on IV drips will still lose nutrition
 				slime.adjust_nutrition(-1.25 * seconds_per_tick)
 
@@ -97,7 +97,7 @@
 	consumed_limb.drop_limb()
 	to_chat(H, span_userdanger("Your [consumed_limb] is drawn back into your body, unable to maintain its shape!"))
 	qdel(consumed_limb)
-	H.blood_volume += 65 //NOVA EDIT - CHANGE - ORIGINAL: 20 - This is because losing a limb now costs them 60 blood, so this refunds it with a pinch extra so it doesn't. Y'know. Kill you.
+	H.blood_volume += 65 * H.physiology.blood_regen_mod //NOVA EDIT CHANGE - This is because losing a limb now costs them 60 blood, so this refunds it with a pinch extra so it doesn't. Y'know. Kill you. - ORIGINAL: H.blood_volume += 20 * H.physiology.blood_regen_mod
 
 /datum/species/jelly/get_species_description()
 	return "Jellypeople are a strange and alien species with three eyes, made entirely out of gel."
@@ -178,7 +178,7 @@
 	plural_form = "Slimepeople"
 	id = SPECIES_SLIMEPERSON
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
-	mutanteyes = /obj/item/organ/internal/eyes
+	mutanteyes = /obj/item/organ/eyes
 	var/datum/action/innate/split_body/slime_split
 	var/list/mob/living/carbon/bodies
 	var/datum/action/innate/swap_body/swap_body
@@ -209,7 +209,7 @@
 	UnregisterSignal(C, COMSIG_LIVING_DEATH)
 	..()
 
-/datum/species/jelly/slime/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/jelly/slime/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load, regenerate_icons)
 	..()
 	if(ishuman(C))
 		slime_split = new
@@ -488,7 +488,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/jelly/luminescent,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly/luminescent,
 	)
-	mutanteyes = /obj/item/organ/internal/eyes
+	mutanteyes = /obj/item/organ/eyes
 	/// How strong is our glow
 	var/glow_intensity = LUMINESCENT_DEFAULT_GLOW
 	/// Internal dummy used to glow (very cool)
@@ -511,7 +511,7 @@
 	QDEL_LIST(luminescent_actions)
 	return ..()
 
-/datum/species/jelly/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species)
+/datum/species/jelly/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	glow = new_jellyperson.mob_light(light_type = /obj/effect/dummy/lighting_obj/moblight/species)
 	update_glow(new_jellyperson)
@@ -677,7 +677,7 @@
 	return "Stargazers can link others' minds with their own, creating a private communication channel. \
 		Most things that are toxic heal them, but most things that prevent toxicity damage them!"
 
-/datum/species/jelly/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species)
+/datum/species/jelly/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	project_action = new(src)
 	project_action.Grant(grant_to)

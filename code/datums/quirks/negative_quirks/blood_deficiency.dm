@@ -21,6 +21,14 @@
 /datum/quirk/blooddeficiency/remove()
 	UnregisterSignal(quirk_holder, list(COMSIG_HUMAN_ON_HANDLE_BLOOD, COMSIG_SPECIES_GAIN))
 
+/datum/quirk/blooddeficiency/is_species_appropriate(datum/species/mob_species)
+	var/datum/species_traits = GLOB.species_prototypes[mob_species].inherent_traits
+	if(TRAIT_NOBLOOD in species_traits)
+		return FALSE
+	if(TRAIT_NOBREATH in species_traits)
+		return FALSE
+	return ..()
+
 /datum/quirk/blooddeficiency/proc/lose_blood(datum/source, seconds_per_tick, times_fired)
 	SIGNAL_HANDLER
 
@@ -33,7 +41,7 @@
 
 	human_holder.blood_volume = max(min_blood, human_holder.blood_volume - human_holder.dna.species.blood_deficiency_drain_rate * seconds_per_tick)
 
-/datum/quirk/blooddeficiency/proc/update_mail(datum/source, datum/species/new_species, datum/species/old_species)
+/datum/quirk/blooddeficiency/proc/update_mail(datum/source, datum/species/new_species, datum/species/old_species, pref_load, regenerate_icons)
 	SIGNAL_HANDLER
 
 	mail_goodies.Cut()
