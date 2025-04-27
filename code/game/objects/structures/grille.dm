@@ -47,10 +47,9 @@
 		QUEUE_SMOOTH(src)
 
 /obj/structure/grille/update_icon_state()
-	if (broken)
-		icon_state = "brokengrille" // ARK STATION EDIT
-	// else  // ARK STATION REMOVED
-	//	icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]"  // ARK STATION REMOVED
+	// icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]" // ARK STATION REMOVED
+	if(broken) // ARK STATION ADDITION
+		icon_state = "brokengrille" // ARK STATION ADDITION
 	return ..()
 
 /obj/structure/grille/examine(mob/user)
@@ -300,28 +299,28 @@
 
 /obj/structure/grille/atom_break()
 	. = ..()
-	if(broken)
-		return
-	set_density(FALSE)
-	atom_integrity = 20
-	broken = TRUE
-	rods_amount = 1
-	var/obj/item/dropped_rods = new rods_type(drop_location(), rods_amount)
-	transfer_fingerprints_to(dropped_rods)
-	smoothing_flags = NONE // ARK STATION ADDITION
-	update_appearance()
+	if(!broken)
+		icon_state = "brokengrille"
+		set_density(FALSE)
+		atom_integrity = 20
+		broken = TRUE
+		rods_amount = 1
+		var/obj/item/dropped_rods = new rods_type(drop_location(), rods_amount)
+		transfer_fingerprints_to(dropped_rods)
+		smoothing_flags = NONE // ARK STATION ADDITION
+		update_appearance() // ARK STATION ADDITION
 
 /obj/structure/grille/proc/repair_grille()
-	if(!broken)
-		return FALSE
-
-	set_density(TRUE)
-	atom_integrity = max_integrity
-	broken = FALSE
-	rods_amount = 2
-	smoothing_flags = SMOOTH_BITMASK // ARK STATION ADDITION
-	return TRUE
->>>>>>> 94d73982213365f3013178932fddddf9b2308572
+	if(broken)
+		icon_state = "grille"
+		set_density(TRUE)
+		atom_integrity = max_integrity
+		broken = FALSE
+		rods_amount = 2
+		smoothing_flags = SMOOTH_BITMASK // ARK STATION ADDITION
+		update_appearance() // ARK STATION ADDITION
+		return TRUE
+	return FALSE
 
 // shock user with probability prb (if all connections & power are working)
 // returns 1 if shocked, 0 otherwise
