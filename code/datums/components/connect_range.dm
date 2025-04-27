@@ -93,7 +93,7 @@
 	unregister_signals(old_loc, old_turfs - turfs)
 	for(var/turf/target_turf as anything in turfs - old_turfs)
 		for(var/signal in connections)
-			parent.RegisterSignal(target_turf, signal, connections[signal])
+			parent?.RegisterSignal(target_turf, signal, connections[signal]) // ARK STATION EDIT
 
 /datum/component/connect_range/proc/unregister_signals(atom/location, list/remove_from)
 	//The location is null or is a container and the component shouldn't have register signals on it

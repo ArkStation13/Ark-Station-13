@@ -83,6 +83,6 @@ GLOBAL_DATUM_INIT(ctf_panel, /datum/ctf_panel, new())
 
 /datum/ctf_panel/proc/ctf_enabled()
 	var/datum/ctf_controller/ctf_enabled_check = GLOB.ctf_games[CTF_GHOST_CTF_GAME_ID]
-	if(ctf_enabled_check.ctf_enabled)
+	if(ctf_enabled_check?.ctf_enabled) // ARK STATION EDIT
 		return TRUE
 	return FALSE
