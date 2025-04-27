@@ -13,26 +13,29 @@ import {
 } from './data';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 
-const sortJobs = (entries: [string, Job][], head?: string) =>
-  sortBy(
+function sortJobs(entries: [string, Job][], head?: string) {
+  return sortBy(
     entries,
     ([key, _]) => (key === head ? -1 : 1),
     ([key, _]) => key,
   );
+}
 
 const PRIORITY_BUTTON_SIZE = '18px';
 
-const PriorityButton = (props: {
+type PriorityButtonProps = {
   name: string;
   color: string;
   modifier?: string;
   enabled: boolean;
   onClick: () => void;
-}) => {
+};
+
+function PriorityButton(props: PriorityButtonProps) {
   const className = `PreferencesMenu__Jobs__departments__priority`;
 
   return (
-    // ARK STATION EDIT START
+    // SKYRAT EDIT START
     <Button
       className={classes([
         className,
@@ -46,48 +49,46 @@ const PriorityButton = (props: {
       height={PRIORITY_BUTTON_SIZE}
       width={PRIORITY_BUTTON_SIZE}
     />
-    // ARK STATION EDIT END
+    // SKYRAT EDIT END
   );
-};
+}
 
 type CreateSetPriority = (priority: JobPriority | null) => () => void;
 
 const createSetPriorityCache: Record<string, CreateSetPriority> = {};
 
-const createCreateSetPriorityFromName = (
-  jobName: string,
-): CreateSetPriority => {
+function createCreateSetPriorityFromName(jobName: string): CreateSetPriority {
   if (createSetPriorityCache[jobName] !== undefined) {
     return createSetPriorityCache[jobName];
   }
 
   const perPriorityCache: Map<JobPriority | null, () => void> = new Map();
 
-  const createSetPriority = (priority: JobPriority | null) => {
+  function createSetPriority(priority: JobPriority | null) {
     const existingCallback = perPriorityCache.get(priority);
     if (existingCallback !== undefined) {
       return existingCallback;
     }
 
-    const setPriority = () => {
+    function setPriority() {
       const { act } = useBackend<PreferencesMenuData>();
 
       act('set_job_preference', {
         job: jobName,
         level: priority,
       });
-    };
+    }
 
     perPriorityCache.set(priority, setPriority);
     return setPriority;
-  };
+  }
 
   createSetPriorityCache[jobName] = createSetPriority;
 
   return createSetPriority;
-};
+}
 
-const PriorityHeaders = () => {
+function PriorityHeaders() {
   const className = 'PreferencesMenu__Jobs__PriorityHeader';
 
   return (
@@ -103,24 +104,26 @@ const PriorityHeaders = () => {
       <Stack.Item className={className}>High</Stack.Item>
     </Stack>
   );
-};
+}
 
-const PriorityButtons = (props: {
+type PriorityButtonsProps = {
   createSetPriority: CreateSetPriority;
   isOverflow: boolean;
   priority: JobPriority;
-}) => {
+};
+
+function PriorityButtons(props: PriorityButtonsProps) {
   const { createSetPriority, isOverflow, priority } = props;
 
   return (
-    <Box // ARK STATION EDIT - ORIGINALLY STACK
+    <Box // SKYRAT EDIT - Originally a stack
       style={{
         alignItems: 'center',
         height: '100%',
         justifyContent: 'flex-end',
         paddingLeft: '0.3em',
-        paddingTop: '0.12em', // ARK STATION EDIT - Add some vertical padding
-        paddingBottom: '0.12em', // ARK STATION EDIT - To make this look nicer
+        paddingTop: '0.12em', // SKYRAT EDIT ADDITION - Add some vertical padding
+        paddingBottom: '0.12em', // SKYRAT EDIT ADDITION - To make this look nicer
       }}
     >
       {isOverflow ? (
@@ -174,9 +177,15 @@ const PriorityButtons = (props: {
       )}
     </Box> // SKYRAT EDIT - Originally a stack
   );
+}
+
+type JobRowProps = {
+  className?: string;
+  job: Job;
+  name: string;
 };
 
-const JobRow = (props: { className?: string; job: Job; name: string }) => {
+function JobRow(props: JobRowProps) {
   const { data, act } = useBackend<PreferencesMenuData>(); // SKYRAT EDIT CHANGE - Adds act param
   const { className, job, name } = props;
 
@@ -189,11 +198,11 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
     data.job_required_experience && data.job_required_experience[name];
   const daysLeft = data.job_days_left ? data.job_days_left[name] : 0;
 
-  // ARK STATION EDIT START
+  // SKYRAT EDIT ADDITION
   const alt_title_selected = data.job_alt_titles[name]
     ? data.job_alt_titles[name]
     : name;
-  // ARK STATION EDIT END
+  // SKYRAT EDIT END
 
   let rightSide: ReactNode;
 
@@ -224,6 +233,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    // SKYRAT EDIT START
   } else if (
     data.species_restricted_jobs &&
     data.species_restricted_jobs.indexOf(name) !== -1
@@ -235,6 +245,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    // SKYRAT EDIT END
   } else {
     rightSide = (
       <PriorityButtons
@@ -257,7 +268,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
             }}
           >
             {
-              // ARK STATION EDIT START
+              // SKYRAT EDIT CHANGE START - ORIGINAL: {name}
               !job.alt_titles ? (
                 name
               ) : (
@@ -270,7 +281,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
                   }
                 />
               )
-              // ARK STATION EDIT END
+              // SKYRAT EDIT CHANGE END
             }
           </Stack.Item>
         </Tooltip>
@@ -281,7 +292,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
       </Stack>
     </Stack.Item>
   );
-};
+}
 
 const Department = (props: { department: string } & PropsWithChildren) => {
   const { children, department: name } = props;
@@ -312,10 +323,10 @@ const Department = (props: { department: string } & PropsWithChildren) => {
 
         return (
           <Box>
-            {
-              jobsForDepartment.map(([name, job]) => {
+            <Stack vertical fill>
+              {jobsForDepartment.map(([name, job]) => {
                 return (
-                  <JobRow // ARK STATION EDIT START
+                  <JobRow /* SKYRAT EDIT START - Fixing alt titles */
                     className={classes([
                       className,
                       name === department.head && 'head',
@@ -323,10 +334,10 @@ const Department = (props: { department: string } & PropsWithChildren) => {
                     key={name}
                     job={job}
                     name={name}
-                  />
+                  /> /* SKYRAT EDIT END */
                 );
-              }) // ARK STATION EDIT END
-            }
+              })}
+            </Stack>
 
             {children}
           </Box>
@@ -340,12 +351,12 @@ const Department = (props: { department: string } & PropsWithChildren) => {
 // All I want is for a gap to pretend to be an empty space.
 // But in order for everything to align, I also need to add the 0.2em padding.
 // But also, we can't be aligned with names that break into multiple lines!
-const Gap = (props: { amount: number }) => {
+function Gap(props: { amount: number }) {
   // 0.2em comes from the padding-bottom in the department listing
   return <Box height={`calc(${props.amount}px + 0.2em)`} />;
-};
+}
 
-const JoblessRoleDropdown = (props) => {
+function JoblessRoleDropdown(props) {
   const { act, data } = useBackend<PreferencesMenuData>();
   const selected = data.character_preferences.misc.joblessrole;
 
@@ -375,18 +386,12 @@ const JoblessRoleDropdown = (props) => {
         selected={selection}
         onSelected={createSetPreference(act, 'joblessrole')}
         options={options}
-        displayText={
-          // ARK STATION EDIT
-          <Box pr={1}>
-            {options.find((option) => option.value === selected)!.displayText}
-          </Box>
-        }
       />
     </Box>
   );
-};
+}
 
-export const JobsPage = () => {
+export function JobsPage() {
   return (
     <>
       <JoblessRoleDropdown />
@@ -395,45 +400,41 @@ export const JobsPage = () => {
         <Gap amount={22} />
 
         <Stack.Item>
+          {/* BUBBER EDIT CHANGE */}
+          {/*
           <Stack fill className="PreferencesMenu__Jobs">
             <Stack.Item mr={1}>
               <Gap amount={36} />
 
               <PriorityHeaders />
 
-              <Department
-                department="Global Solar Energy" /* Ark Station Edit */
-              >
+              <Department department="Engineering">
                 <Gap amount={6} />
               </Department>
 
-              <Department
-                department="Bishop Developments" /* Ark Station Edit */
-              >
+              <Department department="Science">
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Synthetics" /* Ark Station Edit */>
+              <Department department="Silicon">
                 <Gap amount={12} />
               </Department>
 
-              <Department department="Colonist" /* Ark Station Edit */ />
+              <Department department="Assistant" />
             </Stack.Item>
 
             <Stack.Item mr={1}>
               <PriorityHeaders />
 
-              <Department department="Ark Commander" /* Ark Station Edit */>
+              <Department department="Captain">
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Donk Corporation" /* Ark Station Edit */>
+              <Department department="Service">
                 <Gap amount={6} />
               </Department>
 
-              <Department
-                department="Atlas and Nanotrasen" /* Ark Station Edit */
-              />
+              <Department department="Cargo" />
             </Stack.Item>
 
             <Stack.Item>
@@ -441,21 +442,71 @@ export const JobsPage = () => {
 
               <PriorityHeaders />
 
-              <Department
-                department="Neo-Vatican Church" /* Ark Station Addition */
-              >
+              <Department department="Security">
                 <Gap amount={6} />
               </Department>
 
-              <Department department="Red Hawk Security" /* Ark Station Edit */>
-                <Gap amount={6} />
-              </Department>
-
-              <Department department="De Forest" /* Ark Station Edit */ />
+              <Department department="Medical" />
             </Stack.Item>
           </Stack>
+          */}
+          <Stack fill className="PreferencesMenu__Jobs">
+            <Stack.Item mr={1}>
+              <Gap amount={45} />
+
+              <PriorityHeaders />
+
+              <Department department="Global Solar Energy">
+                <Gap amount={11} />
+              </Department>
+
+              <Department department="Red Hawk Security">
+                <Gap amount={11} />
+              </Department>
+
+              <Department department="Synthetics">
+                <Gap amount={11} />
+              </Department>
+
+              <Department department="Colonist" />
+            </Stack.Item>
+
+            <Stack.Item mr={1}>
+              <Gap amount={45} />
+              <PriorityHeaders />
+
+              <Department department="Ark Commander">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="Donk Corporation">
+                <Gap amount={6} />
+              </Department>
+            </Stack.Item>
+
+            <Stack.Item>
+              <Gap amount={45} />
+
+              <PriorityHeaders />
+
+              <Department department="Neo-Vatican Church">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="Bishop Developments">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="De Forest">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="Atlas and Nanotrasen" />
+            </Stack.Item>
+          </Stack>
+          {/* BUBBER EDIT CHANGE END */}
         </Stack.Item>
       </Stack>
     </>
   );
-};
+}

@@ -11,6 +11,9 @@ const commandJobs = [
   'Tech Overseer', // ARK STATION EDIT
   'Scientific Director', // ARK STATION EDIT
   'Medtech Curator', // ARK STATION EDIT
+  'Quartermaster',
+  'Consul of the Solar Federation', // NOVA EDIT ADDITION // ARK STATION EDIT
+  'Priest of Neo-Vatican',
 ];
 
 export const RecordManifest = (props) => {

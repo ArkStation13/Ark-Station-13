@@ -41,7 +41,7 @@
 	job_flags = STATION_JOB_FLAGS
 	antagonist_restricted = TRUE
 
-	alt_titles = list("Brig Pilot", "Pod Pilot", "Security Pilot", "Space Guard", "Brig Pilot Recruit", "Security Mecha Pilot")
+	alt_titles = list("Red Hawk Pilot", "Brig Pilot", "Pod Pilot", "Security Pilot", "Space Guard", "Brig Pilot Recruit", "Security Mecha Pilot")
 
 	//banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 
