@@ -586,12 +586,12 @@
 		CB.forceMove(drop_location())
 		CB.bounce_away(FALSE, NONE)
 		*/
-		CB.forceMove(drop_location())
+		casing.forceMove(drop_location())
 		var/bounce_angle
 		if(user)
 			var/sign_x = (istype(user) && !(user.get_held_index_of_item(src) % RIGHT_HANDS)) ? 1 : -1
 			bounce_angle = SIMPLIFY_DEGREES(dir2angle(user.dir) + (sign_x * 90) + rand(-45, 45))
-		CB.bounce_away(bounce_angle = bounce_angle, still_warm = FALSE, sound_delay = 0)
+		casing.bounce_away(bounce_angle = bounce_angle, still_warm = FALSE, sound_delay = 0)
 		// ARK STATION EDIT END
 		num_unloaded++
 		if(drop_turf && is_station_level(drop_turf.z))
