@@ -100,7 +100,7 @@
 		show_eyeless = FALSE
 
 		/// Can this head be dismembered normally?
-		can_dismember = FALSE
+		can_dismember = TRUE // ARK STATION EDIT || Original = FALSE || Ви чо ебланы, какой нах убрать отрубания голов...
 
 /obj/item/bodypart/head/Destroy()
 	QDEL_NULL(worn_ears_offset)
