@@ -170,16 +170,6 @@
 
 	return ..()
 
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/preview
-	icon = 'modularz_arkstation/modules/spacepods/icons/pods/preview.dmi'
-	icon_state = "raptor"
-
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sci
-	icon_state = "raptor_sci"
-
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sec
-	icon_state = "raptor_sec"
-
 // Standart //
 /obj/vehicle/sealed/vectorcraft/auto/spacepod
 	name = "ABP-01 'Aesculapius'"
@@ -190,7 +180,6 @@
 	bound_width = 32
 	bound_height = 32
 	mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse.dmi'
-	var/preview_tip = /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview
 	// Fuel //
 	// Мнимая емкость с топливом // ЭТО ЕСЛИ ЧТО ЖИДКАЯ ПЛАЗМА
 	var/obj/item/reagent_containers/cup/beaker/large/pod_fueltank/pod_fueltank
@@ -207,7 +196,7 @@
 	// DNA lock
 	var/dna_lock
 	// UI View for TGUI
-	var/atom/movable/screen/map_view/ui_view
+	var/atom/movable/screen/map_view/icon_view/ui_view
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/mob_try_enter(mob/M)
 	if(!ishuman(M))
@@ -249,8 +238,8 @@
 		mob_occupant.update_mouse_pointer()
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/shlang))
-		var/obj/item/shlang/B = I
+	if(istype(I, /obj/item/nozzle))
+		var/obj/item/nozzle/B = I
 		if(B.tank.balance == 0)
 			return
 		if(B.tank.target_fuel == 0)
@@ -275,6 +264,11 @@
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/Initialize(mapload)
 	. = ..()
+
+	ui_view = new()
+	ui_view.generate_view("space_pod_preview_[REF(src)]")
+	ui_view.assign(src)
+
 	transform = transform.Translate(-32, -32)
 	pod_fueltank = new(src)
 	pod_fueltank.create_reagents(max_fuel)
@@ -418,17 +412,10 @@
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui_view = create_pod_preview_view(user)
 		ui = new(user, src, "Pod", name)
 		ui.open()
 		ui_view.display_to(user)
-
-/obj/vehicle/sealed/vectorcraft/auto/spacepod/proc/create_pod_preview_view(mob/user)
-	ui_view = new(src, preview_tip)
-	ui_view.generate_view("space_pod_preview_[REF(src)]")
-	ui_view.display_to(user)
-
-	return ui_view
+		// user.client.register_map_obj(ui_view_background)
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/ui_status(mob/user)
 	if(contains(user))
@@ -474,7 +461,6 @@
 	var/list/data = list()
 	var/isoperator = (user in occupants) //maintenance mode outside of mech
 	data["isoperator"] = isoperator
-	ui_view.appearance = appearance
 	data["name"] = name
 	data["integrity"] = atom_integrity
 	data["integrity_max"] = max_integrity
@@ -525,7 +511,6 @@
 	icon_state = "raptor_sci-off"
 	desc = "Designed for space exploration Pod."
 	max_integrity = 150
-	preview_tip = /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sci
 
 /obj/vehicle/sealed/vectorcraft/auto/spacepod/sec
 	name = "ASP-03 'Themis'"
@@ -534,4 +519,3 @@
 	icon_state = "raptor_sec-off"
 	desc = "Designed for perimeter security Pod."
 	max_integrity = 200
-	preview_tip = /obj/vehicle/sealed/vectorcraft/auto/spacepod/preview/sec

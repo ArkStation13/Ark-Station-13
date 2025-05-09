@@ -47,7 +47,6 @@ export const Content = () => {
                     height="300px"
                     params={{
                       id: pod_view,
-                      zoom: 4,
                       type: 'map',
                     }}
                   />

@@ -1,5 +1,5 @@
 #define LITER_PRICE 1
-#define SHLANG_RANGE 2
+#define NOZZLE_RANGE 2
 
 ///////////////////////////////////////////////////////// ZAPRAVKA //////////////////////////////////////////////////////////////////
 
@@ -10,16 +10,12 @@
 	icon_state = "spacegas"
 	anchored = TRUE
 	layer = ABOVE_WINDOW_LAYER
+
 	var/balance = 0
 	var/target_fuel = 0
-	var/shlang_na_meste = TRUE
-	var/obj/item/shlang/shlang
-	var/light_mask = "spacegas-light-mask"
-	var/datum/beam/current_beam
 
-/obj/effect/ebeam/fuel_hose
-	name = "fuel hose"
-	layer = ABOVE_WINDOW_LAYER
+	var/obj/item/nozzle/nozzle
+	var/datum/beam/current_beam
 
 /obj/machinery/walltank/update_icon_state()
 	icon_state = "[initial(icon_state)]"
@@ -31,11 +27,8 @@
 
 /obj/machinery/walltank/update_overlays()
 	. = ..()
-	if(!light_mask)
-		return
-
 	if(!(machine_stat & (NOPOWER|BROKEN)) && !panel_open)
-		. += emissive_appearance(icon, light_mask, src, alpha = alpha)
+		. += emissive_appearance(icon, "spacegas-light-mask", src, alpha = alpha)
 
 /obj/machinery/walltank/update_appearance(updates=ALL)
 	. = ..()
@@ -44,50 +37,68 @@
 
 /obj/machinery/walltank/Destroy()
 	. = ..()
-	qdel(shlang)
-	qdel(current_beam)
 
-/obj/item/shlang
-	name = "fuel hose"
-	desc = "A device help to transport fuel."
-	icon = 'modularz_arkstation/modules/spacepods/icons/structures/spacegas_dolbajob.dmi'
-	icon_state = "spacegas-pistol-unhands"
-	inhand_icon_state = "atropen"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	force = 5
-	w_class = WEIGHT_CLASS_BULKY
-	var/obj/machinery/walltank/tank
+	QDEL_NULL(nozzle)
+	QDEL_NULL(current_beam)
 
 /obj/machinery/walltank/Initialize(mapload)
 	. = ..()
-	shlang = new(src)
 
-/obj/item/shlang/examine(mob/user)
-	. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
+	nozzle = new(src)
 
-/obj/item/shlang/Destroy(force)
-	. = ..()
-	if(tank)
-		qdel(tank.current_beam)
+	register_context()
 
 /obj/machinery/walltank/examine(mob/user)
 	. = ..()
 	. += span_green("Has [src.balance] credits on [src.name] balance.")
 	. += span_yellow("[LITER_PRICE] credits for 1 liter of Fuel!")
 
-/obj/machinery/walltank/attackby(obj/item/I, mob/living/user, params)
-	if(I == shlang)
-		shlang.snap_back()
-		return
-	if(istype(I, /obj/item/holochip))
-		var/obj/item/holochip/H = I
-		balance += H.credits
-		to_chat(user, span_notice("You insert the credits into [src]."))
-		update_appearance()
-		qdel(H)
-		return
-	..()
+/obj/machinery/walltank/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+	. = ..()
+
+	if (nozzle && !held_item)
+		context[SCREENTIP_CONTEXT_CTRL_LMB] = "Grab pump nozzle"
+
+	if (held_item == nozzle)
+		context[SCREENTIP_CONTEXT_LMB] = "Insert pump nozzle"
+
+	return CONTEXTUAL_SCREENTIP_SET
+
+/obj/machinery/walltank/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if (tool == nozzle)
+		nozzle.snap_back()
+		return ITEM_INTERACT_SUCCESS
+
+	if (istype(tool, /obj/item/holochip))
+		if (!user.dropItemToGround(tool))
+			return ITEM_INTERACT_FAILURE
+
+		var/obj/item/holochip/chip = tool
+		balance += chip.credits
+
+		balloon_alert(user, "credits deposited")
+		qdel(chip)
+
+		return ITEM_INTERACT_SUCCESS
+
+	return NONE
+
+/obj/machinery/walltank/click_alt(mob/user)
+	if (nozzle.loc != src)
+		return CLICK_ACTION_BLOCKING
+
+	if (!user.put_in_active_hand(nozzle))
+		return CLICK_ACTION_BLOCKING
+
+	current_beam = user.Beam(
+		src,
+		"hose",
+		'modularz_arkstation/modules/spacepods/icons/structures/beam.dmi',
+		emissive = FALSE,
+		layer = ABOVE_WINDOW_LAYER,
+	)
+
+	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/walltank/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -120,28 +131,51 @@
 				. = TRUE
 			if(.)
 				target_fuel = clamp(pressure, 0, balance)
-	update_appearance()
 
-//defib interaction
-/obj/machinery/walltank/attack_hand(mob/living/user, list/modifiers)
-	user.put_in_hands(shlang)
-	shlang_na_meste = FALSE
-	current_beam = new(user, src, icon = 'modularz_arkstation/modules/spacepods/icons/structures/beam.dmi', icon_state = "hose", beam_type = /obj/effect/ebeam/fuel_hose)
-	INVOKE_ASYNC(current_beam, TYPE_PROC_REF(/datum/beam, Start))
+/obj/machinery/walltank/proc/detach_nozzle()
+	nozzle = null
 
-/obj/item/shlang/proc/snap_back()
+	QDEL_NULL(current_beam)
+
+/obj/item/nozzle
+	name = "fuel hose"
+	desc = "A device help to transport fuel."
+	icon = 'modularz_arkstation/modules/spacepods/icons/structures/spacegas_dolbajob.dmi'
+	icon_state = "spacegas-pistol-unhands"
+	inhand_icon_state = "atropen"
+	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	force = 5
+	w_class = WEIGHT_CLASS_BULKY
+	var/obj/machinery/walltank/tank
+
+/obj/item/nozzle/examine(mob/user)
+	. = ..()
+
+	if (tank)
+		. += span_notice("Has [tank.target_fuel] liters of the fuel in.")
+
+/obj/item/nozzle/Destroy(force)
+	. = ..()
+
+	if (tank)
+		tank.detach_nozzle()
+		tank = null
+
+/obj/item/nozzle/proc/snap_back()
 	if(!tank)
-		qdel(src, TRUE)
 		return
+
 	forceMove(tank)
-	tank.shlang_na_meste = TRUE
 	qdel(tank.current_beam)
 
-/obj/item/shlang/proc/check_range()
+/obj/item/nozzle/proc/check_range()
 	SIGNAL_HANDLER
+
 	if(!tank)
 		return
-	if(!IN_GIVEN_RANGE(src, tank, SHLANG_RANGE))
+
+	if(!IN_GIVEN_RANGE(src, tank, NOZZLE_RANGE))
 		if(isliving(loc))
 			var/mob/living/user = loc
 			to_chat(user, span_warning("[tank]'s hose overextend and come out of your hands!"))
@@ -149,29 +183,31 @@
 			visible_message(span_notice("[src] snap back into [tank]."))
 		snap_back()
 
-/obj/item/shlang/Initialize(mapload)
+/obj/item/nozzle/Initialize(mapload)
 	. = ..()
+
 	ADD_TRAIT(src, TRAIT_NO_STORAGE_INSERT, TRAIT_GENERIC)
+
 	if (!loc || !istype(loc, /obj/machinery/walltank))
 		return INITIALIZE_HINT_QDEL
-	if(!tank)
-		return
-	tank = loc
-	update_appearance()
 
-/obj/item/shlang/dropped(mob/user)
+	tank = loc
+
+/obj/item/nozzle/dropped(mob/user)
 	. = ..()
 	if(user)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 		to_chat(user, span_notice("The hose snap back into the tank."))
 	snap_back()
 
-/obj/item/shlang/equipped(mob/user, slot)
+/obj/item/nozzle/equipped(mob/user, slot)
 	. = ..()
+
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(check_range))
 
-/obj/item/shlang/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
+/obj/item/nozzle/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()
+
 	check_range()
 
 ///////////////////////////////////////////////////////// FABRICATOR //////////////////////////////////////////////////////////////////
@@ -194,4 +230,4 @@
 	)
 
 #undef LITER_PRICE
-#undef SHLANG_RANGE
+#undef NOZZLE_RANGE
