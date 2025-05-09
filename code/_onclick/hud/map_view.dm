@@ -70,3 +70,38 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/map_view)
 
 	var/datum/plane_master_group/popup/pop_planes = clear_from.get_plane_group(PLANE_GROUP_POPUP_WINDOW(src))
 	qdel(pop_planes)
+
+//ARK EDIT ADDITION START - ICON_VIEW
+/atom/movable/screen/map_view/icon_view
+	name = ""
+
+	var/atom/movable/screen/background/view_background
+
+/atom/movable/screen/map_view/icon_view/Initialize(mapload, datum/hud/hud_owner)
+	. = ..()
+	view_background = new()
+	view_background.name = ""
+	view_background.del_on_map_removal = FALSE
+
+/atom/movable/screen/map_view/icon_view/Destroy()
+	. = ..()
+	QDEL_NULL(view_background)
+
+/atom/movable/screen/map_view/icon_view/generate_view(map_key)
+	. = ..()
+	view_background.assigned_map = map_key
+
+/atom/movable/screen/map_view/icon_view/display_to(mob/show_to)
+	. = ..()
+	show_to.client.register_map_obj(view_background)
+
+/atom/movable/screen/map_view/icon_view/proc/assign(atom/to_view)
+	var/icon/atom_icon = icon(to_view.icon, to_view.icon_state, NORTH)
+	var/width = ceil(atom_icon.Width() / ICON_SIZE_X)
+	var/height = ceil(atom_icon.Height() / ICON_SIZE_Y)
+
+	fill_rect(1, 1, width, height)
+
+	view_background.vis_contents += to_view
+	view_background.set_position(ceil(width / 2), ceil(height / 2))
+//ARK EDIT ADDITION END
