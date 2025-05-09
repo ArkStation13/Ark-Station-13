@@ -1,3 +1,5 @@
+//ARK EDIT REMOVAL - DISABLE_MECHA_SIZE
+/*
 #define MECH_SIZE 1.5
 
 /obj/vehicle/sealed/mecha/Initialize(mapload)
@@ -8,3 +10,5 @@
 	transform = M
 
 #undef MECH_SIZE
+*/
+//ARK EDIT REMOVAL END
