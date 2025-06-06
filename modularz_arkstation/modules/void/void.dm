@@ -102,7 +102,7 @@ GLOBAL_VAR_INIT(is_void_already_spawned, FALSE)
 // Area
 /area/centcom/void
 	requires_power = FALSE
-	has_gravity = STANDARD_GRAVITY
+	default_gravity = STANDARD_GRAVITY
 	name = "void"
 	ambient_buzz = 'modularz_arkstation/modules/void/void.ogg'
 	ambient_buzz_vol = 30

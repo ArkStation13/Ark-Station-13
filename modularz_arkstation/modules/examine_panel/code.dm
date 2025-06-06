@@ -82,9 +82,9 @@
 	return FALSE
 
 /datum/preference/text/headshot/nsfw/apply_headshot(value)
-	if(stored_link[usr.ckey] != value)
+	if(stored_links[usr.ckey] != value)
 		log_game("[usr] has set their NSFW Headshot image to '[value]'.")
-	stored_link[usr?.ckey] = value
+	stored_links[usr?.ckey] = value
 	usr?.client?.prefs.headshot_nsfw = value
 
 //This is literally just the same as the original headshot pref but for silicons :)
@@ -95,10 +95,10 @@
 	return FALSE
 
 /datum/preference/text/headshot/silicon/apply_headshot(value)
-	if(stored_link[usr.ckey] != value)
+	if(stored_links[usr.ckey] != value)
 		to_chat(usr, span_notice("Please use a relatively SFW image of the head and shoulder area to maintain immersion level. Think of it as a headshot for your ID. Lastly, [span_bold("do not use a real life photo or use any image that is less than serious.")]"))
 		log_game("[usr] has set their Silicon Headshot image to '[value]'.")
-	stored_link[usr?.ckey] = value
+	stored_links[usr?.ckey] = value
 	usr?.client?.prefs.headshot_silicon = value
 
 //Same as the original NSFW headshot pref, but for silicons.
@@ -109,9 +109,9 @@
 	return FALSE
 
 /datum/preference/text/headshot/silicon/nsfw/apply_headshot(value)
-	if(stored_link[usr.ckey] != value)
+	if(stored_links[usr.ckey] != value)
 		log_game("[usr] has set their NSFW Silicon Headshot image to '[value]'.")
-	stored_link[usr?.ckey] = value
+	stored_links[usr?.ckey] = value
 	usr?.client?.prefs.headshot_silicon_nsfw = value
 
 //OOC notes for Silicons. Overwrites regular OOC notes when you are playing a Silicon character.

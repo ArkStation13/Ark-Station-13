@@ -73,10 +73,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	if(busy)
 		to_chat(user, span_warning("Someone's already washing here!"))
 		return
+
 	var/selected_area = user.parse_zone_with_bodypart(user.zone_selected)
-	var/washing_face = 0
+	var/washing_face = FALSE
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
-		washing_face = 1
+		washing_face = TRUE
+
+	playsound(src, 'sound/machines/sink-faucet.ogg', 50)
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
 	busy = TRUE
@@ -104,7 +107,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	user.visible_message(span_notice("[user] washes [user.p_their()] [washing_face ? "face" : "hands"] using [src]."), \
 						span_notice("You wash your [washing_face ? "face" : "hands"] using [src]."))
 
-/obj/structure/sink/attackby(obj/item/O, mob/living/user, params)
+/obj/structure/sink/attackby(obj/item/O, mob/living/user, list/modifiers)
 	if(busy)
 		to_chat(user, span_warning("Someone's already washing here!"))
 		return
@@ -164,14 +167,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 
 	if(istype(O, /obj/item/stack/medical/gauze))
 		var/obj/item/stack/medical/gauze/G = O
-		new /obj/item/reagent_containers/cup/rag(src.loc)
+		new /obj/item/rag(src.loc)
 		to_chat(user, span_notice("You tear off a strip of gauze and make a rag."))
 		G.use(1)
 		return
 
 	if(istype(O, /obj/item/stack/sheet/cloth))
 		var/obj/item/stack/sheet/cloth/cloth = O
-		new /obj/item/reagent_containers/cup/rag(loc)
+		new /obj/item/rag(loc)
 		to_chat(user, span_notice("You tear off a strip of cloth and make a rag."))
 		cloth.use(1)
 		return
@@ -209,7 +212,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 
 	if(!user.combat_mode || (O.item_flags & NOBLUDGEON))
 		to_chat(user, span_notice("You start washing [O]..."))
-		// TO-DO Звук крана.
+		playsound(src, 'sound/machines/sink-faucet.ogg', 50)
 		busy = TRUE
 		if(!do_after(user, 4 SECONDS, target = src))
 			busy = FALSE
@@ -278,7 +281,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 	. = ..()
 	AddComponent(/datum/component/simple_rotation)
 
-/obj/structure/sinkframe/attackby(obj/item/tool, mob/living/user, params)
+/obj/structure/sinkframe/attackby(obj/item/tool, mob/living/user, list/modifiers)
 	if(istype(tool, /obj/item/stock_parts/water_recycler))
 		qdel(tool)
 		var/obj/structure/sink/greyscale/new_sink = new(loc, REVERSE_DIR(dir), TRUE)

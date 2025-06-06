@@ -6,7 +6,7 @@
 	recommended_species = list(SPECIES_MOTH, SPECIES_MAMMAL, SPECIES_INSECT)
 	relevent_layers = list(BODY_ADJ_LAYER, BODY_FRONT_LAYER)
 	genetic = TRUE
-	organ_type = /obj/item/organ/external/fluff
+	organ_type = /obj/item/organ/fluff
 
 /datum/sprite_accessory/fluff/moth/none
 	name = SPRITE_ACCESSORY_NONE
@@ -113,6 +113,10 @@
 	name = "Snow (Dual-Color)"
 	icon_state = "snowdual"
 	color_src = USE_MATRIXED_COLORS
+
+/datum/sprite_accessory/fluff/moth/insectoid
+	name = "Insectoid"
+	icon_state = "insect"
 
 /datum/sprite_accessory/fluff/moth/teshari
 	name = "Teshari Mane"

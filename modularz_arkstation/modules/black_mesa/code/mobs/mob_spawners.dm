@@ -102,7 +102,7 @@
 	uniform = /obj/item/clothing/under/rank/security/officer/hecu
 	head = /obj/item/clothing/head/helmet
 	suit = /obj/item/clothing/suit/armor/vest
-	mask = /obj/item/clothing/mask/gas/hecu2
+	mask = /obj/item/clothing/mask/gas/hecu
 	gloves = /obj/item/clothing/gloves/combat
 	belt = /obj/item/storage/belt/military/assault/hecu
 	shoes = /obj/item/clothing/shoes/combat

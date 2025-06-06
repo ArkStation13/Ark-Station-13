@@ -1,8 +1,5 @@
 // THIS IS A NOVA SECTOR UI FILE
-import { clamp } from 'common/math';
 import { useState } from 'react';
-
-import { useBackend } from '../backend';
 import {
   BlockQuote,
   Box,
@@ -17,8 +14,11 @@ import {
   Section,
   Stack,
   Tabs,
-} from '../components';
-import { Table, TableCell } from '../components/Table';
+} from 'tgui-core/components';
+import { Table } from 'tgui-core/components';
+import { clamp } from 'tgui-core/math';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 class Interaction {
@@ -305,7 +305,7 @@ const GenitalTab = () => {
         {genitals.map((genital) => (
           <Section key={genital.key} title={genital.name} textAlign="center">
             <Table>
-              <TableCell width="50%" textAlign="center">
+              <Table.Cell width="50%" textAlign="center">
                 Visibility
                 <br />
                 {genital.possible_choices.map((choice) => (
@@ -328,8 +328,8 @@ const GenitalTab = () => {
                     {choice[0]}
                   </Button>
                 ))}
-              </TableCell>
-              <TableCell textAlign="center">
+              </Table.Cell>
+              <Table.Cell textAlign="center">
                 Actions
                 <br />
                 <Button
@@ -363,7 +363,7 @@ const GenitalTab = () => {
                     })
                   }
                 />
-              </TableCell>
+              </Table.Cell>
             </Table>
           </Section>
         ))}

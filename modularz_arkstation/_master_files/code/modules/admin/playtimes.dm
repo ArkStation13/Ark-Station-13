@@ -22,7 +22,7 @@
 		ui.open()
 
 /datum/player_playtime/ui_state(mob/user)
-	return GLOB.admin_state
+	return ADMIN_STATE(R_ADMIN)
 
 /datum/player_playtime/ui_data(mob/user)
 	var/list/data = list()

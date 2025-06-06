@@ -65,7 +65,7 @@
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/suits/suits.dmi'
 
-/obj/item/clothing/suit/toggle/jacket/flannel/white
+/obj/item/clothing/suit/toggle/jacket/nova/flannel/white
 	name = "white flannel jacket"
 	icon_state = "flannel_white"
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/suits/suits.dmi'
@@ -173,8 +173,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
 	siemens_coefficient = 0
-	slowdown_inactive = 1
-	slowdown_active = 0.5
+	slowdown_deployed = 0.5
 	ui_theme = "inteq"
 	inbuilt_modules = list(/obj/item/mod/module/armor_booster)
 	allowed_suit_storage = list(

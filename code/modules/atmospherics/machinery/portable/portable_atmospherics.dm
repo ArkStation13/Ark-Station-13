@@ -220,7 +220,7 @@
 		return FALSE
 	if(!user)
 		return FALSE
-	if(!user.transferItemToLoc(new_tank, src))
+	if(new_tank && !user.transferItemToLoc(new_tank, src))
 		return FALSE
 
 	if(holding && new_tank)//for when we are actually switching tanks
@@ -253,7 +253,7 @@
 	update_appearance()
 	return TRUE
 
-/obj/machinery/portable_atmospherics/attackby(obj/item/item, mob/user, params)
+/obj/machinery/portable_atmospherics/attackby(obj/item/item, mob/user, list/modifiers)
 	if(istype(item, /obj/item/tank))
 		return replace_tank(user, FALSE, item)
 	return ..()

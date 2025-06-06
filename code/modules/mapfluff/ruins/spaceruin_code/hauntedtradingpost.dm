@@ -85,6 +85,7 @@
 /obj/structure/aquarium/donkfish
 	name = "office aquarium"
 	desc = "A home for captive fish. This one has 'DONK CO' engraved on the glass."
+	init_mode = AQUARIUM_MODE_SAFE
 
 /obj/structure/aquarium/donkfish/Initialize(mapload)
 	. = ..()
@@ -92,8 +93,6 @@
 	new /obj/item/aquarium_prop/seaweed(src)
 	new /obj/item/fish/donkfish(src)
 	new /obj/item/fish/donkfish(src)
-	create_reagents(20, SEALED_CONTAINER)
-	reagents.add_reagent(/datum/reagent/consumable/nutriment, 20)
 
 //gimmick ketchup bottle for healing minor injuries
 /obj/item/reagent_containers/condiment/donksauce
@@ -245,7 +244,7 @@
 	//is this being used as part of the haunted trading post ruin? if true, will self destruct when boss dies
 	var/donk_ai_slave = FALSE
 	// machine that the trap inhabits
-	var/obj/structure/host_machine
+	var/obj/machinery/host_machine
 	// turf that the trap is on
 	var/turf/my_turf
 	//how long until trap zaps everything, after it detects something

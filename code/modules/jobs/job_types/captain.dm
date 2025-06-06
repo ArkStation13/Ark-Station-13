@@ -30,6 +30,7 @@
 	department_for_prefs = /datum/job_department/captain
 	departments_list = list(
 		/datum/job_department/command,
+		/datum/job_department/security,
 	)
 
 	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/flask/gold, /obj/item/toy/captainsaid/collector)
@@ -69,7 +70,7 @@
 	uniform = /obj/item/clothing/under/rank/captain
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace
 	backpack_contents = list(
-		/obj/item/melee/baton/telescopic = 1,
+		/obj/item/melee/baton/telescopic/gold = 1,
 		/obj/item/station_charter = 1,
 		)
 	belt = /obj/item/modular_computer/pda/heads/captain
@@ -95,7 +96,7 @@
 
 	var/special_charter
 
-/datum/outfit/job/captain/pre_equip(mob/living/carbon/human/H, visualsOnly)
+/datum/outfit/job/captain/pre_equip(mob/living/carbon/human/H, visuals_only)
 	. = ..()
 	special_charter = CHECK_MAP_JOB_CHANGE(JOB_CAPTAIN, "special_charter")
 	if(!special_charter)
@@ -108,9 +109,9 @@
 	else if(!r_hand)
 		r_hand = /obj/item/station_charter/banner
 
-/datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visualsOnly)
+/datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	. = ..()
-	if(visualsOnly || !special_charter)
+	if(visuals_only || !special_charter)
 		return
 
 	var/obj/item/station_charter/banner/celestial_charter = locate() in equipped.held_items

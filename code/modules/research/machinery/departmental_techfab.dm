@@ -43,5 +43,5 @@
 	name = "department techfab (Security)"
 	allowed_department_flags = DEPARTMENT_BITFLAG_SECURITY
 	circuit = /obj/item/circuitboard/machine/techfab/department/security
-	stripe_color = "#DE3A3A" //NOVA EDIT - ORIGINAL "#DE3A3A" // ARK STATION RETURN
+	stripe_color = "#DE3A3A"
 	payment_department = ACCOUNT_SEC

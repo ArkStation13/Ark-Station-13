@@ -1,5 +1,5 @@
 /// Checks if the mob has jukebox muted in their preferences
-#define IS_PREF_MUTED(mob) (!isnull(mob.client) && !mob.client.prefs.read_preference(/datum/preference/toggle/sound_jukebox))
+#define IS_PREF_MUTED(mob) (!isnull(mob.client) && !mob.client.prefs.read_preference(/datum/preference/numeric/volume/sound_jukebox))
 
 // Reasons for appling STATUS_MUTE to a mob's sound status
 /// The mob is deaf

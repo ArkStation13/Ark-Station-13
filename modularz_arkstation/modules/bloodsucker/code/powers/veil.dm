@@ -91,7 +91,6 @@
 	// Apply Appearance
 	user.regenerate_organs() // Actually regenerates the mutant_bodyparts.
 	user.update_body(TRUE) // Outfit and underware, also body.
-	user.update_mutant_bodyparts(TRUE) // Lizard tails etc
 
 	RegisterSignal(user, COMSIG_HUMAN_GET_VISIBLE_NAME, PROC_REF(return_disguise_name))
 

@@ -70,7 +70,6 @@
 	desc = "A 5.6x40mm match bullet casing."
 	special_desc = "MATCH: Ricochets everywhere. Like crazy."
 	projectile_type = /obj/projectile/bullet/a762x39/ricochet
-	advanced_print_req = TRUE
 
 /obj/projectile/bullet/a762x39/ricochet
 	name = "5.6mm match bullet"
@@ -91,7 +90,6 @@
 	special_desc = "TARGETED INCENDIARY: Leaves no trail when shot, sets targets aflame."
 	projectile_type = /obj/projectile/bullet/incendiary/a762x39
 	custom_materials = AMMO_MATS_TEMP
-	advanced_print_req = TRUE
 
 /obj/projectile/bullet/incendiary/a762x39
 	name = "5.6mm incendiary bullet"
@@ -108,7 +106,6 @@
 	special_desc = "ARMOR PIERCING: Increased armor piercing capabilities. What did you expect?"
 	projectile_type = /obj/projectile/bullet/a762x39
 	custom_materials = AMMO_MATS_AP
-	advanced_print_req = TRUE
 
 /obj/projectile/bullet/a762x39/ap
 	name = "5.6mm armor-piercing bullet"

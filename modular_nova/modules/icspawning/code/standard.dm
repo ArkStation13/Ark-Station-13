@@ -68,6 +68,7 @@
 /obj/item/storage/part_replacer/bluespace/tier4/bst
 	name = "\improper Bluespace Tech RPED"
 	desc = "A specialized bluespace RPED for technicians that can manufacture stock parts on the fly. Alt-Right-Click to manufacture parts, change settings, or clear its internal storage."
+	storage_type = /datum/storage/rped/bluespace/silly
 	/// Whether or not auto-clear is enabled
 	var/auto_clear = TRUE
 	/// List of valid types for pick_stock_part().
@@ -77,13 +78,21 @@
 		/obj/item/reagent_containers/cup/beaker,
 	)
 
-/obj/item/storage/part_replacer/bluespace/tier4/bst/Initialize(mapload)
-	. = ..()
-	atom_storage.max_slots = 1000
-	atom_storage.max_total_storage = 20000
+/datum/storage/rped/bluespace/silly
+	max_slots = 1000
+	max_total_storage = 20000
 
 /// An extension to the default RPED part replacement action - if you don't have the requisite parts in the RPED already, it will spawn T4 versions to use.
-/obj/item/storage/part_replacer/bluespace/tier4/bst/part_replace_action(obj/attacked_object, mob/living/user)
+/obj/item/storage/part_replacer/bluespace/tier4/bst/interact_with_atom(obj/attacked_object, mob/living/user, list/modifiers)
+	//duplicate checks from parent since
+	if(user.combat_mode)
+		return ITEM_INTERACT_SKIP_TO_ATTACK
+	if(!ismachinery(attacked_object) || istype(attacked_object, /obj/machinery/computer))
+		return NONE
+	var/obj/machinery/attacked_machinery = attacked_object
+	if(!LAZYLEN(attacked_machinery.component_parts))
+		return ITEM_INTERACT_FAILURE
+
 	// We start with setting up a list of the current contents of the RPED when using auto-clear.  This is used to detect new items after upgrades are applied & remove them.
 	var/list/old_contents = list()
 	var/list/inv_grab = atom_storage.return_inv(FALSE)
@@ -102,7 +111,6 @@
 	else
 		// It's not a machine frame, so let's check if it's a regular machine.
 		if(ismachinery(attacked_object) && !istype(attacked_object, /obj/machinery/computer))
-			var/obj/machinery/attacked_machinery = attacked_object
 			var/obj/item/circuitboard/machine/circuit = attacked_machinery.circuit
 			// If it is, we need to use the circuit's components; there's no good way to get required components off of an already-built machine.
 			if(istype(circuit))

@@ -1,13 +1,13 @@
 #define SCYTHE_WEAK 0
 
-/obj/item/organ/internal/cyberimp/arm/shard/scythe/demi
+/obj/item/organ/cyberimp/arm/shard/scythe/demi
 	name = "\improper Demi's Shard"
 	desc = "This shard seems to be directly linked to some sinister entity. It might be your god! It also gives you a really horrible rash when you hold onto it for too long."
 	items_to_create = list(/obj/item/vorpalscythe/demi)
 	extend_sound = 'sound/effects/magic/cosmic_energy.ogg'
 	retract_sound = 'sound/effects/magic/cosmic_expansion.ogg'
 
-/obj/item/organ/internal/cyberimp/arm/shard/scythe/demi/Retract()
+/obj/item/organ/cyberimp/arm/shard/scythe/demi/Retract()
 	if(!active_item || (active_item in src))
 		return FALSE
 	active_item.resistance_flags = active_item::resistance_flags

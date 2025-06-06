@@ -39,10 +39,11 @@
 	base_icon_state = "kineticrailgun"
 	inhand_icon_state = "kineticgun"
 	w_class = WEIGHT_CLASS_HUGE
+	pin = /obj/item/firing_pin/wastes
 	recharge_time = 3 SECONDS
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic/railgun)
 	weapon_weight = WEAPON_HEAVY
-	max_mod_capacity = 0 
+	max_mod_capacity = 0
 	recoil = 3
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
@@ -63,7 +64,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic/repeater)
 	max_mod_capacity = 65
 
-/obj/item/gun/energy/recharge/kinetic_accelerator/variant/repeater/Initialize()
+/obj/item/gun/energy/recharge/kinetic_accelerator/variant/repeater/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
 

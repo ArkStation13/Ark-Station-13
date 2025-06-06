@@ -1,4 +1,7 @@
-import { Button, Stack } from '../../../../../../components';
+import { Button, Stack } from 'tgui-core/components';
+
+import { useBackend } from '../../../../../../backend';
+import { PreferencesMenuData } from '../../../../types';
 import {
   CheckboxInput,
   FeatureChoiced,
@@ -13,6 +16,8 @@ import { FeatureDropdownInput } from '../../dropdowns';
 const FeatureBlooperDropdownInput = (
   props: FeatureValueProps<string, string, FeatureChoicedServerData>,
 ) => {
+  const { act } = useBackend<PreferencesMenuData>();
+
   return (
     <Stack>
       <Stack.Item grow>
@@ -21,7 +26,7 @@ const FeatureBlooperDropdownInput = (
       <Stack.Item>
         <Button
           onClick={() => {
-            props.act('play_blooper');
+            act('play_blooper');
           }}
           icon="play"
           width="100%"

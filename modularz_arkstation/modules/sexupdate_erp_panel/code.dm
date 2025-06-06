@@ -144,7 +144,7 @@
 	var/list/genitals = list()
 	var/mob/living/carbon/human/get_genitals = user
 	if(istype(get_genitals))
-		for(var/obj/item/organ/external/genital/genital in get_genitals.organs)	//Only get the genitals
+		for(var/obj/item/organ/genital/genital in get_genitals.organs)	//Only get the genitals
 			var/list/genital_entry = list()
 			genital_entry["name"] = "[capitalize(genital.name)]" //Prevents code from adding a prefix
 			genital_entry["key"] = REF(genital) //The key is the reference to the object
@@ -244,7 +244,7 @@
 
 	if(action == "genital")
 		var/mob/living/carbon/human/user = locate(params["userref"])
-		var/obj/item/organ/external/genital/genital = locate(params["genital"])
+		var/obj/item/organ/genital/genital = locate(params["genital"])
 		var/list/gen_vis_trans = list(
 			"Never show" = GENITAL_NEVER_SHOW,
 			"Hidden by clothes" = GENITAL_HIDDEN_BY_CLOTHES,

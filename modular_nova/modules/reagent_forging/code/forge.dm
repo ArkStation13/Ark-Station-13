@@ -189,7 +189,7 @@
 	QDEL_NULL(particles)
 	if(used_tray)
 		QDEL_NULL(used_tray)
-	. = ..()
+	return ..()
 
 /obj/structure/reagent_forge/update_appearance(updates)
 	. = ..()
@@ -687,7 +687,7 @@
 	balloon_alert_to_viewers("setting [ceramic_item]")
 
 	if(!do_after(user, ceramic_speed, target = src))
-		fail_message("stopped setting [ceramic_item]")
+		fail_message(user, "stopped setting [ceramic_item]")
 		return
 
 	balloon_alert(user, "finished setting [ceramic_item]")
