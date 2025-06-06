@@ -153,7 +153,7 @@ function ReportText(props) {
           <TextArea
             height="100%"
             fluid
-            onChange={setCommandReport}
+            onBlur={setCommandReport}
             value={commandReport}
             placeholder="Enter report text here..."
           />
