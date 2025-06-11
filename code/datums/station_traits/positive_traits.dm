@@ -313,12 +313,12 @@
 		// ARK STATION ADDITION START
 		/datum/job/bridge_officer = /obj/item/organ/ears/cybernetic/whisper,
 		/datum/job/brig_pilot = /obj/item/organ/cyberimp/eyes/hud/security,
-		/datum/job/mechanic = /obj/item/organ/cyberimp/arm/toolset,
+		/datum/job/mechanic = /obj/item/organ/cyberimp/arm/toolkit,
 		/datum/job/expeditionary_trooper = /obj/item/organ/eyes/robotic/shield,
 		/datum/job/security_medic = /obj/item/organ/cyberimp/eyes/hud/medical,
 		/datum/job/deacon = /obj/item/organ/cyberimp/brain/anti_drop,
 		/datum/job/fiscal = /obj/item/organ/cyberimp/brain/anti_drop,
-		/datum/job/synthetic_advisor = /obj/item/organ/cyberimp/arm/toolset,
+		/datum/job/synthetic_advisor = /obj/item/organ/cyberimp/arm/toolkit,
 		// ARK STATION ADDITION END
 	)
 

@@ -73,5 +73,5 @@
 
 /datum/loadout_item/whitelisted/demi_scythe // Krashly - НУ МОЖНО ЖЕ МНЕ СВОЙ СЛОТ ИМЕТЬ? // No_Terra-Vi-Ja - Автор спрайта.
 	name = "Demi's Scythe"
-	item_path = /obj/item/organ/cyberimp/arm/shard/scythe/demi
+	item_path = /obj/item/organ/cyberimp/arm/toolkit/shard/scythe/demi
 	ckeywhitelist = list("Krashly", "No_Terra-Vi-Ja")
