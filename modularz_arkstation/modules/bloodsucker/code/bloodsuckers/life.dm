@@ -218,7 +218,7 @@
 		bloodsuckeruser.cure_husk(CHANGELING_DRAIN)
 	bloodsuckeruser.cure_husk(BURN)
 	if(regenerate_heart || bloodsuckeruser.get_organ_slot(ORGAN_SLOT_HEART))
-		bloodsuckeruser.regenerate_organs(replace_current = FALSE)
+		bloodsuckeruser.regenerate_organs(remove_hazardous = FALSE)
 	if(!HAS_TRAIT(bloodsuckeruser, TRAIT_MASQUERADE))
 		var/obj/item/organ/heart/current_heart = bloodsuckeruser.get_organ_slot(ORGAN_SLOT_HEART)
 		current_heart.Stop()
