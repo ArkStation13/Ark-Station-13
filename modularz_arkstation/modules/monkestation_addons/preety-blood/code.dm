@@ -5,9 +5,11 @@
 /mob/living/add_splatter_floor(turf/T, small_drip)
 	if(get_blood_id() != /datum/reagent/blood)
 		return
+
 	if(!T)
 		T = get_turf(src)
-	if(isclosedturf(T) || (isgroundlessturf(T) && !GET_TURF_BELOW(T)))
+
+	if(!T || isclosedturf(T) || (isgroundlessturf(T) && !GET_TURF_BELOW(T)))
 		return
 
 	var/datum/reagent/blood_type = get_blood_id()

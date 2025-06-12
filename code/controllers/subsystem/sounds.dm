@@ -179,6 +179,7 @@ SUBSYSTEM_DEF(sounds)
 	if(!length(sounds_to_precache))
 		return
 
+	list_clear_nulls(sounds_to_precache)
 	var/list/lengths = rustg_sound_length_list(sounds_to_precache)
 	precache_errors = lengths[RUSTG_SOUNDLEN_ERRORS]
 	sound_lengths = lengths[RUSTG_SOUNDLEN_SUCCESSES]

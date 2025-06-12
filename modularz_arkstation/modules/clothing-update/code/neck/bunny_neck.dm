@@ -26,11 +26,11 @@
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/neck/bunny_neck.dmi'
 	icon_state = "bowtie_collar_tied"
 	tie_type = "bowtie_collar"
-	greyscale_colors = "#ffffff#39393f"
-	greyscale_config = /datum/greyscale_config/bowtie_collar
-	greyscale_config_worn = /datum/greyscale_config/bowtie_collar_worn
-	flags_1 = IS_PLAYER_COLORABLE_1
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 	alternate_worn_layer = UNDER_SUIT_LAYER
+	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/neck/tie/bunnytie/tied
 	is_tied = TRUE

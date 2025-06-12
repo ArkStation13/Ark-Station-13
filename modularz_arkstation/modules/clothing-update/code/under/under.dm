@@ -194,67 +194,67 @@
 		),
 	)
 
-/obj/item/clothing/under/rank/security/officer
-	desc = "A tactical security jumpsuit for officers complete with Nanotrasen belt buckle."
-	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
-	icon_state = "rsecurity"
-	alt_covers_chest = TRUE
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Red Variant" = list(
-			RESKIN_ICON_STATE = "rsecurity",
-			RESKIN_WORN_ICON_STATE = "rsecurity"
-		),
-		"Black Variant" = list(
-			RESKIN_ICON_STATE = "security_black",
-			RESKIN_WORN_ICON_STATE = "security_black"
-		),
-		"Blue Variant" = list(
-			RESKIN_ICON_STATE = "security_blue",
-			RESKIN_WORN_ICON_STATE = "security_blue"
-		),
-		"White Variant" = list(
-			RESKIN_ICON_STATE = "security_white",
-			RESKIN_WORN_ICON_STATE = "security_white"
-		),
-	)
+// /obj/item/clothing/under/rank/security/officer
+// 	desc = "A tactical security jumpsuit for officers complete with Nanotrasen belt buckle."
+// 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+// 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+// 	icon_state = "security_black"
+// 	alt_covers_chest = TRUE
+// 	uses_advanced_reskins = TRUE
+// 	unique_reskin = list(
+// 		"Red Variant" = list(
+// 			RESKIN_ICON_STATE = "rsecurity",
+// 			RESKIN_WORN_ICON_STATE = "rsecurity"
+// 		),
+// 		"Black Variant" = list(
+// 			RESKIN_ICON_STATE = "security_black",
+// 			RESKIN_WORN_ICON_STATE = "security_black"
+// 		),
+// 		"Blue Variant" = list(
+// 			RESKIN_ICON_STATE = "security_blue",
+// 			RESKIN_WORN_ICON_STATE = "security_blue"
+// 		),
+// 		"White Variant" = list(
+// 			RESKIN_ICON_STATE = "security_white",
+// 			RESKIN_WORN_ICON_STATE = "security_white"
+// 		),
+// 	)
 
-/obj/item/clothing/under/rank/security/officer/grey
-	uses_advanced_reskins = FALSE
-	unique_reskin = null
+// /obj/item/clothing/under/rank/security/officer/grey
+// 	uses_advanced_reskins = FALSE
+// 	unique_reskin = null
 
-/obj/item/clothing/under/rank/security/officer/skirt
-	name = "security jumpskirt"
-	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
-	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
-	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
-	icon_state = "secskirt" // ARK STATION EDIT || REDSEC
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Red Variant" = list(
-			RESKIN_ICON_STATE = "secskirt",
-			RESKIN_WORN_ICON_STATE = "secskirt"
-		),
-		"Blue Variant" = list(
-			RESKIN_ICON_STATE = "jumpskirt_blue",
-			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
-		),
-		"Black Variant" = list(
-			RESKIN_ICON_STATE = "jumpskirt_black",
-			RESKIN_WORN_ICON_STATE = "jumpskirt_black"
-		),
-		"Plain Blue Variant" = list(
-			RESKIN_ICON_STATE = "plain_skirt_blue",
-			RESKIN_WORN_ICON_STATE = "plain_skirt_blue"
-		),
-		"Plain Black Variant" = list(
-			RESKIN_ICON_STATE = "plain_skirt_black",
-			RESKIN_WORN_ICON_STATE = "plain_skirt_black"
-		),
-	)
+// /obj/item/clothing/under/rank/security/officer/skirt
+// 	name = "security jumpskirt"
+// 	desc = "Turtleneck sweater commonly worn by Peacekeepers, attached with a skirt."
+// 	icon = 'modular_nova/master_files/icons/obj/clothing/under/security.dmi'
+// 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
+// 	icon_state = "jumpskirt_black" // ARK STATION EDIT || REDSEC
+// 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+// 	gets_cropped_on_taurs = FALSE
+// 	uses_advanced_reskins = TRUE
+// 	unique_reskin = list(
+// 		"Red Variant" = list(
+// 			RESKIN_ICON_STATE = "secskirt",
+// 			RESKIN_WORN_ICON_STATE = "secskirt"
+// 		),
+// 		"Blue Variant" = list(
+// 			RESKIN_ICON_STATE = "jumpskirt_blue",
+// 			RESKIN_WORN_ICON_STATE = "jumpskirt_blue"
+// 		),
+// 		"Black Variant" = list(
+// 			RESKIN_ICON_STATE = "jumpskirt_black",
+// 			RESKIN_WORN_ICON_STATE = "jumpskirt_black"
+// 		),
+// 		"Plain Blue Variant" = list(
+// 			RESKIN_ICON_STATE = "plain_skirt_blue",
+// 			RESKIN_WORN_ICON_STATE = "plain_skirt_blue"
+// 		),
+// 		"Plain Black Variant" = list(
+// 			RESKIN_ICON_STATE = "plain_skirt_black",
+// 			RESKIN_WORN_ICON_STATE = "plain_skirt_black"
+// 		),
+// 	)
 
 //Warden
 /obj/item/clothing/under/rank/security/warden
