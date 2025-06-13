@@ -12,7 +12,6 @@ import {
   hsvaToHslString,
   hsvaToRgba,
   rgbaToHsva,
-  validHex,
 } from 'common/color';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
@@ -20,6 +19,7 @@ import {
   Box,
   Button,
   Flex,
+  Input,
   NumberInput,
   Section,
   Stack,
@@ -66,12 +66,7 @@ export const ColorPickerModal: React.FC<ColorPickerModalProps> = () => {
   }
 
   return (
-    <Window
-      height={message ? 400 : 360}
-      title={title}
-      width={600}
-      theme="generic"
-    >
+    <Window height={420} title={title} width={640} theme="generic">
       {!!timeout && <Loader value={timeout} />}
       <Window.Content>
         <Stack fill vertical>
@@ -222,8 +217,13 @@ const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
                     <Box textColor="label">Hex:</Box>
                   </Stack.Item>
                   <Stack.Item grow height="24px">
-                    <HexColorInput
+                    <Input
+                      placeholder="Input 6 symbols from <0 to F>"
+                      autoFocus
                       fluid
+                      value={hsvaToHex(color)}
+                      minValue={0}
+                      maxValue={16777215}
                       color={hsvaToHex(color).substring(1)}
                       onChange={(value) => {
                         setColor(hexToHsva(value));
@@ -436,6 +436,7 @@ interface HexColorInputProps {
   onChange: (newColor: string) => void;
 }
 
+/* // Перестало работать с появлением Вебвью. Можно починить, но как-будто бы всё итак работает.
 const HexColorInput: React.FC<HexColorInputProps> = React.memo(
   ({ alpha, color, fluid, onChange, ...rest }) => {
     const initialColor = useMemo(() => {
@@ -508,6 +509,7 @@ const HexColorInput: React.FC<HexColorInputProps> = React.memo(
     );
   },
 );
+*/
 
 interface SaturationValueProps {
   hsva: HsvaColor;
