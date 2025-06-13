@@ -32,8 +32,13 @@ const UnauthorizedView = (props) => {
           <Icon color="#289231" name="staff-snake" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
-          <Box color="good" fontSize="18px" bold mt={5}>
-            Nanotrasen HealthPRO
+          <Box
+            color="good"
+            fontSize="18px"
+            bold
+            mt={5} /* ARK STATION EDIT - Naming */
+          >
+            Solar Federation HealthPRO
           </Box>
         </Stack.Item>
         <Stack.Item>

@@ -410,7 +410,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	stat_panel.initialize(
 		inline_html = file("html/statbrowser.html"),
 		inline_js = file("html/statbrowser.js"),
-		inline_css = file("html/statbrowser.css"),
+		inline_css = file("html/statbrowser_ark.css"), // ARK STATION EDIT - Our own CSS style
 	)
 	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 

@@ -32,6 +32,7 @@ export const COLORS = {
     centcom: '#00c100',
     other: '#c38312',
     prisoner: '#FFC2C2', // NOVA EDIT ADDITION
+    church: '#B6B6B6', // ARK STATION ADDITION
   },
   // Damage type colors
   damageType: {

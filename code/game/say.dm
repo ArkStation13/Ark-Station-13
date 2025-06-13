@@ -184,7 +184,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		if(istype(dialect) && dialect.display_icon(src))
 			languageicon = "[dialect.get_icon()] "
 
-	messagepart = "<span class='message'>[messagepart]</span></span>"
+	messagepart = " <span class='message'>[speaker.apply_message_emphasis(messagepart)]</span></span>" // ARK STATION EDIT
 
 	return "[spanpart1][freqpart][spanpart2][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][endspanpart][messagepart]" // ARK STATION EDIT
 
@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 
 	var/processed_say_mod = apply_message_emphasis(say_mod)
 
-	return "[processed_say_mod], \"[processed_input]\""
+	return "<span class='sayverb'>[processed_say_mod],</span> \"[processed_input]\"" // ARK STATION EDIT
 
 /// Transforms the message emphasis mods from [/atom/proc/apply_message_emphasis] into the appropriate HTML tags. Includes escaping.
 #define ENCODE_HTML_EMPHASIS(input, char, html, varname) \

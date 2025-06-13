@@ -232,7 +232,31 @@
 	vend_reply = "Thank you for using the MediDrobe!"
 	product_categories = list(
 		list(
-			"name" = "Old Fashion",
+			"name" = "Green Fashion",
+			"icon" = "cloud-rain",
+			"products" = list(
+				/obj/item/storage/backpack/medic/green = 3,
+				/obj/item/storage/backpack/satchel/med/green = 3,
+				/obj/item/storage/backpack/duffelbag/med/green = 3,
+				/obj/item/storage/backpack/messenger/med/green = 3,
+				/obj/item/storage/belt/medical/green = 2,
+				/obj/item/storage/belt/medical/paramedic/green = 2,
+				/obj/item/clothing/under/rank/medical/doctor/green = 3,
+				/obj/item/clothing/under/rank/medical/doctor/green/skirt = 3,
+				/obj/item/clothing/under/rank/medical/coroner/green = 3,
+				/obj/item/clothing/under/rank/medical/coroner/green/skirt = 3,
+				/obj/item/clothing/under/rank/medical/paramedic/green = 3,
+				/obj/item/clothing/under/rank/medical/paramedic/green/skirt = 3,
+				/obj/item/clothing/suit/toggle/labcoat/paramedic/green = 3,
+				/obj/item/clothing/head/soft/paramedic/green = 3,
+				/obj/item/clothing/suit/toggle/labcoat/cmo/green = 3,
+				/obj/item/clothing/shoes/sneakers/dark_green = 6,
+				/obj/item/clothing/glasses/hud/health/green = 3,
+			),
+		),
+
+		list(
+			"name" = "Blue Fashion",
 			"icon" = "shirt",
 			"products" = list(
 				/obj/item/clothing/accessory/pocketprotector = 4,
@@ -282,30 +306,6 @@
 				/obj/item/clothing/head/playbunnyears/psychologist = 3,
 				/obj/item/clothing/under/rank/civilian/psychologist_bunnysuit = 3,
 				/obj/item/clothing/suit/jacket/tailcoat/psychologist = 3,
-			),
-		),
-
-		list(
-			"name" = "New Green Drip",
-			"icon" = "cloud-rain",
-			"products" = list(
-				/obj/item/storage/backpack/medic/green = 3,
-				/obj/item/storage/backpack/satchel/med/green = 3,
-				/obj/item/storage/backpack/duffelbag/med/green = 3,
-				/obj/item/storage/backpack/messenger/med/green = 3,
-				/obj/item/storage/belt/medical/green = 2,
-				/obj/item/storage/belt/medical/paramedic/green = 2,
-				/obj/item/clothing/under/rank/medical/doctor/green = 3,
-				/obj/item/clothing/under/rank/medical/doctor/green/skirt = 3,
-				/obj/item/clothing/under/rank/medical/coroner/green = 3,
-				/obj/item/clothing/under/rank/medical/coroner/green/skirt = 3,
-				/obj/item/clothing/under/rank/medical/paramedic/green = 3,
-				/obj/item/clothing/under/rank/medical/paramedic/green/skirt = 3,
-				/obj/item/clothing/suit/toggle/labcoat/paramedic/green = 3,
-				/obj/item/clothing/head/soft/paramedic/green = 3,
-				/obj/item/clothing/suit/toggle/labcoat/cmo/green = 3,
-				/obj/item/clothing/shoes/sneakers/dark_green = 6,
-				/obj/item/clothing/glasses/hud/health/green = 3,
 			),
 		),
 	)

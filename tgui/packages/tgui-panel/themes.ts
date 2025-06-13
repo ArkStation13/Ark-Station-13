@@ -3,10 +3,11 @@
  * @copyright 2020 Aleksej Komarov
  * @license MIT
  */
+import { COLORS } from './themes-ark'; // ARK STATION ADDITION
 
 export const THEMES = ['light', 'dark'];
 
-const COLORS = {
+/* const COLORS = {
   DARK: {
     BG_BASE: '#202020',
     BG_SECOND: '#151515',
@@ -19,7 +20,7 @@ const COLORS = {
     BUTTON: '#FFFFFF',
     TEXT: '#000000',
   },
-};
+}; */ // ARK STATION REFORCED IN './themes-ark.ts'
 
 let setClientThemeTimer: NodeJS.Timeout;
 

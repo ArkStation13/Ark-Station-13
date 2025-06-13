@@ -240,8 +240,13 @@ const LogIn = () => {
           <Icon color="average" name="exclamation-triangle" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
-          <Box color="red" fontSize="18px" bold mt={5}>
-            Nanotrasen SecurityHUB
+          <Box
+            color="red"
+            fontSize="18px"
+            bold
+            mt={5} /* ARK STATION EDIT - Naming */
+          >
+            Solar Federation SecurityHUB
           </Box>
         </Stack.Item>
         <Stack.Item>
