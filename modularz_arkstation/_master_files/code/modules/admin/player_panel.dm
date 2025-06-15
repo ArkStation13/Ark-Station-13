@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 		ui.open()
 
 /datum/player_panel/ui_state(mob/user)
-	return GLOB.admin_state
+	return ADMIN_STATE(R_ADMIN)
 
 /datum/player_panel/ui_data(mob/user)
 	. = list()
@@ -92,8 +92,8 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 		.["data_related_cid"] = targetClient.related_accounts_cid
 		.["data_related_ip"] = targetClient.related_accounts_ip
 
-		var/datum/player_details/deets = GLOB.player_details[targetClient.ckey]
-		.["data_old_names"] = deets.get_played_names() || null
+		var/datum/persistent_client/pclient = GLOB.persistent_clients_by_ckey[targetClient.ckey]
+		.["data_old_names"] = pclient.get_played_names() || null
 
 		var/list/player_ranks = list()
 		if(SSplayer_ranks.is_donator(targetClient, admin_bypass = FALSE))

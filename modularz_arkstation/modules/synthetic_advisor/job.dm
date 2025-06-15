@@ -36,7 +36,7 @@ GLOBAL_LIST_EMPTY(SynthAdvisors)
 	if(issynthetic(spawned))
 		var/mob/living/carbon/human/species/synth/advisor = spawned
 		advisor.TryConnectToAi()
-		advisor.synthbrain = advisor.get_organ_by_type(/obj/item/organ/internal/brain/synth)
+		advisor.synthbrain = advisor.get_organ_by_type(/obj/item/organ/brain/synth)
 		advisor.synthbrain.internal_computer.starting_programs += list(advisor.robotact)
 
 /mob/living/carbon/human/species/synth
@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(SynthAdvisors)
 	var/datum/ai_laws/laws = null
 	var/lawupdate = TRUE
 	var/datum/computer_file/program/robotact/robotact
-	var/obj/item/organ/internal/brain/synth/synthbrain
+	var/obj/item/organ/brain/synth/synthbrain
 
 /mob/living/carbon/human/species/synth/proc/TryConnectToAi()
 	set_connected_ai(select_active_ai_with_fewest_borgs(z))

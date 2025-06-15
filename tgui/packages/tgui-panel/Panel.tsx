@@ -4,8 +4,8 @@
  * @license MIT
  */
 
-import { Button, Section, Stack } from 'tgui/components';
 import { Pane } from 'tgui/layouts';
+import { Button, Section, Stack } from 'tgui-core/components';
 
 import { NowPlayingWidget, useAudio } from './audio';
 import { ChatPanel, ChatTabs } from './chat';
@@ -32,16 +32,14 @@ export const Panel = (props) => {
       <Stack fill vertical>
         <Stack.Item>
           <Section fitted>
-            <Stack mr={1} align="top">
-              {/* ARK STATION EDIT */}
-
+            <Stack mr={1} align="center">
               <Stack.Item grow overflowX="auto">
                 <ChatTabs />
               </Stack.Item>
-              <Stack.Item mt={0.7}>
+              <Stack.Item>
                 <PingIndicator />
               </Stack.Item>
-              <Stack.Item mt={0.7}>
+              <Stack.Item>
                 <Button
                   color="grey"
                   selected={audio.visible}
@@ -51,7 +49,7 @@ export const Panel = (props) => {
                   onClick={() => audio.toggle()}
                 />
               </Stack.Item>
-              <Stack.Item mt={0.7}>
+              <Stack.Item>
                 <Button
                   icon={settings.visible ? 'times' : 'cog'}
                   selected={settings.visible}

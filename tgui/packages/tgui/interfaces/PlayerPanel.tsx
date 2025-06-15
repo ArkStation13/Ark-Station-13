@@ -1,6 +1,4 @@
 import { useState } from 'react';
-
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -15,7 +13,9 @@ import {
   Slider,
   Tabs,
   Tooltip,
-} from '../components';
+} from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 type Data = {
@@ -129,7 +129,7 @@ export const PlayerPanel = () => {
               <Input
                 width="100%"
                 value={mob_name}
-                onChange={(e, value) => act('set_name', { name: value })}
+                onChange={(value) => act('set_name', { name: value })}
               />
             </Flex.Item>
             {!!client_ckey && (
@@ -590,7 +590,7 @@ const PhysicalActions = () => {
           <Flex.Item grow={1}>
             <Input
               width="100%"
-              onEnter={(e, value) => act('force_say', { to_say: value })}
+              onEnter={(value) => act('force_say', { to_say: value })}
             />
           </Flex.Item>
         </Flex>
@@ -601,7 +601,7 @@ const PhysicalActions = () => {
           <Flex.Item grow={1}>
             <Input
               width="100%"
-              onEnter={(e, value) => act('force_emote', { to_emote: value })}
+              onEnter={(value) => act('force_emote', { to_emote: value })}
             />
           </Flex.Item>
         </Flex>
@@ -843,30 +843,27 @@ const PunishmentActions = () => {
           </Flex>
         }
       >
-        <Collapsible
-          width="100%"
-          color="orange"
-          title="Details"
-          disabled={!client_ckey}
-        >
-          <LabeledList>
-            <LabeledList.Item label="NOW" color="label">
-              {current_time}
-            </LabeledList.Item>
-            <LabeledList.Item label="Account made">
-              {data_account_join_date}
-            </LabeledList.Item>
-            <LabeledList.Item label="First joined server">
-              {data_player_join_date}
-            </LabeledList.Item>
-            <LabeledList.Item label="Byond version">
-              {data_byond_version}
-            </LabeledList.Item>
-            <LabeledList.Item label="Old names">
-              {data_old_names}
-            </LabeledList.Item>
-          </LabeledList>
-        </Collapsible>
+        {client_ckey && (
+          <Collapsible width="100%" color="orange" title="Details">
+            <LabeledList>
+              <LabeledList.Item label="NOW" color="label">
+                {current_time}
+              </LabeledList.Item>
+              <LabeledList.Item label="Account made">
+                {data_account_join_date}
+              </LabeledList.Item>
+              <LabeledList.Item label="First joined server">
+                {data_player_join_date}
+              </LabeledList.Item>
+              <LabeledList.Item label="Byond version">
+                {data_byond_version}
+              </LabeledList.Item>
+              <LabeledList.Item label="Old names">
+                {data_old_names}
+              </LabeledList.Item>
+            </LabeledList>
+          </Collapsible>
+        )}
       </Section>
     </Section>
   );
@@ -1070,7 +1067,7 @@ const FunActions = () => {
             <Input
               width="100%"
               my=".5rem"
-              onInput={(e, value) => setNarrateMessage(value)}
+              onChange={(value) => setNarrateMessage(value)}
             />
           </Flex.Item>
 

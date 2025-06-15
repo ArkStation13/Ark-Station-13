@@ -1,4 +1,3 @@
-import { useBackend, useSharedState } from '../backend';
 import {
   Box,
   Button,
@@ -9,7 +8,9 @@ import {
   Section,
   Stack,
   Tabs,
-} from '../components';
+} from 'tgui-core/components';
+
+import { useBackend, useSharedState } from '../backend';
 import { Window } from '../layouts';
 
 export const Jukebox = (props, context) => {

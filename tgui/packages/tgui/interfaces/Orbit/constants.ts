@@ -110,7 +110,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'Mime',
       'Psychologist',
       'Barber', // NOVA EDIT ADDITION
-      'Donk Co. Guard', // NOVA EDIT ADDITION // ARK STATION EDIT
+      'Donk Co. Guard', // ARK STATION EDIT | 'Service Guard', // NOVA EDIT ADDITION
     ],
   },
   church: {

@@ -1,6 +1,6 @@
 import { useBackend } from 'tgui/backend';
-import { Box, Button, Icon, NoticeBox, Stack } from 'tgui/components';
 import { Window } from 'tgui/layouts';
+import { Box, Button, Icon, NoticeBox, Stack } from 'tgui-core/components';
 
 import { MedicalRecordTabs } from './RecordTabs';
 import { MedicalRecordView } from './RecordView';
@@ -32,8 +32,13 @@ const UnauthorizedView = (props) => {
           <Icon color="#289231" name="staff-snake" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
-          <Box color="good" fontSize="18px" bold mt={5}>
-            Nanotrasen HealthPRO
+          <Box
+            color="good"
+            fontSize="18px"
+            bold
+            mt={5} /* ARK STATION EDIT - Naming */
+          >
+            Solar Federation HealthPRO
           </Box>
         </Stack.Item>
         <Stack.Item>

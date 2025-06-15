@@ -8,7 +8,7 @@ import {
   Slider,
   Table,
   Tabs,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const Colormate = (props, context) => {

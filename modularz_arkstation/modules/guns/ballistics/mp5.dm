@@ -44,7 +44,7 @@
 	ricochet_auto_aim_range = 3
 	wound_bonus = -20
 	bare_wound_bonus = 10
-	embed_type = /datum/embed_data/bullet_c38
+	embed_type = /datum/embedding/bullet/c38
 	embed_falloff_tile = -4
 //
 

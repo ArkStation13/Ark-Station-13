@@ -98,7 +98,7 @@
 	/**
 	  * extra types for chameleon outfit changes, mostly guns
 	  *
-	  * Format of this list is (typepath, typepath, typepath)
+	  * Valid values are a single typepath or list of typepaths
 	  *
 	  * These are all added and returns in the list for get_chamelon_diguise_info proc
 	  */
@@ -263,7 +263,7 @@
 				if(!isnum(number))//Default to 1
 					number = 1
 				for(var/i in 1 to number)
-					EQUIP_OUTFIT_ITEM(path, ITEM_SLOT_BACKPACK)
+					user.equip_to_storage(SSwardrobe.provide_type(path, user), ITEM_SLOT_BACK, indirect_action = TRUE, del_on_fail = TRUE)
 
 		if(belt_contents)
 			for(var/path in belt_contents)
@@ -271,7 +271,7 @@
 				if(!isnum(number))//Default to 1
 					number = 1
 				for(var/i in 1 to number)
-					EQUIP_OUTFIT_ITEM(path, ITEM_SLOT_BELTPACK)
+					user.equip_to_storage(SSwardrobe.provide_type(path, user), ITEM_SLOT_BELT, indirect_action = TRUE, del_on_fail = TRUE)
 
 	post_equip(user, visuals_only)
 

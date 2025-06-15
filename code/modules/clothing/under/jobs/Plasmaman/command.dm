@@ -34,7 +34,7 @@
 
 /obj/item/clothing/under/plasmaman/chief_engineer
 	name = "tech overseer's plasma envirosuit" // ARK STATION EDIT
-	desc = "An air-tight suit designed to be used by plasmamen insane enough to achieve the rank of \"Tech Overseer\"." // ARK STATION EDIT
+	desc = "An airtight suit designed to be used by plasmamen insane enough to achieve the rank of \"Tech Overseer\"." // ARK STATION EDIT
 	icon_state = "ce_envirosuit"
 	inhand_icon_state = null
 	armor_type = /datum/armor/clothing_under/engineering_chief_engineer/plasmaman

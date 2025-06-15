@@ -37,7 +37,7 @@
 		bare_wound_bonus = bare_wound_bonus * 2
 
 
-/datum/embed_data/bullet
+/datum/embedding/bullet
 	embed_chance=30 // 20
 	fall_chance=2
 	jostle_chance=0

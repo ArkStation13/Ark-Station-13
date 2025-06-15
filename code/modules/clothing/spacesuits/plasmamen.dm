@@ -41,7 +41,7 @@
 	// This is weird but basically we're calling this proc once the cooldown ends in case our wearer gets set on fire again during said cooldown
 	// This is why we're ignoring source and instead checking by loc
 	var/mob/living/carbon/human/owner = loc
-	if (!owner.on_fire || !owner.is_atmos_sealed(additional_flags = PLASMAMAN_PREVENT_IGNITION, check_hands = TRUE, ignore_chest_pressureprot = TRUE))
+	if (!owner.on_fire || !owner.is_atmos_sealed(additional_flags = PLASMAMAN_PREVENT_IGNITION, check_hands = TRUE, alt_flags = TRUE))
 		return
 
 	if (!extinguishes_left || !COOLDOWN_FINISHED(src, extinguish_timer))
@@ -94,7 +94,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSMOUTH|HEADCOVERSEYES|PEPPERPROOF
 	visor_flags_inv = HIDEEYES|HIDEFACE
-	slowdown = 0
+	visor_dirt = null
 	var/helmet_on = FALSE
 	var/smile = FALSE
 	var/smile_color = COLOR_RED
@@ -112,6 +112,9 @@
 	AddComponent(/datum/component/hat_stabilizer)
 	update_appearance()
 	register_context()
+
+/obj/item/clothing/head/helmet/space/plasmaman/add_stabilizer(loose_hat = FALSE)
+	..()
 
 /obj/item/clothing/head/helmet/space/plasmaman/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	context[SCREENTIP_CONTEXT_ALT_LMB] = "Toggle Welding Screen"
@@ -139,7 +142,7 @@
 		to_chat(user, span_notice("Your helmet's torch can't pass through your welding visor!"))
 		set_light_on(FALSE)
 		helmet_on = FALSE
-	playsound(src, 'sound/vehicles/mecha/mechmove03.ogg', 50, TRUE) //Visors don't just come from nothing
+	playsound(src, up ? SFX_VISOR_UP : SFX_VISOR_DOWN, 50, TRUE)
 	update_appearance()
 
 /obj/item/clothing/head/helmet/space/plasmaman/update_icon_state()
@@ -178,14 +181,15 @@
 ///By the by, helmets have the update_icon_updates_onmob element, so we don't have to call mob.update_worn_head()
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(mutable_appearance/standing, isinhands)
 	. = ..()
+	if(!isinhands && !up)
+		. += mutable_appearance('icons/mob/clothing/head/plasmaman_head.dmi', visor_icon)
+
+/obj/item/clothing/head/helmet/space/plasmaman/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file)
+	. = ..()
 	if(!isinhands && smile)
 		var/mutable_appearance/smiley = mutable_appearance('icons/mob/clothing/head/plasmaman_head.dmi', smile_state)
 		smiley.color = smile_color
 		. += smiley
-	if(!isinhands && !up)
-		. += mutable_appearance('icons/mob/clothing/head/plasmaman_head.dmi', visor_icon)
-	else
-		cut_overlays()
 
 /obj/item/clothing/head/helmet/space/plasmaman/wash(clean_types)
 	. = ..()

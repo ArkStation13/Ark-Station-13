@@ -7,9 +7,9 @@
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/under/costume.dmi'
 	worn_icon_digi = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/under/costume_digi.dmi'
 	icon_state = "playbunny"
-	greyscale_colors = "#39393f#39393f#ffffff#87502e"
-	greyscale_config = /datum/greyscale_config/bunnysuit
-	greyscale_config_worn = /datum/greyscale_config/bunnysuit_worn
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 	flags_1 = IS_PLAYER_COLORABLE_1
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE

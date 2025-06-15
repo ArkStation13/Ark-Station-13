@@ -15,7 +15,7 @@
 					/obj/item/clothing/under/costume/maid = 3,
 					/obj/item/clothing/accessory/maidapron = 3,
 					/obj/item/reagent_containers/spray/cleaner = 2,
-					/obj/item/reagent_containers/cup/rag = 2)
+					/obj/item/rag = 2)
 	crate_name = "Maid Uniforms"
 
 /datum/supply_pack/engineering/radios

@@ -14,7 +14,7 @@
 	//Blacklist of species for this job.
 	var/list/species_blacklist
 	/// Which languages does the job require, associative to LANGUAGE_UNDERSTOOD or LANGUAGE_SPOKEN
-	var/list/required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
+	var/list/required_languages = list(/datum/language/common = LANGUAGE_UNDERSTOOD)
 
 	///Is this job veteran only? If so, then this job requires the player to be in the veteran_players.txt
 	//var/veteran_only = FALSE // Ark Station 13 Edit - Fuck Vet's system
@@ -72,55 +72,80 @@
 /datum/job/security_officer
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/detective
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/warden
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/blueshield
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
-///datum/job/corrections_officer
-//	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
-//	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+// ARK STATION REMOVAL BEGIN
+/*
+/datum/job/corrections_officer
+	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
+	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
+*/
+// ARK STATION REMOVAL END
 
 // Command
 /datum/job/captain
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/nanotrasen_consultant
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
 
 /datum/job/head_of_security
 	banned_quirks = list(SEC_RESTRICTED_QUIRKS, HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(SEC_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/chief_medical_officer
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/chief_engineer
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS, "Paraplegic" = TRUE)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	species_blacklist = list(SPECIES_ABDUCTORWEAK = TRUE)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/research_director
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/head_of_personnel
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/quartermaster
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS_QM)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 //Silicon
 /datum/job/ai
@@ -146,20 +171,33 @@
 	required_languages = null
 	banned_quirks = list(PRISONER_RESTRICTED_QUIRKS)
 
-// /datum/job/orderly
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// ARK STATION REMOVAL BEGIN
+/*
+/datum/job/orderly
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
-// /datum/job/science_guard
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/datum/job/science_guard
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
-// /datum/job/customs_agent
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+/datum/job/customs_agent
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
+*/
+// ARK STATION REMOVAL END
 
 /datum/job/bouncer
 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
-// /datum/job/engineering_guard
-// 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+// ARK STATION REMOVAL BEGIN
+/*
+/datum/job/engineering_guard
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
+	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
+*/
+// ARK STATION REMOVAL END
 
 /datum/job/proc/has_required_languages(datum/preferences/pref)
 	if(!required_languages)

@@ -31,7 +31,7 @@
 // SUIT //
 /datum/loadout_item/suit/flannel_white
 	name = "White Flannel"
-	item_path = /obj/item/clothing/suit/toggle/jacket/flannel/white
+	item_path = /obj/item/clothing/suit/toggle/jacket/nova/flannel/white
 
 /datum/loadout_item/suit/hawaiiblack
 	name = "Black Hawaii Shirt"

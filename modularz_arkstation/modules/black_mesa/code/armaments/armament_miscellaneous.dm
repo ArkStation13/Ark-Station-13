@@ -48,7 +48,7 @@
 	cost = 1
 
 /datum/armament_entry/hecu/misc/balaclava
-	item_type = /obj/item/clothing/mask/balaclavaadjust
+	item_type = /obj/item/clothing/mask/balaclava/adjustable
 	max_purchase = 6
 	cost = 1
 

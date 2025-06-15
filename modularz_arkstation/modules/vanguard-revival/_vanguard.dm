@@ -191,8 +191,7 @@
 	default_skin = "exp"
 	armor_type = /datum/armor/mod_theme_exp
 	complexity_max = DEFAULT_MAX_COMPLEXITY - 5
-	slowdown_inactive = 1
-	slowdown_active = 0.2
+	slowdown_deployed = 0.2
 	allowed_suit_storage = list(
 		/obj/item/restraints/handcuffs,
 		/obj/item/assembly/flash,

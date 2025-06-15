@@ -250,7 +250,7 @@
 
 /// checks if we're a brainmob inside a brain & the brain is inside a head
 /datum/antagonist/bloodsucker/proc/is_head(mob/living/poor_fucker)
-	if(!istype(poor_fucker?.loc, /obj/item/organ/internal/brain))
+	if(!istype(poor_fucker?.loc, /obj/item/organ/brain))
 		return
 	var/obj/brain = poor_fucker.loc
 	if(!istype(brain?.loc, /obj/item/bodypart/head))
@@ -275,7 +275,7 @@
 
 /datum/antagonist/bloodsucker/proc/regain_heart(mob/coffin_dweller, obj/structure/closet/crate/coffin/coffin, mob/user)
 	SIGNAL_HANDLER
-	var/obj/item/organ/heart = locate(/obj/item/organ/internal/heart) in coffin.contents
+	var/obj/item/organ/heart = locate(/obj/item/organ/heart) in coffin.contents
 	if(heart && !coffin_dweller.get_organ_slot(ORGAN_SLOT_HEART))
 		to_chat(span_warning("You have regained your heart!"))
 		heart.Insert(coffin_dweller)

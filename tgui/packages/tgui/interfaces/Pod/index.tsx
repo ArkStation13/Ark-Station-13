@@ -1,4 +1,3 @@
-import { useBackend } from '../../backend';
 import {
   Button,
   ByondUi,
@@ -6,8 +5,10 @@ import {
   ProgressBar,
   Section,
   Stack,
-} from '../../components';
-import { formatSiUnit } from '../../format';
+} from 'tgui-core/components';
+import { formatSiUnit } from 'tgui-core/format';
+
+import { useBackend } from '../../backend';
 import { Window } from '../../layouts';
 import { MainData } from './data';
 
@@ -47,7 +48,6 @@ export const Content = () => {
                     height="300px"
                     params={{
                       id: pod_view,
-                      zoom: 4,
                       type: 'map',
                     }}
                   />

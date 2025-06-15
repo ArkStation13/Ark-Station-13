@@ -1,0 +1,283 @@
+.light:root {
+	--scrollbar-base: #f2f2f2;
+	--scrollbar-thumb: #a7a7a7;
+}
+
+html,
+body {
+	scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-base);
+}
+
+body {
+	font-family: "Chakra Petch", Tahoma, sans-serif;
+	font-size: 14px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+
+}
+
+a {
+	color: black;
+	text-decoration: none
+}
+
+a:hover {
+	color: #007fff;
+}
+
+h3 {
+	margin: 0 -0.5em 0.5em;
+	padding: 1em 0.66em 0.5em;
+	border-bottom: 0.1667em solid;
+}
+
+
+img {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: pixelated;
+}
+
+.stat-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#menu {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0.25em 0.25em 0;
+	background-color: #ffffff;
+}
+
+.menu-wrap {
+	flex-wrap: wrap-reverse;
+}
+
+#menu.tabs-classic {
+	padding: 0.15em;
+}
+
+#menu.tabs-classic .button {
+	min-width: 2em;
+	margin: 0.1em;
+	padding: 0.25em 0.4em;
+	border: 0;
+	border-radius: 0.25em;
+}
+
+#menu.tabs-classic .button.active {
+	background-color: #0668b8;
+	color: white;
+}
+
+.button {
+	background-color: #eaeaea;
+	color: rgba(0, 0, 0, 0.7);
+	border: 0;
+	padding: 6px 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	margin: 0;
+	cursor: pointer;
+	transition-duration: 100ms;
+	order: 3;
+	min-width: 40px;
+}
+
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	transition-duration: 0;
+}
+
+.button.active {
+	cursor: default;
+	background-color: #acacac; /* ARK STATION EDIT */
+	color: black;
+	border-bottom-color: #000000;
+}
+
+#under-menu {
+	height: 0.5em;
+	background-color: #eeeeee;
+}
+
+#under-content {
+	height: calc(0.5em - 4px);
+	background-color: #eeeeee;
+}
+
+#statcontent {
+	flex: 1;
+	padding: 0.75em 0.5em;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.grid-container {
+	margin: -2px;
+	margin-right: -15px;
+}
+
+.grid-item {
+	display: inline-flex;
+	position: relative;
+	user-select: none;
+	width: 100%;
+	max-height: 1.85em;
+	text-decoration: none;
+	background-color: transparent;
+	color: black;
+}
+
+.grid-item:hover {
+	color: #2e6934;
+	z-index: 1;
+}
+
+.grid-item:active {
+	color: rgb(6, 83, 10);
+}
+
+.grid-item-text {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	pointer-events: none;
+	width: 100%;
+	padding: 0.33em 0.5em;
+	border-radius: 0.25em;
+}
+
+.grid-item:hover .grid-item-text {
+	height: 100%;
+	overflow: visible;
+	white-space: normal;
+	background-color: #ececec;
+}
+
+.grid-item:active .grid-item-text  {
+	background-color: #dfdfdf;
+}
+
+@media only screen and (min-width: 300px) {
+	.grid-item {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 430px) {
+	.grid-item {
+		width: 33%;
+	}
+}
+
+@media only screen and (min-width: 560px) {
+	.grid-item {
+		width: 25%;
+	}
+}
+
+@media only screen and (min-width: 770px) {
+	.grid-item {
+		width: 20%;
+	}
+}
+
+.status-info {
+	margin: 0 0.33em 0.25em;
+}
+
+.interview_panel_controls,
+.interview_panel_stats {
+	margin-bottom: 10px;
+}
+
+/**
+ * MARK: Dark theme colors
+ */
+.dark:root {
+	--scrollbar-base: #151515;
+	--scrollbar-thumb: #363636;
+}
+
+body.dark {
+	background-color: #1c1d22;
+	color: #e6f1ff;
+	scrollbar-base-color: #1c1d22;
+	scrollbar-face-color: #2e3138;
+	scrollbar-3dlight-color: #25272d;
+	scrollbar-highlight-color: #25272d;
+	scrollbar-track-color: #1c1d22;
+	scrollbar-arrow-color: #535765;
+	scrollbar-shadow-color: #2e3138;
+}
+
+.dark a {
+	color: #e6f1ff;;
+}
+
+.dark a:hover,
+.dark .grid-item:hover {
+	color: #83db83;
+}
+
+.dark #menu {
+	background-color: #1C1D22;
+}
+
+.dark #menu.tabs-classic .button.active {
+	background-color: #20b142;
+}
+
+.dark .button {
+	background-color: #1c1d22;
+	color: #7e9e7e;
+}
+
+.dark .button:hover {
+	background-color: #252525;
+}
+
+.dark .button.active  {
+	background-color: #313131;
+	color: #d4dfec;
+	border-bottom-color: #d4dfec;
+}
+
+.dark #under-menu,
+.dark #under-content {
+	background-color: #202020;
+}
+
+.dark .grid-item{
+	color: #b2c4dd;
+}
+
+.dark .grid-item-text {
+	background-color: #1C1D22;
+}
+
+.link {
+	display: inline;
+	background: none;
+	border: none;
+	padding: 7px 14px;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 13px;
+	margin: 2px 2px;
+}
+
+.dark .grid-item:hover .grid-item-text {
+	background-color: #252525;
+}
+
+.dark .grid-item:active .grid-item-text {
+	background-color: #313131;
+}

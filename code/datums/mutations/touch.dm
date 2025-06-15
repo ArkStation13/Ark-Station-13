@@ -11,7 +11,7 @@
 	energy_coeff = 1
 	power_coeff = 1
 
-/datum/mutation/human/shock/modify()
+/datum/mutation/human/shock/setup()
 	. = ..()
 	var/datum/action/cooldown/spell/touch/shock/to_modify =.
 
@@ -96,7 +96,7 @@
 	power_coeff = 1
 	synchronizer_coeff = 1
 
-/datum/mutation/human/lay_on_hands/modify()
+/datum/mutation/human/lay_on_hands/setup()
 	. = ..()
 	var/datum/action/cooldown/spell/touch/lay_on_hands/to_modify =.
 
@@ -419,3 +419,4 @@
 	icon_state = "greyscale"
 	color = COLOR_VERY_PALE_LIME_GREEN
 	inhand_icon_state = "greyscale"
+	item_flags = parent_type::item_flags & ~NEEDS_PERMIT

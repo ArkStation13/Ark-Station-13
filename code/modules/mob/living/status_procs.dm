@@ -89,7 +89,7 @@
 		return K.duration - world.time
 	return 0
 
-/mob/living/proc/Knockdown(amount, ignore_canstun = FALSE) //Can't go below remaining duration
+/mob/living/proc/Knockdown(amount, daze_amount = 0, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_KNOCKDOWN, amount, ignore_canstun) & COMPONENT_NO_STUN)
 		return
 	if(check_stun_immunity(CANKNOCKDOWN, ignore_canstun))
@@ -99,6 +99,8 @@
 		K.duration = max(world.time + amount, K.duration)
 	else if(amount > 0)
 		K = apply_status_effect(/datum/status_effect/incapacitating/knockdown, amount)
+	if(daze_amount > 0)
+		apply_status_effect(/datum/status_effect/dazed, daze_amount)
 	return K
 
 /mob/living/proc/SetKnockdown(amount, ignore_canstun = FALSE) //Sets remaining duration
@@ -117,7 +119,7 @@
 			K = apply_status_effect(/datum/status_effect/incapacitating/knockdown, amount)
 	return K
 
-/mob/living/proc/AdjustKnockdown(amount, ignore_canstun = FALSE) //Adds to remaining duration
+/mob/living/proc/AdjustKnockdown(amount, daze_amount = 0, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_KNOCKDOWN, amount, ignore_canstun) & COMPONENT_NO_STUN)
 		return
 	if(check_stun_immunity(CANKNOCKDOWN, ignore_canstun))
@@ -127,6 +129,8 @@
 		K.duration += amount
 	else if(amount > 0)
 		K = apply_status_effect(/datum/status_effect/incapacitating/knockdown, amount)
+	if(daze_amount > 0)
+		apply_status_effect(/datum/status_effect/dazed, daze_amount)
 	return K
 
 /* IMMOBILIZED */
@@ -382,7 +386,7 @@
 		return S.duration - world.time
 	return 0
 
-/mob/living/proc/Sleeping(amount) //Can't go below remaining duration
+/mob/living/proc/Sleeping(amount, is_voluntary = FALSE) //Can't go below remaining duration // NOVA EDIT: Enhanced sleep - ORIGINAL: /mob/living/proc/SetSleeping(amount) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, amount) & COMPONENT_NO_STUN)
 		return
 	if(HAS_TRAIT(src, TRAIT_GODMODE))
@@ -390,11 +394,11 @@
 	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
 	if(S)
 		S.duration = max(world.time + amount, S.duration)
-	else if(amount > 0)
-		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
+	else if(amount > 0 || amount == STATUS_EFFECT_PERMANENT) // NOVA EDIT CHANGE: Enhanced sleep - ORIGINAL: else if(amount > 0)
+		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount, is_voluntary) // NOVA EDIT: Enhanced sleep - ORIGINAL: S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
 	return S
 
-/mob/living/proc/SetSleeping(amount) //Sets remaining duration
+/mob/living/proc/SetSleeping(amount)
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, amount) & COMPONENT_NO_STUN)
 		return
 	if(HAS_TRAIT(src, TRAIT_GODMODE))
@@ -424,12 +428,17 @@
 ///////////////////////// CLEAR STATUS /////////////////////////
 
 /mob/living/proc/adjust_status_effects_on_shake_up()
-	AdjustStun(-60)
-	AdjustKnockdown(-60)
-	AdjustUnconscious(-60)
-	AdjustSleeping(-100)
-	AdjustParalyzed(-60)
-	AdjustImmobilized(-60)
+	AdjustStun(-6 SECONDS)
+	AdjustKnockdown(-6 SECONDS)
+	AdjustUnconscious(-6 SECONDS)
+	// NOVA EDIT BEGIN: Enhanced sleep - ORIGINAL: AdjustSleeping(-100)
+	// Disables shaking awake if the mob used the sleep verb
+	var/datum/status_effect/incapacitating/sleeping/sleep_effect = IsSleeping()
+	if(sleep_effect && !sleep_effect.voluntary)
+		AdjustSleeping(-10 SECONDS)
+	// NOVA EDIT END
+	AdjustParalyzed(-6 SECONDS)
+	AdjustImmobilized(-6 SECONDS)
 
 ///////////////////////////////// FROZEN /////////////////////////////////////
 
@@ -446,14 +455,14 @@
  *
  * Returns TRUE on success, FALSE on failure (already has the quirk, etc)
  */
-/mob/living/proc/add_quirk(datum/quirk/quirktype, client/override_client)
+/mob/living/proc/add_quirk(datum/quirk/quirktype, client/override_client, add_unique = TRUE)
 	if(has_quirk(quirktype))
 		return FALSE
 	var/qname = initial(quirktype.name)
 	if(!SSquirks || !SSquirks.quirks[qname])
 		return FALSE
 	var/datum/quirk/quirk = new quirktype()
-	if(quirk.add_to_holder(new_holder = src, client_source = override_client))
+	if(quirk.add_to_holder(new_holder = src, client_source = override_client, unique = add_unique))
 		return TRUE
 	qdel(quirk)
 	return FALSE
@@ -668,7 +677,7 @@
 		return 0
 	// Infinite duration status effects technically are not "timed status effects"
 	// by name or nature, but support is included just in case.
-	if(existing.duration == -1)
+	if(existing.duration == STATUS_EFFECT_PERMANENT)
 		return INFINITY
 
 	return existing.duration - world.time

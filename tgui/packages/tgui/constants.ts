@@ -32,6 +32,7 @@ export const COLORS = {
     centcom: '#00c100',
     other: '#c38312',
     prisoner: '#FFC2C2', // NOVA EDIT ADDITION
+    church: '#B6B6B6', // ARK STATION ADDITION
   },
   // Damage type colors
   damageType: {
@@ -69,6 +70,21 @@ export const CSS_COLORS = [
   'white',
   'yellow',
 ] as const;
+
+export enum Direction {
+  NONE = 0,
+  NORTH = 1,
+  SOUTH = 2,
+  EAST = 4,
+  WEST = 8,
+  NORTHEAST = NORTH | EAST,
+  NORTHWEST = NORTH | WEST,
+  SOUTHEAST = SOUTH | EAST,
+  SOUTHWEST = SOUTH | WEST,
+  VERTICAL = NORTH | SOUTH,
+  HORIZONTAL = EAST | WEST,
+  ALL = NORTH | SOUTH | EAST | WEST,
+}
 
 export type CssColor = (typeof CSS_COLORS)[number];
 
@@ -304,6 +320,15 @@ const GASES = [
     label: 'Nitrium',
     color: 'brown',
   },
+  // NOVA EDIT ADDITION START
+  {
+    id: 'goblin',
+    path: '/datum/gas/goblin',
+    name: 'G-081-N',
+    label: 'G-081-N',
+    color: 'green',
+  },
+  // NOVA EDIT ADDITION END
 ] as const;
 
 // Returns gas label based on gasId

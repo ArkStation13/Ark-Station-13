@@ -5,9 +5,11 @@
 /mob/living/add_splatter_floor(turf/T, small_drip)
 	if(get_blood_id() != /datum/reagent/blood)
 		return
+
 	if(!T)
 		T = get_turf(src)
-	if(isclosedturf(T) || (isgroundlessturf(T) && !GET_TURF_BELOW(T)))
+
+	if(!T || isclosedturf(T) || (isgroundlessturf(T) && !GET_TURF_BELOW(T)))
 		return
 
 	var/datum/reagent/blood_type = get_blood_id()
@@ -25,7 +27,7 @@
 				T.pollute_turf(/datum/pollutant/metallic_scent, 5)
 				drop.drips++
 				drop.add_overlay(pick(drop.random_icon_states))
-				drop.transfer_mob_blood_dna(src)
+				drop.add_mob_blood(src)
 				return
 			else
 				temp_blood_DNA = GET_ATOM_BLOOD_DNA(drop) //we transfer the dna from the drip to the splatter
@@ -33,7 +35,7 @@
 		else
 			T.pollute_turf(/datum/pollutant/metallic_scent, 5)
 			drop = new(T, get_static_viruses())
-			drop.transfer_mob_blood_dna(src)
+			drop.add_mob_blood(src)
 			return
 
 	// Create a bit of metallic pollution, as that's how blood smells
@@ -46,7 +48,7 @@
 	if(QDELETED(B)) //Give it up
 		return
 	B.bloodiness = min((B.bloodiness + BLOOD_AMOUNT_PER_DECAL), BLOOD_POOL_MAX)
-	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
+	B.add_mob_blood(src) //give blood info to the blood decal.
 	if(temp_blood_DNA)
 		B.add_blood_DNA(temp_blood_DNA)
 
@@ -54,8 +56,8 @@
 		if(blood_type)
 			B.color = initial(blood_type.color)
 		B.count ++
-		B.transfer_mob_blood_dna(src)
-	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
+		B.add_mob_blood(src)
+	B.add_mob_blood(src) //give blood info to the blood decal.
 	if(temp_blood_DNA)
 		B.add_blood_DNA(temp_blood_DNA)
 

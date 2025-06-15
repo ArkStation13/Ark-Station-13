@@ -1,6 +1,6 @@
 import { useBackend } from 'tgui/backend';
-import { Box, Button, Icon, NoticeBox, Stack } from 'tgui/components';
 import { Window } from 'tgui/layouts';
+import { Box, Button, Icon, NoticeBox, Stack } from 'tgui-core/components';
 
 import { SecurityRecordTabs } from './RecordTabs';
 import { SecurityRecordView } from './RecordView';
@@ -31,8 +31,13 @@ const RestrictedView = (props) => {
           <Icon color="average" name="exclamation-triangle" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
-          <Box color="red" fontSize="18px" bold mt={5}>
-            Nanotrasen SecurityHUB
+          <Box
+            color="red"
+            fontSize="18px"
+            bold
+            mt={5} /* ARK STATION EDIT - Naming */
+          >
+            Solar Federation SecurityHUB
           </Box>
         </Stack.Item>
         <Stack.Item>

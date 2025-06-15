@@ -3,10 +3,14 @@
 /datum/martial_art/bouncer
 	name = "Bouncer martial art"
 	id = MARTIALART_BOUNCER
-	//pugilist = TRUE
-	var/datum/action/bounce/bounce = new/datum/action/bounce()
 
-/datum/martial_art/bouncer/proc/check_streak(var/mob/living/carbon/human/A, var/mob/living/carbon/human/D)
+	var/datum/action/bounce/bounce
+
+/datum/martial_art/bouncer/New(datum/new_origin)
+	. = ..()
+	bounce = new(src)
+
+/datum/martial_art/bouncer/proc/check_streak(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(!can_use(A, D))
 		return FALSE
 	switch(streak)
@@ -16,12 +20,13 @@
 			return TRUE
 	return FALSE
 
-/datum/martial_art/bouncer/teach(mob/living/carbon/human/H,make_temporary=0)
-	if(..())
-		bounce.Grant(H)
+/datum/martial_art/bouncer/activate_style(mob/living/new_holder)
+	. = ..()
+	bounce.Grant(new_holder)
 
-/datum/martial_art/bouncer/on_remove(mob/living/carbon/human/H)
-	bounce.Remove(H)
+/datum/martial_art/bouncer/deactivate_style(mob/living/remove_from)
+	. = ..()
+	bounce.Remove(remove_from)
 
 /datum/action/bounce
 	name = "Bounce"
@@ -32,16 +37,16 @@
 	if(owner.incapacitated)
 		to_chat(owner, "<span class='warning'>You can't bounce while you're incapacitated.</span>")
 		return
-	var/mob/living/carbon/human/H = owner
-	if (H.mind.martial_art.streak == "do_bounce")
+	var/datum/martial_art/source = target
+	if (source.streak == "do_bounce")
 		owner.visible_message("<span class='danger'>[owner] assumes a neutral stance.</span>", "<b><i>Your next attack is cleared.</i></b>")
-		H.mind.martial_art.streak = ""
+		source.streak = ""
 	else
-		if(HAS_TRAIT(H, TRAIT_PACIFISM))
-			to_chat(H, "<span class='warning'>You don't want to harm other people!</span>")
+		if(HAS_TRAIT(owner, TRAIT_PACIFISM))
+			to_chat(owner, "<span class='warning'>You don't want to harm other people!</span>")
 			return
 		owner.visible_message("<span class='danger'>[owner] assumes the Bouncer stance!</span>", "<b><i>Your next attack will be a Bounce.</i></b>")
-		H.mind.martial_art.streak = "do_bounce"
+		source.streak = "do_bounce"
 
 /datum/martial_art/bouncer/proc/do_bounce(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	A.do_attack_animation(D, ATTACK_EFFECT_KICK)

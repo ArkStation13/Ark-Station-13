@@ -14,12 +14,20 @@
 	surplus = 50
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/device_tools/surgerybag
-	name = "Syndicate Surgery Duffel Bag"
-	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, and a muzzle."
-	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 4
+/datum/uplink_item/device_tools/duffelbag
+	name = "Suspicous Duffel Bag"
+	desc = "A large duffel bag for holding extra tactical supplies. It contains an oiled plastitanium zipper for maximum speed tactical zipping, \
+			and is better balanced on your back than an average duffelbag. Can hold two bulky items!"
+	item = /obj/item/storage/backpack/duffelbag/syndie
+	cost = 2
+	surplus = 50
+
+/datum/uplink_item/device_tools/surgery_syndie
+	name = "Full Syndicate Surgery Medkit"
+	desc = "The Syndicate surgery medkit is a toolkit containing all surgery tools, surgical drapes, \
+			a syringe, and some sedatives."
+	item = /obj/item/storage/medkit/surgery_syndie
+	cost = 3
 	surplus = 66
 
 /datum/uplink_item/device_tools/encryptionkey
@@ -36,11 +44,14 @@
 	name = "Syndicate Tome"
 	desc = "Using rare artifacts acquired at great cost, the Syndicate has reverse engineered \
 			the seemingly magical books of a certain cult. Though lacking the esoteric abilities \
-			of the originals, these inferior copies are still quite useful, being able to provide \
-			both weal and woe on the battlefield, even if they do occasionally bite off a finger."
+			of the originals, these inferior copies are still quite useful. \
+			Often used by agents to protect themselves against foes who rely on magic while it's held. \
+			Though, it can be used to heal and harm other people with decent effectiveness much like a regular bible. \
+			Can also be used in-hand to 'claim' it, granting you priest-like abilities -- no training required!"
 	item = /obj/item/book/bible/syndicate
 	cost = 5
 
+/* // NOVA EDIT REMOVAL START
 /datum/uplink_item/device_tools/tram_remote
 	name = "Tram Remote Control"
 	desc = "When linked to a tram's on board computer systems, this device allows the user to manipulate the controls remotely. \
@@ -48,6 +59,7 @@
 		Perfect for running someone over in the name of a tram malfunction!"
 	item = /obj/item/assembly/control/transport/remote
 	cost = 2
+*/ // NOVA EDIT REMOVAL END
 
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
@@ -74,6 +86,7 @@
 	surplus = 0
 	item = /obj/item/storage/briefcase/launchpad
 	cost = 6
+*/ // NOVA EDIT REMOVAL END
 
 /datum/uplink_item/device_tools/syndicate_teleporter
 	name = "Experimental Syndicate Teleporter"
@@ -83,7 +96,6 @@
 			Comes with 4 charges, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
 	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
 	cost = 8
-*/ //END NOVA EDIT
 
 /datum/uplink_item/device_tools/camera_app
 	name = "SyndEye Program"
@@ -246,9 +258,9 @@
 			active gravitational singularities or tesla balls towards it. This will not work when the engine is still \
 			in containment. Because of its size, it cannot be carried. Ordering this \
 			sends you a small beacon that will teleport the larger beacon to your location upon activation."
-	progression_minimum = 30 MINUTES
+	progression_minimum = 20 MINUTES
 	item = /obj/item/sbeacondrop
-	cost = 10
+	cost = 4
 	surplus = 0 // not while there isnt one on any station
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 

@@ -2,6 +2,8 @@
 #define CARGO_CONSOLE 1
 #define IRN_CONSOLE 2
 #define SEC_CARGO_CONSOLE 3 // ARK STATION ADDITION
+#define COST_MULTIPLIER 1
+#define EMAGGED_DISCOUNT 0.72 // same as express console
 
 /datum/component/armament/company_imports
 	/// Selected amount of ammo to purchase
@@ -18,13 +20,29 @@
 	var/budget_name = "Cargo Budget" // ARK STATION ADDTION
 	var/datum/bank_account/buyer // ARK STATION ADDTION
 
+//ARK STATION ADDITION BEGIN
+/datum/aas_config_entry/licence_purchased
+	name = "Cargo Alert: Licence purchased"
+	announcement_lines_map = list(
+		"Message" = "%COMPANY has been purchased by %PERSON on %BALANCE for %COST."
+	)
+	vars_and_tooltips_map = list(
+		"COMPANY" = "will be replaced with a company name",
+		"PERSON" = "with a person's name.",
+		"BALANCE" = "with a balance name.",
+		"COST" = "with a cost.",
+	)
+//ARK STATION ADDITION END
+
 /datum/component/armament/company_imports/Initialize(list/required_products, list/needed_access)
 	. = ..()
 	if(istype(parent, /obj/machinery/computer/cargo))
 		console_state = CARGO_CONSOLE
+		RegisterSignal(parent, COMSIG_ATOM_EMAG_ACT, PROC_REF(on_emag))
 // ARK STATION ADDITION START
 	if(istype(parent, /obj/machinery/computer/cargo/request/sec))
 		console_state = SEC_CARGO_CONSOLE
+		RegisterSignal(parent, COMSIG_ATOM_EMAG_ACT, PROC_REF(on_emag))
 // ARK STATION ADDTION END
 	else if(istype(parent, /obj/item/modular_computer))
 		console_state = IRN_CONSOLE
@@ -32,8 +50,12 @@
 	buyer = SSeconomy.get_dep_account(ACCOUNT_CAR) // ARK STATION ADDTION
 
 /datum/component/armament/company_imports/Destroy(force)
+	UnregisterSignal(parent, COMSIG_ATOM_EMAG_ACT)
 	parent_prog = null
 	. = ..()
+
+/datum/component/armament/company_imports/proc/on_emag(mob/user, obj/item/card/emag/emag_card)
+	update_static_data_for_all_viewers()
 
 /datum/component/armament/company_imports/on_attack_hand(datum/source, mob/living/user)
 	return
@@ -74,9 +96,12 @@
 
 	var/cant_buy_restricted = TRUE
 
+	if(id_card?.registered_account && (ACCESS_WEAPONS in id_card.access))
+		cant_buy_restricted = FALSE
+
 	if(console_state == CARGO_CONSOLE)
 		var/obj/machinery/computer/cargo/console = parent
-		if(!console.requestonly)
+		if(!console.requestonly || console.contraband)
 			cant_buy_restricted = FALSE
 
 // ARK STATION ADDITION START
@@ -91,10 +116,18 @@
 
 	data["cant_buy_restricted"] = !!cant_buy_restricted
 	data["budget_points"] = self_paid ? id_card?.registered_account?.account_balance : buyer?.account_balance
-	data["ammo_amount"] = ammo_purchase_num
 	data["self_paid"] = !!self_paid
+	return data
+
+/datum/component/armament/company_imports/ui_static_data(mob/user)
+	var/list/data = list()
 	data["armaments_list"] = list()
 
+	var/cost_multiplier = COST_MULTIPLIER
+	if(console_state == CARGO_CONSOLE)
+		var/obj/machinery/computer/cargo/console = parent
+		if(console.obj_flags & EMAGGED)
+			cost_multiplier *= EMAGGED_DISCOUNT
 	for(var/armament_category as anything in SSarmaments.entries)
 // ARK STATION ADDITION START
 		var/illegal_failure
@@ -139,9 +172,9 @@
 					"ref" = REF(armament_entry),
 					"icon" = armament_entry.cached_base64,
 					"name" = armament_entry.name,
-					"cost" = armament_entry.cost,
+					"cost" = armament_entry.cost * cost_multiplier,
 					"buyable_ammo" = armament_entry.magazine ? TRUE : FALSE,
-					"magazine_cost" = armament_entry.magazine_cost,
+					"magazine_cost" = armament_entry.magazine_cost * cost_multiplier,
 					"purchased" = purchased_items[armament_entry] ? purchased_items[armament_entry] : 0,
 					"description" = armament_entry.description,
 					"armament_category" = armament_entry.category,
@@ -197,13 +230,20 @@
 		ui = new(user, src, "CargoImportConsole")
 		ui.open()
 
+/datum/component/armament/company_imports/ui_status(mob/user, datum/ui_state/state)
+	return parent.ui_status(user, state)
+
 /datum/component/armament/company_imports/select_armament(mob/user, datum/armament_entry/company_import/armament_entry)
 	//var/datum/bank_account/buyer = SSeconomy.get_dep_account(ACCOUNT_CAR) // ARK STATION REMOVED
 	var/obj/item/modular_computer/possible_downloader
 	var/obj/machinery/computer/cargo/possible_console
 
+	var/cost_multiplier = COST_MULTIPLIER
+
 	if(console_state == CARGO_CONSOLE)
 		possible_console = parent
+		if(possible_console.obj_flags & EMAGGED)
+			cost_multiplier *= EMAGGED_DISCOUNT
 
 // ARK STATION ADDITION START
 	if(console_state == SEC_CARGO_CONSOLE)
@@ -266,7 +306,7 @@
 	if(!ishuman(user) && !issilicon(user))
 		return
 
-	if(!buyer.has_money(armament_entry.cost))
+	if(!buyer.has_money(armament_entry.cost * cost_multiplier))
 		to_chat(user, span_warning("Not enough money!"))
 		return
 
@@ -275,7 +315,7 @@
 	if(issilicon(user))
 		name = user.real_name
 	else
-		the_person.get_authentification_name()
+		name = the_person.get_authentification_name()
 
 	var/reason = ""
 
@@ -302,7 +342,7 @@
 
 	var/datum/supply_pack/armament/created_pack = new
 	created_pack.name = initial(armament_entry.item_type.name)
-	created_pack.cost = cost_calculate(armament_entry.cost) //Paid for seperately
+	created_pack.cost = cost_calculate(armament_entry.cost) * cost_multiplier //Paid for seperately
 	created_pack.contains = list(armament_entry.item_type)
 
 	var/rank
@@ -424,9 +464,12 @@
 				if(do_payment)
 					if(!buyer.adjust_money(assigned_cost))
 						return
-				if(possible_console)
-					possible_console.radio_wrapper(possible_console, "[find_company] has been purchased by [user] on [self_paid ? "[buyer.account_holder]'s balance" : "Cargo Budget"] for [abs(assigned_cost)].", RADIO_CHANNEL_SUPPLY)
-
+				aas_config_announce(/datum/aas_config_entry/licence_purchased, list(
+					"COMPANY" = find_company,
+					"PERSON" = user,
+					"BALANCE" = self_paid ? "[buyer.account_holder]'s balance" : "Cargo Budget",
+					"COST" = abs(assigned_cost),
+				), RADIO_CHANNEL_SUPPLY)
 				SScargo_companies.purchased_companies[find_company] = found_company
 				SScargo_companies.unpurchased_companies.Remove(find_company)
 				SScargo_companies.fire()
@@ -455,3 +498,5 @@
 #undef CARGO_CONSOLE
 #undef IRN_CONSOLE
 #undef SEC_CARGO_CONSOLE // ARK STATION ADDITION
+#undef COST_MULTIPLIER
+#undef EMAGGED_DISCOUNT

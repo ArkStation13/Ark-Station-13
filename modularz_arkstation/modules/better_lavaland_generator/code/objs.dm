@@ -158,7 +158,6 @@
 /datum/reagent/medicine/puce_essence		// P U C E
 	name = "Pucetylline Essence"
 	description = "Ground essence of puce crystals."
-	reagent_state = SOLID
 	color = "#CC8899"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30

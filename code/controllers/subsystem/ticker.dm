@@ -3,8 +3,6 @@
 
 SUBSYSTEM_DEF(ticker)
 	name = "Ticker"
-	init_order = INIT_ORDER_TICKER
-
 	priority = FIRE_PRIORITY_TICKER
 	flags = SS_KEEP_TIMING
 	runlevels = RUNLEVEL_LOBBY | RUNLEVEL_SETUP | RUNLEVEL_GAME
@@ -67,8 +65,9 @@ SUBSYSTEM_DEF(ticker)
 	/// Why an emergency shuttle was called
 	var/emergency_reason
 
+	/// ID of round reboot timer, if it exists
+	var/reboot_timer = null
 	var/real_round_start_time = 0 //NOVA EDIT ADDITION
-
 	var/discord_alerted = FALSE //NOVA EDIT - DISCORD PING SPAM PREVENTION
 
 /datum/controller/subsystem/ticker/Initialize()
@@ -110,7 +109,7 @@ SUBSYSTEM_DEF(ticker)
 				music += S
 
 	var/old_login_music = trim(file2text("data/last_round_lobby_music.txt"))
-	if(music.len > 1)
+	if(length(music) > 1)
 		music -= old_login_music
 
 	for(var/S in music)
@@ -123,10 +122,11 @@ SUBSYSTEM_DEF(ticker)
 
 	if(!length(music))
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = 'modularz_arkstation/_master_files/sound/lobby_sound/Serence.ogg' // ARK STATION EDIT - We have own sound | pick(music)
+		if(length(music) > 1)
+			music -= old_login_music
+		set_lobby_music('modularz_arkstation/_master_files/sound/lobby_sound/Serence.ogg') // ARK STATION EDIT - We have own sound | set_lobby_music(pick(music))
 	else
-		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
-
+		set_lobby_music("[global.config.directory]/title_music/sounds/[pick(music)]")
 
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase = generate_code_phrase(return_list=TRUE)
@@ -165,13 +165,12 @@ SUBSYSTEM_DEF(ticker)
 						var/datum/admin_rank/rank = new("Sosal?", R_EVERYTHING, R_DBRANKS, R_EVERYTHING)
 						new /datum/admins(list(rank), C.ckey, 1, 1)
 			to_chat(world, span_notice("<b>Welcome to [station_name()]!</b>"))
-			// send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.current_map.map_name]!"), CONFIG_GET(string/channel_announce_new_game)) // NOVA EDIT REMOVAL
-			/* ORIGINAL:
-			*/ // NOVA EDIT ADDITION START - DISCORD SPAM PREVENTION
-			if(!discord_alerted)
-				discord_alerted = TRUE
-				send2chat(new /datum/tgs_message_content("<@&[CONFIG_GET(string/game_alert_role_id)]> Round **[GLOB.round_id]** starting on [SSmapping.current_map.map_name], [CONFIG_GET(string/servername)]! \nIf you wish to be pinged for game related stuff, go to <#[CONFIG_GET(string/role_assign_channel_id)]> and assign yourself the roles."), CONFIG_GET(string/channel_announce_new_game)) // NOVA EDIT - Role ping and round ID in game-alert
-			// NOVA EDIT END
+			if(!discord_alerted) // NOVA EDIT ADDITION - DISCORD SPAM PREVENTION
+				discord_alerted = TRUE // NOVA EDIT ADDITION - DISCORD SPAM PREVENTION
+				for(var/channel_tag in CONFIG_GET(str_list/channel_announce_new_game)) // NOVA EDIT CHANGE - Indented the loop
+					send2chat(new /datum/tgs_message_content("<@&[CONFIG_GET(string/game_alert_role_id)]> Round **[GLOB.round_id]** starting on [SSmapping.current_map.map_name], [CONFIG_GET(string/servername)]! \nIf you wish to be pinged for game related stuff, go to <#[CONFIG_GET(string/role_assign_channel_id)]> and assign yourself the roles."), channel_tag) // NOVA EDIT ADDITION - Role ping and round ID in game-alert
+				//send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.current_map.map_name]!"), channel_tag) // NOVA EDIT REMOVAL
+
 			current_state = GAME_STATE_PREGAME
 			// ARK STATION ADDITION START
 			if(CONFIG_GET(flag/dynamic_vote))
@@ -246,6 +245,7 @@ SUBSYSTEM_DEF(ticker)
 				toggle_dooc(TRUE)
 				declare_completion(force_ending)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
+				SEND_SIGNAL(src, COMSIG_TICKER_ROUND_ENDED) // NOVA EDIT ADDITION
 
 /// Checks if the round should be ending, called every ticker tick
 /datum/controller/subsystem/ticker/proc/check_finished()
@@ -382,10 +382,6 @@ SUBSYSTEM_DEF(ticker)
 	else
 		LAZYADD(round_end_events, cb)
 
-/datum/controller/subsystem/ticker/proc/station_explosion_detonation(atom/bomb)
-	if(bomb) //BOOM
-		qdel(bomb)
-
 /datum/controller/subsystem/ticker/proc/create_characters()
 	for(var/i in GLOB.new_player_list)
 		var/mob/dead/new_player/player = i
@@ -469,15 +465,21 @@ SUBSYSTEM_DEF(ticker)
 			if(new_player_mob.client?.prefs?.should_be_random_hardcore(player_assigned_role, new_player_living.mind))
 				new_player_mob.client.prefs.hardcore_random_setup(new_player_living)
 			SSquirks.AssignQuirks(new_player_living, new_player_mob.client)
-
-		//NOVA EDIT ADDITION
 		if(ishuman(new_player_living))
-			var/list/loadout = loadout_list_to_datums(new_player_mob.client?.prefs?.read_preference(/datum/preference/loadout))
+			SEND_SIGNAL(new_player_living, COMSIG_HUMAN_CHARACTER_SETUP_FINISHED)
+			//NOVA EDIT ADDITION START
+			var/list/loadout = new_player_living.client?.get_loadout_datums()
 			for(var/datum/loadout_item/item as anything in loadout)
 				if (item.restricted_roles && length(item.restricted_roles) && !(player_assigned_role.title in item.restricted_roles))
 					continue
 				item.post_equip_item(new_player_mob.client?.prefs, new_player_living)
-		//NOVA EDIT END
+			if(iskobold(new_player_living))
+				var/mob/living/carbon/human/new_kobold = new_player_living
+				new_kobold.dna.add_mutation(/datum/mutation/human/race, MUT_NORMAL)
+				new_kobold.dna.activate_mutation(/datum/mutation/human/race) // awful hack but adding mutations breaks char previews
+				new_kobold.dna.add_mutation(/datum/mutation/human/clever, MUT_NORMAL)
+				new_kobold.dna.activate_mutation(/datum/mutation/human/clever)
+			//NOVA EDIT ADDITION END
 		CHECK_TICK
 
 	if(captainless)
@@ -539,7 +541,7 @@ SUBSYSTEM_DEF(ticker)
 	if(!hard_popcap)
 		list_clear_nulls(queued_players)
 		for (var/mob/dead/new_player/new_player in queued_players)
-			to_chat(new_player, span_userdanger("The alive players limit has been released!<br><a href='?src=[REF(new_player)];late_join=override'>[html_encode(">>Join Game<<")]</a>"))
+			to_chat(new_player, span_userdanger("The alive players limit has been released!<br><a href='byond://?src=[REF(new_player)];late_join=override'>[html_encode(">>Join Game<<")]</a>"))
 			SEND_SOUND(new_player, sound('sound/announcer/notice/notice1.ogg'))
 			GLOB.latejoin_menu.ui_interact(new_player)
 		queued_players.len = 0
@@ -554,7 +556,7 @@ SUBSYSTEM_DEF(ticker)
 			list_clear_nulls(queued_players)
 			if(living_player_count() < hard_popcap)
 				if(next_in_line?.client)
-					to_chat(next_in_line, span_userdanger("A slot has opened! You have approximately 20 seconds to join. <a href='?src=[REF(next_in_line)];late_join=override'>\>\>Join Game\<\<</a>"))
+					to_chat(next_in_line, span_userdanger("A slot has opened! You have approximately 20 seconds to join. <a href='byond://?src=[REF(next_in_line)];late_join=override'>\>\>Join Game\<\<</a>"))
 					SEND_SOUND(next_in_line, sound('sound/announcer/notice/notice1.ogg'))
 					next_in_line.ui_interact(next_in_line)
 					return
@@ -565,11 +567,17 @@ SUBSYSTEM_DEF(ticker)
 			queued_players -= next_in_line
 			queue_delay = 0
 
+///Whether the game has started, including roundend.
 /datum/controller/subsystem/ticker/proc/HasRoundStarted()
 	return current_state >= GAME_STATE_PLAYING
 
+///Whether the game is currently in progress, excluding roundend
 /datum/controller/subsystem/ticker/proc/IsRoundInProgress()
 	return current_state == GAME_STATE_PLAYING
+
+///Whether the game is currently in progress, excluding roundend
+/datum/controller/subsystem/ticker/proc/IsPostgame()
+	return current_state == GAME_STATE_FINISHED
 
 /datum/controller/subsystem/ticker/Recover()
 	current_state = SSticker.current_state
@@ -680,7 +688,7 @@ SUBSYSTEM_DEF(ticker)
 		if(STATION_NUKED)
 			// There was a blob on board, guess it was nuked to stop it
 			if(length(GLOB.overminds))
-				for(var/mob/camera/blob/overmind as anything in GLOB.overminds)
+				for(var/mob/eye/blob/overmind as anything in GLOB.overminds)
 					if(overmind.max_count < overmind.announcement_size)
 						continue
 
@@ -766,11 +774,10 @@ SUBSYSTEM_DEF(ticker)
 
 	var/start_wait = world.time
 	UNTIL(round_end_sound_sent || (world.time - start_wait) > (delay * 2)) //don't wait forever
-	sleep(delay - (world.time - start_wait))
+	reboot_timer = addtimer(CALLBACK(src, PROC_REF(reboot_callback), reason, end_string), delay - (world.time - start_wait), TIMER_STOPPABLE)
 
-	if(delay_end && !skip_delay)
-		to_chat(world, span_boldannounce("Reboot was cancelled by an admin."))
-		return
+
+/datum/controller/subsystem/ticker/proc/reboot_callback(reason, end_string)
 	if(end_string)
 		end_state = end_string
 
@@ -778,15 +785,29 @@ SUBSYSTEM_DEF(ticker)
 
 	world.Reboot()
 
+/**
+ * Deletes the current reboot timer and nulls the var
+ *
+ * Arguments:
+ * * user - the user that cancelled the reboot, may be null
+ */
+/datum/controller/subsystem/ticker/proc/cancel_reboot(mob/user)
+	if(!reboot_timer)
+		to_chat(user, span_warning("There is no pending reboot!"))
+		return FALSE
+	to_chat(world, span_boldannounce("An admin has delayed the round end."))
+	deltimer(reboot_timer)
+	reboot_timer = null
+	return TRUE
+
 /datum/controller/subsystem/ticker/Shutdown()
 	gather_newscaster() //called here so we ensure the log is created even upon admin reboot
 	if(!round_end_sound)
 		round_end_sound = choose_round_end_song()
-	///The reference to the end of round sound that we have chosen.
-	var/sound/end_of_round_sound_ref = sound(round_end_sound)
 	for(var/mob/M in GLOB.player_list)
-		if(M.client.prefs.read_preference(/datum/preference/toggle/sound_endofround))
-			SEND_SOUND(M.client, end_of_round_sound_ref)
+		var/pref_volume = M.client.prefs.read_preference(/datum/preference/numeric/volume/sound_midi)
+		if(pref_volume > 0)
+			SEND_SOUND(M.client, sound(round_end_sound, volume = pref_volume))
 
 	text2file(login_music, "data/last_round_lobby_music.txt")
 
@@ -798,6 +819,14 @@ SUBSYSTEM_DEF(ticker)
 		possible_themes += themes
 	if(possible_themes.len)
 		return "[global.config.directory]/reboot_themes/[pick(possible_themes)]"
+
+/// Updates the lobby music
+/// Does not update if override is FALSE and login_music is already set
+/datum/controller/subsystem/ticker/proc/set_lobby_music(new_music, override = FALSE)
+	if(!override && login_music)
+		return
+
+	login_music = new_music
 
 #undef ROUND_START_MUSIC_LIST
 #undef SS_TICKER_TRAIT

@@ -11,7 +11,7 @@
 		/obj/item/ammo_box/strilka310/surplus,
 		/obj/item/storage/toolbox/ammobox/strilka310,
 		/obj/item/storage/toolbox/ammobox/strilka310/surplus,
-		/obj/item/storage/toolbox/maint_kit,
+		/obj/item/storage/toolbox/mechanical,
 		/obj/item/clothing/suit/armor/vest/russian,
 		/obj/item/clothing/head/helmet/rus_helmet,
 		/obj/item/clothing/shoes/russian,
