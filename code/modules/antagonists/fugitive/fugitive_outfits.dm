@@ -36,8 +36,7 @@
 	if(visuals_only)
 		return
 	equipped_on.fully_replace_character_name(null, "Waldo")
-	equipped_on.eye_color_left = COLOR_BLACK
-	equipped_on.eye_color_right = COLOR_BLACK
+	equipped_on.set_eye_color(COLOR_BLACK)
 	equipped_on.gender = MALE
 	equipped_on.skin_tone = "caucasian3"
 	equipped_on.hairstyle = "Business Hair 3"
@@ -66,7 +65,7 @@
 /datum/outfit/synthetic/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	if(visuals_only)
 		return
-	var/obj/item/organ/internal/eyes/robotic/glow/eyes = new()
+	var/obj/item/organ/eyes/robotic/glow/eyes = new()
 	eyes.Insert(H, movement_flags = DELETE_IF_REPLACED)
 
 /datum/outfit/invisible_man

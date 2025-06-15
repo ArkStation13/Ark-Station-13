@@ -38,10 +38,10 @@
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/head/hats.dmi'
 	worn_icon = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/head/bunnyears.dmi'
 	icon_state = "playbunny_ears"
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON
-	greyscale_colors = "#39393f"
-	greyscale_config = /datum/greyscale_config/playbunnyears
-	greyscale_config_worn = /datum/greyscale_config/playbunnyears_worn
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/head/playbunnyears/syndicate

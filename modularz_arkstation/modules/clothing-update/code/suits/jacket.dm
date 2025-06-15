@@ -7,18 +7,18 @@
 	worn_icon_digi = 'modularz_arkstation/modules/clothing-update/icons/mob/clothing/suits/jacket_digi.dmi'
 	icon = 'modularz_arkstation/modules/clothing-update/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "tailcoat"
-	greyscale_colors = "#39393f"
-	greyscale_config = /datum/greyscale_config/tailcoat
-	greyscale_config_worn = /datum/greyscale_config/tailcoat_worn
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/suit/jacket/tailcoat/bartender
 	name = "bartender's tailcoat"
 	desc = "A coat usually worn by bunny themed bartenders. It has an interior holster for firearms and some extra padding for minor protection."
 	icon_state = "tailcoat_bar"
-	greyscale_colors = "#39393f#ffffff"
-	greyscale_config = /datum/greyscale_config/tailcoat_bar
-	greyscale_config_worn = /datum/greyscale_config/tailcoat_bar_worn
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 	armor_type = /datum/armor/suit_armor
 
 

@@ -70,13 +70,11 @@
 	if(istype(carbonowner))
 		carbonowner.cure_trauma_type(/datum/brain_trauma/mild/hallucinations, TRAUMA_RESILIENCE_ABSOLUTE)
 		carbonowner.cure_trauma_type(/datum/brain_trauma/special/bluespace_prophet/phobetor, TRAUMA_RESILIENCE_ABSOLUTE)
-	if(!istype(/datum/martial_art/psychotic_brawling, vassaldatum.owner.martial_art))
-		return
-	var/datum/martial_art/psychotic_brawling/psychotic_brawling = vassaldatum.owner.martial_art
-	psychotic_brawling.remove(vassaldatum.owner.current)
+	var/datum/martial_art/psychotic_brawling/psychotic_brawling = locate() in vassaldatum.owner.current.martial_arts
+	psychotic_brawling.unlearn(vassaldatum)
 
 /datum/bloodsucker_clan/malkavian/on_exit_torpor(datum/antagonist/bloodsucker/source)
-	var/mob/living/carbon/carbonowner = bloodsuckerdatum.owner.martial_art
+	var/mob/living/carbon/carbonowner = bloodsuckerdatum.owner.current
 	if(istype(carbonowner))
 		carbonowner.gain_trauma(/datum/brain_trauma/mild/hallucinations, TRAUMA_RESILIENCE_ABSOLUTE)
 		carbonowner.gain_trauma(/datum/brain_trauma/special/bluespace_prophet, TRAUMA_RESILIENCE_ABSOLUTE)

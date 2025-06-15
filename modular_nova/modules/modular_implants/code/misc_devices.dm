@@ -1,6 +1,6 @@
 ///NIFSoft Remover. This is mostly here so that security and antags have a way to remove NIFSofts from someome
 /obj/item/nifsoft_remover
-	name = "Lopland 'Wrangler' NIF-Cutter"
+	name = "Nanotrasen 'Wrangler' NIF-Cutter"
 	desc = "A small device that lets the user remove NIFSofts from a NIF user"
 	special_desc = "Given the relatively recent and sudden proliferation of NIFs, their use in crime both petty and organized has skyrocketed in recent years. \
 	The existence of nanomachine-based real-time burst communication that cannot be effectively monitored or hacked into has given most PMCs cause enough for concern \
@@ -13,7 +13,7 @@
 
 /obj/item/nifsoft_remover/attack(mob/living/carbon/human/target_mob, mob/living/user)
 	. = ..()
-	var/obj/item/organ/internal/cyberimp/brain/nif/target_nif = target_mob.get_organ_by_type(/obj/item/organ/internal/cyberimp/brain/nif)
+	var/obj/item/organ/cyberimp/brain/nif/target_nif = target_mob.get_organ_by_type(/obj/item/organ/cyberimp/brain/nif)
 
 	if(!target_nif || !length(target_nif.loaded_nifsofts))
 		balloon_alert(user, "[target_mob] has no NIFSofts!")
@@ -80,7 +80,7 @@
 /obj/item/nif_repair_kit/attack(mob/living/carbon/human/mob_to_repair, mob/living/user)
 	. = ..()
 
-	var/obj/item/organ/internal/cyberimp/brain/nif/installed_nif = mob_to_repair.get_organ_by_type(/obj/item/organ/internal/cyberimp/brain/nif)
+	var/obj/item/organ/cyberimp/brain/nif/installed_nif = mob_to_repair.get_organ_by_type(/obj/item/organ/cyberimp/brain/nif)
 	if(!installed_nif)
 		balloon_alert(user, "[mob_to_repair] lacks a NIF")
 
@@ -118,7 +118,7 @@
 		/obj/item/clothing/glasses/phantom,
 		/obj/item/clothing/glasses/salesman, // Now's your chance.
 		/obj/item/clothing/glasses/nice_goggles,
-		/obj/item/clothing/glasses/thin,
+		/obj/item/clothing/glasses/regular/thin,
 		/obj/item/clothing/glasses/biker,
 		/obj/item/clothing/glasses/sunglasses/gar,
 		/obj/item/clothing/glasses/hypno,

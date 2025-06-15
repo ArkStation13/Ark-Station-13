@@ -13,7 +13,7 @@
 	can_adjust = FALSE
 
 //Related files:
-// modular_nova\modules\Syndie_edits\code\syndie_edits.dm (this has the Overalls and non-Uniforms)
+// modular_nova\modules\syndie_edits\code\syndie_edits.dm (this has the Overalls and non-Uniforms)
 // modular_nova\modules\novaya_ert\code\uniform.dm (NRI uniform(s))
 
 /*
@@ -132,6 +132,8 @@
 /obj/item/clothing/mask/neck_gaiter/syndicate/tacticool
 	name = "tacticool neck gaiter"
 	desc = "A techwear mask. Its low-profile design contrasts with the edge. Has a small respirator to be used with internals."
+	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
+
 /*
 *	TACTICAL (Real)
 */

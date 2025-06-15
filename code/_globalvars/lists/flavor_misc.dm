@@ -108,6 +108,12 @@ GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(
 #define GSATCHEL "Grey Satchel"
 #define GMESSENGER "Grey Messenger Bag"
 #define LSATCHEL "Leather Satchel"
+/// NOVA EDIT ADDITION START - Adds tpacks, tiny backpacks
+#define TPACKB "Beltpack"
+#define TPACKA "Waistpack"
+#define TPACKC "Chest pack"
+#define GUNCASE "Guncase"
+// NOVA EDIT ADDITION END
 GLOBAL_LIST_INIT(backpacklist, list(
 	DBACKPACK,
 	DDUFFELBAG,
@@ -118,6 +124,12 @@ GLOBAL_LIST_INIT(backpacklist, list(
 	GSATCHEL,
 	GMESSENGER,
 	LSATCHEL,
+	// NOVA EDIT ADDITION START
+	TPACKB,
+	TPACKA,
+	TPACKC,
+	GUNCASE,
+	// NOVA EDIT ADDITION END
 ))
 
 	//Suit/Skirt
@@ -256,12 +268,14 @@ GLOBAL_LIST_INIT(status_display_approved_pictures, list(
 	"lockdown",
 	"greenalert",
 	"bluealert",
-	"violetalert", // NOVA EDIT ADD - Alert Levels
-	"orangealert", // NOVA EDIT ADD - Alert Levels
-	"amberalert", // NOVA EDIT ADD - Alert Levels
+	"violetalert", // NOVA EDIT ADDITION - Alert Levels
+	"orangealert", // NOVA EDIT ADDITION - Alert Levels
+	"amberalert", // NOVA EDIT ADDITION - Alert Levels
 	"redalert",
 	"deltaalert",
-	"gammaalert", // NOVA EDIT ADD - Alert Levels
+	"gammaalert", // NOVA EDIT ADDITION - Alert Levels
+	"epsilonalert", // NOVA EDIT ADDITION - Alert Levels
+	"federalalert", // NOVA EDIT ADDITION - Alert Levels
 	"radiation",
 	"currentalert", //For automatic set of status display on current level
 ))
@@ -273,3 +287,14 @@ GLOBAL_LIST_INIT(status_display_state_pictures, list(
 ))
 
 GLOBAL_LIST_INIT(fishing_tips, world.file2list("strings/fishing_tips.txt"))
+
+/// 1000 element long list containing the 1000 most common words in the English language.
+/// Indexed by word, value is the rank of the word in the list. So accessing it is fasta.
+GLOBAL_LIST_INIT(most_common_words, init_common_words())
+
+/proc/init_common_words()
+	. = list()
+	var/i = 1
+	for(var/word in world.file2list("strings/1000_most_common.txt"))
+		.[word] = i
+		i += 1

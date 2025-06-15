@@ -61,7 +61,7 @@
 	belt = /obj/item/modular_computer/pda/security
 	ears = /obj/item/radio/headset/headset_sec/alt/brig_pilot
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/beret/sec/peacekeeper/armadyne
+	head = /obj/item/clothing/head/beret/sec/armadyne
 	shoes = /obj/item/clothing/shoes/jackboots/sec
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld

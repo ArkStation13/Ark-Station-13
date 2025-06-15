@@ -29,7 +29,7 @@
 	gold_core_spawnable = NO_SPAWN
 	death_sound = null
 	death_message = "falls dead, crumbling into a pile of rotten flesh..."
-	ai_controller = /datum/ai_controller/basic_controller/simple_hostile
+	ai_controller = /datum/ai_controller/basic_controller/simple/simple_hostile
 
 /obj/projectile/plasma/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()

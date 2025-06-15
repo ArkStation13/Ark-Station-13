@@ -32,8 +32,6 @@
 	name = "church radio encryption key"
 	icon_state = "cypherkey_service"
 	channels = list(RADIO_CHANNEL_CHURCH = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_service
-	greyscale_colors = "#3758c4#3bca5a"
 
 // Priest - Command
 /obj/item/radio/headset/heads/priest
@@ -47,8 +45,6 @@
 	name = "\proper the priests's encryption key"
 	icon_state = "cypherkey_cube"
 	channels = list(RADIO_CHANNEL_CHURCH = 1, RADIO_CHANNEL_COMMAND = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_security
-	greyscale_colors = "#280b1a#820a16"
 
 
 // DEPARTMENTAL BUDGET //

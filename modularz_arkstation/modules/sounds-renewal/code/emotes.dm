@@ -176,8 +176,6 @@ var/static/list/female_yawn = list(
 /datum/scream_type/human
 	name = "Human Scream"
 	male_screamsounds = list(
-		'modular_nova/modules/emotes/sound/voice/scream_m1.ogg',
-		'modular_nova/modules/emotes/sound/voice/scream_m2.ogg',
 		'modularz_arkstation/modules/sounds-renewal/sound/emotes/scream_male_1.ogg',
 		'modularz_arkstation/modules/sounds-renewal/sound/emotes/scream_male_2.ogg',
 		'modularz_arkstation/modules/sounds-renewal/sound/emotes/scream_male_3.ogg',

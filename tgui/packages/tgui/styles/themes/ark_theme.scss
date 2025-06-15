@@ -1,0 +1,62 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+.theme-ark_theme {
+  &:root {
+    --color-base: hsl(108, 20%, 19%);
+    --color-primary: hsl(108, 19%, 25%);
+    --color-secondary: hsl(106, 20%, 21%);
+    --color-section: hsla(120, 22%, 8%, 0.562);
+    --color-text: hsl(116, 16%, 83%);
+    --color-text-translucent: hsl(from var(--color-kitty) h s l / 0.75);
+    --color-label: var(--color-text);
+    --base-gradient-spread: 15;
+
+    // Components
+    --button-background-default: hsl(108, 19%, 25%);
+    --button-background-selected: hsl(108, 20%, 19%);
+    --button-background-caution: hsl(108, 19%, 25%);
+    --input-background: hsl(116, 22%, 13%);
+    --input-color: hsl(116, 16%, 83%);
+  }
+
+  body {
+    font-family: 'Chakra Petch', sans-serif;
+    overflow: auto;
+  }
+
+  .Layout__content {
+    background-image: url('../../assets/bg-ark.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+
+  .Section {
+    outline: hsla(0, 0%, 29%, 0.425);
+  }
+
+  .Button {
+    background-color: hsl(108, 20%, 19%);
+    color: hsl(116, 16%, 83%);
+
+    &:hover {
+      background-color: hsl(106, 20%, 21%);
+      transition: background-color 0.2s;
+    }
+
+    &:active,
+    &.Button--selected {
+      outline-style: inset;
+    }
+
+    &--color--transparent:hover {
+      color: var(--color-white);
+    }
+  }
+
+  .NtosWindow__header {
+    background-color: hsl(178, 17%, 27%);
+  }
+}

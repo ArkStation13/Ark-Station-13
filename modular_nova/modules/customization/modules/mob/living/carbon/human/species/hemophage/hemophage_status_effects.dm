@@ -21,7 +21,7 @@
 	if(!owner || !ishuman(owner))
 		return FALSE
 
-	var/obj/item/organ/internal/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/internal/heart/hemophage)
+	var/obj/item/organ/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/heart/hemophage)
 
 	if(!tumor_heart)
 		return FALSE
@@ -36,7 +36,7 @@
 	if(!owner || !ishuman(owner))
 		return
 
-	var/obj/item/organ/internal/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/internal/heart/hemophage)
+	var/obj/item/organ/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/heart/hemophage)
 
 	if(!tumor_heart)
 		return
@@ -73,7 +73,7 @@
 	if(!linked_alert)
 		return
 
-	var/obj/item/organ/internal/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/internal/heart/hemophage)
+	var/obj/item/organ/heart/hemophage/tumor_heart = owner.get_organ_by_type(/obj/item/organ/heart/hemophage)
 	if(tumor_heart)
 		var/old_layer = tumor_heart.layer
 		var/old_plane = tumor_heart.plane
@@ -137,6 +137,7 @@
 		return
 
 	regenerator.blood_volume = max(regenerator.blood_volume - blood_used * cost_blood, MINIMUM_VOLUME_FOR_REGEN) // ARK STATION CHANGE, allows scaling of hemophage healing blood cost.
+	new /obj/effect/temp_visual/heal(get_turf(regenerator), COLOR_EFFECT_HEAL_RED)
 
 
 /datum/movespeed_modifier/hemophage_dormant_state

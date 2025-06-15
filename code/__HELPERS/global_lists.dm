@@ -184,10 +184,11 @@ GLOBAL_LIST_INIT(WALLITEMS_INTERIOR, typecacheof(list(
 	/obj/machinery/status_display,
 	/obj/machinery/ticket_machine,
 	/obj/machinery/turretid,
-	/obj/machinery/time_clock, // NOVA EDIT ADDITION - TIME CLOCK
+	/obj/machinery/modular_computer/preset/time_clock, // NOVA EDIT ADDITION - TIME CLOCK
 	/obj/structure/wall_torch, // NOVA EDIT ADDITION - Wall-mounted torches
 	/obj/machinery/barsign,
 	/obj/structure/extinguisher_cabinet,
+	/obj/structure/fish_mount,
 	/obj/structure/fireaxecabinet,
 	/obj/structure/mirror,
 	/obj/structure/noticeboard,
@@ -214,3 +215,11 @@ GLOBAL_LIST_INIT(allowed_money, typecacheof(list(
 	/obj/item/holochip,
 	/obj/item/stack/spacecash,
 )))
+
+/// Inits GLOB.plant_traits
+/proc/init_plant_traits()
+	var/traits = list()
+	for(var/trait_path in subtypesof(/datum/plant_gene))
+		traits += new trait_path
+	sort_list(traits, GLOBAL_PROC_REF(cmp_typepaths_asc))
+	return traits

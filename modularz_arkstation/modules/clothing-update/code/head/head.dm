@@ -17,7 +17,6 @@
 	clothing_flags = SNUG_FIT | STACKABLE_HELMET_EXEMPT
 	flags_cover = HEADCOVERSEYES|EARS_COVERED|PEPPERPROOF
 	visor_flags_cover = null
-	can_toggle = FALSE
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Default" = list(
@@ -110,7 +109,6 @@
 	visor_flags_cover = HEADCOVERSEYES | PEPPERPROOF
 	dog_fashion = null
 
-	can_toggle = TRUE
 	uses_advanced_reskins = FALSE
 	unique_reskin = null
 

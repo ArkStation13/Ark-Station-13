@@ -482,10 +482,10 @@
 	owner.current.remove_language(/datum/language/vampiric, ALL, LANGUAGE_MIND)
 	// Heart & Eyes
 	var/mob/living/carbon/user = owner.current
-	var/obj/item/organ/internal/heart/newheart = owner.current.get_organ_slot(ORGAN_SLOT_HEART)
+	var/obj/item/organ/heart/newheart = owner.current.get_organ_slot(ORGAN_SLOT_HEART)
 	if(newheart)
 		newheart.Restart()
-	var/obj/item/organ/internal/eyes/user_eyes = user.get_organ_slot(ORGAN_SLOT_EYES)
+	var/obj/item/organ/eyes/user_eyes = user.get_organ_slot(ORGAN_SLOT_EYES)
 	if(user_eyes)
 		user_eyes.flash_protect = initial(user_eyes.flash_protect)
 		user_eyes.color_cutoffs = initial(user_eyes.color_cutoffs)
@@ -573,7 +573,7 @@
 	/// List of species that this quirk is valid for, or empty if it's valid for all species. Only use species ids here.
 	var/list/species_whitelist = list()
 
-/datum/quirk/add_to_holder(mob/living/new_holder, quirk_transfer, client/client_source)
+/datum/quirk/add_to_holder(mob/living/new_holder, quirk_transfer, client/client_source, unique = TRUE)
 	if(!can_add(new_holder))
 		CRASH("Attempted to add quirk to holder that can't have it.")
 	. = ..()
@@ -841,10 +841,10 @@
 /datum/species/proc/humanize_organs(mob/living/carbon/human/target, organs = list())
 	if(!organs || !length(organs))
 		organs = list(
-			ORGAN_SLOT_HEART = /obj/item/organ/internal/heart,
-			ORGAN_SLOT_LIVER = /obj/item/organ/internal/liver,
-			ORGAN_SLOT_STOMACH = /obj/item/organ/internal/stomach,
-			ORGAN_SLOT_TONGUE = /obj/item/organ/internal/tongue,
+			ORGAN_SLOT_HEART = /obj/item/organ/heart,
+			ORGAN_SLOT_LIVER = /obj/item/organ/liver,
+			ORGAN_SLOT_STOMACH = /obj/item/organ/stomach,
+			ORGAN_SLOT_TONGUE = /obj/item/organ/tongue,
 		)
 	mutantheart = organs[ORGAN_SLOT_HEART]
 	mutantliver = organs[ORGAN_SLOT_LIVER]
@@ -896,7 +896,7 @@
 	normalize_organs(target)
 
 // handled by bane on null rod whip
-/datum/species/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
+/datum/species/human/vampire/damage_weakness(datum/source, list/damage_mods, damage_amount, damagetype, def_zone, sharpness, attack_direction, obj/item/attacking_item)
 	return
 
 //
@@ -924,7 +924,7 @@
 	to_chat(target, span_warning("Your hemophage features have been removed, your nature as a bloodsucker abates the hemophage virus."))
 	// Without this any new organs would get corrupted again.
 	target.RemoveElement(/datum/element/tumor_corruption)
-	for(var/obj/item/organ/internal/organ in target.organs)
+	for(var/obj/item/organ/organ in target.organs)
 		organ.RemoveElement(/datum/element/tumor_corruption)
 	humanize_organs(target)
 

@@ -76,6 +76,9 @@
 	if(SEND_SIGNAL(src, COMSIG_MOB_CLICKON, A, modifiers) & COMSIG_MOB_CANCEL_CLICKON)
 		return
 
+	if(LAZYACCESS(modifiers, BUTTON4) || LAZYACCESS(modifiers, BUTTON5))
+		return
+
 	if(LAZYACCESS(modifiers, SHIFT_CLICK))
 		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 			ShiftMiddleClickOn(A)
@@ -140,7 +143,7 @@
 	//User itself, current loc, and user inventory
 	if(A in DirectAccess())
 		if(W)
-			W.melee_attack_chain(src, A, params)
+			W.melee_attack_chain(src, A, modifiers)
 		else
 			if(ismob(A))
 				changeNext_move(CLICK_CD_MELEE)
@@ -161,7 +164,7 @@
 	//Standard reach turf to turf or reaching inside storage
 	if(CanReach(A,W))
 		if(W)
-			W.melee_attack_chain(src, A, params)
+			W.melee_attack_chain(src, A, modifiers)
 		else
 			if(ismob(A))
 				changeNext_move(CLICK_CD_MELEE)
@@ -341,10 +344,10 @@
 
 /atom/proc/ShiftClick(mob/user)
 	SEND_SIGNAL(src, COMSIG_SHIFT_CLICKED_ON, user)
-	var/flags = SEND_SIGNAL(user, COMSIG_CLICK_SHIFT, src)
-	if(flags & COMSIG_MOB_CANCEL_CLICKON)
+	var/shiftclick_flags = SEND_SIGNAL(user, COMSIG_CLICK_SHIFT, src)
+	if(shiftclick_flags & COMSIG_MOB_CANCEL_CLICKON)
 		return
-	if(user.client && (user.client.eye == user || user.client.eye == user.loc || flags & COMPONENT_ALLOW_EXAMINATE))
+	if(user.client)
 		user.examinate(src)
 
 /mob/proc/TurfAdjacent(turf/tile)

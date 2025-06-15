@@ -15,7 +15,7 @@
 SUBSYSTEM_DEF(automapper)
 	name = "Automapper"
 	flags = SS_NO_FIRE
-	init_order = INIT_ORDER_AUTOMAPPER
+
 	/// The path to our TOML file
 	var/config_file = "_maps/ark_map_files/automapper/automapper_config.toml" // ARK STATION EDIT
 	/// Our loaded TOML file

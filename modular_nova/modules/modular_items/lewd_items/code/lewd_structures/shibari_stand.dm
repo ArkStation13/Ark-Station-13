@@ -1,8 +1,6 @@
 /obj/structure/chair/shibari_stand
 	name = "shibari stand"
 	desc = "A stand for buckling people with ropes."
-	icon = 'modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_structures/shibari_stand.dmi'
-	icon_state = "shibari_stand"
 	max_integrity = 75
 	layer = 4
 	item_chair = null
@@ -12,8 +10,12 @@
 	var/static/mutable_appearance/shibari_rope_overlay_behind
 	var/static/mutable_appearance/shibari_shadow_overlay = mutable_appearance('modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_structures/shibari_stand.dmi', "shibari_shadow", LOW_OBJ_LAYER)
 
+	icon = 'icons/map_icons/items/_item.dmi'
+	icon_state = "/obj/structure/chair/shibari_stand"
+	post_init_icon_state = "shibari_stand"
 	greyscale_config = /datum/greyscale_config/shibari_stand
 	greyscale_colors = "#bd8fcf"
+	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 	///obviously, this is for doing things to the currentmob
 	var/mob/living/carbon/human/current_mob = null
@@ -139,8 +141,7 @@
 	add_overlay(shibari_rope_overlay_behind)
 
 /obj/structure/chair/shibari_stand/post_buckle_mob(mob/living/buckled)
-	buckled.pixel_y = buckled.base_pixel_y + 4
-	buckled.pixel_x = buckled.base_pixel_x
+	buckled.add_offsets(type, y_add = 4)
 	buckled.layer = BELOW_MOB_LAYER
 
 	if(LAZYLEN(buckled_mobs))
@@ -163,8 +164,7 @@
 
 //Restore the position of the mob after unbuckling.
 /obj/structure/chair/shibari_stand/post_unbuckle_mob(mob/living/buckled)
-	buckled.pixel_x = buckled.base_pixel_x + buckled.body_position_pixel_x_offset
-	buckled.pixel_y = buckled.base_pixel_y + buckled.body_position_pixel_y_offset - 4
+	buckled.remove_offsets(type)
 	buckled.layer = initial(buckled.layer)
 
 	cut_overlay(shibari_shadow_overlay)

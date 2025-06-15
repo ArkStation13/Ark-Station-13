@@ -1,8 +1,6 @@
 /datum/component/pixel_shift
 	dupe_mode = COMPONENT_DUPE_UNIQUE
 	//ARK STATION EDIT: START
-	//whether or not parent is shifting
-	var/shifting
 	//whether or not parent is shifting items
 	var/shifting_items
 	//whether or not parent is tilting
@@ -11,17 +9,22 @@
 	var/how_tilted
 	//the maximum amount of tilt parent can achieve
 	var/maximum_tilt = 45
-	//the maximum amount we/an item can move
-	var/maximum_pixel_shift = 16
 	//If we are shifted
 	//ARK STATION EDIT: END
+	/// Whether the mob is pixel shifted or not
 	var/is_shifted = FALSE
-	//Allows atoms entering Parent's turf to pass through freely from given directions
+	/// If we are in the shifting setting.
+	var/shifting = TRUE
+	/// Takes the four cardinal direction defines. Any atoms moving into this atom's tile will be allowed to from the added directions.
 	var/passthroughable = NONE
-	//ARK STATION EDIT: START
-	//Amount of shifting necessary to make the parent passthroughable
-	var/passthrough_threshold = 8
-	//ARK STATION EDIT: END
+	/// The maximum amount of pixels allowed to move in the turf.
+	var/maximum_pixel_shift = 16
+	/// The amount of pixel shift required to make the parent passthroughable.
+	var/passable_shift_threshold = 8
+	/// Current x offset
+	var/pixel_shift_x = 0
+	/// Current y offset
+	var/pixel_shift_y = 0
 
 /datum/component/pixel_shift/Initialize(...)
 	. = ..()
@@ -116,9 +119,8 @@
 	passthroughable = NONE
 	if(is_shifted)
 		var/mob/living/owner = parent
-		owner.pixel_x = owner.body_position_pixel_x_offset + owner.base_pixel_x
-		owner.pixel_y = owner.body_position_pixel_y_offset + owner.base_pixel_y
 		owner.transform = turn(owner.transform, -how_tilted) //ARK STATION EDIT
+		owner.remove_offsets(type)
 	qdel(src)
 
 /// In-turf pixel movement which can allow things to pass through if the threshold is met.
@@ -128,26 +130,26 @@
 	//ARK STATION EDIT:START
 	/*switch(direct)
 		if(NORTH)
-			if(owner.pixel_y <= maximum_pixel_shift + owner.base_pixel_y)
-				owner.pixel_y++
+			if(pixel_shift_y <= maximum_pixel_shift + owner.base_pixel_y)
+				pixel_shift_y++
 				is_shifted = TRUE
 		if(EAST)
-			if(owner.pixel_x <= maximum_pixel_shift + owner.base_pixel_x)
-				owner.pixel_x++
+			if(pixel_shift_x <= maximum_pixel_shift + owner.base_pixel_x)
+				pixel_shift_x++
 				is_shifted = TRUE
 		if(SOUTH)
-			if(owner.pixel_y >= -maximum_pixel_shift + owner.base_pixel_y)
-				owner.pixel_y--
+			if(pixel_shift_y >= -maximum_pixel_shift + owner.base_pixel_y)
+				pixel_shift_y--
 				is_shifted = TRUE
 		if(WEST)
 			if(owner.pixel_x >= -maximum_pixel_shift + owner.base_pixel_x)
 				owner.pixel_x--
-				is_shifted = TRUE */
+				is_shifted = TRUE
+				*/
 	if(shifting_items)
-		var/atom/pulled_atom = source.pulling
-		if(!isitem(pulled_atom))
+		var/obj/item/pulled_item = source.pulling
+		if(!istype(pulled_item))
 			return
-		var/obj/item/pulled_item = pulled_atom
 		switch(direct)
 			if(NORTH)
 				if(pulled_item.pixel_y <= maximum_pixel_shift + pulled_item.base_pixel_y)
@@ -161,24 +163,6 @@
 			if(WEST)
 				if(pulled_item.pixel_x >= -maximum_pixel_shift + pulled_item.base_pixel_x)
 					pulled_item.pixel_x--
-	else if(shifting)
-		switch(direct)
-			if(NORTH)
-				if(owner.pixel_y <= maximum_pixel_shift + owner.base_pixel_y)
-					owner.pixel_y++
-					is_shifted = TRUE
-			if(EAST)
-				if(owner.pixel_x <= maximum_pixel_shift + owner.base_pixel_x)
-					owner.pixel_x++
-					is_shifted = TRUE
-			if(SOUTH)
-				if(owner.pixel_y >= -maximum_pixel_shift + owner.base_pixel_y)
-					owner.pixel_y--
-					is_shifted = TRUE
-			if(WEST)
-				if(owner.pixel_x >= -maximum_pixel_shift + owner.base_pixel_x)
-					owner.pixel_x--
-					is_shifted = TRUE
 	else if(tilting)
 		switch(direct)
 			if(EAST)
@@ -191,24 +175,36 @@
 					owner.transform = turn(owner.transform, -1)
 					how_tilted--
 					is_shifted = TRUE
+	else if(shifting)
+		switch(direct)
+			if(NORTH)
+				if(pixel_shift_y <= maximum_pixel_shift + owner.base_pixel_y)
+					pixel_shift_y++
+					is_shifted = TRUE
+			if(EAST)
+				if(pixel_shift_x <= maximum_pixel_shift + owner.base_pixel_x)
+					pixel_shift_x++
+					is_shifted = TRUE
+			if(SOUTH)
+				if(pixel_shift_y >= -maximum_pixel_shift + owner.base_pixel_y)
+					pixel_shift_y--
+					is_shifted = TRUE
+			if(WEST)
+				if(owner.pixel_x >= -maximum_pixel_shift + owner.base_pixel_x)
+					owner.pixel_x--
+					is_shifted = TRUE
 	//ARK STATION EDIT:END
+
+	if(is_shifted && !shifting_items)
+		owner.add_offsets(type, x_add = pixel_shift_x, y_add = pixel_shift_y, animate = FALSE)
 
 	// Yes, I know this sets it to true for everything if more than one is matched.
 	// Movement doesn't check diagonals, and instead just checks EAST or WEST, depending on where you are for those.
-
-	//ARK STATION EDIT: START
-	//.if(owner.pixel_y > passable_shift_threshold)
-	if(owner.pixel_y > passthrough_threshold) //ARK STATION EDIT: END
+	if(owner.pixel_y > passable_shift_threshold)
 		passthroughable |= EAST | SOUTH | WEST
-	//ARK STATION EDIT: START
-	//else if(owner.pixel_y < -passable_shift_threshold)
-	else if(owner.pixel_y < -passthrough_threshold) //ARK STATION EDIT: END
+	else if(owner.pixel_y < -passable_shift_threshold)
 		passthroughable |= NORTH | EAST | WEST
-	//ARK STATION EDIT: START
-	//if(owner.pixel_x > passable_shift_threshold)
-	if(owner.pixel_x > passthrough_threshold) //ARK STATION EDIT: END
+	if(owner.pixel_x > passable_shift_threshold)
 		passthroughable |= NORTH | SOUTH | WEST
-	//ARK STATION EDIT: START
-	//else if(owner.pixel_x < -passable_shift_threshold)
-	else if(owner.pixel_x < -passthrough_threshold) //ARK STATION EDIT: END
+	else if(owner.pixel_x < -passable_shift_threshold)
 		passthroughable |= NORTH | EAST | SOUTH

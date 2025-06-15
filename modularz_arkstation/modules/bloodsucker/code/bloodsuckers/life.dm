@@ -147,7 +147,7 @@
 		if(ishuman(user))
 			var/mob/living/carbon/human/humie = user
 			humie.set_coretemperature(humie.get_body_temp_normal(apply_change = FALSE))
-		user.remove_all_embedded_objects() // Remove Embedded!
+		INVOKE_ASYNC(user, TYPE_PROC_REF(/mob/living/carbon, remove_all_embedded_objects))
 		if(check_limbs(costMult))
 			return TRUE
 	// In Torpor, but not in a Coffin? Heal faster anyways.
@@ -218,11 +218,11 @@
 		bloodsuckeruser.cure_husk(CHANGELING_DRAIN)
 	bloodsuckeruser.cure_husk(BURN)
 	if(regenerate_heart || bloodsuckeruser.get_organ_slot(ORGAN_SLOT_HEART))
-		bloodsuckeruser.regenerate_organs(regenerate_existing = FALSE)
+		bloodsuckeruser.regenerate_organs(remove_hazardous = FALSE)
 	if(!HAS_TRAIT(bloodsuckeruser, TRAIT_MASQUERADE))
-		var/obj/item/organ/internal/heart/current_heart = bloodsuckeruser.get_organ_slot(ORGAN_SLOT_HEART)
+		var/obj/item/organ/heart/current_heart = bloodsuckeruser.get_organ_slot(ORGAN_SLOT_HEART)
 		current_heart.Stop()
-	var/obj/item/organ/internal/eyes/current_eyes = bloodsuckeruser.get_organ_slot(ORGAN_SLOT_EYES)
+	var/obj/item/organ/eyes/current_eyes = bloodsuckeruser.get_organ_slot(ORGAN_SLOT_EYES)
 	if(current_eyes)
 		current_eyes.flash_protect = max(initial(current_eyes.flash_protect) - 1, FLASH_PROTECTION_SENSITIVE)
 		current_eyes.color_cutoffs = BLOODSUCKER_SIGHT_COLOR_CUTOFF
@@ -241,8 +241,8 @@
 		iter_wound.remove_wound()
 	// From [powers/panacea.dm]
 	var/list/bad_organs = list(
-		bloodsuckeruser.get_organ_by_type(/obj/item/organ/internal/body_egg),
-		bloodsuckeruser.get_organ_by_type(/obj/item/organ/internal/zombie_infection)
+		bloodsuckeruser.get_organ_by_type(/obj/item/organ/body_egg),
+		bloodsuckeruser.get_organ_by_type(/obj/item/organ/zombie_infection)
 	)
 	for(var/tumors in bad_organs)
 		var/obj/item/organ/yucky_organs = tumors
@@ -376,7 +376,7 @@
 	var/mob/living/carbon/user = owner.current
 	owner.current.drop_all_held_items()
 	owner.current.unequip_everything()
-	user.remove_all_embedded_objects()
+	INVOKE_ASYNC(user, TYPE_PROC_REF(/mob/living/carbon, remove_all_embedded_objects))
 	playsound(owner.current, 'sound/effects/tendril_destroyed.ogg', 40, TRUE)
 
 	var/unique_death = SEND_SIGNAL(src, BLOODSUCKER_FINAL_DEATH)
@@ -389,7 +389,7 @@
 			span_warning("[user]'s skin crackles and dries, their skin and bones withering to dust. A hollow cry whips from what is now a sandy pile of remains."),
 			span_userdanger("Your soul escapes your withering body as the abyss welcomes you to your Final Death."),
 			span_hear("You hear a dry, crackling sound."))
-		addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living, dust)), 5 SECONDS, TIMER_UNIQUE|TIMER_STOPPABLE)
+		addtimer(CALLBACK(user, TYPE_PROC_REF(/atom/movable, dust)), 5 SECONDS, TIMER_UNIQUE|TIMER_STOPPABLE)
 		return
 	user.visible_message(
 		span_warning("[user]'s skin bursts forth in a spray of gore and detritus. A horrible cry echoes from what is now a wet pile of decaying meat."),

@@ -24,4 +24,4 @@ GLOBAL_LIST_EMPTY(valid_for_spawn_cryopods)
 		sleepyhead.adjust_drowsiness(rand(3, 10) SECONDS)
 
 	wakeupmessage += span_alien("&bull; До судного дня осталось... <b>X дней</b>.")
-	to_chat(sleepyhead, examine_block(wakeupmessage))
+	to_chat(sleepyhead, span_infoplain(wakeupmessage))

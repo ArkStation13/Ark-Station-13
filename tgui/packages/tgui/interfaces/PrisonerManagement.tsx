@@ -1,6 +1,3 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend, useSharedState } from '../backend';
 import {
   Box,
   Button,
@@ -10,7 +7,10 @@ import {
   Section,
   Stack,
   Tabs,
-} from '../components';
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend, useSharedState } from '../backend';
 import { Window } from '../layouts';
 
 type byondRef = string;
@@ -240,8 +240,13 @@ const LogIn = () => {
           <Icon color="average" name="exclamation-triangle" size={15} />
         </Stack.Item>
         <Stack.Item align="center" grow>
-          <Box color="red" fontSize="18px" bold mt={5}>
-            Nanotrasen SecurityHUB
+          <Box
+            color="red"
+            fontSize="18px"
+            bold
+            mt={5} /* ARK STATION EDIT - Naming */
+          >
+            Solar Federation SecurityHUB
           </Box>
         </Stack.Item>
         <Stack.Item>

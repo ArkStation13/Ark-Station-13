@@ -61,6 +61,7 @@
 #define ROLE_BRAINWASHED "Brainwashed Victim"
 #define ROLE_DEATHSQUAD "Deathsquad"
 #define ROLE_DRONE "Drone"
+#define ROLE_EVIL_CLONE "Evil Clone"
 #define ROLE_EMAGGED_BOT "Malfunctioning Bot"
 #define ROLE_HIVE "Hivemind Host" //Role removed, left here for safety.
 #define ROLE_HYPNOTIZED "Hypnotized Victim"
@@ -78,6 +79,7 @@
 #define ROLE_SENTIENCE "Sentience Potion Spawn"
 #define ROLE_SOULTRAPPED_HERETIC "Soultrapped Heretic"
 #define ROLE_SYNDICATE "Syndicate"
+#define ROLE_EXPERIMENTAL_CLONER "Experimental Cloner"
 
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"
@@ -94,6 +96,8 @@
 #define ROLE_SYNDICATE_SABOBORG "Syndicate Sabotage Cyborg"
 #define ROLE_SYNDICATE_MEDBORG "Syndicate Medical Cyborg"
 #define ROLE_SYNDICATE_ASSAULTBORG "Syndicate Assault Cyborg"
+
+#define ROLE_RECOVERED_CREW "Recovered Crew"
 
 //Spawner roles
 #define ROLE_ANCIENT_CREW "Ancient Crew"
@@ -202,6 +206,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_GLITCH = 0,
 	ROLE_PAI = 0,
 	ROLE_SENTIENCE = 0,
+	ROLE_RECOVERED_CREW = 0,
 
 	// ARK STATION EDIT START
 	ROLE_BLOODSUCKER = 0,

@@ -5,63 +5,22 @@
  * 2023 InteQ reskin by Ouch lolololo
  */
 
-@use 'sass:color';
-@use 'sass:meta';
-
-@use '../colors.scss' with (
-  $primary: #ff9900,
-  $fg-map-keys: (),
-  $bg-map-keys: ()
-);
-@use '../base.scss' with (
-  $color-bg: #553402,
-  $color-bg-grad-spread: 6%
-);
-
-.theme-inteq {
-  // Atomic classes
-  @include meta.load-css('../atomic/color.scss');
+.theme-inteq:root {
+  // Base
+  --color-base: #553402;
+  --color-primary: #ff9900;
+  --color-secondary: #363636;
+  --color-border-primary: #f7b95e;
+  --base-gradient-spread: 6;
 
   // Components
-  @include meta.load-css(
-    '../components/Button.scss',
-    $with: (
-      'color-default': colors.$primary,
-      'color-disabled': #363636,
-      'color-selected': #a35700,
-      'color-caution': #a35700,
-      'color-danger': #9a9d00
-    )
-  );
-  @include meta.load-css(
-    '../components/Input.scss',
-    $with: ('border-color': #f7b95e)
-  );
-  @include meta.load-css(
-    '../components/NoticeBox.scss',
-    $with: ('background-color': #a35700)
-  );
-  @include meta.load-css(
-    '../components/NumberInput.scss',
-    $with: ('border-color': #f7b95e)
-  );
-  @include meta.load-css(
-    '../components/ProgressBar.scss',
-    $with: ('background-color': rgba(0, 0, 0, 0.5))
-  );
-  @include meta.load-css('../components/Section.scss');
-  @include meta.load-css(
-    '../components/Tooltip.scss',
-    $with: ('background-color': #553402)
-  );
-
-  // Layouts
-  @include meta.load-css('../layouts/Layout.scss');
-  @include meta.load-css('../layouts/Window.scss');
-  @include meta.load-css(
-    '../layouts/TitleBar.scss',
-    $with: ('background-color': #a35700)
-  );
+  --button-background-selected: #a35700;
+  --button-background-caution: #a35700;
+  --button-background-danger: #9a9d00;
+  --notice-box-background: #a35700;
+  --notice-box-color: var(--color-white);
+  --progress-bar-background: hsla(0, 0%, 0%, 0.5);
+  --tooltip-background: #a35700;
 
   .Layout__content {
     background-image: url('../../assets/bg-inteq.svg');

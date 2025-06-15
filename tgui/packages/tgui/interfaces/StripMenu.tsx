@@ -1,15 +1,16 @@
 import { range } from 'common/collections';
-import { BooleanLike } from 'common/react';
+import { CSSProperties } from 'react';
+import { Box, Button, Icon, Image, Stack } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Box, Button, Icon, Image, Stack } from '../components';
 import { Window } from '../layouts';
 
 const ROWS = 6; // NOVA EDIT CHANGE
 const COLUMNS = 6;
 
-const BUTTON_DIMENSIONS = '50px';
+const BUTTON_DIMENSIONS = '64px';
 
 type GridSpotKey = string;
 
@@ -20,7 +21,7 @@ const getGridSpotKey = (spot: [number, number]): GridSpotKey => {
 const CornerText = (props: {
   align: 'left' | 'right';
   children: string;
-}): JSX.Element => {
+}): React.JSX.Element => {
   const { align, children } = props;
 
   return (
@@ -90,7 +91,7 @@ const SLOTS: Record<
     displayName: string;
     gridSpot: GridSpotKey;
     image?: string;
-    additionalComponent?: JSX.Element;
+    additionalComponent?: React.JSX.Element;
   }
 > = {
   eyes: {
@@ -247,6 +248,7 @@ const SLOTS: Record<
 enum ObscuringLevel {
   Completely = 1,
   Hidden = 2,
+  Inaccessible = 3,
 }
 
 type Interactable = {
@@ -271,6 +273,7 @@ type StripMenuItem =
           icon: string;
           name: string;
           alternate?: string[];
+          obscured: ObscuringLevel;
         }
       | {
           obscured: ObscuringLevel;
@@ -292,7 +295,9 @@ export const StripMenu = (props) => {
   }
 
   return (
-    <Window title={`Stripping ${data.name}`} width={352} height={350}>
+    // (64 + 6) * 6 + 6 = 426
+    // (64 + 6) * 5 + 6 + 31 (from title) =
+    <Window title={`Stripping ${data.name}`} width={426} height={387}>
       <Window.Content>
         <Stack fill vertical>
           {range(0, ROWS).map((row) => (
@@ -317,8 +322,8 @@ export const StripMenu = (props) => {
                   const item = data.items[keyAtSpot];
                   const slot = SLOTS[keyAtSpot];
 
-                  let content: JSX.Element | undefined;
-                  let alternateActions: JSX.Element[] | undefined;
+                  let content: React.JSX.Element | undefined;
+                  let alternateActions: React.JSX.Element[] | undefined;
                   let tooltip: string | undefined;
 
                   if (item === null) {
@@ -327,8 +332,8 @@ export const StripMenu = (props) => {
                     content = (
                       <Image
                         src={`data:image/jpeg;base64,${item.icon}`}
-                        height="100%"
-                        width="100%"
+                        width="64px"
+                        height="64px"
                         style={{
                           verticalAlign: 'middle',
                         }}
@@ -342,16 +347,19 @@ export const StripMenu = (props) => {
                           const alternateAction =
                             ALTERNATE_ACTIONS[alternateKey];
 
-                          const alternateActionStyle = {
+                          const alternateActionStyle: CSSProperties = {
                             background: 'rgba(0, 0, 0, 0.6)',
                             position: 'absolute',
                             overflow: 'hidden',
-                            margin: '0px',
-                            maxWidth: '22px', // yes I know its not 20 or 25; they look bad. 22px is perfect
+                            margin: '0',
+                            width: '20px',
+                            height: '20px',
                             zIndex: '2',
                             left: `${idx === 0 ? '0' : undefined}`,
                             right: `${idx === 1 ? '0' : undefined}`,
                             bottom: '0',
+                            padding: '0',
+                            textAlign: 'center',
                           };
                           return (
                             <Button
@@ -364,6 +372,14 @@ export const StripMenu = (props) => {
                               }}
                               tooltip={alternateAction.text}
                               style={alternateActionStyle}
+                              disabled={
+                                item.obscured === ObscuringLevel.Inaccessible
+                              }
+                              opacity={
+                                item.obscured === ObscuringLevel.Inaccessible
+                                  ? 0.7
+                                  : 1
+                              }
                             >
                               <Icon name={alternateAction.icon} />
                             </Button>
@@ -371,7 +387,11 @@ export const StripMenu = (props) => {
                         },
                       );
                     }
-                  } else if ('obscured' in item) {
+                  } else if (
+                    'obscured' in item &&
+                    (item.obscured === ObscuringLevel.Hidden ||
+                      item.obscured === ObscuringLevel.Completely)
+                  ) {
                     content = (
                       <Icon
                         name={
@@ -381,9 +401,10 @@ export const StripMenu = (props) => {
                         }
                         size={3}
                         ml={0}
-                        mt={1.3}
+                        mt={2.5}
                         style={{
                           textAlign: 'center',
+                          verticalAlign: 'middle',
                           height: '100%',
                           width: '100%',
                         }}
@@ -426,11 +447,13 @@ export const StripMenu = (props) => {
                             padding: '0',
                           }}
                         >
-                          {slot.image && (
+                          {slot.image && !(item && 'name' in item) && (
                             <Image
                               className="centered-image"
                               src={resolveAsset(slot.image)}
                               opacity={0.7}
+                              width="64px"
+                              height="64px"
                             />
                           )}
 

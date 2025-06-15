@@ -123,20 +123,6 @@
 		"puppy" = TRUE,
 		"spider" = TRUE,
 	)
-	/// List of all available card overlays.
-	var/static/list/possible_overlays = list(
-		"null",
-		"angry",
-		"cat",
-		"extremely-happy",
-		"face",
-		"happy",
-		"laugh",
-		"off",
-		"sad",
-		"sunglasses",
-		"what"
-	)
 
 /mob/living/silicon/pai/add_sensors() //pAIs have to buy their HUDs
 	return
@@ -166,6 +152,17 @@
 	card = null
 	return ..()
 
+// Need to override parent here because the message we dispatch is turf-based, not based on the location of the object because that could be fuckin anywhere
+/mob/living/silicon/pai/send_applicable_messages()
+	var/turf/location = get_turf(src)
+	location.visible_message(span_danger(get_visible_suicide_message()), null, span_hear(get_blind_suicide_message())) // null in the second arg here because we're sending from the turf
+
+/mob/living/silicon/pai/get_visible_suicide_message()
+	return "[src] flashes a message across its screen, \"Wiping core files. Please acquire a new personality to continue using pAI device functions.\""
+
+/mob/living/silicon/pai/get_blind_suicide_message()
+	return "[src] bleeps electronically."
+
 /mob/living/silicon/pai/emag_act(mob/user)
 	return handle_emag(user)
 
@@ -173,11 +170,11 @@
 	. = ..()
 	. += "Its master ID string seems to be [(!master_name || emagged) ? "empty" : master_name]."
 	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
-	. += get_silicon_flavortext()
+	. += get_silicon_flavortext(user)
 	//NOVA EDIT ADDITION END
 
 /mob/living/silicon/pai/get_status_tab_items()
-	. += ..()
+	. = ..()
 	if(!stat)
 		. += "Emitter Integrity: [holochassis_health * (100 / HOLOCHASSIS_MAX_HEALTH)]."
 	else
@@ -209,6 +206,7 @@
 
 /mob/living/silicon/pai/Initialize(mapload)
 	. = ..()
+	AddComponent(/datum/component/holographic_nature)
 	if(istype(loc, /obj/item/modular_computer))
 		give_messenger_ability()
 	START_PROCESSING(SSfastprocess, src)
@@ -390,7 +388,7 @@
 	master_ref = WEAKREF(master)
 	master_name = master.real_name
 	master_dna = master.dna.unique_enzymes
-	to_chat(src, span_boldannounce("You have been bound to a new master: [user.real_name]!"))
+	to_chat(src, span_bolddanger("You have been bound to a new master: [user.real_name]!"))
 	holochassis_ready = TRUE
 	return TRUE
 
@@ -492,3 +490,6 @@
 /mob/living/silicon/pai/proc/remove_messenger_ability()
 	if(messenger_ability)
 		messenger_ability.Remove(src)
+
+/mob/living/silicon/pai/get_access()
+	return list()

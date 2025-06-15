@@ -60,7 +60,7 @@
 
 /datum/dynamic_ruleset/latejoin/infiltrator
 	name = "Syndicate Infiltrator"
-	antag_datum = /datum/antagonist/traitor/infiltrator
+	antag_datum = /datum/antagonist/traitor
 	antag_flag = ROLE_SYNDICATE_INFILTRATOR
 	antag_flag_override = ROLE_TRAITOR
 	protected_roles = list(
@@ -220,7 +220,7 @@
 	)
 	required_candidates = 1
 	weight = 8
-	cost = 16 // 6 // ARK STATION EDIT
+	cost = 16 // ARK STATION EDIT | 12
 	requirements = list(101,101,50,10,10,10,10,10,10,10)
 	repeatable = TRUE
 

@@ -110,16 +110,21 @@
 		var/frequency = null
 		if (affected_by_pitch && SStts.tts_enabled && SStts.pitch_enabled)
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH) * (1 + sqrt(abs(user.pitch)) * SIGN(user.pitch) * EMOTE_TTS_PITCH_MULTIPLIER)
-		//playsound(source = user,soundin = tmp_sound,vol = 50, vary = vary, ignore_walls = sound_wall_ignore, frequency = frequency) // NOVA EDIT REMOVAL
+		else if(vary)
+			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH)
+		//playsound(source = user,soundin = tmp_sound,vol = 50, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency) // NOVA EDIT REMOVAL
+		// NOVA EDIT ADDITION START - Lewd emote prefs
 		if(istype(src, /datum/emote/living/lewd))
-			playsound_if_pref(source = user, soundin = tmp_sound, vol = sound_volume, vary = vary, frequency = frequency, pref_to_check = /datum/preference/toggle/erp/sounds)
+			playsound_if_pref(source = user, soundin = tmp_sound, vol = sound_volume, vary = FALSE, frequency = frequency, pref_to_check = /datum/preference/toggle/erp/sounds)
 		else
-			playsound(source = user, soundin = tmp_sound, vol = sound_volume, vary = vary, ignore_walls = sound_wall_ignore, frequency = frequency)
+			playsound(source = user, soundin = tmp_sound, vol = sound_volume, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency)
+		// NOVA EDIT ADDITION END
 
 	var/is_important = emote_type & EMOTE_IMPORTANT
 	var/is_visual = emote_type & EMOTE_VISIBLE
 	var/is_audible = emote_type & EMOTE_AUDIBLE
 	var/space = should_have_space_before_emote(html_decode(msg)[1]) ? " " : "" // NOVA EDIT ADDITION
+	var/additional_message_flags = get_message_flags(intentional)
 
 	// Emote doesn't get printed to chat, runechat only
 	if(emote_type & EMOTE_RUNECHAT)
@@ -171,7 +176,7 @@
 			message = msg,
 			deaf_message = span_emote("You see how <b>[user]</b> [msg]"),
 			self_message = msg,
-			audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
+			audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
 			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
@@ -180,7 +185,7 @@
 		user.audible_message(
 			message = msg,
 			self_message = msg,
-			audible_message_flags = EMOTE_MESSAGE,
+			audible_message_flags = EMOTE_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
 			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
@@ -189,7 +194,7 @@
 		user.visible_message(
 			message = msg,
 			self_message = msg,
-			visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
+			visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
 			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
@@ -286,6 +291,18 @@
  */
 /datum/emote/proc/get_sound(mob/living/user)
 	return sound //by default just return this var.
+
+/**
+ * To get the flags visible/audible messages for ran by the emote.
+ *
+ * Arguments:
+ * * intentional - Bool that says whether the emote was forced (FALSE) or not (TRUE).
+ *
+ * Returns the additional message flags we should be using, if any.
+ */
+/datum/emote/proc/get_message_flags(intentional)
+	// If we did it, we most often already know what's in it, so we try to avoid highlight clutter.
+	return intentional ? BLOCK_SELF_HIGHLIGHT_MESSAGE : NONE
 
 /**
  * To replace pronouns in the inputed string with the user's proper pronouns.
